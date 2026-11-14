@@ -255,6 +255,11 @@ class RealTransport:
                 f"方案 §5：配置只保留角色与密钥引用，密钥从环境或密钥文件读、"
                 f"不写日志、不回传浏览器。")
 
+    @property
+    def cache_identity(self):
+        from .local_compatible import endpoint_identity
+        return {'provider':'deepseek', 'endpoint':endpoint_identity(self.base_url), 'version':1}
+
     def request_body(self, *, messages: list[dict], images: list[str] | None = None,
                      max_tokens: int = 1024, effort: str = "high",
                      model: str = "") -> dict:

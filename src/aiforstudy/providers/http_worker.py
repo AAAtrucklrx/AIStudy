@@ -24,7 +24,7 @@ def main():
         path = (url.path or '/') + ('?' + url.query if url.query else '')
         phase = 'send_request'
         connection.request('POST', path, body=json.dumps(request['body']).encode(),
-            headers={'Content-Type':'application/json', 'Authorization':'Bearer ' + request['key']})
+            headers={'Content-Type':'application/json', **({'Authorization':'Bearer ' + request['key']} if request['key'] else {})})
         phase = 'receive_headers'
         response = connection.getresponse()
         status = response.status

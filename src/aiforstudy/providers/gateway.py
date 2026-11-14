@@ -91,7 +91,7 @@ class CallRequest:
     syntax_repair: bool = False
 
     def fingerprint(self, *, model: str, effort: str, book_id: str = "",
-                    max_tokens: int | None = None) -> str:
+                    max_tokens: int | None = None, transport_identity=None) -> str:
         """缓存指纹：**只吃逻辑身份与内容**，不含 run_id/时间/绝对路径（§11）。
 
         ⚠️ **`book_id` / `scope_kind` / `unit_key` / `stage` 必须进指纹**。
@@ -117,7 +117,7 @@ class CallRequest:
             "schema_version": self.schema_version,
             "prompt_version": self.prompt_version, "rules_version": self.rules_version,
             "messages": self.messages, "images": image_hashes,
-            "extra": self.extra_identity})
+            "extra": self.extra_identity, **({"transport":transport_identity} if transport_identity is not None else {})})
 
 
 @dataclass
@@ -260,13 +260,20 @@ class Gateway:
         role = self.roles.get(request.role)
         if role is None:
             raise ContractError(f"没有 {request.role!r} 这个模型角色")
+        transport = (self.transport.for_role(request.role) if callable(getattr(self.transport, 'for_role', None)) else self.transport)
+        if hasattr(transport, 'cancel'):
+            from ..pipeline.services import BoundaryCancellation
+            transport.cancel = BoundaryCancellation(self.cancel, self.control)
+            transport.cancel_grace_seconds = self.control.policy.cancel_grace_seconds
+            transport.connect_timeout_seconds = self.control.policy.connect_timeout_seconds
         model = str(_role_value(role, 'model', '') or '')
         effort = 'low' if request.syntax_repair else str(_role_value(role, 'effort', 'high') or 'high')
         capacity_policy = _capacity_policy(role, request.max_tokens)
         max_tokens = capacity_policy['max_tokens']
         retry_max_tokens = capacity_policy['length_retry_max_tokens']
         fingerprint = request.fingerprint(model=model, effort=effort,
-                                          book_id=self.book_id, max_tokens=max_tokens)
+                                          book_id=self.book_id, max_tokens=max_tokens,
+                                          transport_identity=getattr(transport, 'cache_identity', None))
         observation = {'run_id':self.run_id, 'book_id':self.book_id,
             'stage':request.stage, 'unit_id':request.unit_key, 'resource_id':request.resource_id,
             'role':request.role, 'model':model, 'effort':effort, 'max_tokens':max_tokens,
@@ -328,7 +335,7 @@ class Gateway:
             observed_start = time.monotonic()
             try:
                 if recovery is not None: recovery.started(lease)
-                response = self.transport(model=model,effort=effort,messages=request.messages,
+                response = transport(model=model,effort=effort,messages=request.messages,
                     images=list(request.images) or None,max_tokens=max_tokens,timeout=lease.timeout_seconds())
                 text, _usage = response
                 metadata = response_metadata(getattr(response, 'metadata', None))

@@ -73,3 +73,45 @@ def test_usage_normalization_uses_supplied_provider_counters_only():
         'prompt_cache_hit_tokens': 3, 'prompt_cache_miss_tokens': 23,
     }
     assert module.normalize_usage({}) == {}
+
+
+def test_usage_cache_write_is_additional_input_not_double_counted():
+    from aiforstudy.providers.dsh_account import normalize_usage
+    result=normalize_usage({'inputTokens':10,'cacheReadTokens':3,'cacheWriteTokens':5,'outputTokens':2,'totalTokens':999})
+    assert result['prompt_tokens']==18 and result['total_tokens']==20
+    assert result['prompt_cache_write_tokens']==5
+    assert normalize_usage({'inputTokens':True,'outputTokens':-2})=={}
+
+
+def test_account_pre_cancel_never_starts_bridge(monkeypatch):
+    from aiforstudy.pipeline.services import CancelToken
+    from aiforstudy.errors import Cancelled
+    token=CancelToken();token.cancel()
+    client=transport(cancel=token)
+    monkeypatch.setattr('subprocess.Popen',lambda *a,**k:pytest.fail('cancelled request started process'))
+    with pytest.raises(Cancelled):
+        client(model='deepseek-flash',effort='high',messages=[],images=None,max_tokens=100,timeout=1)
+    assert client.calls==0
+
+
+def test_installed_sdk_initializes_before_reading_missing_account(tmp_path):
+    from pathlib import Path
+    if not Path('/Applications/DeepSeek Harness.app/Contents/MacOS/DeepSeek Harness').is_file():
+        pytest.skip('installed Harness SDK required for composition contract')
+    client=transport(account_home=tmp_path)
+    with pytest.raises(ConfigError,match='ACCOUNT_SIGN_IN_REQUIRED'):
+        client(model='deepseek-flash',effort='high',messages=[{'role':'user','content':'x'}],images=None,max_tokens=100,timeout=5)
+    assert client.calls==0
+
+
+def test_installed_sdk_invalid_image_precedes_missing_account(tmp_path):
+    from pathlib import Path
+    if not Path('/Applications/DeepSeek Harness.app/Contents/MacOS/DeepSeek Harness').is_file():
+        pytest.skip('installed Harness SDK required for image admission contract')
+    image=tmp_path/'invalid.png';image.write_bytes(b'not a PNG')
+    client=transport(account_home=tmp_path)
+    with pytest.raises(ConfigError) as caught:
+        client(model='deepseek-flash',effort='high',messages=[{'role':'user','content':'x'}],images=[str(image)],max_tokens=100,timeout=5)
+    assert 'ACCOUNT_SIGN_IN_REQUIRED' not in str(caught.value)
+    assert 'NO_ADAPTER' not in str(caught.value)
+    assert client.calls==0
