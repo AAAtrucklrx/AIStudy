@@ -45,7 +45,7 @@
           "source_end_line": 32,
           "source_quote": "设有两个复数 $z_{1} = x_{1} + \\mathrm{i}y_{1}$ 和 $z_{2} = x_{2} + \\mathrm{i}y_{2}$，它们的四则运算规则定义如下：\n加法和减法： $z_{1}$ 及 $z_{2}$ 的和与差分别为\n$$z _ {1} + z _ {2} = (x _ {1} + x _ {2}) + \\mathrm{i} (y _ {1} + y _ {2})$$\n$$z _ {1} - z _ {2} = \\left(x _ {1} - x _ {2}\\right) + \\mathrm{i} \\left(y _ {1} - y _ {2}\\right).$$\n乘法： $z_{1}$ 和 $z_{2}$ 相乘，可以按多项式的乘法法则来进行，只需将结果中的 $\\mathfrak{I}^2$ 代之以-1，即\n$$z _ {1} \\cdot z _ {2} = (x _ {1} x _ {2} - y _ {1} y _ {2}) + i (x _ {1} y _ {2} + x _ {2} y _ {1}).$$\n特别地，当 $z = x + \\mathrm{i}y$ 时，有\n$$z \\bar {z} = x ^ {2} + y ^ {2}.$$\n通常称非负实数 $\\sqrt{x^2 + y^2}$ 为复数 $z$ 的模，记为 $|z|$. 于是可写成下式\n$$\\bar {z z} = | z | ^ {2}.$$\n除法： $z_{1}$ 除以 $z_{2} \\neq 0$ 的商定义为\n$$\\begin{array}{r l} \\frac {z _ {1}}{z _ {2}} = \\frac {z _ {1} \\bar {z} _ {2}}{z _ {2} z _ {2}} = & \\frac {(x _ {1} + \\mathrm{i} y _ {1}) (x _ {2} - \\mathrm{i} y _ {2})}{| z _ {2} | ^ {2}} \\\\ = & \\frac {(x _ {1} x _ {2} + y _ {1} y _ {2}) + \\mathrm{i} (x _ {2} y _ {1} - x _ {1} y _ {2})}{x _ {2} ^ {2} + y _ {2} ^ {2}}. \\end{array}$$\n读者很容易利用乘法运算规则直接验证，这样定义的除法运算是乘法运算的逆运算，即有\n$$z _ {2} \\cdot \\frac {z _ {1}}{z _ {2}} = z _ {1}.$$",
           "after": "相消以后，除法就回到了乘法与实数除法：例如 $1/(1+i)=(1-i)/2$。分母不为零是整个操作的前提，不能先约去一个可能为零的因子再检查条件。",
-          "source_note": "原文商式分母共轭位置有录入错误，依坐标展开订正。"
+          "source_note": "解析文本的商式分母共轭位置有录入错误；原PDF物理11页（印刷2页）为分子、分母同乘分母共轭，按页图恢复。"
         },
         {
           "id": "CH01-S01-SS01-C005",
@@ -55,7 +55,7 @@
           "source_end_line": 30,
           "source_quote": "特别地，当 $z = x + \\mathrm{i}y$ 时，有\n$$z \\bar {z} = x ^ {2} + y ^ {2}.$$\n通常称非负实数 $\\sqrt{x^2 + y^2}$ 为复数 $z$ 的模，记为 $|z|$. 于是可写成下式\n$$\\bar {z z} = | z | ^ {2}.$$\n除法： $z_{1}$ 除以 $z_{2} \\neq 0$ 的商定义为\n$$\\begin{array}{r l} \\frac {z _ {1}}{z _ {2}} = \\frac {z _ {1} \\bar {z} _ {2}}{z _ {2} z _ {2}} = & \\frac {(x _ {1} + \\mathrm{i} y _ {1}) (x _ {2} - \\mathrm{i} y _ {2})}{| z _ {2} | ^ {2}} \\\\ = & \\frac {(x _ {1} x _ {2} + y _ {1} y _ {2}) + \\mathrm{i} (x _ {2} y _ {1} - x _ {1} y _ {2})}{x _ {2} ^ {2} + y _ {2} ^ {2}}. \\end{array}$$",
           "after": "相消以后，除法就回到了乘法与实数除法：例如 $1/(1+i)=(1-i)/2$。分母不为零是整个操作的前提，不能先约去一个可能为零的因子再检查条件。",
-          "source_note": "第28行横线位置错误，依第26行订正。"
+          "source_note": "解析文本第28行横线位置错误；原PDF物理11页（印刷2页）为 z 与其共轭的乘积，按页图恢复，不归为教材印刷错误。"
         },
         {
           "id": "CH01-S01-SS01-C006",
@@ -118,7 +118,7 @@
           "source_end_line": 20,
           "source_quote": "例2 设 $z = x + \\mathrm{i}y, y \\neq 0, y \\neq \\pm \\mathrm{i}$. 证明：当且只当 $x^{2} + y^{2} = 1$ 时，$\\frac{z}{1 + z^2}$ 是实数.\n证 $\\frac{z}{1 + z^2}$ 是实数等价于\n$$\\frac {z}{1 + z ^ {2}} = \\left(\\overline {{\\frac {z}{1 + z ^ {2}}}}\\right) = \\frac {\\bar {z}}{1 + \\bar {z} ^ {2}},$$\n$$z + z \\bar {z} ^ {2} = \\bar {z} + \\bar {z} z ^ {2},$$\n亦即\n$$(z - \\bar {z}) (1 - z \\bar {z}) = 0.$$\n因 $y \\neq 0$ ，故 $2\\mathrm{i}y = z - \\bar{z} \\neq 0$ ，从而\n$$1 - z \\bar {z} = 0, \\quad | z | ^ {2} = 1.$$\n$$x ^ {2} + y ^ {2} = 1.$$\n由于上述推导的每一步都是可逆的，故命题得证.",
           "after": "另一个反复使用的关系是 $|z|^2=z\\bar z$。面对“求模”的任务，先求模的平方往往能避开根号。面对“这个分式为实数”的任务，则可令分式等于它的共轭，再整理成关于 $z,\\bar z$ 的等式。教材例2最后出现 $(z-\\bar z)(1-z\\bar z)=0$：若已知虚部不为零，就能排除第一因子，留下 $|z|=1$；若没有这项已知条件，不能擅自约去它。",
-          "source_note": "原题 y≠±i 与 y 为实数不合；由分母非零条件订正为 z≠±i。"
+          "source_note": "原PDF物理13页（印刷4页）例2确印为 y≠±i，属于原题笔误；为排除零分母，应为 z≠±i，同时保留 y≠0。"
         },
         {
           "id": "CH01-S01-SS02-C004",
@@ -128,7 +128,7 @@
           "source_end_line": 27,
           "source_quote": "例3 求 $f(z) = \\frac{1 + z}{1 - z}$ 的实部、虚部及模.\n$$\\begin{array}{r l} f (z) & = \\frac {1 + z}{1 - z} = \\frac {(1 + z) (1 - \\bar {z})}{(1 - z) (1 - \\bar {z})} \\\\ & = \\frac {1 + z - \\bar {z} - z \\bar {z}}{1 - z - \\bar {z} + z \\bar {z}} = \\frac {1 - x ^ {2} - y ^ {2} + i 2 y}{(1 - x) ^ {2} + y ^ {2}}, \\end{array}$$\n$$\\operatorname{Re} f (z) = \\frac {1 - x ^ {2} - y ^ {2}}{(1 - x) ^ {2} + y ^ {2}},$$\n$$\\operatorname{Im} f (z) = \\frac {2 y}{(1 - x ^ {2}) + y ^ {2}}.$$\n因为\n$$\\begin{array}{r l} | f (z) | ^ {2} & = f (z) \\overline {{f (z)}} = \\frac {(1 + z) (1 + \\bar {z})}{(1 - z) (1 - \\bar {z})} \\\\ & = \\frac {1 + z + z + \\bar {z z}}{1 - z - z + \\bar {z z}} = \\frac {(1 + x) ^ {2} + y ^ {2}}{(1 - x) ^ {2} + y ^ {2}}, \\end{array}$$\n$$\\mid f (z) \\mid = \\sqrt {\\frac {(1 + x) ^ {2} + y ^ {2}}{(1 - x) ^ {2} + y ^ {2}}}.$$",
           "after": "实际化简分式仍要同乘“整个分母”的共轭。比如分母 $1-z$ 的共轭是 $1-\\bar z$，两者相乘为 $(1-x)^2+y^2$，绝不是 $1-x^2+y^2$。这样求出的实部、虚部必须有同一个实分母，且要保留原式不定义的点。",
-          "source_note": "第24行分母错误，依第22行订正为 (1-x)^2+y^2。"
+          "source_note": "原PDF物理13页（印刷4页）例3虚部分母确印为 (1-x²)+y²，属于印刷错误；按同页展开式及实部式订正为 (1-x)²+y²。"
         },
         {
           "id": "CH01-S01-SS02-C005",
@@ -166,11 +166,11 @@
         {
           "id": "CH01-S01-SS03-C002",
           "title": "模、辐角与辐角主值",
-          "statement_markdown": "对 $z=x+iy\\ne0$，$r=|z|=\\sqrt{x^2+y^2}$；若 $\\theta$ 是一个辐角，则\n$$\\operatorname{Arg}z=\\theta+2k\\pi,\\quad k\\in\\mathbb Z.$$\n落在 $(-\\pi,\\pi]$ 的唯一值称为辐角主值。正实轴、负实轴、正虚轴、负虚轴的主值分别为 $0,\\pi,\\pi/2,-\\pi/2$。零的辐角无意义。",
+          "statement_markdown": "对 $z=x+iy\\ne0$，$r=|z|=\\sqrt{x^2+y^2}$；若 $\\varphi$ 是一个辐角，则\n$$\\operatorname{Arg}z=\\varphi+2k\\pi,\\quad k\\in\\mathbb Z.$$\n落在 $(-\\pi,\\pi]$ 的唯一值称为辐角主值。正实轴、负实轴、正虚轴、负虚轴的主值分别为 $0,\\pi,\\pi/2,-\\pi/2$。零的辐角无意义。",
           "source_start_line": 7,
           "source_end_line": 15,
           "source_quote": "$$r = \\sqrt {x ^ {2} + y ^ {2}}, \\quad \\tan \\varphi = \\frac {y}{x},$$\nr 就是复数 z 的模， $\\varphi$  称为复数 z 的辐角，记作\n$$r = \\mid z \\mid , \\quad \\varphi = \\operatorname{Arg} z.$$\n关于辐角有两点必须注意：\n1) 对于任一复数 $z \\neq 0$ 有无穷多个辐角. 我们约定, 以下用 $\\arg z$ 表示 $\\operatorname{Arg} z$ 中的某一个确定的值, 必要时将指出是哪一个值. 对于 $\\operatorname{Arg} z$ 的任何一个确定值 $\\arg z$, 则\n$$\\mathrm{Arg} z = \\mathrm{arg} z + 2 n \\pi , \\quad n \\text {为任意整数}$$\n给出了 z 的全部辐角. 又把落在  $-\\pi < \\varphi \\leqslant \\pi$  这个范围内的值称为辐角的主值, 也记作 argz. 显然, 主值 argz 是由 z 唯一确定的. 例如, 在正、负实轴上辐角的主值分别是 0 及  $\\pi$ ; 在上、下半虚轴上辐角的主值分别是  $\\pi/2$  及  $-\\pi/2$ ; 一般地根据辐角主值范围的规定, 可得\n$$\\arg z = \\left\\{ \\begin{array}{l l} \\arctan \\frac {y}{x}, & (z \\text {在第一、四象限内}) \\\\ \\pi + \\arctan \\frac {y}{x}, & (z \\text {在第二象限内}) \\\\ - \\pi + \\arctan \\frac {y}{x}, & (z \\text {在第三象限内}) \\end{array} \\right.$$\n2) 当 z = 0 时，辐角是无意义的.",
-          "after": "转一整圈回到原点的同一位置，所以非零复数的辐角不是唯一数值：全体记为 $\\operatorname{Arg}z=\\theta+2k\\pi$，$k$ 是整数。本书把 $-\\pi<\\arg z\\le\\pi$ 内的值叫主值；负实轴取 $\\pi$，零则没有辐角。相同复数的模必须相等，辐角允许相差整圈；使用主值相加以后，必要时应减去整圈放回约定区间。"
+          "after": "转一整圈回到原点的同一位置，所以非零复数的辐角不是唯一数值：全体记为 $\\operatorname{Arg}z=\\varphi+2k\\pi$，$k$ 是整数。本书把 $-\\pi<\\arg z\\le\\pi$ 内的值叫主值；负实轴取 $\\pi$，零则没有辐角。相同复数的模必须相等，辐角允许相差整圈；使用主值相加以后，必要时应减去整圈放回约定区间。"
         },
         {
           "id": "CH01-S01-SS03-C003",
@@ -179,26 +179,26 @@
           "source_start_line": 13,
           "source_end_line": 15,
           "source_quote": "给出了 z 的全部辐角. 又把落在  $-\\pi < \\varphi \\leqslant \\pi$  这个范围内的值称为辐角的主值, 也记作 argz. 显然, 主值 argz 是由 z 唯一确定的. 例如, 在正、负实轴上辐角的主值分别是 0 及  $\\pi$ ; 在上、下半虚轴上辐角的主值分别是  $\\pi/2$  及  $-\\pi/2$ ; 一般地根据辐角主值范围的规定, 可得\n$$\\arg z = \\left\\{ \\begin{array}{l l} \\arctan \\frac {y}{x}, & (z \\text {在第一、四象限内}) \\\\ \\pi + \\arctan \\frac {y}{x}, & (z \\text {在第二象限内}) \\\\ - \\pi + \\arctan \\frac {y}{x}, & (z \\text {在第三象限内}) \\end{array} \\right.$$\n2) 当 z = 0 时，辐角是无意义的.",
-          "after": "转一整圈回到原点的同一位置，所以非零复数的辐角不是唯一数值：全体记为 $\\operatorname{Arg}z=\\theta+2k\\pi$，$k$ 是整数。本书把 $-\\pi<\\arg z\\le\\pi$ 内的值叫主值；负实轴取 $\\pi$，零则没有辐角。相同复数的模必须相等，辐角允许相差整圈；使用主值相加以后，必要时应减去整圈放回约定区间。"
+          "after": "转一整圈回到原点的同一位置，所以非零复数的辐角不是唯一数值：全体记为 $\\operatorname{Arg}z=\\varphi+2k\\pi$，$k$ 是整数。本书把 $-\\pi<\\arg z\\le\\pi$ 内的值叫主值；负实轴取 $\\pi$，零则没有辐角。相同复数的模必须相等，辐角允许相差整圈；使用主值相加以后，必要时应减去整圈放回约定区间。"
         },
         {
           "id": "CH01-S01-SS03-C004",
           "title": "三角式、欧拉公式与指数式",
-          "statement_markdown": "若 $z\\ne0$ 的模为 $r$、辐角为 $\\theta$，则\n$$x=r\\cos\\theta,\\quad y=r\\sin\\theta,\\quad e^{i\\theta}=\\cos\\theta+i\\sin\\theta,$$\n$$z=r(\\cos\\theta+i\\sin\\theta)=re^{i\\theta}.$$\n特别地，$e^{i\\pi}=-1$、$e^{i\\pi/2}=i$。",
+          "statement_markdown": "若 $z\\ne0$ 的模为 $r$、辐角为 $\\varphi$，则\n$$x=r\\cos\\varphi,\\quad y=r\\sin\\varphi,\\quad e^{i\\varphi}=\\cos\\varphi+i\\sin\\varphi,$$\n$$z=r(\\cos\\varphi+i\\sin\\varphi)=re^{i\\varphi}.$$\n特别地，$e^{i\\pi}=-1$、$e^{i\\pi/2}=i$。",
           "source_start_line": 16,
           "source_end_line": 25,
           "source_quote": "知道了复数 $z(\\neq 0)$ 的模 $\\pmb{r}$ 和辐角 $\\varphi$ 后，这个复数也就完全确定了.因\n$$x = r \\cos \\varphi , \\quad y = r \\sin \\varphi ,$$\n$$z = r (\\cos \\varphi + \\mathrm{i} \\sin \\varphi).$$\n这就是复数的三角表示.例如\n$$\\begin{array}{l} - 2 \\mathrm{i} = 2 \\left[ \\cos \\left(- \\frac {\\pi}{2}\\right) + \\mathrm{i} \\sin \\left(- \\frac {\\pi}{2}\\right) \\right], \\\\ 1 + \\mathrm{i} = \\sqrt {2} \\left(\\cos \\frac {\\pi}{4} + \\mathrm{i} \\sin \\frac {\\pi}{4}\\right). \\end{array}$$\n利用欧拉(Euler)公式\n$$\\mathbf {e} ^ {\\mathrm{i} \\varphi} = \\cos \\varphi + \\mathrm{i} \\sin \\varphi ,$$\n还可以把复数写成指数形式\n$$z = r \\mathrm{e} ^ {\\mathrm{i} \\varphi},$$\n例如： $-2i=2e^{-im/2},1+i=\\sqrt{2}e^{im/4},i=e^{im/2},e^{in}=-1.$",
-          "after": "转一整圈回到原点的同一位置，所以非零复数的辐角不是唯一数值：全体记为 $\\operatorname{Arg}z=\\theta+2k\\pi$，$k$ 是整数。本书把 $-\\pi<\\arg z\\le\\pi$ 内的值叫主值；负实轴取 $\\pi$，零则没有辐角。相同复数的模必须相等，辐角允许相差整圈；使用主值相加以后，必要时应减去整圈放回约定区间。",
-          "source_note": "原文例子的 m、n 等指数符号为 π 的录入错误，按欧拉公式订正。"
+          "after": "转一整圈回到原点的同一位置，所以非零复数的辐角不是唯一数值：全体记为 $\\operatorname{Arg}z=\\varphi+2k\\pi$，$k$ 是整数。本书把 $-\\pi<\\arg z\\le\\pi$ 内的值叫主值；负实轴取 $\\pi$，零则没有辐角。相同复数的模必须相等，辐角允许相差整圈；使用主值相加以后，必要时应减去整圈放回约定区间。",
+          "source_note": "解析文本中指数的 m、n 等为 π 的OCR误识；原PDF物理16页（印刷7页）印为 π，按页图恢复。"
         },
         {
           "id": "CH01-S01-SS03-C005",
           "title": "极式相等与共轭的条件",
-          "statement_markdown": "对非零复数 $z_j=r_je^{i\\theta_j}$，\n$$z_1=z_2\\iff r_1=r_2\\ \\text{且}\\ \\theta_1-\\theta_2\\in2\\pi\\mathbb Z.$$\n共轭满足 $|\\bar z|=|z|$，辐角相反（模 $2\\pi$）。对主值，若 $\\arg z\\ne\\pi$ 则 $\\arg\\bar z=-\\arg z$；若 $z$ 为负实数，两者主值均为 $\\pi$。",
+          "statement_markdown": "对非零复数 $z_j=r_je^{i\\varphi_j}$，\n$$z_1=z_2\\iff r_1=r_2\\ \\text{且}\\ \\varphi_1-\\varphi_2\\in2\\pi\\mathbb Z.$$\n共轭满足 $|\\bar z|=|z|$，辐角相反（模 $2\\pi$）。对主值，若 $\\arg z\\ne\\pi$ 则 $\\arg\\bar z=-\\arg z$；若 $z$ 为负实数，两者主值均为 $\\pi$。",
           "source_start_line": 27,
           "source_end_line": 31,
           "source_quote": "两个指数形式(或三角形式)的复数  $z_{1}=r_{1}e^{i\\varphi_{1}}$  及  $z_{2}=r_{2}e^{i\\varphi_{2}}$  相等的充要条件是\n$$r _ {1} = r _ {2}, \\quad \\varphi_ {1} = \\varphi_ {2} + 2 k \\pi ,$$\n其中， $k$ 为任意正负整数或零.而两个复数共轭的条件则可以用关系\n$$| \\bar {z} | = | z |, \\quad \\arg \\bar {z} = - \\arg z, \\quad \\arg z \\neq \\pi$$\n来表示，",
-          "after": "转一整圈回到原点的同一位置，所以非零复数的辐角不是唯一数值：全体记为 $\\operatorname{Arg}z=\\theta+2k\\pi$，$k$ 是整数。本书把 $-\\pi<\\arg z\\le\\pi$ 内的值叫主值；负实轴取 $\\pi$，零则没有辐角。相同复数的模必须相等，辐角允许相差整圈；使用主值相加以后，必要时应减去整圈放回约定区间。"
+          "after": "转一整圈回到原点的同一位置，所以非零复数的辐角不是唯一数值：全体记为 $\\operatorname{Arg}z=\\varphi+2k\\pi$，$k$ 是整数。本书把 $-\\pi<\\arg z\\le\\pi$ 内的值叫主值；负实轴取 $\\pi$，零则没有辐角。相同复数的模必须相等，辐角允许相差整圈；使用主值相加以后，必要时应减去整圈放回约定区间。"
         },
         {
           "id": "CH01-S01-SS03-C006",
@@ -222,12 +222,12 @@
         {
           "id": "CH01-S01-SS03-C008",
           "title": "乘除法的模、辐角与几何意义",
-          "statement_markdown": "设 $z_j=r_je^{i\\theta_j}\\ne0$，则\n$$z_1z_2=r_1r_2e^{i(\\theta_1+\\theta_2)},\\quad\\frac{z_1}{z_2}=\\frac{r_1}{r_2}e^{i(\\theta_1-\\theta_2)},$$\n$$|z_1z_2|=|z_1||z_2|,\\quad\\left|\\frac{z_1}{z_2}\\right|=\\frac{|z_1|}{|z_2|}.$$\n乘积辐角为两辐角之和，商的辐角为两辐角之差，均按全体值或模 $2\\pi$ 理解。乘以固定 $r_2e^{i\\theta_2}$ 对应旋转 $\\theta_2$ 并伸缩 $r_2$ 倍；乘以 $i$ 是逆时针转 $\\pi/2$ 且长度不变。模公式对零分子也成立。",
+          "statement_markdown": "设 $z_j=r_je^{i\\varphi_j}\\ne0$，则\n$$z_1z_2=r_1r_2e^{i(\\varphi_1+\\varphi_2)},\\quad\\frac{z_1}{z_2}=\\frac{r_1}{r_2}e^{i(\\varphi_1-\\varphi_2)},$$\n$$|z_1z_2|=|z_1||z_2|,\\quad\\left|\\frac{z_1}{z_2}\\right|=\\frac{|z_1|}{|z_2|}.$$\n乘积辐角为两辐角之和，商的辐角为两辐角之差，均按全体值或模 $2\\pi$ 理解。乘以固定 $r_2e^{i\\varphi_2}$ 对应旋转 $\\varphi_2$ 并伸缩 $r_2$ 倍；乘以 $i$ 是逆时针转 $\\pi/2$ 且长度不变。模公式对零分子也成立。",
           "source_start_line": 49,
           "source_end_line": 62,
           "source_quote": "利用复数的指数形式作乘除法不仅比较简单，而且有明显的几何意义.设有两个复数\n$$\\begin{array}{l} z _ {1} = r _ {1} \\mathrm{e} ^ {\\mathrm{i} \\varphi_ {1}} = r _ {1} (\\cos \\varphi_ {1} + \\mathrm{i} \\sin \\varphi_ {1}), \\\\ z _ {2} = r _ {2} \\mathrm{e} ^ {\\mathrm{i} \\varphi_ {2}} = r _ {2} (\\cos \\varphi_ {2} + \\mathrm{i} \\sin \\varphi_ {2}). \\end{array}$$\n那么\n$$\\begin{array}{r l} z _ {1} z _ {2} & = r _ {1} r _ {2} \\left[ (\\cos \\varphi_ {1} \\cos \\varphi_ {2} - \\sin \\varphi_ {1} \\sin \\varphi_ {2}) + i (\\sin \\varphi_ {1} \\cos \\varphi_ {2} + \\cos \\varphi_ {1} \\sin \\varphi_ {2}) \\right] \\\\ & = r _ {1} r _ {2} \\left[ \\cos (\\varphi_ {1} + \\varphi_ {2}) + i \\sin (\\varphi_ {1} + \\varphi_ {2}) \\right] \\\\ & = r _ {1} r _ {2} e ^ {i (\\varphi_ {1} + \\varphi_ {2})}. \\end{array}$$\n这就是说，两个复数的乘积是这样一个复数：它的模等于原两复数模的乘积，它的辐角等于原来两复数辐角之和.即\n$$\\left| z _ {1} z _ {2} \\right| = \\left| z _ {1} \\right| \\left| z _ {2} \\right|, \\quad \\operatorname{Arg} \\left(z _ {1} z _ {2}\\right) = \\operatorname{Arg} z _ {1} + \\operatorname{Arg} z _ {2}.\\tag{1.2}$$\n图1.3\n由于第二个等式的两边各是无穷多个数，应这样来理解：对于 $\\mathrm{Arg}(z_1z_2)$ 的任一值，一定有 $\\mathrm{Arg}z_{1}$ 及$\\mathrm{Arg}z_{2}$ 的各一值与它相应，使得等式成立；反过来也是这样.\n由上讨论得知，把表示 $z_{1}$ 的那个向量转动一个角度 $\\varphi_{2}$，并将长度“放大”$r_{2}$ 倍，就得到代表 $z_{1}z_{2}$ 的向量。应该注意，当 $r_2 < 1$ 时，所谓“放大”其实是缩小（图1.3）。例如，复数 $\\mathrm{e}^{\\theta}$ 的模为1，辐角为 $\\theta$。因此把向量 $z$ 转动一个角就得到向量 $\\mathrm{e}^{\\theta}z$。特别地，由于 $\\mathrm{i} =$\n$e^{i\\omega/2}$ ，所以向量iz是一个与向量z垂直，且与z长度相等的向量.\n对于除法，同样有公式 $(z_{2}\\neq0)$\n$$\\frac {z _ {1}}{z _ {2}} = \\frac {r _ {1}}{r _ {2}} \\left[ \\cos \\left(\\varphi_ {1} - \\varphi_ {2}\\right) + i \\sin \\left(\\varphi_ {1} - \\varphi_ {2}\\right) \\right],$$\n$$\\left| \\frac {z _ {1}}{z _ {2}} \\right| = \\frac {\\left| z _ {1} \\right|}{\\left| z _ {2} \\right|}, \\quad \\operatorname{Arg} \\left(\\frac {z _ {1}}{z _ {2}}\\right) = \\operatorname{Arg} z _ {1} - \\operatorname{Arg} z _ {2}.$$\n对于后一个等式应与前面(1.2)式中第二个等式一样理解.",
-          "after": "乘法的图景不同。把 $z_1=r_1e^{i\\theta_1}$ 与 $z_2=r_2e^{i\\theta_2}$ 相乘，得到 $r_1r_2e^{i(\\theta_1+\\theta_2)}$：模相乘、辐角相加。因而乘以固定复数，就是旋转再伸缩；乘以 $i$ 恰好逆时针转 $\\pi/2$，长度不变。除以非零复数则把模相除、方向相减。这些规律不仅方便计算，也能用来辨认复数方程代表的圆、椭圆或射线。",
-          "source_note": "原文旋转因子漏写 i，依乘法公式订正为 e^{iθ}。"
+          "after": "乘法的图景不同。把 $z_1=r_1e^{i\\varphi_1}$ 与 $z_2=r_2e^{i\\varphi_2}$ 相乘，得到 $r_1r_2e^{i(\\varphi_1+\\varphi_2)}$：模相乘、辐角相加。因而乘以固定复数，就是旋转再伸缩；乘以 $i$ 恰好逆时针转 $\\pi/2$，长度不变。除以非零复数则把模相除、方向相减。这些规律不仅方便计算，也能用来辨认复数方程代表的圆、椭圆或射线。",
+          "source_note": "解析文本的单独旋转因子漏识 i；原PDF物理17页（印刷8页）印为 e^{iθ}，按页图恢复，不归为教材印刷错误。"
         },
         {
           "id": "CH01-S01-SS03-C009",
