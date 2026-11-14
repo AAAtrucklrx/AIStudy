@@ -561,7 +561,7 @@
         var searchRenderer = window.DSHRenderCore.createRenderer({marked:window.marked, katex:window.katex,
           concepts:D.concepts, figures:D.figures, diagrams:D.diagrams, models:D.models, sourceAssets:D.source_assets || {}});
         var detached = document.createElement('div');
-        detached.innerHTML = searchRenderer.readerDocumentHtml(unit.reader_document, 'body', unit.reader_media, unit.reader_layout);
+        detached.innerHTML = searchRenderer.readerDocumentHtml(unit.reader_document, 'body', unit.reader_media, unit.reader_layout, unit.teaching_presentation);
         prepareReaderTheorems(detached, unitId);
         window.DSHReaderLayout.enhance(detached, unit, unitId, {renderTitle: searchRenderer.renderInline}).forEach(function (topic) {
           var copy = topic.element.cloneNode(true);
@@ -1106,7 +1106,7 @@
     parts.push("<article class='unit'>");
     parts.push("<header class='unit-head'>");
     if (unit.reader_document) {
-      parts.push(R.readerDocumentHtml(unit.reader_document, "header", unit.reader_media, unit.reader_layout));
+      parts.push(R.readerDocumentHtml(unit.reader_document, "header", unit.reader_media, unit.reader_layout, unit.teaching_presentation));
     } else {
       parts.push("<div class='crumb'>" + esc(unit.crumb || "") + "</div>");
       parts.push("<h1><span class='anchor'>" + esc(unit.anchor || "") + "</span> " +
@@ -1131,7 +1131,7 @@
                  unitId: unitId });
 
     if (unit.reader_document) {
-      parts.push(R.readerDocumentHtml(unit.reader_document, "body", unit.reader_media, unit.reader_layout));
+      parts.push(R.readerDocumentHtml(unit.reader_document, "body", unit.reader_media, unit.reader_layout, unit.teaching_presentation));
     } else {
     var main = [];
     main.push("<h2>" + (isV2 ? "教案" : "讲解") + "</h2>");

@@ -888,6 +888,7 @@
       }
       return out+'</div>';
     }
+    var readerPresentation = null;
     function readerBlockHtml(block, extra) {
       if (block.raw_source) {
         return '<div class="reader-block markdown source-material" data-reader-pointer="'+escapeHtml(block.json_pointer)+'" data-reader-block="'+escapeHtml(block.block_id)+'">'+
@@ -906,7 +907,7 @@
         mounts.forEach(function(m){(m.edge==='before'?before:after).push(readerMountHtml(m));});
         mounts=[];
       }
-      var content = readerMarkdown.renderReaderField(parsed,mounts,readerMountHtml,{inline:tag==='h1',bareMath:!!katex,mathHtml:mathHtml});
+      var content = readerMarkdown.renderReaderField(parsed,mounts,readerMountHtml,{inline:tag==='h1',bareMath:!!katex,mathHtml:mathHtml,teachingRoles:(readerPresentation||{}).roles});
       return before.join('')+'<' + tag + ' class="reader-block markdown" data-reader-pointer="' + escapeHtml(block.json_pointer) +
         '" data-reader-block="' + escapeHtml(block.block_id) + '"' + step + (extra || "") + '>' +
         (block.group === "title" ? "" : '<span class="reader-field-label">' + escapeHtml(block.field_label) + '</span>') +
@@ -1031,7 +1032,8 @@
     }
 
     // V4 consumes the same frozen blocks as review; there are no field aliases here.
-    function readerDocumentHtml(document, region, media, layout) {
+    function readerDocumentHtml(document, region, media, layout, presentation) {
+      readerPresentation = presentation || null;
       readerMedia = media || [];
       readerLayout = layout || null;
       if (!document || document.schema_version !== "ReaderDocumentV1") {

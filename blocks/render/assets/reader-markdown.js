@@ -258,7 +258,14 @@
     function at(block,edge) { (mounts||[]).filter(function(m){return m.resolved_block_id===block.block_id&&m.edge===edge;}).sort(function(a,b){return a.order_at_anchor-b.order_at_anchor;}).forEach(function(m){if(consumed.has(m.mount_id)) throw new Error('Duplicate reader mount '+m.mount_id);consumed.add(m.mount_id);out.push(renderMount(m));}); }
     var references=numberedReferences(parsed);
     var bare=[], barePrefix='\uE000READERBARE', labelField=LABEL_FIELD.test((parsed.field||{}).json_pointer||'');
+    var activeRole='';
     parsed.blocks.forEach(function(block,index){
+      var role=(options.teachingRoles||{})[block.block_id]||'main';
+      if(role!==activeRole){
+        if(activeRole && activeRole!=='main') out.push('</details>');
+        if(role!=='main') out.push('<details class="reader-teaching-disclosure" data-teaching-role="'+escapeHtml(role)+'"><summary>'+(role==='proof'?'展开证明':'展开例题')+'</summary>');
+        activeRole=role;
+      }
       at(block,'before');
       var target=references.starts[index];
       if (target) out.push('<section class="reader-numbered-reference" data-reader-reference="'+escapeHtml(target.label)+'" id="'+target.anchor+'">');
@@ -269,6 +276,7 @@
       (references.ends[index]||[]).forEach(function(){out.push('</section>');});
       at(block,'after');
     });
+    if(activeRole && activeRole!=='main') out.push('</details>');
     if(consumed.size!==(mounts||[]).length) throw new Error('Reader mount has no matching syntax block');
     return out.join('');
   }

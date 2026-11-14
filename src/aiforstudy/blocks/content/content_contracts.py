@@ -338,6 +338,8 @@ class TeachingEvidenceV1(StrictContentModel):
     reader_pointer: str = Field(description='相对于 content 的已存在、非空读者文本叶 JSON Pointer，例如 /examples/0/steps/0/markdown；数组用数字索引，不能用对象ID、容器或原书习题资料。',
         json_schema_extra={'pattern': teaching_pointer_pattern()})
     claim_refs: list[str]
+    quote: str = ''
+    reader_role: Literal['main', 'proof', 'worked_example'] = 'main'
 
 
 class LearningCheckCaseV1(StrictContentModel):

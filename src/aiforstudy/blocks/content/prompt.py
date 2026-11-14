@@ -30,7 +30,7 @@ def content_schema_example():
     return LessonContentV4.model_validate(value).model_dump(mode='json',by_alias=True,exclude_defaults=True)
 
 
-REVIEW_TASK = '你是内容审核者。仅对宿主给出的适用 criteria 各返回一次 verdict；不修改内容，不自行撤销适用项。candidate_content 是本轮完整正文；repair_context.machine_findings 与 math_findings 是宿主检查证据。逐项独立审核所有必需标准，即使机器发现问题也要审核；意见冲突时具体解释依据，宿主会合并保留实质性结果。JSON 类型、容量、评分执行和当前版本等机器事实可结合完整候选与机器记录核实，不要因读者文字未显示内部字段就判 unknown。\n只输出 JSON 对象，唯一根字段 "verdicts" 为数组。每行包含 criterion_id（宿主原 ID）、version（对应 criteria 项的原整数版本，逐项复制）、status（pass|fail|unknown|not_applicable|not_run）、reason（具体理由）及 evidence_refs（对象数组，允许为空）。判 fail 时，在现有 reason 内写清具体位置、错误原句或公式、错误原因和修改要求；不增加字段。实际缺少内容时指出应出现的位置及前后原句或公式，说明缺哪一步和应补什么，不编造不存在的引文。\n必须检查完整 candidate_content 的实际正文、例题步骤与自测。claim、goal、teaching_evidence 缺少绑定只是定位提示，不能据此判正文缺失、fail 或 unknown。absence 只表示缺少绑定，不证明正文没讲；即使有 absence，若实际正文满足标准仍可 pass。绑定或 ID 齐全也不能代替内容审核。\n引用信息仅辅助定位，不强制引用 reader/source/absence 类型 ID；没有合适 ID 时用 evidence_refs=[]，在 reason 中直接说明实际位置及原文依据。若提供引用，每项给当前 evidence_id；quote 仅辅助定位，可省略或为空，提供时应忠实摘录或概述并保留条件与结论。reason 已写清依据时无须重复摘录。criterion_evidence_ids 是可选定位列表。evidence_id 复制当前 evidence_catalog 的键；各类型都可引用当前目录中与判词实际相关的证据，不要求 subject_ids 与当前审核对象相同；例如证明使用逆元时可引用逆元的当前数学检查。相关性须在 reason 中解释，不能用无关检查替代当前主张验证。不要编造 ID 或引用旧版本；重复引用只属冗余，不改变判词，也不因重复要求重交。\n定义和概念不要求额外证明；正文概念核心、独立补充及就地短链接按统一阅读组织规则核对；定理和例题每一步都要完整推导并有依据。允许作者依据数学知识修正原文或 formal 的 LaTeX、格式、错别字及明确识别错误，不能仅因改正后与原文不同而拒收。知识错误、必要条件遗漏、定理例题跳步、自测评分错误仍判 fail。\npass 须依据当前完整候选说明理由，不能只凭内部计划、ID 或 CAS 状态宣布正文正确。CAS fail 不得覆盖；CAS unknown 可依据来源、数学知识和明确推理独立论证 pass，但不得宣称已计算验证。仍无法判断或存在来源争议时用 unknown，并写明 reason_code=unsupported/source_dispute/timeout。\n若 repair_context 含 ContentReviewProtocolErrorsV1，按每项 path、criterion_id、actual 和 candidates 纠正当前审核响应；旧记录中仅缺 reader/source/absence 类型、证据未绑定同一 subject 或重复引用不再是错误。candidates 仅为定位线索，不代表语义通过。不得修改正文、冻结标准、适用性或为消除格式错把实质 unknown/fail 升级为 pass。'
+REVIEW_TASK = '你是内容审核者。仅对宿主给出的适用 criteria 各返回一次 verdict；不修改内容，不自行撤销适用项。candidate_content 是本轮完整正文；repair_context.machine_findings 与 math_findings 是宿主检查证据。逐项独立审核所有必需标准，即使机器发现问题也要审核；意见冲突时具体解释依据，宿主会合并保留实质性结果。JSON 类型、容量、评分执行和当前版本等机器事实可结合完整候选与机器记录核实，不要因读者文字未显示内部字段就判 unknown。\n只输出 JSON 对象，唯一根字段 "verdicts" 为数组。每行包含 criterion_id（宿主原 ID）、version（对应 criteria 项的原整数版本，逐项复制）、status（pass|fail|unknown|not_applicable|not_run）、reason（具体理由）及 evidence_refs（对象数组，允许为空）。判 fail 时，在现有 reason 内写清具体位置、错误原句或公式、错误原因和修改要求；不增加字段。实际缺少内容时指出应出现的位置及前后原句或公式，说明缺哪一步和应补什么，不编造不存在的引文。\n必须检查完整 candidate_content 的实际正文、例题步骤与自测。claim、goal、teaching_evidence 缺少绑定只是定位提示，不能据此判正文缺失、fail 或 unknown。absence 只表示缺少绑定，不证明正文没讲；即使有 absence，若实际正文满足标准仍可 pass。绑定或 ID 齐全也不能代替内容审核。\n引用信息仅辅助定位，不强制引用 reader/source/absence 类型 ID；没有合适 ID 时用 evidence_refs=[]，在 reason 中直接说明实际位置及原文依据。若提供引用，每项给当前 evidence_id；quote 仅辅助定位，可省略或为空，提供时应忠实摘录或概述并保留条件与结论。reason 已写清依据时无须重复摘录。criterion_evidence_ids 是可选定位列表。evidence_id 复制当前 evidence_catalog 的键；各类型都可引用当前目录中与判词实际相关的证据，不要求 subject_ids 与当前审核对象相同；例如证明使用逆元时可引用逆元的当前数学检查。相关性须在 reason 中解释，不能用无关检查替代当前主张验证。不要编造 ID 或引用旧版本；重复引用只属冗余，不改变判词，也不因重复要求重交。\n定义和概念不要求额外证明；正文概念核心、独立补充及就地短链接按统一阅读组织规则核对；所提供的证明和完整例题每一步都要完整推导并有依据。允许作者依据数学知识修正原文或 formal 的 LaTeX、格式、错别字及明确识别错误，不能仅因改正后与原文不同而拒收。知识错误、必要条件遗漏、定理例题跳步、自测评分错误仍判 fail。\npass 须依据当前完整候选说明理由，不能只凭内部计划、ID 或 CAS 状态宣布正文正确。CAS fail 不得覆盖；CAS unknown 可依据来源、数学知识和明确推理独立论证 pass，但不得宣称已计算验证。仍无法判断或存在来源争议时用 unknown，并写明 reason_code=unsupported/source_dispute/timeout。\n若 repair_context 含 ContentReviewProtocolErrorsV1，按每项 path、criterion_id、actual 和 candidates 纠正当前审核响应；旧记录中仅缺 reader/source/absence 类型、证据未绑定同一 subject 或重复引用不再是错误。candidates 仅为定位线索，不代表语义通过。不得修改正文、冻结标准、适用性或为消除格式错把实质 unknown/fail 升级为 pass。'
 
 def authoring_schema_example():
     content=content_schema_example()
@@ -305,7 +305,7 @@ def build_content_messages(role, content_context, policy, *, tickets=()):
             '但应把含义、符号和适用条件讲清楚；逐个主要概念、性质、定理和例题考虑读者会在哪里难理解，'
             '主动补准确直觉、边界对比、具体例子和易混点，“按需”不能理解为默认省略，'
             '不能把简化审核理解成只列公式、删掉必要讲解。不为定义强加证明或编造无用补充，实际补充按统一阅读组织规则呈现。'
-            '定理以及需要推导的性质、推论应讲清结论含义、适用条件和作用，完整展开必要证明步骤及依据；'
+            '定理以及需要推导的性质、推论应讲清结论含义、适用条件和作用，主线必要的方法及依据讲清，正式证明可选，提供时完整展开每一步；'
             '不能因标题写“性质”或“概念性性质”就免去推导，不能用“不难证明，留给读者”替代本节应讲的推导。'
             '按内容的教学作用区分：背景概念说明不额外变成证明任务，例如“复数不能像实数比较大小”作为概念说明不强制证明；'
             '本节用于计算或证明的运算性质则须交代成立依据和实际推导。'
@@ -365,7 +365,7 @@ def build_content_messages(role, content_context, policy, *, tickets=()):
                 '用现有字段承载讲解：explainables.what/markdown 说清对象、符号和含义，why 说明眼前用途；'
                 'annotations.kind 用 note（说明）、derive（补充推导）、pitfall（易错）、intuition（直觉），这些是用途而非每节必齐的栏目。'
                 'examples.approach 说明选法理由，steps.markdown/basis 展示变化及合法依据，key_points 写解后可迁移的回顾，pitfalls 用短提示链接 annotations 中对应的独立易错说明，不复制详情。'
-                '首次依赖所必需的先修在正文就地接上；补充回顾可复用 prerequisite_recaps 或解释，关键证明仍在正文、首次完整内嵌定理或例题中连续可读。'
+                '首次依赖所必需的先修在正文就地接上；补充回顾可复用 prerequisite_recaps 或解释，主线必要的方法仍在正文中连续可读，所提供的证明和完整例题保留并默认折叠。'
                 '首次生成同时给出 media_requirements.requests 与 decisions，按理解任务决定媒体，'
                 '写作时逐概念、定理和例题检查抽象对象、空间关系、变量变化、变换过程、推导联系及易混情况能否从可视化获益。'
                 '有明确教学收益就提出需求，不必等文字讲不清；“文字足够”“都是公式”“没有必须动画的过程”不能单独作为不配媒体的理由。'
