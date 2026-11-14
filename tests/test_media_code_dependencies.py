@@ -185,3 +185,44 @@ def test_narration_config_change_invalidates_animation_only(dependency_case):
     assert before['generation_dependency_hash'] != after['generation_dependency_hash']
     assert before['review_dependency_hash'] == after['review_dependency_hash']
     assert D.resource_dependencies(context, drawing, caps) == before_drawing
+
+
+def test_local_effective_identity_and_worker_changes_reject_outer_animation_cache(dependency_case,monkeypatch,tmp_path):
+    import json,sys
+    from aiforstudy.blocks.media import local_narration as L
+    context,_,changes,package,_=dependency_case
+    monkeypatch.setattr(L,'runtime_identity',lambda python:{'mlx-audio':'0.6.5'},raising=False)
+    root=Path(context.workspace.root);manifest=root/'manifest.json'
+    manifest.write_text(json.dumps({'status':'verified_complete','repo':'test','revision':'a','files':[]}))
+    for key,value in {'MODEL_DIR':root,'MODEL_MANIFEST':manifest,'PYTHON':sys.executable,'CACHE_DIR':root/'cache'}.items():monkeypatch.setenv('AIFORSTUDY_TTS_'+key,str(value))
+    (root/'config').mkdir();(root/'config/narration.json').write_text(json.dumps({'backend':'local-qwen'}))
+    animation={'request_id':'R','kind':'animation'};drawing={**animation,'kind':'drawing'};caps={'code_generation':'GeneratedMediaCodeV1'}
+    before=D.resource_dependencies(context,animation,caps);draw=D.resource_dependencies(context,drawing,caps)
+    manifest.write_text(json.dumps({'status':'verified_complete','repo':'test','revision':'b','files':[]}))
+    after=D.resource_dependencies(context,animation,caps)
+    assert after['generation_dependency_hash']!=before['generation_dependency_hash']
+    assert after['review_dependency_hash']==before['review_dependency_hash']
+    assert D.resource_dependencies(context,drawing,caps)==draw
+    for name in ('local_narration.py','local_speech_worker.py'):
+        before=D.resource_dependencies(context,animation,caps)
+        changes[str(package/'blocks/media'/name)]='changed-'+name
+        assert D.resource_dependencies(context,animation,caps)['generation_dependency_hash']!=before['generation_dependency_hash']
+        assert D.resource_dependencies(context,drawing,caps)==draw
+
+    # Exercise the actual figures-stage resource reuse branch as well as hashes.
+    from test_media_code_contracts import approved_case
+    from test_media_code_execution import mock_runtime,configure_stage
+    content,approval,request,program=approved_case('animation')
+    calls=mock_runtime(monkeypatch,program)
+    current=D.resource_dependencies(context,request,caps)
+    (tmp_path/'stage').mkdir()
+    stages,stage_context=configure_stage(tmp_path/'stage',monkeypatch,content,approval,request,current)
+    assert stages.figures_stage(stage_context).quality_state.value=='accepted'
+    assert stages.figures_stage(stage_context).quality_state.value=='accepted'
+    assert calls['generate']==1
+    second=tmp_path/'new-manifest.json'
+    second.write_text(json.dumps({'status':'verified_complete','repo':'test','revision':'c','files':[]}))
+    monkeypatch.setenv('AIFORSTUDY_TTS_MODEL_MANIFEST',str(second))
+    current.update(D.resource_dependencies(context,request,caps))
+    assert stages.figures_stage(stage_context).quality_state.value=='accepted'
+    assert calls['generate']==2 and calls['render']==['draft','final','draft','final']

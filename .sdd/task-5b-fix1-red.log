@@ -1,0 +1,80 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+_ test_local_effective_identity_and_worker_changes_reject_outer_animation_cache _
+
+dependency_case = (namespace(workspace=namespace(root=PosixPath('/private/var/folders/rh/fz3ryg1n0bx51_qydyn30g380000gn/T/pytest-of-huan...orstudy'), PosixPath('/Users/huang/Documents/ChatGPT/ai for study项目的改进/work/2026-11-15/AIforStudy/tools/manim_worker'))
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1068b8d40>
+
+    def test_local_effective_identity_and_worker_changes_reject_outer_animation_cache(dependency_case,monkeypatch):
+        import json,sys
+        from aiforstudy.blocks.media import local_narration as L
+        context,_,changes,package,_=dependency_case
+        monkeypatch.setattr(L,'runtime_identity',lambda python:{'mlx-audio':'0.6.5'},raising=False)
+        root=Path(context.workspace.root);manifest=root/'manifest.json'
+        manifest.write_text(json.dumps({'status':'verified_complete','repo':'test','revision':'a','files':[]}))
+        for key,value in {'MODEL_DIR':root,'MODEL_MANIFEST':manifest,'PYTHON':sys.executable,'CACHE_DIR':root/'cache'}.items():monkeypatch.setenv('AIFORSTUDY_TTS_'+key,str(value))
+        (root/'config').mkdir();(root/'config/narration.json').write_text(json.dumps({'backend':'local-qwen'}))
+        animation={'request_id':'R','kind':'animation'};drawing={**animation,'kind':'drawing'};caps={'code_generation':'GeneratedMediaCodeV1'}
+        before=D.resource_dependencies(context,animation,caps);draw=D.resource_dependencies(context,drawing,caps)
+        manifest.write_text(json.dumps({'status':'verified_complete','repo':'test','revision':'b','files':[]}))
+        after=D.resource_dependencies(context,animation,caps)
+>       assert after['generation_dependency_hash']!=before['generation_dependency_hash']
+E       AssertionError: assert 'sha256:38c4456d1477fc8f12970a8675fe808117f728b15d3383c5cf2666ac446046a3' != 'sha256:38c4456d1477fc8f12970a8675fe808117f728b15d3383c5cf2666ac446046a3'
+
+tests/test_media_code_dependencies.py:203: AssertionError
+_______________ test_cancel_active_process_reaped_before_return ________________
+
+tmp_path = PosixPath('/private/var/folders/rh/fz3ryg1n0bx51_qydyn30g380000gn/T/pytest-of-huang/pytest-169/test_cancel_active_process_rea0')
+
+    def test_cancel_active_process_reaped_before_return(tmp_path):
+        import sys,os
+        from types import SimpleNamespace
+        from aiforstudy.errors import Cancelled
+>       from aiforstudy.blocks.media.local_narration import run_worker
+E       ImportError: cannot import name 'run_worker' from 'aiforstudy.blocks.media.local_narration' (/Users/huang/Documents/ChatGPT/ai for study项目的改进/work/2026-11-15/AIforStudy/src/aiforstudy/blocks/media/local_narration.py)
+
+tests/test_auto_local_narration.py:84: ImportError
+___________________ test_cancel_queued_lock_starts_no_worker ___________________
+
+tmp_path = PosixPath('/private/var/folders/rh/fz3ryg1n0bx51_qydyn30g380000gn/T/pytest-of-huang/pytest-169/test_cancel_queued_lock_starts0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1066eb1a0>
+
+    def test_cancel_queued_lock_starts_no_worker(tmp_path,monkeypatch):
+        import fcntl
+        from types import SimpleNamespace
+        from aiforstudy.errors import Cancelled
+        b=backend(tmp_path);token=SimpleNamespace(cancelled=False)
+        monkeypatch.setattr(subprocess,'run',lambda *a,**k:pytest.fail('queued worker started'))
+        with b.lock.open('a') as lock,ThreadPoolExecutor(1) as pool:
+            fcntl.flock(lock,fcntl.LOCK_EX)
+            future=pool.submit(b.synthesize,'等待',tmp_path/'out.wav',cancel=token)
+            time.sleep(.1);token.cancelled=True
+>           with pytest.raises(Cancelled):future.result(timeout=2)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_auto_local_narration.py:107:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+/opt/homebrew/Cellar/python@3.12/3.12.15_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py:449: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.12/3.12.15_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py:401: in __get_result
+    raise self._exception
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = None
+
+    def run(self):
+        if not self.future.set_running_or_notify_cancel():
+            return
+
+        try:
+>           result = self.fn(*self.args, **self.kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           TypeError: AutoLocalQwenBackend.synthesize() got an unexpected keyword argument 'cancel'
+
+/opt/homebrew/Cellar/python@3.12/3.12.15_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py:59: TypeError
+=========================== short test summary info ============================
+FAILED tests/test_media_code_dependencies.py::test_local_effective_identity_and_worker_changes_reject_outer_animation_cache
+FAILED tests/test_auto_local_narration.py::test_cancel_active_process_reaped_before_return
+FAILED tests/test_auto_local_narration.py::test_cancel_queued_lock_starts_no_worker
+3 failed, 35 deselected in 0.27s

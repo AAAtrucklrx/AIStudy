@@ -60,24 +60,29 @@ class AutoLocalQwenBackend(LocalCacheBackend):
         if not 0<self.timeout<=3600:raise ValueError('Local worker timeout must be 0..3600 seconds')
         self.lock=Path(config.get('lock_file') or os.environ.get('AIFORSTUDY_TTS_LOCK_FILE',str(Path.home()/'.cache/aiforstudy/tts-gpu.lock'))).expanduser()
 
-    def synthesize(self,text,destination):
+    supports_cancel=True
+
+    def synthesize(self,text,destination,*,cancel=None):
         import fcntl
         import os
         import subprocess
         import tempfile
         import time
         if not isinstance(text,str) or not text.strip():raise ValueError('Nonempty spoken text required')
+        check_cancel(cancel)
         receipt=self.cache/cache_key(text,self.source)/'result.json'
         if receipt.exists():return super().synthesize(text,destination)
         self.lock.parent.mkdir(parents=True,exist_ok=True)
         with self.lock.open('a') as lock:
             deadline=time.monotonic()+self.timeout
             while True:
+                check_cancel(cancel)
                 try:fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB);break
                 except BlockingIOError:
                     if time.monotonic()>=deadline:raise TimeoutError('Local Qwen GPU lock timeout; no fallback')
                     time.sleep(.05)
             try:
+                check_cancel(cancel)
                 if receipt.exists():return super().synthesize(text,destination)
                 self.cache.mkdir(parents=True,exist_ok=True)
                 with tempfile.TemporaryDirectory(prefix='.worker-',dir=self.cache) as directory:
@@ -88,8 +93,67 @@ class AutoLocalQwenBackend(LocalCacheBackend):
                     env=dict(os.environ)
                     env['PYTHONPATH']=str(Path(__file__).resolve().parents[3])
                     try:
-                        subprocess.run(argv,check=True,timeout=self.timeout,env=env,capture_output=True)
+                        run_worker(argv,timeout=self.timeout,env=env,cancel=cancel)
                     except subprocess.CalledProcessError as exc:
                         raise RuntimeError('Local Qwen worker failed; no fallback: '+exc.stderr.decode('utf-8','replace')[-2000:]) from exc
                 return super().synthesize(text,destination)
             finally:fcntl.flock(lock,fcntl.LOCK_UN)
+
+
+def check_cancel(cancel):
+    from ...errors import Cancelled
+    if cancel is not None and getattr(cancel,'cancelled',False):
+        raise Cancelled('Local narration cancelled')
+
+
+def run_worker(argv, *, timeout, env, cancel=None):
+    """Reap the model process (and stop its process group) before releasing GPU."""
+    import os,signal,subprocess,time
+    check_cancel(cancel)
+    if cancel is None:
+        return subprocess.run(argv,check=True,timeout=timeout,env=env,capture_output=True)
+    process=subprocess.Popen(argv,env=env,stdout=subprocess.PIPE,stderr=subprocess.PIPE,start_new_session=True)
+    deadline=time.monotonic()+timeout
+    completed=False
+    try:
+        while True:
+            check_cancel(cancel)
+            if time.monotonic()>=deadline:raise subprocess.TimeoutExpired(argv,timeout)
+            try:
+                stdout,stderr=process.communicate(timeout=min(.05,max(.001,deadline-time.monotonic())))
+                check_cancel(cancel)
+                if process.returncode:raise subprocess.CalledProcessError(process.returncode,argv,stdout,stderr)
+                completed=True
+                return subprocess.CompletedProcess(argv,process.returncode,stdout,stderr)
+            except subprocess.TimeoutExpired:
+                if process.poll() is not None:continue
+    finally:
+        if not completed:
+            try:os.killpg(process.pid,signal.SIGKILL)
+            except ProcessLookupError:pass
+        process.communicate()
+
+
+def runtime_identity(python):
+    """Read actual native runtime metadata without importing/loading GPU models."""
+    import subprocess
+    names=('mlx-audio','mlx','numpy','soundfile','transformers','tokenizers','safetensors')
+    code='import importlib.metadata as m,json,sys; print(json.dumps({"python":sys.version,"packages":{n:m.version(n) for n in '+repr(names)+'}}))'
+    result=json.loads(subprocess.check_output([python,'-c',code],timeout=15,text=True))
+    if result['packages']['mlx-audio']!='0.6.5':raise ValueError('Local Qwen requires mlx-audio 0.6.5')
+    return result
+
+
+def narration_dependency_identity(config):
+    if not config or not config.get('enabled',True):return {'enabled':False}
+    from .narration import configured_backend
+    backend=configured_backend(config)
+    result={'source':backend.source}
+    if isinstance(backend,AutoLocalQwenBackend):
+        from .dependencies import file_identity
+        for name,expected in backend.source['files'].items():
+            if file_identity(Path(backend.paths['model_dir'])/name).removeprefix('sha256:')!=expected:
+                raise ValueError('Local Qwen model file differs from verified manifest: '+name)
+        result['runtime']=runtime_identity(backend.paths['python'])
+        result['model_manifest_sha256']=digest(backend.paths['model_manifest'])
+    return result

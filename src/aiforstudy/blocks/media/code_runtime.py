@@ -304,10 +304,14 @@ def render_generated_code(program, *, context, out_dir, workspace_root=None, pro
         limits = limits_for_profile(services.worker_dir, profile)
         policy = load_asset(services.worker_dir, "policy")
         quality = policy.PROFILES[profile]
-        runtime_hash = digest_of({"host": digest_file(__file__), "narration": digest_file(Path(__file__).with_name("narration.py")),
-            "narration_providers": digest_file(Path(__file__).with_name("narration_providers.py")),
-            "narration_config_hash":digest_of(narration_config or {}), "assets": {
-            path.name: digest_file(path) for path in sorted(Path(services.worker_dir).glob("*.py"))}})
+        narration_dependency={}
+        if program['backend']=='manim' and context.get('request',{}).get('kind')=='animation':
+            from .local_narration import narration_dependency_identity
+            from ...pipeline.runtime_dependencies import CODE_NARRATION_COMPONENTS
+            narration_dependency={'effective':narration_dependency_identity(narration_config),
+                'components':{name:digest_file(Path(__file__).resolve().parents[2]/name) for name in CODE_NARRATION_COMPONENTS}}
+        runtime_hash = digest_of({"host":digest_file(__file__),"narration":narration_dependency,
+            "assets":{path.name:digest_file(path) for path in sorted(Path(services.worker_dir).glob("*.py"))}})
         result["compiler_hash"] = digest_of({"source": technical["source_hash"],
             "program": technical["program_hash"], "context": technical["context_hash"],
             "runtime": runtime_hash, "profile": profile})
@@ -339,7 +343,7 @@ def render_generated_code(program, *, context, out_dir, workspace_root=None, pro
         if program['backend']=='manim' and context.get('request',{}).get('kind')=='animation' and narration_config and narration_config.get('enabled',True):
             from .narration import prepare_step_audio, configured_backend
             narration_receipt = prepare_step_audio(program['steps'], source_dir/'narration',
-                backend=configured_backend(narration_config),ffmpeg_path=services.ffmpeg)
+                backend=configured_backend(narration_config),ffmpeg_path=services.ffmpeg,cancel=cancel)
             # Archive host originals outside writable scratch; worker gets fixed copies only.
             voice_root=scratch/'narration';voice_root.mkdir()
             narration_receipt=deepcopy(narration_receipt)
@@ -392,6 +396,8 @@ def render_generated_code(program, *, context, out_dir, workspace_root=None, pro
         else:
             result.update(status="needs_review", reason="technical media checks passed; actual visual and mathematical review required")
         technical["phase"] = "complete"
+    except Cancelled as exc:
+        result.update(status="cancelled",reason=str(exc))
     except (CapabilityError, ConfigError) as exc:
         result.update(status="blocked", reason=str(exc))
     except (ValueError, TypeError, OSError, subprocess.SubprocessError, ContractError) as exc:

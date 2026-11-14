@@ -111,3 +111,61 @@ Exact suite/focused logs are `.sdd/task-5b-media-runtime-green.log` and
 
 No human listening/naturalness approval is asserted. The parent audits the two
 new clips with ASR separately; ASR is not a pronunciation or semantic guarantee.
+
+## Independent review fix round 1 — outer cache and cancellation
+
+Read `.superpowers/sdd/2026-11-15-teaching-upgrade/task-5b-review.md`.
+Confirmed P1: literal configuration hashes left environment-selected manifest and
+local implementation edits outside the resource reuse boundary. Animation-only
+`CODE_NARRATION_COMPONENTS` now contains narration, provider, local backend and
+packaged worker modules. Both resource-generation dependencies and compiler/runtime
+identity bind these modules and the resolved effective backend identity. Local
+identity validates current model-file SHA-256 against the manifest and includes
+manifest hash, model/voice/settings and actual Python + mlx-audio/mlx/numpy/
+soundfile/transformers/tokenizers/safetensors metadata from the configured MLX
+interpreter. No model loads during identity inspection. File digests use the
+existing stat-keyed fingerprint cache. Drawing and review closures remain separate;
+Task 6's precise exam-reader dependency entry was not changed.
+
+Confirmed P2: code_runtime now passes its cancellation object through
+prepare_step_audio to the automatic backend. Cancellation is checked before
+configuration, before every step, while waiting for the cross-process GPU lock,
+and every 50 ms while communicating with an active worker. A cancelled or timed-out
+active process group is killed, and the direct worker is reaped with communicate
+before returning through the lock-release finally block. Cancelled is represented
+as the existing cancelled runtime status; no later step starts. Cancellation never
+publishes partial PCM cache receipts or switches providers. Completed cache hits
+remain CPU-only. The introductory Edge-default sentence was corrected.
+
+Exact RED command: `PYTHONPATH=src:tests <project-root>/.venv-linux/bin/python -m pytest tests/test_media_code_dependencies.py tests/test_auto_local_narration.py -k 'local_effective or cancel_' -q`.
+Result: 3 failures, 35 deselected in 0.27s; `.sdd/task-5b-fix1-red.log`.
+
+GREEN command: `PYTHONPATH=src:tests <project-root>/.venv-linux/bin/python -m pytest tests/test_auto_local_narration.py tests/test_local_narration.py tests/test_narration.py tests/test_narration_providers.py tests/test_natural_narration.py tests/test_revoice_textbook_lessons.py tests/test_media_code_dependencies.py tests/test_media_dependencies_v4.py -q`.
+Result: 158 passed, 1 initially skipped in 5.19s; `.sdd/task-5b-fix1-green.log`.
+The browser-only skipped test was then run with the actual Edge executable:
+`tests/test_media_dependencies_v4.py::test_real_browser_lazy_animation_anchor_is_mounted_when_detail_opens`; 1 passed in 1.93s,
+`.sdd/task-5b-fix1-browser.log`. No skipped test is counted as a pass.
+
+Additional focused coverage added after that suite:
+- Actual figures-stage outer reuse: repeated identical request generated once;
+  changing the manifest through its environment reference generated/rendered again.
+  Local backend/worker source mutations alter animation generation only. 1 passed
+  in 0.27s, `.sdd/task-5b-fix1-outer-cache.log`.
+- Actual CPU protocol process through prepare_step_audio and the automatic backend:
+  cancel first active worker, assert PID gone, assert lock immediately acquirable,
+  assert only one request and no completed receipt; 1 passed in 0.12s,
+  `.sdd/task-5b-fix1-cancel-integration.log`. Separate tests cover queue cancellation
+  while another real process owns the lock, active direct-process cleanup, and
+  cancellation between steps. These are real process tests, not GPU inference.
+- Actual configured Manim/Qwen media integration with measured PCM and decoded
+  keyframes: focused runtime test passed in 7.24s,
+  `.sdd/task-5b-fix1-runtime.log`.
+
+Real model files and native runtime identity were inspected successfully; evidence
+is `tts-trials/auto-new-sentence/effective-dependency-identity.json`. All 60 current
+stage resources were rehashed against byte counts and manifest SHA-256 and passed.
+No content, script, voice parameters or model inputs changed, so the 12/57
+production artifacts were preserved without resynthesis. Future ordinary animation
+cache identities intentionally invalidate older provenance boundaries. Existing
+recorded generation receipts were not rewritten to pretend a historical run used
+new code. Final source packages must include this fix.

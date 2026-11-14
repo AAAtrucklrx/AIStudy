@@ -1,6 +1,6 @@
 # 配音供应商与真实时间记录
 
-默认 `config/narration.json` 仍为 Edge。新后端从现有 `render_generated_code` → `configured_backend` → `prepare_step_audio` 入口使用；旧的 `narrate_animation(..., backend=...)` 也支持。配置通过工作区 `config/narration.json` 读取，`enabled: false` 可关闭新制作配音。已有静态书、MP4、字幕不需要重新生成。
+默认 `config/narration.json` 为自动本地 Qwen；Edge 仅为显式可选后端。新后端从现有 `render_generated_code` → `configured_backend` → `prepare_step_audio` 入口使用；旧的 `narrate_animation(..., backend=...)` 也支持。配置通过工作区 `config/narration.json` 读取，`enabled: false` 可关闭新制作配音。已有静态书、MP4、字幕不需要重新生成。
 
 两家付费接口只做过离线传输夹具测试，没有联网合成或听审。当前缺少服务凭据和选定音色的实测，不宣称音质提升、中文术语正确或句内动画已完成。
 
@@ -166,3 +166,10 @@ with explicit unit/request/step IDs and complete `before`/`after` spoken strings
 The before text must match the original input exactly; display prose is changed
 only at that exact string, preserving LaTeX. Use a separately versioned corpus
 containing the new expected strings, and retain the original corpus and media.
+
+Animation resource and compiler identities also bind the resolved verified model
+manifest, native runtime versions and local backend/worker source files. Changes
+to those inputs invalidate animation reuse without invalidating unrelated drawing
+or review identities. Pipeline cancellation propagates through each audio step,
+GPU-lock waits and active model communication. The model process group is stopped
+and the worker reaped before releasing its GPU lock; later steps do not start.

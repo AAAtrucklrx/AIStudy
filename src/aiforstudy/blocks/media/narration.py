@@ -590,24 +590,28 @@ def audio_stream_problems(streams, *, video_seconds, narration=None, steps=None)
     return problems
 
 
-def prepare_step_audio(steps, output_dir, *, backend=None, ffmpeg_path=None):
+def prepare_step_audio(steps, output_dir, *, backend=None, ffmpeg_path=None, cancel=None):
     """Synthesize plain-text voice on host before dispatching any generated code.
 
     Returned records contain only fixed file paths, hashes and decoded durations.
     Callers copy these files into the worker's explicitly bounded scratch tree.
     """
+    from .local_narration import check_cancel
+    check_cancel(cancel)
     backend = backend or configured_backend()
     ffmpeg = resolve_ffmpeg(ffmpeg_path)
     output = Path(output_dir).resolve(); output.mkdir(parents=True,exist_ok=True)
     records=[]
     for index, step in enumerate(steps):
+        check_cancel(cancel)
         text = spoken_text(step)
         if not text.strip('。 '):
             raise ValueError('narration step has no spoken text')
         path = output / f'step-{index+1:03d}.wav'
         raw = output / f'.step-{index+1:03d}.raw.wav'
         try:
-            synthesis = backend.synthesize(text,raw)
+            synthesis = (backend.synthesize(text,raw,cancel=cancel) if getattr(backend,"supports_cancel",False) else backend.synthesize(text,raw))
+            check_cancel(cancel)
             _run([ffmpeg,'-nostdin','-v','error','-y','-i',raw,'-ac','1','-ar',SAMPLE_RATE,
                   '-c:a','pcm_s16le',path],timeout=180)
         finally:

@@ -87,10 +87,11 @@ CODE_GENERATION_COMPONENTS = (
     'blocks/media/code_contracts.py','blocks/media/code_generation.py',
     'blocks/media/static_example.py','blocks/media/animation_example.py',
     'blocks/media/code_runtime.py','blocks/media/code_execution.py',
-    'blocks/media/narration.py','blocks/media/narration_providers.py',
     'blocks/media/media_requirements.py','blocks/media/presentation_policy.py',
     'blocks/visual/worker.py','blocks/visual/manim_adapter.py','providers/capabilities.py',
 ) + MEDIA_AUTHORITY_COMPONENTS
+CODE_NARRATION_COMPONENTS = ('blocks/media/narration.py','blocks/media/narration_providers.py',
+    'blocks/media/local_narration.py','blocks/media/local_speech_worker.py')
 # Explicit worker assets used by code/probe mode. Manim additionally calls the
 # shared font checks in scene_builder; render_fixture is never a code dependency.
 CODE_WORKER_COMPONENTS = (

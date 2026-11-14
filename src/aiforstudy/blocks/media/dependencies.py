@@ -39,7 +39,7 @@ def resource_dependencies(ctx,request,capabilities):
     from ...checks.offline import _browser_executable
     from ...pipeline.runtime_dependencies import (
         STATIC_GENERATION_COMPONENTS, STATIC_REVIEW_COMPONENTS,
-        CODE_GENERATION_COMPONENTS, CODE_REVIEW_COMPONENTS, CODE_WORKER_COMPONENTS,
+        CODE_GENERATION_COMPONENTS, CODE_REVIEW_COMPONENTS, CODE_WORKER_COMPONENTS, CODE_NARRATION_COMPONENTS,
         media_prompt_components, LIBRARY_ADAPTER_COMPONENTS,
     )
     code_backend=(capabilities.get('code_generation')=='GeneratedMediaCodeV1'
@@ -84,8 +84,12 @@ def resource_dependencies(ctx,request,capabilities):
                 adapters['installed_render_packages']='unavailable'
     if code_backend and request['kind'] == 'animation':
         # Config contains references/settings only; never read referenced secrets.
-        adapters['narration_config'] = file_identity(Path(ctx.workspace.root)/'config'/'narration.json')
+        path=Path(ctx.workspace.root)/'config'/'narration.json'
+        adapters['narration_config'] = file_identity(path)
+        from .local_narration import narration_dependency_identity
+        adapters['narration_effective'] = narration_dependency_identity(json.loads(path.read_text()) if path.is_file() else None)
     generation_components=CODE_GENERATION_COMPONENTS if code_backend else STATIC_GENERATION_COMPONENTS
+    if code_backend and request['kind']=='animation': generation_components+=CODE_NARRATION_COMPONENTS
     review_components=CODE_REVIEW_COMPONENTS if code_backend else STATIC_REVIEW_COMPONENTS
     if code_backend: generation_components+=media_prompt_components(request['kind'],'code')
     review_components+=media_prompt_components(request['kind'],'review')
