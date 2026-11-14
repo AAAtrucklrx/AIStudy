@@ -133,7 +133,7 @@ def _source_context(ctx):
 def _capabilities(ctx):
     from ..checks.offline import _browser_executable
     caps=getattr(ctx.services,'capabilities',None)
-    raw=caps.as_dict() if caps else {}
+    raw=caps.identity_dict() if caps else {}
     kinds=['source_image']
     manim_available=bool(caps and 'manim' in caps.render_backends())
     if manim_available and _browser_executable(Path(ctx.workspace.root)): kinds+=['drawing']

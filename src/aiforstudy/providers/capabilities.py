@@ -35,11 +35,20 @@ class Capability:
     detail: str = ""
     probe: tuple[str, ...] = ()
     required_for: tuple[str, ...] = ()
+    # Only probes with transient diagnostics supply a stable replacement.
+    # Other details (including package/tool versions) remain identity-bearing.
+    identity_detail: str | None = None
 
     def as_dict(self) -> dict:
         return {"name": self.name, "kind": self.kind, "available": self.available,
                 "detail": self.detail, "probe": list(self.probe),
                 "required_for": list(self.required_for)}
+
+    def identity_dict(self) -> dict:
+        result = self.as_dict()
+        if self.identity_detail is not None:
+            result["detail"] = self.identity_detail
+        return result
 
 
 @dataclass(frozen=True)
@@ -85,6 +94,10 @@ class Capabilities:
                 "available": self.available_names(),
                 "figure_backends": self.figure_backends(),
                 "render_backends": self.render_backends()}
+
+    def identity_dict(self) -> dict:
+        """Cache inputs, separate from the full per-run diagnostic report."""
+        return {**self.as_dict(), "items": [c.identity_dict() for c in self.items]}
 
 
 def _probe_python(module: str) -> Capability:
@@ -362,7 +375,7 @@ def _probe_sandbox(name: str, spec: dict, workspace: Workspace) -> Capability:
         return Capability(name=namespace, kind="sandbox", available=False,
                           detail="缺独立渲染解释器，无法做隔离自检")
     try:
-        from ..blocks.visual.worker import (RenderLimits, WorkerServices, probe_isolation,
+        from ..blocks.visual.worker import (RenderLimits, WorkerServices, environment_hash, probe_isolation,
                                             select_isolation)
     except Exception as exc:                                     # noqa: BLE001
         return Capability(name=namespace, kind="sandbox", available=False,
@@ -382,12 +395,25 @@ def _probe_sandbox(name: str, spec: dict, workspace: Workspace) -> Capability:
         return Capability(name=namespace, kind="sandbox", available=False,
                           detail=f"隔离自检无法启动：{type(exc).__name__}: {exc}")
     isolation = probe.get("isolation") or {}
+    from ..core.digest import digest_file, digest_of
+    # Keep actual applied policy, interpreter/control targets and worker source
+    # identity. Only the job's temporary paths and run diagnostics are excluded;
+    # the real isolation probe above still executes on every preflight.
+    identity = digest_of({
+        "backend": choice.backend, "interpreter": interpreter,
+        "control_paths": control, "safe": isolation.get("safe"),
+        "environment": environment_hash(probe),
+        "worker_assets": {str(path.relative_to(worker_dir)): digest_file(path)
+                          for path in sorted(Path(worker_dir).rglob("*.py"))},
+    })
     if not isolation.get("safe"):
         return Capability(name=namespace, kind="sandbox", available=False,
-                          detail=f"隔离自检未通过：{isolation.get('reason') or '未知'}")
+                          detail=f"隔离自检未通过：{isolation.get('reason') or '未知'}",
+                          identity_detail=f"{choice.backend}；隔离自检未通过：{isolation.get('reason') or '未知'}；{identity}")
     return Capability(name=namespace, kind="sandbox", available=True,
                       detail=(f"{choice.backend}；哨兵不可读、网络不可达"
-                              f"（{'，'.join(str(path) for path in probe['probe_paths'])}）"))
+                              f"（{'，'.join(str(path) for path in probe['probe_paths'])}）"),
+                      identity_detail=f"{choice.backend}；哨兵不可读、网络不可达；{identity}")
 
 
 def resolve_worker_dir(spec: dict, workspace: Workspace) -> Path | None:
@@ -454,7 +480,8 @@ def probe(workspace: Workspace) -> Capabilities:
         cap = _probe_sandbox(name, merged, workspace)
         items.append(Capability(
             name=cap.name, kind=cap.kind, available=cap.available, detail=cap.detail,
-            probe=cap.probe, required_for=tuple(spec.get("required_for") or ())))
+            probe=cap.probe, required_for=tuple(spec.get("required_for") or ()),
+            identity_detail=cap.identity_detail))
 
     # 动画后端同样是**组合**能力；缺任何一项 → 该后端 blocked（**收费前**）
     for backend, spec in (cfg.get("render_backends") or {}).items():
