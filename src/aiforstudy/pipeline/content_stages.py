@@ -213,7 +213,18 @@ def _collect_source(ctx):
         # The selected merged product is an input, not the unused legacy table.
         concept_key = 'concepts.json' if concept_file == parse / 'concepts.json' else str(concept_file)
         source_inputs[concept_key] = digest_file(concept_file)
+    from ..core.video_evidence import frozen_video_evidence, load_attached_videos
+    try:
+        videos = frozen_video_evidence(parse, book_id=ctx.context.book_id, unit_id=unit_id)
+        for video_unit, bundle, manifest in load_attached_videos(parse, book_id=ctx.context.book_id):
+            if video_unit == unit_id:
+                for path in [bundle/'manifest.json', *(bundle / row['path'] for row in manifest['files'])]:
+                    source_inputs[str(path.relative_to(parse))] = digest_file(path)
+                source_inputs['video-evidence/current.json'] = digest_file(parse/'video-evidence/current.json')
+    except (ValueError, OSError, KeyError, TypeError) as exc:
+        raise ContractError('invalid attached video evidence: ' + str(exc)) from exc
     context = {
+        "video_evidence": videos,
         "book_id": ctx.context.book_id,
         "unit_id": unit_id,
         "unit": unit,
@@ -969,7 +980,8 @@ def lesson_stage(ctx):
                 str(Path(name) if Path(name).is_absolute() else Path(ctx.context.parse) / name)
                 for name in context["source_inputs"] if name != 'textbook'
             )
-            + (str(Path(ctx.context.parse) / context["original_text"]),),
+            + (str(Path(ctx.context.parse) / context["original_text"]),)
+            + (() if 'video-evidence/current.json' in context["source_inputs"] else (str(Path(ctx.context.parse) / 'video-evidence/current.json'),)),
         )
     except Exception as exc:
         reraise_control_error(exc)

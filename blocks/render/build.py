@@ -102,7 +102,7 @@ def reader_site_files(data: dict, *, has_scene: bool = False) -> dict[str, Path]
               "study-foundation-scenes.js", "study-special-scenes.js", "study-guides.js",
               "study-math.js", "study-lesson.js", "study-light.css", "animations.js",
               "study-text-led-figures.js", "study-text-led-figures.css",
-              "course-library.js", "course-library.css")}
+              "course-library.js", "course-library.css", "video-evidence.js")}
     files['assets/text-led-multiplication.js'] = HERE.parents[1] / 'examples/text-led-multiplication/multiplication.js'
     # The study explorer is a local mathematical scene, independent of whether
     # a historical lesson happened to include a legacy MathBox model.

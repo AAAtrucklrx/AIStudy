@@ -52,8 +52,13 @@ def _material_sources(snapshot: dict, parse_root: Path, run: Path) -> set[Path]:
         course_inputs = set(library_input_files(parse_root/'course-library'))
     except (OSError, ValueError, KeyError, TypeError) as exc:
         raise ContractError('course library source metadata invalid') from exc
+    from ...core.video_evidence import video_input_files
+    try:
+        video_inputs = set(video_input_files(parse_root, book_id=data['book']))
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        raise ContractError('video evidence source metadata invalid') from exc
     return ({parse_root/name for name in (*INPUTS, 'source_materials.json', 'body.json')}
-            | set(source_asset_paths(texts, parse_root).values()) | course_inputs)
+            | set(source_asset_paths(texts, parse_root).values()) | course_inputs | video_inputs)
 
 
 def validate_snapshot_sources(snapshot: dict, run: Path, parse_root: Path) -> bool:

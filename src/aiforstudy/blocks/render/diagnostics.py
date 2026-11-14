@@ -690,8 +690,15 @@ def build_reader_snapshot(run_dir: Path, *, unit_ids: list[str], out_dir: Path, 
     material_inputs = [source_root/name for name in (*INPUTS,'source_materials.json','body.json')]
     from ...core.course_library import library_input_files
     material_inputs.extend(library_input_files(source_root/'course-library'))
+    from ...core.video_evidence import load_attached_videos, video_input_files, project_video_evidence
+    video_bundles = load_attached_videos(source_root, book_id=data['book'])
+    material_inputs.extend(video_input_files(source_root, book_id=data['book']))
+    data['video_evidence'] = [{'unit_id': unit, 'fingerprint': bundle.name,
+        'url': 'video/' + bundle.name + '/index.html'}
+        for unit, bundle, _ in video_bundles if unit in unit_ids]
     if not any(path.is_file() for path in material_inputs):
-        material_inputs=[]
+        # A later explicit attachment must invalidate even an initially empty source root.
+        material_inputs=[source_root/'video-evidence/current.json']
     for path in [*material_inputs, *source_paths.values()]:
         key=str(path.relative_to(run)) if path.is_relative_to(run) else str(path)
         sources[key]=digest_file(path) if path.is_file() else 'missing'
@@ -713,6 +720,11 @@ def build_reader_snapshot(run_dir: Path, *, unit_ids: list[str], out_dir: Path, 
     with tempfile.TemporaryDirectory(prefix='.diagnostic-',dir=destination) as directory:
         pending=Path(directory)
         copy_source_assets(source_paths,data['source_assets'],pending)
+        projected_videos = set()
+        for unit, bundle, _ in video_bundles:
+            if unit in unit_ids and bundle.name not in projected_videos:
+                project_video_evidence(bundle, pending/'video'/bundle.name, course_id=data['book'])
+                projected_videos.add(bundle.name)
         for unit,animation,paths,placement,profile,request,row,media_state in animations:
             if require_complete_units:
                 payload=_attach_production_animation(pending,unit=unit,book_id=state.get('book_id',''),

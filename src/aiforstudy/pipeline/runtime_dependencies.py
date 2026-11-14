@@ -16,7 +16,7 @@ PREPARATION = ('vendor','pipeline/preparation.py','pipeline/preparation_checks.p
 MATH = ('blocks/math',)
 AUDIT = ('blocks/audit/__init__.py','blocks/audit/contracts.py','blocks/audit/evidence.py',
          'blocks/audit/loop.py','pipeline/diagnostics.py','pipeline/repair.py')
-CONTENT = ('core/source_boundaries.py','blocks/content',
+CONTENT = ('core/source_boundaries.py','core/video_evidence.py','core/course_library.py','blocks/content',
            'blocks/media/author_requirements.py','blocks/media/author_diagnostics.py','blocks/media/media_requirements.py',
            'blocks/media/intent_review.py',
            'pipeline/content_stages.py','pipeline/content_revalidation.py','resources/teaching_profiles.json') + MATH + AUDIT

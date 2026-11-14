@@ -69,6 +69,7 @@ class SourceContext(StrictContentModel):
     original_text: str
     original_sha256: str
     source_inputs: dict[str,str]
+    video_evidence: list[dict[str,Any]] = Field(default_factory=list)
     # Exact frozen upstream documents: intentionally opaque, not author containers.
     unit: dict[str,Any]
     chapters: dict[str,Any]
@@ -91,6 +92,7 @@ class SourceContext(StrictContentModel):
     @property
     def digest(self):
         data=self.as_dict(); data.pop('source_context_hash',None)
+        if not data.get('video_evidence'): data.pop('video_evidence',None)
         return content_digest(data)
 
 
@@ -246,6 +248,6 @@ def derive_source_obligations(context) -> list[SourceObligationV1]:
 def source_context_from_frozen(context, *, learner_profile=None) -> SourceContext:
     profile=learner_profile or context.get('learner_profile') or LearnerProfileV1()
     obj=SourceContext(**{k:context[k] for k in ('book_id','unit_id','source_text','original_text','original_sha256','source_inputs','unit','chapters','concept_index')},
-        reference_catalog=reference_catalog_from_context(context),learner_profile=profile,
+        video_evidence=context.get('video_evidence') or [], reference_catalog=reference_catalog_from_context(context),learner_profile=profile,
         source_examples=context.get('source_examples') or extract_source_examples(context['source_text']),source_obligations=derive_source_obligations(context))
     return obj.model_copy(update={'source_context_hash':obj.digest})

@@ -331,6 +331,11 @@ def _references(st):
                 return bool(refs) and all(grounded(r,seen|{ref}) for r in refs)
             return False
         if ref['kind']=='concept': return concept_grounded(ref)
+        if ref['kind']=='video_observation':
+            fields=('kind','id','unit_id','path','json_pointer','sha256')
+            if any(ref.get(k) for k in ('concept_id','example_id','claim_id','obligation_id','start','end','source_line')): return False
+            return any(all(ref.get(k)==row.get('source_ref',{}).get(k) for k in fields)
+                       for row in s.get('video_evidence',[]))
         if ref.get('obligation_id') and ref['obligation_id'] not in obligations: return False
         if ref.get('unit_id') and ref['unit_id']!=s['unit_id']: return False
         if ref.get('sha256') and ref['sha256']!=s['original_sha256']: return False
