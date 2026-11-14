@@ -474,7 +474,8 @@ def library_input_files(bundle):
     meta = json.loads(pointer.read_text(encoding='utf-8'))
     catalog_path = local_file(bundle, meta['catalog'])
     catalog = json.loads(catalog_path.read_text(encoding='utf-8'))
-    return [pointer, catalog_path,
+    annotation = bundle / 'exam-annotations.json'
+    return [pointer, catalog_path, *([annotation] if annotation.is_file() else []),
             *(local_file(catalog_path.parent, m['local_path']) for m in catalog['input_manifests']),
             *(local_file(catalog_path.parent, p) for s in catalog['sources'] for p in s['local_paths'])]
 
@@ -503,6 +504,11 @@ def project_library(data, bundle):
     catalog, paths = load_library(bundle)
     for source in catalog['sources']:
         source['url'] = 'assets/source/' + source['sha256'] + '.pdf'
+    from .exam_analysis import analyze, load_annotations
+    annotation = Path(bundle) / 'exam-annotations.json'
+    if annotation.is_file():
+        annotations = load_annotations(annotation)
+        catalog['exam_study'] = analyze(catalog, annotations)
     data['course_library'] = catalog
     return {'course-library/' + source['sha256'] + '.pdf': paths[source['id']]
             for source in catalog['sources']}
