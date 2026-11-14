@@ -447,6 +447,12 @@
     children(container).forEach(function(node) {
       if(node.nodeType!==1)return;
       if(node.matches('.reader-field-label, .reader-topic-title, summary'))return;
+      if(node.matches('[data-teaching-main]')) {active=null;return;}
+      if(node.querySelector('[data-teaching-main]')) {
+        active=null;
+        if(node.matches('[data-reader-topic], .reader-numbered-reference, .card')) foldProofContainer(node);
+        return;
+      }
       if(node.matches('details')){if(node!==active)active=null;return;}
       if(node.matches('[data-reader-topic], .reader-numbered-reference, .card')) {
         active=null;foldProofContainer(node);return;
@@ -488,8 +494,10 @@
         while(link.firstChild)label.appendChild(link.firstChild);
         link.replaceWith(label);
       });
-      Array.prototype.slice.call(topic.childNodes).forEach(function(node){if(node!==details)details.appendChild(node);});
-      topic.appendChild(details);
+      var remaining=Array.prototype.slice.call(topic.childNodes), protectedIndex=remaining.findIndex(function(node){return node.nodeType===1&&(node.matches('[data-teaching-main]')||node.querySelector('[data-teaching-main]'));});
+      var end=protectedIndex<0?remaining.length:protectedIndex;
+      topic.insertBefore(details,remaining[0]||null);
+      remaining.slice(0,end).forEach(function(node){details.appendChild(node);});
     });
   }
   function recoveredProofProjection(block,unit,unitId) {

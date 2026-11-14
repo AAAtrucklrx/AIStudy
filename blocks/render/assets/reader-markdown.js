@@ -273,6 +273,8 @@
       var token=options.bareMath===false?linkNumberedTokens([parsed.tokens[block.token_index]],references,index)[0]:bareMathTokens(linkNumberedTokens([parsed.tokens[block.token_index]],references,index),true,bare,barePrefix)[0], group=[token];group.links=parsed.links;
       var html=options.inline&&token.tokens ? marked.Parser.parseInline(token.tokens,opts) : marked.parser(group,opts);
       parsed.math.concat(bare).forEach(function(item){html=html.split(item.slot).join(renderMath(item));});
+      if(role==='main' && Object.prototype.hasOwnProperty.call(options.teachingRoles||{},block.block_id))
+        html=html.replace(/^(\s*<[A-Za-z][A-Za-z0-9-]*)/, '$1 data-teaching-main=""');
       out.push(html);
       at(block,'after');
       if((references.ends[index]||[]).length && activeRole && activeRole!=='main'){out.push('</details>');activeRole='';}
