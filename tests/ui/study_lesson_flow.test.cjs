@@ -107,3 +107,16 @@ test('a standalone text led figure keeps its own renderer instead of entering th
  const controller=require('../../blocks/render/assets/study-visuals.js').createController(root,{observe(fn){observe=fn;return{observe(){},unobserve(){},disconnect(){}};},createRenderer(){mounted++;return{dispose(){}};}});
  t.after(()=>controller.destroy());observe([{target:figure,isIntersecting:true}]);assert.equal(mounted,0);
 });
+
+test('proof-contained media never escapes its disclosure into the desktop rail',t=>{
+ const dom=new JSDOM('<main><article class="unit"><section data-reader-pointer="/body_markdown"><details class="reader-proof"><summary>证明</summary><p>[[TEACHING_VISUAL:P]]</p></details><p>[[TEACHING_VISUAL:M]]</p></section></article></main>');t.after(()=>dom.window.close());
+ dom.window.innerWidth=1440;
+ dom.window.DSHStudyVisuals={createTeachingCard(doc,plan){const el=doc.createElement('section');el.className='study-visual';return el;}};
+ const root=dom.window.document.querySelector('main');flow.enhance(root,{unit:{study_lesson:{visuals:[{id:'P',title:'证明图'},{id:'M',title:'主线图'}],media:[]}},unitId:'U',data:{}});
+ assert.ok(root.querySelector('[data-teaching-id="P"]').closest('details.reader-proof:not([open])'));
+ assert.equal(root.querySelectorAll('.lesson-media-rail .teaching-block').length,1);
+ assert.equal(root.querySelector('[data-teaching-id="P"] .study-visual'),null);
+ const proof=root.querySelector('details.reader-proof');proof.open=true;proof.dispatchEvent(new dom.window.Event('toggle'));
+ assert.ok(root.querySelector('[data-teaching-id="P"] .study-visual'));
+ assert.ok(root.querySelector('[data-teaching-id="P"]').closest('details.reader-proof'));
+});

@@ -11,7 +11,7 @@
   }
   function arrangeMedia(root,article,plans){
     var doc=root.ownerDocument,w=doc.defaultView,body=root.querySelector('[data-reader-pointer="/body_markdown"]')||root.querySelector('[data-reader-group="body_markdown"]')||article;
-    var blocks=Array.from(body.querySelectorAll('.teaching-block'));if(!blocks.length)return function(){};
+    var blocks=Array.from(body.querySelectorAll('.teaching-block')).filter(function(block){return !block.closest('details');});if(!blocks.length)return function(){};
     var layout=node(doc,'div','lesson-reading-layout'),prose=node(doc,'div','lesson-prose'),rail=node(doc,'aside','lesson-media-rail');
     rail.setAttribute('aria-label','与正文对应的图像和动画');
     var cues=blocks.map(function(block,index){
@@ -95,6 +95,8 @@
       var textLed=kind==='VISUAL'&&plan.presentation==='text-led-figure';
       if(textLed)block.classList.add('teaching-text-led');
       var stage=node(doc,'div','teaching-stage');block.appendChild(stage);marker.replaceWith(block);
+      var ancestors=[],parent=block.parentElement;while(parent){if(parent.tagName==='DETAILS')ancestors.push(parent);parent=parent.parentElement;}
+      var mounted=false;function mountWhenOpen(){if(ancestors.some(function(d){return !d.open;})){stage.querySelectorAll('video,audio').forEach(function(m){if(!m.paused)m.pause();});return;}if(mounted)return;mounted=true;
       try{
         if(kind==='VISUAL'){
           var card;
@@ -114,6 +116,8 @@
           disposers.push(w.DSHAnimations.mountAnimations(stage,payload,{compact:true,title:plan.title}));report.media++;
         }
       }catch(error){report.errors.push(id+': '+error.message);stage.appendChild(node(doc,'p','teaching-unavailable','这段图解暂时无法显示。'));}
+      }
+      ancestors.forEach(function(d){d.addEventListener('toggle',mountWhenOpen);disposers.push(function(){d.removeEventListener('toggle',mountWhenOpen);});});mountWhenOpen();
       // The next authored paragraph interprets the observation. It deliberately
       // stays in the same narrative flow instead of becoming another card.
     });

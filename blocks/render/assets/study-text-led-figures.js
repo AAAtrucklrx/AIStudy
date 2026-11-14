@@ -224,7 +224,7 @@
           var arc = 42, end = [O[0] + arc * Math.cos(angle), O[1] - arc * Math.sin(angle)];
           if (Math.abs(angle) > EPS) g.svg.appendChild(svgNode(doc, 'path', { d: 'M ' + (O[0] + arc) + ' ' + O[1] + ' A ' + arc + ' ' + arc + ' 0 0 ' + (angle > 0 ? 0 : 1) + ' ' + end[0] + ' ' + end[1],
             fill: 'none', stroke: PURPLE, 'stroke-width': 2.5, 'data-angle-arc': '' }));
-          g.text([1.65 * Math.cos(angle / 2), 1.65 * Math.sin(angle / 2)], 'θ', { fill: PURPLE, 'text-anchor': 'middle' }, [0, angle < 0 ? 14 : 0]);
+          g.text([1.65 * Math.cos(angle / 2), 1.65 * Math.sin(angle / 2)], 'φ', { fill: PURPLE, 'text-anchor': 'middle' }, [0, angle < 0 ? 14 : 0]);
           g.text([p[0] * 0.65, p[1] * 0.65], 'r', { fill: BLUE }, [p[1] < 0 ? 8 : -18, -10]);
           g.text(p, 'z', { fill: BLUE }, [12, -12]);
         } else g.text([0, 0], 'z = 0', { fill: BLUE }, [14, -18]);
@@ -235,7 +235,7 @@
         measure('radius', '模 $r$', r);
         measure('argument', '主辐角 $\\arg z$', angle,
           angle === null ? 'z = 0，辐角无定义' : (Math.abs(angle - Math.PI) < EPS ? 'π rad（180°）' : fmt(angle) + ' rad（' + fmt(angle * 180 / Math.PI) + '°）'));
-        measure('polar', '极坐标关系', null, r < EPS ? 'r = 0；不指定 θ' : 'x = r cos θ；y = r sin θ');
+        measure('polar', '极坐标关系', null, r < EPS ? 'r = 0；不指定 φ' : 'x = r cos φ；y = r sin φ');
       }
       draw();
     }

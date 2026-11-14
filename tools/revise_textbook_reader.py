@@ -13,6 +13,7 @@ sys.path[:0]=[str(ROOT),str(ROOT/'src')]
 from tools.upgrade_study_reader import load_reader_data,restore_empty_units
 from aiforstudy.blocks.render.layout import layout_from_reader_media
 from aiforstudy.core.digest import digest_of
+from aiforstudy.blocks.content.teaching_projection import compile_reader_roles, bind_teaching_presentation
 from blocks.render.build import write_reader_site
 from tools.prepare_support_corrections import correct_support_document,correct_global_concepts
 from tools.prepare_textbook_display import project_textbook_display,correct_display_document,correct_display_concepts
@@ -140,6 +141,27 @@ def validate_lessons(data,lessons,parse_root):
     return errors
 
 
+def authored_presentation(document, lesson):
+    declarations = lesson.get('reading_roles', [])
+    seen = set()
+    for row in declarations:
+        key = (row.get('reader_pointer'), row.get('quote'))
+        if key in seen or key[0] != '/body_markdown' or not key[1] or row.get('reader_role') not in ('proof', 'worked_example'):
+            raise ValueError('正文折叠声明缺失、重复或无效')
+        seen.add(key)
+    optional, _ = compile_reader_roles(document, declarations)
+    main, _ = compile_reader_roles(document, [{'reader_pointer':'/body_markdown', 'reader_role':'main'}])
+    for coverage in lesson.get('knowledge_coverage', []):
+        for excerpt in coverage['excerpts']:
+            _, selected = compile_reader_roles(document, [{'reader_pointer':'/body_markdown','quote':excerpt}])
+            if any(key in optional['roles'] for key in selected[0]):
+                raise ValueError('教材覆盖段落不可折叠：' + coverage['id'])
+    main['roles'].update(optional['roles'])
+    for region in main['regions']:
+        region['reader_role'] = main['roles'][region['block_id']]
+    return bind_teaching_presentation(document, main)
+
+
 def apply_lessons(data,lessons,parse_root=None):
     result=deepcopy(data)
     result['study_original_concepts']=deepcopy(data.get('concepts',{}))
@@ -179,6 +201,7 @@ def apply_lessons(data,lessons,parse_root=None):
         unit['study_display_corrections']=display_report
         if support_report.get('signature_mismatches') or display_report.get('signature_mismatches'):raise ValueError('查阅资料订正签名不符：'+uid)
         unit['reader_document']=document;unit['reader_media']=[]
+        unit['teaching_presentation']=authored_presentation(document,lesson)
         unit['reader_layout']=layout_from_reader_media(document,[])
         unit['study_provenance']={'source_path':lesson['source_path'],
             'original_document_hash':original.get('content_hash'),

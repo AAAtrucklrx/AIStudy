@@ -221,3 +221,17 @@ test('copied popup scope rebuilds live models and owns a disposable capped rende
  intersection(cards.map(target=>({target,isIntersecting:true})));assert.ok(mounted>=1);assert.equal(dispose.controller.activeCount(),1);assert.ok(released>=1);
  dispose();assert.equal(dispose.controller.activeCount(),0);assert.equal(released,mounted);assert.equal(cards[0].querySelector('button').disabled,true);assert.equal(source.querySelector('button').disabled,false);dispose();assert.equal(released,mounted);
 });
+
+test('uniform domain modes preserve closed radius and strict threshold, reset to open',t=>{
+ const v=api(),dom=new JSDOM('<main></main>');t.after(()=>dom.window.close());const root=dom.window.document.querySelector('main');
+ const card=v.createTeachingCard(dom.window.document,{kind:'uniform',model_title:'一致收敛',title:'一致收敛',action:'比较',observation:'误差',conclusion:'条件'},'U');root.appendChild(card);
+ const model=card.__studyModel,c=v.createController(root,{observe(){return {observe(){},disconnect(){}};},createRenderer(){return {update(){},dispose(){}};}});t.after(()=>c.destroy());
+ const bound=card.querySelector('input[type="number"][data-study-param="bound"]');assert.equal(bound.disabled,true);assert.equal(model.params.bound,1);
+ card.querySelector('[data-study-action="uniform-mode-closed"]').click();assert.equal(bound.disabled,false);assert.equal(model.params.bound,.7);
+ bound.value='.99';bound.dispatchEvent(new dom.window.Event('input',{bubbles:true}));const eps=card.querySelector('input[type="number"][data-study-param="epsilon"]');eps.value='.05';eps.dispatchEvent(new dom.window.Event('input',{bubbles:true}));
+ card.querySelector('[data-study-action="uniform-terms"]').click();assert.equal(model.params.terms,299);assert.equal(v.geometry(model).facts.rightEndpointIncluded,true);assert.ok(v.geometry(model).facts.supremum<.05);
+ card.querySelector('[data-study-action="uniform-mode-open"]').click();assert.equal(model.params.bound,1);assert.equal(v.geometry(model).facts.rightEndpointIncluded,false);
+ card.querySelector('[data-study-action="uniform-mode-closed"]').click();assert.equal(model.params.bound,.99);
+ bound.value='1';bound.dispatchEvent(new dom.window.Event('input',{bubbles:true}));assert.equal(model.params.bound,.99);
+ card.querySelector('[data-study-action="reset"]').click();assert.equal(model.params.bound,1);assert.equal(bound.disabled,true);
+});

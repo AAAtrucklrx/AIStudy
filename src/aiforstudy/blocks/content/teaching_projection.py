@@ -69,7 +69,13 @@ def compile_teaching_presentation(content, reader):
                 for block_id in selected:
                     if projection['roles'].get(block_id, 'main') != 'main': continue
                     if block_id not in coverage[claim]: coverage[claim].append(block_id)
+    return bind_teaching_presentation(r, projection, coverage)
+
+
+def bind_teaching_presentation(reader, projection, coverage=None):
+    """Bind a compiled projection to this exact final reader document."""
+    r = as_dict(reader)
     binding = [r['unit_id'], r['content_hash']] + [[str(b.get(k, '')) for k in ('block_id','json_pointer','raw_text','markdown','visible_text','anchor','group','owner_id','field_label')] + [[str(x) for x in b.get('source_map', [])], [[str(span.get(k, '')) for k in ('visible_start','visible_end','raw_start','raw_end')] for span in b.get('marker_spans', [])]] for b in r['blocks']]
     binding_hash = 'sha256:' + hashlib.sha256(json.dumps(binding, ensure_ascii=False, separators=(',', ':')).encode()).hexdigest()
     return {'schema_version': 'TeachingPresentationV1', 'content_hash': r['content_hash'], 'binding_hash': binding_hash,
-            'reader_document_hash': content_digest(r), **projection, 'claim_main_blocks': coverage}
+            'reader_document_hash': content_digest(r), **projection, 'claim_main_blocks': coverage or {}}

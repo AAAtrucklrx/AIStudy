@@ -107,3 +107,33 @@ def test_coverage_cannot_claim_an_absent_or_duplicate_paragraph(tmp_path):
     lesson['knowledge_coverage']=[{'id':'U-C1','excerpts':[first]}]
     lesson['body_markdown']+='\n\n'+first
     assert any('覆盖' in e for e in validate_lessons(data,{'U':lesson},tmp_path))
+
+
+def test_authored_roles_bind_final_document_and_keep_coverage_main():
+    from aiforstudy.blocks.content.content_contracts import content_digest
+    data, lesson = example()
+    lesson['reading_roles'] = [{'reader_pointer':'/body_markdown','quote':'这个观察帮助我们进入下一步。','reader_role':'proof'}]
+    unit = apply_lessons(data, {'U':lesson})['units']['U']
+    p = unit['teaching_presentation']
+    assert p['reader_document_hash'] == content_digest(unit['reader_document'])
+    assert 'proof' in p['roles'].values()
+    assert 'main' in p['roles'].values()
+    lesson['knowledge_coverage'] = [{'id':'C','excerpts':['这个观察帮助我们进入下一步。']}]
+    with pytest.raises(ValueError, match='覆盖'):
+        apply_lessons(data, {'U':lesson})
+
+
+@pytest.mark.parametrize('quote', ['这个观察', '不存在'])
+def test_authored_roles_reject_invalid_quotes(quote):
+    data, lesson = example()
+    lesson['reading_roles'] = [{'reader_pointer':'/body_markdown','quote':quote,'reader_role':'proof'}]
+    with pytest.raises(Exception): apply_lessons(data, {'U':lesson})
+
+
+def test_authored_projection_through_actual_renderer():
+    import subprocess, json
+    data, lesson = example()
+    lesson['reading_roles'] = [{'reader_pointer':'/body_markdown','quote':'这个观察帮助我们进入下一步。','reader_role':'proof'}]
+    unit = apply_lessons(data, {'U':lesson})['units']['U']
+    proc = subprocess.run(['node', 'tests/ui/authored_projection_roundtrip.cjs'], input=json.dumps(unit), text=True, capture_output=True)
+    assert proc.returncode == 0, proc.stderr
