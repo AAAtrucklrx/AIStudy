@@ -33,10 +33,11 @@ def compile_reader_roles(reader, declarations):
         candidates = [b for b in syntax if b['target_pointer'] == pointer and b['source_start_cp'] < end and b['source_end_cp'] > start]
         if not candidates or any(raw[b['source_start_cp']:min(start,b['source_end_cp'])].strip() or raw[max(end,b['source_start_cp']):b['source_end_cp']].strip() for b in candidates):
             raise ContractError('teaching evidence must select complete Markdown blocks')
-        role = evidence.get('reader_role', 'main')
-        if role not in ('main', 'proof', 'worked_example'):
+        role = evidence.get('reader_role')
+        if role not in (None, 'main', 'proof', 'worked_example'):
             raise ContractError('invalid reader role')
         for block in candidates:
+            if role is None: continue
             key = block['block_id']
             if key in assignments and assignments[key] != role:
                 raise ContractError('conflicting teaching roles for Markdown block')
@@ -63,9 +64,10 @@ def compile_teaching_presentation(content, reader):
     for row, selected in zip(evidence, selections):
         field = next(b for b in r['blocks'] if b['json_pointer'] == row['reader_pointer'])
         visible = not field.get('collapsed') or field.get('disclosure_part') == 'core'
-        if row.get('reader_role', 'main') == 'main' and visible:
+        if (row.get('reader_role') or 'main') == 'main' and visible:
             for claim in row['claim_refs']:
                 for block_id in selected:
+                    if projection['roles'].get(block_id, 'main') != 'main': continue
                     if block_id not in coverage[claim]: coverage[claim].append(block_id)
     binding = [r['unit_id'], r['content_hash']] + [[str(b.get(k, '')) for k in ('block_id','json_pointer','raw_text','markdown','visible_text','anchor','group','owner_id','field_label')] + [[str(x) for x in b.get('source_map', [])], [[str(span.get(k, '')) for k in ('visible_start','visible_end','raw_start','raw_end')] for span in b.get('marker_spans', [])]] for b in r['blocks']]
     binding_hash = 'sha256:' + hashlib.sha256(json.dumps(binding, ensure_ascii=False, separators=(',', ':')).encode()).hexdigest()

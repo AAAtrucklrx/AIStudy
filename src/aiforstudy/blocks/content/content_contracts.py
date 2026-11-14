@@ -339,7 +339,7 @@ class TeachingEvidenceV1(StrictContentModel):
         json_schema_extra={'pattern': teaching_pointer_pattern()})
     claim_refs: list[str]
     quote: str = ''
-    reader_role: Literal['main', 'proof', 'worked_example'] = 'main'
+    reader_role: Literal['main', 'proof', 'worked_example'] | None = Field(default=None, exclude_if=lambda value: value is None, description='省略表示兼容主线，不覆盖旧内容折叠；显式 main 保证正文可见。')
 
 
 class LearningCheckCaseV1(StrictContentModel):
