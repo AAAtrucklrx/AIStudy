@@ -22,7 +22,7 @@ import time
 from urllib.request import Request, urlopen
 import wave
 
-VERSION = 'host-narration-1.3-provider-timing'
+VERSION = 'host-narration-1.4-proven-hold'
 SAMPLE_RATE = 24000
 MAX_NARRATED_SECONDS = 1800
 
@@ -167,6 +167,9 @@ class HTTPTTSBackend:
 def configured_backend(config=None):
     config = config or {}
     kind = config.get('backend', 'edge-tts')
+    if kind == 'local-cache':
+        from .local_narration import LocalCacheBackend
+        return LocalCacheBackend(config)
     if kind in ('minimax', 'elevenlabs'):
         from .narration_providers import PremiumTTSBackend
         return PremiumTTSBackend(config)
@@ -348,7 +351,10 @@ def _compose_narrated_video(video_path, steps, audio_path, output_path, *, ffmpe
     clock=0.0
     for index,step in enumerate(steps):
         source_start=float(step['source_start']);source_end=float(step['source_end'])
-        start=float(step['start']);end=float(step['end']);target=end-start;original=source_end-source_start
+        start=float(step['start']);end=float(step['end']);target=end-start;original=float(step.get('input_motion_duration',source_end-source_start))
+        if not 0<original<=source_end-source_start+.04:
+            raise ValueError('input motion duration lies outside current source window')
+        source_end=source_start+original
         if (not all(math.isfinite(v) for v in (source_start,source_end,start,end))
                 or abs(start-clock)>.002 or target<original-1/fps or original<=0):
             raise ValueError('retimed narration steps or original source intervals are invalid')
@@ -472,7 +478,9 @@ def narrate_animation(video_path, steps, output_dir, *, backend=None, ffmpeg_pat
                     pcm=voice.readframes(frames)
                     quality=_pcm_quality(pcm)
                     audio_quality.append({'step_id':step.get('step_id',f'step-{index+1}'),**quality})
-                    original = float(step['end']) - float(step['start'])
+                    original = float(step.get('input_motion_duration',float(step['end']) - float(step['start'])))
+                    if not 0<original<=float(step['end'])-float(step['start'])+.04:
+                        raise ValueError('input motion duration lies outside current source window')
                     target = math.ceil(max(original, duration+.25)*fps-1e-7)/fps
                     target_frames = round(target*SAMPLE_RATE)
                     audio.writeframesraw(pcm)

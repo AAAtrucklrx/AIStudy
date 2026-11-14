@@ -99,3 +99,46 @@ cue = narration_anchor(receipt, step_id="residue", text_start=0, text_end=5,
 ```sh
 ../.venv-linux/bin/python -m pytest tests/test_narration_providers.py tests/test_narration.py tests/test_natural_narration.py tests/test_media_code_dependencies.py tests/test_media_code_contracts.py -q
 ```
+
+### Offline Qwen3 CustomVoice (pinned native worker)
+
+`tools/local_speech_worker.py` runs separately in an environment pinned to
+`mlx-audio==0.6.5` on Apple Silicon. Pass `--model-dir`, `--model-manifest`,
+`--corpus`, `--cache-dir`, and `--output-config` explicitly. The model manifest
+must contain a repository, immutable revision, `verified_complete` status, and
+SHA-256 for every file. The worker rehashes every file before loading, disables
+Hub network access, and uses `trust_remote_code=False`. Model weights stay outside
+source and delivery packages. Missing dependencies, mismatched files, capped
+output, or invalid PCM fail explicitly; there is no Edge/system fallback.
+
+The generated configuration selects `local-cache` through the existing narration
+factory. Cache keys include exact spoken text, all model/tokenizer file hashes,
+revision, Serena voice, seed, instruction, effective token budget, streaming mode,
+and runtime version. Each cache entry retains original float WAV, PCM16 WAV,
+text, identity, sample count and hashes. The packaging adapter rechecks the entry
+identity/hash and bounded PCM before returning it. Audio alignment remains
+unavailable; no timestamps or human review are fabricated.
+
+`tools/revoice_wholebook.py` accepts `--source` (delivery with `neural-media.json`
+and `book/`), `--output`, `--config`, and the frozen `--corpus`. It uses each
+current MP4's `step.start/end`, preserving older `source_start/end` under
+`prior_clock_lineage`. The established narration compositor retains original
+motion and adds end-frame holds if required by measured PCM. It writes a separate
+stage suitable for the whole-book builder's `--previous-delivery` input. The
+original delivery is never changed. `tools/verify_revoiced_delivery.py` accepts
+the same arguments and checks all 57 PCM slices, resource hashes, scripts, LaTeX,
+VTT timings and decoded seek frames in the 12-animation corpus.
+
+The worker's fixed voice is a model-supplied voice, not a clone. A technical pass
+or an ASR match does not establish human-perceived naturalness or mathematical
+pronunciation correctness. Keep the same-script audition evidence alongside the
+selection decision.
+
+For previously narrated clips, optionally pass `--receipt-source` to the prior
+receipt-bearing delivery. Hold removal requires its MP4 hash to match the current
+input, its step clocks to match exactly, and a recognized compositor contract
+explicitly recording original motion followed by final-frame holds. Only the
+original motion **length** is reused, added to the current step start; old raw
+start times are never treated as positions in the current MP4. Missing or
+mismatched evidence retains the entire current interval with an explicit reason.
+Receipts record both current input/motion windows and prior clock lineage.
