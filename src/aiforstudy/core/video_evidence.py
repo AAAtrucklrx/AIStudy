@@ -11,7 +11,8 @@ import shutil
 import subprocess
 from fractions import Fraction
 import tempfile
-from pathlib import Path
+from pathlib import Path, PurePosixPath
+import unicodedata
 from .course_library import local_file, sha256
 
 
@@ -32,8 +33,13 @@ def validate_video_evidence(manifest_path: Path) -> dict:
         for f in m['files']:
             if not isinstance(f.get('id'), str) or not f['id'] or f['id'] in ids: errors.append('duplicate or invalid file id')
             ids.add(f['id'])
-            if f.get('path') in paths or f.get('path') in ('manifest.json', 'index.html'): errors.append('duplicate or reserved file path')
-            paths.add(f.get('path'))
+            name = f.get('path')
+            if not isinstance(name, str): raise ValueError('file path must be a string')
+            normalized = PurePosixPath(name).as_posix()
+            key = unicodedata.normalize('NFC', normalized).casefold()
+            if normalized != name or key in paths or key.split('/')[0] in ('manifest.json', 'index.html'):
+                errors.append('noncanonical, duplicate or reserved file path')
+            paths.add(key)
             try:
                 p = local_file(path.parent, f['path'])
                 if not p.is_file() or sha256(p) != f['sha256']: errors.append('file missing or hash mismatch: ' + f['id'])
@@ -145,6 +151,9 @@ def project_video_evidence(bundle: Path, output: Path, *, course_id: str | None 
     video_hash = html.escape(files[m['media_id']]['sha256'])
     page = '''<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>视频证据回看</title><style>body{max-width:70rem;margin:auto;padding:1rem;font:16px/1.6 system-ui}video{max-width:100%%;height:auto}li{margin:.6em 0}small{color:#555;overflow-wrap:anywhere}button{font:inherit}</style></head><body><h1>视频证据回看</h1><p>观察记录和模型候选不代表宿主语义核验或完整理解。时间区间为记录范围，并非完整覆盖。</p><p>%s</p><p>原片 SHA-256: <small>%s</small></p><video controls preload="metadata" width="800" src="%s"></video><h2>观察与候选</h2>%s<details><summary>原始文件与记录</summary><p><a href="manifest.json">证据清单</a></p><ul>%s</ul></details><script>document.querySelectorAll('[data-time]').forEach(b=>b.addEventListener('click',()=>{const v=document.querySelector('video');v.currentTime=Number(b.dataset.time);v.focus()}));</script></body></html>''' % (scope, video_hash, html.escape(quote(video, safe='/'), quote=True), sections, assets)
     (output / 'index.html').write_text(page, encoding='utf-8')
+    checked = validate_video_evidence(output / 'manifest.json')
+    if not checked['ok'] or (output/'manifest.json').read_bytes() != manifest_bytes:
+        raise ValueError('projection verification failed: ' + '; '.join(checked['errors']))
     return {'index': str(output / 'index.html'), 'course_id': m['course_id'], 'fingerprint': hashlib.sha256((bundle / 'manifest.json').read_bytes()).hexdigest()}
 
 

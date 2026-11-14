@@ -292,3 +292,32 @@ def test_reader_snapshot_detects_new_video_attachment(tmp_path):
     report=build_reader_snapshot(run,unit_ids=['U'],out_dir=tmp_path/'preview',parse_root=parse)
     attach_video_evidence(p,parse,book_id='test-book',unit_id='U')
     with pytest.raises(Exception): validate_snapshot_sources(report,run,parse)
+
+
+@pytest.mark.parametrize('name', ['./index.html', './manifest.json', 'clip.mp4/../index.html'])
+def test_reject_noncanonical_reserved_alias(tmp_path, name):
+    p,m=fixture(tmp_path)
+    m['files'].append({'id':'alias','path':name,'sha256':hashlib.sha256(b'asset').hexdigest()})
+    (tmp_path/'index.html').write_bytes(b'asset')
+    p.write_text(json.dumps(m))
+    assert not validate_video_evidence(p)['ok']
+
+
+def test_reject_normalized_duplicate_alias(tmp_path):
+    p,m=fixture(tmp_path)
+    m['files'].append({'id':'alias','path':'./clip.mp4','sha256':m['files'][0]['sha256']})
+    p.write_text(json.dumps(m))
+    assert not validate_video_evidence(p)['ok']
+
+
+def test_projection_revalidates_completed_asset_bytes(tmp_path, monkeypatch):
+    from aiforstudy.core.video_evidence import project_video_evidence
+    p,_=fixture(tmp_path); bundle=Path(import_video_evidence(p,tmp_path/'bundles')['bundle'])
+    original=Path.write_text
+    def corrupt_after_viewer(path, *args, **kwargs):
+        result=original(path,*args,**kwargs)
+        if path.name == 'index.html': (path.parent/'clip.mp4').write_bytes(b'corrupt')
+        return result
+    monkeypatch.setattr(Path,'write_text',corrupt_after_viewer)
+    with pytest.raises(ValueError, match='projection'):
+        project_video_evidence(bundle,tmp_path/'view')
