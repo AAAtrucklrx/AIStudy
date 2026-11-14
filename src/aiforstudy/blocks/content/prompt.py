@@ -30,6 +30,25 @@ def content_schema_example():
     return LessonContentV4.model_validate(value).model_dump(mode='json',by_alias=True,exclude_defaults=True)
 
 
+def reader_presentation_example():
+    """Contract-valid, self-contained convention; no invented frozen source IDs."""
+    content = content_schema_example()
+    main = '本节用 n 表示非负整数，即大于或等于零的整数。判断时先与零比较；零符合约定，负整数不符合。'
+    proof = '### 证明：零符合约定\n\n零是整数，且 0≥0，因此零满足非负整数的定义。证毕。'
+    worked = '### 例题：判断取值\n\n判断 n=2 和 n=-1 是否符合约定。先检查整数条件，再与零比较：2 和 -1 都是整数；2>0，所以 2 符合；-1<0，所以 -1 不符合。'
+    takeaway = '### 例题的方法回顾\n\n可迁移的方法是先检查对象是否为整数，再检查它是否大于或等于零；不要把非负误解为严格为正。'
+    content['body_markdown'] = '\n\n'.join((main, proof, worked, takeaway))
+    content['teaching_plan']['claims'][0]['source_refs'] = []
+    content['teaching_evidence'] = [
+        {'goal_id': 'G-CONVENTION', 'purpose': purpose,
+         'reader_pointer': '/body_markdown', 'claim_refs': ['K-CONVENTION'],
+         'quote': quote, 'reader_role': role}
+        for purpose, quote, role in [('definition', main, 'main'),
+            ('derivation', proof, 'proof'), ('example', worked, 'worked_example'),
+            ('contrast', takeaway, 'main')]]
+    return LessonContentV4.model_validate(content).model_dump(mode='json', by_alias=True, exclude_defaults=True)
+
+
 REVIEW_TASK = '你是内容审核者。仅对宿主给出的适用 criteria 各返回一次 verdict；不修改内容，不自行撤销适用项。candidate_content 是本轮完整正文；repair_context.machine_findings 与 math_findings 是宿主检查证据。逐项独立审核所有必需标准，即使机器发现问题也要审核；意见冲突时具体解释依据，宿主会合并保留实质性结果。JSON 类型、容量、评分执行和当前版本等机器事实可结合完整候选与机器记录核实，不要因读者文字未显示内部字段就判 unknown。\n只输出 JSON 对象，唯一根字段 "verdicts" 为数组。每行包含 criterion_id（宿主原 ID）、version（对应 criteria 项的原整数版本，逐项复制）、status（pass|fail|unknown|not_applicable|not_run）、reason（具体理由）及 evidence_refs（对象数组，允许为空）。判 fail 时，在现有 reason 内写清具体位置、错误原句或公式、错误原因和修改要求；不增加字段。实际缺少内容时指出应出现的位置及前后原句或公式，说明缺哪一步和应补什么，不编造不存在的引文。\n必须检查完整 candidate_content 的实际正文、例题步骤与自测。claim、goal、teaching_evidence 缺少绑定只是定位提示，不能据此判正文缺失、fail 或 unknown。absence 只表示缺少绑定，不证明正文没讲；即使有 absence，若实际正文满足标准仍可 pass。绑定或 ID 齐全也不能代替内容审核。\n引用信息仅辅助定位，不强制引用 reader/source/absence 类型 ID；没有合适 ID 时用 evidence_refs=[]，在 reason 中直接说明实际位置及原文依据。若提供引用，每项给当前 evidence_id；quote 仅辅助定位，可省略或为空，提供时应忠实摘录或概述并保留条件与结论。reason 已写清依据时无须重复摘录。criterion_evidence_ids 是可选定位列表。evidence_id 复制当前 evidence_catalog 的键；各类型都可引用当前目录中与判词实际相关的证据，不要求 subject_ids 与当前审核对象相同；例如证明使用逆元时可引用逆元的当前数学检查。相关性须在 reason 中解释，不能用无关检查替代当前主张验证。不要编造 ID 或引用旧版本；重复引用只属冗余，不改变判词，也不因重复要求重交。\n定义和概念不要求额外证明；正文概念核心、独立补充及就地短链接按统一阅读组织规则核对；所提供的证明和完整例题每一步都要完整推导并有依据。允许作者依据数学知识修正原文或 formal 的 LaTeX、格式、错别字及明确识别错误，不能仅因改正后与原文不同而拒收。知识错误、必要条件遗漏、定理例题跳步、自测评分错误仍判 fail。\npass 须依据当前完整候选说明理由，不能只凭内部计划、ID 或 CAS 状态宣布正文正确。CAS fail 不得覆盖；CAS unknown 可依据来源、数学知识和明确推理独立论证 pass，但不得宣称已计算验证。仍无法判断或存在来源争议时用 unknown，并写明 reason_code=unsupported/source_dispute/timeout。\n若 repair_context 含 ContentReviewProtocolErrorsV1，按每项 path、criterion_id、actual 和 candidates 纠正当前审核响应；旧记录中仅缺 reader/source/absence 类型、证据未绑定同一 subject 或重复引用不再是错误。candidates 仅为定位线索，不代表语义通过。不得修改正文、冻结标准、适用性或为消除格式错把实质 unknown/fail 升级为 pass。'
 
 def authoring_schema_example():
@@ -296,7 +315,10 @@ def build_content_messages(role, content_context, policy, *, tickets=()):
     from .prompt_context import CONTEXT_NOTES, compact_content_context
     if role not in ('author','reviewer','repair'): raise ContractError('unknown content role '+str(role))
     context, compacted = compact_content_context(as_dict(content_context))
-    shared_rules = '\n'.join((READER_SUPPORT_RULES, THEOREM_INDEX_RULES,
+    presentation_rules, separator, full_rules = load_prompt_asset('content/common.md').text.partition('\n<!-- mode-specific-content -->\n')
+    if not separator:
+        raise ContractError('content common prompt missing mode-specific boundary')
+    shared_rules = '\n'.join((presentation_rules, READER_SUPPORT_RULES, THEOREM_INDEX_RULES,
                               CONVENTION_RULES, SHARED_CONCEPT_RULES))
     if role == 'reviewer':
         shared_rules += '\n' + REVIEW_STABILITY_RULES
@@ -306,11 +328,11 @@ def build_content_messages(role, content_context, policy, *, tickets=()):
             '主动补准确直觉、边界对比、具体例子和易混点，“按需”不能理解为默认省略，'
             '不能把简化审核理解成只列公式、删掉必要讲解。不为定义强加证明或编造无用补充，实际补充按统一阅读组织规则呈现。'
             '定理以及需要推导的性质、推论应讲清结论含义、适用条件和作用，主线必要的方法及依据讲清，正式证明可选，提供时完整展开每一步；'
-            '不能因标题写“性质”或“概念性性质”就免去推导，不能用“不难证明，留给读者”替代本节应讲的推导。'
+            '正式证明未提供不构成缺步；不能用“不难证明，留给读者”替代主线必要的方法、条件与依据说明。'
             '按内容的教学作用区分：背景概念说明不额外变成证明任务，例如“复数不能像实数比较大小”作为概念说明不强制证明；'
-            '本节用于计算或证明的运算性质则须交代成立依据和实际推导。'
-            '引用已知法则可以说明某一步为什么成立，但仅报法则名称、说“可验证”或“由实数运算法则得到”不能代替推导本身；'
-            '例如证明复数乘法结合律，应分别展开两边、整理并比较实部和虚部，或给出同样完整的其他证明。'
+            '本节用于计算或证明的运算性质须讲清含义、条件、用法及所用依据；不强制逐条另附正式证明。'
+            '对于实际提供的证明或演算，引用已知法则可以说明某一步为什么成立，但仅报法则名称、说“可验证”不能代替缺失的关键步骤；'
+            '例如若选择提供复数乘法结合律的证明，应分别展开两边、整理并比较实部和虚部，或给出同样完整的其他证明。'
             '可以合并已说明依据的重复计算，但不能把待证性质自身当作依据。若引用前文完整证明，应明确对应的结论与条件。'
             '实质性例题按读题与条件、选方法及理由、逐步计算或证明与依据、结论、方法回顾和具体易错提醒来讲。'
             '回顾提炼可迁移的方法、选择条件与关键转折，不只重复答案；提醒指出具体错误想法或写法、错因、正确区别及条件，必要时给简短反例。'
@@ -340,7 +362,7 @@ def build_content_messages(role, content_context, policy, *, tickets=()):
                 '方法选择、必要先修或用法说明缺失而实质阻碍本节学习时，定位首次依赖处，解释当前正文为何不足及应补什么。'
                 '关键变化只给结果，导致读者不能复现或区分容易混淆的对象，应指出具体缺步及其影响。'
                 '不要求所有正确推导另列所有可能错法；认为易错支持确有缺口时，必须说明会混淆什么、当前讲解为何不足、补哪一句或哪个反例能解决。'
-                '真实漏推导在步骤项指出，不能把应证明的性质当概念放过。单纯风格偏好和可选拓展不构成失败；独立补充、就地入口及其语义对应按统一阅读组织规则核对。'
+                '只有实际提供的证明或演算缺步，才按推导完整性指出；未提供可选正式证明不算缺步。必要方法、条件或依据缺失仍按实际教学缺口指出。单纯风格偏好和可选拓展不构成失败；独立补充、就地入口及其语义对应按统一阅读组织规则核对。'
                 '必要条件、结论与直观解释留在可见主线；所有证明默认折叠、点击展开，包括首次完整内嵌的定理证明；补充易错、直觉应独立组织并就地链接，不能把避免重复解释成取消相应对象或入口。'
                 '只是再加一种类比、换排版或重说已有内容，在 reason 标明建议，不作为实质返修要求。'
                 '先查看实际内容，再判断是否没有适用的推导或自测；没有时可说明不适用，不强制返回对应行。'
@@ -350,7 +372,7 @@ def build_content_messages(role, content_context, policy, *, tickets=()):
                 '已申请只证明有制作计划，不能宣称成品效果已通过；实际效果由后续现有媒体审核检查。'
                 'repair_context.previous_tickets 包含此前正文或媒体审阅指出的正文问题；对照当前完整正文逐一确认是否已修复，'
                 '当前仍存在的问题分别判 fail，已解决的说明实际依据，无法确认用 unknown；不能把旧版原句当当前错误重复要求改写。'
-                '确认补推导时要在当前正文找到实际新增的推导链；只补一句所用法则或换种说法，不算解决缺步。'
+                '确认修复实际提供的证明或演算中的缺步时，要找到新增的推导链；只补法则名不算解决。旧工单若只是强迫添加可选正式证明，不继续强求，说明当前必要方法和条件是否已讲清。'
                 '审核严格程度不随剩余返修次数改变；返修耗尽由程序保留问题继续交付，不能据此把 fail/unknown 改为 pass。'
                 '判 fail 时在 reason 写清位置、错误原句或公式、原因、应如何修改；缺步骤时指出应补位置及所缺步骤。'
                 '多个独立问题分别写清，不能用一句笼统判词掩盖；非必要改进标为建议，不作为 fail。'
@@ -391,7 +413,7 @@ def build_content_messages(role, content_context, policy, *, tickets=()):
                     '工单明确要求补媒体或修正受正文改动影响的需求时，同次返回 media_requirements，保留原请求的 request_key、顺序和未涉及内容，'
                     '新请求追加在末尾。未涉及媒体时省略 media_requirements，由宿主沿用；不能删图或改成 none 来消除问题。')
                 task += '\n' + REPAIR_RESPONSE_RULES
-        payload = {'role_task':role, 'frozen_context':context,
+        payload = {'role_task':role, 'reader_presentation_example':reader_presentation_example(), 'frozen_context':context,
                    'learner_profile':policy.learner_profile}
         if compacted:
             payload['input_context_notes'] = CONTEXT_NOTES
@@ -423,8 +445,8 @@ def build_content_messages(role, content_context, policy, *, tickets=()):
     task = REVIEW_TASK if role == 'reviewer' else load_prompt_asset('content/'+role+'.md').text
     if role == 'repair':
         task += '\n' + REPAIR_RESPONSE_RULES
-    system=task+'\n'+load_prompt_asset('content/common.md').text+'\n'+shared_rules+'\n'+prompt_rules(policy,role)
-    payload={'role_task':role,'frozen_context':context,'policy_digest':policy.digest,
+    system=task+'\n'+full_rules+'\n'+shared_rules+'\n'+prompt_rules(policy,role)
+    payload={'role_task':role,'reader_presentation_example':reader_presentation_example(),'frozen_context':context,'policy_digest':policy.digest,
         'learner_profile':policy.learner_profile,
         'learning_check_examples':learning_check_examples(),
         'math_contract':describe_math_contract(),
