@@ -18,3 +18,5 @@ PYTHONPATH="$AIFS_WORKSPACE/src" "$AIFS_PYTHON" "$AIFS_WORKSPACE/tools/verify_li
 作者与审核完成后，可在同一目录加 `--media` 继续执行真实作者申请的媒体。脚本使用生产技术规划将图片意图编译为绘图、保留动画需求，通过隔离 Manim 运行及真实画面审核后接入 Reader。账户模型配置与审核额度保持生产值。正文和媒体是否通过以 `review.json`、`media/*/verified-result.json` 及其画面审核证据为准，不能只看脚本退出码。
 
 默认本机 Qwen 旁白必须另外设置 `AIFORSTUDY_TTS_MODEL_DIR`、`AIFORSTUDY_TTS_MODEL_MANIFEST`（verified_complete下载校验记录）、`AIFORSTUDY_TTS_PYTHON`、`AIFORSTUDY_TTS_CACHE_DIR`。未命中缓存时生产后端会真实生成，不要求预先人工写缓存，也不会静默降级到其他语音。
+
+续跑先只读比较旧PDF、页图及原文身份；PDF改变会在执行记录或产物写入前拒绝，并保留原provenance。缓存作者正文及媒体需求必须与原accepted author journal、保留的lesson模型回复经生产归一化后的完整信封一致；缓存正文审核的每份exchange还必须绑定当前正文、来源和策略摘要。任一缺失或不匹配均要求新输出目录，不能借旧accepted结论给改写内容授予通过。单纯更新Reader资源允许离线重建，原模型回复、作者与审核收据不改写，也不算新生成。

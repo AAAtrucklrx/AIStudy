@@ -19,12 +19,60 @@ from aiforstudy.blocks.content.generation import generate_content
 from aiforstudy.blocks.content.content_policy import load_content_policy
 from aiforstudy.blocks.content.review import review_content
 
+def check_frozen_sources(output, pdf, raw, images):
+ """Read-only preflight: PDF drift must fail before any run/output write."""
+ if (output/'provenance.json').exists():
+  prior=read_json(output/'provenance.json')
+  if prior.get('pdf_sha256')!=digest_file(pdf):
+   raise ValueError('Frozen PDF changed; use a fresh output directory')
+  if prior.get('images')!={i:digest_file(Path(i)) for i in images}:
+   raise ValueError('Frozen source pages changed; use a fresh output directory')
+ if (output/'raw-source.md').exists() and digest_file(output/'raw-source.md')!=digest_file(raw):
+  raise ValueError('Frozen source changed; use a fresh output directory')
+
+
+def validate_cached_artifacts(output, authored, source, report, policy_digest):
+ """Bind authored text/media to the preserved response and its real review."""
+ from aiforstudy.blocks.content.content_contracts import content_digest
+ from aiforstudy.blocks.content.source_context import SourceContext
+ from aiforstudy.blocks.content.generation import _validate_author_output
+ def reject():
+  raise ValueError('Frozen author/review binding changed or missing; use a fresh output directory')
+ journal=output/'author-journal.json'
+ if not journal.is_file():reject()
+ attempts=read_json(journal).get('attempts',[])
+ if not attempts or attempts[-1].get('status')!='accepted':reject()
+ attempt=attempts[-1];raw=attempt.get('response')
+ if attempt.get('response_hash')!=content_digest({'response':raw}):reject()
+ preserved=False
+ for path in (output/'exchanges').glob('*.input.json'):
+  answer=path.with_name(path.name.replace('.input.json','.output.json'))
+  if read_json(path).get('role')=='lesson' and answer.is_file():
+   if read_json(answer).get('data')==raw:preserved=True
+ if not preserved:reject()
+ expected=_validate_author_output(raw,SourceContext.model_validate(source))
+ if content_digest(expected)!=content_digest(authored):reject()
+ if report is not None:
+  expected_binding={'content_hash':content_digest(authored['content']),
+   'source_context_hash':source['source_context_hash'],'policy_digest':policy_digest}
+  exchanges=report.get('exchanges')
+  if not isinstance(exchanges,list) or not exchanges:reject()
+  for exchange in exchanges:
+   binding=exchange.get('binding',{})
+   if any(binding.get(k)!=v for k,v in expected_binding.items()):reject()
+
+
 def main():
  p=argparse.ArgumentParser(description=__doc__)
  p.add_argument('--workspace',type=Path,required=True);p.add_argument('--out',type=Path,required=True)
  p.add_argument('--pages',type=Path,required=True);p.add_argument('--source-only',action='store_true');p.add_argument('--media',action='store_true')
- a=p.parse_args();o=a.out.resolve();o.mkdir(parents=True,exist_ok=True)
+ a=p.parse_args();o=a.out.resolve()
  w=open_workspace(a.workspace);cfg=load_config(w)
+ parse=w.root/'data/parse/complex-analysis-v2'
+ raw=parse/'original_text/ch01_s01_ss02.md';pdf=w.root/'data/raw/复变函数.pdf'
+ images=[str(a.pages/f'physical-{i:03}.png') for i in (12,13,14)]
+ check_frozen_sources(o,pdf,raw,images)
+ o.mkdir(parents=True,exist_ok=True)
  control=ExecutionControl(load_policy(w,'release'));control.bind(o/'execution.json',run_id=o.name)
  transport=configured_providers(SimpleNamespace(profile=SimpleNamespace(value='release')),w).llm
  def observe(event,data):
@@ -39,15 +87,9 @@ def main():
    r=super().chat_json(messages,**kw);write_json_atomic(o/'exchanges'/f'{n:03}.output.json',r);return r
  def client(role):
   r=cfg.role(role);return Client(gateway,role=role,model=r.model,effort=r.effort,stage=role,unit_key='CH01-S01-SS02',bucket='content')
- parse=w.root/'data/parse/complex-analysis-v2'
- raw=parse/'original_text/ch01_s01_ss02.md'
- if (o/'raw-source.md').exists() and digest_file(o/'raw-source.md')!=digest_file(raw):raise ValueError('Frozen source changed; use a fresh output directory')
- (o/'raw-source.md').write_bytes(raw.read_bytes())
- images=[str(a.pages/f'physical-{i:03}.png') for i in (12,13,14)]
- if (o/'provenance.json').exists():
-  prior=read_json(o/'provenance.json')
-  if prior.get('images')!={i:digest_file(Path(i)) for i in images}:raise ValueError('Frozen source pages changed; use a fresh output directory')
- write_json_atomic(o/'provenance.json',{'pdf_path':str(w.root/'data/raw/复变函数.pdf'),'pdf_sha256':digest_file(w.root/'data/raw/复变函数.pdf'),'scope':'bounded real textbook excerpt, not whole-book preparation','source_path':str(raw),'source_sha256':digest_file(raw),'physical_pages':[12,13,14],'images':{i:digest_file(Path(i)) for i in images},'wholebook_preparation':False})
+ if not (o/'raw-source.md').exists():(o/'raw-source.md').write_bytes(raw.read_bytes())
+ if not (o/'provenance.json').exists():
+  write_json_atomic(o/'provenance.json',{'pdf_path':str(w.root/'data/raw/复变函数.pdf'),'pdf_sha256':digest_file(w.root/'data/raw/复变函数.pdf'),'scope':'bounded real textbook excerpt, not whole-book preparation','source_path':str(raw),'source_sha256':digest_file(raw),'physical_pages':[12,13,14],'images':{i:digest_file(Path(i)) for i in images},'wholebook_preparation':False})
  repaired=o/'source-repair.json'
  if not repaired.exists():
   r=client('source_repair').chat_json([{'role':'system','content':'你负责忠实教材校勘。只输出JSON。以实际页图为依据转录1.1.2共轭复数完整小节（性质1至例5，不含后续小节）。保留原书印刷错误，不静默改正确；在issues数组逐条区分印刷差异与OCR错误，给出正确数学及依据。输出 {"transcription": "完整Markdown", "issues": [{"source_text":"", "kind":"print_difference或ocr_error", "correction":"", "reason":""}]}。尤其物理13页例2 y≠±i 与例3虚部分母可能是书上印刷差异。'}, {'role':'user','content':raw.read_text()}],images=images,tag='excerpt-page-transcription')
@@ -64,10 +106,12 @@ def main():
   if (o/'source-context.json').exists() and read_json(o/'source-context.json')!=source:raise ValueError('Frozen context changed; use a fresh output directory')
   write_json_atomic(o/'source-context.json',source)
   authored=read_json(o/'authored.json') if (o/'authored.json').exists() else generate_content(source,load_content_policy(),client('lesson'),correction_journal=o/'author-journal.json')
-  write_json_atomic(o/'authored.json',authored)
+  validate_cached_artifacts(o,authored,source,None,load_content_policy().digest)
+  if not (o/'authored.json').exists():write_json_atomic(o/'authored.json',authored)
   result=read_json(o/'review.json') if (o/'review.json').exists() else review_content(authored['content'],None,source,[],None,client('text_judge'),author_media=authored.get('media_requirements'),correction_journal=o/'review-journal.json')
   report=result.as_dict() if hasattr(result,'as_dict') else result
-  write_json_atomic(o/'review.json',report)
+  validate_cached_artifacts(o,authored,source,report,load_content_policy().digest)
+  if not (o/'review.json').exists():write_json_atomic(o/'review.json',report)
   from aiforstudy.blocks.content.reader_document import project_reader
   from aiforstudy.blocks.content.teaching_projection import compile_teaching_presentation
   from aiforstudy.blocks.render.layout import layout_from_reader_media
