@@ -1,5 +1,4 @@
-:root { color-scheme: light dark; --fg:#20352f; --bg:#f5f7f3; --surface:#fff; --muted:#61726b; --line:#d7e0d8; --accent:#12654d; }
-@media (prefers-color-scheme: dark) { :root { --fg:#e7eee8; --bg:#121c18; --surface:#1b2922; --muted:#a4b6aa; --line:#3a4b40; --accent:#92d9b7; } }
+:root { color-scheme: light; --fg:#20352f; --bg:#f5f7f3; --surface:#fff; --muted:#61726b; --line:#d7e0d8; --accent:#12654d; }
 * { box-sizing:border-box; } [hidden] { display:none !important; }
 body { font:15px/1.65 system-ui,"Noto Sans CJK SC",sans-serif; color:var(--fg); background:var(--bg); margin:0 auto; max-width:1240px; padding:30px 24px; }
 header { padding:12px 0 20px; } .eyebrow { color:var(--accent); letter-spacing:.08em; font-size:13px; font-weight:650; }
