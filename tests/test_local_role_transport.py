@@ -179,3 +179,43 @@ def test_cloud_role_reference_overrides_top_level_reference(tmp_path, monkeypatc
     config = {'provider': 'deepseek', 'api_key_ref': 'env:AIFS_TEST_TOP_KEY',
         'roles': {'lesson': {'model': 'same', 'api_key_ref': 'env:AIFS_TEST_ROLE_KEY'}}}
     assert factory_for(config, tmp_path).api_key == 'role-sentinel'
+
+
+@pytest.mark.parametrize('env_present', [False, True])
+def test_original_model_config_preserves_standard_secret_file_and_environment_priority(tmp_path, monkeypatch, env_present):
+    from pathlib import Path
+    config = json.loads((Path(__file__).parents[1]/'config/models.json').read_text())
+    assert config['api_key_ref'] == 'env:DEEPSEEK_API_KEY'
+    secrets = tmp_path/'.secrets'
+    secrets.mkdir()
+    (secrets/'deepseek.env').write_text('DEEPSEEK_API_KEY=file-sentinel\n')
+    monkeypatch.delenv('DEEPSEEK_API_KEY', raising=False)
+    if env_present:
+        monkeypatch.setenv('DEEPSEEK_API_KEY', 'environment-sentinel')
+    client = factory_for(config, tmp_path)
+    route = client.for_role('lesson') if hasattr(client, 'for_role') else client
+    assert route.api_key == ('environment-sentinel' if env_present else 'file-sentinel')
+    assert route.report()['key_ref'] == ('env:DEEPSEEK_API_KEY' if env_present else
+                                         'file:.secrets/deepseek.env#DEEPSEEK_API_KEY')
+    assert 'sentinel' not in json.dumps(route.report())
+
+
+def test_custom_reference_never_uses_standard_secret_file(tmp_path, monkeypatch):
+    secrets = tmp_path/'.secrets'
+    secrets.mkdir()
+    (secrets/'deepseek.env').write_text('DEEPSEEK_API_KEY=file-sentinel\n')
+    monkeypatch.setenv('DEEPSEEK_API_KEY', 'environment-sentinel')
+    monkeypatch.delenv('AIFS_TEST_MISSING_KEY', raising=False)
+    with pytest.raises(ConfigError, match='Configured credential is missing'):
+        factory_for({'provider': 'deepseek', 'api_key_ref': 'env:AIFS_TEST_MISSING_KEY',
+                     'roles': {'lesson': {'model': 'same'}}}, tmp_path)
+
+
+@pytest.mark.parametrize('provider', ['deepseek', 'local-compatible'])
+def test_custom_reference_keeps_safe_provenance(tmp_path, monkeypatch, provider):
+    monkeypatch.setenv('AIFS_TEST_CLOUD_KEY', 'custom-sentinel')
+    client = factory_for({'provider': provider, 'base_url': 'http://127.0.0.1:8000/v1',
+                          'api_key_ref': 'env:AIFS_TEST_CLOUD_KEY',
+                          'roles': {'lesson': {'model': 'same'}}}, tmp_path)
+    assert client.report()['key_ref'] == 'env:AIFS_TEST_CLOUD_KEY'
+    assert 'custom-sentinel' not in json.dumps(client.report())

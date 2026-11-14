@@ -3,23 +3,28 @@ from __future__ import annotations
 import os
 import re
 from ..errors import ConfigError
-from .transport import RealTransport, resolve_api_key
+from .transport import API_KEY_ENV, RealTransport, resolve_api_key
 from .local_compatible import LocalCompatibleTransport
 from .dsh_account import DshAccountTransport
 from .routing import RoleTransportRouter
 
 
-def _explicit_key(spec, config):
-    """Return a declared environment credential, or None for legacy resolution."""
+def _explicit_key(spec, config, workspace_root):
+    """Return (credential, safe source), or None when no reference is declared."""
     if 'api_key_ref' not in spec and 'api_key_ref' not in config:
         return None
     ref = spec.get('api_key_ref') if 'api_key_ref' in spec else config['api_key_ref']
     if not isinstance(ref, str) or not re.fullmatch(r'env:[A-Za-z_][A-Za-z0-9_]*', ref):
         raise ConfigError('api_key_ref requires env:NAME')
-    key = os.environ.get(ref[4:], '').strip()
+    if ref == f'env:{API_KEY_ENV}':
+        # This standard reference has always included the workspace secret file.
+        key, source = resolve_api_key(workspace_root)
+    else:
+        key = os.environ.get(ref[4:], '').strip()
+        source = ref
     if not key:
         raise ConfigError('Configured credential is missing')
-    return key
+    return key, source
 
 
 def configured_providers(request, workspace):
@@ -41,12 +46,12 @@ def configured_providers(request, workspace):
             base = spec.get('base_url',config.get('base_url'))
             if not base:
                 raise ConfigError('Local transport requires explicit base_url')
-            key = _explicit_key(spec, config) or ''
+            key, source = _explicit_key(spec, config, workspace.root) or ('', 'none')
             routes[role] = LocalCompatibleTransport(model=model,base_url=str(base),api_key=key)
+            routes[role]._key_ref = source
         elif provider == 'deepseek':
-            key = _explicit_key(spec, config)
-            if key is None:
-                key, _ = resolve_api_key(workspace.root)
+            resolved = _explicit_key(spec, config, workspace.root)
+            key, source = resolved if resolved is not None else resolve_api_key(workspace.root)
             if not key:
                 # Validate the other roles before deciding whether the legacy
                 # missing-key capability report is appropriate for this config.
@@ -55,7 +60,7 @@ def configured_providers(request, workspace):
             routes[role] = RealTransport(
                 model=model,
                 base_url=str(spec.get('base_url', config.get('base_url')) or 'https://api.deepseek.com'),
-                api_key=key, workspace_root=workspace.root, network_wait=True)
+                api_key=key, _key_ref=source, workspace_root=workspace.root, network_wait=True)
         else:
             raise ConfigError('Unsupported model provider')
     if routes and any(route is None for route in routes.values()):
