@@ -142,3 +142,27 @@ original motion **length** is reused, added to the current step start; old raw
 start times are never treated as positions in the current MP4. Missing or
 mismatched evidence retains the entire current interval with an explicit reason.
 Receipts record both current input/motion windows and prior clock lineage.
+
+### Default automatic local synthesis
+
+The default factory and `config/narration.json` now select `local-qwen`. Set
+`AIFORSTUDY_TTS_MODEL_DIR`, `AIFORSTUDY_TTS_MODEL_MANIFEST`,
+`AIFORSTUDY_TTS_PYTHON` (the MLX virtual environment's interpreter), and
+`AIFORSTUDY_TTS_CACHE_DIR`, or pass the corresponding explicit `model_dir`,
+`model_manifest`, `python`, `cache_dir` configuration. The interpreter's virtual
+environment symlink must be preserved. The package-local worker is launched with
+`-m aiforstudy.blocks.media.local_speech_worker`; no unbundled tools path is needed.
+A cache miss automatically generates and verifies audio. Valid cache hits do not
+wait for the GPU; corrupt completed entries fail explicitly. Across processes,
+misses share `~/.cache/aiforstudy/tts-gpu.lock` (override with
+`AIFORSTUDY_TTS_LOCK_FILE`), recheck the cache after locking, and release the lock
+on success, exception or worker timeout. Do not configure different lock files
+for processes sharing the same GPU. The default wait/worker timeout is 900 seconds.
+No model dependency is installed automatically and no online/system fallback is
+attempted. Edge remains an explicit `backend: edge-tts` option only.
+
+`--overrides` on the revoice and verification tools accepts a JSON `changes` list
+with explicit unit/request/step IDs and complete `before`/`after` spoken strings.
+The before text must match the original input exactly; display prose is changed
+only at that exact string, preserving LaTeX. Use a separately versioned corpus
+containing the new expected strings, and retain the original corpus and media.

@@ -166,7 +166,10 @@ class HTTPTTSBackend:
 
 def configured_backend(config=None):
     config = config or {}
-    kind = config.get('backend', 'edge-tts')
+    kind = config.get('backend', 'local-qwen')
+    if kind == 'local-qwen':
+        from .local_narration import AutoLocalQwenBackend
+        return AutoLocalQwenBackend(config)
     if kind == 'local-cache':
         from .local_narration import LocalCacheBackend
         return LocalCacheBackend(config)

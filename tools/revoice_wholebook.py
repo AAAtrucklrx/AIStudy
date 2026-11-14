@@ -42,12 +42,29 @@ def proven_motion_steps(steps, video, receipt_path):
     return result
 
 
+def apply_script_overrides(row,uid,rid,changes):
+    row=deepcopy(row)
+    for change in changes:
+        if (change['unit_id'],change['request_id'])!=(uid,rid):continue
+        matching=[s for s in row['steps'] if s['step_id']==change['step_id']]
+        if len(matching)!=1 or spoken_text(matching[0])!=change['before']:
+            raise ValueError('Script override before text must match exactly')
+        step=matching[0];step['narration_text']=change['after']
+        if 'canonical_spoken_text' in step:raise ValueError('Canonical reviewed scripts require editorial review')
+        if change['before'] not in step.get('display_markdown',''):raise ValueError('Display before text must match exactly')
+        step['display_markdown']=step['display_markdown'].replace(change['before'],change['after'],1)
+        step['script_revision']={k:change[k] for k in ('before','after')}
+    return row
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for name in ('source','output','config','corpus'):p.add_argument('--'+name,type=Path,required=True)
     p.add_argument('--receipt-source',type=Path)
+    p.add_argument('--overrides',type=Path)
     a=p.parse_args();source=a.source.resolve();output=a.output.resolve()
     if output==source or output.is_relative_to(source) or source.is_relative_to(output):raise ValueError('Separate output required')
+    changes=json.loads(a.overrides.read_text())['changes'] if a.overrides else []
     backend=configured_backend(json.loads(a.config.read_text()))
     corpus=json.loads(a.corpus.read_text())['records']
     scripts={(r['unit_id'],r['request_id'],r['step_id']):r for r in corpus}
@@ -55,6 +72,7 @@ def main():
     output.mkdir(parents=True,exist_ok=True);rows=[]
     for entry in manifest['animations']:
         row=deepcopy(entry['animation']);uid=entry['unit_id'];rid=entry['request_id']
+        row=apply_script_overrides(row,uid,rid,changes)
         video=source/'book'/row['base']/row['resources']['mp4']['relative_path']
         receipt_source=(a.receipt_source or source)/'book'/row['base']/'narrated.narration.json'
         try:

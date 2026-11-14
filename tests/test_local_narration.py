@@ -126,3 +126,13 @@ def test_repeated_revoice_discards_inherited_trim_until_fresh_proof(tmp_path, pr
     assert actual['prior_clock_lineage']['motion_lineage']==original['motion_lineage']
     assert actual['prior_clock_lineage']['prior_clock_lineage']==original['prior_clock_lineage']
     assert inherited==original
+
+
+def test_script_override_requires_exact_before_and_preserves_formula():
+    from tools.revoice_wholebook import apply_script_overrides
+    row={'steps':[{'step_id':'S1','narration_text':'半径零点九时。','display_markdown':'半径零点九时。\n$r=0.9$'}]}
+    change=[{'unit_id':'U','request_id':'R','step_id':'S1','before':'半径零点九时。','after':'当半径等于零点九的时候。'}]
+    result=apply_script_overrides(row,'U','R',change)
+    assert result['steps'][0]['display_markdown']=='当半径等于零点九的时候。\n$r=0.9$'
+    assert row['steps'][0]['narration_text']=='半径零点九时。'
+    with pytest.raises(ValueError,match='before'):apply_script_overrides(result,'U','R',change)

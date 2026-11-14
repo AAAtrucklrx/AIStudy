@@ -6,8 +6,8 @@ import pytest
 from aiforstudy.blocks.media import narration as n
 
 
-def test_default_backend_can_generate_neural_voice_without_system_say():
-    backend=n.configured_backend()
+def test_explicit_edge_backend_remains_available():
+    backend=n.configured_backend({"backend":"edge-tts"})
     assert backend.source['backend']=='edge-tts'
     assert backend.source['voice']=='zh-CN-XiaoxiaoNeural'
 

@@ -5,6 +5,7 @@ from pathlib import Path
 import sys
 import wave
 ROOT=Path(__file__).resolve().parents[1];sys.path[:0]=[str(ROOT),str(ROOT/'src')]
+from tools.revoice_wholebook import apply_script_overrides
 from aiforstudy.blocks.media.local_narration import digest, cache_key
 from aiforstudy.blocks.media.narration import visual_latex, _stamp
 
@@ -23,8 +24,10 @@ def main():
     import numpy as np
     p=argparse.ArgumentParser()
     for name in ('source','output','config','corpus'):p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--overrides',type=Path)
     a=p.parse_args();cfg=json.loads(a.config.read_text());original=json.loads((a.source/'neural-media.json').read_text())
-    old={(r['unit_id'],r['request_id']):r['animation'] for r in original['animations']}
+    changes=json.loads(a.overrides.read_text())['changes'] if a.overrides else []
+    old={(r['unit_id'],r['request_id']):apply_script_overrides(r['animation'],r['unit_id'],r['request_id'],changes) for r in original['animations']}
     corpus=json.loads(a.corpus.read_text())['records'];scripts={(r['unit_id'],r['request_id'],r['step_id']):r for r in corpus}
     new=json.loads((a.output/'neural-media.json').read_text());checks=[]
     for entry in new['animations']:

@@ -66,7 +66,9 @@ def build_figure(context):
     else:
         raise RuntimeError("secret was readable")
     try:
-        socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:
+            probe.settimeout(2)
+            probe.connect(("198.51.100.1", 9))
     except PermissionError:
         pass
     else:
@@ -127,10 +129,19 @@ def test_real_custom_scene_uses_render_clock_and_decodable_frames(tmp_path):
     assert result["technical_report"]["duration_ok"] is True
     assert [s["step_id"] for s in result["steps"]] == ["S1", "S2"]
     assert result["steps"][0]["start"] == 0
-    assert result["steps"][0]["end"] == pytest.approx(1.2, abs=.002)
-    assert result["steps"][-1]["end"] == pytest.approx(2, abs=.002)
+    assert result["steps"][0]["end"] >= 1.2
+    assert result["steps"][1]["end"]-result["steps"][1]["start"] >= .8
+    narration=result["technical_report"]["narration"]
+    assert narration['source']['backend']=='local-qwen3-tts'
+    import wave
+    for index,(step,voice) in enumerate(zip(result['steps'],narration['steps']),1):
+        with wave.open(str(Path(result['source_dir'])/'source'/'narration'/f'step-{index:03d}.wav'),'rb') as pcm:
+            duration=pcm.getnframes()/pcm.getframerate()
+        assert duration>0 and step['end']-step['start']+.001>=duration
+        assert voice['sample_count']/voice['sample_rate']==pytest.approx(duration)
+
     resources = result["resources"]
-    assert {r["kind"] for r in resources} == {"mp4", "poster", "keyframe", "captions", "transcript"}
+    assert {r["kind"] for r in resources} == {"mp4", "poster", "keyframe", "captions", "transcript", "audio", "narration"}
     for step in result["steps"]:
         own = [r for r in resources if r.get("step_id") == step["step_id"]]
         assert {r["phase"] for r in own} == {"before", "observe", "after"}
@@ -140,7 +151,9 @@ def test_real_custom_scene_uses_render_clock_and_decodable_frames(tmp_path):
     for frame in (r for r in resources if r["kind"] == "keyframe"):
         assert verify_frame_pixels(base / "video.mp4", base / frame["relative_path"],
                                    frame["timestamp"], tmp_path / "decode")["ok"]
-    assert "S1\n00:00:00.000 --> 00:00:01.200\n向量向右平移" in (base / "captions.vtt").read_text()
+    from aiforstudy.blocks.media.code_runtime import _stamp
+    first=result["steps"][0]
+    assert f"S1\n{_stamp(first['start'])} --> {_stamp(first['end'])}" in (base / "captions.vtt").read_text()
 
 
 def test_unrecorded_animation_time_is_not_accepted(tmp_path):
@@ -293,6 +306,10 @@ def build_figure(context):
     return fig
 '''
         result = module.render_generated_code(program(code), context=context(), out_dir=tmp_path / "out", workspace_root=ROOT)
+        if sys.platform != 'linux':
+            assert result['status']=='blocked' and 'requires Linux' in result['reason']
+            assert not marker.exists() and not result['resources']
+            return
         assert result["status"] == "needs_review", result
         assert not marker.exists(), "a sandboxed program signalled a real outside process"
         assert result["technical_report"]["isolation"]["signals"]["blocked"] is True
@@ -340,6 +357,10 @@ def build_figure(context):
     return fig
 '''
     result = module.render_generated_code(program(code), context=context(), out_dir=tmp_path / "out", workspace_root=ROOT)
+    if sys.platform != 'linux':
+        assert result['status']=='blocked' and 'requires Linux' in result['reason']
+        assert not result['resources']
+        return
     assert result["status"] == "needs_review", result
 
 

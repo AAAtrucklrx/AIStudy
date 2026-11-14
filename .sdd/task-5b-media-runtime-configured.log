@@ -1,0 +1,162 @@
+.FF..........FF.                                                         [100%]
+=================================== FAILURES ===================================
+_____________ test_real_static_context_custom_geometry_and_sandbox _____________
+
+tmp_path = PosixPath('/private/var/folders/rh/fz3ryg1n0bx51_qydyn30g380000gn/T/pytest-of-huang/pytest-156/test_real_static_context_custo0')
+
+    def test_real_static_context_custom_geometry_and_sandbox(tmp_path):
+        secret = tmp_path / "private.env"
+        secret.write_text("FAKE_PRIVATE_SENTINEL")
+        code = f'''from pathlib import Path
+    import socket
+    import matplotlib.pyplot as plt
+    def build_figure(context):
+        try:
+            Path({str(secret)!r}).read_text()
+        except (PermissionError, FileNotFoundError):
+            pass
+        else:
+            raise RuntimeError("secret was readable")
+        try:
+            socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        except PermissionError:
+            pass
+        else:
+            raise RuntimeError("network was available")
+        fig, ax = plt.subplots(figsize=(6.4, 3.6))
+        x, y = context['approved_models']['vector']
+        for offset in range(3):
+            ax.arrow(offset, 0, x, y, width=.04, color='#166caa')
+        ax.set(xlim=(-1, 5), ylim=(-1, 4), title='向量平移')
+        ax.set_aspect('equal')
+        return fig
+    '''
+        result = runtime().render_generated_code(program(code), context=context(),
+                                                out_dir=tmp_path / "out", workspace_root=ROOT)
+>       assert result["status"] == "needs_review", result
+E       AssertionError: {'status': 'failed', 'reason': 'RuntimeError: network was available', 'resources': [], 'steps': [], ...}
+E       assert 'failed' == 'needs_review'
+E
+E         - needs_review
+E         + failed
+
+tests/test_media_code_runtime.py:84: AssertionError
+________ test_real_custom_scene_uses_render_clock_and_decodable_frames _________
+
+tmp_path = PosixPath('/private/var/folders/rh/fz3ryg1n0bx51_qydyn30g380000gn/T/pytest-of-huang/pytest-156/test_real_custom_scene_uses_re0')
+
+    def test_real_custom_scene_uses_render_clock_and_decodable_frames(tmp_path):
+        result = runtime().render_generated_code(animation_program(), context=context("animation"),
+                                                out_dir=tmp_path / "out", workspace_root=ROOT)
+        assert result["status"] == "needs_review", result
+        assert result["technical_report"]["ffmpeg_decode_ok"] is True
+        assert result["technical_report"]["duration_ok"] is True
+        assert [s["step_id"] for s in result["steps"]] == ["S1", "S2"]
+        assert result["steps"][0]["start"] == 0
+>       assert result["steps"][0]["end"] == pytest.approx(1.2, abs=.002)
+E       assert 1.733 == 1.2 ± 0.002
+E
+E         comparison failed
+E         Obtained: 1.733
+E         Expected: 1.2 ± 0.002
+
+tests/test_media_code_runtime.py:130: AssertionError
+_____ test_landlock_code_cannot_signal_outside_but_can_terminate_its_child _____
+
+tmp_path = PosixPath('/private/var/folders/rh/fz3ryg1n0bx51_qydyn30g380000gn/T/pytest-of-huang/pytest-156/test_landlock_code_cannot_sign0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1059d8350>
+
+    def test_landlock_code_cannot_signal_outside_but_can_terminate_its_child(tmp_path, monkeypatch):
+        module = runtime()
+        services = replace(manim_adapter.default_services(workspace_root=ROOT), isolation="landlock-seccomp",
+                           scratch_root=tmp_path / "scratch")
+        monkeypatch.setattr(module, "default_services", lambda **kw: services)
+        marker = tmp_path / "outside-signal.txt"
+        victim = subprocess.Popen([sys.executable, "-c",
+            "import signal,time,sys;from pathlib import Path;"
+            "signal.signal(signal.SIGUSR1,lambda n,f:Path(sys.argv[1]).write_text('received'));"
+            "print('ready',flush=True);time.sleep(60)", str(marker)], stdout=subprocess.PIPE, text=True)
+        try:
+            assert victim.stdout.readline().strip() == "ready"
+            code = f'''import os, signal, subprocess, sys
+    import matplotlib.pyplot as plt
+    def build_figure(context):
+        try:
+            os.kill({victim.pid}, signal.SIGUSR1)
+        except PermissionError:
+            pass
+        else:
+            raise RuntimeError('outside process accepted signal')
+        child = subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(60)'])
+        child.terminate()
+        child.wait(timeout=3)
+        fig, ax = plt.subplots()
+        ax.plot([0,1], [0,1])
+        return fig
+    '''
+            result = module.render_generated_code(program(code), context=context(), out_dir=tmp_path / "out", workspace_root=ROOT)
+>           assert result["status"] == "needs_review", result
+E           AssertionError: {'status': 'blocked', 'reason': 'landlock-seccomp requires Linux', 'resources': [], 'steps': [], ...}
+E           assert 'blocked' == 'needs_review'
+E
+E             - needs_review
+E             + blocked
+
+tests/test_media_code_runtime.py:296: AssertionError
+__________ test_generated_code_cannot_escape_its_worker_process_group __________
+
+tmp_path = PosixPath('/private/var/folders/rh/fz3ryg1n0bx51_qydyn30g380000gn/T/pytest-of-huang/pytest-156/test_generated_code_cannot_esc0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1059daa80>
+
+    def test_generated_code_cannot_escape_its_worker_process_group(tmp_path, monkeypatch):
+        module = runtime()
+        services = replace(manim_adapter.default_services(workspace_root=ROOT), isolation="landlock-seccomp",
+                           scratch_root=tmp_path / "scratch")
+        monkeypatch.setattr(module, "default_services", lambda **kw: services)
+        code = '''import os
+    import matplotlib.pyplot as plt
+    def build_figure(context):
+        shared = '/dev/shm/aifs-worker-probe-' + str(os.getpid())
+        try:
+            with open(shared, 'w') as handle:
+                handle.write('unmonitored')
+        except (PermissionError, FileNotFoundError):
+            pass
+        else:
+            os.unlink(shared)
+            raise RuntimeError('/dev/shm escaped the monitored output budget')
+        try:
+            os.setpgid(0, 0)
+        except PermissionError:
+            pass
+        else:
+            raise RuntimeError('setpgid was allowed')
+        child = os.fork()
+        if child == 0:
+            try:
+                os.setsid()
+            except PermissionError:
+                os._exit(0)
+            else:
+                os._exit(5)
+        _, status = os.waitpid(child, 0)
+        assert os.waitstatus_to_exitcode(status) == 0, 'child escaped with setsid'
+        fig, ax = plt.subplots()
+        ax.plot([0, 1], [0, 1])
+        return fig
+    '''
+        result = module.render_generated_code(program(code), context=context(), out_dir=tmp_path / "out", workspace_root=ROOT)
+>       assert result["status"] == "needs_review", result
+E       AssertionError: {'status': 'blocked', 'reason': 'landlock-seccomp requires Linux', 'resources': [], 'steps': [], ...}
+E       assert 'blocked' == 'needs_review'
+E
+E         - needs_review
+E         + blocked
+
+tests/test_media_code_runtime.py:343: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_media_code_runtime.py::test_real_static_context_custom_geometry_and_sandbox
+FAILED tests/test_media_code_runtime.py::test_real_custom_scene_uses_render_clock_and_decodable_frames
+FAILED tests/test_media_code_runtime.py::test_landlock_code_cannot_signal_outside_but_can_terminate_its_child
+FAILED tests/test_media_code_runtime.py::test_generated_code_cannot_escape_its_worker_process_group
+4 failed, 12 passed in 53.42s
