@@ -104,3 +104,78 @@ def test_local_timeout_reaps_worker():
         assert client.calls==0
     finally:
         release.set();server.shutdown();server.server_close();thread.join();timer.join()
+
+
+def factory_for(config, tmp_path):
+    from types import SimpleNamespace
+    from aiforstudy.providers.factory import configured_providers
+    workspace = SimpleNamespace(root=tmp_path, config_json=lambda _: config)
+    request = SimpleNamespace(profile=SimpleNamespace(value='release'))
+    return configured_providers(request, workspace).llm
+
+
+@pytest.mark.parametrize('provider', ['local-compatible', 'deepseek'])
+def test_factory_retains_distinct_role_credentials_at_same_endpoint(tmp_path, monkeypatch, provider):
+    monkeypatch.setenv('AIFS_TEST_LESSON_KEY', 'lesson-sentinel')
+    monkeypatch.setenv('AIFS_TEST_MEDIA_KEY', 'media-sentinel')
+    monkeypatch.delenv('DEEPSEEK_API_KEY', raising=False)
+    client = factory_for({'provider': provider, 'base_url': 'http://127.0.0.1:8000/v1',
+        'roles': {'lesson': {'model': 'same', 'api_key_ref': 'env:AIFS_TEST_LESSON_KEY'},
+                  'media': {'model': 'same', 'api_key_ref': 'env:AIFS_TEST_MEDIA_KEY'}}}, tmp_path)
+    from aiforstudy.providers.routing import RoleTransportRouter
+    assert isinstance(client, RoleTransportRouter)
+    assert client.for_role('lesson').api_key == 'lesson-sentinel'
+    assert client.for_role('media').api_key == 'media-sentinel'
+    assert 'sentinel' not in json.dumps(client.for_role('lesson').cache_identity)
+
+
+@pytest.mark.parametrize('at_role', [True, False])
+@pytest.mark.parametrize('legacy_present', [True, False])
+def test_cloud_explicit_reference_overrides_legacy_key(tmp_path, monkeypatch, at_role, legacy_present):
+    monkeypatch.setenv('AIFS_TEST_CLOUD_KEY', 'explicit-sentinel')
+    if legacy_present:
+        monkeypatch.setenv('DEEPSEEK_API_KEY', 'legacy-sentinel')
+    else:
+        monkeypatch.delenv('DEEPSEEK_API_KEY', raising=False)
+    config = {'provider': 'deepseek', 'roles': {'lesson': {'model': 'same'}}}
+    target = config['roles']['lesson'] if at_role else config
+    target['api_key_ref'] = 'env:AIFS_TEST_CLOUD_KEY'
+    client = factory_for(config, tmp_path)
+    assert client is not None
+    assert client.api_key == 'explicit-sentinel'
+
+
+@pytest.mark.parametrize('reference', ['env:AIFS_TEST_MISSING_KEY', 'env:', 'file:secrets', None, ''])
+def test_cloud_missing_or_invalid_explicit_reference_never_uses_legacy(tmp_path, monkeypatch, reference):
+    monkeypatch.setenv('DEEPSEEK_API_KEY', 'legacy-sentinel')
+    monkeypatch.delenv('AIFS_TEST_MISSING_KEY', raising=False)
+    config = {'provider': 'deepseek', 'api_key_ref': reference,
+              'roles': {'lesson': {'model': 'same'}}}
+    with pytest.raises(ConfigError):
+        factory_for(config, tmp_path)
+
+
+def test_cloud_without_explicit_reference_keeps_legacy_resolver(tmp_path, monkeypatch):
+    monkeypatch.setenv('DEEPSEEK_API_KEY', 'legacy-sentinel')
+    config = {'provider': 'deepseek', 'roles': {'lesson': {'model': 'same'}, 'media': {'model': 'same'}}}
+    client = factory_for(config, tmp_path)
+    assert client.api_key == 'legacy-sentinel'
+    assert client.network_wait is True
+
+
+def test_missing_legacy_role_does_not_bypass_later_explicit_ref_validation(tmp_path, monkeypatch):
+    monkeypatch.delenv('DEEPSEEK_API_KEY', raising=False)
+    monkeypatch.delenv('AIFS_TEST_MISSING_KEY', raising=False)
+    config = {'provider': 'deepseek', 'roles': {
+        'lesson': {'model': 'same'},
+        'media': {'model': 'same', 'api_key_ref': 'env:AIFS_TEST_MISSING_KEY'}}}
+    with pytest.raises(ConfigError, match='Configured credential is missing'):
+        factory_for(config, tmp_path)
+
+
+def test_cloud_role_reference_overrides_top_level_reference(tmp_path, monkeypatch):
+    monkeypatch.setenv('AIFS_TEST_TOP_KEY', 'top-sentinel')
+    monkeypatch.setenv('AIFS_TEST_ROLE_KEY', 'role-sentinel')
+    config = {'provider': 'deepseek', 'api_key_ref': 'env:AIFS_TEST_TOP_KEY',
+        'roles': {'lesson': {'model': 'same', 'api_key_ref': 'env:AIFS_TEST_ROLE_KEY'}}}
+    assert factory_for(config, tmp_path).api_key == 'role-sentinel'
