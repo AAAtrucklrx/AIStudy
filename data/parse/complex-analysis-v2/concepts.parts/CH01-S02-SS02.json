@@ -1,0 +1,120 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH01-S02-SS02",
+    "text_sha256": "7fd08b955b349933c05872a4ef32c52bd3794b8b38624db9b5e0c39fb90d0037",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "7fd08b955b349933c05872a4ef32c52bd3794b8b38624db9b5e0c39fb90d0037",
+    "source": "original_text",
+    "source_path": "original_text/ch01_s02_ss02.md"
+  },
+  "unit": {
+    "unit_id": "CH01-S02-SS02",
+    "level": "subsection",
+    "chapter": "CH01",
+    "section": "CH01-S02",
+    "title": "区域与曲线",
+    "anchor": "1.2.2"
+  },
+  "concepts": [
+    {
+      "name": "区域",
+      "type": "definition",
+      "formal": "具有下列性质的非空点集 $D$ 称为区域：1) $D$ 是开集；2) D 中任意两点可以用一条全在 D 中的折线连接起来(连通性).",
+      "source_quote": "定义2 具有下列性质的非空点集 $D$ 称为区域：1) $D$ 是开集；2) D 中任意两点可以用一条全在 D 中的折线连接起来(连通性)."
+    },
+    {
+      "name": "闭域",
+      "type": "definition",
+      "formal": "区域 D 加上它的边界 C 称为闭域，记为  $\\bar{D} = C + D$ .",
+      "source_quote": "区域 D 加上它的边界 C 称为闭域，记为  $\\bar{D} = C + D$ ."
+    },
+    {
+      "name": "连续曲线",
+      "type": "definition",
+      "formal": "设 $x(t)$ 及 $y(t)$ 是定义在 $[\\alpha,\\beta]$ 上的连续函数,则由方程 $$\\left\\{ \\begin{array}{l l} {x = x (t)} \\\\ {y = y (t)} \\end{array} \\right. \\text {或} z = z (t) = x (t) + \\mathrm{i} y (t), \\quad \\alpha \\leqslant t \\leqslant \\beta$$ 所决定的点集 $l$ ，称为复平面上的一条连续曲线",
+      "source_quote": "设 $x(t)$ 及 $y(t)$ 是定义在 $[\\alpha,\\beta]$ 上的连续函数,则由方程 $$\\left\\{ \\begin{array}{l l} {x = x (t)} \\\\ {y = y (t)} \\end{array} \\right. \\text {或} z = z (t) = x (t) + \\mathrm{i} y (t), \\quad \\alpha \\leqslant t \\leqslant \\beta$$ 所决定的点集 $l$ ，称为复平面上的一条连续曲线"
+    },
+    {
+      "name": "约当曲线（简单曲线）",
+      "type": "definition",
+      "formal": "设已给一条连续曲线 $l$ ，如果 $t_1$ $t_2$ 是 $[\\alpha, \\beta]$ 上的两个不同的参数值，且它们不同时是 $[\\alpha, \\beta]$ 的端点，那么它们就对应着曲线 $l$ 上不同的点，即 $z(t_1) \\neq z(t_2)$，这样的曲线叫做约当曲线或简单曲线",
+      "source_quote": "设已给一条连续曲线 $l$ ，如果 $t_1$ $t_2$ 是 $[\\alpha, \\beta]$ 上的两个不同的参数值，且它们不同时是 $[\\alpha, \\beta]$ 的端点，那么它们就对应着曲线 $l$ 上不同的点，即 $z(t_1) \\neq z(t_2)$，这样的曲线叫做约当曲线或简单曲线"
+    },
+    {
+      "name": "约当闭曲线（简单闭曲线）",
+      "type": "definition",
+      "formal": "一条约当曲线，如果满足 $z(\\alpha) = z(\\beta)$，称为约当闭曲线或简单闭曲线。",
+      "source_quote": "一条约当曲线，如果满足 $z(\\alpha) = z(\\beta)$，称为约当闭曲线或简单闭曲线。"
+    },
+    {
+      "name": "内区域",
+      "type": "definition",
+      "formal": "任一条简单闭曲线也把整个平面分成两个没有公共点的区域，其中一个有界称为它的内区域",
+      "source_quote": "任一条简单闭曲线也把整个平面分成两个没有公共点的区域，其中一个有界称为它的内区域，一个无界称为它的外区域，这两个区域都可以这条简单闭曲线作为边界。"
+    },
+    {
+      "name": "外区域",
+      "type": "definition",
+      "formal": "任一条简单闭曲线也把整个平面分成两个没有公共点的区域，一个无界称为它的外区域",
+      "source_quote": "任一条简单闭曲线也把整个平面分成两个没有公共点的区域，其中一个有界称为它的内区域，一个无界称为它的外区域，这两个区域都可以这条简单闭曲线作为边界。"
+    },
+    {
+      "name": "单连通区域（单连域）",
+      "type": "definition",
+      "formal": "约当闭曲线的内区域 D 有这样一个性质: 域 D 中任何简单闭曲线的内区域中的每一点都属于 D. 一般地, 我们把具有这种性质的区域, 叫做单连通区域, 简称单连域.",
+      "source_quote": "约当闭曲线的内区域 D 有这样一个性质: 域 D 中任何简单闭曲线的内区域中的每一点都属于 D. 一般地, 我们把具有这种性质的区域, 叫做单连通区域, 简称单连域."
+    },
+    {
+      "name": "多连通区域",
+      "type": "definition",
+      "formal": "不是单连通的区域, 称为多连通区域.",
+      "source_quote": "不是单连通的区域, 称为多连通区域."
+    },
+    {
+      "name": "去心邻域",
+      "type": "definition",
+      "formal": "a点的去心邻域 $$0 <   | z - a | <   \\delta .$$",
+      "source_quote": "例如,a点的去心邻域 $$0 <   | z - a | <   \\delta .$$"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 10,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "具有下列性质",
+      "样一个性质",
+      "我们把具有这种性质"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "区域",
+    "闭域",
+    "连续曲线",
+    "约当曲线（简单曲线）",
+    "约当闭曲线（简单闭曲线）",
+    "内区域",
+    "外区域",
+    "单连通区域（单连域）",
+    "多连通区域",
+    "去心邻域"
+  ]
+}

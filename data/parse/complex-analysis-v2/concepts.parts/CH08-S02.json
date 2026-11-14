@@ -1,0 +1,127 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH08-S02",
+    "text_sha256": "1af329d710a1db3610fac2b06fbb0b6af7fffc4ce64b7cc6a709c05cdedfe5b8",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "1af329d710a1db3610fac2b06fbb0b6af7fffc4ce64b7cc6a709c05cdedfe5b8",
+    "source": "original_text",
+    "source_path": "original_text/ch08_s02.md"
+  },
+  "unit": {
+    "unit_id": "CH08-S02",
+    "level": "section",
+    "chapter": "CH08",
+    "section": "CH08-S02",
+    "title": "保形变换的概念",
+    "anchor": "8.2"
+  },
+  "concepts": [
+    {
+      "name": "定理1",
+      "type": "theorem",
+      "formal": "设 $f(z)$ 是区域 $D$ 内的单叶函数，则在 $D$ 内的任一点 $z, f'(z) \\neq 0$.",
+      "source_quote": "定理1 设 $f(z)$ 是区域 $D$ 内的单叶函数，则在 $D$ 内的任一点 $z, f'(z) \\neq 0$."
+    },
+    {
+      "name": "儒歇定理",
+      "type": "theorem",
+      "formal": "函数 $f(z) - f(z_0) - a$ 在此圆内部有 $n$ 个零点，并且这些零点都是一阶的（因 $f'(z) \\neq 0$）。",
+      "source_quote": "所以据儒歇定理，函数 $f(z) - f(z_0) - a$ 在此圆内部有 $n$ 个零点，并且这些零点都是一阶的（因 $f'(z) \\neq 0$）。"
+    },
+    {
+      "name": "保形变换",
+      "type": "definition",
+      "formal": "区域 $D$ 的单叶函数所确定的变换，称为 $D$ 内的保形变换",
+      "source_quote": "定义1 区域 $D$ 的单叶函数所确定的变换，称为 $D$ 内的保形变换"
+    },
+    {
+      "name": "变换的乘积",
+      "type": "definition",
+      "formal": "这个变换称为 $T_{1}$ 和 $T_{2}$ 的乘积，记为 $T_{2}T_{1}$ （这里乘积的次序表示先作变换 $T_{1}$ 再作变换 $T_{2}$ ）",
+      "source_quote": "这个变换称为 $T_{1}$ 和 $T_{2}$ 的乘积，记为 $T_{2}T_{1}$ （这里乘积的次序表示先作变换 $T_{1}$ 再作变换 $T_{2}$ ）"
+    },
+    {
+      "name": "保形变换的乘积仍是保形变换",
+      "type": "property",
+      "formal": "保形变换的乘积仍是保形变换。",
+      "source_quote": "显然，保形变换的乘积仍是保形变换。"
+    },
+    {
+      "name": "逆变换",
+      "type": "definition",
+      "formal": "设变换 $T: w = f(z)$ 把集合 $M$ 双方单值地变为集合 $N$, 其反函数 $z = f^{-1}(w)$ 确定一个从集合 $N$ 到集合 $M$ 的变换, 称为 $T$ 的逆变换, 记作 $T^{-1}$.",
+      "source_quote": "设变换 $T: w = f(z)$ 把集合 $M$ 双方单值地变为集合 $N$, 其反函数 $z = f^{-1}(w)$ 确定一个从集合 $N$ 到集合 $M$ 的变换, 称为 $T$ 的逆变换, 记作 $T^{-1}$."
+    },
+    {
+      "name": "保形变换的逆变换也是保形变换",
+      "type": "property",
+      "formal": "保形变换的逆变换也是保形变换.",
+      "source_quote": "显然, 保形变换的逆变换也是保形变换."
+    },
+    {
+      "name": "刘维尔定理",
+      "type": "theorem",
+      "formal": "若 $D$ 是闭复平面或开复平面, 则对任一点 $z$ 有 $|f(z)| \\leqslant 1$, 再由刘维尔定理得 $f(z) \\equiv$ 常数.",
+      "source_quote": "若 $D$ 是闭复平面或开复平面, 则对任一点 $z$ 有 $|f(z)| \\leqslant 1$, 再由刘维尔定理得 $f(z) \\equiv$ 常数."
+    },
+    {
+      "name": "察曼定理",
+      "type": "theorem",
+      "formal": "如果 $D$ 是闭复平面上的一个边界至少包含有两个点的单连通区域，则必存在单叶函数 $w = f(z)$ 把 $D$ 变为单位圆内部 $D_{1}$. 如果还要求把 $D$ 中的一个已知点 $z_{0}$ 变为 $D_{1}$ 内一指定点 $w_{0}$，过该点的已知方向变为已知方向，即要求 $f(z)$ 满足条件 $$f (z _ {0}) = w _ {0}, \\quad \\arg f ^ {\\prime} (z _ {0}) = a _ {0},$$ 式中， $\\alpha_{0}$ 是已给实常数，则这个变换是唯一的.",
+      "source_quote": "察曼定理 如果 $D$ 是闭复平面上的一个边界至少包含有两个点的单连通区域，则必存在单叶函数 $w = f(z)$ 把 $D$ 变为单位圆内部 $D_{1}$. 如果还要求把 $D$ 中的一个已知点 $z_{0}$ 变为 $D_{1}$ 内一指定点 $w_{0}$，过该点的已知方向变为已知方向，即要求 $f(z)$ 满足条件 $$f (z _ {0}) = w _ {0}, \\quad \\arg f ^ {\\prime} (z _ {0}) = a _ {0},$$ 式中， $\\alpha_{0}$ 是已给实常数，则这个变换是唯一的."
+    },
+    {
+      "name": "黎曼定理",
+      "type": "theorem",
+      "formal": "黎曼定理的证明极为复杂，这里就只能割爱了。",
+      "source_quote": "黎曼定理的证明极为复杂，这里就只能割爱了。"
+    },
+    {
+      "name": "零点的孤立性",
+      "type": "property",
+      "formal": "由于 $f(z)$ 不是常数，故由零点的孤立性，可在 D 内找到一个圆 $|z - z_{0}| \\leqslant \\delta$ ，使在圆周 C 上 $f(z) - f(z_{0}) \\neq 0$ ，而且其内部 $f'(z)$ 除 $z_{0}$ 之外无其他零点。",
+      "source_quote": "由于 $f(z)$ 不是常数，故由零点的孤立性，可在 D 内找到一个圆 $|z - z_{0}| \\leqslant \\delta$ ，使在圆周 C 上 $f(z) - f(z_{0}) \\neq 0$ ，而且其内部 $f'(z)$ 除 $z_{0}$ 之外无其他零点。"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 11,
+    "漏掉的具名结论": [
+      "定理1"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "下面的基本定理"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "定理1",
+    "儒歇定理",
+    "保形变换",
+    "变换的乘积",
+    "保形变换的乘积仍是保形变换",
+    "逆变换",
+    "保形变换的逆变换也是保形变换",
+    "刘维尔定理",
+    "察曼定理",
+    "黎曼定理",
+    "零点的孤立性"
+  ]
+}

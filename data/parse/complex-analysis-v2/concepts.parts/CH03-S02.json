@@ -1,0 +1,118 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH03-S02",
+    "text_sha256": "837bafb9234bd08f1f8060cd591ab31f62288648370124e3734fddb872fa0899",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "837bafb9234bd08f1f8060cd591ab31f62288648370124e3734fddb872fa0899",
+    "source": "original_text",
+    "source_path": "original_text/ch03_s02.md"
+  },
+  "unit": {
+    "unit_id": "CH03-S02",
+    "level": "section",
+    "chapter": "CH03",
+    "section": "CH03-S02",
+    "title": "柯西积分定理",
+    "anchor": "3.2"
+  },
+  "concepts": [
+    {
+      "name": "闭路",
+      "type": "definition",
+      "formal": "今后把简单闭曲线叫做闭路，如非特别声明，凡沿闭路的积分都是按正向（即逆时针方向）取的.",
+      "source_quote": "今后把简单闭曲线叫做闭路，如非特别声明，凡沿闭路的积分都是按正向（即逆时针方向）取的."
+    },
+    {
+      "name": "复闭路",
+      "type": "definition",
+      "formal": "区域 $D$ 的全部边界 $C$ 称为一个复闭路.",
+      "source_quote": "区域区域 $D$ 的全部边界 $C$ 称为一个复闭路."
+    },
+    {
+      "name": "正向",
+      "type": "definition",
+      "formal": "当观察者在 $C$ 上行进时, 区域 $D$ 总在它的左边的方向, 称为 $C$ 的正向.",
+      "source_quote": "当观察者在 $C$ 上行进时, 区域 $D$ 总在它的左边的方向, 称为 $C$ 的正向."
+    },
+    {
+      "name": "柯西积分定理",
+      "type": "theorem",
+      "formal": "设 $D$ 是由闭路 $C$ 所围成的单连通区域，$f(z)$ 在闭域 $C + D$ 上解析，则 $\\int_C f(z)\\,\\mathrm{d}z = 0$.",
+      "source_quote": "定理2（柯否积分定理）设 $D$ 是由闭路 $C$ 所围成的单连通区域，$f(z)$ 在闭域 $C + D$ 上解析，则"
+    },
+    {
+      "name": "推论1",
+      "type": "corollary",
+      "formal": "设 $f(z)$ 在单连通域 $D$ 内解析，$C$ 是 $D$ 内的任意封闭曲线，则 $\\int_C f(z)\\,\\mathrm{d}z = 0$.",
+      "source_quote": "推论1 设 $f(z)$ 在单连通域 $D$ 内解析，$C$ 是 $D$ 内的任意封闭曲线，则"
+    },
+    {
+      "name": "推论2",
+      "type": "corollary",
+      "formal": "设 $f(z)$ 在单连通域 $D$ 内解析，$C$ 是 $D$ 内任一条起于点 $z_0$ 而终于点 $z$ 的简单曲线，则积分 $\\int_ {\\zeta} f (\\zeta) \\mathrm{d} \\zeta$ 的值不依赖于积分路线 $C$ ，而只由 $z_0$ 及 $z$ 确定. 所以这个积分也可记作 $\\int_ {z _ {0}} ^ {t} f (\\zeta) \\mathrm{d} \\zeta \\quad \\text {或} \\quad \\int_ {z _ {0}} ^ {t} f (z) \\mathrm{d} z.$",
+      "source_quote": "推论2 设 $f(z)$ 在单连通域 $D$ 内解析，$C$ 是 $D$ 内任一条起于点 $z_0$ 而终于点 $z$ 的简单曲线，则积分 $$\\int_ {\\zeta} f (\\zeta) \\mathrm{d} \\zeta$$ 的值不依赖于积分路线 $C$ ，而只由 $z_0$ 及 $z$ 确定."
+    },
+    {
+      "name": "多连通区域的柯西定理",
+      "type": "theorem",
+      "formal": "设 $f(z)$ 在复闭路 $C = C_{0} + C_{1}^{-} + C_{2}^{-} + \\cdots + C_{n}^{-}$ 及其所围成的多连通区域解析，则 $\\int_ {C _ {0}} f (z) \\mathrm{d} z = \\int_ {C _ {1}} f (z) \\mathrm{d} z + \\int_ {C _ {2}} f (z) \\mathrm{d} z + \\dots + \\int_ {C _ {n}} f (z) \\mathrm{d} z,$ $\\int_ {C} f (z) \\mathrm{d} z = 0.$",
+      "source_quote": "定理 3(多连通区域的柯西定理) 设  $f(z)$  在复闭路  $C = C_{0} + C_{1}^{-} + C_{2}^{-} + \\cdots + C_{n}^{-}$  及其所围成的多连通区域解析，则"
+    },
+    {
+      "name": "C-R方程",
+      "type": "formula",
+      "formal": "$\\frac {\\partial v}{\\partial x} + \\frac {\\partial u}{\\partial y} \\equiv 0, \\quad \\frac {\\partial u}{\\partial x} - \\frac {\\partial v}{\\partial y} \\equiv 0,$",
+      "source_quote": "但依C-R方程 $$\\frac {\\partial v}{\\partial x} + \\frac {\\partial u}{\\partial y} \\equiv 0, \\quad \\frac {\\partial u}{\\partial x} - \\frac {\\partial v}{\\partial y} \\equiv 0,$$"
+    },
+    {
+      "name": "格林公式",
+      "type": "formula",
+      "formal": "格林(Green)公式",
+      "source_quote": "这时可以利用格林(Green)公式, 得"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 9,
+    "漏掉的具名结论": [
+      "推论1",
+      "推论2"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "解析函数理论中最基本的定理",
+      "他许多结果都是建立在这个定理",
+      "柯否积分定理",
+      "结论由定理",
+      "下面把柯西定理"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "闭路",
+    "复闭路",
+    "正向",
+    "柯西积分定理",
+    "推论1",
+    "推论2",
+    "多连通区域的柯西定理",
+    "C-R方程",
+    "格林公式"
+  ]
+}

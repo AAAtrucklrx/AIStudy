@@ -1,0 +1,45 @@
+—— CH09-S01 回路开始（run 2026-10-03 08:48:39）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 1, '教案问题明细': ["CH09-S01: F-04 第 1 步的 `basis` 指不回任何东西（'$p$ 的记法与指数运算法则'）—— 必须指回定义/定理/上一步/某个详解"], '教案提醒': 5, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 1 条 → **也建成工单**，由回路一起改（不再只是提醒）：["CH09-S01: F-04 第 1 步的 `basis` 指不回任何东西（'$p$ 的记法与指数运算法则'）—— 必须指回定义/定理/上一步/某个详解"]
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [4] 条 → 并集 2 条工单
+    T-9044a5 [P1] hits=1 「算出 $F(\sigma)$ 之后，再用解析开拓把它唯一地延拓到 $\m」
+    T-R4130d [P1] hits=1 「CH09-S01: F-04 第 1 步的 `basis` 指不回任何东」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S01 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH09-S01.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S01 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH09-S01.feedback.json --temperature 0.0 --seed 42
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 1 / 仍开着 1；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 1 条（丢了 1 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-9044a5 [P1]：两例题的计算与结论都已在成品中完整写出：例1 给出 $1/(p-a)$ 及收敛半平面 $\mathrm{Re}\,p>\mathrm{Re}
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（1 条）：
+  [P1] T-9044a5 「算出 $F(\sigma)$ 之后，再用解析开拓把它唯一地延拓到 $\mathr」
+记录写到 data/audit/complex-analysis-v2/CH09-S01.loop.json
+—— CH09-S01 回路开始（run 2026-10-03 10:41:39）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 0, '教案问题明细': [], '教案提醒': 6, 'audit_error': ''}
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  上一趟的 ['T-9044a5', 'T-9044a5'] 原句已不在成品里 → 视为已改，不再背
+  每次 [6] 条 → 并集 2 条工单
+    T-0157f7 [P1] hits=1 「其中 $p^{\alpha+1}$ 取以负实轴为支割线、且在正实轴上 $」
+    T-bc7063 [P1] hits=1 「因在 $\mathrm{Re}\,p>c$ 上，$|-tf(t)\mat」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S01 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH09-S01.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S01 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH09-S01.feedback.json --temperature 0.0 --seed 42
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 2 / 仍开着 0；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 2 条
+  ✓ 验收：重新独立发现没有 P0
+── 卡在哪（这一趟）──────────────────────────────
+   · 没有卡住：工单全部关闭、验收无 P0
+
+结论：通过（工单全部关闭，且没有新的 P0）
+记录写到 data/audit/complex-analysis-v2/CH09-S01.loop.json

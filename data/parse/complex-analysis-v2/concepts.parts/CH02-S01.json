@@ -1,0 +1,95 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH02-S01",
+    "text_sha256": "7230a836ff70984c8ed91007708b8d165fa25ff5987d01ab1a9dde6d74509a75",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "7230a836ff70984c8ed91007708b8d165fa25ff5987d01ab1a9dde6d74509a75",
+    "source": "original_text",
+    "source_path": "original_text/ch02_s01.md"
+  },
+  "unit": {
+    "unit_id": "CH02-S01",
+    "level": "section",
+    "chapter": "CH02",
+    "section": "CH02-S01",
+    "title": "复变数函数的概念",
+    "anchor": "2.1"
+  },
+  "concepts": [
+    {
+      "name": "复变数函数",
+      "type": "definition",
+      "formal": "设 $E$ 是复平面上的一个点集，如果对 $E$ 中的每一个点 $z$ ，可以按照一定的规律找到一个复数 $w$ 与之相对应，就称在 $E$ 上定义了一个复变数函数，也简称为函数.记作 $w = f(z)$",
+      "source_quote": "定义1 设 $E$ 是复平面上的一个点集，如果对 $E$ 中的每一个点 $z$ ，可以按照一定的规律找到一个复数 $w$ 与之相对应，就称在 $E$ 上定义了一个复变数函数，也简称为函数.记作 $w = f(z)$"
+    },
+    {
+      "name": "多值函数",
+      "type": "definition",
+      "formal": "如果和每个点 z 对应的复数 w 不止一个，而是好几个，那么这个函数就称为一个多值函数。",
+      "source_quote": "如果和每个点 z 对应的复数 w 不止一个，而是好几个，那么这个函数就称为一个多值函数。如  $w = \\sqrt[n]{2}$ ， $n \\geqslant 2$  就是定义在整个平面上的多值函数"
+    },
+    {
+      "name": "单值函数",
+      "type": "definition",
+      "formal": "对于单值函数 $w = f(z)$，每一个点 $z$ 只能对应一个像点 $w$.",
+      "source_quote": "对于单值函数 $w = f(z)$，每一个点 $z$ 只能对应一个像点 $w$."
+    },
+    {
+      "name": "变换（或映照）",
+      "type": "definition",
+      "formal": "函数 $w = f(z)$ 就可以看成是一个变换（或映照），它把 z 平面上的一个点集 E 变换成 w 平面上的一个点集 $E'$、$E'$ 常记作 $f(E)$。",
+      "source_quote": "函数 $w = f(z)$ 就可以看成是一个变换（或映照），它把 z 平面上的一个点集 E 变换成 w 平面上的一个点集 $E'$、$E'$ 常记作 $f(E)$。"
+    },
+    {
+      "name": "像",
+      "type": "definition",
+      "formal": "在映照 $w = f(z)$ 下，$w_0 = f(z_0)$ 及 $E' = f(E)$ 分别称为点 $z_0$ 及点集 E 的像",
+      "source_quote": "在映照 $w = f(z)$ 下，$w_0 = f(z_0)$ 及 $E' = f(E)$ 分别称为点 $z_0$ 及点集 E 的像，而点 $z_0$ 及点集 E 则分别称为 $w_0$ 及 $E'$ 的原像。"
+    },
+    {
+      "name": "原像",
+      "type": "definition",
+      "formal": "点 $z_0$ 及点集 E 则分别称为 $w_0$ 及 $E'$ 的原像。",
+      "source_quote": "在映照 $w = f(z)$ 下，$w_0 = f(z_0)$ 及 $E' = f(E)$ 分别称为点 $z_0$ 及点集 E 的像，而点 $z_0$ 及点集 E 则分别称为 $w_0$ 及 $E'$ 的原像。"
+    },
+    {
+      "name": "一一映照（双方单值映照）",
+      "type": "definition",
+      "formal": "设 $w = f(z)$ 是集合 $E$ 上的单值函数，如果对于 $E$ 中的任意两个不同点 $z_{1}$ 及 $z_{2}$，它们在（函数值）集合 $E'$ 中对应的点 $w_{1} = f(z_{1})$ 及 $w_{2} = f(z_{2})$ 也不同，则称 $w = f(z)$ 是集 $E$ 中的一个一一映照（或双方单值映照）。或者说，$w = f(z)$ 双方单值地把集 $E$ 映成集 $E'$。",
+      "source_quote": "定义2 设 $w = f(z)$ 是集合 $E$ 上的单值函数，如果对于 $E$ 中的任意两个不同点 $z_{1}$ 及 $z_{2}$，它们在（函数值）集合 $E'$ 中对应的点 $w_{1} = f(z_{1})$ 及 $w_{2} = f(z_{2})$ 也不同，则称 $w = f(z)$ 是集 $E$ 中的一个一一映照（或双方单值映照）。或者说，$w = f(z)$ 双方单值地把集 $E$ 映成集 $E'$。"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 7,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "复变数函数",
+    "多值函数",
+    "单值函数",
+    "变换（或映照）",
+    "像",
+    "原像",
+    "一一映照（双方单值映照）"
+  ]
+}

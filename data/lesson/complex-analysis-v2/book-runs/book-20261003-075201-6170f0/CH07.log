@@ -1,0 +1,32 @@
+=== CH07：3 个单元 ===
+    CH07
+    CH07-S01
+    CH07-S02
+
+计划：
+    CH07               概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH07-S01           概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH07-S02           概念有    教案要生成    模型要生成    回路最多 1 轮
+
+估价（按实测单价，粗算）：概念 ~10k/节、教案 ~25~70k/节（看原文长度）、模型 ~10~20k/节、回路 ~80~120k/节（K=2）
+run_id：book-20261003-075201-6170f0/CH07（本趟账目只算这一趟，并行下不会串账）
+
+===== CH07 解析开拓 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH07 --quiet --temperature 0 --seed 42
+    模型：CH07: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH07 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH07 --fix-anchors
+    · 教案有 3 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH07: 《解析开拓》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，最好再给一个边…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH07 --max-rounds 1 --discover-runs 1
+    · 还有 3 条**非篇幅**硬问题 → 不动它，交给回路的补丁模式（下次跑会带上）：CH07: 《解析开拓》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，最好再…
+    → 字数 1616｜倍数 13.89｜套话 0｜详解 3｜硬问题 3｜本步 177,555 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH07 新增 ['CH07']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH07 --only CH07
+
+===== CH07-S01 唯一性定理和解析开拓的概念 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH07-S01 --quiet --temperature 0 --seed 42
+    模型：CH07-S01: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH07-S01 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH07-S01 --fix-anchors
+    · 教案有 9 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH07-S01: 《唯一性定理》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，最好…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH07-S01 --max-rounds 1 --discover-runs 1

@@ -1,0 +1,621 @@
+{
+  "schema_version": "1.0",
+  "scope": "CH04—CH06全部19单元",
+  "source_corpus": "data/parse/complex-analysis-v2/original_text",
+  "source_lessons": [
+    "lessons-CH01-04.json",
+    "lessons-CH05-09.json"
+  ],
+  "conclusions_source": "conclusions-CH04-06.json",
+  "units": {
+    "CH04": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch04.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [],
+      "understanding_bridges": [
+        "把解析函数的实虚部约束连接到实值平面场；以边界温度区分存在性、唯一性和稳定性。"
+      ],
+      "media_review": [
+        {
+          "status": "本单元无既有选定媒体；未新增kind或音频。"
+        }
+      ],
+      "pending_items": [],
+      "body_paragraphs": 3,
+      "source_sha256": "038438c5a1378dce0171ddad8a95af6a4b93e12431e9ff33d1dc4f1ba5dca8ac",
+      "source_line_count": 3,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": [
+        "#reader-9eec33dd0c5b53dc4608"
+      ]
+    },
+    "CH04-S01": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch04_s01.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [
+        "CH04-S01-C001",
+        "CH04-S01-C002",
+        "CH04-S01-C003",
+        "CH04-S01-C004",
+        "CH04-S01-C005",
+        "CH04-S01-C006",
+        "CH04-S01-C007"
+      ],
+      "understanding_bridges": [
+        "以两坐标方向弯曲相消解释拉普拉斯方程；分开局部相容与全域路径无关；展示偏导积分的变量函数与常数自由度。"
+      ],
+      "media_review": [
+        {
+          "id": "CH04-harmonic",
+          "evidence": "blocks/render/assets/study-visuals.js harmonic分支：网格曲面及金色u=p.level线；未生成v等值线。",
+          "body_alignment": "正文只用图核对鞍面与二阶抵消，正交结论由公式及reader例1承担。",
+          "fix": "若需图中直接核对正交，在xy底面增加u等值双曲线与v=2cxy的另一族曲线，并在非临界交点显示两切向和直角；原点标f′=0。"
+        }
+      ],
+      "pending_items": [],
+      "body_paragraphs": 8,
+      "source_sha256": "06ab8bcf2ad6a772a81e56b1f3370dde673765c9da645f06565026c73d3da61a",
+      "source_line_count": 59,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": [
+        "#reader-451cfb7e6d389d16983c",
+        "#reader-f1bcd15721b354574c2c",
+        "#reader-b8b008ca7d0443bacae7"
+      ]
+    },
+    "CH04-S02": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch04_s02.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [
+        "CH04-S02-C001",
+        "CH04-S02-C002",
+        "CH04-S02-C003",
+        "CH04-S02-C004",
+        "CH04-S02-C005",
+        "CH04-S02-C006",
+        "CH04-S02-C007",
+        "CH04-S02-SC001",
+        "CH04-S02-SC002",
+        "CH04-S02-SC003"
+      ],
+      "understanding_bridges": [
+        "将泊松核解释为归一化正权重；同一差函数连接误差稳定性和唯一性；链式拉普拉斯解释平方与复合的限制。"
+      ],
+      "media_review": [
+        {
+          "id": "CH04-poisson",
+          "evidence": "study-foundation-scenes.js poisson分支：1024点泊松积分与r^n cos(n angle)并列计算；radius为内点半径。",
+          "body_alignment": "明确单位圆、cos(nθ)边界、数值/解析读数以及r<1限制。",
+          "fix": null
+        }
+      ],
+      "pending_items": [],
+      "body_paragraphs": 12,
+      "source_sha256": "28d454880949aa4126345c5109739d22a61967338bd8ec33e9677f3a7d24c03b",
+      "source_line_count": 60,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": [
+        "#reader-f2f9f2813f5daabfbfea",
+        "#reader-6d58f72e5246ec48ad0c",
+        "#reader-0f03b2242d928c14d93a",
+        "#reader-83f50a153f25fecad662",
+        "#reader-b1134c002f797046ee49"
+      ]
+    },
+    "CH05": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch05.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [],
+      "understanding_bridges": [
+        "把收敛误差作为级数运算前提，并提前区分圆盘展开与圆环展开。"
+      ],
+      "media_review": [
+        {
+          "status": "本单元无既有选定媒体；未新增kind或音频。"
+        }
+      ],
+      "pending_items": [],
+      "body_paragraphs": 2,
+      "source_sha256": "6850ee8b27ce7752a53a95eaa85e22a47892b1dd5968673e1cdf553dafe9ff23",
+      "source_line_count": 3,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": []
+    },
+    "CH05-S01-SS01": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch05_s01_ss01.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [
+        "CH05-S01-SS01-C001",
+        "CH05-S01-SS01-C002",
+        "CH05-S01-SS01-C003",
+        "CH05-S01-SS01-C004",
+        "CH05-S01-SS01-C005",
+        "CH05-S01-SS01-C006",
+        "CH05-S01-SS01-C007",
+        "CH05-S01-SS01-C008",
+        "CH05-S01-SS01-C009"
+      ],
+      "understanding_bridges": [
+        "将部分和与一般项分开；解释任意尾段长度的量词以及柯西乘积按对角线分组。"
+      ],
+      "media_review": [
+        {
+          "status": "本单元无既有选定媒体；未新增kind或音频。"
+        }
+      ],
+      "pending_items": [],
+      "body_paragraphs": 7,
+      "source_sha256": "f6ed392fc4e02c9c7bfc169128184c76b36cad62d2628a11d5bab3605577d1a1",
+      "source_line_count": 45,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": [
+        "#reader-b41eee9921873b92252f",
+        "#reader-6eab90e736e074a236d3"
+      ]
+    },
+    "CH05-S01-SS02": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch05_s01_ss02.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [
+        "CH05-S01-SS02-C001",
+        "CH05-S01-SS02-C002",
+        "CH05-S01-SS02-C003",
+        "CH05-S01-SS02-C004",
+        "CH05-S01-SS02-C005",
+        "CH05-S01-SS02-C006",
+        "CH05-S01-SS02-C007",
+        "CH05-S01-SS02-C008",
+        "CH05-S01-SS02-C009"
+      ],
+      "understanding_bridges": [
+        "逐点/一致收敛量词并列；尾段准则同时独立于点和长度；以.99与.05的严格界连接定义到可操作误差；柯西公式解释复函数逐项求导。"
+      ],
+      "media_review": [
+        {
+          "id": "CH05-U",
+          "evidence": "study-visuals.js uniform分支：开圆upper=1-1e-5，sup=1，witness=2^(-1/n)，closed sup=b^n；terms上限300，minimumUniformTerms及跳转按钮保留。",
+          "body_alignment": "明确开圆上确界不取到；闭小圆b=.99、epsilon=.05所需299，保持严格<。",
+          "fix": null
+        },
+        {
+          "id": "CH05-NONUNIFORM",
+          "request_id": "MR-2fc4ad49b6be9910049e",
+          "evidence": "已实际读取delivery/复变函数-教材连贯版-20261029/neural-media.json、narrated.narration.json和poster-curation-report.json；并查看36.266667秒的1280×720 poster：n=8蓝色剖面、绿色1/2坏点、橙色阈值带、sup=1均存在。资源视频SHA256为2845bee1871a581012f27c93d885e7058de19dc86c46d3f4648bcdc41dfe62ce。",
+          "body_alignment": "正文准确要求比较固定n=8画面中的绿色点、橙色上边界与两端越界部分；任意n的推广由公式说明，不冒称现片中坏点持续移动。",
+          "fix": "现poster在实轴±1边缘未明确用空心点排除端点，可在后续重渲染中画空心端点并加|z|<1标签；不能把sup=1画为开圆内取得的最大值。完整视频运动帧级由主任务与独立审查复核。"
+        }
+      ],
+      "pending_items": [
+        "已核对现片资源元数据与36.266667秒代表poster，未逐段观看完整视频；完整运动帧级由主任务与独立审查承接。"
+      ],
+      "body_paragraphs": 12,
+      "source_sha256": "f581d9133dd9ad9d9b050b4254f481b8ac74bdda396b8ad943829206f9a94ba1",
+      "source_line_count": 61,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": [
+        "#reader-a0aeb64f37b0923a8118",
+        "#reader-c1ffb8d4c469b983f89f",
+        "#reader-76cad8ac36e8b88744cd"
+      ]
+    },
+    "CH05-S02": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch05_s02.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [
+        "CH05-S02-C001",
+        "CH05-S02-C002",
+        "CH05-S02-C003",
+        "CH05-S02-C004",
+        "CH05-S02-C005",
+        "CH05-S02-C006"
+      ],
+      "understanding_bridges": [
+        "以相对距离的几何比解释收敛圆；区分小闭圆一致收敛和整个开圆；修正原文半径倒数混淆。"
+      ],
+      "media_review": [
+        {
+          "status": "本单元无既有选定媒体；未新增kind或音频。"
+        }
+      ],
+      "pending_items": [],
+      "body_paragraphs": 6,
+      "source_sha256": "49003da9114dcb427938038b9eda1c5436b535c42b09dd512374aaac00134024",
+      "source_line_count": 52,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": []
+    },
+    "CH05-S03": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch05_s03.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [
+        "CH05-S03-C001",
+        "CH05-S03-C002",
+        "CH05-S03-C003",
+        "CH05-S03-C004",
+        "CH05-S03-C005",
+        "CH05-S03-C006",
+        "CH05-S03-C007",
+        "CH05-S03-C008",
+        "CH05-S03-C009",
+        "CH05-S03-C010",
+        "CH05-S03-C011",
+        "CH05-S03-C012",
+        "CH05-S03-C013",
+        "CH05-S03-C014",
+        "CH05-S03-C015"
+      ],
+      "understanding_bridges": [
+        "以柯西核的一致几何展开解释Taylor必然收敛；分别示范换中心、乘积、选支、生成函数与截阶；用首个非零项桥接零点阶数和孤立性。"
+      ],
+      "media_review": [
+        {
+          "status": "本单元无既有选定媒体；未新增kind或音频。"
+        }
+      ],
+      "pending_items": [
+        "旧lesson中本节例10/例11 reader hash分别为3d5d2e3af9a2110e7e88与23aa816448d1fbf0925f，恰与CH06-S02-SS04例10/例11共用；保留原reader链接，需主集成核验原折叠资料是否按unit命名空间解析，避免跳到杂例。"
+      ],
+      "body_paragraphs": 13,
+      "source_sha256": "455551019fd2c699030fd99ebe9eefa4893a53f7f2931ce4a2424498780f9813",
+      "source_line_count": 98,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": [
+        "#reader-1b7d792ca18450fdfd65",
+        "#reader-a83f0f45f16e6beaea37",
+        "#reader-7d93617dd74757e4a49b",
+        "#reader-fc7b8930601e6a3f9f34",
+        "#reader-3d5d2e3af9a2110e7e88",
+        "#reader-23aa816448d1fbf0925f"
+      ]
+    },
+    "CH05-S04": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch05_s04.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [
+        "CH05-S04-C001",
+        "CH05-S04-C002",
+        "CH05-S04-C003",
+        "CH05-S04-C004",
+        "CH05-S04-C005",
+        "CH05-S04-C006",
+        "CH05-S04-C007",
+        "CH05-S04-C008",
+        "CH05-S04-C009"
+      ],
+      "understanding_bridges": [
+        "从两个方向的收敛限制得到圆环；显示系数积分的筛选作用；明确交互函数与原例不是同一个函数；将贝塞尔级数/积分统一为同一罗朗系数。"
+      ],
+      "media_review": [
+        {
+          "id": "CH05-L",
+          "evidence": "study-visuals.js laurent分支：内侧-sum(z)/z，外侧z^-2 sum(1/z)，金线原函数1/[z(z-1)]。",
+          "body_alignment": "正文单独明确模型函数与两份展开，避免把教材1/[(z−1)(z−2)]硬说成现图。",
+          "fix": null
+        }
+      ],
+      "pending_items": [],
+      "body_paragraphs": 10,
+      "source_sha256": "c9634ebf267b21de7f51e929d3ae8f8505a78cf4cb69d704b26536f833095325",
+      "source_line_count": 93,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": [
+        "#reader-ffd4e4fccbef001c6ee9",
+        "#reader-000014a1807334921007",
+        "#reader-475ad4a6ec72a084962e"
+      ]
+    },
+    "CH05-S05": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch05_s05.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [
+        "CH05-S05-C001",
+        "CH05-S05-C002",
+        "CH05-S05-C003",
+        "CH05-S05-C004",
+        "CH05-S05-C005",
+        "CH05-S05-C006",
+        "CH05-S05-C007",
+        "CH05-S05-C008",
+        "CH05-S05-C009",
+        "CH05-S05-C010",
+        "CH05-S05-C011",
+        "CH05-S05-C012",
+        "CH05-S05-SC001",
+        "CH05-S05-SC002",
+        "CH05-S05-SC003",
+        "CH05-S05-SC004",
+        "CH05-S05-SC005",
+        "CH05-S05-SC006"
+      ],
+      "understanding_bridges": [
+        "区分用于分类的去心展开与外环展开；沿方向公式解释本性行为；强调倒数孤立性前提；将无穷远与大弧衰减相连；显式讲解章末生成递推/三角恒等式/商极限。"
+      ],
+      "media_review": [
+        {
+          "id": "CH05-E",
+          "evidence": "study-visuals.js essential映照map=exp(1/z)，extent与phase控制采样；scene说明超出视野曲线截去。",
+          "body_alignment": "正文以模公式解释三个方向，明说截屏裁剪不能证明有界。",
+          "fix": null
+        }
+      ],
+      "pending_items": [],
+      "body_paragraphs": 17,
+      "source_sha256": "e7668e2111d4457f341d6c048a9ee42031f745b845a578f3203b27411266c3ee",
+      "source_line_count": 157,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": [
+        "#reader-4401895b8cab034562aa",
+        "#reader-40485690e656cc1093f1",
+        "#reader-bb5724e931546e5d3bce"
+      ]
+    },
+    "CH06": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch06.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [],
+      "understanding_bridges": [
+        "从全部罗朗信息收缩到积分选择的一项，再区分积分计算和零极点计数两条应用。"
+      ],
+      "media_review": [
+        {
+          "status": "本单元无既有选定媒体；未新增kind或音频。"
+        }
+      ],
+      "pending_items": [],
+      "body_paragraphs": 2,
+      "source_sha256": "892a78cf72b87b8323b7c508a395d862a6261ac82f8a6bff13c13ceae9fd9824",
+      "source_line_count": 3,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": []
+    },
+    "CH06-S01": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch06_s01.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [
+        "CH06-S01-C001",
+        "CH06-S01-C002",
+        "CH06-S01-C003",
+        "CH06-S01-C004",
+        "CH06-S01-C005",
+        "CH06-S01-C006"
+      ],
+      "understanding_bridges": [
+        "解释高阶极点公式为何取m−1阶系数；留数零不等于可去；用案例奇偶性和首项比较避免完整展开。"
+      ],
+      "media_review": [
+        {
+          "id": "CH06-R",
+          "evidence": "study-visuals.js contour分支：圆与实轴极点标记；按abs(pole)与radius判内部并提示路径奇点。",
+          "body_alignment": "仅称单极点位置与读数演示，不宣称显示多奇点挖洞证明。",
+          "fix": null
+        }
+      ],
+      "pending_items": [],
+      "body_paragraphs": 9,
+      "source_sha256": "6b6a88cf588c2fd2cd9fcc7f92fd6eabfc91cf290c335276bf9d54c115c9c32e",
+      "source_line_count": 69,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": [
+        "#reader-d8fcb526c5f350d68025",
+        "#reader-49762b2a448da763ded6",
+        "#reader-8279001fa1436a5e4894",
+        "#reader-040a84237909718a10a8"
+      ]
+    },
+    "CH06-S02": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch06_s02.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [],
+      "understanding_bridges": [
+        "把补路积分视为需要处理的实际代价；先有限闭路后极限，并区分辅助复积分与原实积分收敛。"
+      ],
+      "media_review": [
+        {
+          "status": "本单元无既有选定媒体；未新增kind或音频。"
+        }
+      ],
+      "pending_items": [],
+      "body_paragraphs": 3,
+      "source_sha256": "7e767959e3105d8973e8179afb8d03fd2cff0519fcbecefb65714bf9dbd0da04",
+      "source_line_count": 3,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": []
+    },
+    "CH06-S02-SS01": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch06_s02_ss01.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [
+        "CH06-S02-SS01-C001",
+        "CH06-S02-SS01-C002",
+        "CH06-S02-SS01-C003",
+        "CH06-S02-SS01-C004"
+      ],
+      "understanding_bridges": [
+        "以径向/切向解释微分元；把参数条件与极点内外相连；明确整周和半周因子；统一补路恒等式。"
+      ],
+      "media_review": [
+        {
+          "id": "CH06-D",
+          "evidence": "study-visuals.js circle-differential分支：蓝径向、金切向、粉漏i径向、绿色下一点；derivative=[−y,x]。",
+          "body_alignment": "准确描述径切向比较与增量趋小，不声称图上完成留数计算。",
+          "fix": null
+        }
+      ],
+      "pending_items": [],
+      "body_paragraphs": 6,
+      "source_sha256": "656c3df535974c530b6af943dd845c47061120ac62d6b34a94a4913af4727bd7",
+      "source_line_count": 43,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": [
+        "#reader-85b72aa49f433c037eca",
+        "#reader-84c3f0235e5b910f82ad"
+      ]
+    },
+    "CH06-S02-SS02": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch06_s02_ss02.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [
+        "CH06-S02-SS02-C001",
+        "CH06-S02-SS02-C002",
+        "CH06-S02-SS02-C003",
+        "CH06-S02-SS02-C004",
+        "CH06-S02-SS02-C005",
+        "CH06-S02-SS02-C006",
+        "CH06-S02-SS02-C007",
+        "CH06-S02-SS02-C008"
+      ],
+      "understanding_bridges": [
+        "先独立定义两种主值与普通收敛；用弧长乘界解释大弧、小弧不同结果；区分不带指数与约当引理的条件。"
+      ],
+      "media_review": [
+        {
+          "id": "CH06-A",
+          "evidence": "study-visuals.js arc-decay分支：q=1 integral=[0,π]，q>1按幂积分显式求值；bound=πR^(1−q)，左图归一化。",
+          "body_alignment": "正文明确归一化图、实际积分向量和ML界的不同角色。",
+          "fix": null
+        }
+      ],
+      "pending_items": [],
+      "body_paragraphs": 9,
+      "source_sha256": "593ac4ef60c730ed8c84af3ea683ba6ad3b2be50744bef33ec0b0162b6535593",
+      "source_line_count": 79,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": [
+        "#reader-b0aa47de5b70eb6513db"
+      ]
+    },
+    "CH06-S02-SS03": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch06_s02_ss03.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [
+        "CH06-S02-SS03-C001",
+        "CH06-S02-SS03-C002",
+        "CH06-S02-SS03-C003",
+        "CH06-S02-SS03-C004",
+        "CH06-S02-SS03-C005"
+      ],
+      "understanding_bridges": [
+        "明确实虚部分离需要R实值；用小弧角度方向推导符号；区分辅助函数有瑕点与目标实函数普通可积。"
+      ],
+      "media_review": [
+        {
+          "status": "本单元无既有选定媒体；未新增kind或音频。"
+        }
+      ],
+      "pending_items": [],
+      "body_paragraphs": 6,
+      "source_sha256": "392115fc91d2bb7b66a2e95bf8c956c1796302d343f27bda62121bd2670a16cb",
+      "source_line_count": 32,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": [
+        "#reader-d1d0d9fecaa5d7f1092f",
+        "#reader-2587f6ed46acdb77c0c1"
+      ]
+    },
+    "CH06-S02-SS04": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch06_s02_ss04.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [
+        "CH06-S02-SS04-C001",
+        "CH06-S02-SS04-C002",
+        "CH06-S02-SS04-C003",
+        "CH06-S02-SS04-C004"
+      ],
+      "understanding_bridges": [
+        "用四分之一圆、三角形、矩形分别解释交换指数、旋转振荡和平移高斯的目的；显式保留三项最终公式与普通收敛限制。"
+      ],
+      "media_review": [
+        {
+          "status": "本单元无既有选定媒体；未新增kind或音频。"
+        }
+      ],
+      "pending_items": [],
+      "body_paragraphs": 5,
+      "source_sha256": "345eadbdb45338ccc9d0b68e126b51d4216272a74fb3fd3a639279bf83d884f4",
+      "source_line_count": 43,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": [
+        "#reader-3d5d2e3af9a2110e7e88",
+        "#reader-23aa816448d1fbf0925f",
+        "#reader-906937b7cb3ea1bfb10c"
+      ]
+    },
+    "CH06-S02-SS05": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch06_s02_ss05.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [
+        "CH06-S02-SS05-C001",
+        "CH06-S02-SS05-C002",
+        "CH06-S02-SS05-C003",
+        "CH06-S02-SS05-C004",
+        "CH06-S02-SS05-C005"
+      ],
+      "understanding_bridges": [
+        "将单值性、两岸相位、方向与端点可积性连成同一计算链；明确主支命名不覆盖题设；解释钥匙孔分母和p端点。"
+      ],
+      "media_review": [
+        {
+          "status": "本单元无既有选定媒体；未新增kind或音频。"
+        }
+      ],
+      "pending_items": [],
+      "body_paragraphs": 5,
+      "source_sha256": "a13f93b205e29ac0f4f75fb6cebb2c598e0c42d58675a3c6f4dd6ec6a95e087e",
+      "source_line_count": 63,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": [
+        "#reader-c2e7dbfb1feb23f90a8e",
+        "#reader-d60b0f226a665e952a2f"
+      ]
+    },
+    "CH06-S03": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch06_s03.md",
+      "source_read": "完整通读本单元原文，包括例题及章末习题；按conclusions主表与补表逐ID核对。",
+      "knowledge_ids": [
+        "CH06-S03-C001",
+        "CH06-S03-C002",
+        "CH06-S03-C003",
+        "CH06-S03-C004",
+        "CH06-S03-C005",
+        "CH06-S03-SC001",
+        "CH06-S03-SC002"
+      ],
+      "understanding_bridges": [
+        "用对数导数将阶数压成留数；连续追角与主辐角区别；解释严格儒歇不等式；虚轴开曲线的半圈与无穷远留数的方向符号。"
+      ],
+      "media_review": [
+        {
+          "id": "CH06-N",
+          "evidence": "study-visuals.js argument分支：映射(z^m−a)/z^p；a=0时按max(m−p,0)与max(p−m,0)约因子计数；shift=R^m时返回winding=null。",
+          "body_alignment": "正文区分左右平面、边界穿零临界和a=0约因子规则。",
+          "fix": null
+        }
+      ],
+      "pending_items": [],
+      "body_paragraphs": 10,
+      "source_sha256": "dc5b175d00ca2ced67f1c82037b64a9d207ff462b8bf65c4c5cde4675fa54c2f",
+      "source_line_count": 138,
+      "layout_contract": "正文为主线；媒体标记邻接其所解释的具体正文段落。正文2/3与右侧媒体1/3的CSS/渲染由主集成统一实施，本文件不改共享渲染器。",
+      "reader_anchors_preserved": [
+        "#reader-8bb62cbc81bdf9a6ca50",
+        "#reader-aab584a87964965ad6a6",
+        "#reader-85699ba620c18755acb4"
+      ]
+    }
+  },
+  "verification": {
+    "unit_count": 19,
+    "main_ids": 111,
+    "supplement_ids": 11,
+    "coverage_count": 122,
+    "unique_complete_paragraph_excerpts": true,
+    "all_original_reader_anchors_preserved": true,
+    "all_original_request_ids_preserved": true,
+    "all_original_visual_kinds_preserved": true,
+    "no_new_audio_or_visual_kind": true
+  },
+  "integration_pending": [
+    "全书统一正文2/3、右侧紧凑媒体1/3布局由主任务集成。",
+    "视频帧级核对由主任务与独立审查承接；本review不代替实际视频观看结论。"
+  ]
+}

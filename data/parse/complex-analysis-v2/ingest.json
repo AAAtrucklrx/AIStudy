@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "file_type": "ingest",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.tools.ingest_book",
+    "field_notes": {
+      "route": "这条解析产物是哪个来源做的：mineru=云端产物（默认，含刚用 API 捞的）；ocr=本地识别（兜底）",
+      "via": "怎么拿到产物的：api=刚用云端 API 捞的；local-products=目录里本来就有；local-ocr=本地识别",
+      "page_ranges": "用 API 捞的时候只解析了哪几页（空=全篇）",
+      "fetch_record": "用 API 捞的时候的记录文件（mineru/fetch.json：批次号、状态流转、落盘文件）",
+      "reason": "为什么走这条（留档：以后出问题能回答「当初为什么这么选」）",
+      "preflight": "MinerU 路线的体检结论（拦级别问题会停在上一步，根本走不到这里）",
+      "stale_products": "另一条路留下的产物；不为空说明这次是同目录混用，要人工确认"
+    }
+  },
+  "route": "mineru",
+  "via": "local-products",
+  "reason": "有 MinerU 产物（mineru/layout.json）→ 默认走 MinerU",
+  "page_ranges": null,
+  "fetch_record": null,
+  "checked_at": "2026-10-02T23:36:11+00:00",
+  "pdf": "/home/aaatrucklrx/桌面/AI教学/AIforStudy/data/raw/复变函数.pdf",
+  "mineru": {
+    "dir": "mineru",
+    "layout": "layout.json",
+    "layout_sha256": "10dd4ed7be8cf428ef57f5c7dfd53063ca62ad0a155171634ac387d8b6efd7f1",
+    "note": null
+  },
+  "preflight": "✅ 可以往下跑（另有 5 条提醒）",
+  "stale_products": [],
+  "produced": [
+    "document.md",
+    "figures.json",
+    "mineru.audit.json",
+    "extract.json"
+  ],
+  "dry_run": false
+}

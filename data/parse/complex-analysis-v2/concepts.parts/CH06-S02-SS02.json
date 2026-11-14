@@ -1,0 +1,108 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH06-S02-SS02",
+    "text_sha256": "593ac4ef60c730ed8c84af3ea683ba6ad3b2be50744bef33ec0b0162b6535593",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "593ac4ef60c730ed8c84af3ea683ba6ad3b2be50744bef33ec0b0162b6535593",
+    "source": "original_text",
+    "source_path": "original_text/ch06_s02_ss02.md"
+  },
+  "unit": {
+    "unit_id": "CH06-S02-SS02",
+    "level": "subsection",
+    "chapter": "CH06",
+    "section": "CH06-S02",
+    "title": "有理函数的积分 $\\int_{-\\infty}^{+\\infty} R(x) \\mathrm{d}x$",
+    "anchor": "6.2.2"
+  },
+  "concepts": [
+    {
+      "name": "柯西积分主值",
+      "type": "definition",
+      "formal": "我们把这个极限值，称为广义积分 $\\int_{-\\infty}^{+\\infty}f(x)\\mathrm{d}x$ 的柯西积分主值，记作 $$\\mathrm{v.p.} \\int_{-\\infty}^{+\\infty} f(x) \\mathrm{d} x = \\lim_{R\\to\\infty} \\int_{-R}^{R} f(x) \\mathrm{d} x.$$",
+      "source_quote": "我们把这个极限值，称为广义积分 $\\int_{-\\infty}^{+\\infty}f(x)\\mathrm{d}x$ 的柯西积分主值"
+    },
+    {
+      "name": "积分主值",
+      "type": "definition",
+      "formal": "同样把极限 $$\\lim _ {r \\rightarrow + 0} \\left[ \\int _ {a} ^ {c - r} f (x) d x + \\int _ {c + r} ^ {b} f (x) d x \\right]$$ 称为 $\\int_{a}^{b} f(x) \\mathrm{d}x$ 的积分主值. 记作 v.p. $\\int_{a^{\\prime}}^{b} f(x) \\mathrm{d}x$.",
+      "source_quote": "同样把极限 $$\\lim _ {r \\rightarrow + 0} \\left[ \\int _ {a} ^ {c - r} f (x) d x + \\int _ {c + r} ^ {b} f (x) d x \\right]$$ 称为 $\\int_{a}^{b} f(x) \\mathrm{d}x$ 的积分主值"
+    },
+    {
+      "name": "留数定理",
+      "type": "theorem",
+      "formal": "由留数定理，得 $$\\begin{array}{r l} \\int _ {C} R (z) \\mathrm{d} z & = \\int _ {C _ {R}} R (z) \\mathrm{d} z + \\int _ {- R} ^ {R} R (x) \\mathrm{d} x \\\\ & = 2 \\pi \\mathrm{i} \\sum_ {k = 1} ^ {n} \\operatorname{Res} [ R (z), a _ {k} ]. \\end{array}$$",
+      "source_quote": "由留数定理，得"
+    },
+    {
+      "name": "引理1",
+      "type": "proposition",
+      "formal": "引理1 如果当 $R$ 充分大时，$f(z)$ 在圆弧 $C_R: z = Re^{\\mathrm{j}\\theta}, \\alpha \\leqslant \\theta \\leqslant \\beta$ 上连续，且 $$\\lim _ {z \\rightarrow \\infty} z f (z) = 0,$$ $$\\lim _ {R \\rightarrow + \\infty} \\int _ {C _ {R}} f (z) d z = 0.$$ 特别地，当 $f(z)$ 是有理函数 $\\frac{P(z)}{Q(z)}$ ，且 $Q(z)$ 至少比 $P(z)$ 高两次时，有 $$\\lim _ {R \\rightarrow + \\infty} \\int _ {C _ {R}} \\frac {P (z)}{Q (z)} \\mathrm{d} z = 0.$$",
+      "source_quote": "引理1 如果当 $R$ 充分大时，$f(z)$ 在圆弧 $C_R: z = Re^{\\mathrm{j}\\theta}, \\alpha \\leqslant \\theta \\leqslant \\beta$ 上连续"
+    },
+    {
+      "name": "引理2",
+      "type": "proposition",
+      "formal": "引理2 如果当 $\\rho$ 充分小时，$f(z)$ 在圆弧 $C_p: z = a + \\rho e^{\\mathrm{i}\\theta}, a \\leqslant \\theta \\leqslant \\beta$ 上连续，且 $$\\lim _ {z \\rightarrow a} (z - a) f (z) = k,$$ $$\\lim _ {r \\rightarrow 0} \\int _ {C _ {p}} f (z) d z = i (\\beta - \\alpha) k.$$",
+      "source_quote": "引理2 如果当 $\\rho$ 充分小时，$f(z)$ 在圆弧 $C_p: z = a + \\rho e^{\\mathrm{i}\\theta}, a \\leqslant \\theta \\leqslant \\beta$ 上连续"
+    },
+    {
+      "name": "推论",
+      "type": "corollary",
+      "formal": "设 $a$ 是 $f(z)$ 的一级极点，则 $$\\lim _ {\\rho \\rightarrow 0} \\int _ {C _ {\\rho}} f (z) \\mathrm{d} z = \\mathrm{i} (\\beta - a) \\operatorname{Res} [ f (z), a ].$$",
+      "source_quote": "推论 设 $a$ 是 $f(z)$ 的一级极点，则"
+    },
+    {
+      "name": "引理3（约当引理）",
+      "type": "proposition",
+      "formal": "引理3（约当引理）如果当 $R$ 充分大时 $g(z)$ 在圆弧 $C_R:|z|=R, \\mathrm{Im} z > -a (a > 0)$ 上连续(图6.4)，且 $$\\lim _ {z \\rightarrow \\infty} g (z) = 0.$$ 则对任何正数 $\\lambda$ 都有 $$\\lim _ {R \\rightarrow + \\infty} \\int _ {C _ {R}} g (z) \\exp (\\mathrm{i} \\lambda z) \\mathrm{d} z = 0.$$",
+      "source_quote": "引理3（约当引理）如果当 $R$ 充分大时 $g(z)$ 在圆弧 $C_R:|z|=R, \\mathrm{Im} z > -a (a > 0)$ 上连续"
+    },
+    {
+      "name": "长大不等式",
+      "type": "theorem",
+      "formal": "由长大不等式 $$\\left| \\int _ {\\widehat {A B}} g (z) \\exp (\\mathrm{i} \\lambda z) \\mathrm{d} z \\right| \\leqslant M (R) \\mathrm{e} ^ {\\mathrm{i} \\omega} \\cdot a R, \\tag {6.8}$$",
+      "source_quote": "由长大不等式"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 8,
+    "漏掉的具名结论": [
+      "引理1",
+      "引理2",
+      "推论"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "得一般公式"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "柯西积分主值",
+    "积分主值",
+    "留数定理",
+    "引理1",
+    "引理2",
+    "推论",
+    "引理3（约当引理）",
+    "长大不等式"
+  ]
+}

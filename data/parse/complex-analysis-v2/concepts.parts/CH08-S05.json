@@ -1,0 +1,113 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH08-S05",
+    "text_sha256": "48a106f52abad2fae0f4894393d77c13d2ae5a7a0bc79f1ed4352a045dccd369",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "48a106f52abad2fae0f4894393d77c13d2ae5a7a0bc79f1ed4352a045dccd369",
+    "source": "original_text",
+    "source_path": "original_text/ch08_s05.md"
+  },
+  "unit": {
+    "unit_id": "CH08-S05",
+    "level": "section",
+    "chapter": "CH08",
+    "section": "CH08-S05",
+    "title": "许瓦兹-克利斯托菲变换",
+    "anchor": "8.5"
+  },
+  "concepts": [
+    {
+      "name": "许瓦兹-克利斯托菲变换（许-克变换）",
+      "type": "definition",
+      "formal": "由这个积分所表示的变换称为许瓦兹－克利斯托菲(Schwarz-Christoffel)变换，简称许－克变换。",
+      "source_quote": "由这个积分所表示的变换称为许瓦兹－克利斯托菲(Schwarz-Christoffel)变换，简称许－克变换。"
+    },
+    {
+      "name": "定理 6",
+      "type": "theorem",
+      "formal": "如果函数  $w = f(z)$  作出一个把上半平面 Imz > 0 变到有界多边形内部的保形变换，此多边形在顶点  $A_{k}$  处的内角为  $\\beta_{k}\\pi, 0 < \\beta_{k} < 2, k = 1, 2, \\cdots, n, \\beta_{1} + \\beta_{2} + \\cdots + \\beta_{n} = n - 2$ ，并且实轴上对应于这多边形顶点的那些点  $a_{k}, -\\infty < a_{1} < a_{2} \\cdots < a_{n} < +\\infty$  都是已知的，那么  $f(z)$  便可用积分表示 $$f (z) = C \\int_ {z _ {0}} ^ {z} (z - a _ {1}) ^ {\\beta_ {1} - 1} (z - a _ {2}) ^ {\\beta_ {2} - 1} \\dots (z - a _ {n}) ^ {\\beta_ {n} - 1} d z + B.\\tag{8.5}$$ 其中， $z_0(\\mathrm{Im}z_0\\geqslant 0)$ 是任意选定的点， $B$ 及 $C$ 是复常数，积分号下的各多值函数可取主值.",
+      "source_quote": "定理 6 如果函数  $w = f(z)$  作出一个把上半平面 Imz > 0 变到有界多边形内部的保形变换，此多边形在顶点  $A_{k}$  处的内角为  $\\beta_{k}\\pi, 0 < \\beta_{k} < 2, k = 1, 2, \\cdots, n, \\beta_{1} + \\beta_{2} + \\cdots + \\beta_{n} = n - 2$ ，并且实轴上对应于这多边形顶点的那些点  $a_{k}, -\\infty < a_{1} < a_{2} \\cdots < a_{n} < +\\infty$  都是已知的，那么  $f(z)$  便可用积分表示"
+    },
+    {
+      "name": "许-克公式",
+      "type": "formula",
+      "formal": "$$f (z) = C \\int_ {z _ {0}} ^ {z} (z - a _ {1}) ^ {\\beta_ {1} - 1} (z - a _ {2}) ^ {\\beta_ {2} - 1} \\dots (z - a _ {n}) ^ {\\beta_ {n} - 1} d z + B.\\tag{8.5}$$",
+      "source_quote": "在许－克公式中，假定了对应于多边形顶点的那些点 $a_{k}$ 都是已知的。"
+    },
+    {
+      "name": "保形变换的基本定理",
+      "type": "theorem",
+      "formal": "由保形变换的基本定理，其中有三个点（如 $a_{1}, a_{2}, a_{3}$）可任意指定，而其余的点及常数 $B, C$ 就必须从所给问题的条件而确定",
+      "source_quote": "由保形变换的基本定理，其中有三个点（如 $a_{1}, a_{2}, a_{3}$）可任意指定，而其余的点及常数 $B, C$ 就必须从所给问题的条件而确定"
+    },
+    {
+      "name": "分式线性变换",
+      "type": "definition",
+      "formal": "为此，我们先作一分式线性变换  $\\zeta = a_{n}' = \\frac{1}{2}$ ，这里， $a_{n}'$  是任意实常数。",
+      "source_quote": "为此，我们先作一分式线性变换  $\\zeta = a_{n}' = \\frac{1}{2}$ ，这里， $a_{n}'$  是任意实常数。"
+    },
+    {
+      "name": "椭圆积分",
+      "type": "definition",
+      "formal": "上式右端的积分是一种所谓椭圆积分，它所表示的函数 $w(z)$ ，已非初等函数.",
+      "source_quote": "上式右端的积分是一种所谓椭圆积分，它所表示的函数 $w(z)$ ，已非初等函数."
+    },
+    {
+      "name": "雅可比椭圆函数",
+      "type": "definition",
+      "formal": "这个函数的反函数，是一种雅可比(Jacobi）椭圆函数，称为椭圆正弦，记为 $z = \\mathrm{snw}$",
+      "source_quote": "这个函数的反函数，是一种雅可比(Jacobi）椭圆函数，称为椭圆正弦，记为 $z = \\mathrm{snw}$"
+    },
+    {
+      "name": "椭圆正弦",
+      "type": "definition",
+      "formal": "称为椭圆正弦，记为 $z = \\mathrm{snw}$",
+      "source_quote": "称为椭圆正弦，记为 $z = \\mathrm{snw}$"
+    },
+    {
+      "name": "椭圆函数",
+      "type": "definition",
+      "formal": "椭圆积分和椭圆函数在科学技术中常用到，不过限于篇幅，对此我们就不作进一步的讨论了.",
+      "source_quote": "椭圆积分和椭圆函数在科学技术中常用到，不过限于篇幅，对此我们就不作进一步的讨论了."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 9,
+    "漏掉的具名结论": [
+      "定理 6"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "严格的方法来求出这个变换公式"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "许瓦兹-克利斯托菲变换（许-克变换）",
+    "定理 6",
+    "许-克公式",
+    "保形变换的基本定理",
+    "分式线性变换",
+    "椭圆积分",
+    "雅可比椭圆函数",
+    "椭圆正弦",
+    "椭圆函数"
+  ]
+}

@@ -1,0 +1,1971 @@
+{
+  "_meta": {
+    "file_type": "structure",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.structure",
+    "source_sha256": "879ebcc9054be9b72c14d388b0cb367bbdf802044edd763a2b4d6e45fbb0284b",
+    "max_level": 4,
+    "field_notes": {
+      "headings[].scheme": "命中的编号体系：chapter/cn/num/paren",
+      "headings[].numeric": "数字路径，(4,1) 即 4.1；用于前缀嵌套判定",
+      "headings[].level": "推断出的层级（1=章 2=节 3=小节 4=知识点块）",
+      "headings[].canonical": "按文档顺序重新编号后的锚点",
+      "headings[].source_line": "在输入 document.md 里的 1-based 行号"
+    }
+  },
+  "warnings": [
+    "删掉 159 行跨页重复的页眉/页脚",
+    "合并了 3059 处被 PDF 折断的换行"
+  ],
+  "stats": {
+    "dropped_page_numbers": 0,
+    "dropped_page_furniture": 159,
+    "dropped_toc_lines": 0,
+    "excluded_region_lines": 560,
+    "excluded_region_pages": [
+      1,
+      44,
+      45,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      283,
+      284,
+      285,
+      286,
+      287,
+      289
+    ],
+    "code_lines_skipped": 0,
+    "pages": 289,
+    "heading_source": "authority",
+    "headings_total": 108,
+    "exercise_items_marked": 0,
+    "exercise_items": [],
+    "authority": {
+      "matched": 108,
+      "unmatched": [],
+      "synthesized_anchors": 0,
+      "near_window_hits": 0
+    },
+    "toc_check": {},
+    "skeleton": {},
+    "plain_number_dropped": 0,
+    "bare_number_seen": 0,
+    "level_1": 8,
+    "level_2": 45,
+    "level_3": 55,
+    "level_4": 0,
+    "body_lines_after_unwrap": 687,
+    "source_sha256": "879ebcc9054be9b72c14d388b0cb367bbdf802044edd763a2b4d6e45fbb0284b",
+    "regions_used": true
+  },
+  "headings": [
+    {
+      "scheme": "toc",
+      "raw_number": "第一章",
+      "title": "向量",
+      "source_line": 9,
+      "page": 7,
+      "numeric": [
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 1,
+      "canonical_level": 1,
+      "canonical": "1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.1",
+      "title": "向量的线性运算",
+      "source_line": 13,
+      "page": 7,
+      "numeric": [
+        1,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "1.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.1.1",
+      "title": "向量及其表示",
+      "source_line": 14,
+      "page": 7,
+      "numeric": [
+        1,
+        1,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.1.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.1.2",
+      "title": "向量的线性运算",
+      "source_line": 22,
+      "page": 8,
+      "numeric": [
+        1,
+        1,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.1.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.1.3",
+      "title": "向量的共线与共面",
+      "source_line": 42,
+      "page": 9,
+      "numeric": [
+        1,
+        1,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.1.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.2",
+      "title": "坐标系",
+      "source_line": 98,
+      "page": 12,
+      "numeric": [
+        1,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "1.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.2.1",
+      "title": "仿射坐标系",
+      "source_line": 99,
+      "page": 12,
+      "numeric": [
+        1,
+        2,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.2.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.2.2",
+      "title": "向量的坐标运算",
+      "source_line": 138,
+      "page": 14,
+      "numeric": [
+        1,
+        2,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.2.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.2.3",
+      "title": "直角坐标系",
+      "source_line": 164,
+      "page": 16,
+      "numeric": [
+        1,
+        2,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.2.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.3",
+      "title": "向量的数量积",
+      "source_line": 180,
+      "page": 17,
+      "numeric": [
+        1,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "1.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.3.1",
+      "title": "数量积的定义与性质",
+      "source_line": 181,
+      "page": 17,
+      "numeric": [
+        1,
+        3,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.3.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.3.2",
+      "title": "直角坐标系下数量积的计算",
+      "source_line": 216,
+      "page": 19,
+      "numeric": [
+        1,
+        3,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.3.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.4",
+      "title": "向量的向量积",
+      "source_line": 241,
+      "page": 20,
+      "numeric": [
+        1,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "1.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.4.1",
+      "title": "向量积的定义与性质",
+      "source_line": 242,
+      "page": 20,
+      "numeric": [
+        1,
+        4,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.4.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.4.2",
+      "title": "直角坐标系下向量积的计算",
+      "source_line": 272,
+      "page": 22,
+      "numeric": [
+        1,
+        4,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.4.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.5",
+      "title": "向量的混合积",
+      "source_line": 301,
+      "page": 24,
+      "numeric": [
+        1,
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "1.5"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.5.1",
+      "title": "混合积的定义",
+      "source_line": 302,
+      "page": 24,
+      "numeric": [
+        1,
+        5,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.5.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.5.2",
+      "title": "直角坐标系下混合积的计算",
+      "source_line": 315,
+      "page": 25,
+      "numeric": [
+        1,
+        5,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.5.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.5.3",
+      "title": "二重外积",
+      "source_line": 332,
+      "page": 26,
+      "numeric": [
+        1,
+        5,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.5.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.6",
+      "title": "高维数组向量",
+      "source_line": 352,
+      "page": 27,
+      "numeric": [
+        1,
+        6
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "1.6"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.7",
+      "title": "集合与映射*",
+      "source_line": 373,
+      "page": 28,
+      "numeric": [
+        1,
+        7
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "1.7"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.7.1",
+      "title": "集合的定义*",
+      "source_line": 375,
+      "page": 28,
+      "numeric": [
+        1,
+        7,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.7.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.7.2",
+      "title": "集合的基本运算*",
+      "source_line": 390,
+      "page": 29,
+      "numeric": [
+        1,
+        7,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.7.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.7.3",
+      "title": "映射*",
+      "source_line": 439,
+      "page": 32,
+      "numeric": [
+        1,
+        7,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.7.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.7.4",
+      "title": "置换与排列*",
+      "source_line": 479,
+      "page": 34,
+      "numeric": [
+        1,
+        7,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.7.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.7.5",
+      "title": "等价关系,等价类与分拆*",
+      "source_line": 508,
+      "page": 36,
+      "numeric": [
+        1,
+        7,
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.7.5"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.8",
+      "title": "复数*",
+      "source_line": 535,
+      "page": 37,
+      "numeric": [
+        1,
+        8
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "1.8"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.8.1",
+      "title": "复数的四则运算*",
+      "source_line": 537,
+      "page": 37,
+      "numeric": [
+        1,
+        8,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.8.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.8.2",
+      "title": "复数的几何表示*",
+      "source_line": 546,
+      "page": 38,
+      "numeric": [
+        1,
+        8,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.8.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.9",
+      "title": "数域*",
+      "source_line": 600,
+      "page": 41,
+      "numeric": [
+        1,
+        9
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "1.9"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.10",
+      "title": "求和符号*",
+      "source_line": 616,
+      "page": 42,
+      "numeric": [
+        1,
+        10
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "1.10"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "第二章",
+      "title": "线性方程组",
+      "source_line": 682,
+      "page": 47,
+      "numeric": [
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 1,
+      "canonical_level": 1,
+      "canonical": "2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.1",
+      "title": "Gauss 消元法",
+      "source_line": 695,
+      "page": 48,
+      "numeric": [
+        2,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "2.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.2",
+      "title": "Gauss 消元的矩阵表示",
+      "source_line": 768,
+      "page": 51,
+      "numeric": [
+        2,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "2.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.3",
+      "title": "一般线性方程组的Gauss 消元法",
+      "source_line": 807,
+      "page": 54,
+      "numeric": [
+        2,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "2.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.3.1",
+      "title": "算法描述",
+      "source_line": 809,
+      "page": 54,
+      "numeric": [
+        2,
+        3,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "2.3.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.3.2",
+      "title": "线性方程组解的属性",
+      "source_line": 818,
+      "page": 55,
+      "numeric": [
+        2,
+        3,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "2.3.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "第三章",
+      "title": "行列式",
+      "source_line": 911,
+      "page": 63,
+      "numeric": [
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 1,
+      "canonical_level": 1,
+      "canonical": "3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "3.0",
+      "title": "行列式的引入",
+      "source_line": 913,
+      "page": 63,
+      "numeric": [
+        3,
+        0
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "3.0"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "3.1",
+      "title": "行列式的定义",
+      "source_line": 961,
+      "page": 66,
+      "numeric": [
+        3,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "3.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "3.2",
+      "title": "行列式的性质",
+      "source_line": 1051,
+      "page": 73,
+      "numeric": [
+        3,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "3.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "3.3",
+      "title": "行列式的完全展开式",
+      "source_line": 1100,
+      "page": 76,
+      "numeric": [
+        3,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "3.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "3.4",
+      "title": "Cramer法则",
+      "source_line": 1131,
+      "page": 79,
+      "numeric": [
+        3,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "3.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "3.5",
+      "title": "行列式的计算",
+      "source_line": 1178,
+      "page": 82,
+      "numeric": [
+        3,
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "3.5"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "第四章",
+      "title": "矩阵",
+      "source_line": 1259,
+      "page": 89,
+      "numeric": [
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 1,
+      "canonical_level": 1,
+      "canonical": "4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "4.1",
+      "title": "矩阵的定义",
+      "source_line": 1261,
+      "page": 89,
+      "numeric": [
+        4,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "4.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "4.2",
+      "title": "矩阵的运算",
+      "source_line": 1310,
+      "page": 93,
+      "numeric": [
+        4,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "4.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "4.2.1",
+      "title": "加法与数乘",
+      "source_line": 1317,
+      "page": 93,
+      "numeric": [
+        4,
+        2,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "4.2.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "4.2.2",
+      "title": "矩阵的乘法",
+      "source_line": 1350,
+      "page": 95,
+      "numeric": [
+        4,
+        2,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "4.2.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "4.2.3",
+      "title": "逆矩阵",
+      "source_line": 1448,
+      "page": 101,
+      "numeric": [
+        4,
+        2,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "4.2.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "4.2.4",
+      "title": "转置、共轭与迹",
+      "source_line": 1486,
+      "page": 103,
+      "numeric": [
+        4,
+        2,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "4.2.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "4.2.5",
+      "title": "分块运算",
+      "source_line": 1528,
+      "page": 105,
+      "numeric": [
+        4,
+        2,
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "4.2.5"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "4.3",
+      "title": "初等变换",
+      "source_line": 1631,
+      "page": 111,
+      "numeric": [
+        4,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "4.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "4.4",
+      "title": "矩阵的秩与相抵",
+      "source_line": 1763,
+      "page": 120,
+      "numeric": [
+        4,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "4.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "4.4.1",
+      "title": "矩阵秩与相抵的定义",
+      "source_line": 1765,
+      "page": 120,
+      "numeric": [
+        4,
+        4,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "4.4.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "4.4.2",
+      "title": "秩的计算",
+      "source_line": 1821,
+      "page": 124,
+      "numeric": [
+        4,
+        4,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "4.4.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "4.4.3",
+      "title": "相抵标准形的应用*",
+      "source_line": 1835,
+      "page": 125,
+      "numeric": [
+        4,
+        4,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "4.4.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "第五章",
+      "title": "线性空间",
+      "source_line": 1970,
+      "page": 133,
+      "numeric": [
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 1,
+      "canonical_level": 1,
+      "canonical": "5"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.1",
+      "title": "数组空间",
+      "source_line": 1975,
+      "page": 133,
+      "numeric": [
+        5,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "5.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.2",
+      "title": "线性相关与线性无关",
+      "source_line": 2041,
+      "page": 137,
+      "numeric": [
+        5,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "5.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.3",
+      "title": "极大无关组与秩",
+      "source_line": 2132,
+      "page": 142,
+      "numeric": [
+        5,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "5.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.4",
+      "title": "基与维数",
+      "source_line": 2230,
+      "page": 148,
+      "numeric": [
+        5,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "5.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.5",
+      "title": "线性方程组解集的结构",
+      "source_line": 2314,
+      "page": 153,
+      "numeric": [
+        5,
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "5.5"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.5.1",
+      "title": "线性方程组解的存在性与唯一性",
+      "source_line": 2321,
+      "page": 154,
+      "numeric": [
+        5,
+        5,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "5.5.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.5.2",
+      "title": "齐次线性方程组解集的结构",
+      "source_line": 2334,
+      "page": 154,
+      "numeric": [
+        5,
+        5,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "5.5.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.5.3",
+      "title": "非齐次线性方程组解集的结构",
+      "source_line": 2365,
+      "page": 156,
+      "numeric": [
+        5,
+        5,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "5.5.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.6",
+      "title": "一般线性空间",
+      "source_line": 2395,
+      "page": 158,
+      "numeric": [
+        5,
+        6
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "5.6"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.6.1",
+      "title": "一般线性空间的定义",
+      "source_line": 2397,
+      "page": 158,
+      "numeric": [
+        5,
+        6,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "5.6.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.6.2",
+      "title": "一般线性空间的理论",
+      "source_line": 2490,
+      "page": 163,
+      "numeric": [
+        5,
+        6,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "5.6.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.7",
+      "title": "子空间运算*",
+      "source_line": 2567,
+      "page": 167,
+      "numeric": [
+        5,
+        7
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "5.7"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.7.1",
+      "title": "子空间的交*",
+      "source_line": 2570,
+      "page": 168,
+      "numeric": [
+        5,
+        7,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "5.7.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.7.2",
+      "title": "子空间的和*",
+      "source_line": 2581,
+      "page": 168,
+      "numeric": [
+        5,
+        7,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "5.7.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.7.3",
+      "title": "子空间的直和*",
+      "source_line": 2617,
+      "page": 170,
+      "numeric": [
+        5,
+        7,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "5.7.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "第六章",
+      "title": "线性变换",
+      "source_line": 2752,
+      "page": 179,
+      "numeric": [
+        6
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 1,
+      "canonical_level": 1,
+      "canonical": "6"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.1",
+      "title": "数组空间上的线性映射",
+      "source_line": 2754,
+      "page": 179,
+      "numeric": [
+        6,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "6.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.2",
+      "title": "线性变换的特征值与特征向量",
+      "source_line": 2805,
+      "page": 182,
+      "numeric": [
+        6,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "6.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.2.1",
+      "title": "特征值与特征向量的定义",
+      "source_line": 2806,
+      "page": 182,
+      "numeric": [
+        6,
+        2,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "6.2.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.2.2",
+      "title": "特征值与特征向量的计算",
+      "source_line": 2830,
+      "page": 184,
+      "numeric": [
+        6,
+        2,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "6.2.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.3",
+      "title": "矩阵的相似",
+      "source_line": 2873,
+      "page": 187,
+      "numeric": [
+        6,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "6.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.3.1",
+      "title": "矩阵相似的定义",
+      "source_line": 2886,
+      "page": 187,
+      "numeric": [
+        6,
+        3,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "6.3.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.3.2",
+      "title": "矩阵相似于对角阵的条件",
+      "source_line": 2916,
+      "page": 189,
+      "numeric": [
+        6,
+        3,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "6.3.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.3.3",
+      "title": "相似于上三角阵",
+      "source_line": 2976,
+      "page": 192,
+      "numeric": [
+        6,
+        3,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "6.3.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.4",
+      "title": "一般空间上的线性变换",
+      "source_line": 2997,
+      "page": 193,
+      "numeric": [
+        6,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "6.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.4.1",
+      "title": "线性变换的定义",
+      "source_line": 3000,
+      "page": 194,
+      "numeric": [
+        6,
+        4,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "6.4.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.4.2",
+      "title": "线性变换在一组基下的矩阵",
+      "source_line": 3044,
+      "page": 196,
+      "numeric": [
+        6,
+        4,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "6.4.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.4.3",
+      "title": "线性变换的特征值与特征向量",
+      "source_line": 3144,
+      "page": 202,
+      "numeric": [
+        6,
+        4,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "6.4.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.5",
+      "title": "若当标准形简介*",
+      "source_line": 3175,
+      "page": 204,
+      "numeric": [
+        6,
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "6.5"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "第七章",
+      "title": "内积空间及变换",
+      "source_line": 3432,
+      "page": 219,
+      "numeric": [
+        7
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 1,
+      "canonical_level": 1,
+      "canonical": "7"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "7.1",
+      "title": "数组内积空间的定义与性质",
+      "source_line": 3434,
+      "page": 219,
+      "numeric": [
+        7,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "7.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "7.2",
+      "title": "标准正交基",
+      "source_line": 3518,
+      "page": 223,
+      "numeric": [
+        7,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "7.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "7.3",
+      "title": "$\\mathbb{R}^n$ 上的线性变换",
+      "source_line": 3675,
+      "page": 231,
+      "numeric": [
+        7,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "7.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "7.3.1",
+      "title": "正交变换",
+      "source_line": 3677,
+      "page": 231,
+      "numeric": [
+        7,
+        3,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "7.3.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "7.3.2",
+      "title": "对称变换",
+      "source_line": 3732,
+      "page": 234,
+      "numeric": [
+        7,
+        3,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "7.3.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "7.4",
+      "title": "一般的欧氏空间",
+      "source_line": 3801,
+      "page": 237,
+      "numeric": [
+        7,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "7.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "7.4.1",
+      "title": "一般欧氏空间的定义与性质",
+      "source_line": 3803,
+      "page": 237,
+      "numeric": [
+        7,
+        4,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "7.4.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "7.4.2",
+      "title": "标准正交基",
+      "source_line": 3840,
+      "page": 239,
+      "numeric": [
+        7,
+        4,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "7.4.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "7.4.3",
+      "title": "正交变换与对称变换",
+      "source_line": 3870,
+      "page": 241,
+      "numeric": [
+        7,
+        4,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "7.4.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "7.5",
+      "title": "酉空间*",
+      "source_line": 3928,
+      "page": 244,
+      "numeric": [
+        7,
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "7.5"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "7.5.1",
+      "title": "酉空间的基本概念*",
+      "source_line": 3930,
+      "page": 244,
+      "numeric": [
+        7,
+        5,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "7.5.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "7.5.2",
+      "title": "酉空间的基本性质*",
+      "source_line": 3943,
+      "page": 245,
+      "numeric": [
+        7,
+        5,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "7.5.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "7.5.3",
+      "title": "酉矩阵与酉变换*",
+      "source_line": 3999,
+      "page": 248,
+      "numeric": [
+        7,
+        5,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "7.5.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "7.5.4",
+      "title": "Hermite矩阵与Hermite变换*",
+      "source_line": 4031,
+      "page": 250,
+      "numeric": [
+        7,
+        5,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "7.5.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "第八章",
+      "title": "实二次型",
+      "source_line": 4202,
+      "page": 259,
+      "numeric": [
+        8
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 1,
+      "canonical_level": 1,
+      "canonical": "8"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "8.1",
+      "title": "二次型的矩阵表示",
+      "source_line": 4205,
+      "page": 259,
+      "numeric": [
+        8,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "8.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "8.2",
+      "title": "二次型的标准形",
+      "source_line": 4240,
+      "page": 261,
+      "numeric": [
+        8,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "8.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "8.3",
+      "title": "相合不变量与分类",
+      "source_line": 4357,
+      "page": 268,
+      "numeric": [
+        8,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "8.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "8.4",
+      "title": "二次曲线与曲面的分类",
+      "source_line": 4396,
+      "page": 271,
+      "numeric": [
+        8,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "8.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "8.5",
+      "title": "正定二次型",
+      "source_line": 4476,
+      "page": 274,
+      "numeric": [
+        8,
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "8.5"
+    }
+  ]
+}

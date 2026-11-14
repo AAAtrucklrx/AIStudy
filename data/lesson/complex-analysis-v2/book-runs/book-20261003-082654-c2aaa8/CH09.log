@@ -1,0 +1,225 @@
+=== CH09：16 个单元 ===
+    CH09
+    CH09-S01
+    CH09-S02-SS01
+    CH09-S02-SS02
+    CH09-S02-SS03
+    CH09-S02-SS04
+    CH09-S02-SS05
+    CH09-S02-SS06
+    CH09-S02-SS07
+    CH09-S02-SS08
+    CH09-S02-SS09
+    CH09-S02-SS10
+    CH09-S03
+    CH09-S03-SS01
+    CH09-S03-SS02
+    CH09-S03-SS03
+
+计划：
+    CH09               概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH09-S01           概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH09-S02-SS01      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH09-S02-SS02      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH09-S02-SS03      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH09-S02-SS04      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH09-S02-SS05      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH09-S02-SS06      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH09-S02-SS07      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH09-S02-SS08      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH09-S02-SS09      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH09-S02-SS10      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH09-S03           概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH09-S03-SS01      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH09-S03-SS02      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH09-S03-SS03      概念有    教案要生成    模型要生成    回路最多 1 轮
+
+估价（按实测单价，粗算）：概念 ~10k/节、教案 ~25~70k/节（看原文长度）、模型 ~10~20k/节、回路 ~80~120k/节（K=2）
+run_id：book-20261003-082654-c2aaa8/CH09（本趟账目只算这一趟，并行下不会串账）
+
+===== CH09 拉氏变换 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09 --quiet --temperature 0 --seed 42
+    模型：CH09: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH09 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH09 --fix-anchors
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH09 --max-rounds 1 --discover-runs 1
+    → 字数 841｜倍数 8.42｜套话 0｜详解 0｜硬问题 0｜本步 68,060 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 新增 ['CH09']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 --only CH09
+
+===== CH09-S01 拉氏变换的定义 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S01 --quiet --temperature 0 --seed 42
+    模型：CH09-S01: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH09-S01 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH09-S01 --fix-anchors
+    · 教案有 1 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH09-S01: F-04 第 1 步的 `basis` 指不回任何东西（'$p$ 的记法与指数运算法则'）—— 必须…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH09-S01 --max-rounds 1 --discover-runs 1
+    → 字数 2903｜倍数 2.22｜套话 0｜详解 10｜硬问题 0｜本步 315,037 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 新增 ['CH09-S01']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 --only CH09,CH09-S01
+
+===== CH09-S02-SS01 线性关系 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S02-SS01 --quiet --temperature 0 --seed 42
+    模型：CH09-S02-SS01: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH09-S02-SS01 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH09-S02-SS01 --fix-anchors
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH09-S02-SS01 --max-rounds 1 --discover-runs 1
+    → 字数 1116｜倍数 12.01｜套话 0｜详解 5｜硬问题 0｜本步 156,696 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 新增 ['CH09-S02-SS01']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 --only CH09,CH09-S01,CH09-S02-SS01
+
+===== CH09-S02-SS02 相似定理 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S02-SS02 --quiet --temperature 0 --seed 42
+    模型：CH09-S02-SS02: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH09-S02-SS02 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH09-S02-SS02 --fix-anchors
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH09-S02-SS02 --max-rounds 1 --discover-runs 1
+    → 字数 671｜倍数 20.52｜套话 0｜详解 5｜硬问题 0｜本步 110,196 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 新增 ['CH09-S02-SS02']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 --only CH09,CH09-S01,CH09-S02-SS01,CH09-S02-SS02
+
+===== CH09-S02-SS03 本函数的微分法 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S02-SS03 --quiet --temperature 0 --seed 42
+    模型：CH09-S02-SS03: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH09-S02-SS03 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH09-S02-SS03 --fix-anchors
+    · 教案有 1 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH09-S02-SS03: F-01 第 7 步的 `basis` 指不回任何东西（'第 3、5、6 步'）—— 必须…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH09-S02-SS03 --max-rounds 1 --discover-runs 1
+    → 字数 1538｜倍数 3.74｜套话 0｜详解 5｜硬问题 0｜本步 194,967 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 新增 ['CH09-S02-SS03']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 --only CH09,CH09-S01,CH09-S02-SS01,CH09-S02-SS02,CH09-S02-SS03
+
+===== CH09-S02-SS04 本函数的积分法 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S02-SS04 --quiet --temperature 0 --seed 42
+    模型：CH09-S02-SS04: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH09-S02-SS04 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH09-S02-SS04 --fix-anchors
+    · 教案有 1 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH09-S02-SS04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH09-S02-SS04 --max-rounds 1 --discover-runs 1
+    · 还有 1 条**非篇幅**硬问题 → 不动它，交给回路的补丁模式（下次跑会带上）：CH09-S02-SS04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图…
+    → 字数 1170｜倍数 7.08｜套话 0｜详解 4｜硬问题 1｜本步 167,156 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 新增 ['CH09-S02-SS04']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 --only CH09,CH09-S01,CH09-S02-SS01,CH09-S02-SS02,CH09-S02-SS03,CH09-S02-SS04
+
+===== CH09-S02-SS05 像函数的微分法 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S02-SS05 --quiet --temperature 0 --seed 42
+    模型：CH09-S02-SS05: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH09-S02-SS05 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH09-S02-SS05 --fix-anchors
+    · 教案有 1 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH09-S02-SS05: 《积分号下对参数求导》(F-05) 四样都没有 —— 图 / 某步的图 / 图请求 / 正…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH09-S02-SS05 --max-rounds 1 --discover-runs 1
+    · 还有 1 条**非篇幅**硬问题 → 不动它，交给回路的补丁模式（下次跑会带上）：CH09-S02-SS05: 《积分号下对参数求导》(F-05) 四样都没有 —— 图 / 某步的图 / 图请求…
+    → 字数 1602｜倍数 10.28｜套话 0｜详解 6｜硬问题 1｜本步 245,144 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 新增 ['CH09-S02-SS05']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 --only CH09,CH09-S01,CH09-S02-SS01,CH09-S02-SS02,CH09-S02-SS03,CH09-S02-SS04,CH09-S02-SS05
+
+===== CH09-S02-SS06 像函数的积分法 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S02-SS06 --quiet --temperature 0 --seed 42
+    模型：CH09-S02-SS06: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH09-S02-SS06 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH09-S02-SS06 --fix-anchors
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH09-S02-SS06 --max-rounds 1 --discover-runs 1
+    → 字数 1732｜倍数 6.44｜套话 0｜详解 6｜硬问题 0｜本步 187,586 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 新增 ['CH09-S02-SS06']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 --only CH09,CH09-S01,CH09-S02-SS01,CH09-S02-SS02,CH09-S02-SS03,CH09-S02-SS04,CH09-S02-SS05,CH09-S02-SS06
+
+===== CH09-S02-SS07 延迟定理 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S02-SS07 --quiet --temperature 0 --seed 42
+    模型：CH09-S02-SS07: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH09-S02-SS07 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH09-S02-SS07 --fix-anchors
+    · 教案有 5 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH09-S02-SS07 --max-rounds 1 --discover-runs 1
+    · 还有 5 条**非篇幅**硬问题 → 不动它，交给回路的补丁模式（下次跑会带上）：CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图…
+    → 字数 1192｜倍数 3.25｜套话 0｜详解 4｜硬问题 5｜本步 188,052 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 新增 ['CH09-S02-SS07']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 --only CH09,CH09-S01,CH09-S02-SS01,CH09-S02-SS02,CH09-S02-SS03,CH09-S02-SS04,CH09-S02-SS05,CH09-S02-SS06,CH09-S02-SS07
+
+===== CH09-S02-SS08 位移定理 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S02-SS08 --quiet --temperature 0 --seed 42
+    模型：CH09-S02-SS08: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH09-S02-SS08 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH09-S02-SS08 --fix-anchors
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH09-S02-SS08 --max-rounds 1 --discover-runs 1
+    → 字数 1359｜倍数 14.43｜套话 0｜详解 4｜硬问题 0｜本步 145,346 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 新增 ['CH09-S02-SS08']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 --only CH09,CH09-S01,CH09-S02-SS01,CH09-S02-SS02,CH09-S02-SS03,CH09-S02-SS04,CH09-S02-SS05,CH09-S02-SS06,CH09-S02-SS07,CH09-S02-SS08
+
+===== CH09-S02-SS09 周期函数的像函数 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S02-SS09 --quiet --temperature 0 --seed 42
+    模型：CH09-S02-SS09: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH09-S02-SS09 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH09-S02-SS09 --fix-anchors
+    · 教案有 1 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH09-S02-SS09: 《定理1：像函数在哪儿解析》(F-04) 四样都没有 —— 图 / 某步的图 / 图请求 …
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH09-S02-SS09 --max-rounds 1 --discover-runs 1
+    → 字数 1479｜倍数 9.34｜套话 0｜详解 5｜硬问题 0｜本步 166,473 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 新增 ['CH09-S02-SS09']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 --only CH09,CH09-S01,CH09-S02-SS01,CH09-S02-SS02,CH09-S02-SS03,CH09-S02-SS04,CH09-S02-SS05,CH09-S02-SS06,CH09-S02-SS07,CH09-S02-SS08,CH09-S02-SS09
+
+===== CH09-S02-SS10 卷积定理 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S02-SS10 --quiet --temperature 0 --seed 42
+    模型：CH09-S02-SS10: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH09-S02-SS10 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH09-S02-SS10 --fix-anchors
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH09-S02-SS10 --max-rounds 1 --discover-runs 1
+    → 字数 2276｜倍数 4.52｜套话 0｜详解 6｜硬问题 0｜本步 228,512 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 新增 ['CH09-S02-SS10']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 --only CH09,CH09-S01,CH09-S02-SS01,CH09-S02-SS02,CH09-S02-SS03,CH09-S02-SS04,CH09-S02-SS05,CH09-S02-SS06,CH09-S02-SS07,CH09-S02-SS08,CH09-S02-SS09,CH09-S02-SS10
+
+===== CH09-S03 由像函数求本函数 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S03 --quiet --temperature 0 --seed 42
+    模型：CH09-S03: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH09-S03 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH09-S03 --fix-anchors
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH09-S03 --max-rounds 1 --discover-runs 1
+    → 字数 604｜倍数 9.56｜套话 0｜详解 2｜硬问题 0｜本步 79,875 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 新增 ['CH09-S03']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 --only CH09,CH09-S01,CH09-S02-SS01,CH09-S02-SS02,CH09-S02-SS03,CH09-S02-SS04,CH09-S02-SS05,CH09-S02-SS06,CH09-S02-SS07,CH09-S02-SS08,CH09-S02-SS09,CH09-S02-SS10,CH09-S03
+
+===== CH09-S03-SS01 部分分式法 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S03-SS01 --quiet --temperature 0 --seed 42
+    模型：CH09-S03-SS01: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH09-S03-SS01 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH09-S03-SS01 --fix-anchors
+    · 教案有 1 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH09-S03-SS01: 详解 F-02 的 why 是空话（「分解式各项的 $a_k$ 与 $s$ 互」）—— 要…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH09-S03-SS01 --max-rounds 1 --discover-runs 1
+    → 字数 2115｜倍数 5.03｜套话 0｜详解 5｜硬问题 0｜本步 207,734 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 新增 ['CH09-S03-SS01']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 --only CH09,CH09-S01,CH09-S02-SS01,CH09-S02-SS02,CH09-S02-SS03,CH09-S02-SS04,CH09-S02-SS05,CH09-S02-SS06,CH09-S02-SS07,CH09-S02-SS08,CH09-S02-SS09,CH09-S02-SS10,CH09-S03,CH09-S03-SS01
+
+===== CH09-S03-SS02 拉氏变换的反演公式 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S03-SS02 --quiet --temperature 0 --seed 42
+    → 字数 None｜倍数 None｜套话 None｜详解 None｜硬问题 0｜本步 0 token
+
+===== CH09-S03-SS03 其他方法 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S03-SS03 --quiet --temperature 0 --seed 42
+    → 字数 None｜倍数 None｜套话 None｜详解 None｜硬问题 0｜本步 0 token
+
+===== 建页：CH09 全章 =====
+  · 需要重建：范围要变（14 → 16 节）
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 新增 ['CH09-S03-SS02', 'CH09-S03-SS03']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09 --only CH09,CH09-S01,CH09-S02-SS01,CH09-S02-SS02,CH09-S02-SS03,CH09-S02-SS04,CH09-S02-SS05,CH09-S02-SS06,CH09-S02-SS07,CH09-S02-SS08,CH09-S02-SS09,CH09-S02-SS10,CH09-S03,CH09-S03-SS01,CH09-S03-SS02,CH09-S03-SS03
+    $ node /home/aaatrucklrx/桌面/AI教学/AIforStudy/blocks/render/check_render.js /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH09
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/quality_report.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2
+  章记录对齐：['CH09-S01', 'CH09-S02-SS01', 'CH09-S02-SS03', 'CH09-S02-SS04', 'CH09-S02-SS05', 'CH09-S02-SS07', 'CH09-S02-SS08', 'CH09-S02-SS09'] 的指标/结论按最新产物改写了
+
+=== CH09 跑完 ===
+  ✓ CH09               字数 841   倍数 8.42  硬问题 0 回路 通过（工单全部关闭，且没有新
+  ✓ CH09-S01           字数 2903  倍数 2.22  硬问题 0 回路 冻结（跑满轮数上限，剩余工单
+  ✓ CH09-S02-SS01      字数 1116  倍数 12.01 硬问题 0 回路 通过（工单全部关闭，且没有新
+  ✓ CH09-S02-SS02      字数 671   倍数 20.52 硬问题 0 回路 通过（发现阶段就没抓到 P0
+  ✓ CH09-S02-SS03      字数 1538  倍数 3.74  硬问题 0 回路 冻结（跑满轮数上限，剩余工单
+  ⚠ CH09-S02-SS04      字数 1170  倍数 7.08  硬问题 1 回路 冻结（跑满轮数上限，剩余工单
+  ⚠ CH09-S02-SS05      字数 1602  倍数 10.28 硬问题 1 回路 冻结（跑满轮数上限，剩余工单
+  ✓ CH09-S02-SS06      字数 1732  倍数 6.44  硬问题 0 回路 通过（工单全部关闭，且没有新
+  ⚠ CH09-S02-SS07      字数 1192  倍数 3.25  硬问题 5 回路 冻结（跑满轮数上限，剩余工单
+  ✓ CH09-S02-SS08      字数 1359  倍数 14.43 硬问题 0 回路 通过（工单全部关闭，且没有新
+  ✓ CH09-S02-SS09      字数 1479  倍数 9.34  硬问题 0 回路 通过（工单全部关闭，且没有新
+  ✓ CH09-S02-SS10      字数 2276  倍数 4.52  硬问题 0 回路 冻结（跑满轮数上限，剩余工单
+  ✓ CH09-S03           字数 604   倍数 9.56  硬问题 0 回路 冻结（跑满轮数上限，剩余工单
+  ✓ CH09-S03-SS01      字数 2115  倍数 5.03  硬问题 0 回路 通过（工单全部关闭，且没有新
+  ✓ CH09-S03-SS02      字数 None  倍数 None  硬问题 0 回路 跳过
+  ✓ CH09-S03-SS03      字数 None  倍数 None  硬问题 0 回路 跳过
+  网页自检：[]
+  本次总花费：2,460,834 token
+  报告：data/lesson/complex-analysis-v2/chapter-runs/CH09.json

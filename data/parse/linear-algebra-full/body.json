@@ -1,0 +1,3503 @@
+{
+  "_meta": {
+    "file_type": "body",
+    "schema_version": "2.0",
+    "generator": "aiforstudy.parse.toc.body",
+    "toc_sha256": "d691a6835368f338ac87c06c3951b7fdece9c7a46a5569a654fcb22af915df49",
+    "document_sha256": "879ebcc9054be9b72c14d388b0cb367bbdf802044edd763a2b4d6e45fbb0284b",
+    "source_sha256": "2fb901476e339913698738d585d420fcd364edee6f8e4b2fa23e3789290d13a4",
+    "counts": {
+      "units": 108,
+      "declared_units": 108,
+      "empty_nodes": 0,
+      "orphans": 0,
+      "unconfirmed": 0,
+      "anchor_conflicts": 0,
+      "undeclared_units": 0,
+      "content_overlaps": 0,
+      "units_with_toc_node": 108,
+      "units_without_content": 0,
+      "orphans_with_parent": 0,
+      "sections_carrying_in_children": 0
+    },
+    "field_notes": {
+      "units[].unit_id": "内容寻址：U- + sha1(toc_id + content_sha256)[:10]（P6）",
+      "units[].toc_node": "目录层的 toc_id —— 这就是「显式绑定」",
+      "units[].pages": "节起止页码（从目录层带下来；目录没落页就是 null）",
+      "units[].source_lines": "这一节在 document.md 里的行号区间（习题层靠它把题挂到稳定 id 上）",
+      "empty_nodes": "骨架（目录）有、正文没有 → 补成空节（R-f），不静默消失",
+      "orphans": "正文有、目录里没有 → 一个字不删，原样留下（R-e）；parent_toc_node 是「最近的已绑定祖先」（部分归属，不是绑定）",
+      "unconfirmed": "目录层不确定的条目原样带下来（Q-c：照样出页并标注）",
+      "anchor_conflicts": "目录编号与正文锚点错位（R-g：只报不改）",
+      "unmatched_titles": "两源标题对不上的清单（人工核查用）"
+    }
+  },
+  "book": {
+    "title": "线性代数",
+    "source_sha256": "2fb901476e339913698738d585d420fcd364edee6f8e4b2fa23e3789290d13a4"
+  },
+  "units": [
+    {
+      "unit_id": "U-333da3d88c",
+      "toc_node": "T-0001",
+      "declared": true,
+      "body_node": "CH01",
+      "anchor": "1",
+      "title": "向量",
+      "level": "chapter",
+      "original_text": "original_text/ch01.md",
+      "content_sha256": "4de7e44cac1e88e626fbdc482b2994558bdfa4f8c574746ce6032551cebb99da",
+      "pages": {
+        "printed": [
+          "7"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        1,
+        4
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-5ee0d949c2",
+      "toc_node": "T-0002",
+      "declared": true,
+      "body_node": "CH01-S01",
+      "anchor": "1.1",
+      "title": "向量的线性运算",
+      "level": "section",
+      "original_text": "original_text/ch01_s01.md",
+      "content_sha256": "3509eb293e94c14e14137000af782db070d09187ffc4c6e6ca96d8d265a22380",
+      "pages": {
+        "printed": [
+          "7"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        5,
+        6
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-bf145bbfcb",
+      "toc_node": "T-0006",
+      "declared": true,
+      "body_node": "CH01-S02",
+      "anchor": "1.2",
+      "title": "坐标系",
+      "level": "section",
+      "original_text": "original_text/ch01_s02.md",
+      "content_sha256": "075f7e8c6011f13e2e57c7871353cbb622c6e825ef9cca254502efe415dd269e",
+      "pages": {
+        "printed": [
+          "12"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        24,
+        25
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-c6ec6b8174",
+      "toc_node": "T-0010",
+      "declared": true,
+      "body_node": "CH01-S03",
+      "anchor": "1.3",
+      "title": "向量的数量积",
+      "level": "section",
+      "original_text": "original_text/ch01_s03.md",
+      "content_sha256": "f2f379fe90c72373f4ddd0530e1065cdd064758ee4fa7564b07f5912a07309c7",
+      "pages": {
+        "printed": [
+          "17"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        46,
+        47
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-342fcd0f3a",
+      "toc_node": "T-0013",
+      "declared": true,
+      "body_node": "CH01-S04",
+      "anchor": "1.4",
+      "title": "向量的向量积",
+      "level": "section",
+      "original_text": "original_text/ch01_s04.md",
+      "content_sha256": "2702d99331d6e8d9423ceb574e770d2b3fed0032bac319203b3bd190b9f1f061",
+      "pages": {
+        "printed": [
+          "20"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        56,
+        57
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-526797cbb2",
+      "toc_node": "T-0016",
+      "declared": true,
+      "body_node": "CH01-S05",
+      "anchor": "1.5",
+      "title": "向量的混合积",
+      "level": "section",
+      "original_text": "original_text/ch01_s05.md",
+      "content_sha256": "693b53d2be6bc9d35360ea66e3ee5587f6419aabe7ac93889ce8261e978f623e",
+      "pages": {
+        "printed": [
+          "24"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        66,
+        67
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-b848199478",
+      "toc_node": "T-0020",
+      "declared": true,
+      "body_node": "CH01-S06",
+      "anchor": "1.6",
+      "title": "高维数组向量",
+      "level": "section",
+      "original_text": "original_text/ch01_s06.md",
+      "content_sha256": "b7310f4c49c74479e11ab40c429c3108a5a307e243bdd99488ef7393260439f6",
+      "pages": {
+        "printed": [
+          "27"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        80,
+        83
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-e7f1a87564",
+      "toc_node": "T-0021",
+      "declared": true,
+      "body_node": "CH01-S07",
+      "anchor": "1.7",
+      "title": "集合与映射*",
+      "level": "section",
+      "original_text": "original_text/ch01_s07.md",
+      "content_sha256": "149e26f9db0424eceeb880527dba85b5b4e9036b9104e7c3bd9f2d6bc965567a",
+      "pages": {
+        "printed": [
+          "28"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        84,
+        87
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-b78ca35358",
+      "toc_node": "T-0027",
+      "declared": true,
+      "body_node": "CH01-S08",
+      "anchor": "1.8",
+      "title": "复数*",
+      "level": "section",
+      "original_text": "original_text/ch01_s08.md",
+      "content_sha256": "319357563b22e24f01a788a766f96bfeda192e173904388d0708720ab0fc964f",
+      "pages": {
+        "printed": [
+          "37"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        123,
+        126
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-c793f43162",
+      "toc_node": "T-0030",
+      "declared": true,
+      "body_node": "CH01-S09",
+      "anchor": "1.9",
+      "title": "数域*",
+      "level": "section",
+      "original_text": "original_text/ch01_s09.md",
+      "content_sha256": "80d7108565194cd8f3840c29d74be0dc217144bef39036087c87e29d8d89fbd3",
+      "pages": {
+        "printed": [
+          "41"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        137,
+        140
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-bdd01f8501",
+      "toc_node": "T-0031",
+      "declared": true,
+      "body_node": "CH01-S10",
+      "anchor": "1.10",
+      "title": "求和符号*",
+      "level": "section",
+      "original_text": "original_text/ch01_s10.md",
+      "content_sha256": "c09973ad06182f00cbe4ccf6b232c09b0780576095dff3c0ea2f6205c7a8b9b9",
+      "pages": {
+        "printed": [
+          "42"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        141,
+        146
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-0f028d45e1",
+      "toc_node": "T-0003",
+      "declared": true,
+      "body_node": "CH01-S01-SS01",
+      "anchor": "1.1.1",
+      "title": "向量及其表示",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s01_ss01.md",
+      "content_sha256": "718ad91497e74a88eef994abaa6e3fb5c0f31f775bd5fd90554435fbdd4f2fdf",
+      "pages": {
+        "printed": [
+          "7"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        7,
+        10
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-bc167bcae0",
+      "toc_node": "T-0004",
+      "declared": true,
+      "body_node": "CH01-S01-SS02",
+      "anchor": "1.1.2",
+      "title": "向量的线性运算",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s01_ss02.md",
+      "content_sha256": "996ca3092426a97775386334b08f9d557e9629e0d1880b0efe22e700da92af00",
+      "pages": {
+        "printed": [
+          "8"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        11,
+        15
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-fc2a06e2a4",
+      "toc_node": "T-0005",
+      "declared": true,
+      "body_node": "CH01-S01-SS03",
+      "anchor": "1.1.3",
+      "title": "向量的共线与共面",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s01_ss03.md",
+      "content_sha256": "a5b2475c6884b684771257f5db801c2266a25ea158edf185e94279a1e9542554",
+      "pages": {
+        "printed": [
+          "9"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        16,
+        23
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-e41ae9a8e2",
+      "toc_node": "T-0007",
+      "declared": true,
+      "body_node": "CH01-S02-SS01",
+      "anchor": "1.2.1",
+      "title": "仿射坐标系",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s02_ss01.md",
+      "content_sha256": "ca1a064ba15615fbfdcc1de9036d2ea875c79d0638dc98b0cda4574cc9e75380",
+      "pages": {
+        "printed": [
+          "12"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        26,
+        35
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-538c0c4840",
+      "toc_node": "T-0008",
+      "declared": true,
+      "body_node": "CH01-S02-SS02",
+      "anchor": "1.2.2",
+      "title": "向量的坐标运算",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s02_ss02.md",
+      "content_sha256": "23ec910aace588b1eabdd101eb7b807c9b1d74aefbcac6bd2ba40e63fcc325b4",
+      "pages": {
+        "printed": [
+          "14"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        36,
+        41
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-ee9cc43234",
+      "toc_node": "T-0009",
+      "declared": true,
+      "body_node": "CH01-S02-SS03",
+      "anchor": "1.2.3",
+      "title": "直角坐标系",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s02_ss03.md",
+      "content_sha256": "7a2a62cc420b2a6edaa5049c817db74964cfec6f3ca818b97eaccccd3fc96e9f",
+      "pages": {
+        "printed": [
+          "16"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        42,
+        45
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-07b6da8f01",
+      "toc_node": "T-0011",
+      "declared": true,
+      "body_node": "CH01-S03-SS01",
+      "anchor": "1.3.1",
+      "title": "数量积的定义与性质",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s03_ss01.md",
+      "content_sha256": "ff9c76c0168f22022b8a80929a06a34cd460d56b24e77e994c5b7e5a999a33ea",
+      "pages": {
+        "printed": [
+          "17"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        48,
+        51
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-f4593ce53a",
+      "toc_node": "T-0012",
+      "declared": true,
+      "body_node": "CH01-S03-SS02",
+      "anchor": "1.3.2",
+      "title": "直角坐标系下数量积的计算",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s03_ss02.md",
+      "content_sha256": "9603f4bc253b98c62bf78c53746748e304fa9639c798f0254410aae05dc065e4",
+      "pages": {
+        "printed": [
+          "19"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        52,
+        55
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-1d20dc08b4",
+      "toc_node": "T-0014",
+      "declared": true,
+      "body_node": "CH01-S04-SS01",
+      "anchor": "1.4.1",
+      "title": "向量积的定义与性质",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s04_ss01.md",
+      "content_sha256": "370bfd08d0dd20120af463a29717d56cf1245d325bdcd14a3bf3344529506cbb",
+      "pages": {
+        "printed": [
+          "20"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        58,
+        61
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-0f712d5fdf",
+      "toc_node": "T-0015",
+      "declared": true,
+      "body_node": "CH01-S04-SS02",
+      "anchor": "1.4.2",
+      "title": "直角坐标系下向量积的计算",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s04_ss02.md",
+      "content_sha256": "45bbb9408ab84bca3194968fbe8fb51f2288359af7323103c8649c00e9d11bca",
+      "pages": {
+        "printed": [
+          "22"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        62,
+        65
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-b73e6642ce",
+      "toc_node": "T-0017",
+      "declared": true,
+      "body_node": "CH01-S05-SS01",
+      "anchor": "1.5.1",
+      "title": "混合积的定义",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s05_ss01.md",
+      "content_sha256": "5199a6dfac8773cc746ee029a232c261bc4cba478fd25d002b0ad8687349274c",
+      "pages": {
+        "printed": [
+          "24"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        68,
+        71
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-2f4ca8d70d",
+      "toc_node": "T-0018",
+      "declared": true,
+      "body_node": "CH01-S05-SS02",
+      "anchor": "1.5.2",
+      "title": "直角坐标系下混合积的计算",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s05_ss02.md",
+      "content_sha256": "1803a93972a90ca4ad1975e436efeac944ba622a6094b93496288412156cb9d0",
+      "pages": {
+        "printed": [
+          "25"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        72,
+        75
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-4ab3973f76",
+      "toc_node": "T-0019",
+      "declared": true,
+      "body_node": "CH01-S05-SS03",
+      "anchor": "1.5.3",
+      "title": "二重外积",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s05_ss03.md",
+      "content_sha256": "9f7dab8c80402db5dbf6c810e97d1388a5a7670486eedcc8da45722dfa5f887d",
+      "pages": {
+        "printed": [
+          "26"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        76,
+        79
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-e473be5c13",
+      "toc_node": "T-0022",
+      "declared": true,
+      "body_node": "CH01-S07-SS01",
+      "anchor": "1.7.1",
+      "title": "集合的定义*",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s07_ss01.md",
+      "content_sha256": "c2655c2166f227cfeb6cb7e7dea35eac1f6e0c793c4399cb1231dc8a3e0562a7",
+      "pages": {
+        "printed": [
+          "28"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        88,
+        95
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-802207a0ee",
+      "toc_node": "T-0023",
+      "declared": true,
+      "body_node": "CH01-S07-SS02",
+      "anchor": "1.7.2",
+      "title": "集合的基本运算*",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s07_ss02.md",
+      "content_sha256": "a9af16816a6a8c5e7f606ec9d2407a4beb8a2e70c1f75c078191307f403ecf90",
+      "pages": {
+        "printed": [
+          "29"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        96,
+        104
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-04e99c8787",
+      "toc_node": "T-0024",
+      "declared": true,
+      "body_node": "CH01-S07-SS03",
+      "anchor": "1.7.3",
+      "title": "映射*",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s07_ss03.md",
+      "content_sha256": "9f0373daf410fccd93b6acbd19c3586430d21223367fe9673cb8d2a468c12ba6",
+      "pages": {
+        "printed": [
+          "32"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        105,
+        108
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-1759f7a1c4",
+      "toc_node": "T-0025",
+      "declared": true,
+      "body_node": "CH01-S07-SS04",
+      "anchor": "1.7.4",
+      "title": "置换与排列*",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s07_ss04.md",
+      "content_sha256": "ca28f8ae003fafbb1d5275705c60eb1e3b37c271c79cfc4f4a1dba4add779c60",
+      "pages": {
+        "printed": [
+          "34"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        109,
+        114
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-bff981482f",
+      "toc_node": "T-0026",
+      "declared": true,
+      "body_node": "CH01-S07-SS05",
+      "anchor": "1.7.5",
+      "title": "等价关系,等价类与分拆*",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s07_ss05.md",
+      "content_sha256": "d45df1f2dc715b56fc56b322202799795aad8dfded0049cba75d7328a9cbbeb9",
+      "pages": {
+        "printed": [
+          "36"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        115,
+        122
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-d8f4b0568c",
+      "toc_node": "T-0028",
+      "declared": true,
+      "body_node": "CH01-S08-SS01",
+      "anchor": "1.8.1",
+      "title": "复数的四则运算*",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s08_ss01.md",
+      "content_sha256": "c1c62319aa7e158940de056734b11964a55ab4264070a7413363b03481d9841f",
+      "pages": {
+        "printed": [
+          "37"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        127,
+        131
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-23b4691b57",
+      "toc_node": "T-0029",
+      "declared": true,
+      "body_node": "CH01-S08-SS02",
+      "anchor": "1.8.2",
+      "title": "复数的几何表示*",
+      "level": "subsection",
+      "original_text": "original_text/ch01_s08_ss02.md",
+      "content_sha256": "0a60211a98207ca29c2a2eee2c812feb897d1215dd871e35dc1ea602caf09bf7",
+      "pages": {
+        "printed": [
+          "38"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        132,
+        136
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-d6d4b99ac1",
+      "toc_node": "T-0032",
+      "declared": true,
+      "body_node": "CH02",
+      "anchor": "2",
+      "title": "线性方程组",
+      "level": "chapter",
+      "original_text": "original_text/ch02.md",
+      "content_sha256": "8a3342f160909bc8f10ed8338880fe547d1f2f5b123414183c01cadf70de8a5a",
+      "pages": {
+        "printed": [
+          "47"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        147,
+        157
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-b8ac5fb659",
+      "toc_node": "T-0033",
+      "declared": true,
+      "body_node": "CH02-S01",
+      "anchor": "2.1",
+      "title": "Gauss 消元法",
+      "level": "section",
+      "original_text": "original_text/ch02_s01.md",
+      "content_sha256": "9d4e6d026d2ec6cd3b8c36ba0a2f9184a97ea7a4ed3e4ab6157b8686d216da6f",
+      "pages": {
+        "printed": [
+          "48"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        158,
+        173
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-0c87f6e912",
+      "toc_node": "T-0034",
+      "declared": true,
+      "body_node": "CH02-S02",
+      "anchor": "2.2",
+      "title": "Gauss 消元的矩阵表示",
+      "level": "section",
+      "original_text": "original_text/ch02_s02.md",
+      "content_sha256": "ce331e0fbe727f02e32e3219b29da188397941aa118df7ae763425fbdef51b17",
+      "pages": {
+        "printed": [
+          "51"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        174,
+        184
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-47a358c23d",
+      "toc_node": "T-0035",
+      "declared": true,
+      "body_node": "CH02-S03",
+      "anchor": "2.3",
+      "title": "一般线性方程组的Gauss 消元法",
+      "level": "section",
+      "original_text": "original_text/ch02_s03.md",
+      "content_sha256": "2147abf2c6cf0f8671815155d5860fd9fa9cecfe62debe88921abe265b8c2a8e",
+      "pages": {
+        "printed": [
+          "54"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        185,
+        188
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-bfdbd73292",
+      "toc_node": "T-0036",
+      "declared": true,
+      "body_node": "CH02-S03-SS01",
+      "anchor": "2.3.1",
+      "title": "算法描述",
+      "level": "subsection",
+      "original_text": "original_text/ch02_s03_ss01.md",
+      "content_sha256": "d3457a0e6d7b630cc3599c11b736b9b1b7bf8bc9d4ca8706dd7e4bd245627e79",
+      "pages": {
+        "printed": [
+          "54"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        189,
+        192
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-91071bb0b6",
+      "toc_node": "T-0037",
+      "declared": true,
+      "body_node": "CH02-S03-SS02",
+      "anchor": "2.3.2",
+      "title": "线性方程组解的属性",
+      "level": "subsection",
+      "original_text": "original_text/ch02_s03_ss02.md",
+      "content_sha256": "c7e517dfdb02fbe5c8c8e9a59f26a6f7417c84a3dce5d43e02410328dc6ba9d7",
+      "pages": {
+        "printed": [
+          "55"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        193,
+        220
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-fe278fb29a",
+      "toc_node": "T-0038",
+      "declared": true,
+      "body_node": "CH03",
+      "anchor": "3",
+      "title": "行列式",
+      "level": "chapter",
+      "original_text": "original_text/ch03.md",
+      "content_sha256": "2cf60f00415b24736f98ce9ddc464715494b1b95b6e39849e7772d9846b8bbbc",
+      "pages": {
+        "printed": [
+          "63"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        221,
+        224
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-c78c32a101",
+      "toc_node": "T-0039",
+      "declared": true,
+      "body_node": "CH03-S01",
+      "anchor": "3.0",
+      "title": "行列式的引入",
+      "level": "section",
+      "original_text": "original_text/ch03_s01.md",
+      "content_sha256": "dddd33e7cc4deac097e16565c80c231d1c3ec98cbe139179a8194ee3df487774",
+      "pages": {
+        "printed": [
+          "63"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        225,
+        228
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-6b23ee3a3c",
+      "toc_node": "T-0040",
+      "declared": true,
+      "body_node": "CH03-S02",
+      "anchor": "3.1",
+      "title": "行列式的定义",
+      "level": "section",
+      "original_text": "original_text/ch03_s02.md",
+      "content_sha256": "3ca463955877b2a6b12609721db19be7795964eff6c6e3ada790a13dea635fba",
+      "pages": {
+        "printed": [
+          "66"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        229,
+        238
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-5eef5eb46b",
+      "toc_node": "T-0041",
+      "declared": true,
+      "body_node": "CH03-S03",
+      "anchor": "3.2",
+      "title": "行列式的性质",
+      "level": "section",
+      "original_text": "original_text/ch03_s03.md",
+      "content_sha256": "dbce2fa9e32bb19a9bae63b75b4de356fe4755897c4bd64a28c3da7ed080ef3b",
+      "pages": {
+        "printed": [
+          "72"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        239,
+        256
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-a83b42d58e",
+      "toc_node": "T-0042",
+      "declared": true,
+      "body_node": "CH03-S04",
+      "anchor": "3.3",
+      "title": "行列式的完全展开式",
+      "level": "section",
+      "original_text": "original_text/ch03_s04.md",
+      "content_sha256": "58bdbda9147b67804d80f0fd77e5b415f6583ccfd96cbc5522f9a97ad3f1a063",
+      "pages": {
+        "printed": [
+          "76"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        257,
+        262
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-be39e2ef96",
+      "toc_node": "T-0043",
+      "declared": true,
+      "body_node": "CH03-S05",
+      "anchor": "3.4",
+      "title": "Cramer法则",
+      "level": "section",
+      "original_text": "original_text/ch03_s05.md",
+      "content_sha256": "9d96782d8786a7398b36e579bec3a9823736e7cc62bb35d23073dc760ca3be34",
+      "pages": {
+        "printed": [
+          "79"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        263,
+        266
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-a05d9c2455",
+      "toc_node": "T-0044",
+      "declared": true,
+      "body_node": "CH03-S06",
+      "anchor": "3.5",
+      "title": "行列式的计算",
+      "level": "section",
+      "original_text": "original_text/ch03_s06.md",
+      "content_sha256": "d649227429e74c71b27ec32cb98f26641dfb4a706961a2d5502ca1780a0f897c",
+      "pages": {
+        "printed": [
+          "82"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        267,
+        294
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-babb848f36",
+      "toc_node": "T-0045",
+      "declared": true,
+      "body_node": "CH04",
+      "anchor": "4",
+      "title": "矩阵",
+      "level": "chapter",
+      "original_text": "original_text/ch04.md",
+      "content_sha256": "62dedd6122b02adb93b76ae697fcefe38f19f372b108323101e88170fdee5348",
+      "pages": {
+        "printed": [
+          "89"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        295,
+        298
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-0ce8be1f12",
+      "toc_node": "T-0046",
+      "declared": true,
+      "body_node": "CH04-S01",
+      "anchor": "4.1",
+      "title": "矩阵的定义",
+      "level": "section",
+      "original_text": "original_text/ch04_s01.md",
+      "content_sha256": "efa830d87b569272659c48fc897f7d4fd787e851e86e14e2603bbb568dcb618c",
+      "pages": {
+        "printed": [
+          "89"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        299,
+        312
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-d3880ab764",
+      "toc_node": "T-0047",
+      "declared": true,
+      "body_node": "CH04-S02",
+      "anchor": "4.2",
+      "title": "矩阵的运算",
+      "level": "section",
+      "original_text": "original_text/ch04_s02.md",
+      "content_sha256": "704145f48cf0e3b66f52bf8abaf93a6f22000b6d284d811e7106e7aea47ee791",
+      "pages": {
+        "printed": [
+          "93"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        313,
+        317
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-ab9ba16d7c",
+      "toc_node": "T-0053",
+      "declared": true,
+      "body_node": "CH04-S03",
+      "anchor": "4.3",
+      "title": "初等变换",
+      "level": "section",
+      "original_text": "original_text/ch04_s03.md",
+      "content_sha256": "cf51f8cdd45e9fc955a967e1a2f0fce1ff28e3c85090a01f1ec7ef06f48eed3e",
+      "pages": {
+        "printed": [
+          "111"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        384,
+        397
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-b87782391c",
+      "toc_node": "T-0054",
+      "declared": true,
+      "body_node": "CH04-S04",
+      "anchor": "4.4",
+      "title": "矩阵的秩与相抵",
+      "level": "section",
+      "original_text": "original_text/ch04_s04.md",
+      "content_sha256": "b31f39c8115f30bcf1386051b60a4a6f1ff65d84997fa262eb3cc168672640e3",
+      "pages": {
+        "printed": [
+          "120"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        398,
+        401
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-08d81deabd",
+      "toc_node": "T-0048",
+      "declared": true,
+      "body_node": "CH04-S02-SS01",
+      "anchor": "4.2.1",
+      "title": "加法与数乘",
+      "level": "subsection",
+      "original_text": "original_text/ch04_s02_ss01.md",
+      "content_sha256": "ebf59b56916a50aada79af348ea42d6e709fbcbd1d0c6b7039d1759fd8e4deca",
+      "pages": {
+        "printed": [
+          "93"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        318,
+        330
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-298202a540",
+      "toc_node": "T-0049",
+      "declared": true,
+      "body_node": "CH04-S02-SS02",
+      "anchor": "4.2.2",
+      "title": "矩阵的乘法",
+      "level": "subsection",
+      "original_text": "original_text/ch04_s02_ss02.md",
+      "content_sha256": "ae751aaeeec47210fccf899fff314af220cce832ca86aaa03c5cba0cdad5a8df",
+      "pages": {
+        "printed": [
+          "95"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        331,
+        346
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-5fc1b07656",
+      "toc_node": "T-0050",
+      "declared": true,
+      "body_node": "CH04-S02-SS03",
+      "anchor": "4.2.3",
+      "title": "逆矩阵",
+      "level": "subsection",
+      "original_text": "original_text/ch04_s02_ss03.md",
+      "content_sha256": "599ba1b49b56242a9d4ef8701e6e3734754f2059dcee2601fdea17eb8a8e0fbf",
+      "pages": {
+        "printed": [
+          "101"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        347,
+        357
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-f43af29f12",
+      "toc_node": "T-0051",
+      "declared": true,
+      "body_node": "CH04-S02-SS04",
+      "anchor": "4.2.4",
+      "title": "转置、共轭与迹",
+      "level": "subsection",
+      "original_text": "original_text/ch04_s02_ss04.md",
+      "content_sha256": "a1b81f78f9588c6e1195d3e6946d6e1d457ea365148a0f8c2c64d6cc1a997810",
+      "pages": {
+        "printed": [
+          "103"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        358,
+        369
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-84282e85b0",
+      "toc_node": "T-0052",
+      "declared": true,
+      "body_node": "CH04-S02-SS05",
+      "anchor": "4.2.5",
+      "title": "分块运算",
+      "level": "subsection",
+      "original_text": "original_text/ch04_s02_ss05.md",
+      "content_sha256": "ba26a0922e10d2e2462357b130f207b55b3c1bd5091ed0ed59ce1a12cad89672",
+      "pages": {
+        "printed": [
+          "105"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        370,
+        383
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-b336f9fe72",
+      "toc_node": "T-0055",
+      "declared": true,
+      "body_node": "CH04-S04-SS01",
+      "anchor": "4.4.1",
+      "title": "矩阵秩与相抵的定义",
+      "level": "subsection",
+      "original_text": "original_text/ch04_s04_ss01.md",
+      "content_sha256": "72207efdefbc346056d7221ce6ab10919b631e54e381aa1608219c6c88ea57d7",
+      "pages": {
+        "printed": [
+          "120"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        402,
+        413
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-820fcb03c7",
+      "toc_node": "T-0056",
+      "declared": true,
+      "body_node": "CH04-S04-SS02",
+      "anchor": "4.4.2",
+      "title": "秩的计算",
+      "level": "subsection",
+      "original_text": "original_text/ch04_s04_ss02.md",
+      "content_sha256": "ecf97c6ad6b635f22c8d0a1405b49fc84c12ca9614d5ab88565112c7283ebf2e",
+      "pages": {
+        "printed": [
+          "124"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        414,
+        417
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-b2c87ace72",
+      "toc_node": "T-0057",
+      "declared": true,
+      "body_node": "CH04-S04-SS03",
+      "anchor": "4.4.3",
+      "title": "相抵标准形的应用*",
+      "level": "subsection",
+      "original_text": "original_text/ch04_s04_ss03.md",
+      "content_sha256": "0850241db0cd39dd99e0326c5fe2849054c5492bba9bb26990ab7d36de314755",
+      "pages": {
+        "printed": [
+          "125"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        418,
+        421
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-79917fba66",
+      "toc_node": "T-0058",
+      "declared": true,
+      "body_node": "CH05",
+      "anchor": "5",
+      "title": "线性空间",
+      "level": "chapter",
+      "original_text": "original_text/ch05.md",
+      "content_sha256": "8fb6eba78295df4e24552ad3a73b80f14bad9054f8be18deaf5df7a32fb07fb8",
+      "pages": {
+        "printed": [
+          "133"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        422,
+        427
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-a359efc157",
+      "toc_node": "T-0059",
+      "declared": true,
+      "body_node": "CH05-S01",
+      "anchor": "5.1",
+      "title": "数组空间",
+      "level": "section",
+      "original_text": "original_text/ch05_s01.md",
+      "content_sha256": "5bf4ed789d183c07e536c318e7e779d5130493340c076d8d5a51026c4012bd34",
+      "pages": {
+        "printed": [
+          "133"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        428,
+        445
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-766888a277",
+      "toc_node": "T-0060",
+      "declared": true,
+      "body_node": "CH05-S02",
+      "anchor": "5.2",
+      "title": "线性相关与线性无关",
+      "level": "section",
+      "original_text": "original_text/ch05_s02.md",
+      "content_sha256": "278c13f8270f610cc992bdb8913d12f8a6247124aa0e45a6eeadbba870232b7e",
+      "pages": {
+        "printed": [
+          "137"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        446,
+        467
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-115872433e",
+      "toc_node": "T-0061",
+      "declared": true,
+      "body_node": "CH05-S03",
+      "anchor": "5.3",
+      "title": "极大无关组与秩",
+      "level": "section",
+      "original_text": "original_text/ch05_s03.md",
+      "content_sha256": "d9d706331e9ccf5c796d85f176dd6ce9ffee042fd11d3a71d6b3ebfaad412bf1",
+      "pages": {
+        "printed": [
+          "142"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        468,
+        488
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-b688fbc277",
+      "toc_node": "T-0062",
+      "declared": true,
+      "body_node": "CH05-S04",
+      "anchor": "5.4",
+      "title": "基与维数",
+      "level": "section",
+      "original_text": "original_text/ch05_s04.md",
+      "content_sha256": "100cbc4c2091fcf6f54bdfbd177e0e612e39adc77481bd36281cb747e6b655bb",
+      "pages": {
+        "printed": [
+          "148"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        489,
+        499
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-e740159942",
+      "toc_node": "T-0063",
+      "declared": true,
+      "body_node": "CH05-S05",
+      "anchor": "5.5",
+      "title": "线性方程组解集的结构",
+      "level": "section",
+      "original_text": "original_text/ch05_s05.md",
+      "content_sha256": "10e7c4016cf70c0cece669c1a9b4b291f8f3c87ef96982894e2758da8f03edc2",
+      "pages": {
+        "printed": [
+          "153"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        500,
+        506
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-7867f52aac",
+      "toc_node": "T-0067",
+      "declared": true,
+      "body_node": "CH05-S06",
+      "anchor": "5.6",
+      "title": "一般线性空间",
+      "level": "section",
+      "original_text": "original_text/ch05_s06.md",
+      "content_sha256": "cfacb990fdedd5d1e4a36623d4ebf04d53b1b18bbb89c5b1558cc67e21653f3c",
+      "pages": {
+        "printed": [
+          "158"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        523,
+        526
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-c252892389",
+      "toc_node": "T-0070",
+      "declared": true,
+      "body_node": "CH05-S07",
+      "anchor": "5.7",
+      "title": "子空间运算*",
+      "level": "section",
+      "original_text": "original_text/ch05_s07.md",
+      "content_sha256": "fdd585f75300a7fc1d20bdeba8e19fffa85a8e9b66f075387ae1383d46ee34f7",
+      "pages": {
+        "printed": [
+          "167"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        576,
+        579
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-3810d30c92",
+      "toc_node": "T-0064",
+      "declared": true,
+      "body_node": "CH05-S05-SS01",
+      "anchor": "5.5.1",
+      "title": "线性方程组解的存在性与唯一性",
+      "level": "subsection",
+      "original_text": "original_text/ch05_s05_ss01.md",
+      "content_sha256": "cf061a455ca14871fff143d16540c360893436ae926e64ed613df31a5ddcd175",
+      "pages": {
+        "printed": [
+          "154"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        507,
+        511
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-bb5db23c97",
+      "toc_node": "T-0065",
+      "declared": true,
+      "body_node": "CH05-S05-SS02",
+      "anchor": "5.5.2",
+      "title": "齐次线性方程组解集的结构",
+      "level": "subsection",
+      "original_text": "original_text/ch05_s05_ss02.md",
+      "content_sha256": "787b8319a1f6f21451faf5dcd09dbcad3c395dc6d5e1d526d156ef50ea2965ac",
+      "pages": {
+        "printed": [
+          "154"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        512,
+        515
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-25e957c675",
+      "toc_node": "T-0066",
+      "declared": true,
+      "body_node": "CH05-S05-SS03",
+      "anchor": "5.5.3",
+      "title": "非齐次线性方程组解集的结构",
+      "level": "subsection",
+      "original_text": "original_text/ch05_s05_ss03.md",
+      "content_sha256": "6a6fe1fc871ef7a4faafbd2c63352b3915884f48434545b0c15935a668c450d9",
+      "pages": {
+        "printed": [
+          "156"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        516,
+        522
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-68ebaa9b9c",
+      "toc_node": "T-0068",
+      "declared": true,
+      "body_node": "CH05-S06-SS01",
+      "anchor": "5.6.1",
+      "title": "一般线性空间的定义",
+      "level": "subsection",
+      "original_text": "original_text/ch05_s06_ss01.md",
+      "content_sha256": "a71299dcb5e8b90f250ae6bdc7cb0c1ae6830b501dabde25b3d536bfe292e141",
+      "pages": {
+        "printed": [
+          "158"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        527,
+        549
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-5942c87d9c",
+      "toc_node": "T-0069",
+      "declared": true,
+      "body_node": "CH05-S06-SS02",
+      "anchor": "5.6.2",
+      "title": "一般线性空间的理论",
+      "level": "subsection",
+      "original_text": "original_text/ch05_s06_ss02.md",
+      "content_sha256": "32c3032f4ac5183fe9a069192354b42aa899bffc4522b0dccac2da675d696150",
+      "pages": {
+        "printed": [
+          "163"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        550,
+        575
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-f6451c5f52",
+      "toc_node": "T-0071",
+      "declared": true,
+      "body_node": "CH05-S07-SS01",
+      "anchor": "5.7.1",
+      "title": "子空间的交*",
+      "level": "subsection",
+      "original_text": "original_text/ch05_s07_ss01.md",
+      "content_sha256": "b926395fc71f3c287919d9692886ea2e403e74fa653bf06df26c457cf8dd02b4",
+      "pages": {
+        "printed": [
+          "168"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        580,
+        585
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-16cb73d038",
+      "toc_node": "T-0072",
+      "declared": true,
+      "body_node": "CH05-S07-SS02",
+      "anchor": "5.7.2",
+      "title": "子空间的和*",
+      "level": "subsection",
+      "original_text": "original_text/ch05_s07_ss02.md",
+      "content_sha256": "2cfb40d1fde8611eb28df251e77cd1cae60cfd28336d9d37739f6a10c4124ffb",
+      "pages": {
+        "printed": [
+          "168"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        586,
+        589
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-8f063ed7a7",
+      "toc_node": "T-0073",
+      "declared": true,
+      "body_node": "CH05-S07-SS03",
+      "anchor": "5.7.3",
+      "title": "子空间的直和*",
+      "level": "subsection",
+      "original_text": "original_text/ch05_s07_ss03.md",
+      "content_sha256": "77bc020050f9d7d4bc08dc223114665bf0213fdf7fe25e4c971617d921477293",
+      "pages": {
+        "printed": [
+          "170"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        590,
+        599
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-31d2ba29f7",
+      "toc_node": "T-0074",
+      "declared": true,
+      "body_node": "CH06",
+      "anchor": "6",
+      "title": "线性变换",
+      "level": "chapter",
+      "original_text": "original_text/ch06.md",
+      "content_sha256": "8f20d57329631aef22fbf8b0e79e69e1ee112bbe61434dcd0e3e0a8f3d0ce5e5",
+      "pages": {
+        "printed": [
+          "179"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        600,
+        603
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-bb3e16a8f5",
+      "toc_node": "T-0075",
+      "declared": true,
+      "body_node": "CH06-S01",
+      "anchor": "6.1",
+      "title": "数组空间上的线性映射",
+      "level": "section",
+      "original_text": "original_text/ch06_s01.md",
+      "content_sha256": "1a201c761413ffee770daf8b4f32cfe4b2ddb82ae0f8f6c0be0e606aa380e38d",
+      "pages": {
+        "printed": [
+          "179"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        604,
+        612
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-1963965684",
+      "toc_node": "T-0076",
+      "declared": true,
+      "body_node": "CH06-S02",
+      "anchor": "6.2",
+      "title": "线性变换的特征值与特征向量",
+      "level": "section",
+      "original_text": "original_text/ch06_s02.md",
+      "content_sha256": "e81d66c4dc7ade7a70ebacc23e6a012462358f086be7a4a00e60e747a5805d99",
+      "pages": {
+        "printed": [
+          "182"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        613,
+        614
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-2ccfba8d37",
+      "toc_node": "T-0079",
+      "declared": true,
+      "body_node": "CH06-S03",
+      "anchor": "6.3",
+      "title": "矩阵的相似",
+      "level": "section",
+      "original_text": "original_text/ch06_s03.md",
+      "content_sha256": "6b979db6d047a2c7d55830aa57f0f27808c2ae9c903f73baf083b246e0dabe49",
+      "pages": {
+        "printed": [
+          "187"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        631,
+        636
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-29e30f4dab",
+      "toc_node": "T-0083",
+      "declared": true,
+      "body_node": "CH06-S04",
+      "anchor": "6.4",
+      "title": "一般空间上的线性变换",
+      "level": "section",
+      "original_text": "original_text/ch06_s04.md",
+      "content_sha256": "bdeccdb9e1b1b99c18f0db171f518891ed58f13d3b1b2c7c898ddbf7b13f7b98",
+      "pages": {
+        "printed": [
+          "193"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        658,
+        661
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-3cbe7ed050",
+      "toc_node": "T-0087",
+      "declared": true,
+      "body_node": "CH06-S05",
+      "anchor": "6.5",
+      "title": "若当标准形简介*",
+      "level": "section",
+      "original_text": "original_text/ch06_s05.md",
+      "content_sha256": "06c8f50e4c22aea13f02bd62a27bc1c88b87a8a7c8a14a3af04f9bfded2adb91",
+      "pages": {
+        "printed": [
+          "204"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        691,
+        696
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-02d449a521",
+      "toc_node": "T-0077",
+      "declared": true,
+      "body_node": "CH06-S02-SS01",
+      "anchor": "6.2.1",
+      "title": "特征值与特征向量的定义",
+      "level": "subsection",
+      "original_text": "original_text/ch06_s02_ss01.md",
+      "content_sha256": "4faa86809cf1ed4c5d0aa5b6b4460a3b1dc577707f874db19a869bd077a7e425",
+      "pages": {
+        "printed": [
+          "182"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        615,
+        619
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-cb679723d3",
+      "toc_node": "T-0078",
+      "declared": true,
+      "body_node": "CH06-S02-SS02",
+      "anchor": "6.2.2",
+      "title": "特征值与特征向量的计算",
+      "level": "subsection",
+      "original_text": "original_text/ch06_s02_ss02.md",
+      "content_sha256": "eddd2ae751d9c2270c36f8aad6bf2dc6ddf37ddcd690fd8280400367bc93e116",
+      "pages": {
+        "printed": [
+          "184"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        620,
+        630
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-82f4b69930",
+      "toc_node": "T-0080",
+      "declared": true,
+      "body_node": "CH06-S03-SS01",
+      "anchor": "6.3.1",
+      "title": "矩阵相似的定义",
+      "level": "subsection",
+      "original_text": "original_text/ch06_s03_ss01.md",
+      "content_sha256": "14162c75a10ac2b7b6a408839731021447fcd19f4f8ea48ddfc31c0044b25125",
+      "pages": {
+        "printed": [
+          "187"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        637,
+        646
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-cd30173a12",
+      "toc_node": "T-0081",
+      "declared": true,
+      "body_node": "CH06-S03-SS02",
+      "anchor": "6.3.2",
+      "title": "矩阵相似于对角阵的条件",
+      "level": "subsection",
+      "original_text": "original_text/ch06_s03_ss02.md",
+      "content_sha256": "04eea31fe3dfde64805afd8633ea5f5c0a8efc237900c5f40d10e4948dabe967",
+      "pages": {
+        "printed": [
+          "189"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        647,
+        653
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-1f8bd9600f",
+      "toc_node": "T-0082",
+      "declared": true,
+      "body_node": "CH06-S03-SS03",
+      "anchor": "6.3.3",
+      "title": "相似于上三角阵",
+      "level": "subsection",
+      "original_text": "original_text/ch06_s03_ss03.md",
+      "content_sha256": "c8e9a4fd15217ca3b846f1a18de5aa317ecea01492f733308c032958061cd2c6",
+      "pages": {
+        "printed": [
+          "192"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        654,
+        657
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-b4266fd6e3",
+      "toc_node": "T-0084",
+      "declared": true,
+      "body_node": "CH06-S04-SS01",
+      "anchor": "6.4.1",
+      "title": "线性变换的定义",
+      "level": "subsection",
+      "original_text": "original_text/ch06_s04_ss01.md",
+      "content_sha256": "c53887008c033eb9082c567d8b63caf370b88a0b50be52638b3165d164f9c962",
+      "pages": {
+        "printed": [
+          "194"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        662,
+        670
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-58286d048b",
+      "toc_node": "T-0085",
+      "declared": true,
+      "body_node": "CH06-S04-SS02",
+      "anchor": "6.4.2",
+      "title": "线性变换在一组基下的矩阵",
+      "level": "subsection",
+      "original_text": "original_text/ch06_s04_ss02.md",
+      "content_sha256": "ca56e64c2137fe5328a6e2495023e97831544db1860d3abac671c452482bd340",
+      "pages": {
+        "printed": [
+          "196"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        671,
+        682
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-c3b5c14744",
+      "toc_node": "T-0086",
+      "declared": true,
+      "body_node": "CH06-S04-SS03",
+      "anchor": "6.4.3",
+      "title": "线性变换的特征值与特征向量",
+      "level": "subsection",
+      "original_text": "original_text/ch06_s04_ss03.md",
+      "content_sha256": "63d52cf34b2139bd93538b5849ebb46733b8d1a7dac72dedad1e7571448f38c2",
+      "pages": {
+        "printed": [
+          "202"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        683,
+        690
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-2e649bdbe0",
+      "toc_node": "T-0088",
+      "declared": true,
+      "body_node": "CH07",
+      "anchor": "7",
+      "title": "内积空间及变换",
+      "level": "chapter",
+      "original_text": "original_text/ch07.md",
+      "content_sha256": "b0d4f7d357c3a408e1f9bcf498584b996fbcb851e818492227a0b00bb4df8580",
+      "pages": {
+        "printed": [
+          "219"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        697,
+        700
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-0c10bdde39",
+      "toc_node": "T-0089",
+      "declared": true,
+      "body_node": "CH07-S01",
+      "anchor": "7.1",
+      "title": "数组内积空间的定义与性质",
+      "level": "section",
+      "original_text": "original_text/ch07_s01.md",
+      "content_sha256": "1fe0158e1ab6ddc97a11fe6894e201a5fec00cdbdd1323d829cedc5ec21b53ba",
+      "pages": {
+        "printed": [
+          "219"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        701,
+        712
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-6a94d1a010",
+      "toc_node": "T-0090",
+      "declared": true,
+      "body_node": "CH07-S02",
+      "anchor": "7.2",
+      "title": "标准正交基",
+      "level": "section",
+      "original_text": "original_text/ch07_s02.md",
+      "content_sha256": "d164eeb221c81002183e11c4ab9594d850d0b2f570df8045bede0544ff612327",
+      "pages": {
+        "printed": [
+          "223"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        713,
+        725
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-6e582ba170",
+      "toc_node": "T-0091",
+      "declared": true,
+      "body_node": "CH07-S03",
+      "anchor": "7.3",
+      "title": "$\\mathbb{R}^n$ 上的线性变换",
+      "level": "section",
+      "original_text": "original_text/ch07_s03.md",
+      "content_sha256": "45e32d9643c86b71897714b136d709c2793036034b58851e304284a7e063deb1",
+      "pages": {
+        "printed": [
+          "231"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        726,
+        729
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-8b4bc78142",
+      "toc_node": "T-0094",
+      "declared": true,
+      "body_node": "CH07-S04",
+      "anchor": "7.4",
+      "title": "一般的欧氏空间",
+      "level": "section",
+      "original_text": "original_text/ch07_s04.md",
+      "content_sha256": "a0d74fa653eb384810fddf8fd1cbebab214443a72b0c25766834454e67a35880",
+      "pages": {
+        "printed": [
+          "237"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        758,
+        761
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-06a5b28107",
+      "toc_node": "T-0098",
+      "declared": true,
+      "body_node": "CH07-S05",
+      "anchor": "7.5",
+      "title": "酉空间*",
+      "level": "section",
+      "original_text": "original_text/ch07_s05.md",
+      "content_sha256": "e31df90fd3ac07538b79fa835b8c0222a94dfdd8039c929ca3a7a10d07c3392e",
+      "pages": {
+        "printed": [
+          "244"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        784,
+        787
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-20fc530eae",
+      "toc_node": "T-0092",
+      "declared": true,
+      "body_node": "CH07-S03-SS01",
+      "anchor": "7.3.1",
+      "title": "正交变换",
+      "level": "subsection",
+      "original_text": "original_text/ch07_s03_ss01.md",
+      "content_sha256": "1b06fc7512beb810318b58fbfe7f7a6dc92c396847159c994aba34a050c85298",
+      "pages": {
+        "printed": [
+          "231"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        730,
+        745
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-b372846a55",
+      "toc_node": "T-0093",
+      "declared": true,
+      "body_node": "CH07-S03-SS02",
+      "anchor": "7.3.2",
+      "title": "对称变换",
+      "level": "subsection",
+      "original_text": "original_text/ch07_s03_ss02.md",
+      "content_sha256": "aaffda93984ccfa6b73c685477cb2e231e23f1b116c557249cf42a23b2e58dfb",
+      "pages": {
+        "printed": [
+          "234"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        746,
+        757
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-3aff15e9a5",
+      "toc_node": "T-0095",
+      "declared": true,
+      "body_node": "CH07-S04-SS01",
+      "anchor": "7.4.1",
+      "title": "一般欧氏空间的定义与性质",
+      "level": "subsection",
+      "original_text": "original_text/ch07_s04_ss01.md",
+      "content_sha256": "0c8e1e12ca07c9fff806ad5aa51c11feb0d337692f445e97d7b948a5b654bc94",
+      "pages": {
+        "printed": [
+          "237"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        762,
+        768
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-fecce250f7",
+      "toc_node": "T-0096",
+      "declared": true,
+      "body_node": "CH07-S04-SS02",
+      "anchor": "7.4.2",
+      "title": "标准正交基",
+      "level": "subsection",
+      "original_text": "original_text/ch07_s04_ss02.md",
+      "content_sha256": "4dc0100f72bfe1cb260b3360ccb81dcb8d49bd09f201636633459fddc75f2c92",
+      "pages": {
+        "printed": [
+          "239"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        769,
+        774
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-5da31a4922",
+      "toc_node": "T-0097",
+      "declared": true,
+      "body_node": "CH07-S04-SS03",
+      "anchor": "7.4.3",
+      "title": "正交变换与对称变换",
+      "level": "subsection",
+      "original_text": "original_text/ch07_s04_ss03.md",
+      "content_sha256": "65e65861fa8fb8f62162c90772fa5376e76dc6e10983e938835b0cbb61ac0b55",
+      "pages": {
+        "printed": [
+          "241"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        775,
+        783
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-8c5b37a545",
+      "toc_node": "T-0099",
+      "declared": true,
+      "body_node": "CH07-S05-SS01",
+      "anchor": "7.5.1",
+      "title": "酉空间的基本概念*",
+      "level": "subsection",
+      "original_text": "original_text/ch07_s05_ss01.md",
+      "content_sha256": "55c3b8162428f513d7e789c03a3b7549a50b7de26796ff24c7d72fe4656cebfa",
+      "pages": {
+        "printed": [
+          "244"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        788,
+        793
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-71e0b83864",
+      "toc_node": "T-0100",
+      "declared": true,
+      "body_node": "CH07-S05-SS02",
+      "anchor": "7.5.2",
+      "title": "酉空间的基本性质*",
+      "level": "subsection",
+      "original_text": "original_text/ch07_s05_ss02.md",
+      "content_sha256": "64a9496f2fd705be8d7a86d4b7dcda9aedf7430163ffeb53ed9b39e3ffbc4540",
+      "pages": {
+        "printed": [
+          "245"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        794,
+        805
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-91b8846e18",
+      "toc_node": "T-0101",
+      "declared": true,
+      "body_node": "CH07-S05-SS03",
+      "anchor": "7.5.3",
+      "title": "酉矩阵与酉变换*",
+      "level": "subsection",
+      "original_text": "original_text/ch07_s05_ss03.md",
+      "content_sha256": "744efbf26faba90bbd55e882af9216f8d2861c7c249d49158567c5fea39bf0bc",
+      "pages": {
+        "printed": [
+          "248"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        806,
+        822
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-a8e5bf8459",
+      "toc_node": "T-0102",
+      "declared": true,
+      "body_node": "CH07-S05-SS04",
+      "anchor": "7.5.4",
+      "title": "Hermite矩阵与Hermite变换*",
+      "level": "subsection",
+      "original_text": "original_text/ch07_s05_ss04.md",
+      "content_sha256": "52ddbee976642807bf46d71316fff261771bed9440ccfa2c5825adfd6eac8305",
+      "pages": {
+        "printed": [
+          "250"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        823,
+        836
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-671bedf8a1",
+      "toc_node": "T-0103",
+      "declared": true,
+      "body_node": "CH08",
+      "anchor": "8",
+      "title": "实二次型",
+      "level": "chapter",
+      "original_text": "original_text/ch08.md",
+      "content_sha256": "6c64241f062400af87610b77ba9081e81c0ba97a19fc4d32f4da8df6b9fdb4a5",
+      "pages": {
+        "printed": [
+          "259"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        837,
+        840
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-06ee945159",
+      "toc_node": "T-0104",
+      "declared": true,
+      "body_node": "CH08-S01",
+      "anchor": "8.1",
+      "title": "二次型的矩阵表示",
+      "level": "section",
+      "original_text": "original_text/ch08_s01.md",
+      "content_sha256": "799648d28f3e3216738204d343057fc80f6823cb5354329b91d7667384c5c89c",
+      "pages": {
+        "printed": [
+          "259"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        841,
+        849
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-2d5f3f9f76",
+      "toc_node": "T-0105",
+      "declared": true,
+      "body_node": "CH08-S02",
+      "anchor": "8.2",
+      "title": "二次型的标准形",
+      "level": "section",
+      "original_text": "original_text/ch08_s02.md",
+      "content_sha256": "3e942992d7ebde461f0b670da8688c3215336ca6980ac7e9fe44b24939f4c591",
+      "pages": {
+        "printed": [
+          "261"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        850,
+        859
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-57835e76cd",
+      "toc_node": "T-0106",
+      "declared": true,
+      "body_node": "CH08-S03",
+      "anchor": "8.3",
+      "title": "相合不变量与分类",
+      "level": "section",
+      "original_text": "original_text/ch08_s03.md",
+      "content_sha256": "71c062d72df714a88c56be29f5de0e34d0fff946e5af25e28535e3a43c6a9653",
+      "pages": {
+        "printed": [
+          "268"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        860,
+        863
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-5d5e2cea33",
+      "toc_node": "T-0107",
+      "declared": true,
+      "body_node": "CH08-S04",
+      "anchor": "8.4",
+      "title": "二次曲线与曲面的分类",
+      "level": "section",
+      "original_text": "original_text/ch08_s04.md",
+      "content_sha256": "7e82db168ecd3609fb106d80b60ee5169b505819f0bffb0d5f7bb6a4f24ca0a9",
+      "pages": {
+        "printed": [
+          "271"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        864,
+        876
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    },
+    {
+      "unit_id": "U-419e5e509f",
+      "toc_node": "T-0108",
+      "declared": true,
+      "body_node": "CH08-S05",
+      "anchor": "8.5",
+      "title": "正定二次型",
+      "level": "section",
+      "original_text": "original_text/ch08_s05.md",
+      "content_sha256": "a78f08dd02fb38a7fc7677f623439b7a251a613f976657646eccb04c15e2412c",
+      "pages": {
+        "printed": [
+          "274"
+        ],
+        "pdf": []
+      },
+      "source_lines": [
+        877,
+        896
+      ],
+      "blocks": [],
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      },
+      "covers": [],
+      "content_in_children": false
+    }
+  ],
+  "empty_nodes": [],
+  "undeclared": [],
+  "orphans": [],
+  "unconfirmed": [],
+  "content_overlaps": [],
+  "anchor_conflicts": [],
+  "unmatched_titles": []
+}

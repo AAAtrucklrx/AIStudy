@@ -1,0 +1,703 @@
+{
+  "source_pdf": "/Users/huang/Documents/ChatGPT/ai for study项目的改进/AIforStudy-完整程序-20261021/data/raw/复变函数.pdf",
+  "pages": [
+    218,
+    219,
+    220,
+    221,
+    222,
+    223
+  ],
+  "source_printed_pages": [
+    209,
+    210,
+    211,
+    212,
+    213,
+    214
+  ],
+  "comparison_pdf": {
+    "source_pdf": "/Users/huang/Library/Containers/com.tencent.xinWeChat/Data/Documents/xwechat_files/wxid_ikxhqlq1c35k12_7d9f/msg/file/2026-08/复变函数.pdf",
+    "pages": [
+      211,
+      212,
+      213,
+      214,
+      215,
+      216
+    ],
+    "status": "已逐页渲染核读，两个版本的附表内容与原印错误相同。"
+  },
+  "page_images": [
+    {
+      "source_path": "data/study-revision-20261029/transform-table-pages/pdf-page-218.png",
+      "source_pdf_page": 218,
+      "user_pdf_page": 211
+    },
+    {
+      "source_path": "data/study-revision-20261029/transform-table-pages/pdf-page-219.png",
+      "source_pdf_page": 219,
+      "user_pdf_page": 212
+    },
+    {
+      "source_path": "data/study-revision-20261029/transform-table-pages/pdf-page-220.png",
+      "source_pdf_page": 220,
+      "user_pdf_page": 213
+    },
+    {
+      "source_path": "data/study-revision-20261029/transform-table-pages/pdf-page-221.png",
+      "source_pdf_page": 221,
+      "user_pdf_page": 214
+    },
+    {
+      "source_path": "data/study-revision-20261029/transform-table-pages/pdf-page-222.png",
+      "source_pdf_page": 222,
+      "user_pdf_page": 215
+    },
+    {
+      "source_path": "data/study-revision-20261029/transform-table-pages/pdf-page-223.png",
+      "source_pdf_page": 223,
+      "user_pdf_page": 216
+    }
+  ],
+  "conventions_markdown": "记 $\\mathcal L[f](p)=\\int_0^\\infty e^{-pt}f(t)\\,\\mathrm dt$，普通函数均取 $t\\ge0$ 的因果版本。公式在相应积分收敛的右半平面使用；下列各行给出可直接使用的参数条件。带根号、非整数幂、对数的像函数，要在该行指定的收敛半平面内选定解析分支。参数为实、且对应根量在正实 $p$ 上为正时，才用正实值归一化；含复移位 $p+\\lambda$ 时，在其正实方向选支并在相应移位半平面内延拓。对数比取 $p\\to+\\infty$ 时趋零的分支，不能要求复参数的每个根式在正实 $p$ 上都为正数。除广义函数行外，公式按普通拉普拉斯积分理解。\n\n正文第9.3.3节（来源PDF第217页、书内208页）明确规定 $\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_0^x e^{-u^2}\\,\\mathrm du$。因此本表统一以 $\\operatorname{erfc}(x)=1-\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_x^\\infty e^{-u^2}\\,\\mathrm du$ 区分互补误差函数，不沿用原印表内混用的名字。$h(t-\\tau)$ 为延迟单位阶跃；冲激按正文约定从 $-0$ 积分，$\\mathcal L[\\delta(t)]=1$。\n\n$J_\\nu$ 是第一类贝塞尔函数，$I_\\nu$ 是第一类修正贝塞尔函数：$J_\\nu(z)=\\sum_{k=0}^{\\infty}\\frac{(-1)^k(z/2)^{2k+\\nu}}{k!\\Gamma(k+\\nu+1)}$，$I_\\nu(z)=\\sum_{k=0}^{\\infty}\\frac{(z/2)^{2k+\\nu}}{k!\\Gamma(k+\\nu+1)}$。非整数阶在正实自变量取实值分支。",
+  "tables": [
+    {
+      "id": "laplace-basic-rules",
+      "title": "附表1 基本法则表",
+      "rows": [
+        {
+          "id": "L-RULE-01",
+          "original_number": 1,
+          "statement_markdown": "若 $f$ 在有限区间分段连续且为指数阶，$|f(t)|\\le Me^{ct}$，则在 $\\operatorname{Re}p>c$，\n$$F(p)=\\mathcal L[f](p)=\\int_0^\\infty e^{-pt}f(t)\\,\\mathrm dt.$$",
+          "source_pdf_page": 218,
+          "user_pdf_page": 211
+        },
+        {
+          "id": "L-RULE-02",
+          "original_number": 2,
+          "statement_markdown": "若 $\\mathcal L[f]=F$、$\\mathcal L[g]=G$，$\\alpha,\\beta$ 为常数，则在共同收敛半平面内\n$$\\mathcal L[\\alpha f+\\beta g](p)=\\alpha F(p)+\\beta G(p).$$",
+          "source_pdf_page": 218,
+          "user_pdf_page": 211
+        },
+        {
+          "id": "L-RULE-03",
+          "original_number": 3,
+          "statement_markdown": "若 $f$ 在 $t>0$ 连续、分段光滑，$f'$ 为指数阶且右极限 $f(0+)$ 存在，则在收敛半平面内\n$$\\mathcal L[f'](p)=pF(p)-f(0+).$$",
+          "source_pdf_page": 218,
+          "user_pdf_page": 211
+        },
+        {
+          "id": "L-RULE-04",
+          "original_number": 4,
+          "statement_markdown": "设正整数 $n\\ge1$，$f,\\ldots,f^{(n-1)}$ 连续，$f^{(n)}$ 分段连续，各有关函数为指数阶且初始右极限存在，则\n$$\\mathcal L[f^{(n)}](p)=p^nF(p)-\\sum_{k=0}^{n-1}p^{n-1-k}f^{(k)}(0+).$$",
+          "source_pdf_page": 218,
+          "user_pdf_page": 211
+        },
+        {
+          "id": "L-RULE-05",
+          "original_number": 5,
+          "statement_markdown": "在有关积分收敛时，\n$$\\mathcal L\\!\\left[\\int_0^t f(\\tau)\\,\\mathrm d\\tau\\right](p)=\\frac{F(p)}p.$$",
+          "source_pdf_page": 218,
+          "user_pdf_page": 211
+        },
+        {
+          "id": "L-RULE-06",
+          "original_number": 6,
+          "statement_markdown": "在有关积分收敛时，\n$$\\mathcal L\\!\\left[\\int_0^t\\mathrm d\\tau\\int_0^\\tau f(\\lambda)\\,\\mathrm d\\lambda\\right](p)=\\frac{F(p)}{p^2}.$$",
+          "source_pdf_page": 218,
+          "user_pdf_page": 211
+        },
+        {
+          "id": "L-RULE-07",
+          "original_number": 7,
+          "statement_markdown": "定义卷积 $(f*g)(t)=\\int_0^t f(\\tau)g(t-\\tau)\\,\\mathrm d\\tau$。若两函数均满足拉氏变换的分段连续、指数阶条件，则\n$$\\mathcal L[f*g](p)=F(p)G(p)$$\n在共同收敛的右半平面内成立。",
+          "source_pdf_page": 218,
+          "user_pdf_page": 211
+        },
+        {
+          "id": "L-RULE-08",
+          "original_number": 8,
+          "statement_markdown": "若 $F=\\mathcal L[f]$，在其收敛半平面内，\n$$\\mathcal L[tf(t)](p)=-F'(p).$$",
+          "source_pdf_page": 218,
+          "user_pdf_page": 211
+        },
+        {
+          "id": "L-RULE-09",
+          "original_number": 9,
+          "statement_markdown": "对非负整数 $n$，在收敛半平面内，\n$$\\mathcal L[t^nf(t)](p)=(-1)^nF^{(n)}(p).$$",
+          "source_pdf_page": 218,
+          "user_pdf_page": 211
+        },
+        {
+          "id": "L-RULE-10",
+          "original_number": 10,
+          "statement_markdown": "若 $f(t)/t$ 在 $t\\to0^+$ 时有界，且以下像函数积分在收敛半平面内收敛，则\n$$\\mathcal L\\!\\left[\\frac{f(t)}t\\right](p)=\\int_p^\\infty F(q)\\,\\mathrm dq.$$\n积分路径留在该右半平面内。",
+          "source_pdf_page": 219,
+          "user_pdf_page": 212
+        },
+        {
+          "id": "L-RULE-11",
+          "original_number": 11,
+          "statement_markdown": "位移法则：若 $\\mathcal L[f]=F$，则\n$$\\mathcal L[e^{at}f(t)](p)=F(p-a).$$\n须使 $p-a$ 位于 $F$ 的收敛半平面。",
+          "source_pdf_page": 219,
+          "user_pdf_page": 212
+        },
+        {
+          "id": "L-RULE-12",
+          "original_number": 12,
+          "statement_markdown": "延迟法则：$\\tau>0$，延迟函数在 $t<\\tau$ 时为零，则\n$$\\mathcal L[h(t-\\tau)f(t-\\tau)](p)=e^{-\\tau p}F(p).$$",
+          "source_pdf_page": 219,
+          "user_pdf_page": 212
+        },
+        {
+          "id": "L-RULE-13",
+          "original_number": 13,
+          "statement_markdown": "若 $a>0$，则\n$$\\mathcal L\\!\\left[\\frac1a f\\!\\left(\\frac ta\\right)\\right](p)=F(ap),$$\n须使 $ap$ 位于原像函数的收敛半平面。",
+          "source_pdf_page": 219,
+          "user_pdf_page": 212
+        },
+        {
+          "id": "L-RULE-14",
+          "original_number": 14,
+          "statement_markdown": "若 $a>0$，则\n$$\\mathcal L\\!\\left[\\frac1a e^{bt/a}f\\!\\left(\\frac ta\\right)\\right](p)=F(ap-b),$$\n须使 $ap-b$ 位于原像函数的收敛半平面。",
+          "source_pdf_page": 219,
+          "user_pdf_page": 212
+        },
+        {
+          "id": "L-RULE-15",
+          "original_number": 15,
+          "statement_markdown": "若 $T>0$、$f(t+T)=f(t)$，且 $f$ 在一个周期内可积，则在 $\\operatorname{Re}p>0$，\n$$\\mathcal L[f](p)=\\frac{\\int_0^T e^{-pt}f(t)\\,\\mathrm dt}{1-e^{-Tp}}.$$",
+          "source_pdf_page": 219,
+          "user_pdf_page": 212
+        },
+        {
+          "id": "L-RULE-16",
+          "original_number": 16,
+          "statement_markdown": "若 $T>0$、$f(t+T)=-f(t)$，且 $f$ 在 $[0,T]$ 可积，则在 $\\operatorname{Re}p>0$，\n$$\\mathcal L[f](p)=\\frac{\\int_0^T e^{-pt}f(t)\\,\\mathrm dt}{1+e^{-Tp}}.$$",
+          "source_pdf_page": 219,
+          "user_pdf_page": 212
+        }
+      ]
+    },
+    {
+      "id": "laplace-transform-pairs",
+      "title": "附表2 拉普拉斯变换表",
+      "rows": [
+        {
+          "id": "L-PAIR-01",
+          "original_number": 1,
+          "statement_markdown": "$$\\mathcal L\\!\\left[1\\right](p)=\\frac1p.$$\n\n$\\operatorname{Re}p>0$。",
+          "source_pdf_page": 219,
+          "user_pdf_page": 212
+        },
+        {
+          "id": "L-PAIR-02",
+          "original_number": 2,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{t^n}{n!}\\right](p)=\\frac1{p^{n+1}}.$$\n\n$n=0,1,2,\\ldots$，$\\operatorname{Re}p>0$。",
+          "source_pdf_page": 219,
+          "user_pdf_page": 212
+        },
+        {
+          "id": "L-PAIR-03",
+          "original_number": 3,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{t^\\alpha}{\\Gamma(\\alpha+1)}\\right](p)=\\frac1{p^{\\alpha+1}}.$$\n\n$\\alpha>-1$ 为实数，$\\operatorname{Re}p>0$；$p^{\\alpha+1}$ 取从正实轴延拓的分支。",
+          "source_pdf_page": 219,
+          "user_pdf_page": 212
+        },
+        {
+          "id": "L-PAIR-04",
+          "original_number": 4,
+          "statement_markdown": "$$\\mathcal L\\!\\left[e^{\\lambda t}\\right](p)=\\frac1{p-\\lambda}.$$\n\n$\\operatorname{Re}p>\\operatorname{Re}\\lambda$。",
+          "source_pdf_page": 219,
+          "user_pdf_page": 212
+        },
+        {
+          "id": "L-PAIR-05",
+          "original_number": 5,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\sin(\\omega t)\\right](p)=\\frac{\\omega}{p^2+\\omega^2}.$$\n\n$\\omega\\in\\mathbb R$，$\\operatorname{Re}p>0$。",
+          "source_pdf_page": 219,
+          "user_pdf_page": 212
+        },
+        {
+          "id": "L-PAIR-06",
+          "original_number": 6,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\cos(\\omega t)\\right](p)=\\frac p{p^2+\\omega^2}.$$\n\n$\\omega\\in\\mathbb R$，$\\operatorname{Re}p>0$。",
+          "source_pdf_page": 220,
+          "user_pdf_page": 213
+        },
+        {
+          "id": "L-PAIR-07",
+          "original_number": 7,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\sinh(\\omega t)\\right](p)=\\frac{\\omega}{p^2-\\omega^2}.$$\n\n$\\omega\\in\\mathbb R$，$\\operatorname{Re}p>|\\omega|$。",
+          "source_pdf_page": 220,
+          "user_pdf_page": 213
+        },
+        {
+          "id": "L-PAIR-08",
+          "original_number": 8,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\cosh(\\omega t)\\right](p)=\\frac p{p^2-\\omega^2}.$$\n\n$\\omega\\in\\mathbb R$，$\\operatorname{Re}p>|\\omega|$。",
+          "source_pdf_page": 220,
+          "user_pdf_page": 213
+        },
+        {
+          "id": "L-PAIR-09",
+          "original_number": 9,
+          "statement_markdown": "$$\\mathcal L\\!\\left[e^{-\\lambda t}\\sin(\\omega t)\\right](p)=\\frac{\\omega}{(p+\\lambda)^2+\\omega^2}.$$\n\n$\\omega\\in\\mathbb R$，$\\operatorname{Re}(p+\\lambda)>0$。",
+          "source_pdf_page": 220,
+          "user_pdf_page": 213
+        },
+        {
+          "id": "L-PAIR-10",
+          "original_number": 10,
+          "statement_markdown": "$$\\mathcal L\\!\\left[e^{-\\lambda t}\\cos(\\omega t)\\right](p)=\\frac{p+\\lambda}{(p+\\lambda)^2+\\omega^2}.$$\n\n$\\omega\\in\\mathbb R$，$\\operatorname{Re}(p+\\lambda)>0$。",
+          "source_pdf_page": 220,
+          "user_pdf_page": 213
+        },
+        {
+          "id": "L-PAIR-11",
+          "original_number": 11,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{t}{2\\omega}\\sin(\\omega t)\\right](p)=\\frac p{(p^2+\\omega^2)^2}.$$\n\n$\\omega\\ne0$ 为实数，$\\operatorname{Re}p>0$；$\\omega=0$ 时可另取连续极限。",
+          "source_pdf_page": 220,
+          "user_pdf_page": 213
+        },
+        {
+          "id": "L-PAIR-12",
+          "original_number": 12,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{\\sin(\\omega t)-\\omega t\\cos(\\omega t)}{2\\omega}\\right](p)=\\frac{\\omega^2}{(p^2+\\omega^2)^2}.$$\n\n$\\omega\\ne0$ 为实数，$\\operatorname{Re}p>0$。",
+          "source_pdf_page": 220,
+          "user_pdf_page": 213
+        },
+        {
+          "id": "L-PAIR-13",
+          "original_number": 13,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac1{3\\omega^2}\\left[e^{-\\omega t}-e^{\\omega t/2}\\left(\\cos\\frac{\\sqrt3\\omega t}2-\\sqrt3\\sin\\frac{\\sqrt3\\omega t}2\\right)\\right]\\right](p)=\\frac1{p^3+\\omega^3}.$$\n\n$\\omega>0$，$\\operatorname{Re}p>\\omega/2$。",
+          "source_pdf_page": 220,
+          "user_pdf_page": 213,
+          "source_note": "两份原印表第二组前印加号，导致t=0值错误；应为减号。以部分分式及直接拉氏积分核验。",
+          "original_statement_markdown": "原印右列为\\frac1{3\\omega^2}[e^{-\\omega t}+e^{\\omega t/2}(\\cos\\frac{\\sqrt3\\omega t}2-\\sqrt3\\sin\\frac{\\sqrt3\\omega t}2)]。"
+        },
+        {
+          "id": "L-PAIR-14",
+          "original_number": 14,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac1{3\\omega}\\left[-e^{-\\omega t}+e^{\\omega t/2}\\left(\\cos\\frac{\\sqrt3\\omega t}2+\\sqrt3\\sin\\frac{\\sqrt3\\omega t}2\\right)\\right]\\right](p)=\\frac p{p^3+\\omega^3}.$$\n\n$\\omega>0$，$\\operatorname{Re}p>\\omega/2$。",
+          "source_pdf_page": 220,
+          "user_pdf_page": 213,
+          "source_note": "原印第一项指数为+omega t，应为-omega t；由第13行求导及直接积分核验。",
+          "original_statement_markdown": "原印第一项为-e^{\\omega t}。"
+        },
+        {
+          "id": "L-PAIR-15",
+          "original_number": 15,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac13\\left[e^{-\\omega t}+2e^{\\omega t/2}\\cos\\frac{\\sqrt3\\omega t}2\\right]\\right](p)=\\frac{p^2}{p^3+\\omega^3}.$$\n\n$\\omega>0$，$\\operatorname{Re}p>\\omega/2$。",
+          "source_pdf_page": 220,
+          "user_pdf_page": 213
+        },
+        {
+          "id": "L-PAIR-16",
+          "original_number": 16,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{\\sin(\\omega t)\\cosh(\\omega t)-\\cos(\\omega t)\\sinh(\\omega t)}{4\\omega^3}\\right](p)=\\frac1{p^4+4\\omega^4}.$$\n\n$\\omega>0$，$\\operatorname{Re}p>\\omega$。",
+          "source_pdf_page": 220,
+          "user_pdf_page": 213,
+          "source_note": "原印系数分母3omega^3应为4omega^3；泰勒首项须为t^3/6，且直接积分已核验。",
+          "original_statement_markdown": "原印系数为\\frac1{3\\omega^3}。"
+        },
+        {
+          "id": "L-PAIR-17",
+          "original_number": 17,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{\\sin(\\omega t)\\sinh(\\omega t)}{2\\omega^2}\\right](p)=\\frac p{p^4+4\\omega^4}.$$\n\n$\\omega>0$，$\\operatorname{Re}p>\\omega$。",
+          "source_pdf_page": 220,
+          "user_pdf_page": 213
+        },
+        {
+          "id": "L-PAIR-18",
+          "original_number": 18,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{\\sin(\\omega t)\\cosh(\\omega t)+\\cos(\\omega t)\\sinh(\\omega t)}{2\\omega}\\right](p)=\\frac{p^2}{p^4+4\\omega^4}.$$\n\n$\\omega>0$，$\\operatorname{Re}p>\\omega$。",
+          "source_pdf_page": 220,
+          "user_pdf_page": 213
+        },
+        {
+          "id": "L-PAIR-19",
+          "original_number": 19,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\cos(\\omega t)\\cosh(\\omega t)\\right](p)=\\frac{p^3}{p^4+4\\omega^4}.$$\n\n$\\omega>0$，$\\operatorname{Re}p>\\omega$。",
+          "source_pdf_page": 220,
+          "user_pdf_page": 213
+        },
+        {
+          "id": "L-PAIR-20",
+          "original_number": 20,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{\\sinh(\\omega t)-\\sin(\\omega t)}{2\\omega^3}\\right](p)=\\frac1{p^4-\\omega^4}.$$\n\n$\\omega>0$，$\\operatorname{Re}p>\\omega$。",
+          "source_pdf_page": 220,
+          "user_pdf_page": 213
+        },
+        {
+          "id": "L-PAIR-21",
+          "original_number": 21,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{\\cosh(\\omega t)-\\cos(\\omega t)}{2\\omega^2}\\right](p)=\\frac p{p^4-\\omega^4}.$$\n\n$\\omega>0$，$\\operatorname{Re}p>\\omega$。",
+          "source_pdf_page": 220,
+          "user_pdf_page": 213
+        },
+        {
+          "id": "L-PAIR-22",
+          "original_number": 22,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{\\sinh(\\omega t)+\\sin(\\omega t)}{2\\omega}\\right](p)=\\frac{p^2}{p^4-\\omega^4}.$$\n\n$\\omega>0$，$\\operatorname{Re}p>\\omega$。",
+          "source_pdf_page": 220,
+          "user_pdf_page": 213
+        },
+        {
+          "id": "L-PAIR-23",
+          "original_number": 23,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac12[\\cosh(\\omega t)+\\cos(\\omega t)]\\right](p)=\\frac{p^3}{p^4-\\omega^4}.$$\n\n$\\omega>0$，$\\operatorname{Re}p>\\omega$。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214,
+          "source_note": "原印sinh应为cosh；由第22行求导或拆成二次分母即可核验，直接积分亦通过。",
+          "original_statement_markdown": "原印右列为\\frac12(\\sinh\\omega t+\\cos\\omega t)。"
+        },
+        {
+          "id": "L-PAIR-24",
+          "original_number": 24,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{e^{at}-e^{bt}}{a-b}\\right](p)=\\frac1{(p-a)(p-b)}.$$\n\n$a\\ne b$，$\\operatorname{Re}p>\\max(\\operatorname{Re}a,\\operatorname{Re}b)$。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214
+        },
+        {
+          "id": "L-PAIR-25",
+          "original_number": 25,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{ae^{at}-be^{bt}}{a-b}\\right](p)=\\frac p{(p-a)(p-b)}.$$\n\n$a\\ne b$，$\\operatorname{Re}p>\\max(\\operatorname{Re}a,\\operatorname{Re}b)$。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214
+        },
+        {
+          "id": "L-PAIR-26",
+          "original_number": 26,
+          "statement_markdown": "$$\\mathcal L\\!\\left[L_n(t)\\right](p)=\\frac1p\\left(\\frac{p-1}p\\right)^n.$$\n\n$n=0,1,2,\\ldots$，$L_n(t)=\\frac{e^t}{n!}\\frac{\\mathrm d^n}{\\mathrm dt^n}(t^ne^{-t})$，$\\operatorname{Re}p>0$。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214
+        },
+        {
+          "id": "L-PAIR-27",
+          "original_number": 27,
+          "statement_markdown": "$$\\mathcal L\\!\\left[|\\sin(\\omega t)|\\right](p)=\\frac{\\omega}{p^2+\\omega^2}\\coth\\frac{\\pi p}{2\\omega}.$$\n\n$\\omega>0$，$\\operatorname{Re}p>0$。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214
+        },
+        {
+          "id": "L-PAIR-28",
+          "original_number": 28,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{e^{at}(1+2at)}{\\sqrt{\\pi t}}\\right](p)=\\frac p{(p-a)^{3/2}}.$$\n\n$a\\in\\mathbb R$，$\\operatorname{Re}p>a$；根的分支从$p>a$取正根。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214
+        },
+        {
+          "id": "L-PAIR-29",
+          "original_number": 29,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{e^{bt}-e^{at}}{2\\sqrt\\pi\\,t^{3/2}}\\right](p)=\\sqrt{p-a}-\\sqrt{p-b}.$$\n\n$a,b\\in\\mathbb R$，$\\operatorname{Re}p>\\max(a,b)$；两根均从足够大的正实$p$取正根。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214
+        },
+        {
+          "id": "L-PAIR-30",
+          "original_number": 30,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{e^{-\\lambda t}t^\\nu}{\\Gamma(\\nu+1)}\\right](p)=\\frac1{(p+\\lambda)^{\\nu+1}}.$$\n\n$\\nu>-1$ 为实数，$\\operatorname{Re}(p+\\lambda)>0$；幂的分支从$p+\\lambda>0$选定。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214
+        },
+        {
+          "id": "L-PAIR-31",
+          "original_number": 31,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\delta(t)\\right](p)=1.$$\n\n广义函数意义；按正文约定从$-0$起积分，完整计入原点冲激。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214
+        },
+        {
+          "id": "L-PAIR-32",
+          "original_number": 32,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\delta(t-a)\\right](p)=e^{-ap}.$$\n\n$a\\ge0$，广义函数意义，采用同一因果冲激约定。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214
+        },
+        {
+          "id": "L-PAIR-33",
+          "original_number": 33,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\delta'(t)\\right](p)=p.$$\n\n广义函数意义；$\\delta'(t)=\\lim_{\\varepsilon\\to0^+}[\\delta(t)-\\delta(t-\\varepsilon)]/\\varepsilon$，称偶极子。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214
+        },
+        {
+          "id": "L-PAIR-34",
+          "original_number": 34,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\delta'(t-a)\\right](p)=pe^{-ap}.$$\n\n$a\\ge0$，广义函数意义。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214
+        },
+        {
+          "id": "L-PAIR-35",
+          "original_number": 35,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{a}{2\\sqrt\\pi\\,t^{3/2}}e^{-a^2/(4t)}\\right](p)=e^{-a\\sqrt p}.$$\n\n$a>0$，$\\operatorname{Re}p>0$；$\\sqrt p$取正实轴正根分支。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214,
+          "source_note": "原印分母为2sqrt(pi t^2)，应为2sqrt(pi t^3)；由第36行对a求导及直接积分核验。",
+          "original_statement_markdown": "原印右列系数为\\frac a{2\\sqrt{\\pi t^2}}。"
+        },
+        {
+          "id": "L-PAIR-36",
+          "original_number": 36,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac1{\\sqrt{\\pi t}}e^{-a^2/(4t)}\\right](p)=\\frac{e^{-a\\sqrt p}}{\\sqrt p}.$$\n\n$a\\ge0$，$\\operatorname{Re}p>0$，$\\sqrt p$取上述分支。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214
+        },
+        {
+          "id": "L-PAIR-37",
+          "original_number": 37,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{e^{-at}}{\\sqrt{\\pi t}}\\right](p)=\\frac1{\\sqrt{p+a}}.$$\n\n$a\\in\\mathbb R$，$\\operatorname{Re}(p+a)>0$，从$p+a>0$取正根。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214
+        },
+        {
+          "id": "L-PAIR-38",
+          "original_number": 38,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{e^{-2a\\sqrt t}}{\\sqrt{\\pi t}}\\right](p)=\\frac1{\\sqrt p}e^{a^2/p}\\operatorname{erfc}\\!\\left(\\frac a{\\sqrt p}\\right).$$\n\n$a\\ge0$，$\\operatorname{Re}p>0$。此处$\\operatorname{erfc}(x)=\\frac2{\\sqrt\\pi}\\int_x^\\infty e^{-u^2}\\,\\mathrm du$。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214,
+          "source_note": "原印右列指数含p而非t，左列erf与本节从0积分的定义不相容。代换t=u^2并配方直接积分得到所列erfc关系，数值核验通过。",
+          "original_statement_markdown": "原印左列为p^{-1/2}e^{a^2/p}\\operatorname{erf}(a/\\sqrt p)，右列为(\\pi t)^{-1/2}e^{-2a\\sqrt p}。"
+        },
+        {
+          "id": "L-PAIR-39",
+          "original_number": 39,
+          "statement_markdown": "$$\\mathcal L\\!\\left[e^{-a^2t^2}\\right](p)=\\frac{\\sqrt\\pi}{2a}e^{p^2/(4a^2)}\\operatorname{erfc}\\!\\left(\\frac p{2a}\\right).$$\n\n$a>0$；该高斯拉氏积分对所有复$p$收敛。$\\operatorname{erfc}$按第38行积分定义解析延拓。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214,
+          "source_note": "原印像函数系数缺1/a，本函数指数印成-a^2/2且无t，erf应为从p/(2a)到无穷积分的erfc。高斯配方和直接数值积分均核验。",
+          "original_statement_markdown": "原印左列为\\frac{\\sqrt\\pi}2e^{p^2/(4a^2)}\\operatorname{erf}(p/(2a))，右列为e^{-a^2/2}。"
+        },
+        {
+          "id": "L-PAIR-40",
+          "original_number": 40,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac1{\\sqrt{\\pi a}}\\sin(2\\sqrt{at})\\right](p)=\\frac1{p\\sqrt p}e^{-a/p}.$$\n\n$a>0$，$\\operatorname{Re}p>0$；$a=0$时可取连续极限。",
+          "source_pdf_page": 221,
+          "user_pdf_page": 214
+        },
+        {
+          "id": "L-PAIR-41",
+          "original_number": 41,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac1{\\sqrt{\\pi t}}\\cos(2\\sqrt{at})\\right](p)=\\frac1{\\sqrt p}e^{-a/p}.$$\n\n$a\\ge0$，$\\operatorname{Re}p>0$。",
+          "source_pdf_page": 222,
+          "user_pdf_page": 215
+        },
+        {
+          "id": "L-PAIR-42",
+          "original_number": 42,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac1{\\sqrt{\\pi t}}\\sin\\frac1{2t}\\right](p)=\\frac1{\\sqrt p}e^{-\\sqrt p}\\sin\\sqrt p.$$\n\n$\\operatorname{Re}p>0$，$\\sqrt p$取正实轴正根分支。",
+          "source_pdf_page": 222,
+          "user_pdf_page": 215,
+          "source_note": "原印指数为+sqrt p，应为-sqrt p。以含复参数的高斯积分及t=u^{-2}后的直接振荡积分核验。",
+          "original_statement_markdown": "原印像函数为p^{-1/2}e^{\\sqrt p}\\sin\\sqrt p。"
+        },
+        {
+          "id": "L-PAIR-43",
+          "original_number": 43,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac1{\\sqrt{\\pi t}}\\cos\\frac1{2t}\\right](p)=\\frac1{\\sqrt p}e^{-\\sqrt p}\\cos\\sqrt p.$$\n\n$\\operatorname{Re}p>0$，$\\sqrt p$取同一分支。",
+          "source_pdf_page": 222,
+          "user_pdf_page": 215,
+          "source_note": "原印指数为+sqrt p，应为-sqrt p。与第42行的复高斯积分同源，直接振荡积分核验通过。",
+          "original_statement_markdown": "原印像函数为p^{-1/2}e^{\\sqrt p}\\cos\\sqrt p。"
+        },
+        {
+          "id": "L-PAIR-44",
+          "original_number": 44,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\sqrt{\\frac2{\\pi t}}\\sin(\\omega t)\\right](p)=\\sqrt{\\frac{\\sqrt{p^2+\\omega^2}-p}{p^2+\\omega^2}}.$$\n\n$\\omega>0$，$\\operatorname{Re}p>0$；内外根从正实$p$处正值延拓。",
+          "source_pdf_page": 222,
+          "user_pdf_page": 215,
+          "source_note": "原印本函数为sqrt(1/(pi t))cos(omega t)，与左列不符；由Gamma(1/2)型积分的虚部得到sqrt(2/(pi t))sin，直接积分已核验。",
+          "original_statement_markdown": "原印右列为\\sqrt{\\frac1{\\pi t}}\\cos\\omega t。"
+        },
+        {
+          "id": "L-PAIR-45",
+          "original_number": 45,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\sqrt{\\frac2{\\pi t}}\\cos(\\omega t)\\right](p)=\\sqrt{\\frac{\\sqrt{p^2+\\omega^2}+p}{p^2+\\omega^2}}.$$\n\n$\\omega>0$，$\\operatorname{Re}p>0$；内外根取与第44行相容的解析分支。",
+          "source_pdf_page": 222,
+          "user_pdf_page": 215,
+          "source_note": "原印本函数系数为sqrt(1/(omega t))，应为sqrt(2/(pi t))；由Gamma(1/2)型积分的实部及直接积分核验。",
+          "original_statement_markdown": "原印右列为\\sqrt{\\frac1{\\omega t}}\\cos\\omega t。"
+        },
+        {
+          "id": "L-PAIR-46",
+          "original_number": 46,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac1{a^\\nu}J_\\nu(at)\\right](p)=\\frac1{\\sqrt{p^2+a^2}(\\sqrt{p^2+a^2}+p)^\\nu}.$$\n\n$a>0$、$\\nu>0$，$\\operatorname{Re}p>0$；根从正实$p$取正值，幂连续延拓。",
+          "source_pdf_page": 222,
+          "user_pdf_page": 215
+        },
+        {
+          "id": "L-PAIR-47",
+          "original_number": 47,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac1{a^\\nu}I_\\nu(at)\\right](p)=\\frac1{\\sqrt{p^2-a^2}(\\sqrt{p^2-a^2}+p)^\\nu}.$$\n\n$a>0$、$\\nu>0$，$\\operatorname{Re}p>a$；从$p>a$取正根和正幂。",
+          "source_pdf_page": 222,
+          "user_pdf_page": 215,
+          "source_note": "原印第一个根是p^2-a^2、第二个根却是p^2+a^2；后者也应为p^2-a^2。由I_nu幂级数及直接积分核验。",
+          "original_statement_markdown": "原印第二个根为\\sqrt{p^2+a^2}。"
+        },
+        {
+          "id": "L-PAIR-48",
+          "original_number": 48,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{I_\\nu(at)}t\\right](p)=\\frac{(p-\\sqrt{p^2-a^2})^\\nu}{\\nu a^\\nu}.$$\n\n$a>0$、$\\nu>0$，$\\operatorname{Re}p>a$；从$p>a$取正根并对正值$p-\\sqrt{p^2-a^2}$取实幂。若使用$J_\\nu(at)/t$，对应式为$(\\sqrt{p^2+a^2}-p)^\\nu/(\\nu a^\\nu)$，在$\\operatorname{Re}p>0$成立。",
+          "source_pdf_page": 222,
+          "user_pdf_page": 215,
+          "source_note": "原印右列为I_nu(at)/t，而左列为J_nu对应的加号根式。为保留两侧实际信息，明确分别列出I与J的正确关系；I公式已直接积分核验。",
+          "original_statement_markdown": "原印配对为\\frac1{\\nu a^\\nu}(\\sqrt{p^2+a^2}-p)^\\nu\\quad\\leftrightarrow\\quad I_\\nu(at)/t。"
+        },
+        {
+          "id": "L-PAIR-49",
+          "original_number": 49,
+          "statement_markdown": "$$\\mathcal L\\!\\left[t^\\nu J_\\nu(t)\\right](p)=\\frac{2^\\nu\\Gamma(\\nu+\\tfrac12)}{\\sqrt\\pi\\,(p^2+1)^{\\nu+1/2}}.$$\n\n$\\nu>-\\frac12$，$\\operatorname{Re}p>0$；幂取从正实$p$延拓的分支。",
+          "source_pdf_page": 222,
+          "user_pdf_page": 215,
+          "source_note": "原印像函数缺系数2^nu。由J_nu幂级数逐项Gamma积分并比较首项可见，直接积分亦核验。",
+          "original_statement_markdown": "原印像函数系数为\\Gamma(\\nu+1/2)/\\sqrt\\pi，没有2^\\nu。"
+        },
+        {
+          "id": "L-PAIR-50",
+          "original_number": 50,
+          "statement_markdown": "$$\\mathcal L\\!\\left[t^{\\nu/2}J_\\nu(2\\sqrt t)\\right](p)=\\frac1{p^{\\nu+1}}e^{-1/p}.$$\n\n$\\nu>-1$，$\\operatorname{Re}p>0$；$t>0$取实根，像函数幂从正实$p$选支。",
+          "source_pdf_page": 222,
+          "user_pdf_page": 215
+        },
+        {
+          "id": "L-PAIR-51",
+          "original_number": 51,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac1{\\sqrt t}J_{2n}(2\\sqrt t)\\right](p)=\\sqrt{\\frac\\pi p}e^{-1/(2p)}I_n\\!\\left(\\frac1{2p}\\right).$$\n\n$n=0,1,2,\\ldots$，$\\operatorname{Re}p>0$。",
+          "source_pdf_page": 222,
+          "user_pdf_page": 215
+        },
+        {
+          "id": "L-PAIR-52",
+          "original_number": 52,
+          "statement_markdown": "$$\\mathcal L\\!\\left[J_0\\!\\left(a\\sqrt{t^2-\\tau^2}\\right)h(t-\\tau)\\right](p)=\\frac{e^{-\\tau\\sqrt{p^2+a^2}}}{\\sqrt{p^2+a^2}}.$$\n\n$a\\ge0$、$\\tau\\ge0$，$\\operatorname{Re}p>0$；本函数在$t<\\tau$时定义为0，在$t\\ge\\tau$取实平方根，像函数根从正实$p$取正值。",
+          "source_pdf_page": 222,
+          "user_pdf_page": 215
+        },
+        {
+          "id": "L-PAIR-53",
+          "original_number": 53,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\operatorname{erf}(\\sqrt{at})\\right](p)=\\frac{\\sqrt a}{p\\sqrt{p+a}}.$$\n\n$a>0$，$\\operatorname{Re}p>0$；$\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_0^x e^{-u^2}\\,\\mathrm du$，与第9.3.3节定义一致。",
+          "source_pdf_page": 222,
+          "user_pdf_page": 215
+        },
+        {
+          "id": "L-PAIR-54",
+          "original_number": 54,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\operatorname{erfc}\\!\\left(\\frac a{2\\sqrt t}\\right)\\right](p)=\\frac1p e^{-a\\sqrt p}.$$\n\n$a>0$，$\\operatorname{Re}p>0$；$\\operatorname{erfc}$按从自变量到无穷的积分定义。",
+          "source_pdf_page": 222,
+          "user_pdf_page": 215,
+          "source_note": "原印写erf，但第9.3.3节已定义erf从0积分；按此定义本行必须为1-erf=erfc。由第35行积分或直接变换核验。",
+          "original_statement_markdown": "原印右列为\\operatorname{erf}(a/(2\\sqrt t))。"
+        },
+        {
+          "id": "L-PAIR-55",
+          "original_number": 55,
+          "statement_markdown": "$$\\mathcal L\\!\\left[e^t\\operatorname{erfc}(\\sqrt t)\\right](p)=\\frac1{p+\\sqrt p}.$$\n\n$\\operatorname{Re}p>0$。",
+          "source_pdf_page": 222,
+          "user_pdf_page": 215,
+          "source_note": "原印写e^t erf(sqrt t)，按本节erf积分定义应改为互补erfc；直接积分核验。",
+          "original_statement_markdown": "原印右列为e^t\\operatorname{erf}(\\sqrt t)。"
+        },
+        {
+          "id": "L-PAIR-56",
+          "original_number": 56,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac1{\\sqrt{\\pi t}}-e^t\\operatorname{erfc}(\\sqrt t)\\right](p)=\\frac1{1+\\sqrt p}.$$\n\n$\\operatorname{Re}p>0$。",
+          "source_pdf_page": 222,
+          "user_pdf_page": 215,
+          "source_note": "原印第二项写erf，按第55行及1/sqrt p的变换关系应为erfc；直接积分核验。",
+          "original_statement_markdown": "原印右列第二项为-e^t\\operatorname{erf}(\\sqrt t)。"
+        },
+        {
+          "id": "L-PAIR-57",
+          "original_number": 57,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{e^{-at}}{\\sqrt{\\pi t}}+\\sqrt a\\,\\operatorname{erf}(\\sqrt{at})\\right](p)=\\frac{\\sqrt{p+a}}p.$$\n\n$a>0$，$\\operatorname{Re}p>0$；此处确实是正文定义的erf，不能改为erfc。",
+          "source_pdf_page": 223,
+          "user_pdf_page": 216
+        },
+        {
+          "id": "L-PAIR-58",
+          "original_number": 58,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\operatorname{Si}(t)\\right](p)=\\frac1p\\left(\\frac\\pi2-\\arctan p\\right).$$\n\n$\\operatorname{Si}(t)=\\int_0^t\\frac{\\sin u}{u}\\,\\mathrm du$，$\\operatorname{Re}p>0$；$\\arctan p$从正实轴通常值解析延拓。",
+          "source_pdf_page": 223,
+          "user_pdf_page": 216,
+          "source_note": "原印括号内arctan p又除以p，属多余因子；第9.2.6节已经明确给出无此额外p的公式，直接积分亦核验。",
+          "original_statement_markdown": "原印左列为\\frac1p[\\frac\\pi2-\\frac{\\arctan p}p]。"
+        },
+        {
+          "id": "L-PAIR-59",
+          "original_number": 59,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\operatorname{Ci}(t)\\right](p)=\\frac1p\\log\\frac1{\\sqrt{p^2+1}}.$$\n\n$\\operatorname{Ci}(t)=-\\int_t^\\infty\\frac{\\cos u}{u}\\,\\mathrm du$，$t>0$；$\\operatorname{Re}p>0$，根及对数从正实$p$延拓。",
+          "source_pdf_page": 223,
+          "user_pdf_page": 216
+        },
+        {
+          "id": "L-PAIR-60",
+          "original_number": 60,
+          "statement_markdown": "$$\\mathcal L\\!\\left[-\\operatorname{Ei}(-t)\\right](p)=\\frac1p\\log(1+p).$$\n\n$-\\operatorname{Ei}(-t)=\\int_t^\\infty\\frac{e^{-u}}u\\,\\mathrm du$，$t>0$；在$\\operatorname{Re}p>0$可直接使用，对数取从正实$p$的实对数延拓。",
+          "source_pdf_page": 223,
+          "user_pdf_page": 216
+        },
+        {
+          "id": "L-PAIR-61",
+          "original_number": 61,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\int_t^\\infty\\frac{J_0(u)}u\\,\\mathrm du\\right](p)=\\frac1p\\log(p+\\sqrt{1+p^2}).$$\n\n$t>0$、$\\operatorname{Re}p>0$；根从正实$p$取正值，对数按该轴上的实值连续延拓。积分变量统一记为$u$，避免同下限$t$混淆。",
+          "source_pdf_page": 223,
+          "user_pdf_page": 216
+        },
+        {
+          "id": "L-PAIR-62",
+          "original_number": 62,
+          "statement_markdown": "$$\\mathcal L\\!\\left[\\frac{e^{bt}-e^{at}}t\\right](p)=\\log\\frac{p-a}{p-b}.$$\n\n$\\operatorname{Re}p>\\max(\\operatorname{Re}a,\\operatorname{Re}b)$；对数选为$p\\to+\\infty$时趋于0的分支。$t=0$处取连续极限$b-a$。",
+          "source_pdf_page": 223,
+          "user_pdf_page": 216
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "method": "两版扫描逐页核读；18行原印错经直接拉普拉斯数值积分复核，含第42、43行振荡积分。误差比较采用p=4.3以及各行允许的实参数样本。符号订正同时以相邻公式、幂级数或基本变换关系核验。",
+    "corrected_table2_numbers": [
+      13,
+      14,
+      16,
+      23,
+      35,
+      38,
+      39,
+      42,
+      43,
+      44,
+      45,
+      47,
+      48,
+      49,
+      54,
+      55,
+      56,
+      58
+    ],
+    "maximum_sample_relative_error": 3e-17,
+    "note": "18条订正行及另16条根式/特殊函数配对均经直接积分样本复核；数值校验用于检查转录，一般条件及分支由每行和共用约定明确。",
+    "additional_sample_checked_table2_numbers": [
+      28,
+      29,
+      30,
+      36,
+      37,
+      40,
+      41,
+      46,
+      50,
+      51,
+      53,
+      57,
+      59,
+      60,
+      52,
+      61
+    ]
+  }
+}

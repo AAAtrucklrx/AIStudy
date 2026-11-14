@@ -1,0 +1,132 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH02-S05-SS04",
+    "text_sha256": "1762f979ebb53ef98f6923c5de330b88f3405908e8079ef195724ae945ac6a5d",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "1762f979ebb53ef98f6923c5de330b88f3405908e8079ef195724ae945ac6a5d",
+    "source": "original_text",
+    "source_path": "original_text/ch02_s05_ss04.md"
+  },
+  "unit": {
+    "unit_id": "CH02-S05-SS04",
+    "level": "subsection",
+    "chapter": "CH02",
+    "section": "CH02-S05",
+    "title": "对数函数",
+    "anchor": "2.5.4"
+  },
+  "concepts": [
+    {
+      "name": "对数",
+      "type": "definition",
+      "formal": "设已给复数 $z \\neq 0$，满足 $\\mathrm{e}^w = z$ 的复数 $w$ 称为 $z$ 的对数，记作 $w = \\mathrm{Ln}z$.",
+      "source_quote": "设已给复数 $z \\neq 0$，满足 $\\mathrm{e}^w = z$ 的复数 $w$ 称为 $z$ 的对数，记作 $w = \\mathrm{Ln}z$."
+    },
+    {
+      "name": "对数函数",
+      "type": "definition",
+      "formal": "把 $z$ 看成复变数，它就是 $z$ 的对数函数. 对数函数是指数函数的反函数.",
+      "source_quote": "把 $z$ 看成复变数，它就是 $z$ 的对数函数. 对数函数是指数函数的反函数."
+    },
+    {
+      "name": "对数主值",
+      "type": "definition",
+      "formal": "相应于Argz的主值，也常取 $$\\ln z = \\ln | z | + \\operatorname{iarg} z, - \\pi <   \\arg z \\leqslant \\pi$$ 作 $\\mathrm{Ln}z$ 的主值.",
+      "source_quote": "相应于Argz的主值，也常取 $$\\ln z = \\ln | z | + \\operatorname{iarg} z, - \\pi <   \\arg z \\leqslant \\pi$$ 作 $\\mathrm{Ln}z$ 的主值."
+    },
+    {
+      "name": "对数函数表达式 (2.14)",
+      "type": "formula",
+      "formal": "$$\\mathrm{Ln} z = \\ln | z | + \\mathrm{iArg} z\\tag{2.14}$$",
+      "source_quote": "上面已经见到，对数函数 $$\\mathrm{Ln} z = \\ln | z | + \\mathrm{iArg} z\\tag{2.14}$$ 是无穷多值函数."
+    },
+    {
+      "name": "对数的多值性",
+      "type": "property",
+      "formal": "任何不是零的复数都有无穷多个对数，其中任意两个相差 $2\\pi \\mathrm{i}$ 的整数倍.",
+      "source_quote": "由此可见，任何不是零的复数都有无穷多个对数，其中任意两个相差 $2\\pi \\mathrm{i}$ 的整数倍."
+    },
+    {
+      "name": "对数运算法则",
+      "type": "law",
+      "formal": "1)  $\\mathrm{Ln}(z_{1}z_{2})=\\mathrm{Ln}z_{1}+\\mathrm{Ln}z_{2}$ 2) $\\mathrm{Ln}\\frac{z_1}{z_2} = \\mathrm{Ln}z_1 - \\mathrm{Ln}z_2.$",
+      "source_quote": "对数有以下运算法则：1)  $\\mathrm{Ln}(z_{1}z_{2})=\\mathrm{Ln}z_{1}+\\mathrm{Ln}z_{2}$ 2) $\\mathrm{Ln}\\frac{z_1}{z_2} = \\mathrm{Ln}z_1 - \\mathrm{Ln}z_2.$"
+    },
+    {
+      "name": "对数函数的支点",
+      "type": "property",
+      "formal": "$0$ 及 $\\infty$ 是它的支点. ... 同理 $\\infty$ 点也是 $\\operatorname{Ln} z$ 的支点, 其他点都不是它的支点.",
+      "source_quote": "用前面用过的办法, 不难断定 $0$ 及 $\\infty$ 是它的支点. ... 同理 $\\infty$ 点也是 $\\operatorname{Ln} z$ 的支点, 其他点都不是它的支点."
+    },
+    {
+      "name": "Ln z 的单值分支（负实轴割开）",
+      "type": "definition",
+      "formal": "取负实轴为支割线，可以得到 $\\mathrm{Ln}z$ 在沿负轴割开了的 $z$ 平面 $D$ 上的无穷多个单值分支 $$w_k = (\\mathrm{Ln} z)_k = \\ln |z| + \\mathrm{iarg} z + 2k\\pi \\mathrm{i}, \\quad k=0,\\pm1,\\pm2,\\dots, -\\pi<\\arg z<\\pi.$$",
+      "source_quote": "例如取负实轴为支割线，可以得到 $\\mathrm{Ln}z$ 在沿负轴割开了的 $z$ 平面 $D$ 上的无穷多个单值分支 ..."
+    },
+    {
+      "name": "单值分支的解析性",
+      "type": "property",
+      "formal": "因而这些分支都是 D 内的单值解析分支.",
+      "source_quote": "因而这些分支都是 D 内的单值解析分支."
+    },
+    {
+      "name": "单值分支的映射性质",
+      "type": "property",
+      "formal": "这些分支把角域:  $a < \\arg z < b, -\\pi < a, b < \\pi$  双方单值地分别变成条形域:  $2k\\pi + a < Imw < 2k\\pi + b$ . 特别地, 把区域 D 双方单值地变为条形域:  $(2k - 1)\\pi < Imw < (2k + 1)\\pi$ .",
+      "source_quote": "这些分支把角域:  $a < \\arg z < b, -\\pi < a, b < \\pi$  双方单值地分别变成条形域:  $2k\\pi + a < Imw < 2k\\pi + b$ . 特别地, 把区域 D 双方单值地变为条形域:  $(2k - 1)\\pi < Imw < (2k + 1)\\pi$ ."
+    },
+    {
+      "name": "Ln z 的单值分支（正实轴割开）",
+      "type": "definition",
+      "formal": "取正实轴为支割线，也可以得到 $\\mathrm{Ln}z$ 在沿正实轴割开了的 $z$ 平面 $D_{1}$ 上的无穷多个单值解析分支 $$w_k = (\\mathrm{Ln} z)_k = \\ln |z| + \\mathrm{iarg} z + 2k\\pi \\mathrm{i}, \\quad k=0,\\pm1,\\pm2,\\dots, 0<\\arg z<2\\pi.$$",
+      "source_quote": "又如果取正实轴为支割线，也可以得到 $\\mathrm{Ln}z$ 在沿正实轴割开了的 $z$ 平面 $D_{1}$ 上的无穷多个单值解析分支 ..."
+    },
+    {
+      "name": "正实轴分支的映射性质",
+      "type": "property",
+      "formal": "它们把区域 $D_{1}$ 单叶地变成条形域： $2k\\pi < 1\\mathrm{Im}w < 2k\\pi + 2\\pi.$",
+      "source_quote": "它们把区域 $D_{1}$ 单叶地变成条形域： $2k\\pi < 1\\mathrm{Im}w < 2k\\pi + 2\\pi.$"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 12,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "数有以下运算法则"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "对数",
+    "对数函数",
+    "对数主值",
+    "对数函数表达式 (2.14)",
+    "对数的多值性",
+    "对数运算法则",
+    "对数函数的支点",
+    "Ln z 的单值分支（负实轴割开）",
+    "单值分支的解析性",
+    "单值分支的映射性质",
+    "Ln z 的单值分支（正实轴割开）",
+    "正实轴分支的映射性质"
+  ]
+}

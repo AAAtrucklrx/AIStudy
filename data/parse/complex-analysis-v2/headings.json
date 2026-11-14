@@ -1,0 +1,1018 @@
+{
+  "_meta": {
+    "file_type": "mineru_headings",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.mineru",
+    "source_sha256": "10dd4ed7be8cf428ef57f5c7dfd53063ca62ad0a155171634ac387d8b6efd7f1",
+    "field_notes": {
+      "headings": "MinerU 标成 `title` 的块：页码、在 document.md 里的行号、文字、它给的 level、以及**它落在哪个区域**",
+      "headings[].region": "front=章前材料 / toc=目录 / body=正文 / exercise=习题 / answer=答案；**只有 body 才是教案单元**",
+      "page_region": "每一页属于哪个区域（跨页目录、章后习题都靠它）",
+      "regions": "区域的页码区间（人看的）",
+      "code_lines": "来自 `code` 块的行区间 —— **这些行不许当标题**（伪代码的 `2.2 fx:=…` 长得像编号标题，实测当过假单元），但正文里一个字都不删"
+    }
+  },
+  "book_title": "复变函数",
+  "headings": [
+    {
+      "page": 1,
+      "line": 2,
+      "text": "复变函数",
+      "level": 1,
+      "region": "front"
+    },
+    {
+      "page": 3,
+      "line": 10,
+      "text": "内容简介",
+      "level": 2,
+      "region": "front"
+    },
+    {
+      "page": 3,
+      "line": 13,
+      "text": "图书在版编目(CIP)数据",
+      "level": 2,
+      "region": "front"
+    },
+    {
+      "page": 4,
+      "line": 30,
+      "text": "总序",
+      "level": 2,
+      "region": "front"
+    },
+    {
+      "page": 6,
+      "line": 41,
+      "text": "前言",
+      "level": 2,
+      "region": "front"
+    },
+    {
+      "page": 10,
+      "line": 58,
+      "text": "第1章 复数和平面点集",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 10,
+      "line": 60,
+      "text": "1.1 复数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 10,
+      "line": 61,
+      "text": "1.1.1 复数的四则运算",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 12,
+      "line": 109,
+      "text": "1.1.2 共轭复数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 14,
+      "line": 156,
+      "text": "1.1.3 复数的几何表示、模与辐角",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 19,
+      "line": 255,
+      "text": "1.1.4 复数的乘方和开方",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 20,
+      "line": 289,
+      "text": "1.1.5 复数序列的极限、无穷远点",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 24,
+      "line": 351,
+      "text": "1.2 平面点集",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 24,
+      "line": 352,
+      "text": "1.2.1 基本概念",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 24,
+      "line": 359,
+      "text": "1.2.2 区域与曲线",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 26,
+      "line": 377,
+      "text": "习题",
+      "level": 2,
+      "region": "exercise"
+    },
+    {
+      "page": 29,
+      "line": 440,
+      "text": "第2章 复变数函数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 29,
+      "line": 442,
+      "text": "2.1 复变数函数的概念",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 32,
+      "line": 492,
+      "text": "2.2 函数极限和连续性",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 34,
+      "line": 531,
+      "text": "2.3 导数和解析函数的概念",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 36,
+      "line": 578,
+      "text": "2.4 柯西－黎曼方程",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 39,
+      "line": 623,
+      "text": "2.5 初等函数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 39,
+      "line": 626,
+      "text": "2.5.1 幂函数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 41,
+      "line": 659,
+      "text": "2.5.2 根式函数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 43,
+      "line": 684,
+      "text": "(1) 支点",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 44,
+      "line": 691,
+      "text": "(2) 支割线和多值函数的单值解析分支",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 46,
+      "line": 723,
+      "text": "(3) 关于支割线两岸的函数值",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 48,
+      "line": 752,
+      "text": "2.5.3 指数函数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 50,
+      "line": 783,
+      "text": "2.5.4 对数函数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 51,
+      "line": 814,
+      "text": "2.5.5 三角函数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 53,
+      "line": 848,
+      "text": "2.5.6 双曲函数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 54,
+      "line": 860,
+      "text": "2.5.7 一般幂函数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 55,
+      "line": 879,
+      "text": "2.5.8 反三角函数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 59,
+      "line": 958,
+      "text": "第3章 解析函数的积分表示",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 59,
+      "line": 960,
+      "text": "3.1 复变函数的积分",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 63,
+      "line": 1032,
+      "text": "3.2 柯西积分定理",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 65,
+      "line": 1073,
+      "text": "3.3 原函数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 68,
+      "line": 1126,
+      "text": "3.4 柯西积分公式",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 72,
+      "line": 1192,
+      "text": "3.5 解析函数的性质",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 78,
+      "line": 1308,
+      "text": "第4章 调和函数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 78,
+      "line": 1310,
+      "text": "4.1 解析函数与调和函数的关系",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 81,
+      "line": 1373,
+      "text": "4.2 调和函数的性质和狄利克雷问题",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 86,
+      "line": 1442,
+      "text": "第5章 解析函数的级数展开",
+      "level": 1,
+      "region": "body"
+    },
+    {
+      "page": 86,
+      "line": 1444,
+      "text": "5.1 复级数的基本性质",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 86,
+      "line": 1445,
+      "text": "5.1.1 复数项级数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 88,
+      "line": 1492,
+      "text": "5.1.2 复变函数项级数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 91,
+      "line": 1555,
+      "text": "5.2 幂级数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 94,
+      "line": 1610,
+      "text": "5.3 解析函数的泰勒(Taylor)展开",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 100,
+      "line": 1719,
+      "text": "5.4 罗朗(Laurent)级数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 107,
+      "line": 1831,
+      "text": "5.5 解析函数的孤立奇点",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 116,
+      "line": 1998,
+      "text": "第6章 留数及其应用",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 116,
+      "line": 2000,
+      "text": "6.1 留数定理",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 120,
+      "line": 2074,
+      "text": "6.2 积分计算",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 129,
+      "line": 2251,
+      "text": "6.2.4 杂例",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 132,
+      "line": 2301,
+      "text": "6.2.5 多值函数的积分",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 135,
+      "line": 2373,
+      "text": "6.3 辐角原理",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 143,
+      "line": 2525,
+      "text": "第7章 解析开拓",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 143,
+      "line": 2527,
+      "text": "7.1 唯一性定理和解析开拓的概念",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 147,
+      "line": 2596,
+      "text": "7.2 含复参变量积分及  \\Gamma  函数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 154,
+      "line": 2730,
+      "text": "第8章 保形变换及其应用",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 154,
+      "line": 2732,
+      "text": "8.1 导数的几何意义",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 156,
+      "line": 2757,
+      "text": "8.2 保形变换的概念",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 158,
+      "line": 2781,
+      "text": "8.3 分式线性变换",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 165,
+      "line": 2916,
+      "text": "8.4 初等函数的映照",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 165,
+      "line": 2918,
+      "text": "8.4.1 变换 w = z^n 和 w = \\sqrt{z}, n \\geqslant 2 是自然数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 168,
+      "line": 2972,
+      "text": "8.4.2 变换 w = e^{z} 和 w = \\mathrm{Ln}z",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 169,
+      "line": 2995,
+      "text": "8.4.3 儒可夫斯基变换",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 172,
+      "line": 3051,
+      "text": "*8.5 许瓦兹-克利斯托菲变换",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 180,
+      "line": 3168,
+      "text": "8.6 平面场",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 195,
+      "line": 3436,
+      "text": "第9章 拉氏变换",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 195,
+      "line": 3438,
+      "text": "9.1 拉氏变换的定义",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 198,
+      "line": 3500,
+      "text": "9.2 拉氏变换的基本性质",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 198,
+      "line": 3501,
+      "text": "9.2.1 线性关系",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 199,
+      "line": 3514,
+      "text": "9.2.2 相似定理",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 199,
+      "line": 3519,
+      "text": "9.2.3 本函数的微分法",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 200,
+      "line": 3543,
+      "text": "例5 解初始问题",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 201,
+      "line": 3555,
+      "text": "9.2.4 本函数的积分法",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 202,
+      "line": 3576,
+      "text": "9.2.5 像函数的微分法",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 203,
+      "line": 3593,
+      "text": "9.2.6 像函数的积分法",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 204,
+      "line": 3618,
+      "text": "9.2.7 延迟定理",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 206,
+      "line": 3668,
+      "text": "9.2.8 位移定理",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 207,
+      "line": 3684,
+      "text": "9.2.9 周期函数的像函数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 208,
+      "line": 3701,
+      "text": "9.2.10 卷积定理",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 209,
+      "line": 3735,
+      "text": "9.3 由像函数求本函数",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 210,
+      "line": 3739,
+      "text": "9.3.1 部分分式法",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 212,
+      "line": 3773,
+      "text": "9.3.2 拉氏变换的反演公式",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 216,
+      "line": 3846,
+      "text": "9.3.3 其他方法",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 218,
+      "line": 3885,
+      "text": "附表 1 基本法则表",
+      "level": 2,
+      "region": "body"
+    },
+    {
+      "page": 225,
+      "line": 3935,
+      "text": "8. 利用拉氏变换解下列微分方程",
+      "level": 2,
+      "region": "exercise"
+    },
+    {
+      "page": 227,
+      "line": 3952,
+      "text": "习题参考答案",
+      "level": 2,
+      "region": "answer"
+    },
+    {
+      "page": 228,
+      "line": 3975,
+      "text": "第2章",
+      "level": 2,
+      "region": "answer"
+    },
+    {
+      "page": 230,
+      "line": 4003,
+      "text": "第3章",
+      "level": 2,
+      "region": "answer"
+    },
+    {
+      "page": 230,
+      "line": 4012,
+      "text": "第4章",
+      "level": 2,
+      "region": "answer"
+    },
+    {
+      "page": 230,
+      "line": 4017,
+      "text": "第5章",
+      "level": 2,
+      "region": "answer"
+    },
+    {
+      "page": 232,
+      "line": 4057,
+      "text": "第6章",
+      "level": 2,
+      "region": "answer"
+    },
+    {
+      "page": 233,
+      "line": 4078,
+      "text": "第7章",
+      "level": 2,
+      "region": "answer"
+    },
+    {
+      "page": 233,
+      "line": 4081,
+      "text": "第8章",
+      "level": 2,
+      "region": "answer"
+    },
+    {
+      "page": 235,
+      "line": 4118,
+      "text": "第9章",
+      "level": 2,
+      "region": "answer"
+    }
+  ],
+  "page_region": {
+    "1": "front",
+    "2": "front",
+    "3": "front",
+    "4": "front",
+    "5": "front",
+    "6": "front",
+    "7": "front",
+    "8": "front",
+    "9": "toc",
+    "10": "front",
+    "11": "body",
+    "12": "body",
+    "13": "body",
+    "14": "body",
+    "15": "body",
+    "16": "body",
+    "17": "body",
+    "18": "body",
+    "19": "body",
+    "20": "body",
+    "21": "body",
+    "22": "body",
+    "23": "body",
+    "24": "body",
+    "25": "body",
+    "26": "body",
+    "27": "exercise",
+    "28": "exercise",
+    "29": "exercise",
+    "30": "body",
+    "31": "body",
+    "32": "body",
+    "33": "body",
+    "34": "body",
+    "35": "body",
+    "36": "body",
+    "37": "body",
+    "38": "body",
+    "39": "body",
+    "40": "body",
+    "41": "body",
+    "42": "body",
+    "43": "body",
+    "44": "body",
+    "45": "body",
+    "46": "body",
+    "47": "body",
+    "48": "body",
+    "49": "body",
+    "50": "body",
+    "51": "body",
+    "52": "body",
+    "53": "body",
+    "54": "body",
+    "55": "body",
+    "56": "body",
+    "57": "exercise",
+    "58": "exercise",
+    "59": "exercise",
+    "60": "body",
+    "61": "body",
+    "62": "body",
+    "63": "body",
+    "64": "body",
+    "65": "body",
+    "66": "body",
+    "67": "body",
+    "68": "body",
+    "69": "body",
+    "70": "body",
+    "71": "body",
+    "72": "body",
+    "73": "body",
+    "74": "body",
+    "75": "body",
+    "76": "body",
+    "77": "body",
+    "78": "body",
+    "79": "body",
+    "80": "body",
+    "81": "body",
+    "82": "body",
+    "83": "body",
+    "84": "body",
+    "85": "exercise",
+    "86": "exercise",
+    "87": "body",
+    "88": "body",
+    "89": "body",
+    "90": "body",
+    "91": "body",
+    "92": "body",
+    "93": "body",
+    "94": "body",
+    "95": "body",
+    "96": "body",
+    "97": "body",
+    "98": "body",
+    "99": "body",
+    "100": "body",
+    "101": "body",
+    "102": "body",
+    "103": "body",
+    "104": "body",
+    "105": "body",
+    "106": "body",
+    "107": "body",
+    "108": "body",
+    "109": "body",
+    "110": "body",
+    "111": "body",
+    "112": "body",
+    "113": "body",
+    "114": "body",
+    "115": "body",
+    "116": "body",
+    "117": "body",
+    "118": "body",
+    "119": "body",
+    "120": "body",
+    "121": "body",
+    "122": "body",
+    "123": "body",
+    "124": "body",
+    "125": "body",
+    "126": "body",
+    "127": "body",
+    "128": "body",
+    "129": "body",
+    "130": "body",
+    "131": "body",
+    "132": "body",
+    "133": "body",
+    "134": "body",
+    "135": "body",
+    "136": "body",
+    "137": "body",
+    "138": "body",
+    "139": "body",
+    "140": "body",
+    "141": "body",
+    "142": "body",
+    "143": "body",
+    "144": "body",
+    "145": "body",
+    "146": "body",
+    "147": "body",
+    "148": "body",
+    "149": "body",
+    "150": "body",
+    "151": "body",
+    "152": "body",
+    "153": "body",
+    "154": "body",
+    "155": "body",
+    "156": "body",
+    "157": "body",
+    "158": "body",
+    "159": "body",
+    "160": "body",
+    "161": "body",
+    "162": "body",
+    "163": "body",
+    "164": "body",
+    "165": "body",
+    "166": "body",
+    "167": "body",
+    "168": "body",
+    "169": "body",
+    "170": "body",
+    "171": "body",
+    "172": "body",
+    "173": "body",
+    "174": "body",
+    "175": "body",
+    "176": "body",
+    "177": "body",
+    "178": "body",
+    "179": "body",
+    "180": "body",
+    "181": "body",
+    "182": "body",
+    "183": "body",
+    "184": "body",
+    "185": "body",
+    "186": "body",
+    "187": "body",
+    "188": "body",
+    "189": "body",
+    "190": "body",
+    "191": "body",
+    "192": "body",
+    "193": "exercise",
+    "194": "exercise",
+    "195": "exercise",
+    "196": "body",
+    "197": "body",
+    "198": "body",
+    "199": "body",
+    "200": "body",
+    "201": "body",
+    "202": "body",
+    "203": "body",
+    "204": "body",
+    "205": "body",
+    "206": "body",
+    "207": "body",
+    "208": "body",
+    "209": "body",
+    "210": "body",
+    "211": "body",
+    "212": "body",
+    "213": "body",
+    "214": "body",
+    "215": "body",
+    "216": "body",
+    "217": "body",
+    "218": "body",
+    "219": "body",
+    "220": "body",
+    "221": "body",
+    "222": "body",
+    "223": "body",
+    "224": "exercise",
+    "225": "exercise",
+    "226": "exercise",
+    "227": "exercise",
+    "228": "answer",
+    "229": "answer",
+    "230": "answer",
+    "231": "answer",
+    "232": "answer",
+    "233": "answer",
+    "234": "answer",
+    "235": "answer",
+    "236": "answer",
+    "237": "answer",
+    "238": "answer",
+    "239": "answer"
+  },
+  "regions": [
+    {
+      "region": "front",
+      "start_page": 1,
+      "end_page": 8
+    },
+    {
+      "region": "toc",
+      "start_page": 9,
+      "end_page": 9
+    },
+    {
+      "region": "front",
+      "start_page": 10,
+      "end_page": 10
+    },
+    {
+      "region": "body",
+      "start_page": 11,
+      "end_page": 26
+    },
+    {
+      "region": "exercise",
+      "start_page": 27,
+      "end_page": 29
+    },
+    {
+      "region": "body",
+      "start_page": 30,
+      "end_page": 56
+    },
+    {
+      "region": "exercise",
+      "start_page": 57,
+      "end_page": 59
+    },
+    {
+      "region": "body",
+      "start_page": 60,
+      "end_page": 84
+    },
+    {
+      "region": "exercise",
+      "start_page": 85,
+      "end_page": 86
+    },
+    {
+      "region": "body",
+      "start_page": 87,
+      "end_page": 192
+    },
+    {
+      "region": "exercise",
+      "start_page": 193,
+      "end_page": 195
+    },
+    {
+      "region": "body",
+      "start_page": 196,
+      "end_page": 223
+    },
+    {
+      "region": "exercise",
+      "start_page": 224,
+      "end_page": 227
+    },
+    {
+      "region": "answer",
+      "start_page": 228,
+      "end_page": 239
+    }
+  ],
+  "code_lines": []
+}

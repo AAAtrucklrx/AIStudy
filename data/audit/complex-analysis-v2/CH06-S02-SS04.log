@@ -1,0 +1,27 @@
+—— CH06-S02-SS04 回路开始（run 2026-10-03 11:10:45）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 3, '教案问题明细': ['CH06-S02-SS04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH06-S02-SS04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH06-S02-SS04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'], '教案提醒': 2, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 3 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH06-S02-SS04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH06-S02-SS04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [3] 条 → 并集 3 条工单
+    T-R8f35e [P1] hits=3 「CH06-S02-SS04: 有一张图没声明**服务什么** （缺 co」
+    T-96dae4 [P1] hits=1 「$C_{1}$ 上 $z=R+\mathrm{i}y$，$0\leqsl」
+    T-f4ee3f [P1] hits=1 「闭路本身也要求解析，所以奇点只能藏在闭路里面。」
+[轮 1] 按 3 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06-S02-SS04 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH06-S02-SS04.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06-S02-SS04 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH06-S02-SS04.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 3 条：['CH06-S02-SS04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH06-S02-SS04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 1 / 仍开着 2；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 0 条（丢了 5 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R8f35e [P1]：三张过程图现在都带了说明用途的标题（服务哪道题的路线），但工单要求的 concept_id/serves 概念关联在成品正文中仍看不到声明。
+   · 工单没关掉 T-f4ee3f [P1]：原“闭路本身也要求解析”的说法已删除，改为“被积函数在闭路上和闭路内部除有限个奇点外解析”的正确表述。（引用的句子在当前成品里找不到 → 按
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（2 条）：
+  [P1] T-R8f35e 「CH06-S02-SS04: 有一张图没声明**服务什么** （缺 concep」
+  [P1] T-f4ee3f 「闭路本身也要求解析，所以奇点只能藏在闭路里面。」
+记录写到 data/audit/complex-analysis-v2/CH06-S02-SS04.loop.json

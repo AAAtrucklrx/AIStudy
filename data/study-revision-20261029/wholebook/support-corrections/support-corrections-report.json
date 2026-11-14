@@ -1,0 +1,1297 @@
+{
+  "schema_version": "PreparedSupportCorrectionsV1",
+  "source": "/Users/huang/Documents/ChatGPT/ai for study项目的改进/delivery/复变函数-教材连贯版-20261029/book/data/data.js",
+  "source_file_sha256": "sha256:8ce7f21a92fe8ee3b1ed37946d76878a7102af2bce2c64b82ba4ed831d21e934",
+  "affected_units": [
+    "CH05-S02",
+    "CH05-S04",
+    "CH07-S01",
+    "CH05-S05",
+    "CH06-S03",
+    "CH02-S05-SS06",
+    "CH02-S05-SS07",
+    "CH03-S05",
+    "CH09-S03-SS03",
+    "CH08-S06",
+    "CH08",
+    "CH06-S02-SS02"
+  ],
+  "snapshots": [
+    {
+      "unit_id": "CH05-S02",
+      "snapshot": "snapshots/CH05-S02.json",
+      "logical_sha256": "sha256:84fe2228140ef255535c67fc6595961d5ade241a408a13635f316b9cf13465c3",
+      "projection": "projections/CH05-S02.json"
+    },
+    {
+      "unit_id": "CH05-S04",
+      "snapshot": "snapshots/CH05-S04.json",
+      "logical_sha256": "sha256:e1b64795250220a52ac8af68696341f4784e623367c2e09425e59450dc2cc018",
+      "projection": "projections/CH05-S04.json"
+    },
+    {
+      "unit_id": "CH07-S01",
+      "snapshot": "snapshots/CH07-S01.json",
+      "logical_sha256": "sha256:600a43c0d3332fd0fefad22cf6e3636b88844c57a10dd71da702700d448bd53d",
+      "projection": "projections/CH07-S01.json"
+    },
+    {
+      "unit_id": "CH05-S05",
+      "snapshot": "snapshots/CH05-S05.json",
+      "logical_sha256": "sha256:683d27f29be05ac48ff44aab78ebf71c82d6baa005f7b9b61afa7fb77e440d29",
+      "projection": "projections/CH05-S05.json"
+    },
+    {
+      "unit_id": "CH06-S03",
+      "snapshot": "snapshots/CH06-S03.json",
+      "logical_sha256": "sha256:22e4fa6284f95547efcb646e8f9e5e138756bb787c3f9ecb8393e59881c30cc9",
+      "projection": "projections/CH06-S03.json"
+    },
+    {
+      "unit_id": "CH02-S05-SS06",
+      "snapshot": "snapshots/CH02-S05-SS06.json",
+      "logical_sha256": "sha256:d336158d1cb39993d2cbf1a7ae7157e07b3c53dc21ea508e6c7ddedaece112e7",
+      "projection": "projections/CH02-S05-SS06.json"
+    },
+    {
+      "unit_id": "CH02-S05-SS07",
+      "snapshot": "snapshots/CH02-S05-SS07.json",
+      "logical_sha256": "sha256:f9cf0f8078f34aeded363b4eb27bfd02c99b066603fdca2071c159a2c094468d",
+      "projection": "projections/CH02-S05-SS07.json"
+    },
+    {
+      "unit_id": "CH03-S05",
+      "snapshot": "snapshots/CH03-S05.json",
+      "logical_sha256": "sha256:e7170e643a1005d056ad421e4f2c38aae94f5abbf126376dc5cd99ca28829f45",
+      "projection": "projections/CH03-S05.json"
+    },
+    {
+      "unit_id": "CH09-S03-SS03",
+      "snapshot": "snapshots/CH09-S03-SS03.json",
+      "logical_sha256": "sha256:94d1533c7025d4f4f21f1a69f2be71c211a948bff49ff699f41d637d2911d4e9",
+      "projection": "projections/CH09-S03-SS03.json"
+    },
+    {
+      "unit_id": "CH08-S06",
+      "snapshot": "snapshots/CH08-S06.json",
+      "logical_sha256": "sha256:eaf11860b615b7d27b14e360cc6a1f9c832fe9a500e3431ebc1a5c4cf3853e76",
+      "projection": "projections/CH08-S06.json"
+    },
+    {
+      "unit_id": "CH08",
+      "snapshot": "snapshots/CH08.json",
+      "logical_sha256": "sha256:d32bb59c4ffebfb3f2b656c57b02618cac0329c036c02dac668c0c5f2125b701",
+      "projection": "projections/CH08.json"
+    },
+    {
+      "unit_id": "CH06-S02-SS02",
+      "snapshot": "snapshots/CH06-S02-SS02.json",
+      "logical_sha256": "sha256:61d849ea5fc68fe1e28b9252c22d44fbece2bae3e98fb1f16355e8c2ab55f1e2",
+      "projection": "projections/CH06-S02-SS02.json"
+    }
+  ],
+  "unit_reports": [
+    {
+      "schema_version": "SupportDisplayCorrectionReportV1",
+      "unit_id": "CH05-S02",
+      "correction_policy": "VERIFIED-SUPPORT-DISPLAY-ERRATA-V3",
+      "status": "corrected",
+      "input_document_sha256": "sha256:84fe2228140ef255535c67fc6595961d5ade241a408a13635f316b9cf13465c3",
+      "source_content_hash": "sha256:003abe3a338b5c42512b84b103b8f1de988d09f98bc753e10226fcfe5d86aa50",
+      "source_catalog_hash": "sha256:0aebdaa3d32a926510da09b4baf5055c84e7355f8e622a6c9a6947f19ed426f4",
+      "changes": [
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0256-INVERSE-RATIO-V1",
+          "pointer": "/reference_catalog/entries/126/markdown",
+          "owner_id": "C-0256",
+          "before": "如果$$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$则复幂级数(5.5)的收敛半径 R = 1/r.",
+          "after": "若相邻系数最终非零，且下列极限存在，则达朗贝尔公式为\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r\\quad\\Longrightarrow\\quad R=r.$$\n\n约定 $r=0$ 时 $R=0$，$r=+\\infty$ 时 $R=+\\infty$。若用根值极限，则另记为 $L$，柯西公式为\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=L\\quad\\Longrightarrow\\quad R=\\frac1L.$$\n\n根值公式约定 $1/0=+\\infty$、$1/(+\\infty)=0$；相邻系数缺项或比值无定义时，不直接使用相邻比值公式。",
+          "source_version": "sha256:f2937cd0b8264e5920b9073b5461f8aff2e05ca27823ce9096a9f7e9877899e1",
+          "display_version": "sha256:a8845335671fcbfa9b20c52c434df6d56a042d8347426f4ac3af12c152f9042e"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0175-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/74/markdown",
+          "owner_id": "C-0175",
+          "before": "双曲正弦函数和双曲余弦函数都是全平面的解析函数，而双曲正切函数及双曲余切函数，则是分别除去 $z = n\\pi \\mathrm{i}$ 及 $z = (n + 1 / 2)\\pi \\mathrm{i}, n = 0, \\pm 1, \\pm 2, \\dots$ 的全平面上的解析函数",
+          "after": "双曲正弦 $\\sinh z$ 与双曲余弦 $\\cosh z$ 是整函数。双曲正切 $\\tanh z=\\sinh z/\\cosh z$ 的极点为 $z=(n+1/2)\\pi\\mathrm i$；双曲余切 $\\coth z=\\cosh z/\\sinh z$ 的极点为 $z=n\\pi\\mathrm i$，其中 $n\\in\\mathbb Z$。各商在除去各自这组极点的全平面解析。",
+          "source_version": "sha256:f2937cd0b8264e5920b9073b5461f8aff2e05ca27823ce9096a9f7e9877899e1",
+          "display_version": "sha256:4f2da2aeac2f838a8b64bce76b5c11c2a77a59b94be1ea37bdee9db5adc16dd7"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0219-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/101/markdown",
+          "owner_id": "C-0219",
+          "before": "设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$",
+          "after": "设 $f$ 在开区域 $D$ 内解析，且以 $a$ 为圆心、半径 $R>0$ 的整个闭圆盘 $\\{\\zeta:|\\zeta-a|\\le R\\}$ 包含于 $D$。记 $M(R)=\\max_{|\\zeta-a|=R}|f(\\zeta)|$，则对每个非负整数 $n$ 有 $$|f^{(n)}(a)|\\le\\frac{n!M(R)}{R^n}.$$ 只要求圆周在 $D$ 内不够；闭圆盘内部也不能有函数的奇点。",
+          "source_version": "sha256:f2937cd0b8264e5920b9073b5461f8aff2e05ca27823ce9096a9f7e9877899e1",
+          "display_version": "sha256:eb0e1ddabae7aa49450801ebccb038f0a48ac77d01fd9a11c3884e4580b67b1b"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0522-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/256/markdown",
+          "owner_id": "C-0522",
+          "before": "当 $\\alpha$ 为正整数 $n$ 时，$z ^ {n} = \\exp [ n (\\ln | z | + \\operatorname{iarg} z) ] = | z | ^ {n} \\exp (\\operatorname{iarg} z)$，与通常幂函数一致，是一个单值函数.",
+          "after": "当 $n$ 为正整数、$z\\ne0$ 时，选任一辐角 $\\theta$，有 $z^n=\\exp[n(\\ln|z|+\\mathrm i\\theta)]=|z|^n e^{\\mathrm in\\theta}$。将 $\\theta$ 改成 $\\theta+2k\\pi$ 不改变结果，所以与通常整数幂一致，是单值函数；在 $z=0$ 补定义 $0^n=0$。极式中的角度必须乘以 $n$，例如 $\\mathrm i^2=e^{\\mathrm i\\pi}=-1$。",
+          "source_version": "sha256:f2937cd0b8264e5920b9073b5461f8aff2e05ca27823ce9096a9f7e9877899e1",
+          "display_version": "sha256:2fd2fadf06e34f3dee95fc2d2ac1bf928c53a563f5501a473707a13fd020477f"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0796-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/474/markdown",
+          "owner_id": "C-0796",
+          "before": "由积分 $\\frac{2}{\\sqrt{\\pi}}\\int_0^n\\mathrm{e}^{-x^2}\\mathrm{d}x$ 所定义的函数，也是一类重要的特殊函数，它称为概率积分或误差函数，记为 $\\operatorname {erf}(x)$ ，于是$$\\mathbf {L} ^ {- 1} \\left[ \\frac {\\sqrt {a}}{p (p + a)} \\right] = \\operatorname{erf} (\\sqrt {a t}) \\quad (\\text {附表2中公式53}).$$",
+          "after": "对实数 $x$，误差函数定义为 $\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_0^x e^{-u^2}\\,\\mathrm du$。当 $a>0$、$t\\ge0$ 时，其拉普拉斯变换关系为 $$\\mathcal L^{-1}\\!\\left[\\frac{\\sqrt a}{p\\sqrt{p+a}}\\right](t)=\\operatorname{erf}(\\sqrt{at}),\\qquad\\operatorname{Re}p>0.$$ 在右半平面取与正实轴正平方根一致的解析平方根；分母中是 $p\\sqrt{p+a}$，不能写成 $p(p+a)$。",
+          "source_version": "sha256:f2937cd0b8264e5920b9073b5461f8aff2e05ca27823ce9096a9f7e9877899e1",
+          "display_version": "sha256:479cd782eaa7a3ea20b2e91fb2b9e2a41cf30388adf79eca2fd40f2df4605426"
+        },
+        {
+          "kind": "reader_block",
+          "correction_id": "SUPPORT-C0256-INVERSE-RATIO-V1",
+          "pointer": "/blocks/62",
+          "json_pointer": "/corrections/0/original",
+          "owner_id": "CORR-C0256-DALEMBERT",
+          "anchor": "reader-2f45b9b2e116a19ab753",
+          "block_id": "sha256:e015fd914e620ed3dad2f436eeb41b6bf8770868e02acd70eb654f16033d755b",
+          "before": "由上面讨论，复幂级数(5.5)在 $z - a$ 的幂无间隔的条件下收敛半径可按达朗贝尔(d'Alembert)公式或柯西公式计算：如果$$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$则复幂级数(5.5)的收敛半径 R = 1/r.",
+          "after": "由上面讨论，复幂级数(5.5)在 $z - a$ 的幂无间隔的条件下收敛半径可按达朗贝尔(d'Alembert)公式或柯西公式计算：\n\n若相邻系数最终非零，且下列极限存在，则达朗贝尔公式为\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r\\quad\\Longrightarrow\\quad R=r.$$\n\n约定 $r=0$ 时 $R=0$，$r=+\\infty$ 时 $R=+\\infty$。若用根值极限，则另记为 $L$，柯西公式为\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=L\\quad\\Longrightarrow\\quad R=\\frac1L.$$\n\n根值公式约定 $1/0=+\\infty$、$1/(+\\infty)=0$；相邻系数缺项或比值无定义时，不直接使用相邻比值公式。",
+          "derived_fields_rebuilt": [
+            "raw_text",
+            "visible_text",
+            "source_map",
+            "marker_spans",
+            "markdown"
+          ]
+        },
+        {
+          "kind": "reader_block",
+          "correction_id": "SUPPORT-C0256-INVERSE-RATIO-V1",
+          "pointer": "/blocks/77",
+          "json_pointer": "/reference_catalog/entries/126/markdown",
+          "owner_id": "C-0256",
+          "anchor": "reader-b2d1feb0c361060b4b8d",
+          "block_id": "sha256:86a840303d5e98c1739eee663c9541dad40f64d10556794ef2c6f05b60b8b044",
+          "before": "如果$$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$则复幂级数(5.5)的收敛半径 R = 1/r.",
+          "after": "若相邻系数最终非零，且下列极限存在，则达朗贝尔公式为\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r\\quad\\Longrightarrow\\quad R=r.$$\n\n约定 $r=0$ 时 $R=0$，$r=+\\infty$ 时 $R=+\\infty$。若用根值极限，则另记为 $L$，柯西公式为\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=L\\quad\\Longrightarrow\\quad R=\\frac1L.$$\n\n根值公式约定 $1/0=+\\infty$、$1/(+\\infty)=0$；相邻系数缺项或比值无定义时，不直接使用相邻比值公式。",
+          "derived_fields_rebuilt": [
+            "raw_text",
+            "visible_text",
+            "source_map",
+            "marker_spans",
+            "markdown"
+          ]
+        }
+      ],
+      "signature_mismatches": [],
+      "snapshot_policy": "Caller retains the unmodified input in study_source_document; CLI saves snapshots separately.",
+      "display_content_hash": "sha256:15bff0d6d81ca8630a7d9b76ba8e9780d830d502d1f0d322a776a894e0c44488",
+      "correction_ids": [
+        "SUPPORT-C0175-CANONICAL-V1",
+        "SUPPORT-C0219-CANONICAL-V1",
+        "SUPPORT-C0256-INVERSE-RATIO-V1",
+        "SUPPORT-C0522-CANONICAL-V1",
+        "SUPPORT-C0796-CANONICAL-V1"
+      ],
+      "display_catalog_hash": "sha256:2b324d1bf8294b53d2b9dbfc32981e3ac37d72b4044aca23879853282560dd9c",
+      "output_document_sha256": "sha256:382b5caac5dbc16f57c234640af383bd92014aeb0e41ba9c0409d4d0e3de3a44",
+      "anchors_preserved": true,
+      "block_ids_preserved": true,
+      "owner_ids_preserved": true,
+      "input_unchanged": true
+    },
+    {
+      "schema_version": "SupportDisplayCorrectionReportV1",
+      "unit_id": "CH05-S04",
+      "correction_policy": "VERIFIED-SUPPORT-DISPLAY-ERRATA-V3",
+      "status": "corrected",
+      "input_document_sha256": "sha256:e1b64795250220a52ac8af68696341f4784e623367c2e09425e59450dc2cc018",
+      "source_content_hash": "sha256:83d5ef778e1dbe24ff2e698bb8cff47a42593ada9d645a997477f24d10b43cb0",
+      "source_catalog_hash": "sha256:3ba587013d32347eab6ae2b93fc9d93873309f2d768cf3b4f329862f2a3c5e59",
+      "changes": [
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0256-INVERSE-RATIO-V1",
+          "pointer": "/reference_catalog/entries/126/markdown",
+          "owner_id": "C-0256",
+          "before": "如果$$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$则复幂级数(5.5)的收敛半径 R = 1/r.",
+          "after": "若相邻系数最终非零，且下列极限存在，则达朗贝尔公式为\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r\\quad\\Longrightarrow\\quad R=r.$$\n\n约定 $r=0$ 时 $R=0$，$r=+\\infty$ 时 $R=+\\infty$。若用根值极限，则另记为 $L$，柯西公式为\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=L\\quad\\Longrightarrow\\quad R=\\frac1L.$$\n\n根值公式约定 $1/0=+\\infty$、$1/(+\\infty)=0$；相邻系数缺项或比值无定义时，不直接使用相邻比值公式。",
+          "source_version": "sha256:2edd2e51adb3d1c67276606ddbebf4c24b08bddc495b96a9eb3809cc9e54c20e",
+          "display_version": "sha256:f4d533a9309ac8acec880ffb06d9f5ae88b006ab85ec3e516c9aa1725b8303fd"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0175-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/74/markdown",
+          "owner_id": "C-0175",
+          "before": "双曲正弦函数和双曲余弦函数都是全平面的解析函数，而双曲正切函数及双曲余切函数，则是分别除去 $z = n\\pi \\mathrm{i}$ 及 $z = (n + 1 / 2)\\pi \\mathrm{i}, n = 0, \\pm 1, \\pm 2, \\dots$ 的全平面上的解析函数",
+          "after": "双曲正弦 $\\sinh z$ 与双曲余弦 $\\cosh z$ 是整函数。双曲正切 $\\tanh z=\\sinh z/\\cosh z$ 的极点为 $z=(n+1/2)\\pi\\mathrm i$；双曲余切 $\\coth z=\\cosh z/\\sinh z$ 的极点为 $z=n\\pi\\mathrm i$，其中 $n\\in\\mathbb Z$。各商在除去各自这组极点的全平面解析。",
+          "source_version": "sha256:2edd2e51adb3d1c67276606ddbebf4c24b08bddc495b96a9eb3809cc9e54c20e",
+          "display_version": "sha256:99a9d56e2275b3ae5712479881cf1a342b798342fa0d5ea1dab5690759db6f2b"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0219-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/101/markdown",
+          "owner_id": "C-0219",
+          "before": "设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$",
+          "after": "设 $f$ 在开区域 $D$ 内解析，且以 $a$ 为圆心、半径 $R>0$ 的整个闭圆盘 $\\{\\zeta:|\\zeta-a|\\le R\\}$ 包含于 $D$。记 $M(R)=\\max_{|\\zeta-a|=R}|f(\\zeta)|$，则对每个非负整数 $n$ 有 $$|f^{(n)}(a)|\\le\\frac{n!M(R)}{R^n}.$$ 只要求圆周在 $D$ 内不够；闭圆盘内部也不能有函数的奇点。",
+          "source_version": "sha256:2edd2e51adb3d1c67276606ddbebf4c24b08bddc495b96a9eb3809cc9e54c20e",
+          "display_version": "sha256:25b33974f40b325bca070d2ab41541c78bd46ac204f250cd801f542386cb954e"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0522-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/256/markdown",
+          "owner_id": "C-0522",
+          "before": "当 $\\alpha$ 为正整数 $n$ 时，$z ^ {n} = \\exp [ n (\\ln | z | + \\operatorname{iarg} z) ] = | z | ^ {n} \\exp (\\operatorname{iarg} z)$，与通常幂函数一致，是一个单值函数.",
+          "after": "当 $n$ 为正整数、$z\\ne0$ 时，选任一辐角 $\\theta$，有 $z^n=\\exp[n(\\ln|z|+\\mathrm i\\theta)]=|z|^n e^{\\mathrm in\\theta}$。将 $\\theta$ 改成 $\\theta+2k\\pi$ 不改变结果，所以与通常整数幂一致，是单值函数；在 $z=0$ 补定义 $0^n=0$。极式中的角度必须乘以 $n$，例如 $\\mathrm i^2=e^{\\mathrm i\\pi}=-1$。",
+          "source_version": "sha256:2edd2e51adb3d1c67276606ddbebf4c24b08bddc495b96a9eb3809cc9e54c20e",
+          "display_version": "sha256:c777708e2ee37e1a5af7106d62863ab8b4c03ef5766a3c843d22624d85802e74"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0796-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/474/markdown",
+          "owner_id": "C-0796",
+          "before": "由积分 $\\frac{2}{\\sqrt{\\pi}}\\int_0^n\\mathrm{e}^{-x^2}\\mathrm{d}x$ 所定义的函数，也是一类重要的特殊函数，它称为概率积分或误差函数，记为 $\\operatorname {erf}(x)$ ，于是$$\\mathbf {L} ^ {- 1} \\left[ \\frac {\\sqrt {a}}{p (p + a)} \\right] = \\operatorname{erf} (\\sqrt {a t}) \\quad (\\text {附表2中公式53}).$$",
+          "after": "对实数 $x$，误差函数定义为 $\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_0^x e^{-u^2}\\,\\mathrm du$。当 $a>0$、$t\\ge0$ 时，其拉普拉斯变换关系为 $$\\mathcal L^{-1}\\!\\left[\\frac{\\sqrt a}{p\\sqrt{p+a}}\\right](t)=\\operatorname{erf}(\\sqrt{at}),\\qquad\\operatorname{Re}p>0.$$ 在右半平面取与正实轴正平方根一致的解析平方根；分母中是 $p\\sqrt{p+a}$，不能写成 $p(p+a)$。",
+          "source_version": "sha256:2edd2e51adb3d1c67276606ddbebf4c24b08bddc495b96a9eb3809cc9e54c20e",
+          "display_version": "sha256:52769e0acb89cd95299519d4e83e31d2eca6398dad58cfc379a618ab3a7e0f58"
+        },
+        {
+          "kind": "reader_block",
+          "correction_id": "SUPPORT-C0256-INVERSE-RATIO-V1",
+          "pointer": "/blocks/125",
+          "json_pointer": "/reference_catalog/entries/126/markdown",
+          "owner_id": "C-0256",
+          "anchor": "reader-b2d1feb0c361060b4b8d",
+          "block_id": "sha256:e7c878b61700bdfb8a02e1587fb4819a12d69a89fb389e9df48b4ecace77f250",
+          "before": "如果$$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$则复幂级数(5.5)的收敛半径 R = 1/r.",
+          "after": "若相邻系数最终非零，且下列极限存在，则达朗贝尔公式为\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r\\quad\\Longrightarrow\\quad R=r.$$\n\n约定 $r=0$ 时 $R=0$，$r=+\\infty$ 时 $R=+\\infty$。若用根值极限，则另记为 $L$，柯西公式为\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=L\\quad\\Longrightarrow\\quad R=\\frac1L.$$\n\n根值公式约定 $1/0=+\\infty$、$1/(+\\infty)=0$；相邻系数缺项或比值无定义时，不直接使用相邻比值公式。",
+          "derived_fields_rebuilt": [
+            "raw_text",
+            "visible_text",
+            "source_map",
+            "marker_spans",
+            "markdown"
+          ]
+        }
+      ],
+      "signature_mismatches": [],
+      "snapshot_policy": "Caller retains the unmodified input in study_source_document; CLI saves snapshots separately.",
+      "display_content_hash": "sha256:ae5ed34e095caaacd0d8e8e21bdc95953a4058cddd478f898b92c8bb9a144f13",
+      "correction_ids": [
+        "SUPPORT-C0175-CANONICAL-V1",
+        "SUPPORT-C0219-CANONICAL-V1",
+        "SUPPORT-C0256-INVERSE-RATIO-V1",
+        "SUPPORT-C0522-CANONICAL-V1",
+        "SUPPORT-C0796-CANONICAL-V1"
+      ],
+      "display_catalog_hash": "sha256:1add84bcb0a775f6f1ea8a07ff49d2c0309344f3d745d216d3d61f5f793c1a24",
+      "output_document_sha256": "sha256:2b104c4ff1e38830dfc07ec293848aeef9898c3bd0ef1c3287a3ff2170fded69",
+      "anchors_preserved": true,
+      "block_ids_preserved": true,
+      "owner_ids_preserved": true,
+      "input_unchanged": true
+    },
+    {
+      "schema_version": "SupportDisplayCorrectionReportV1",
+      "unit_id": "CH07-S01",
+      "correction_policy": "VERIFIED-SUPPORT-DISPLAY-ERRATA-V3",
+      "status": "corrected",
+      "input_document_sha256": "sha256:600a43c0d3332fd0fefad22cf6e3636b88844c57a10dd71da702700d448bd53d",
+      "source_content_hash": "sha256:3093d5cb8609aa098908912f07a9f5463994f2f996134624bcd502fb6bfdbadd",
+      "source_catalog_hash": "sha256:d355722e85dc1e079328573d9c8867076fc05edc7c10b59a1f0aeed9c28739a2",
+      "changes": [
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0256-INVERSE-RATIO-V1",
+          "pointer": "/reference_catalog/entries/126/markdown",
+          "owner_id": "C-0256",
+          "before": "如果$$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$则复幂级数(5.5)的收敛半径 R = 1/r.",
+          "after": "若相邻系数最终非零，且下列极限存在，则达朗贝尔公式为\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r\\quad\\Longrightarrow\\quad R=r.$$\n\n约定 $r=0$ 时 $R=0$，$r=+\\infty$ 时 $R=+\\infty$。若用根值极限，则另记为 $L$，柯西公式为\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=L\\quad\\Longrightarrow\\quad R=\\frac1L.$$\n\n根值公式约定 $1/0=+\\infty$、$1/(+\\infty)=0$；相邻系数缺项或比值无定义时，不直接使用相邻比值公式。",
+          "source_version": "sha256:5e59669cd6110c599af1050527d6246d1d63a61763deaee3b2bcc59281cc327f",
+          "display_version": "sha256:1b24fcbb729bd0b1a574fd74858bfa300421fd5de3f67b1a65c47eb74f456390"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0175-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/74/markdown",
+          "owner_id": "C-0175",
+          "before": "双曲正弦函数和双曲余弦函数都是全平面的解析函数，而双曲正切函数及双曲余切函数，则是分别除去 $z = n\\pi \\mathrm{i}$ 及 $z = (n + 1 / 2)\\pi \\mathrm{i}, n = 0, \\pm 1, \\pm 2, \\dots$ 的全平面上的解析函数",
+          "after": "双曲正弦 $\\sinh z$ 与双曲余弦 $\\cosh z$ 是整函数。双曲正切 $\\tanh z=\\sinh z/\\cosh z$ 的极点为 $z=(n+1/2)\\pi\\mathrm i$；双曲余切 $\\coth z=\\cosh z/\\sinh z$ 的极点为 $z=n\\pi\\mathrm i$，其中 $n\\in\\mathbb Z$。各商在除去各自这组极点的全平面解析。",
+          "source_version": "sha256:5e59669cd6110c599af1050527d6246d1d63a61763deaee3b2bcc59281cc327f",
+          "display_version": "sha256:a6f1f3a5f08b610bc49d671c5ac5243d64243b9b3da277bc19e681119b87f854"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0219-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/101/markdown",
+          "owner_id": "C-0219",
+          "before": "设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$",
+          "after": "设 $f$ 在开区域 $D$ 内解析，且以 $a$ 为圆心、半径 $R>0$ 的整个闭圆盘 $\\{\\zeta:|\\zeta-a|\\le R\\}$ 包含于 $D$。记 $M(R)=\\max_{|\\zeta-a|=R}|f(\\zeta)|$，则对每个非负整数 $n$ 有 $$|f^{(n)}(a)|\\le\\frac{n!M(R)}{R^n}.$$ 只要求圆周在 $D$ 内不够；闭圆盘内部也不能有函数的奇点。",
+          "source_version": "sha256:5e59669cd6110c599af1050527d6246d1d63a61763deaee3b2bcc59281cc327f",
+          "display_version": "sha256:6c7ee096113cfac02a8fc48693edb1b29fbf478326a9349b0d0adb8656969a8f"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0522-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/256/markdown",
+          "owner_id": "C-0522",
+          "before": "当 $\\alpha$ 为正整数 $n$ 时，$z ^ {n} = \\exp [ n (\\ln | z | + \\operatorname{iarg} z) ] = | z | ^ {n} \\exp (\\operatorname{iarg} z)$，与通常幂函数一致，是一个单值函数.",
+          "after": "当 $n$ 为正整数、$z\\ne0$ 时，选任一辐角 $\\theta$，有 $z^n=\\exp[n(\\ln|z|+\\mathrm i\\theta)]=|z|^n e^{\\mathrm in\\theta}$。将 $\\theta$ 改成 $\\theta+2k\\pi$ 不改变结果，所以与通常整数幂一致，是单值函数；在 $z=0$ 补定义 $0^n=0$。极式中的角度必须乘以 $n$，例如 $\\mathrm i^2=e^{\\mathrm i\\pi}=-1$。",
+          "source_version": "sha256:5e59669cd6110c599af1050527d6246d1d63a61763deaee3b2bcc59281cc327f",
+          "display_version": "sha256:f17312fa9e7fe8c027f9459c1baddc52374d5136a2d4df04f6086e7eec795edc"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0796-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/474/markdown",
+          "owner_id": "C-0796",
+          "before": "由积分 $\\frac{2}{\\sqrt{\\pi}}\\int_0^n\\mathrm{e}^{-x^2}\\mathrm{d}x$ 所定义的函数，也是一类重要的特殊函数，它称为概率积分或误差函数，记为 $\\operatorname {erf}(x)$ ，于是$$\\mathbf {L} ^ {- 1} \\left[ \\frac {\\sqrt {a}}{p (p + a)} \\right] = \\operatorname{erf} (\\sqrt {a t}) \\quad (\\text {附表2中公式53}).$$",
+          "after": "对实数 $x$，误差函数定义为 $\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_0^x e^{-u^2}\\,\\mathrm du$。当 $a>0$、$t\\ge0$ 时，其拉普拉斯变换关系为 $$\\mathcal L^{-1}\\!\\left[\\frac{\\sqrt a}{p\\sqrt{p+a}}\\right](t)=\\operatorname{erf}(\\sqrt{at}),\\qquad\\operatorname{Re}p>0.$$ 在右半平面取与正实轴正平方根一致的解析平方根；分母中是 $p\\sqrt{p+a}$，不能写成 $p(p+a)$。",
+          "source_version": "sha256:5e59669cd6110c599af1050527d6246d1d63a61763deaee3b2bcc59281cc327f",
+          "display_version": "sha256:2884da415d0dedc3c84f1067e7bb7109930a32bd4bfc919930d6a30aa4c28934"
+        },
+        {
+          "kind": "reader_block",
+          "correction_id": "SUPPORT-C0256-INVERSE-RATIO-V1",
+          "pointer": "/blocks/97",
+          "json_pointer": "/reference_catalog/entries/126/markdown",
+          "owner_id": "C-0256",
+          "anchor": "reader-b2d1feb0c361060b4b8d",
+          "block_id": "sha256:9db2a445f7e892228cae34fdb3da65bf517c04894ee11869143535756f1c264d",
+          "before": "如果$$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$则复幂级数(5.5)的收敛半径 R = 1/r.",
+          "after": "若相邻系数最终非零，且下列极限存在，则达朗贝尔公式为\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r\\quad\\Longrightarrow\\quad R=r.$$\n\n约定 $r=0$ 时 $R=0$，$r=+\\infty$ 时 $R=+\\infty$。若用根值极限，则另记为 $L$，柯西公式为\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=L\\quad\\Longrightarrow\\quad R=\\frac1L.$$\n\n根值公式约定 $1/0=+\\infty$、$1/(+\\infty)=0$；相邻系数缺项或比值无定义时，不直接使用相邻比值公式。",
+          "derived_fields_rebuilt": [
+            "raw_text",
+            "visible_text",
+            "source_map",
+            "marker_spans",
+            "markdown"
+          ]
+        }
+      ],
+      "signature_mismatches": [],
+      "snapshot_policy": "Caller retains the unmodified input in study_source_document; CLI saves snapshots separately.",
+      "display_content_hash": "sha256:35a4a2319d89996577dd15520f322d82b941614f0e866cb2d9f7ad277356a76f",
+      "correction_ids": [
+        "SUPPORT-C0175-CANONICAL-V1",
+        "SUPPORT-C0219-CANONICAL-V1",
+        "SUPPORT-C0256-INVERSE-RATIO-V1",
+        "SUPPORT-C0522-CANONICAL-V1",
+        "SUPPORT-C0796-CANONICAL-V1"
+      ],
+      "display_catalog_hash": "sha256:844fa7fc6abe0f889581cac2c6be83a34aae72187f9629f18cd5dc02c9391574",
+      "output_document_sha256": "sha256:232b02148f7b49558c54264f8e5f012b0a9425a7de8b4331675dc80fbe066696",
+      "anchors_preserved": true,
+      "block_ids_preserved": true,
+      "owner_ids_preserved": true,
+      "input_unchanged": true
+    },
+    {
+      "schema_version": "SupportDisplayCorrectionReportV1",
+      "unit_id": "CH05-S05",
+      "correction_policy": "VERIFIED-SUPPORT-DISPLAY-ERRATA-V3",
+      "status": "corrected",
+      "input_document_sha256": "sha256:683d27f29be05ac48ff44aab78ebf71c82d6baa005f7b9b61afa7fb77e440d29",
+      "source_content_hash": "sha256:50bc5b67952fd17db83d13f6e22079f86f1e3170731ae1966ce287da229e1fd6",
+      "source_catalog_hash": "sha256:31627f7a6d69cd26035295850b3362379f0dcd8d0db1ccc9356de7cf824771c1",
+      "changes": [
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0256-INVERSE-RATIO-V1",
+          "pointer": "/reference_catalog/entries/126/markdown",
+          "owner_id": "C-0256",
+          "before": "如果$$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$则复幂级数(5.5)的收敛半径 R = 1/r.",
+          "after": "若相邻系数最终非零，且下列极限存在，则达朗贝尔公式为\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r\\quad\\Longrightarrow\\quad R=r.$$\n\n约定 $r=0$ 时 $R=0$，$r=+\\infty$ 时 $R=+\\infty$。若用根值极限，则另记为 $L$，柯西公式为\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=L\\quad\\Longrightarrow\\quad R=\\frac1L.$$\n\n根值公式约定 $1/0=+\\infty$、$1/(+\\infty)=0$；相邻系数缺项或比值无定义时，不直接使用相邻比值公式。",
+          "source_version": "sha256:86147b8cc66aecf4db050edfcd0acb7e0616d86055ad99132e5413bc1dd83ead",
+          "display_version": "sha256:c39833a90c90e020ae32a21b34feb9109242d5d29ad44b7c47d0554f09fb2439"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0175-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/74/markdown",
+          "owner_id": "C-0175",
+          "before": "双曲正弦函数和双曲余弦函数都是全平面的解析函数，而双曲正切函数及双曲余切函数，则是分别除去 $z = n\\pi \\mathrm{i}$ 及 $z = (n + 1 / 2)\\pi \\mathrm{i}, n = 0, \\pm 1, \\pm 2, \\dots$ 的全平面上的解析函数",
+          "after": "双曲正弦 $\\sinh z$ 与双曲余弦 $\\cosh z$ 是整函数。双曲正切 $\\tanh z=\\sinh z/\\cosh z$ 的极点为 $z=(n+1/2)\\pi\\mathrm i$；双曲余切 $\\coth z=\\cosh z/\\sinh z$ 的极点为 $z=n\\pi\\mathrm i$，其中 $n\\in\\mathbb Z$。各商在除去各自这组极点的全平面解析。",
+          "source_version": "sha256:86147b8cc66aecf4db050edfcd0acb7e0616d86055ad99132e5413bc1dd83ead",
+          "display_version": "sha256:073273189a5870594b3e690631c56a8b24505dd25bbaf6db3a84770991c5d942"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0219-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/101/markdown",
+          "owner_id": "C-0219",
+          "before": "设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$",
+          "after": "设 $f$ 在开区域 $D$ 内解析，且以 $a$ 为圆心、半径 $R>0$ 的整个闭圆盘 $\\{\\zeta:|\\zeta-a|\\le R\\}$ 包含于 $D$。记 $M(R)=\\max_{|\\zeta-a|=R}|f(\\zeta)|$，则对每个非负整数 $n$ 有 $$|f^{(n)}(a)|\\le\\frac{n!M(R)}{R^n}.$$ 只要求圆周在 $D$ 内不够；闭圆盘内部也不能有函数的奇点。",
+          "source_version": "sha256:86147b8cc66aecf4db050edfcd0acb7e0616d86055ad99132e5413bc1dd83ead",
+          "display_version": "sha256:b1e9ea7bc26f6f6385393a79ca73bac790b541e48d1a6927973981fd6a48d739"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0522-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/256/markdown",
+          "owner_id": "C-0522",
+          "before": "当 $\\alpha$ 为正整数 $n$ 时，$z ^ {n} = \\exp [ n (\\ln | z | + \\operatorname{iarg} z) ] = | z | ^ {n} \\exp (\\operatorname{iarg} z)$，与通常幂函数一致，是一个单值函数.",
+          "after": "当 $n$ 为正整数、$z\\ne0$ 时，选任一辐角 $\\theta$，有 $z^n=\\exp[n(\\ln|z|+\\mathrm i\\theta)]=|z|^n e^{\\mathrm in\\theta}$。将 $\\theta$ 改成 $\\theta+2k\\pi$ 不改变结果，所以与通常整数幂一致，是单值函数；在 $z=0$ 补定义 $0^n=0$。极式中的角度必须乘以 $n$，例如 $\\mathrm i^2=e^{\\mathrm i\\pi}=-1$。",
+          "source_version": "sha256:86147b8cc66aecf4db050edfcd0acb7e0616d86055ad99132e5413bc1dd83ead",
+          "display_version": "sha256:461e98bcfb9a5978626062c2482f098d31e94e81635a5beda4fef2fffe9f671d"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0796-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/474/markdown",
+          "owner_id": "C-0796",
+          "before": "由积分 $\\frac{2}{\\sqrt{\\pi}}\\int_0^n\\mathrm{e}^{-x^2}\\mathrm{d}x$ 所定义的函数，也是一类重要的特殊函数，它称为概率积分或误差函数，记为 $\\operatorname {erf}(x)$ ，于是$$\\mathbf {L} ^ {- 1} \\left[ \\frac {\\sqrt {a}}{p (p + a)} \\right] = \\operatorname{erf} (\\sqrt {a t}) \\quad (\\text {附表2中公式53}).$$",
+          "after": "对实数 $x$，误差函数定义为 $\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_0^x e^{-u^2}\\,\\mathrm du$。当 $a>0$、$t\\ge0$ 时，其拉普拉斯变换关系为 $$\\mathcal L^{-1}\\!\\left[\\frac{\\sqrt a}{p\\sqrt{p+a}}\\right](t)=\\operatorname{erf}(\\sqrt{at}),\\qquad\\operatorname{Re}p>0.$$ 在右半平面取与正实轴正平方根一致的解析平方根；分母中是 $p\\sqrt{p+a}$，不能写成 $p(p+a)$。",
+          "source_version": "sha256:86147b8cc66aecf4db050edfcd0acb7e0616d86055ad99132e5413bc1dd83ead",
+          "display_version": "sha256:178bd9d391b148ffaed4d456bafc7a6cc41fcc0f810120a1533e88fd64ac04c5"
+        },
+        {
+          "kind": "reader_block",
+          "correction_id": "SUPPORT-CH05-S05-FINITE-PRODUCT-LIMIT-V1",
+          "pointer": "/blocks/9",
+          "json_pointer": "/annotations/3/markdown",
+          "owner_id": "PITFALL-LIMIT-FINITE",
+          "anchor": "reader-883a9fe4d23b5a962319",
+          "block_id": "sha256:e19a8962ca1ccfe969f8d0b8bf581de7d8f4683cfcc4e7470a82359d8e03d8a0",
+          "before": "在证明 $g/f$ 以 $a$ 为本性奇点时，若反设 $K=g/f$ 的极限有限，记为 $L$，则 $g=fK$ 在 $a$ 的极限是 $f(a)L$。当 $f(a)\\ne0$（即 $f$ 在 $a$ 是解析点且不为零）时，这个极限是 $f(a)L\\ne0$，不是 $0$；只有 $f(a)=0$（即 $f$ 以 $a$ 为零点，$n\\ge1$）时才为 $0$。无论哪种情形，极限都有限，仍由可去奇点判别推论推出 $a$ 是 $g$ 的可去奇点，矛盾。",
+          "after": "在证明 $g/f$ 以 $a$ 为本性奇点时，若反设 $K=g/f$ 的极限有限，记为 $L$，则 $g=fK$ 在 $a$ 的极限是 $f(a)L$。这个极限可能为 $0$，也可能非零；即使 $f(a)\\ne0$，仍可能因 $L=0$ 而为 $0$。无论哪种情形，极限都有限，仍由可去奇点判别推论推出 $a$ 是 $g$ 的可去奇点，矛盾。",
+          "derived_fields_rebuilt": [
+            "raw_text",
+            "visible_text",
+            "source_map",
+            "marker_spans",
+            "markdown"
+          ]
+        },
+        {
+          "kind": "reader_block",
+          "correction_id": "SUPPORT-CH05-S05-POLE-ORDER-SIGN-V1",
+          "pointer": "/blocks/15",
+          "json_pointer": "/annotations/6/markdown",
+          "owner_id": "INTUITION-BALANCE",
+          "anchor": "reader-38ce81abd87cce98b33f",
+          "block_id": "sha256:d3523f51f066e5fb52ac0b7b4552f7b1a4bf8fe2b5199b675de6292740cf536b",
+          "before": "罗朗展开的主要部分是负次幂项。没有负次幂项是“没有层”，对应可去奇点；有限多个负次幂项是“有限层”，对应极点，极点阶数等于最低负次幂的幂次；无限多个负次幂项是“无限层”，对应本性奇点。",
+          "after": "罗朗展开的主要部分是负次幂项。没有负次幂项是“没有层”，对应可去奇点；有限多个非零负次幂项是“有限层”，对应极点。最低负次幂的指数为 $-m$ 时，极点阶数为正整数 $m$，即该负指数的绝对值；无限多个非零负次幂项是“无限层”，对应本性奇点。",
+          "derived_fields_rebuilt": [
+            "raw_text",
+            "visible_text",
+            "source_map",
+            "marker_spans",
+            "markdown"
+          ]
+        }
+      ],
+      "signature_mismatches": [],
+      "snapshot_policy": "Caller retains the unmodified input in study_source_document; CLI saves snapshots separately.",
+      "display_content_hash": "sha256:60c02253c9e6cb94d23620177a95f489057586fc2e69750c07f4117022d5ff3a",
+      "correction_ids": [
+        "SUPPORT-C0175-CANONICAL-V1",
+        "SUPPORT-C0219-CANONICAL-V1",
+        "SUPPORT-C0256-INVERSE-RATIO-V1",
+        "SUPPORT-C0522-CANONICAL-V1",
+        "SUPPORT-C0796-CANONICAL-V1",
+        "SUPPORT-CH05-S05-FINITE-PRODUCT-LIMIT-V1",
+        "SUPPORT-CH05-S05-POLE-ORDER-SIGN-V1"
+      ],
+      "display_catalog_hash": "sha256:4d55b9dac82b11372569463b964f58bcf55a10069e6e5502b801d5c8e31ebbe5",
+      "output_document_sha256": "sha256:9e60c579914f75bbcfef9198ace6463bef7fc8a905f8bb6a4d05834b6cefbd79",
+      "anchors_preserved": true,
+      "block_ids_preserved": true,
+      "owner_ids_preserved": true,
+      "input_unchanged": true
+    },
+    {
+      "schema_version": "SupportDisplayCorrectionReportV1",
+      "unit_id": "CH06-S03",
+      "correction_policy": "VERIFIED-SUPPORT-DISPLAY-ERRATA-V3",
+      "status": "corrected",
+      "input_document_sha256": "sha256:22e4fa6284f95547efcb646e8f9e5e138756bb787c3f9ecb8393e59881c30cc9",
+      "source_content_hash": "sha256:d57d9cb49a0d3633338a8f543975d1e2a5984ebf6607a2588b7915b5cc2fb0d8",
+      "source_catalog_hash": "sha256:628714949ce09c0c5aa247b819b36fb3f7b475c8a8f5eaed916660f452cd106a",
+      "changes": [
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0256-INVERSE-RATIO-V1",
+          "pointer": "/reference_catalog/entries/126/markdown",
+          "owner_id": "C-0256",
+          "before": "如果$$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$则复幂级数(5.5)的收敛半径 R = 1/r.",
+          "after": "若相邻系数最终非零，且下列极限存在，则达朗贝尔公式为\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r\\quad\\Longrightarrow\\quad R=r.$$\n\n约定 $r=0$ 时 $R=0$，$r=+\\infty$ 时 $R=+\\infty$。若用根值极限，则另记为 $L$，柯西公式为\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=L\\quad\\Longrightarrow\\quad R=\\frac1L.$$\n\n根值公式约定 $1/0=+\\infty$、$1/(+\\infty)=0$；相邻系数缺项或比值无定义时，不直接使用相邻比值公式。",
+          "source_version": "sha256:9a9eec849a6013442c4751d94db50448247cc3b3fc1623e1dcd71a17367ec984",
+          "display_version": "sha256:2cc1fcf099d7c9bacb9764b15b18c5ea64c2260d7d5bb5a0c3127db881888f11"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0175-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/74/markdown",
+          "owner_id": "C-0175",
+          "before": "双曲正弦函数和双曲余弦函数都是全平面的解析函数，而双曲正切函数及双曲余切函数，则是分别除去 $z = n\\pi \\mathrm{i}$ 及 $z = (n + 1 / 2)\\pi \\mathrm{i}, n = 0, \\pm 1, \\pm 2, \\dots$ 的全平面上的解析函数",
+          "after": "双曲正弦 $\\sinh z$ 与双曲余弦 $\\cosh z$ 是整函数。双曲正切 $\\tanh z=\\sinh z/\\cosh z$ 的极点为 $z=(n+1/2)\\pi\\mathrm i$；双曲余切 $\\coth z=\\cosh z/\\sinh z$ 的极点为 $z=n\\pi\\mathrm i$，其中 $n\\in\\mathbb Z$。各商在除去各自这组极点的全平面解析。",
+          "source_version": "sha256:9a9eec849a6013442c4751d94db50448247cc3b3fc1623e1dcd71a17367ec984",
+          "display_version": "sha256:a799c1d4d332383826e7e2992fdc97a89fbecd0d53cc4b8287f14cab428ba753"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0219-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/101/markdown",
+          "owner_id": "C-0219",
+          "before": "设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$",
+          "after": "设 $f$ 在开区域 $D$ 内解析，且以 $a$ 为圆心、半径 $R>0$ 的整个闭圆盘 $\\{\\zeta:|\\zeta-a|\\le R\\}$ 包含于 $D$。记 $M(R)=\\max_{|\\zeta-a|=R}|f(\\zeta)|$，则对每个非负整数 $n$ 有 $$|f^{(n)}(a)|\\le\\frac{n!M(R)}{R^n}.$$ 只要求圆周在 $D$ 内不够；闭圆盘内部也不能有函数的奇点。",
+          "source_version": "sha256:9a9eec849a6013442c4751d94db50448247cc3b3fc1623e1dcd71a17367ec984",
+          "display_version": "sha256:ea8f5ba46ecc91123c36dc9d36aeb61c24391b2f53a0ab6d0333299dc95764d5"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0522-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/256/markdown",
+          "owner_id": "C-0522",
+          "before": "当 $\\alpha$ 为正整数 $n$ 时，$z ^ {n} = \\exp [ n (\\ln | z | + \\operatorname{iarg} z) ] = | z | ^ {n} \\exp (\\operatorname{iarg} z)$，与通常幂函数一致，是一个单值函数.",
+          "after": "当 $n$ 为正整数、$z\\ne0$ 时，选任一辐角 $\\theta$，有 $z^n=\\exp[n(\\ln|z|+\\mathrm i\\theta)]=|z|^n e^{\\mathrm in\\theta}$。将 $\\theta$ 改成 $\\theta+2k\\pi$ 不改变结果，所以与通常整数幂一致，是单值函数；在 $z=0$ 补定义 $0^n=0$。极式中的角度必须乘以 $n$，例如 $\\mathrm i^2=e^{\\mathrm i\\pi}=-1$。",
+          "source_version": "sha256:9a9eec849a6013442c4751d94db50448247cc3b3fc1623e1dcd71a17367ec984",
+          "display_version": "sha256:fad3b0c6d37b641206e400a2bbe07da98f91d240fb9e8a5de600f6c615ec944a"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0796-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/474/markdown",
+          "owner_id": "C-0796",
+          "before": "由积分 $\\frac{2}{\\sqrt{\\pi}}\\int_0^n\\mathrm{e}^{-x^2}\\mathrm{d}x$ 所定义的函数，也是一类重要的特殊函数，它称为概率积分或误差函数，记为 $\\operatorname {erf}(x)$ ，于是$$\\mathbf {L} ^ {- 1} \\left[ \\frac {\\sqrt {a}}{p (p + a)} \\right] = \\operatorname{erf} (\\sqrt {a t}) \\quad (\\text {附表2中公式53}).$$",
+          "after": "对实数 $x$，误差函数定义为 $\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_0^x e^{-u^2}\\,\\mathrm du$。当 $a>0$、$t\\ge0$ 时，其拉普拉斯变换关系为 $$\\mathcal L^{-1}\\!\\left[\\frac{\\sqrt a}{p\\sqrt{p+a}}\\right](t)=\\operatorname{erf}(\\sqrt{at}),\\qquad\\operatorname{Re}p>0.$$ 在右半平面取与正实轴正平方根一致的解析平方根；分母中是 $p\\sqrt{p+a}$，不能写成 $p(p+a)$。",
+          "source_version": "sha256:9a9eec849a6013442c4751d94db50448247cc3b3fc1623e1dcd71a17367ec984",
+          "display_version": "sha256:460235844ad73d533a62af3bc74a4365e1e4ba24910e19d915764074d8db5235"
+        },
+        {
+          "kind": "reader_block",
+          "correction_id": "SUPPORT-CH06-S03-OPEN-AXIS-WINDING-V1",
+          "pointer": "/blocks/15",
+          "json_pointer": "/annotations/6/markdown",
+          "owner_id": "LEFT-HALF-PITFALL",
+          "anchor": "reader-825f87b76bd66d6b4b08",
+          "block_id": "sha256:4040051b4d86cb533f657d3c490ae6856ca821ac74cd66f7a7b6a49c1c7f7047",
+          "before": "定理7要求多项式在虚轴上无零点。若虚轴上有零点，沿虚轴的辐角变化可能没有定义或需要绕行，定理不能直接使用。另外，$k$ 可以是半整数，因为 $\\Delta \\arg P(\\mathrm{i}y)$ 只要求是 $2\\pi$ 的整数倍中的 $2k\\pi$，而它可以是 $\\pi$ 的奇数倍，所以 $k=\\frac12$ 是允许的。",
+          "after": "定理7要求多项式在虚轴上无零点。若虚轴上有零点，沿虚轴的辐角变化可能没有定义或需要绕行，定理不能直接使用。虚轴从 $-\\infty$ 到 $+\\infty$ 是一条开放路径，因此其像的连续辐角增量不必是 $2\\pi$ 的整数倍。写作 $\\Delta\\arg P(\\mathrm iy)=2k\\pi$ 时，$k$ 可以是半整数；例如增量为 $\\pi$ 就对应 $k=1/2$。与左半大圆的增量合起来，整个闭路的总增量才按整圈计数。",
+          "derived_fields_rebuilt": [
+            "raw_text",
+            "visible_text",
+            "source_map",
+            "marker_spans",
+            "markdown"
+          ]
+        }
+      ],
+      "signature_mismatches": [],
+      "snapshot_policy": "Caller retains the unmodified input in study_source_document; CLI saves snapshots separately.",
+      "display_content_hash": "sha256:612023621a4344311bcc8e7890ce8a93803869b80ddb847f831733427fab2e86",
+      "correction_ids": [
+        "SUPPORT-C0175-CANONICAL-V1",
+        "SUPPORT-C0219-CANONICAL-V1",
+        "SUPPORT-C0256-INVERSE-RATIO-V1",
+        "SUPPORT-C0522-CANONICAL-V1",
+        "SUPPORT-C0796-CANONICAL-V1",
+        "SUPPORT-CH06-S03-OPEN-AXIS-WINDING-V1"
+      ],
+      "display_catalog_hash": "sha256:9a11881bad84f5b8cb8a4db7f6329c99b12c8bc7fe202ab4dbfd71dfa95f580a",
+      "output_document_sha256": "sha256:f616b3a14dcf837419af46430d38538fa3ad39c08ea810b3598ddec9f45dbd8d",
+      "anchors_preserved": true,
+      "block_ids_preserved": true,
+      "owner_ids_preserved": true,
+      "input_unchanged": true
+    },
+    {
+      "schema_version": "SupportDisplayCorrectionReportV1",
+      "unit_id": "CH02-S05-SS06",
+      "correction_policy": "VERIFIED-SUPPORT-DISPLAY-ERRATA-V3",
+      "status": "corrected",
+      "input_document_sha256": "sha256:d336158d1cb39993d2cbf1a7ae7157e07b3c53dc21ea508e6c7ddedaece112e7",
+      "source_content_hash": "sha256:4cd20cd2205514cae75ddf13cb2943a934fbb6a0ac2a984b4d8e339e9a48169c",
+      "source_catalog_hash": "sha256:0191a6124ee08dad1a91228e90eeb0241a9811a1f97d5ec6cbe2a4fadea2e6f3",
+      "changes": [
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0256-INVERSE-RATIO-V1",
+          "pointer": "/reference_catalog/entries/126/markdown",
+          "owner_id": "C-0256",
+          "before": "如果$$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$则复幂级数(5.5)的收敛半径 R = 1/r.",
+          "after": "若相邻系数最终非零，且下列极限存在，则达朗贝尔公式为\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r\\quad\\Longrightarrow\\quad R=r.$$\n\n约定 $r=0$ 时 $R=0$，$r=+\\infty$ 时 $R=+\\infty$。若用根值极限，则另记为 $L$，柯西公式为\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=L\\quad\\Longrightarrow\\quad R=\\frac1L.$$\n\n根值公式约定 $1/0=+\\infty$、$1/(+\\infty)=0$；相邻系数缺项或比值无定义时，不直接使用相邻比值公式。",
+          "source_version": "sha256:784523eb0ee350eca468dda7f8bb6738b3a26f5254b095a230cab009874b79c6",
+          "display_version": "sha256:cb7c7307f880638df614ddbcd2ebcc7628d0848cc46ef743c545ef35c51a5e73"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0175-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/74/markdown",
+          "owner_id": "C-0175",
+          "before": "双曲正弦函数和双曲余弦函数都是全平面的解析函数，而双曲正切函数及双曲余切函数，则是分别除去 $z = n\\pi \\mathrm{i}$ 及 $z = (n + 1 / 2)\\pi \\mathrm{i}, n = 0, \\pm 1, \\pm 2, \\dots$ 的全平面上的解析函数",
+          "after": "双曲正弦 $\\sinh z$ 与双曲余弦 $\\cosh z$ 是整函数。双曲正切 $\\tanh z=\\sinh z/\\cosh z$ 的极点为 $z=(n+1/2)\\pi\\mathrm i$；双曲余切 $\\coth z=\\cosh z/\\sinh z$ 的极点为 $z=n\\pi\\mathrm i$，其中 $n\\in\\mathbb Z$。各商在除去各自这组极点的全平面解析。",
+          "source_version": "sha256:784523eb0ee350eca468dda7f8bb6738b3a26f5254b095a230cab009874b79c6",
+          "display_version": "sha256:53ab871c9c60def00b2a8bca3a33dcdb27443de4b8c903af2266300767b20eca"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0219-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/101/markdown",
+          "owner_id": "C-0219",
+          "before": "设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$",
+          "after": "设 $f$ 在开区域 $D$ 内解析，且以 $a$ 为圆心、半径 $R>0$ 的整个闭圆盘 $\\{\\zeta:|\\zeta-a|\\le R\\}$ 包含于 $D$。记 $M(R)=\\max_{|\\zeta-a|=R}|f(\\zeta)|$，则对每个非负整数 $n$ 有 $$|f^{(n)}(a)|\\le\\frac{n!M(R)}{R^n}.$$ 只要求圆周在 $D$ 内不够；闭圆盘内部也不能有函数的奇点。",
+          "source_version": "sha256:784523eb0ee350eca468dda7f8bb6738b3a26f5254b095a230cab009874b79c6",
+          "display_version": "sha256:fd0287786a68b7ce9d24883ff00654d34dbcf9adfb8f0348082e5d37d292bfd1"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0522-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/256/markdown",
+          "owner_id": "C-0522",
+          "before": "当 $\\alpha$ 为正整数 $n$ 时，$z ^ {n} = \\exp [ n (\\ln | z | + \\operatorname{iarg} z) ] = | z | ^ {n} \\exp (\\operatorname{iarg} z)$，与通常幂函数一致，是一个单值函数.",
+          "after": "当 $n$ 为正整数、$z\\ne0$ 时，选任一辐角 $\\theta$，有 $z^n=\\exp[n(\\ln|z|+\\mathrm i\\theta)]=|z|^n e^{\\mathrm in\\theta}$。将 $\\theta$ 改成 $\\theta+2k\\pi$ 不改变结果，所以与通常整数幂一致，是单值函数；在 $z=0$ 补定义 $0^n=0$。极式中的角度必须乘以 $n$，例如 $\\mathrm i^2=e^{\\mathrm i\\pi}=-1$。",
+          "source_version": "sha256:784523eb0ee350eca468dda7f8bb6738b3a26f5254b095a230cab009874b79c6",
+          "display_version": "sha256:1a8364da7493f1d7f372d24273cacc04beb14411d9bddb1c75b4436540e75ffe"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0796-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/474/markdown",
+          "owner_id": "C-0796",
+          "before": "由积分 $\\frac{2}{\\sqrt{\\pi}}\\int_0^n\\mathrm{e}^{-x^2}\\mathrm{d}x$ 所定义的函数，也是一类重要的特殊函数，它称为概率积分或误差函数，记为 $\\operatorname {erf}(x)$ ，于是$$\\mathbf {L} ^ {- 1} \\left[ \\frac {\\sqrt {a}}{p (p + a)} \\right] = \\operatorname{erf} (\\sqrt {a t}) \\quad (\\text {附表2中公式53}).$$",
+          "after": "对实数 $x$，误差函数定义为 $\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_0^x e^{-u^2}\\,\\mathrm du$。当 $a>0$、$t\\ge0$ 时，其拉普拉斯变换关系为 $$\\mathcal L^{-1}\\!\\left[\\frac{\\sqrt a}{p\\sqrt{p+a}}\\right](t)=\\operatorname{erf}(\\sqrt{at}),\\qquad\\operatorname{Re}p>0.$$ 在右半平面取与正实轴正平方根一致的解析平方根；分母中是 $p\\sqrt{p+a}$，不能写成 $p(p+a)$。",
+          "source_version": "sha256:784523eb0ee350eca468dda7f8bb6738b3a26f5254b095a230cab009874b79c6",
+          "display_version": "sha256:fc0bb871dc42f83a7ea145abc56b8107081cd8c0fda4ba08d8711ba9ae38506f"
+        },
+        {
+          "kind": "reader_block",
+          "correction_id": "SUPPORT-C0175-CANONICAL-V1",
+          "pointer": "/blocks/70",
+          "json_pointer": "/reference_catalog/entries/74/markdown",
+          "owner_id": "C-0175",
+          "anchor": "reader-fce64847228fbe86f89e",
+          "block_id": "sha256:3aab31c7ffd23c827ae4c5699f329b3326e49f6831e026a61bbd0c8b44c17a0b",
+          "before": "双曲正弦函数和双曲余弦函数都是全平面的解析函数，而双曲正切函数及双曲余切函数，则是分别除去 $z = n\\pi \\mathrm{i}$ 及 $z = (n + 1 / 2)\\pi \\mathrm{i}, n = 0, \\pm 1, \\pm 2, \\dots$ 的全平面上的解析函数",
+          "after": "双曲正弦 $\\sinh z$ 与双曲余弦 $\\cosh z$ 是整函数。双曲正切 $\\tanh z=\\sinh z/\\cosh z$ 的极点为 $z=(n+1/2)\\pi\\mathrm i$；双曲余切 $\\coth z=\\cosh z/\\sinh z$ 的极点为 $z=n\\pi\\mathrm i$，其中 $n\\in\\mathbb Z$。各商在除去各自这组极点的全平面解析。",
+          "derived_fields_rebuilt": [
+            "raw_text",
+            "visible_text",
+            "source_map",
+            "marker_spans",
+            "markdown"
+          ]
+        }
+      ],
+      "signature_mismatches": [],
+      "snapshot_policy": "Caller retains the unmodified input in study_source_document; CLI saves snapshots separately.",
+      "display_content_hash": "sha256:190962b8e84da853cfbc8d2250199470a3c7c4f3ba1a76dce2d8adf49394a9ef",
+      "correction_ids": [
+        "SUPPORT-C0175-CANONICAL-V1",
+        "SUPPORT-C0219-CANONICAL-V1",
+        "SUPPORT-C0256-INVERSE-RATIO-V1",
+        "SUPPORT-C0522-CANONICAL-V1",
+        "SUPPORT-C0796-CANONICAL-V1"
+      ],
+      "display_catalog_hash": "sha256:4a703f8ca5d776b575a756991aa8512b4f8765edb496d7120f4a395b2e8d90e4",
+      "output_document_sha256": "sha256:ab0043a6f228425802312c62b0c19badf387e3e1c3563777bc726572d049e00d",
+      "anchors_preserved": true,
+      "block_ids_preserved": true,
+      "owner_ids_preserved": true,
+      "input_unchanged": true
+    },
+    {
+      "schema_version": "SupportDisplayCorrectionReportV1",
+      "unit_id": "CH02-S05-SS07",
+      "correction_policy": "VERIFIED-SUPPORT-DISPLAY-ERRATA-V3",
+      "status": "corrected",
+      "input_document_sha256": "sha256:f9cf0f8078f34aeded363b4eb27bfd02c99b066603fdca2071c159a2c094468d",
+      "source_content_hash": "sha256:17aa15569dc97075aff1c30051b2e8541e92826b3e6a993b797264f5e69bb232",
+      "source_catalog_hash": "sha256:203abd642f935005a03b08e5eeebef95eea5e32cc087a253ba72a932d61d996d",
+      "changes": [
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0256-INVERSE-RATIO-V1",
+          "pointer": "/reference_catalog/entries/126/markdown",
+          "owner_id": "C-0256",
+          "before": "如果$$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$则复幂级数(5.5)的收敛半径 R = 1/r.",
+          "after": "若相邻系数最终非零，且下列极限存在，则达朗贝尔公式为\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r\\quad\\Longrightarrow\\quad R=r.$$\n\n约定 $r=0$ 时 $R=0$，$r=+\\infty$ 时 $R=+\\infty$。若用根值极限，则另记为 $L$，柯西公式为\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=L\\quad\\Longrightarrow\\quad R=\\frac1L.$$\n\n根值公式约定 $1/0=+\\infty$、$1/(+\\infty)=0$；相邻系数缺项或比值无定义时，不直接使用相邻比值公式。",
+          "source_version": "sha256:c63f5dcb5d07fa575436ad2ce241c055558e541e6e5c6f717df6411faca2cd55",
+          "display_version": "sha256:9eb05a7b3c5b029436a9eaff68f1bb6ef306d199e2ddc2049df6a0fe923aa6f9"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0175-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/74/markdown",
+          "owner_id": "C-0175",
+          "before": "双曲正弦函数和双曲余弦函数都是全平面的解析函数，而双曲正切函数及双曲余切函数，则是分别除去 $z = n\\pi \\mathrm{i}$ 及 $z = (n + 1 / 2)\\pi \\mathrm{i}, n = 0, \\pm 1, \\pm 2, \\dots$ 的全平面上的解析函数",
+          "after": "双曲正弦 $\\sinh z$ 与双曲余弦 $\\cosh z$ 是整函数。双曲正切 $\\tanh z=\\sinh z/\\cosh z$ 的极点为 $z=(n+1/2)\\pi\\mathrm i$；双曲余切 $\\coth z=\\cosh z/\\sinh z$ 的极点为 $z=n\\pi\\mathrm i$，其中 $n\\in\\mathbb Z$。各商在除去各自这组极点的全平面解析。",
+          "source_version": "sha256:c63f5dcb5d07fa575436ad2ce241c055558e541e6e5c6f717df6411faca2cd55",
+          "display_version": "sha256:af42b1128a7dd805ebe3a2b4a2c960e035962ae3a8075855b64af5187f77f448"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0219-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/101/markdown",
+          "owner_id": "C-0219",
+          "before": "设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$",
+          "after": "设 $f$ 在开区域 $D$ 内解析，且以 $a$ 为圆心、半径 $R>0$ 的整个闭圆盘 $\\{\\zeta:|\\zeta-a|\\le R\\}$ 包含于 $D$。记 $M(R)=\\max_{|\\zeta-a|=R}|f(\\zeta)|$，则对每个非负整数 $n$ 有 $$|f^{(n)}(a)|\\le\\frac{n!M(R)}{R^n}.$$ 只要求圆周在 $D$ 内不够；闭圆盘内部也不能有函数的奇点。",
+          "source_version": "sha256:c63f5dcb5d07fa575436ad2ce241c055558e541e6e5c6f717df6411faca2cd55",
+          "display_version": "sha256:27efc53393c60a36fc9636c5256f4c1d2dfc93a42cf46c177e9d11647bd3072b"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0522-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/256/markdown",
+          "owner_id": "C-0522",
+          "before": "当 $\\alpha$ 为正整数 $n$ 时，$z ^ {n} = \\exp [ n (\\ln | z | + \\operatorname{iarg} z) ] = | z | ^ {n} \\exp (\\operatorname{iarg} z)$，与通常幂函数一致，是一个单值函数.",
+          "after": "当 $n$ 为正整数、$z\\ne0$ 时，选任一辐角 $\\theta$，有 $z^n=\\exp[n(\\ln|z|+\\mathrm i\\theta)]=|z|^n e^{\\mathrm in\\theta}$。将 $\\theta$ 改成 $\\theta+2k\\pi$ 不改变结果，所以与通常整数幂一致，是单值函数；在 $z=0$ 补定义 $0^n=0$。极式中的角度必须乘以 $n$，例如 $\\mathrm i^2=e^{\\mathrm i\\pi}=-1$。",
+          "source_version": "sha256:c63f5dcb5d07fa575436ad2ce241c055558e541e6e5c6f717df6411faca2cd55",
+          "display_version": "sha256:90821102ca4d831c85c8fd485b05f1f4c8c8a7db08f73e36a9659c9c1dabe06d"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0796-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/474/markdown",
+          "owner_id": "C-0796",
+          "before": "由积分 $\\frac{2}{\\sqrt{\\pi}}\\int_0^n\\mathrm{e}^{-x^2}\\mathrm{d}x$ 所定义的函数，也是一类重要的特殊函数，它称为概率积分或误差函数，记为 $\\operatorname {erf}(x)$ ，于是$$\\mathbf {L} ^ {- 1} \\left[ \\frac {\\sqrt {a}}{p (p + a)} \\right] = \\operatorname{erf} (\\sqrt {a t}) \\quad (\\text {附表2中公式53}).$$",
+          "after": "对实数 $x$，误差函数定义为 $\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_0^x e^{-u^2}\\,\\mathrm du$。当 $a>0$、$t\\ge0$ 时，其拉普拉斯变换关系为 $$\\mathcal L^{-1}\\!\\left[\\frac{\\sqrt a}{p\\sqrt{p+a}}\\right](t)=\\operatorname{erf}(\\sqrt{at}),\\qquad\\operatorname{Re}p>0.$$ 在右半平面取与正实轴正平方根一致的解析平方根；分母中是 $p\\sqrt{p+a}$，不能写成 $p(p+a)$。",
+          "source_version": "sha256:c63f5dcb5d07fa575436ad2ce241c055558e541e6e5c6f717df6411faca2cd55",
+          "display_version": "sha256:40d60f59ff7b2d883ff29fcf04b596aaf612e0cd61b17604d40e5a64da6e4d2d"
+        },
+        {
+          "kind": "reader_block",
+          "correction_id": "SUPPORT-C0522-CANONICAL-V1",
+          "pointer": "/blocks/83",
+          "json_pointer": "/reference_catalog/entries/256/markdown",
+          "owner_id": "C-0522",
+          "anchor": "reader-bc5ce40d52081bccedcb",
+          "block_id": "sha256:87cff1f21aa794c4acb0f4648cfa006d1e42a67f2fab875e5ad94d95dc325e43",
+          "before": "当 $\\alpha$ 为正整数 $n$ 时，$z ^ {n} = \\exp [ n (\\ln | z | + \\operatorname{iarg} z) ] = | z | ^ {n} \\exp (\\operatorname{iarg} z)$，与通常幂函数一致，是一个单值函数.",
+          "after": "当 $n$ 为正整数、$z\\ne0$ 时，选任一辐角 $\\theta$，有 $z^n=\\exp[n(\\ln|z|+\\mathrm i\\theta)]=|z|^n e^{\\mathrm in\\theta}$。将 $\\theta$ 改成 $\\theta+2k\\pi$ 不改变结果，所以与通常整数幂一致，是单值函数；在 $z=0$ 补定义 $0^n=0$。极式中的角度必须乘以 $n$，例如 $\\mathrm i^2=e^{\\mathrm i\\pi}=-1$。",
+          "derived_fields_rebuilt": [
+            "raw_text",
+            "visible_text",
+            "source_map",
+            "marker_spans",
+            "markdown"
+          ]
+        }
+      ],
+      "signature_mismatches": [],
+      "snapshot_policy": "Caller retains the unmodified input in study_source_document; CLI saves snapshots separately.",
+      "display_content_hash": "sha256:5fb12d81580f00e98b4b10cb3645c57cb5133caa95defcd63f7bb899f69cc4a2",
+      "correction_ids": [
+        "SUPPORT-C0175-CANONICAL-V1",
+        "SUPPORT-C0219-CANONICAL-V1",
+        "SUPPORT-C0256-INVERSE-RATIO-V1",
+        "SUPPORT-C0522-CANONICAL-V1",
+        "SUPPORT-C0796-CANONICAL-V1"
+      ],
+      "display_catalog_hash": "sha256:28413adbe41f7a9b40523a7d533286a7ca168a0bbcbf1bd359b9a1123d0f52a1",
+      "output_document_sha256": "sha256:408895f02d370c7986fc29be854d62e82726dd7eaab527e22251258a0a2e5a63",
+      "anchors_preserved": true,
+      "block_ids_preserved": true,
+      "owner_ids_preserved": true,
+      "input_unchanged": true
+    },
+    {
+      "schema_version": "SupportDisplayCorrectionReportV1",
+      "unit_id": "CH03-S05",
+      "correction_policy": "VERIFIED-SUPPORT-DISPLAY-ERRATA-V3",
+      "status": "corrected",
+      "input_document_sha256": "sha256:e7170e643a1005d056ad421e4f2c38aae94f5abbf126376dc5cd99ca28829f45",
+      "source_content_hash": "sha256:c1f87a75386ef15766094a280a45fb710c76dccc2bbdc4a0f6347be954004d2a",
+      "source_catalog_hash": "sha256:26cc0e0b88b97a7984bdbe17fc6ab6589f8c4b99e4a81dabbfbecd3cd641e144",
+      "changes": [
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0256-INVERSE-RATIO-V1",
+          "pointer": "/reference_catalog/entries/126/markdown",
+          "owner_id": "C-0256",
+          "before": "如果$$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$则复幂级数(5.5)的收敛半径 R = 1/r.",
+          "after": "若相邻系数最终非零，且下列极限存在，则达朗贝尔公式为\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r\\quad\\Longrightarrow\\quad R=r.$$\n\n约定 $r=0$ 时 $R=0$，$r=+\\infty$ 时 $R=+\\infty$。若用根值极限，则另记为 $L$，柯西公式为\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=L\\quad\\Longrightarrow\\quad R=\\frac1L.$$\n\n根值公式约定 $1/0=+\\infty$、$1/(+\\infty)=0$；相邻系数缺项或比值无定义时，不直接使用相邻比值公式。",
+          "source_version": "sha256:74d890724eeb6a7ad22ba34ed398ccc9a1ea94ac4d23e51e029c007305dcd502",
+          "display_version": "sha256:766b91956ee3761f21dfdea96b31dcd692a3320cc649572805d68299d06fb08e"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0175-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/74/markdown",
+          "owner_id": "C-0175",
+          "before": "双曲正弦函数和双曲余弦函数都是全平面的解析函数，而双曲正切函数及双曲余切函数，则是分别除去 $z = n\\pi \\mathrm{i}$ 及 $z = (n + 1 / 2)\\pi \\mathrm{i}, n = 0, \\pm 1, \\pm 2, \\dots$ 的全平面上的解析函数",
+          "after": "双曲正弦 $\\sinh z$ 与双曲余弦 $\\cosh z$ 是整函数。双曲正切 $\\tanh z=\\sinh z/\\cosh z$ 的极点为 $z=(n+1/2)\\pi\\mathrm i$；双曲余切 $\\coth z=\\cosh z/\\sinh z$ 的极点为 $z=n\\pi\\mathrm i$，其中 $n\\in\\mathbb Z$。各商在除去各自这组极点的全平面解析。",
+          "source_version": "sha256:74d890724eeb6a7ad22ba34ed398ccc9a1ea94ac4d23e51e029c007305dcd502",
+          "display_version": "sha256:0a4d002ea6d98eb47b3c5060fc414fe5e08c4fd57a3597b7d27ad0d83231a4c5"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0219-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/101/markdown",
+          "owner_id": "C-0219",
+          "before": "设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$",
+          "after": "设 $f$ 在开区域 $D$ 内解析，且以 $a$ 为圆心、半径 $R>0$ 的整个闭圆盘 $\\{\\zeta:|\\zeta-a|\\le R\\}$ 包含于 $D$。记 $M(R)=\\max_{|\\zeta-a|=R}|f(\\zeta)|$，则对每个非负整数 $n$ 有 $$|f^{(n)}(a)|\\le\\frac{n!M(R)}{R^n}.$$ 只要求圆周在 $D$ 内不够；闭圆盘内部也不能有函数的奇点。",
+          "source_version": "sha256:74d890724eeb6a7ad22ba34ed398ccc9a1ea94ac4d23e51e029c007305dcd502",
+          "display_version": "sha256:52536eadea82d6c7ad4aa87b6c199b1687b7720f8ce830ac02ffb58e775b2a9c"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0522-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/256/markdown",
+          "owner_id": "C-0522",
+          "before": "当 $\\alpha$ 为正整数 $n$ 时，$z ^ {n} = \\exp [ n (\\ln | z | + \\operatorname{iarg} z) ] = | z | ^ {n} \\exp (\\operatorname{iarg} z)$，与通常幂函数一致，是一个单值函数.",
+          "after": "当 $n$ 为正整数、$z\\ne0$ 时，选任一辐角 $\\theta$，有 $z^n=\\exp[n(\\ln|z|+\\mathrm i\\theta)]=|z|^n e^{\\mathrm in\\theta}$。将 $\\theta$ 改成 $\\theta+2k\\pi$ 不改变结果，所以与通常整数幂一致，是单值函数；在 $z=0$ 补定义 $0^n=0$。极式中的角度必须乘以 $n$，例如 $\\mathrm i^2=e^{\\mathrm i\\pi}=-1$。",
+          "source_version": "sha256:74d890724eeb6a7ad22ba34ed398ccc9a1ea94ac4d23e51e029c007305dcd502",
+          "display_version": "sha256:d2069c7d99b49f7f90c8d0691a0ed5a80e71f3e3a7c844ab9b928e98825de56c"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0796-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/474/markdown",
+          "owner_id": "C-0796",
+          "before": "由积分 $\\frac{2}{\\sqrt{\\pi}}\\int_0^n\\mathrm{e}^{-x^2}\\mathrm{d}x$ 所定义的函数，也是一类重要的特殊函数，它称为概率积分或误差函数，记为 $\\operatorname {erf}(x)$ ，于是$$\\mathbf {L} ^ {- 1} \\left[ \\frac {\\sqrt {a}}{p (p + a)} \\right] = \\operatorname{erf} (\\sqrt {a t}) \\quad (\\text {附表2中公式53}).$$",
+          "after": "对实数 $x$，误差函数定义为 $\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_0^x e^{-u^2}\\,\\mathrm du$。当 $a>0$、$t\\ge0$ 时，其拉普拉斯变换关系为 $$\\mathcal L^{-1}\\!\\left[\\frac{\\sqrt a}{p\\sqrt{p+a}}\\right](t)=\\operatorname{erf}(\\sqrt{at}),\\qquad\\operatorname{Re}p>0.$$ 在右半平面取与正实轴正平方根一致的解析平方根；分母中是 $p\\sqrt{p+a}$，不能写成 $p(p+a)$。",
+          "source_version": "sha256:74d890724eeb6a7ad22ba34ed398ccc9a1ea94ac4d23e51e029c007305dcd502",
+          "display_version": "sha256:bcbf53807b000aa0a2f3b6aace6281e1053020216c61d1d970d731f09ec97557"
+        },
+        {
+          "kind": "reader_block",
+          "correction_id": "SUPPORT-C0219-CANONICAL-V1",
+          "pointer": "/blocks/196",
+          "json_pointer": "/reference_catalog/entries/101/markdown",
+          "owner_id": "C-0219",
+          "anchor": "reader-3d11d49532b16af02732",
+          "block_id": "sha256:a75c32bd91fbff53dfb4ab1c8aa1f8fb171990de2a32d62ae761ccf727ad821f",
+          "before": "设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$",
+          "after": "设 $f$ 在开区域 $D$ 内解析，且以 $a$ 为圆心、半径 $R>0$ 的整个闭圆盘 $\\{\\zeta:|\\zeta-a|\\le R\\}$ 包含于 $D$。记 $M(R)=\\max_{|\\zeta-a|=R}|f(\\zeta)|$，则对每个非负整数 $n$ 有 $$|f^{(n)}(a)|\\le\\frac{n!M(R)}{R^n}.$$ 只要求圆周在 $D$ 内不够；闭圆盘内部也不能有函数的奇点。",
+          "derived_fields_rebuilt": [
+            "raw_text",
+            "visible_text",
+            "source_map",
+            "marker_spans",
+            "markdown"
+          ]
+        }
+      ],
+      "signature_mismatches": [],
+      "snapshot_policy": "Caller retains the unmodified input in study_source_document; CLI saves snapshots separately.",
+      "display_content_hash": "sha256:2a42e3053c1d10cc665ac45a9b72143dc05aee6befbd92f39173d9aa73b26a07",
+      "correction_ids": [
+        "SUPPORT-C0175-CANONICAL-V1",
+        "SUPPORT-C0219-CANONICAL-V1",
+        "SUPPORT-C0256-INVERSE-RATIO-V1",
+        "SUPPORT-C0522-CANONICAL-V1",
+        "SUPPORT-C0796-CANONICAL-V1"
+      ],
+      "display_catalog_hash": "sha256:0a957da390d16aa13123d310259e3a4281ceddb8ae87fa89f69a9407588307bd",
+      "output_document_sha256": "sha256:e8a7e5385e6efebbe75a4085b5ba9c89202b2ca9bbba51c392fe189f8a7ef67d",
+      "anchors_preserved": true,
+      "block_ids_preserved": true,
+      "owner_ids_preserved": true,
+      "input_unchanged": true
+    },
+    {
+      "schema_version": "SupportDisplayCorrectionReportV1",
+      "unit_id": "CH09-S03-SS03",
+      "correction_policy": "VERIFIED-SUPPORT-DISPLAY-ERRATA-V3",
+      "status": "corrected",
+      "input_document_sha256": "sha256:94d1533c7025d4f4f21f1a69f2be71c211a948bff49ff699f41d637d2911d4e9",
+      "source_content_hash": "sha256:3e120b9b693b04405fb3a79815be0c1013b58e8dabafe5c0c0d35f4a4ba1c7dc",
+      "source_catalog_hash": "sha256:2e43f73957fb5ade540ea3f5b2818f21403e89e4106efe6b18e2608558b72906",
+      "changes": [
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0256-INVERSE-RATIO-V1",
+          "pointer": "/reference_catalog/entries/126/markdown",
+          "owner_id": "C-0256",
+          "before": "如果$$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$则复幂级数(5.5)的收敛半径 R = 1/r.",
+          "after": "若相邻系数最终非零，且下列极限存在，则达朗贝尔公式为\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r\\quad\\Longrightarrow\\quad R=r.$$\n\n约定 $r=0$ 时 $R=0$，$r=+\\infty$ 时 $R=+\\infty$。若用根值极限，则另记为 $L$，柯西公式为\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=L\\quad\\Longrightarrow\\quad R=\\frac1L.$$\n\n根值公式约定 $1/0=+\\infty$、$1/(+\\infty)=0$；相邻系数缺项或比值无定义时，不直接使用相邻比值公式。",
+          "source_version": "sha256:27fb49c56b3e10e237f3bd9ef7575f9ca3d7690444c84a758196aa8e32cc935c",
+          "display_version": "sha256:2ebc552c78ed4b777e591da5bc78a2736462ed6a97ae9fa1d063b9a00b1af34b"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0175-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/74/markdown",
+          "owner_id": "C-0175",
+          "before": "双曲正弦函数和双曲余弦函数都是全平面的解析函数，而双曲正切函数及双曲余切函数，则是分别除去 $z = n\\pi \\mathrm{i}$ 及 $z = (n + 1 / 2)\\pi \\mathrm{i}, n = 0, \\pm 1, \\pm 2, \\dots$ 的全平面上的解析函数",
+          "after": "双曲正弦 $\\sinh z$ 与双曲余弦 $\\cosh z$ 是整函数。双曲正切 $\\tanh z=\\sinh z/\\cosh z$ 的极点为 $z=(n+1/2)\\pi\\mathrm i$；双曲余切 $\\coth z=\\cosh z/\\sinh z$ 的极点为 $z=n\\pi\\mathrm i$，其中 $n\\in\\mathbb Z$。各商在除去各自这组极点的全平面解析。",
+          "source_version": "sha256:27fb49c56b3e10e237f3bd9ef7575f9ca3d7690444c84a758196aa8e32cc935c",
+          "display_version": "sha256:bfb6229f4b36ee8e16ea65fc87ab7050cb9ad802d5ffe689427d97bc52156cbe"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0219-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/101/markdown",
+          "owner_id": "C-0219",
+          "before": "设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$",
+          "after": "设 $f$ 在开区域 $D$ 内解析，且以 $a$ 为圆心、半径 $R>0$ 的整个闭圆盘 $\\{\\zeta:|\\zeta-a|\\le R\\}$ 包含于 $D$。记 $M(R)=\\max_{|\\zeta-a|=R}|f(\\zeta)|$，则对每个非负整数 $n$ 有 $$|f^{(n)}(a)|\\le\\frac{n!M(R)}{R^n}.$$ 只要求圆周在 $D$ 内不够；闭圆盘内部也不能有函数的奇点。",
+          "source_version": "sha256:27fb49c56b3e10e237f3bd9ef7575f9ca3d7690444c84a758196aa8e32cc935c",
+          "display_version": "sha256:8789064ef71af8afda16e08069c26244c361acf3e6469a973aa1d39e00b49142"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0522-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/256/markdown",
+          "owner_id": "C-0522",
+          "before": "当 $\\alpha$ 为正整数 $n$ 时，$z ^ {n} = \\exp [ n (\\ln | z | + \\operatorname{iarg} z) ] = | z | ^ {n} \\exp (\\operatorname{iarg} z)$，与通常幂函数一致，是一个单值函数.",
+          "after": "当 $n$ 为正整数、$z\\ne0$ 时，选任一辐角 $\\theta$，有 $z^n=\\exp[n(\\ln|z|+\\mathrm i\\theta)]=|z|^n e^{\\mathrm in\\theta}$。将 $\\theta$ 改成 $\\theta+2k\\pi$ 不改变结果，所以与通常整数幂一致，是单值函数；在 $z=0$ 补定义 $0^n=0$。极式中的角度必须乘以 $n$，例如 $\\mathrm i^2=e^{\\mathrm i\\pi}=-1$。",
+          "source_version": "sha256:27fb49c56b3e10e237f3bd9ef7575f9ca3d7690444c84a758196aa8e32cc935c",
+          "display_version": "sha256:b249038a4ac982807f90c88d675c666bd357b137176f07f94e7d9c543d9956db"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0796-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/474/markdown",
+          "owner_id": "C-0796",
+          "before": "由积分 $\\frac{2}{\\sqrt{\\pi}}\\int_0^n\\mathrm{e}^{-x^2}\\mathrm{d}x$ 所定义的函数，也是一类重要的特殊函数，它称为概率积分或误差函数，记为 $\\operatorname {erf}(x)$ ，于是$$\\mathbf {L} ^ {- 1} \\left[ \\frac {\\sqrt {a}}{p (p + a)} \\right] = \\operatorname{erf} (\\sqrt {a t}) \\quad (\\text {附表2中公式53}).$$",
+          "after": "对实数 $x$，误差函数定义为 $\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_0^x e^{-u^2}\\,\\mathrm du$。当 $a>0$、$t\\ge0$ 时，其拉普拉斯变换关系为 $$\\mathcal L^{-1}\\!\\left[\\frac{\\sqrt a}{p\\sqrt{p+a}}\\right](t)=\\operatorname{erf}(\\sqrt{at}),\\qquad\\operatorname{Re}p>0.$$ 在右半平面取与正实轴正平方根一致的解析平方根；分母中是 $p\\sqrt{p+a}$，不能写成 $p(p+a)$。",
+          "source_version": "sha256:27fb49c56b3e10e237f3bd9ef7575f9ca3d7690444c84a758196aa8e32cc935c",
+          "display_version": "sha256:fcb0003857b292dc09076d7b8aff814d2aced5ec3710cd5601b489a73e3b61dd"
+        },
+        {
+          "kind": "reader_block",
+          "correction_id": "SUPPORT-C0796-CANONICAL-V1",
+          "pointer": "/blocks/143",
+          "json_pointer": "/reference_catalog/entries/474/markdown",
+          "owner_id": "C-0796",
+          "anchor": "reader-3f01c0a9666788386f2a",
+          "block_id": "sha256:97e7902631edc3dfd8f83d26d7139675ee0c31f37485e4588253562559c4a17e",
+          "before": "由积分 $\\frac{2}{\\sqrt{\\pi}}\\int_0^n\\mathrm{e}^{-x^2}\\mathrm{d}x$ 所定义的函数，也是一类重要的特殊函数，它称为概率积分或误差函数，记为 $\\operatorname {erf}(x)$ ，于是$$\\mathbf {L} ^ {- 1} \\left[ \\frac {\\sqrt {a}}{p (p + a)} \\right] = \\operatorname{erf} (\\sqrt {a t}) \\quad (\\text {附表2中公式53}).$$",
+          "after": "对实数 $x$，误差函数定义为 $\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_0^x e^{-u^2}\\,\\mathrm du$。当 $a>0$、$t\\ge0$ 时，其拉普拉斯变换关系为 $$\\mathcal L^{-1}\\!\\left[\\frac{\\sqrt a}{p\\sqrt{p+a}}\\right](t)=\\operatorname{erf}(\\sqrt{at}),\\qquad\\operatorname{Re}p>0.$$ 在右半平面取与正实轴正平方根一致的解析平方根；分母中是 $p\\sqrt{p+a}$，不能写成 $p(p+a)$。",
+          "derived_fields_rebuilt": [
+            "raw_text",
+            "visible_text",
+            "source_map",
+            "marker_spans",
+            "markdown"
+          ]
+        }
+      ],
+      "signature_mismatches": [],
+      "snapshot_policy": "Caller retains the unmodified input in study_source_document; CLI saves snapshots separately.",
+      "display_content_hash": "sha256:4227c19bc5acdcba5c9c5d2dbd0c1e27b6b902068069b9c9210d7949418f54ab",
+      "correction_ids": [
+        "SUPPORT-C0175-CANONICAL-V1",
+        "SUPPORT-C0219-CANONICAL-V1",
+        "SUPPORT-C0256-INVERSE-RATIO-V1",
+        "SUPPORT-C0522-CANONICAL-V1",
+        "SUPPORT-C0796-CANONICAL-V1"
+      ],
+      "display_catalog_hash": "sha256:5e179f2b0e8854553b8728aae49ad0cfac83fe311e55a8ceef282d2da40654b5",
+      "output_document_sha256": "sha256:1dd47787637fec08d1d71fc21064471510b124bdc7348bb038ccff659d66bc14",
+      "anchors_preserved": true,
+      "block_ids_preserved": true,
+      "owner_ids_preserved": true,
+      "input_unchanged": true
+    },
+    {
+      "schema_version": "SupportDisplayCorrectionReportV1",
+      "unit_id": "CH08-S06",
+      "correction_policy": "VERIFIED-SUPPORT-DISPLAY-ERRATA-V3",
+      "status": "corrected",
+      "input_document_sha256": "sha256:eaf11860b615b7d27b14e360cc6a1f9c832fe9a500e3431ebc1a5c4cf3853e76",
+      "source_content_hash": "sha256:56080533d7f171d3956687736e620c67e0bd2d98aa8b89ff2c01625b5915b781",
+      "source_catalog_hash": "sha256:22833859d36453d9bccd84db09aded3d34d11f6b5bc5eeee5e831105662131e7",
+      "changes": [
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0256-INVERSE-RATIO-V1",
+          "pointer": "/reference_catalog/entries/126/markdown",
+          "owner_id": "C-0256",
+          "before": "如果$$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$则复幂级数(5.5)的收敛半径 R = 1/r.",
+          "after": "若相邻系数最终非零，且下列极限存在，则达朗贝尔公式为\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r\\quad\\Longrightarrow\\quad R=r.$$\n\n约定 $r=0$ 时 $R=0$，$r=+\\infty$ 时 $R=+\\infty$。若用根值极限，则另记为 $L$，柯西公式为\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=L\\quad\\Longrightarrow\\quad R=\\frac1L.$$\n\n根值公式约定 $1/0=+\\infty$、$1/(+\\infty)=0$；相邻系数缺项或比值无定义时，不直接使用相邻比值公式。",
+          "source_version": "sha256:6bf2ba744fd5cb65ba5f2c1f2ed7fe2ee78fd4702e5e18a1fea45a1f4f38c9fc",
+          "display_version": "sha256:ae34102beacb4ac6d574a8aa51fa97a4ed2ee87f9f6df1d2e3b19efd82618802"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0175-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/74/markdown",
+          "owner_id": "C-0175",
+          "before": "双曲正弦函数和双曲余弦函数都是全平面的解析函数，而双曲正切函数及双曲余切函数，则是分别除去 $z = n\\pi \\mathrm{i}$ 及 $z = (n + 1 / 2)\\pi \\mathrm{i}, n = 0, \\pm 1, \\pm 2, \\dots$ 的全平面上的解析函数",
+          "after": "双曲正弦 $\\sinh z$ 与双曲余弦 $\\cosh z$ 是整函数。双曲正切 $\\tanh z=\\sinh z/\\cosh z$ 的极点为 $z=(n+1/2)\\pi\\mathrm i$；双曲余切 $\\coth z=\\cosh z/\\sinh z$ 的极点为 $z=n\\pi\\mathrm i$，其中 $n\\in\\mathbb Z$。各商在除去各自这组极点的全平面解析。",
+          "source_version": "sha256:6bf2ba744fd5cb65ba5f2c1f2ed7fe2ee78fd4702e5e18a1fea45a1f4f38c9fc",
+          "display_version": "sha256:63d242a58c785b543481e248bbb8f1521af4384ec0ff88a1c30888c5e02d1963"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0219-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/101/markdown",
+          "owner_id": "C-0219",
+          "before": "设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$",
+          "after": "设 $f$ 在开区域 $D$ 内解析，且以 $a$ 为圆心、半径 $R>0$ 的整个闭圆盘 $\\{\\zeta:|\\zeta-a|\\le R\\}$ 包含于 $D$。记 $M(R)=\\max_{|\\zeta-a|=R}|f(\\zeta)|$，则对每个非负整数 $n$ 有 $$|f^{(n)}(a)|\\le\\frac{n!M(R)}{R^n}.$$ 只要求圆周在 $D$ 内不够；闭圆盘内部也不能有函数的奇点。",
+          "source_version": "sha256:6bf2ba744fd5cb65ba5f2c1f2ed7fe2ee78fd4702e5e18a1fea45a1f4f38c9fc",
+          "display_version": "sha256:c1a7335e196420c642bbb286847408772637186435c121096fd76c61305fef87"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0522-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/256/markdown",
+          "owner_id": "C-0522",
+          "before": "当 $\\alpha$ 为正整数 $n$ 时，$z ^ {n} = \\exp [ n (\\ln | z | + \\operatorname{iarg} z) ] = | z | ^ {n} \\exp (\\operatorname{iarg} z)$，与通常幂函数一致，是一个单值函数.",
+          "after": "当 $n$ 为正整数、$z\\ne0$ 时，选任一辐角 $\\theta$，有 $z^n=\\exp[n(\\ln|z|+\\mathrm i\\theta)]=|z|^n e^{\\mathrm in\\theta}$。将 $\\theta$ 改成 $\\theta+2k\\pi$ 不改变结果，所以与通常整数幂一致，是单值函数；在 $z=0$ 补定义 $0^n=0$。极式中的角度必须乘以 $n$，例如 $\\mathrm i^2=e^{\\mathrm i\\pi}=-1$。",
+          "source_version": "sha256:6bf2ba744fd5cb65ba5f2c1f2ed7fe2ee78fd4702e5e18a1fea45a1f4f38c9fc",
+          "display_version": "sha256:ec21a8e19bdbab65d1fbdd0d171932df03a57f1dc134f9d51728df8f83de444a"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0796-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/474/markdown",
+          "owner_id": "C-0796",
+          "before": "由积分 $\\frac{2}{\\sqrt{\\pi}}\\int_0^n\\mathrm{e}^{-x^2}\\mathrm{d}x$ 所定义的函数，也是一类重要的特殊函数，它称为概率积分或误差函数，记为 $\\operatorname {erf}(x)$ ，于是$$\\mathbf {L} ^ {- 1} \\left[ \\frac {\\sqrt {a}}{p (p + a)} \\right] = \\operatorname{erf} (\\sqrt {a t}) \\quad (\\text {附表2中公式53}).$$",
+          "after": "对实数 $x$，误差函数定义为 $\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_0^x e^{-u^2}\\,\\mathrm du$。当 $a>0$、$t\\ge0$ 时，其拉普拉斯变换关系为 $$\\mathcal L^{-1}\\!\\left[\\frac{\\sqrt a}{p\\sqrt{p+a}}\\right](t)=\\operatorname{erf}(\\sqrt{at}),\\qquad\\operatorname{Re}p>0.$$ 在右半平面取与正实轴正平方根一致的解析平方根；分母中是 $p\\sqrt{p+a}$，不能写成 $p(p+a)$。",
+          "source_version": "sha256:6bf2ba744fd5cb65ba5f2c1f2ed7fe2ee78fd4702e5e18a1fea45a1f4f38c9fc",
+          "display_version": "sha256:7d8be874179aba3435ef4b7e3789dfc65999fc0467d6bce53f19769d2e2165ee"
+        },
+        {
+          "kind": "reader_block",
+          "correction_id": "SUPPORT-CH08-S06-POISSON-Y-V1",
+          "pointer": "/blocks/13",
+          "json_pointer": "/annotations/5/markdown",
+          "owner_id": "EXAMPLE15-COEFFICIENT",
+          "anchor": "reader-20516fd9897631e28cf9",
+          "block_id": "sha256:bc232e2ce92157051e2fb46e414287d253a83ecacd16ef202ee688ade8232bef",
+          "before": "用上半平面狄氏问题公式时，前面的系数是 $1/\\pi$，即\n$$u(x,y)=\\frac1\\pi\\left[v_2\\int_{-\\infty}^{0}\\frac{\\mathrm{d}t}{(t-x)^2+y^2}+v_1\\int_0^{+\\infty}\\frac{\\mathrm{d}t}{(t-x)^2+y^2}\\right].$$\n不要把 $1/\\pi$ 误写成 $v/\\pi$ 或丢掉。",
+          "after": "用上半平面狄利克雷问题公式时，取 $y>0$，泊松核为 $y/((t-x)^2+y^2)$，归一化系数为 $1/\\pi$。因此 $$u(x,y)=\\frac1\\pi\\left[v_2\\int_{-\\infty}^{0}\\frac{y\\,\\mathrm dt}{(t-x)^2+y^2}+v_1\\int_0^{\\infty}\\frac{y\\,\\mathrm dt}{(t-x)^2+y^2}\\right].$$ 不能漏掉核分子中的 $y$；若把 $y$ 提到积分号外，整体系数就写成 $y/\\pi$。例如 $v_1=v_2=1$ 时，积分应给出恒定解 $u=1$。",
+          "derived_fields_rebuilt": [
+            "raw_text",
+            "visible_text",
+            "source_map",
+            "marker_spans",
+            "markdown"
+          ]
+        }
+      ],
+      "signature_mismatches": [],
+      "snapshot_policy": "Caller retains the unmodified input in study_source_document; CLI saves snapshots separately.",
+      "display_content_hash": "sha256:38447838367e0cc0f3ea8b81c9786c9a9c58c351b0944402e5df0c8734946517",
+      "correction_ids": [
+        "SUPPORT-C0175-CANONICAL-V1",
+        "SUPPORT-C0219-CANONICAL-V1",
+        "SUPPORT-C0256-INVERSE-RATIO-V1",
+        "SUPPORT-C0522-CANONICAL-V1",
+        "SUPPORT-C0796-CANONICAL-V1",
+        "SUPPORT-CH08-S06-POISSON-Y-V1"
+      ],
+      "display_catalog_hash": "sha256:b2c0ef79361d5619ae40253d6bc53fd636e4115352c9c12986a95cbc59bd412d",
+      "output_document_sha256": "sha256:fb07b8cab2b67a530b60a6e18fa9a0a8e6574ec43f43e724bf1fef968b285291",
+      "anchors_preserved": true,
+      "block_ids_preserved": true,
+      "owner_ids_preserved": true,
+      "input_unchanged": true
+    },
+    {
+      "schema_version": "SupportDisplayCorrectionReportV1",
+      "unit_id": "CH08",
+      "correction_policy": "VERIFIED-SUPPORT-DISPLAY-ERRATA-V3",
+      "status": "corrected",
+      "input_document_sha256": "sha256:d32bb59c4ffebfb3f2b656c57b02618cac0329c036c02dac668c0c5f2125b701",
+      "source_content_hash": "sha256:df93d8907ab6ab5b3d5703d0e726963d9dd8cc9d273074eb08658cfdbcc24556",
+      "source_catalog_hash": "sha256:58244b16d372210f0cebdca8610231540e91deff3d7d53da5657a56d47ecc7a5",
+      "changes": [
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0256-INVERSE-RATIO-V1",
+          "pointer": "/reference_catalog/entries/126/markdown",
+          "owner_id": "C-0256",
+          "before": "如果$$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$则复幂级数(5.5)的收敛半径 R = 1/r.",
+          "after": "若相邻系数最终非零，且下列极限存在，则达朗贝尔公式为\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r\\quad\\Longrightarrow\\quad R=r.$$\n\n约定 $r=0$ 时 $R=0$，$r=+\\infty$ 时 $R=+\\infty$。若用根值极限，则另记为 $L$，柯西公式为\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=L\\quad\\Longrightarrow\\quad R=\\frac1L.$$\n\n根值公式约定 $1/0=+\\infty$、$1/(+\\infty)=0$；相邻系数缺项或比值无定义时，不直接使用相邻比值公式。",
+          "source_version": "sha256:d2316c224fd8abfd4835108ec5dd518392c7882cfd161a252c989844c4ae243b",
+          "display_version": "sha256:e66e598d42c4867bd5f5371497672287716aefc7e74552a10195844a5e345fd3"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0175-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/74/markdown",
+          "owner_id": "C-0175",
+          "before": "双曲正弦函数和双曲余弦函数都是全平面的解析函数，而双曲正切函数及双曲余切函数，则是分别除去 $z = n\\pi \\mathrm{i}$ 及 $z = (n + 1 / 2)\\pi \\mathrm{i}, n = 0, \\pm 1, \\pm 2, \\dots$ 的全平面上的解析函数",
+          "after": "双曲正弦 $\\sinh z$ 与双曲余弦 $\\cosh z$ 是整函数。双曲正切 $\\tanh z=\\sinh z/\\cosh z$ 的极点为 $z=(n+1/2)\\pi\\mathrm i$；双曲余切 $\\coth z=\\cosh z/\\sinh z$ 的极点为 $z=n\\pi\\mathrm i$，其中 $n\\in\\mathbb Z$。各商在除去各自这组极点的全平面解析。",
+          "source_version": "sha256:d2316c224fd8abfd4835108ec5dd518392c7882cfd161a252c989844c4ae243b",
+          "display_version": "sha256:e678b4e51251dc18ca972a9775522c497ce1ca069dbe23eeb20175513dfdc065"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0219-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/101/markdown",
+          "owner_id": "C-0219",
+          "before": "设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$",
+          "after": "设 $f$ 在开区域 $D$ 内解析，且以 $a$ 为圆心、半径 $R>0$ 的整个闭圆盘 $\\{\\zeta:|\\zeta-a|\\le R\\}$ 包含于 $D$。记 $M(R)=\\max_{|\\zeta-a|=R}|f(\\zeta)|$，则对每个非负整数 $n$ 有 $$|f^{(n)}(a)|\\le\\frac{n!M(R)}{R^n}.$$ 只要求圆周在 $D$ 内不够；闭圆盘内部也不能有函数的奇点。",
+          "source_version": "sha256:d2316c224fd8abfd4835108ec5dd518392c7882cfd161a252c989844c4ae243b",
+          "display_version": "sha256:fc6c7fb8d99ec18111617ba5fa99870aac2ee5859cf1fe049dc73c700f6ea402"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0522-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/256/markdown",
+          "owner_id": "C-0522",
+          "before": "当 $\\alpha$ 为正整数 $n$ 时，$z ^ {n} = \\exp [ n (\\ln | z | + \\operatorname{iarg} z) ] = | z | ^ {n} \\exp (\\operatorname{iarg} z)$，与通常幂函数一致，是一个单值函数.",
+          "after": "当 $n$ 为正整数、$z\\ne0$ 时，选任一辐角 $\\theta$，有 $z^n=\\exp[n(\\ln|z|+\\mathrm i\\theta)]=|z|^n e^{\\mathrm in\\theta}$。将 $\\theta$ 改成 $\\theta+2k\\pi$ 不改变结果，所以与通常整数幂一致，是单值函数；在 $z=0$ 补定义 $0^n=0$。极式中的角度必须乘以 $n$，例如 $\\mathrm i^2=e^{\\mathrm i\\pi}=-1$。",
+          "source_version": "sha256:d2316c224fd8abfd4835108ec5dd518392c7882cfd161a252c989844c4ae243b",
+          "display_version": "sha256:46bd28c0e66ae5531aeec678537f6afbc2bd19f40dd64d51387e40753d235f11"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0796-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/474/markdown",
+          "owner_id": "C-0796",
+          "before": "由积分 $\\frac{2}{\\sqrt{\\pi}}\\int_0^n\\mathrm{e}^{-x^2}\\mathrm{d}x$ 所定义的函数，也是一类重要的特殊函数，它称为概率积分或误差函数，记为 $\\operatorname {erf}(x)$ ，于是$$\\mathbf {L} ^ {- 1} \\left[ \\frac {\\sqrt {a}}{p (p + a)} \\right] = \\operatorname{erf} (\\sqrt {a t}) \\quad (\\text {附表2中公式53}).$$",
+          "after": "对实数 $x$，误差函数定义为 $\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_0^x e^{-u^2}\\,\\mathrm du$。当 $a>0$、$t\\ge0$ 时，其拉普拉斯变换关系为 $$\\mathcal L^{-1}\\!\\left[\\frac{\\sqrt a}{p\\sqrt{p+a}}\\right](t)=\\operatorname{erf}(\\sqrt{at}),\\qquad\\operatorname{Re}p>0.$$ 在右半平面取与正实轴正平方根一致的解析平方根；分母中是 $p\\sqrt{p+a}$，不能写成 $p(p+a)$。",
+          "source_version": "sha256:d2316c224fd8abfd4835108ec5dd518392c7882cfd161a252c989844c4ae243b",
+          "display_version": "sha256:8104d3dc44cd2a55b13d33e185ba104bede2c3f6f6cd96c776fb847733c69634"
+        },
+        {
+          "kind": "reader_block",
+          "correction_id": "SUPPORT-CH08-ANGLE-MODULO-V1",
+          "pointer": "/blocks/4",
+          "json_pointer": "/annotations/0/markdown",
+          "owner_id": "NOTE-NONZERO-DERIVATIVE",
+          "anchor": "reader-1d3c3a7cc52a7eefa21f",
+          "block_id": "sha256:631403a4f5103d7db63cd62d3284d7ed975d072da75ef0ceaea73edb1163ffc7",
+          "before": "把 $f(z_0+h)$ 写成 $f(z_0)+f'(z_0)h+$ 更高次项之后，决定小尺度形状的是一次项。若 $f'(z_0)=0$，这一项为零，起作用的变成更高次项，形状会被“张开”或“压扁”，而不是被旋转加均匀放大，局部保角性也就失去了。\n\n典型例子是 $f(z)=z^n$（$n\\ge 2$）在 $z_0=0$ 处：$f'(0)=0$。用 $z=r\\mathrm{e}^{\\mathrm{i}\\theta}$ 得 $z^n=r^n\\mathrm{e}^{\\mathrm{i}n\\theta}$，两条辐角为 $\\theta_1,\\theta_2$ 的射线被映成辐角为 $n\\theta_1,n\\theta_2$ 的射线，方向角之差由 $\\theta_2-\\theta_1$ 变为 $n(\\theta_2-\\theta_1)$。由于两条射线的夹角总取不超过 $\\pi$ 的较小角，只有原夹角不超过 $\\pi/n$ 时，像的实际夹角才恰好是原来的 $n$ 倍；原夹角更大时，像的实际夹角要取 $|n(\\theta_2-\\theta_1)|$ 与 $2\\pi-|n(\\theta_2-\\theta_1)|$ 中的较小者，可能反而变小甚至为 0。例如 $n=2$ 时，夹角 $\\frac{\\pi}{4}$ 的两条射线变成夹角 $\\frac{\\pi}{2}$ 的两条射线；而夹角 $\\pi$ 的两条射线（辐角 $0$ 与 $\\pi$）的像辐角为 $0$ 与 $2\\pi$，实际是同一条射线，夹角为 $0$。所以讨论整体保形变换时，必须把导数为零的点排除在外。",
+          "after": "把 $f(z_0+h)$ 写成 $f(z_0)+f'(z_0)h+$ 更高次项之后，决定小尺度形状的是一次项。若 $f'(z_0)=0$，这一项为零，起作用的变成更高次项，形状会被“张开”或“压扁”，而不是被旋转加均匀放大，局部保角性也就失去了。\n\n典型例子是 $f(z)=z^n$（$n\\ge 2$）在 $z_0=0$ 处：$f'(0)=0$。用 $z=r\\mathrm{e}^{\\mathrm{i}\\theta}$ 得 $z^n=r^n\\mathrm{e}^{\\mathrm{i}n\\theta}$，两条辐角为 $\\theta_1,\\theta_2$ 的射线被映成辐角为 $n\\theta_1,n\\theta_2$ 的射线，方向角之差由 $\\theta_2-\\theta_1$ 变为 $n(\\theta_2-\\theta_1)$。由于两条射线的夹角总取不超过 $\\pi$ 的较小角，只有原夹角不超过 $\\pi/n$ 时，像的实际夹角才恰好是原来的 $n$ 倍；原夹角更大时，要先将方向角之差按 $2\\pi$ 取模：令 $\\delta=n(\\theta_2-\\theta_1)\\bmod 2\\pi\\in[0,2\\pi)$，再取实际夹角 $\\min(\\delta,2\\pi-\\delta)$。这样夹角总在 $[0,\\pi]$ 内，可能反而变小甚至为 $0$；例如 $n=3$、原方向角差为 $\\pi$ 时，先得 $3\\pi\\bmod2\\pi=\\pi$，实际夹角仍为 $\\pi$，不能得到负角。例如 $n=2$ 时，夹角 $\\frac{\\pi}{4}$ 的两条射线变成夹角 $\\frac{\\pi}{2}$ 的两条射线；而夹角 $\\pi$ 的两条射线（辐角 $0$ 与 $\\pi$）的像辐角为 $0$ 与 $2\\pi$，实际是同一条射线，夹角为 $0$。所以讨论整体保形变换时，必须把导数为零的点排除在外。",
+          "derived_fields_rebuilt": [
+            "raw_text",
+            "visible_text",
+            "source_map",
+            "marker_spans",
+            "markdown"
+          ]
+        }
+      ],
+      "signature_mismatches": [],
+      "snapshot_policy": "Caller retains the unmodified input in study_source_document; CLI saves snapshots separately.",
+      "display_content_hash": "sha256:04410c0f093210de857e9e879e81c29f8deb70be70ba30e5ab6f64e3b86b7541",
+      "correction_ids": [
+        "SUPPORT-C0175-CANONICAL-V1",
+        "SUPPORT-C0219-CANONICAL-V1",
+        "SUPPORT-C0256-INVERSE-RATIO-V1",
+        "SUPPORT-C0522-CANONICAL-V1",
+        "SUPPORT-C0796-CANONICAL-V1",
+        "SUPPORT-CH08-ANGLE-MODULO-V1"
+      ],
+      "display_catalog_hash": "sha256:64a782a9fd7d02f87b3cf37c41d5a279aea9ceebc1a6fb39f4b7c819c4d7edb7",
+      "output_document_sha256": "sha256:4cee0691d80a346dc063e8bd40f248ebea8414e18da5e262c12efaab257b4e6d",
+      "anchors_preserved": true,
+      "block_ids_preserved": true,
+      "owner_ids_preserved": true,
+      "input_unchanged": true
+    },
+    {
+      "schema_version": "SupportDisplayCorrectionReportV1",
+      "unit_id": "CH06-S02-SS02",
+      "correction_policy": "VERIFIED-SUPPORT-DISPLAY-ERRATA-V3",
+      "status": "corrected",
+      "input_document_sha256": "sha256:61d849ea5fc68fe1e28b9252c22d44fbece2bae3e98fb1f16355e8c2ab55f1e2",
+      "source_content_hash": "sha256:66bd1c1a1f45f1ee7ebd89d927023d0a1a0f00f5686bbb453b12f7ab07e2e05e",
+      "source_catalog_hash": "sha256:a70cf5f8a6d7e1da43e660d7e6ee4a8d2a7b7bcf124b7c25d688ce2f6f8e4005",
+      "changes": [
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0256-INVERSE-RATIO-V1",
+          "pointer": "/reference_catalog/entries/126/markdown",
+          "owner_id": "C-0256",
+          "before": "如果$$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$则复幂级数(5.5)的收敛半径 R = 1/r.",
+          "after": "若相邻系数最终非零，且下列极限存在，则达朗贝尔公式为\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r\\quad\\Longrightarrow\\quad R=r.$$\n\n约定 $r=0$ 时 $R=0$，$r=+\\infty$ 时 $R=+\\infty$。若用根值极限，则另记为 $L$，柯西公式为\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=L\\quad\\Longrightarrow\\quad R=\\frac1L.$$\n\n根值公式约定 $1/0=+\\infty$、$1/(+\\infty)=0$；相邻系数缺项或比值无定义时，不直接使用相邻比值公式。",
+          "source_version": "sha256:b446ee3ad147c88315da9a9052da68af39497cfda4902a721a7833315f899f30",
+          "display_version": "sha256:b2477f6e789710cda580556015a93cd960f4e9a5a57dda14c8c92796e0f35199"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0175-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/74/markdown",
+          "owner_id": "C-0175",
+          "before": "双曲正弦函数和双曲余弦函数都是全平面的解析函数，而双曲正切函数及双曲余切函数，则是分别除去 $z = n\\pi \\mathrm{i}$ 及 $z = (n + 1 / 2)\\pi \\mathrm{i}, n = 0, \\pm 1, \\pm 2, \\dots$ 的全平面上的解析函数",
+          "after": "双曲正弦 $\\sinh z$ 与双曲余弦 $\\cosh z$ 是整函数。双曲正切 $\\tanh z=\\sinh z/\\cosh z$ 的极点为 $z=(n+1/2)\\pi\\mathrm i$；双曲余切 $\\coth z=\\cosh z/\\sinh z$ 的极点为 $z=n\\pi\\mathrm i$，其中 $n\\in\\mathbb Z$。各商在除去各自这组极点的全平面解析。",
+          "source_version": "sha256:b446ee3ad147c88315da9a9052da68af39497cfda4902a721a7833315f899f30",
+          "display_version": "sha256:8df170e76bd6a5f65eb9995a97fad2548b5cf14564634557447e7f8c072563f6"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0219-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/101/markdown",
+          "owner_id": "C-0219",
+          "before": "设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$",
+          "after": "设 $f$ 在开区域 $D$ 内解析，且以 $a$ 为圆心、半径 $R>0$ 的整个闭圆盘 $\\{\\zeta:|\\zeta-a|\\le R\\}$ 包含于 $D$。记 $M(R)=\\max_{|\\zeta-a|=R}|f(\\zeta)|$，则对每个非负整数 $n$ 有 $$|f^{(n)}(a)|\\le\\frac{n!M(R)}{R^n}.$$ 只要求圆周在 $D$ 内不够；闭圆盘内部也不能有函数的奇点。",
+          "source_version": "sha256:b446ee3ad147c88315da9a9052da68af39497cfda4902a721a7833315f899f30",
+          "display_version": "sha256:ad2fd63294886e81ad0342aa6ceeb998454b1f8f72d17ace2fc436c288c5263f"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0522-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/256/markdown",
+          "owner_id": "C-0522",
+          "before": "当 $\\alpha$ 为正整数 $n$ 时，$z ^ {n} = \\exp [ n (\\ln | z | + \\operatorname{iarg} z) ] = | z | ^ {n} \\exp (\\operatorname{iarg} z)$，与通常幂函数一致，是一个单值函数.",
+          "after": "当 $n$ 为正整数、$z\\ne0$ 时，选任一辐角 $\\theta$，有 $z^n=\\exp[n(\\ln|z|+\\mathrm i\\theta)]=|z|^n e^{\\mathrm in\\theta}$。将 $\\theta$ 改成 $\\theta+2k\\pi$ 不改变结果，所以与通常整数幂一致，是单值函数；在 $z=0$ 补定义 $0^n=0$。极式中的角度必须乘以 $n$，例如 $\\mathrm i^2=e^{\\mathrm i\\pi}=-1$。",
+          "source_version": "sha256:b446ee3ad147c88315da9a9052da68af39497cfda4902a721a7833315f899f30",
+          "display_version": "sha256:41fa32b5ea967d1e43704c6bc1101d4225185198614f57c91d20384bec72e636"
+        },
+        {
+          "kind": "catalog_entry",
+          "correction_id": "SUPPORT-C0796-CANONICAL-V1",
+          "pointer": "/reference_catalog/entries/474/markdown",
+          "owner_id": "C-0796",
+          "before": "由积分 $\\frac{2}{\\sqrt{\\pi}}\\int_0^n\\mathrm{e}^{-x^2}\\mathrm{d}x$ 所定义的函数，也是一类重要的特殊函数，它称为概率积分或误差函数，记为 $\\operatorname {erf}(x)$ ，于是$$\\mathbf {L} ^ {- 1} \\left[ \\frac {\\sqrt {a}}{p (p + a)} \\right] = \\operatorname{erf} (\\sqrt {a t}) \\quad (\\text {附表2中公式53}).$$",
+          "after": "对实数 $x$，误差函数定义为 $\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_0^x e^{-u^2}\\,\\mathrm du$。当 $a>0$、$t\\ge0$ 时，其拉普拉斯变换关系为 $$\\mathcal L^{-1}\\!\\left[\\frac{\\sqrt a}{p\\sqrt{p+a}}\\right](t)=\\operatorname{erf}(\\sqrt{at}),\\qquad\\operatorname{Re}p>0.$$ 在右半平面取与正实轴正平方根一致的解析平方根；分母中是 $p\\sqrt{p+a}$，不能写成 $p(p+a)$。",
+          "source_version": "sha256:b446ee3ad147c88315da9a9052da68af39497cfda4902a721a7833315f899f30",
+          "display_version": "sha256:98af4cad6713771ccff951872d307dc2376398c8d0abd3fc1775584353ab99ee"
+        },
+        {
+          "kind": "reader_block",
+          "correction_id": "SUPPORT-CH06-ABSOLUTE-TWO-TAILS-V1",
+          "pointer": "/blocks/19",
+          "json_pointer": "/annotations/8/markdown",
+          "owner_id": "DERIVE-ABSOLUTE-CONVERGENCE",
+          "anchor": "reader-c241684990503822ff44",
+          "block_id": "sha256:928304798e4da6ffbfe1b27279dc3d4d2365688354eeff772322faf8d1abac61",
+          "before": "当 $\\deg Q\\geqslant\\deg P+2$ 时，$|R(x)|\\leqslant C/x^2$（$|x|$ 充分大）。于是\n$$\\int_{-\\infty}^{+\\infty}|R(x)|\\,\\mathrm{d}x\\leqslant C\\int_{1}^{+\\infty}\\frac{\\mathrm{d}x}{x^2}<\\infty,$$\n所以 $\\int_{-\\infty}^{+\\infty}R(x)\\,\\mathrm{d}x$ 绝对收敛。绝对收敛的广义积分满足\n$$\\int_{-\\infty}^{+\\infty}R(x)\\,\\mathrm{d}x=\\lim_{R\\to\\infty}\\int_{-R}^{R}R(x)\\,\\mathrm{d}x,$$\n因为左右两侧的无穷积分各自收敛，可以把对称区间拆成 $[-R,0]$ 和 $[0,R]$ 分别取极限。",
+          "after": "设有理函数 $R=P/Q$ 在实轴上无极点，且 $\\deg Q\\ge\\deg P+2$。存在 $A\\ge1$、$C>0$，使 $|x|\\ge A$ 时 $|R(x)|\\le C/x^2$；在紧区间 $[-A,A]$ 上，$R$ 连续，故其中绝对值积分有限。因此 $$\\begin{aligned}\\int_{-\\infty}^{\\infty}|R(x)|\\,\\mathrm dx&\\le\\int_{-A}^{A}|R(x)|\\,\\mathrm dx+2C\\int_A^{\\infty}\\frac{\\mathrm dx}{x^2}\\\\&=\\int_{-A}^{A}|R(x)|\\,\\mathrm dx+\\frac{2C}{A}<\\infty.\\end{aligned}$$ 这份估计分别保留中央有限区间和左右两条尾部。由左右无穷积分各自收敛，才能用对称截断表示普通广义积分：$$\\int_{-\\infty}^{\\infty}R(x)\\,\\mathrm dx=\\lim_{T\\to\\infty}\\int_{-T}^{T}R(x)\\,\\mathrm dx.$$",
+          "derived_fields_rebuilt": [
+            "raw_text",
+            "visible_text",
+            "source_map",
+            "marker_spans",
+            "markdown"
+          ]
+        }
+      ],
+      "signature_mismatches": [],
+      "snapshot_policy": "Caller retains the unmodified input in study_source_document; CLI saves snapshots separately.",
+      "display_content_hash": "sha256:4a1b261daa1c335a73ad0a2ac92f2ee010fbccf6b47181f20231966b3573e9c8",
+      "correction_ids": [
+        "SUPPORT-C0175-CANONICAL-V1",
+        "SUPPORT-C0219-CANONICAL-V1",
+        "SUPPORT-C0256-INVERSE-RATIO-V1",
+        "SUPPORT-C0522-CANONICAL-V1",
+        "SUPPORT-C0796-CANONICAL-V1",
+        "SUPPORT-CH06-ABSOLUTE-TWO-TAILS-V1"
+      ],
+      "display_catalog_hash": "sha256:55e5d0ee8b15f58a9b46b575b3d196ee47f8300d3cc0aaf3e8cb7c791090201b",
+      "output_document_sha256": "sha256:406b0f667f049a0df85da358b95efb4afab1218f069ecadbe748ae78bb2ddf6d",
+      "anchors_preserved": true,
+      "block_ids_preserved": true,
+      "owner_ids_preserved": true,
+      "input_unchanged": true
+    }
+  ],
+  "global_concepts_report": {
+    "schema_version": "GlobalConceptDisplayCorrectionReportV1",
+    "correction_policy": "VERIFIED-SUPPORT-DISPLAY-ERRATA-V3",
+    "source_sha256": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "changes": [],
+    "signature_mismatches": [],
+    "source_fields_preserved": [
+      "id",
+      "name",
+      "type",
+      "occurrences",
+      "source_quotes"
+    ],
+    "display_sha256": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "input_unchanged": true,
+    "status": "unchanged"
+  },
+  "global_concepts_integration": "data[\"concepts\"], report = correct_global_concepts(data.get(\"concepts\", {})); retain the original table separately.",
+  "integration": "Run after authored body replacement and before assigning reader_document / layout_from_reader_media. Preserve study_source_document and study_textbook_original verbatim.",
+  "popup_path": "render-core.readerDocumentHtml renders corrected references blocks; app.copyReaderContent clones that support DOM including corrected math. No JS hook required."
+}

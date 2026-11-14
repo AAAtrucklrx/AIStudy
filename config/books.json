@@ -1,0 +1,83 @@
+{
+  "_meta": {
+    "file_type": "book_registry",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.core.registry",
+    "field_notes": {
+      "workspace": "工作区根。相对路径一律按它解析；**不靠 `__file__.parents[N]` 猜**（方案 §3）。`\".\"` 表示这份 config/ 的上一级。",
+      "books": "book_id → 这本书的来源、解析修订、四类旧产物位置与新根映射",
+      "sources": "原始输入与来源；`sha256` 为 null 表示尚未冻结（M3 冻结后回填）",
+      "revision": "这本书当前采用的解析修订号；产物路径自带版本，不靠'latest'",
+      "artifacts_root / runs_root / releases_root": "方案 §10 的目标布局根（M7 起真正落盘）",
+      "没有「默认」这一项": "**故意不设默认书**。方案 §4：「省略 `--book` 不退回历史默认书」——留一个默认值，就是留一条'跑错书但不报错'的路。旧命令的默认行为由 `lib/book.py` 这个过渡期只读适配器负责，不写进本表",
+      "为什么要有这个文件": "方案 §3：`config/books.json` 是**目标唯一**书籍注册表。原 `data/books.json` 降级为迁移证据（见 data/_migration/legacy-books.json），生产不再读它"
+    }
+  },
+  "workspace": ".",
+  "books": {
+    "complex-analysis-v2": {
+      "title": "复变函数（洁净结构 v2）",
+      "revision": "parse-v2",
+      "sources": [
+        {
+          "kind": "pdf",
+          "path": "data/raw/复变函数.pdf",
+          "sha256": null,
+          "note": "239 页；MinerU 云端路线"
+        }
+      ],
+      "parse": "data/parse/complex-analysis-v2",
+      "lessons": "data/lesson/complex-analysis-v2",
+      "audit": "data/audit/complex-analysis-v2",
+      "problems": "data/problems/complex-analysis-v2.json",
+      "artifacts_root": "data/books/complex-analysis-v2/artifacts",
+      "runs_root": "data/books/complex-analysis-v2/runs",
+      "releases_root": "data/books/complex-analysis-v2/releases",
+      "legacy": {
+        "registry_entry": "complex-analysis-v2",
+        "migrated_from": "data/books.json"
+      }
+    },
+    "linear-algebra-full": {
+      "title": "线性代数",
+      "revision": "mineru-authority-20261007",
+      "sources": [
+        {
+          "kind": "pdf",
+          "path": "data/raw/线性代数教材.pdf",
+          "sha256": "15b161f6cd7c383c5d8f531146e9e7543ee413dfe69d43a5c1e6b3f85bb17174",
+          "note": "289 页；归档 MinerU API 产物已与本 PDF 哈希核对，目录及概念重建"
+        }
+      ],
+      "parse": "data/parse/linear-algebra-full",
+      "lessons": "data/lesson/linear-algebra-full",
+      "audit": "data/audit/linear-algebra-full",
+      "problems": "data/problems/linear-algebra-full.json",
+      "artifacts_root": "data/books/linear-algebra-full/artifacts",
+      "runs_root": "data/books/linear-algebra-full/runs",
+      "releases_root": "data/books/linear-algebra-full/releases",
+      "legacy": {
+        "registry_entry": "linear-algebra-full",
+        "migrated_from": "data/books.json",
+        "note": "旧派生产物保留归档；当前版本只导入经 PDF/布局哈希验证的 MinerU 原始结果，重建目录与全书概念。"
+      }
+    },
+    "complex-analysis": {
+      "title": "复变函数",
+      "revision": "legacy",
+      "sources": [],
+      "parse": "data/parse/complex-analysis",
+      "lessons": "data/lesson/complex-analysis",
+      "audit": "data/audit/complex-analysis",
+      "problems": "data/problems/complex-analysis.json",
+      "artifacts_root": "data/books/complex-analysis/artifacts",
+      "runs_root": "data/books/complex-analysis/runs",
+      "releases_root": "data/books/complex-analysis/releases",
+      "legacy": {
+        "registry_entry": "complex-analysis",
+        "migrated_from": "data/books.json",
+        "note": "旧解析版本；已被 complex-analysis-v2 取代，保留只读"
+      }
+    }
+  }
+}

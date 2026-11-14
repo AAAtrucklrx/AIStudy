@@ -1,0 +1,111 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH01-S01-SS04",
+    "text_sha256": "a57b94415de32cb565999efc0d1a6ea2856fe49eff870677371de9207ebde999",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "a57b94415de32cb565999efc0d1a6ea2856fe49eff870677371de9207ebde999",
+    "source": "original_text",
+    "source_path": "original_text/ch01_s01_ss04.md"
+  },
+  "unit": {
+    "unit_id": "CH01-S01-SS04",
+    "level": "subsection",
+    "chapter": "CH01",
+    "section": "CH01-S01",
+    "title": "复数的乘方和开方",
+    "anchor": "1.1.4"
+  },
+  "concepts": [
+    {
+      "name": "复数的乘方",
+      "type": "definition",
+      "formal": "设 $n$ 是正整数，$z^n$ 表示 $n$ 个 $z$ 的乘积。当 $z = 0$ 时，$z^n = 0$。",
+      "source_quote": "设 $n$ 是正整数，$z^n$ 表示 $n$ 个 $z$ 的乘积。当 $z = 0$ 时，$z^n = 0$。"
+    },
+    {
+      "name": "零次幂",
+      "type": "definition",
+      "formal": "定义 $z^{\\circ} = 1$",
+      "source_quote": "（定义 $z^{\\circ} = 1$）"
+    },
+    {
+      "name": "负整数次幂",
+      "type": "definition",
+      "formal": "如果定义 $$z ^ {- n} = \\frac {1}{z ^ {n}},$$ $$z ^ {- n} = r ^ {- n} [ \\cos (- n \\varphi) + \\mathrm{i} \\sin (- n \\varphi) ] = r ^ {- n} \\mathrm{e} ^ {- i n \\varphi}.\\tag{1.5}$$",
+      "source_quote": "如果定义 $$z ^ {- n} = \\frac {1}{z ^ {n}},$$ $$z ^ {- n} = r ^ {- n} [ \\cos (- n \\varphi) + \\mathrm{i} \\sin (- n \\varphi) ] = r ^ {- n} \\mathrm{e} ^ {- i n \\varphi}.\\tag{1.5}$$"
+    },
+    {
+      "name": "德·莫弗公式",
+      "type": "formula",
+      "formal": "$$(\\cos \\varphi + \\mathrm{i} \\sin \\varphi) ^ {n} = \\cos n \\varphi + \\mathrm{i} \\sin n \\varphi .$$ 这个公式称为德·莫弗(de Moivre)公式，它对任意整数 $n$ 都成立.",
+      "source_quote": "$$(\\cos \\varphi + \\mathrm{i} \\sin \\varphi) ^ {n} = \\cos n \\varphi + \\mathrm{i} \\sin n \\varphi .$$ 这个公式称为德·莫弗(de Moivre)公式，它对任意整数 $n$ 都成立."
+    },
+    {
+      "name": "n次方根",
+      "type": "definition",
+      "formal": "设 $z$ 为已给复数，方程 $$w ^ {n} = z\\tag{1.6}$$ 的所有解，称为 $z$ 的 $n$ 次方根，记作 $\\sqrt[n]{z}$",
+      "source_quote": "设 $z$ 为已给复数，方程 $$w ^ {n} = z\\tag{1.6}$$ 的所有解，称为 $z$ 的 $n$ 次方根，记作 $\\sqrt[n]{z}$"
+    },
+    {
+      "name": "算术根",
+      "type": "definition",
+      "formal": "其中，圆括号表示 $\\rho$ 是 $r$ 的唯一正实根（算术根）",
+      "source_quote": "其中，圆括号表示 $\\rho$ 是 $r$ 的唯一正实根（算术根）."
+    },
+    {
+      "name": "代数运算",
+      "type": "definition",
+      "formal": "加、减、乘、除、开方及乘方这六种运算合称为代数运算.",
+      "source_quote": "加、减、乘、除、开方及乘方这六种运算合称为代数运算."
+    },
+    {
+      "name": "复数域内代数运算通行无阻",
+      "type": "property",
+      "formal": "从以上的讨论可见，在复数域内代数运算是通行无阻的(除了除法要求分母不为零)，这是复数域与实数域的一个重要区别.",
+      "source_quote": "从以上的讨论可见，在复数域内代数运算是通行无阻的(除了除法要求分母不为零)，这是复数域与实数域的一个重要区别."
+    },
+    {
+      "name": "n次方根的均匀分布",
+      "type": "property",
+      "formal": "这 $n$ 个 $n$ 次根的模都是 $(\\sqrt[n]{r})$，因此它们都位于以原点为中心，$(\\sqrt[n]{r})$ 为半径的圆上。且由于相邻二根的辐角相差都是 $2\\pi / n$，所以这 $n$ 个点刚好把圆周分成 $n$ 等分。它们是内接于圆的正 $n$ 边形的顶点。",
+      "source_quote": "这 $n$ 个 $n$ 次根的模都是 $(\\sqrt[n]{r})$，因此它们都位于以原点为中心，$(\\sqrt[n]{r})$ 为半径的圆上。且由于相邻二根的辐角相差都是 $2\\pi / n$，所以这 $n$ 个点刚好把圆周分成 $n$ 等分。它们是内接于圆的正 $n$ 边形的顶点。"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 9,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "得出公式"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "复数的乘方",
+    "零次幂",
+    "负整数次幂",
+    "德·莫弗公式",
+    "n次方根",
+    "算术根",
+    "代数运算",
+    "复数域内代数运算通行无阻",
+    "n次方根的均匀分布"
+  ]
+}

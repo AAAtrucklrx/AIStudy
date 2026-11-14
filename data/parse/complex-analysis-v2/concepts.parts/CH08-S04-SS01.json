@@ -1,0 +1,109 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH08-S04-SS01",
+    "text_sha256": "2bff2f9371dafb74f631a50d9415c4567fd0d6aabeb3de8ca35212b5a2d36e7d",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "2bff2f9371dafb74f631a50d9415c4567fd0d6aabeb3de8ca35212b5a2d36e7d",
+    "source": "original_text",
+    "source_path": "original_text/ch08_s04_ss01.md"
+  },
+  "unit": {
+    "unit_id": "CH08-S04-SS01",
+    "level": "subsection",
+    "chapter": "CH08",
+    "section": "CH08-S04",
+    "title": "变换 w = z^n 和 w = \\sqrt{z}, n \\geqslant 2 是自然数",
+    "anchor": "8.4.1"
+  },
+  "concepts": [
+    {
+      "name": "幂函数 w=z^n 的保形映照性质",
+      "type": "property",
+      "formal": "w = z^n 把任何一个以原点为顶点的角域：$$\\alpha < \\arg z < \\beta, \\quad \\beta - \\alpha \\leqslant 2\\pi/n$$ 保形映照成 w 平面以原点为顶点的角域 $$n\\alpha < \\arg w < n\\beta.$$",
+      "source_quote": "由第2章的讨论， $w = z^n$ 把任何一个以原点为顶点的角域：$$\\alpha <   \\arg z <   \\beta , \\quad \\beta - \\alpha \\leqslant 2 \\pi / n$$ 保形映照成 $w$ 平面以原点为顶点的角域 $$n \\alpha <   \\arg w <   n \\beta .$$"
+    },
+    {
+      "name": "根式函数 w=\\sqrt[n]{z}",
+      "type": "definition",
+      "formal": "根式函数 $w = \\sqrt[n]{z}$ 是幂函数 $w = z^n$ 的反函数",
+      "source_quote": "根式函数 $w = \\sqrt[n]{z}$ 是幂函数 $w = z^n$ 的反函数"
+    },
+    {
+      "name": "单值解析分支",
+      "type": "definition",
+      "formal": "在沿正实轴割开了的 $z$ 平面 $D$ 内可以分出它的 $n$ 个单值解析分支 $$\\begin{array}{l} {w _ {k} = \\sqrt [ n ]{r} \\exp \\left(\\mathrm{i} \\frac {\\varphi + 2 k \\pi}{n}\\right), \\quad k = 0, 1, 2, \\dots , n - 1,} \\\\ {z = r \\mathrm{e} ^ {\\mathrm{i} \\varphi}, \\quad 0 <   \\varphi <   2 \\pi .} \\end{array}$$",
+      "source_quote": "如取正实轴为支割线，在沿正实轴割开了的 $z$ 平面 $D$ 内可以分出它的 $n$ 个单值解析分支 $$\\begin{array}{l} {w _ {k} = \\sqrt [ n ]{r} \\exp \\left(\\mathrm{i} \\frac {\\varphi + 2 k \\pi}{n}\\right), \\quad k = 0, 1, 2, \\dots , n - 1,} \\\\ {z = r \\mathrm{e} ^ {\\mathrm{i} \\varphi}, \\quad 0 <   \\varphi <   2 \\pi .} \\end{array}$$"
+    },
+    {
+      "name": "根式函数分支的保形映照性质",
+      "type": "property",
+      "formal": "这些分支都可以用来作区域的保形变换，它们分别把 $D$ 内的角域 $(0\\leqslant)\\alpha < \\arg z < \\beta (\\leqslant 2\\pi)$ 变成角域 $$\\begin{array}{c} \\left(\\frac {2 k \\pi}{n} \\leqslant\\right) \\frac {\\alpha + 2 k \\pi}{n} <   \\arg \\omega <   \\frac {\\beta + 2 k \\pi}{n} \\left(\\leqslant \\frac {2 (k + 1) \\pi}{n}\\right), \\\\ k = 0, 1, \\dots , n - 1. \\end{array}$$",
+      "source_quote": "这些分支都可以用来作区域的保形变换，它们分别把 $D$ 内的角域 $(0\\leqslant)\\alpha < \\arg z < \\beta (\\leqslant 2\\pi)$ 变成角域"
+    },
+    {
+      "name": "第零支",
+      "type": "definition",
+      "formal": "第零支可以表示为 $$w = \\sqrt [ n ]{z}, \\quad w (1) = 1.$$",
+      "source_quote": "在作具体区域的保形变换时，最常用的是第零支，这一支可以表示为 $$w = \\sqrt [ n ]{z}, \\quad w (1) = 1.$$"
+    },
+    {
+      "name": "分式幂函数",
+      "type": "definition",
+      "formal": "分式幂函数 $w = z^{n/m}, \\quad n/m$ 是既约分数. 这是一个 $m$ 值函数.",
+      "source_quote": "在作保形变换，还常用到分式幂函数 $w = z^{n/m}, \\quad n/m$ 是既约分数. 这是一个 $m$ 值函数."
+    },
+    {
+      "name": "分式幂函数分支的保形映照性质",
+      "type": "property",
+      "formal": "取正实轴为支割线，这个函数的一支 $$\\begin{array}{l} w = r ^ {\\frac {n}{m}} \\mathrm{e} ^ {\\mathrm{i} \\frac {n}{m} \\varphi}, \\quad z = r \\mathrm{e} ^ {\\mathrm{i} \\varphi}, 0 <   \\varphi <   \\omega , \\\\ w (1) = 1 \\end{array}$$ 把角域 $0 < \\arg z < \\omega$ 变成角域 $0 < \\arg \\omega < \\frac{n}{m}\\omega$.",
+      "source_quote": "取正实轴为支割线, 这个函数的一支 ... 把角域 $0 < \\arg z < \\omega$ 变成角域 $0 < \\arg \\omega < \\frac{n}{m}\\omega$."
+    },
+    {
+      "name": "分式线性变换的保圆性",
+      "type": "property",
+      "formal": "分式线性变换的保圆性.",
+      "source_quote": "由分式线性变换的保圆性，半圆将被“拉直”."
+    },
+    {
+      "name": "保形变换不改变角方向",
+      "type": "property",
+      "formal": "保形变换不改变读角方向.",
+      "source_quote": "又因保形变换不改变读角方向，故可断定整个半圆域变为第三象限"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 9,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "幂函数 w=z^n 的保形映照性质",
+    "根式函数 w=\\sqrt[n]{z}",
+    "单值解析分支",
+    "根式函数分支的保形映照性质",
+    "第零支",
+    "分式幂函数",
+    "分式幂函数分支的保形映照性质",
+    "分式线性变换的保圆性",
+    "保形变换不改变角方向"
+  ]
+}

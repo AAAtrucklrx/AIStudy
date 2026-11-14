@@ -1,0 +1,98 @@
+{
+  "generated_at": "2026-10-07T00:39:11+08:00",
+  "source_run": "data/books/complex-analysis-v2/runs/run-20261006-142529-bad4aa",
+  "legacy_predicate": "quote.strip() in current_text",
+  "cases": {
+    "s01": {
+      "unit": "CH04-S01",
+      "phenomenon": "verdict 判 closed，quote 用『……』拼接多处正文；逐字 `quote in current_text` 失败",
+      "current_text_source": "data/books/complex-analysis-v2/runs/run-20261006-142529-bad4aa/work/legacy/lesson/lessons/CH04-S01.json",
+      "current_text_sha256": "1e75f084a52afd0301104b3ef48de8a8fbd36e58c852d09e7597a900197a4947",
+      "current_text_len": 7065,
+      "lesson_file_sha256": "3fcf3134170d735d2fe629eb395d1c81c0ef49259a5c95199c5e063c58854a14",
+      "window": {
+        "start": 5153,
+        "end": 7065,
+        "len": 1912
+      },
+      "window_exact_span_coverage": [
+        {
+          "start": 6347,
+          "end": 6409
+        },
+        {
+          "start": 6449,
+          "end": 6862
+        },
+        {
+          "start": 6775,
+          "end": 6958
+        },
+        {
+          "start": 5332,
+          "end": 5577
+        },
+        {
+          "start": 6347,
+          "end": 6409
+        },
+        {
+          "start": 6449,
+          "end": 6862
+        },
+        {
+          "start": 6775,
+          "end": 6958
+        }
+      ]
+    },
+    "s02": {
+      "unit": "CH04-S02",
+      "phenomenon": "verdict 判 closed，quote 与正文只有 LaTeX 空白差异（如 `\\int _ {0}` vs `\\int_{0}`）",
+      "current_text_source": "data/books/complex-analysis-v2/runs/run-20261006-142529-bad4aa/work/legacy/lesson/lessons/CH04-S02.json",
+      "current_text_sha256": "010c260cf35b1e55f3ed48a02906479b7ed9b3dac31c8dc0d1c522e9c01c9100",
+      "current_text_len": 9808,
+      "lesson_file_sha256": "168ebfdcfe4dfa7f73d4bbe95e27cf264ba0abee1ad5bc99d26fc543031767ae",
+      "window": {
+        "start": 1682,
+        "end": 6643,
+        "len": 4961
+      },
+      "window_exact_span_coverage": [
+        {
+          "start": 3229,
+          "end": 3350
+        },
+        {
+          "start": 1862,
+          "end": 2008
+        },
+        {
+          "start": 4977,
+          "end": 5417
+        },
+        {
+          "start": 1901,
+          "end": 2008
+        },
+        {
+          "start": 5631,
+          "end": 5900
+        },
+        {
+          "start": 6226,
+          "end": 6333
+        },
+        {
+          "start": 4977,
+          "end": 5417
+        },
+        {
+          "start": 5619,
+          "end": 6455
+        }
+      ]
+    }
+  },
+  "note": "夹具只读；run 目录未被写入。正文片段按绝对 offset 从 current_text 原文切出。"
+}

@@ -1,0 +1,111 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH09-S01",
+    "text_sha256": "105234143f059c4261bbb1093ab5897b79bfeeded6c9a173ac653ec9608f4631",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "105234143f059c4261bbb1093ab5897b79bfeeded6c9a173ac653ec9608f4631",
+    "source": "original_text",
+    "source_path": "original_text/ch09_s01.md"
+  },
+  "unit": {
+    "unit_id": "CH09-S01",
+    "level": "section",
+    "chapter": "CH09",
+    "section": "CH09-S01",
+    "title": "拉氏变换的定义",
+    "anchor": "9.1"
+  },
+  "concepts": [
+    {
+      "name": "傅氏变换",
+      "type": "definition",
+      "formal": "当 $f(x)$ 在实轴上的任何有限区间逐段光滑，并且在 $(-\\infty, \\infty)$ 上绝对可积时，它的傅氏变换是 $$F (s) = \\int_ {- \\infty} ^ {+ \\infty} f (\\xi) \\mathrm{e} ^ {- \\mathrm{i} s \\xi} \\mathrm{d} \\xi ,\\tag{9.1}$$ 其反变换是 $$f (x) = \\frac {1} {2 \\pi} \\int_ {- \\infty} ^ {\\infty} F (s) e ^ {i s t} d s,$$",
+      "source_quote": "当 $f(x)$ 在实轴上的任何有限区间逐段光滑，并且在 $(-\\infty, \\infty)$ 上绝对可积时，它的傅氏变换是 $$F (s) = \\int_ {- \\infty} ^ {+ \\infty} f (\\xi) \\mathrm{e} ^ {- \\mathrm{i} s \\xi} \\mathrm{d} \\xi ,\\tag{9.1}$$ 其反变换是 $$f (x) = \\frac {1} {2 \\pi} \\int_ {- \\infty} ^ {\\infty} F (s) e ^ {i s t} d s,$$"
+    },
+    {
+      "name": "单位函数",
+      "type": "definition",
+      "formal": "$$h (t) = \\left\\{ \\begin{array}{l l} 1, & t \\geqslant 0 \\\\ 0, & t <   0. \\end{array} \\right.$$ 它叫做单位函数.",
+      "source_quote": "如记 $$h (t) = \\left\\{ \\begin{array}{l l} 1, & t \\geqslant 0 \\\\ 0, & t <   0. \\end{array} \\right.$$ 它叫做单位函数."
+    },
+    {
+      "name": "拉普拉斯变换（像函数）",
+      "type": "definition",
+      "formal": "设 $f(t)$ 是实变量 $t$ 的实值函数或复值函数，当 $t < 0$ 时，$f(t) = 0$. 如果含复参变数 $p$ 的积分(9.3)在 $p$ 的某个区域内收敛，则由此积分所确定的函数 $$F (p) = \\int_ {0} ^ {+ \\infty} f (t) \\mathrm{e} ^ {- p t} \\mathrm{d} t$$ 称为函数 $f(t)$ 的拉普拉斯变换（简称拉氏变换）或像函数. 简记为 $F(p) = \\mathrm{L}[f(t)]$.",
+      "source_quote": "定义1 设 $f(t)$ 是实变量 $t$ 的实值函数或复值函数，当 $t < 0$ 时，$f(t) = 0$. 如果含复参变数 $p$ 的积分(9.3)在 $p$ 的某个区域内收敛，则由此积分所确定的函数 $$F (p) = \\int_ {0} ^ {+ \\infty} f (t) \\mathrm{e} ^ {- p t} \\mathrm{d} t$$ 称为函数 $f(t)$ 的拉普拉斯变换（简称拉氏变换）或像函数. 简记为 $F(p) = \\mathrm{L}[f(t)]$."
+    },
+    {
+      "name": "拉氏反变换（本函数）",
+      "type": "definition",
+      "formal": "而 $f(t)$ 则称 $F(p)$ 的拉氏反变换或本函数，记为 $f(t) = \\mathrm{L}^{-1}[F(p)]$.",
+      "source_quote": "而 $f(t)$ 则称 $F(p)$ 的拉氏反变换或本函数，记为 $f(t) = \\mathrm{L}^{-1}[F(p)]$."
+    },
+    {
+      "name": "逐段光滑",
+      "type": "definition",
+      "formal": "设 $f(t)$ 在 $t$ 轴上的任何有限区间上逐段光滑。即在 $t$ 轴上的任何有限区间内，$f(t)$ 及 $f'(t)$ 除有有限个第一类间断点外，处处连续。",
+      "source_quote": "1）设 $f(t)$ 在 $t$ 轴上的任何有限区间上逐段光滑。即在 $t$ 轴上的任何有限区间内，$f(t)$ 及 $f'(t)$ 除有有限个第一类间断点外，处处连续。"
+    },
+    {
+      "name": "指数增长型",
+      "type": "property",
+      "formal": "$f(t)$ 是指数增长型的. 即存在两个常数 $K > 0, c \\geqslant 0$, 使得对所有的 $t \\geqslant 0$, 有 $$\\mid f (t) \\mid \\leqslant K e ^ {c t}.\\tag{9.4}$$",
+      "source_quote": "2) $f(t)$ 是指数增长型的. 即存在两个常数 $K > 0, c \\geqslant 0$, 使得对所有的 $t \\geqslant 0$, 有 $$\\mid f (t) \\mid \\leqslant K e ^ {c t}.\\tag{9.4}$$"
+    },
+    {
+      "name": "增长指数",
+      "type": "definition",
+      "formal": "c 称为  $f(t)$  的增长指数.",
+      "source_quote": "c 称为  $f(t)$  的增长指数."
+    },
+    {
+      "name": "定理1",
+      "type": "theorem",
+      "formal": "若 $f(t)$ 满足条件1),2)，则像函数 $F(p)$ 在半平面 $\\mathrm{Re}p > c$ 上有意义，而且是一个解析函数.",
+      "source_quote": "定理1 若 $f(t)$ 满足条件1),2)，则像函数 $F(p)$ 在半平面 $\\mathrm{Re}p > c$ 上有意义，而且是一个解析函数."
+    },
+    {
+      "name": "拉氏积分",
+      "type": "formula",
+      "formal": "\\int_ {0} ^ {+ \\infty} f (t) \\mathrm{e} ^ {- \\mu t} \\mathrm{d} t.\\tag{9.3}",
+      "source_quote": "故拉氏积分(9.3)绝对收敛."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 9,
+    "漏掉的具名结论": [
+      "定理1"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "傅氏变换",
+    "单位函数",
+    "拉普拉斯变换（像函数）",
+    "拉氏反变换（本函数）",
+    "逐段光滑",
+    "指数增长型",
+    "增长指数",
+    "定理1",
+    "拉氏积分"
+  ]
+}

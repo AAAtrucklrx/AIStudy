@@ -1,0 +1,44 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH02",
+    "text_sha256": "b59d752e0faf26e7b8dbbb124c6788cef3094fe5c1f661e0a9d5793dcfb3c167",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "b59d752e0faf26e7b8dbbb124c6788cef3094fe5c1f661e0a9d5793dcfb3c167",
+    "source": "original_text",
+    "source_path": "original_text/ch02.md"
+  },
+  "unit": {
+    "unit_id": "CH02",
+    "level": "chapter_intro",
+    "chapter": "CH02",
+    "section": null,
+    "title": "复变数函数",
+    "anchor": "2"
+  },
+  "concepts": [],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 0,
+    "漏掉的具名结论": [],
+    "完整": null,
+    "完整说明": "本节没有编号条目、也没有具名结论可核对",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": []
+}

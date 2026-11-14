@@ -1,0 +1,4491 @@
+{
+  "_meta": {
+    "file_type": "images",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.export",
+    "source_sha256": "a843174fedfad1cc527432196799e775e48f4cb1fe750b6d2848784e103524e6",
+    "field_notes": {
+      "images[].id": "图片 id；教案正文用 [[FIGURE:IMG-0001]] 引用",
+      "images[].source": "markdown=正文里的 ![]() 引用；page=从 PDF 页面提取的插图",
+      "images[].page/bbox": "仅 source=page：插图所在页 + 在整页图上的像素框",
+      "images[].bbox_source": "local=本地几何检出；model=模型检出；both=两个来源都框到同一张图",
+      "images[].confidence": "high=两个来源重叠；medium=只有一个来源；low=两者差得远，建议人工看",
+      "images[].needs_review": "true 表示建议人工抽查这个框",
+      "images[].candidates": "这张图各来源给的原框，人工抽查时两个都能看",
+      "images[].file": "已裁出的单图文件；null 表示展示层按 bbox 从整页图裁即可",
+      "images[].concepts": "关联的概念 id（由教案块回填）"
+    }
+  },
+  "note": "两种来源：markdown 引用 + PDF 页面提取。页面提取的框有置信度分级（见任务基线 T1.5 的实测结论），needs_review=true 的框建议抽查。",
+  "sources": {
+    "markdown_refs": 0,
+    "page_figures": 124,
+    "figures_json": "figures.json"
+  },
+  "images": [
+    {
+      "id": "IMG-0001",
+      "source": "page",
+      "page": 1,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        34.0,
+        222.0,
+        248.0,
+        340.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            17.0,
+            111.0,
+            124.0,
+            170.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0001.jpg",
+      "sha256": "c930a4fac517e272e168ec24f1a108a4f3db49fb0c6d9cc15a2e3f423409f281",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0002",
+      "source": "page",
+      "page": 2,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        0.0,
+        60.0,
+        82.0,
+        136.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            0.0,
+            30.0,
+            41.0,
+            68.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0002.jpg",
+      "sha256": "16634daa6002990612a66ce3300d8eb395354566e5d50c69e1527bd82c75cc1b",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0003",
+      "source": "page",
+      "page": 5,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        212.0,
+        268.0,
+        294.0,
+        328.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            106.0,
+            134.0,
+            147.0,
+            164.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0003.jpg",
+      "sha256": "d55f28b87241cb88450100a72e6755770338e8607ceeac8737be23520afe9f11",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0004",
+      "source": "page",
+      "page": 7,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        36.0,
+        316.0,
+        184.0,
+        480.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            18.0,
+            158.0,
+            92.0,
+            240.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0004.jpg",
+      "sha256": "851fc9cef1f7120194931d9e2c279f57c05b3ebce16fee3e3007975c74371e46",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0005",
+      "source": "page",
+      "page": 15,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        30.0,
+        58.0,
+        136.0,
+        148.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            15.0,
+            29.0,
+            68.0,
+            74.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图1.1",
+      "file": "images/mineru-IMG-0005.jpg",
+      "sha256": "54ce5747f4f4e5b79756ccbd15a34ebbd53d3827ee4d9e1cbcf3365b45ff30d9",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0006",
+      "source": "page",
+      "page": 16,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        212.0,
+        216.0,
+        306.0,
+        296.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            106.0,
+            108.0,
+            153.0,
+            148.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0006.jpg",
+      "sha256": "39c27eed24d16de9eb604f9e60b39d8fef1f352946e346b66c80dfef4faf6afc",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0007",
+      "source": "page",
+      "page": 17,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        30.0,
+        268.0,
+        126.0,
+        348.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            15.0,
+            134.0,
+            63.0,
+            174.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图1.3",
+      "file": "images/mineru-IMG-0007.jpg",
+      "sha256": "d49ad6c38ed7ece5526493dd052959f7ae09bd9511bc3a226f1e15a6dbbdfca1",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0008",
+      "source": "page",
+      "page": 21,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        34.0,
+        282.0,
+        138.0,
+        374.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            17.0,
+            141.0,
+            69.0,
+            187.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图1.4",
+      "file": "images/mineru-IMG-0008.jpg",
+      "sha256": "f58a74e87745c3340ae45157329601e15d182f7a1b79f039c07607cbd27b82b6",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0009",
+      "source": "page",
+      "page": 22,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        122.0,
+        232.0,
+        222.0,
+        294.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            61.0,
+            116.0,
+            111.0,
+            147.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图1.5",
+      "file": "images/mineru-IMG-0009.jpg",
+      "sha256": "99fff9ee7bd613830cd1ad6a49a4f645f7e6ffc07423b1d81a6a1385d8732f6c",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0010",
+      "source": "page",
+      "page": 25,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        66.0,
+        302.0,
+        192.0,
+        394.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            33.0,
+            151.0,
+            96.0,
+            197.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图1.6",
+      "file": "images/mineru-IMG-0010.jpg",
+      "sha256": "72d43065d6984bf34fb6a5300c23bbc755e9b7c0a8d6641dedd3d7e4b1f7de43",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0011",
+      "source": "page",
+      "page": 25,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        210.0,
+        316.0,
+        266.0,
+        384.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            105.0,
+            158.0,
+            133.0,
+            192.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图1.7",
+      "file": "images/mineru-IMG-0011.jpg",
+      "sha256": "342377fe0720c22f8b955312a3a19466de7262294044a6baec5728c67b78cf4e",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0012",
+      "source": "page",
+      "page": 30,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        96.0,
+        162.0,
+        242.0,
+        236.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            48.0,
+            81.0,
+            121.0,
+            118.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图2.1",
+      "file": "images/mineru-IMG-0012.jpg",
+      "sha256": "b0a30b18e951d59ff673906fe10db37e33051c94c5ff888f8f746914c8f59bef",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0013",
+      "source": "page",
+      "page": 31,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        32.0,
+        56.0,
+        116.0,
+        142.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            16.0,
+            28.0,
+            58.0,
+            71.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0013.jpg",
+      "sha256": "5260563f0c7ee918bc7fb9144fb1387e3b4c443b2f690e28d5a1701677ad7bb4",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0014",
+      "source": "page",
+      "page": 32,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        86.0,
+        230.0,
+        244.0,
+        300.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            43.0,
+            115.0,
+            122.0,
+            150.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图2.3",
+      "file": "images/mineru-IMG-0014.jpg",
+      "sha256": "e6cc322d34c5b07c86af40ab6f98df376aef6c843e79c20ec584c399e5b7f395",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0015",
+      "source": "page",
+      "page": 40,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        70.0,
+        202.0,
+        146.0,
+        278.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            35.0,
+            101.0,
+            73.0,
+            139.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0015.jpg",
+      "sha256": "65092517b8d39f48751bb7f30da6b43653bf24729e0b807dcb6e1685e73a6232",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0016",
+      "source": "page",
+      "page": 40,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        168.0,
+        200.0,
+        266.0,
+        276.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            84.0,
+            100.0,
+            133.0,
+            138.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图2.4",
+      "file": "images/mineru-IMG-0016.jpg",
+      "sha256": "710884de47379a0dc74152bfb225bdd38c2fbd9889d9546fa6373e07170e34b1",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0017",
+      "source": "page",
+      "page": 40,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        90.0,
+        318.0,
+        256.0,
+        396.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            45.0,
+            159.0,
+            128.0,
+            198.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图2.5",
+      "file": "images/mineru-IMG-0017.jpg",
+      "sha256": "473363b3ae1f86f28fd994b18f0983f1c5a89757af0b3bf6b69fb37c4d6d7f2c",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0018",
+      "source": "page",
+      "page": 41,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        72.0,
+        238.0,
+        254.0,
+        308.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            36.0,
+            119.0,
+            127.0,
+            154.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图2.6",
+      "file": "images/mineru-IMG-0018.jpg",
+      "sha256": "e6622c8f7287e2f9cf752d0e04296b92c5daf64d34e973ba94ca42136d8e6687",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0019",
+      "source": "page",
+      "page": 42,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        62.0,
+        144.0,
+        128.0,
+        198.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            31.0,
+            72.0,
+            64.0,
+            99.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图2.7",
+      "file": "images/mineru-IMG-0019.jpg",
+      "sha256": "3ac31f5aaa04483b87883bb4a85983e85379a70c13ecca238e24afcfc3495993",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0020",
+      "source": "page",
+      "page": 42,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        178.0,
+        136.0,
+        268.0,
+        202.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            89.0,
+            68.0,
+            134.0,
+            101.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图2.8",
+      "file": "images/mineru-IMG-0020.jpg",
+      "sha256": "debcdc5fd9b8a61c1b13a4bb4d9c94672125a491310d9b2c8177e8dcc212b867",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0021",
+      "source": "page",
+      "page": 42,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        70.0,
+        306.0,
+        160.0,
+        380.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            35.0,
+            153.0,
+            80.0,
+            190.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图2.9",
+      "file": "images/mineru-IMG-0021.jpg",
+      "sha256": "7aab0374285c479a568d956b70e8d9ae14f6b65b8433ef029ad76f4460adbacd",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0022",
+      "source": "page",
+      "page": 42,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        176.0,
+        306.0,
+        262.0,
+        380.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            88.0,
+            153.0,
+            131.0,
+            190.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图2.10",
+      "file": "images/mineru-IMG-0022.jpg",
+      "sha256": "a866cb4e50028bcf3c868213da7883932904dcbdbbc539af7296c1007ee17b3e",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0023",
+      "source": "page",
+      "page": 43,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        58.0,
+        72.0,
+        264.0,
+        154.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            29.0,
+            36.0,
+            132.0,
+            77.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图2.11",
+      "file": "images/mineru-IMG-0023.jpg",
+      "sha256": "77148b1e0929c2db195b4449d436e9c7a5e7ca1d3af80aff46308e8d363cd846",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0024",
+      "source": "page",
+      "page": 46,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        58.0,
+        246.0,
+        138.0,
+        316.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            29.0,
+            123.0,
+            69.0,
+            158.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0024.jpg",
+      "sha256": "2494b5c3429775519db968f9748ab606277a813303a47968b8eee3261fd4d9be",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0025",
+      "source": "page",
+      "page": 46,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        160.0,
+        246.0,
+        244.0,
+        316.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            80.0,
+            123.0,
+            122.0,
+            158.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图2.13",
+      "file": "images/mineru-IMG-0025.jpg",
+      "sha256": "8c474b10a64f962c96e2be17b296ba2f3d84e7eb2998ab0b72e5a1ecf859a238",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0026",
+      "source": "page",
+      "page": 47,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        32.0,
+        98.0,
+        118.0,
+        144.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            16.0,
+            49.0,
+            59.0,
+            72.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图2.14",
+      "file": "images/mineru-IMG-0026.jpg",
+      "sha256": "28dec204daa2f02f38b46a6b62e4f47f1117e37c975c1607821c0a1718de5195",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0027",
+      "source": "page",
+      "page": 47,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        222.0,
+        244.0,
+        300.0,
+        298.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            111.0,
+            122.0,
+            150.0,
+            149.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图2.15",
+      "file": "images/mineru-IMG-0027.jpg",
+      "sha256": "cb9a6af47efc1dbbe293577009c2d11cce33edf5c1e01612f5ba4c46b71604a3",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0028",
+      "source": "page",
+      "page": 47,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        30.0,
+        326.0,
+        142.0,
+        400.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            15.0,
+            163.0,
+            71.0,
+            200.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图2.16",
+      "file": "images/mineru-IMG-0028.jpg",
+      "sha256": "896114153db06b64fde8070b6b2a001e124b721456b61d38af94d40dc656f3d1",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0029",
+      "source": "page",
+      "page": 49,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        66.0,
+        306.0,
+        254.0,
+        380.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            33.0,
+            153.0,
+            127.0,
+            190.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图2.17",
+      "file": "images/mineru-IMG-0029.jpg",
+      "sha256": "5fce38ae04e3b483d6517dcbfb0a5363703fa0cc9884b1d1eddf5601e1c4a4c5",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0030",
+      "source": "page",
+      "page": 58,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        102.0,
+        282.0,
+        250.0,
+        470.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            51.0,
+            141.0,
+            125.0,
+            235.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0030.jpg",
+      "sha256": "977c232b68e7ceba21ad3be6f3792647d3d8b1a021061118b8bb1f8d66139bd7",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0031",
+      "source": "page",
+      "page": 59,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        40.0,
+        290.0,
+        126.0,
+        358.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            20.0,
+            145.0,
+            63.0,
+            179.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图3.1",
+      "file": "images/mineru-IMG-0031.jpg",
+      "sha256": "ebd2ff759b74edecac7cc4cb56bd19bede4eafc5a1535f2e4b32745e1ab13f14",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0032",
+      "source": "page",
+      "page": 62,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        210.0,
+        340.0,
+        300.0,
+        412.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            105.0,
+            170.0,
+            150.0,
+            206.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图3.2",
+      "file": "images/mineru-IMG-0032.jpg",
+      "sha256": "9e81a4c970cbcae798e2106c0972718def4c46ce2c2a50a3b748afe4835d8aad",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0033",
+      "source": "page",
+      "page": 65,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        32.0,
+        54.0,
+        96.0,
+        104.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            16.0,
+            27.0,
+            48.0,
+            52.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图3.3",
+      "file": "images/mineru-IMG-0033.jpg",
+      "sha256": "ca5239613864adf01121caae47ae5edea4d25fa5ee236b5637fbcb8cd0210053",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0034",
+      "source": "page",
+      "page": 66,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        240.0,
+        56.0,
+        306.0,
+        124.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            120.0,
+            28.0,
+            153.0,
+            62.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图3.4",
+      "file": "images/mineru-IMG-0034.jpg",
+      "sha256": "f3531399f5c31ef6df8c3cbd46db53d49133f38221bb7c381ba54e4803c41483",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0035",
+      "source": "page",
+      "page": 67,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        30.0,
+        282.0,
+        86.0,
+        354.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            15.0,
+            141.0,
+            43.0,
+            177.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0035.jpg",
+      "sha256": "dc00c2b7f413b06fb41e0416edcd2f00ddd7d9a6e9e286fc2cd48d4ef837dfb3",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0036",
+      "source": "page",
+      "page": 67,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        90.0,
+        262.0,
+        146.0,
+        356.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            45.0,
+            131.0,
+            73.0,
+            178.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图3.5",
+      "file": "images/mineru-IMG-0036.jpg",
+      "sha256": "f412c92f668e3bae4c2c1a1cc30bd3affc6453371ff0ff6981d25c29003e9031",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0037",
+      "source": "page",
+      "page": 68,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        218.0,
+        78.0,
+        290.0,
+        144.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            109.0,
+            39.0,
+            145.0,
+            72.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0037.jpg",
+      "sha256": "4d073721261b7824ac90d012b9b418f9edc65cab9fba1620702c4a5943135f77",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0038",
+      "source": "page",
+      "page": 69,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        78.0,
+        74.0,
+        158.0,
+        142.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            39.0,
+            37.0,
+            79.0,
+            71.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图3.7",
+      "file": "images/mineru-IMG-0038.jpg",
+      "sha256": "a544d627bcaefc8bfaed3e25676795eee520d1b6617cc8d8ec78fa1ac1967165",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0039",
+      "source": "page",
+      "page": 69,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        182.0,
+        72.0,
+        250.0,
+        142.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            91.0,
+            36.0,
+            125.0,
+            71.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图3.8",
+      "file": "images/mineru-IMG-0039.jpg",
+      "sha256": "08a32ee5f5d556607efdc2e727e670811799a9884cd78f61d71139e674a6e8fa",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0040",
+      "source": "page",
+      "page": 73,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        78.0,
+        274.0,
+        152.0,
+        352.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            39.0,
+            137.0,
+            76.0,
+            176.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图3.9",
+      "file": "images/mineru-IMG-0040.jpg",
+      "sha256": "a17cbc50d05e24012a7eb17a8670b42981c1b04444b4dbccba6d116ab1fcd979",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0041",
+      "source": "page",
+      "page": 73,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        176.0,
+        284.0,
+        268.0,
+        352.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            88.0,
+            142.0,
+            134.0,
+            176.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图3.10",
+      "file": "images/mineru-IMG-0041.jpg",
+      "sha256": "02860870b30132903b1781eacee583a0d45f0644f0a705ae4946e01200dbce3a",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0042",
+      "source": "page",
+      "page": 79,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        34.0,
+        94.0,
+        130.0,
+        162.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            17.0,
+            47.0,
+            65.0,
+            81.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图4.1",
+      "file": "images/mineru-IMG-0042.jpg",
+      "sha256": "59ea525023715bd95023d282cf4ea5bbd79920162b91f7112e17b6cb093402ee",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0043",
+      "source": "page",
+      "page": 79,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        212.0,
+        260.0,
+        298.0,
+        332.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            106.0,
+            130.0,
+            149.0,
+            166.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0043.jpg",
+      "sha256": "b3ed87b24ca2ee9e53186187a3629f48e4aaf9e41ef1f78f1145bdd416382c04",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0044",
+      "source": "page",
+      "page": 80,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        232.0,
+        272.0,
+        306.0,
+        348.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            116.0,
+            136.0,
+            153.0,
+            174.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图4.3",
+      "file": "images/mineru-IMG-0044.jpg",
+      "sha256": "a3d915d967fd06e8c2c85b2847ddd2f570338893ea2530cab7e274e46e1ca68a",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0045",
+      "source": "page",
+      "page": 85,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        170.0,
+        334.0,
+        336.0,
+        488.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            85.0,
+            167.0,
+            168.0,
+            244.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0045.jpg",
+      "sha256": "cee44c1904f51326ad2ebe32f46d7c861e20ce7e09fc5fbea6c4dd37de6801d3",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0046",
+      "source": "page",
+      "page": 92,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        214.0,
+        328.0,
+        300.0,
+        402.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            107.0,
+            164.0,
+            150.0,
+            201.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0046.jpg",
+      "sha256": "ccf43913ed9c21e93f03ce11d63090ab74d12f8cc3b877590fd9a7e1d146c069",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0047",
+      "source": "page",
+      "page": 95,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        40.0,
+        56.0,
+        126.0,
+        126.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            20.0,
+            28.0,
+            63.0,
+            63.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图5.2",
+      "file": "images/mineru-IMG-0047.jpg",
+      "sha256": "3d61a337c515aba4d11bdf437c6894ff471bca39518b38e47281182782e6e52a",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0048",
+      "source": "page",
+      "page": 101,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        30.0,
+        294.0,
+        114.0,
+        374.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            15.0,
+            147.0,
+            57.0,
+            187.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图5.3",
+      "file": "images/mineru-IMG-0048.jpg",
+      "sha256": "8145c69db570c4be90ec275d25ea405585a96b88fa9210133c0fff696bc41c55",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0049",
+      "source": "page",
+      "page": 117,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        32.0,
+        228.0,
+        94.0,
+        300.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            16.0,
+            114.0,
+            47.0,
+            150.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0049.jpg",
+      "sha256": "ac0ec4c02c2489cc63db8ae6660f04cf4a4ab1d4a7fbd5de182fe1fa526b3a35",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0050",
+      "source": "page",
+      "page": 122,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        218.0,
+        214.0,
+        298.0,
+        252.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            109.0,
+            107.0,
+            149.0,
+            126.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图6.2",
+      "file": "images/mineru-IMG-0050.jpg",
+      "sha256": "9b1bef04bf0ef7aea4a509c42b1a703fcdd7c63e8f04514081b8ee38dca4b705",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0051",
+      "source": "page",
+      "page": 123,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        38.0,
+        94.0,
+        132.0,
+        160.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            19.0,
+            47.0,
+            66.0,
+            80.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图6.3",
+      "file": "images/mineru-IMG-0051.jpg",
+      "sha256": "87c4613c5584f34858a245d702ccf0ce0a1f143638bc2017da6238288bfb7238",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0052",
+      "source": "page",
+      "page": 126,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        202.0,
+        114.0,
+        302.0,
+        184.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            101.0,
+            57.0,
+            151.0,
+            92.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0052.jpg",
+      "sha256": "1db4c49b6dfb3403afd5bebdac7309322151627ef5199e63e47c6d1944787f7e",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0053",
+      "source": "page",
+      "page": 127,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        38.0,
+        236.0,
+        158.0,
+        306.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            19.0,
+            118.0,
+            79.0,
+            153.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图6.5",
+      "file": "images/mineru-IMG-0053.jpg",
+      "sha256": "9bfa985bfc463664931bc1b438d96a6211f2b7331117fe9677e8b311ded2eb99",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0054",
+      "source": "page",
+      "page": 130,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        222.0,
+        58.0,
+        306.0,
+        126.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            111.0,
+            29.0,
+            153.0,
+            63.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图6.6",
+      "file": "images/mineru-IMG-0054.jpg",
+      "sha256": "ed061345803b854ebe32e06ba051c1bed290e66222f4bb8c1b0e2feaf741c11f",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0055",
+      "source": "page",
+      "page": 130,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        34.0,
+        146.0,
+        110.0,
+        208.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            17.0,
+            73.0,
+            55.0,
+            104.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图6.7",
+      "file": "images/mineru-IMG-0055.jpg",
+      "sha256": "fa9c4e04aad58b8ed7ab51c06bab10dc0d2aae2ef559de889787671ba44e4499",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0056",
+      "source": "page",
+      "page": 131,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        32.0,
+        170.0,
+        120.0,
+        232.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            16.0,
+            85.0,
+            60.0,
+            116.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图6.8",
+      "file": "images/mineru-IMG-0056.jpg",
+      "sha256": "3a2cae319a5b53027f71055557283b61c63481534e426fa81fd8fb4703d9beb7",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0057",
+      "source": "page",
+      "page": 132,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        230.0,
+        192.0,
+        302.0,
+        256.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            115.0,
+            96.0,
+            151.0,
+            128.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0057.jpg",
+      "sha256": "0c25d40b059d613b623326a5e95bc4b59191bcb1f1e70773bed6be14ce76ae27",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0058",
+      "source": "page",
+      "page": 134,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        200.0,
+        182.0,
+        294.0,
+        258.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            100.0,
+            91.0,
+            147.0,
+            129.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0058.jpg",
+      "sha256": "2b69a81243d4a6549dae39468fa3513b4722043fa7b872f574db1b14288f9cb2",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0059",
+      "source": "page",
+      "page": 138,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        224.0,
+        174.0,
+        294.0,
+        234.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            112.0,
+            87.0,
+            147.0,
+            117.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图6.11",
+      "file": "images/mineru-IMG-0059.jpg",
+      "sha256": "7b2a4b2ff1b221c113fb8610782ec92197e76dd65e6b77c0d182bf032e7b714d",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0060",
+      "source": "page",
+      "page": 139,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        32.0,
+        54.0,
+        114.0,
+        120.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            16.0,
+            27.0,
+            57.0,
+            60.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图6.12",
+      "file": "images/mineru-IMG-0060.jpg",
+      "sha256": "891d5a603a46cad4d8d37e362656798ea5a5041b07ffe5dc269c10b6b8ad3f02",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0061",
+      "source": "page",
+      "page": 140,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        34.0,
+        88.0,
+        304.0,
+        160.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            17.0,
+            44.0,
+            152.0,
+            80.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0061.jpg",
+      "sha256": "5fce09971d01c8d480451796006158d3b805ca8ea21c27b132521d2e8bde2cfd",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0062",
+      "source": "page",
+      "page": 140,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        232.0,
+        162.0,
+        304.0,
+        230.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            116.0,
+            81.0,
+            152.0,
+            115.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0062.jpg",
+      "sha256": "51d91159b16f28072175284467021b4c3c106e7f0259fc0625550a1eee041f8a",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0063",
+      "source": "page",
+      "page": 144,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        94.0,
+        134.0,
+        234.0,
+        192.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            47.0,
+            67.0,
+            117.0,
+            96.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图7.1",
+      "file": "images/mineru-IMG-0063.jpg",
+      "sha256": "c24e92ec10ae4ccec8e976056db57a3fc09040c30b548d0e9ab3bde0b0fc627c",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0064",
+      "source": "page",
+      "page": 145,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        34.0,
+        232.0,
+        84.0,
+        282.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            17.0,
+            116.0,
+            42.0,
+            141.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图7.2",
+      "file": "images/mineru-IMG-0064.jpg",
+      "sha256": "211d2626c0ee05f5961c26dec49d63808cb45cb704e5d8e191d3c381b2232b25",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0065",
+      "source": "page",
+      "page": 146,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        218.0,
+        198.0,
+        306.0,
+        266.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            109.0,
+            99.0,
+            153.0,
+            133.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0065.jpg",
+      "sha256": "eb9fb04b9da65a7381a2532240776b669226c365767af2e0c2b6459bd1e0644b",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0066",
+      "source": "page",
+      "page": 153,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        32.0,
+        256.0,
+        114.0,
+        320.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            16.0,
+            128.0,
+            57.0,
+            160.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图7.4",
+      "file": "images/mineru-IMG-0066.jpg",
+      "sha256": "0b88f4cc30cd64867417b8f540e60373aac2cb7aad460e5ba832cf066a22cfcd",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0067",
+      "source": "page",
+      "page": 155,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        94.0,
+        258.0,
+        240.0,
+        312.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            47.0,
+            129.0,
+            120.0,
+            156.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.1",
+      "file": "images/mineru-IMG-0067.jpg",
+      "sha256": "5ed980d28bb98f62458e4c3a1acc30fe8876feaad70c9c195bf4aebdbe609c39",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0068",
+      "source": "page",
+      "page": 160,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        194.0,
+        272.0,
+        294.0,
+        340.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            97.0,
+            136.0,
+            147.0,
+            170.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.2",
+      "file": "images/mineru-IMG-0068.jpg",
+      "sha256": "a9c772b9bb1c7dfb4146ecb28a3458bdc7b0e54a1d0667619ea4d6eac03a138b",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0069",
+      "source": "page",
+      "page": 164,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        198.0,
+        158.0,
+        298.0,
+        240.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            99.0,
+            79.0,
+            149.0,
+            120.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.3",
+      "file": "images/mineru-IMG-0069.jpg",
+      "sha256": "492fbb648b305203ec2f886a5d5bc9132b2e6595234934ead1e39602e43130b7",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0070",
+      "source": "page",
+      "page": 166,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        214.0,
+        136.0,
+        300.0,
+        238.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            107.0,
+            68.0,
+            150.0,
+            119.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.4",
+      "file": "images/mineru-IMG-0070.jpg",
+      "sha256": "6bc80b98d94b5e8426623cea550b743e7444b1d6133fd679bb263d6dd1ae485e",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0071",
+      "source": "page",
+      "page": 167,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        74.0,
+        206.0,
+        128.0,
+        266.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            37.0,
+            103.0,
+            64.0,
+            133.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0071.jpg",
+      "sha256": "f4015a571e82dd887c09dec8bf745f9e8ffb655489c30d9a809bf0cdcdaa0a11",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0072",
+      "source": "page",
+      "page": 167,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        136.0,
+        204.0,
+        196.0,
+        268.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            68.0,
+            102.0,
+            98.0,
+            134.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.5",
+      "file": "images/mineru-IMG-0072.jpg",
+      "sha256": "e26e30ec1ec80c681eadd27ebe6c84bbdc45b0ce609a89f2bb126c9f740defdc",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0073",
+      "source": "page",
+      "page": 167,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        202.0,
+        204.0,
+        258.0,
+        266.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            101.0,
+            102.0,
+            129.0,
+            133.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0073.jpg",
+      "sha256": "b2ddf82cfa337604d0d0bd8b73a63abee9b8971a3d36f759e265945f6d69bc88",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0074",
+      "source": "page",
+      "page": 167,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        180.0,
+        280.0,
+        286.0,
+        332.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            90.0,
+            140.0,
+            143.0,
+            166.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0074.jpg",
+      "sha256": "29e579e19bb5559c3d4d1291fc90ae8e3ad1158298940a54ae5dc1ffe61efb1a",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0075",
+      "source": "page",
+      "page": 167,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        180.0,
+        342.0,
+        284.0,
+        412.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            90.0,
+            171.0,
+            142.0,
+            206.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.6",
+      "file": "images/mineru-IMG-0075.jpg",
+      "sha256": "a905fa31d78c6bfeb020b14c0b80c39234caab450f9df355d8274a878725d865",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0076",
+      "source": "page",
+      "page": 168,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        94.0,
+        260.0,
+        166.0,
+        314.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            47.0,
+            130.0,
+            83.0,
+            157.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0076.jpg",
+      "sha256": "3d81e5fbc930f6d67b42d0d147ac54ad5f208ecc2712ac2ee160896205791dfe",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0077",
+      "source": "page",
+      "page": 168,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        190.0,
+        250.0,
+        250.0,
+        306.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            95.0,
+            125.0,
+            125.0,
+            153.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.7",
+      "file": "images/mineru-IMG-0077.jpg",
+      "sha256": "d5e40721cd60828c628d5ed899c791a86bb36bbe723e58f6ba8ccf23af0d18ad",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0078",
+      "source": "page",
+      "page": 170,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        84.0,
+        132.0,
+        252.0,
+        208.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            42.0,
+            66.0,
+            126.0,
+            104.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.8",
+      "file": "images/mineru-IMG-0078.jpg",
+      "sha256": "492a47051d0bf135c3fd6cfb0e6c6a2b04356a85af911ec8c1e51712c8ffb66c",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0079",
+      "source": "page",
+      "page": 172,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        62.0,
+        56.0,
+        268.0,
+        216.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            31.0,
+            28.0,
+            134.0,
+            108.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.9",
+      "file": "images/mineru-IMG-0079.jpg",
+      "sha256": "62a7f8a316f8a2008239d9c4c7f9d637d8d1ed672d73cfca9d8a91c64bc00b95",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0080",
+      "source": "page",
+      "page": 173,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        76.0,
+        226.0,
+        162.0,
+        294.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            38.0,
+            113.0,
+            81.0,
+            147.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.10",
+      "file": "images/mineru-IMG-0080.jpg",
+      "sha256": "11a078ed9c3e8f1ed726c874ae5f3d79b074240c02384a9d9dfe5b6608b498b3",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0081",
+      "source": "page",
+      "page": 173,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        168.0,
+        226.0,
+        254.0,
+        296.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            84.0,
+            113.0,
+            127.0,
+            148.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.11",
+      "file": "images/mineru-IMG-0081.jpg",
+      "sha256": "ba2000c5007904ae478942c1755953b6e194497c1f52790d12fc3207ce81c6df",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0082",
+      "source": "page",
+      "page": 176,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        214.0,
+        238.0,
+        302.0,
+        318.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            107.0,
+            119.0,
+            151.0,
+            159.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.12",
+      "file": "images/mineru-IMG-0082.jpg",
+      "sha256": "a371908be6353b5ae28a75d35bd47c138cbd4631d110f7ec92111575dbfc91bc",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0083",
+      "source": "page",
+      "page": 177,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        182.0,
+        158.0,
+        266.0,
+        182.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            91.0,
+            79.0,
+            133.0,
+            91.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0083.jpg",
+      "sha256": "df044577b71ff9feb436510368168b65bd6ccf51618e12ca2caa15fad2a1428d",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0084",
+      "source": "page",
+      "page": 177,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        66.0,
+        164.0,
+        134.0,
+        250.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            33.0,
+            82.0,
+            67.0,
+            125.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0084.jpg",
+      "sha256": "7f133a041ba417214656861ff176eef5fa1360ebe94ef25174dd20e3207013fc",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0085",
+      "source": "page",
+      "page": 177,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        176.0,
+        190.0,
+        268.0,
+        254.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            88.0,
+            95.0,
+            134.0,
+            127.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.13",
+      "file": "images/mineru-IMG-0085.jpg",
+      "sha256": "56f1ca94c0a8ddc66c1f5f89163d11d3f1b3261c30ac43efb4fcec90ecf33271",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0086",
+      "source": "page",
+      "page": 178,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        66.0,
+        90.0,
+        140.0,
+        176.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            33.0,
+            45.0,
+            70.0,
+            88.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0086.jpg",
+      "sha256": "51eaf4b6f4cb283e00d7ae11fd56fd81733413a68e48ed23343b358fdc70ea72",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0087",
+      "source": "page",
+      "page": 178,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        178.0,
+        86.0,
+        266.0,
+        142.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            89.0,
+            43.0,
+            133.0,
+            71.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0087.jpg",
+      "sha256": "213b75e38caf6df1449c0f56702169a43c9977947cf7d50734fd357bcec004fe",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0088",
+      "source": "page",
+      "page": 178,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        176.0,
+        142.0,
+        266.0,
+        174.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            88.0,
+            71.0,
+            133.0,
+            87.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.14",
+      "file": "images/mineru-IMG-0088.jpg",
+      "sha256": "27e1a1cc6fc75866899a9897b650107871c0deb868d1f39808a16e5b3d89d4f2",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0089",
+      "source": "page",
+      "page": 179,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        58.0,
+        90.0,
+        134.0,
+        174.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            29.0,
+            45.0,
+            67.0,
+            87.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0089.jpg",
+      "sha256": "7071eeae501dcb5de2561611d9ac78d515b10e67b43da6b4f284bd9f5abef2ee",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0090",
+      "source": "page",
+      "page": 179,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        164.0,
+        94.0,
+        276.0,
+        144.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            82.0,
+            47.0,
+            138.0,
+            72.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0090.jpg",
+      "sha256": "90632ada817d1451d6988ca2b9a96dc59b95a82e1ed076a8ca8c09ed1c71c262",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0091",
+      "source": "page",
+      "page": 179,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        166.0,
+        144.0,
+        276.0,
+        174.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            83.0,
+            72.0,
+            138.0,
+            87.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.15",
+      "file": "images/mineru-IMG-0091.jpg",
+      "sha256": "8f82e8f22de9285a165aebb34708975d3d36f659f34a4df1127a7cd8889a41ff",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0092",
+      "source": "page",
+      "page": 181,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        32.0,
+        54.0,
+        124.0,
+        122.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            16.0,
+            27.0,
+            62.0,
+            61.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.16",
+      "file": "images/mineru-IMG-0092.jpg",
+      "sha256": "8870131c6a7db5fd531aee4754ff24c553c60f05603887e3d12b6e8878db61cf",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0093",
+      "source": "page",
+      "page": 184,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        202.0,
+        332.0,
+        300.0,
+        394.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            101.0,
+            166.0,
+            150.0,
+            197.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0093.jpg",
+      "sha256": "7e06a0878ce3b3d7d7c631c7f70daf30516eba4e582b0aa22943bdc19e7e4c94",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0094",
+      "source": "page",
+      "page": 187,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        30.0,
+        188.0,
+        122.0,
+        256.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            15.0,
+            94.0,
+            61.0,
+            128.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.18",
+      "file": "images/mineru-IMG-0094.jpg",
+      "sha256": "31a42e347456e4faab62354310ce036b97ec5d1ec979193833e73b72abe0a44a",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0095",
+      "source": "page",
+      "page": 188,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        236.0,
+        88.0,
+        306.0,
+        148.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            118.0,
+            44.0,
+            153.0,
+            74.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0095.jpg",
+      "sha256": "6e341b16e65903821af8e667ddfd832975a43ff90ac588ad616e37575bff20a7",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0096",
+      "source": "page",
+      "page": 188,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        34.0,
+        288.0,
+        118.0,
+        366.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            17.0,
+            144.0,
+            59.0,
+            183.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0096.jpg",
+      "sha256": "2b7dc1eea176dcf97d2b9fbdadf32bd4fe69d4985a26600d8c57d422d73c5ecf",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0097",
+      "source": "page",
+      "page": 189,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        32.0,
+        150.0,
+        116.0,
+        232.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            16.0,
+            75.0,
+            58.0,
+            116.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.21",
+      "file": "images/mineru-IMG-0097.jpg",
+      "sha256": "d796ee82a870b0b59648ad12c1106d2518e033183b0925590629cd4834f2e04d",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0098",
+      "source": "page",
+      "page": 190,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        222.0,
+        114.0,
+        304.0,
+        160.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            111.0,
+            57.0,
+            152.0,
+            80.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.22",
+      "file": "images/mineru-IMG-0098.jpg",
+      "sha256": "a7c18c5df68f7b06c2f1b95a92525ea1d45b1cb242d3c0577dacdf6abd85cb7b",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0099",
+      "source": "page",
+      "page": 191,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        32.0,
+        60.0,
+        114.0,
+        106.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            16.0,
+            30.0,
+            57.0,
+            53.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.23",
+      "file": "images/mineru-IMG-0099.jpg",
+      "sha256": "fa01daa56e3d9ff31946f5a074183b1d495a1b5c44e8096db31a0962297cc1e9",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0100",
+      "source": "page",
+      "page": 192,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        62.0,
+        92.0,
+        162.0,
+        208.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            31.0,
+            46.0,
+            81.0,
+            104.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.24",
+      "file": "images/mineru-IMG-0100.jpg",
+      "sha256": "1345987e67b5dccf4a0f40203fb5514ea5cab1ed76afd980c0b62bf234c36c67",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0101",
+      "source": "page",
+      "page": 192,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        180.0,
+        106.0,
+        264.0,
+        202.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            90.0,
+            53.0,
+            132.0,
+            101.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.25",
+      "file": "images/mineru-IMG-0101.jpg",
+      "sha256": "4e725429075679ba1d216b166e87cdd920cc23607a01daac55d678100aea88ca",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0102",
+      "source": "page",
+      "page": 193,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        88.0,
+        342.0,
+        240.0,
+        406.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            44.0,
+            171.0,
+            120.0,
+            203.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.26",
+      "file": "images/mineru-IMG-0102.jpg",
+      "sha256": "38e34d98592aaa1d8462e1f847822364ea192bc35386b2c5c2cf756ffc627ca5",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0103",
+      "source": "page",
+      "page": 194,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        120.0,
+        272.0,
+        218.0,
+        328.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            60.0,
+            136.0,
+            109.0,
+            164.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图8.27",
+      "file": "images/mineru-IMG-0103.jpg",
+      "sha256": "69c78272ed498fa89b1cab748c3e6aa2d5f40f147db7405430ebed9436148c0a",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0104",
+      "source": "page",
+      "page": 201,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        34.0,
+        322.0,
+        138.0,
+        376.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            17.0,
+            161.0,
+            69.0,
+            188.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图9.1",
+      "file": "images/mineru-IMG-0104.jpg",
+      "sha256": "6605144fb52dc0410b3adbc27f2de62c7c7ab6b5d7f490ae8c1eead8709ff7f4",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0105",
+      "source": "page",
+      "page": 204,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        208.0,
+        274.0,
+        298.0,
+        334.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            104.0,
+            137.0,
+            149.0,
+            167.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图9.2",
+      "file": "images/mineru-IMG-0105.jpg",
+      "sha256": "4f0f1199f79e065671d95c2ba4d214aa164f24fe616cf6575d0b5fcd41dc5814",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0106",
+      "source": "page",
+      "page": 205,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        58.0,
+        122.0,
+        146.0,
+        186.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            29.0,
+            61.0,
+            73.0,
+            93.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图9.3",
+      "file": "images/mineru-IMG-0106.jpg",
+      "sha256": "ebfb73893a1c1376f1a4270155057d9ff6521d6c1b4f9ff0b35300c4088a1aa1",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0107",
+      "source": "page",
+      "page": 205,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        184.0,
+        126.0,
+        268.0,
+        188.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            92.0,
+            63.0,
+            134.0,
+            94.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图9.4",
+      "file": "images/mineru-IMG-0107.jpg",
+      "sha256": "a33c5dcd58b04017b6a11a3eff1234c6c8c0d1b0a737d784f91b38ba72b3e455",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0108",
+      "source": "page",
+      "page": 205,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        28.0,
+        324.0,
+        116.0,
+        402.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            14.0,
+            162.0,
+            58.0,
+            201.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图9.5",
+      "file": "images/mineru-IMG-0108.jpg",
+      "sha256": "35b693da804badd6680bbca32c8472dacd4feea635994b0ce473c23df7380381",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0109",
+      "source": "page",
+      "page": 206,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        204.0,
+        54.0,
+        298.0,
+        138.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            102.0,
+            27.0,
+            149.0,
+            69.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图9.6",
+      "file": "images/mineru-IMG-0109.jpg",
+      "sha256": "739c15d2fcad316c558567f8f82ac24d83c83480ad0607f02d47112be18a49dd",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0110",
+      "source": "page",
+      "page": 213,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        36.0,
+        80.0,
+        120.0,
+        168.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            18.0,
+            40.0,
+            60.0,
+            84.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图9.7",
+      "file": "images/mineru-IMG-0110.jpg",
+      "sha256": "8e6e4fbadf04466f3230f04aa39b1bcd9eab507fef0fa1d76e3af67e2cb0fd01",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0111",
+      "source": "page",
+      "page": 218,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        32.0,
+        220.0,
+        304.0,
+        404.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            16.0,
+            110.0,
+            152.0,
+            202.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0111.jpg",
+      "sha256": "7dbe313afb23485e4d6121de31ee9636f4a31d206cfc3fe767dbf2ea837e994c",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0112",
+      "source": "page",
+      "page": 219,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        32.0,
+        60.0,
+        302.0,
+        228.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            16.0,
+            30.0,
+            151.0,
+            114.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0112.jpg",
+      "sha256": "33265af6e619f4a8b2fa583f084dff47ecca910c22964bfaaa222188652c9ff7",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0113",
+      "source": "page",
+      "page": 219,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        28.0,
+        296.0,
+        298.0,
+        408.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            14.0,
+            148.0,
+            149.0,
+            204.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "附表 2 拉普拉斯变换表",
+      "file": "images/mineru-IMG-0113.jpg",
+      "sha256": "f1bf4bfe36b953ce5157c946a02e9f7de98f8c7b085dcd4bd30c7bbf3f9970fb",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0114",
+      "source": "page",
+      "page": 222,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        32.0,
+        64.0,
+        306.0,
+        414.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            16.0,
+            32.0,
+            153.0,
+            207.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0114.jpg",
+      "sha256": "d98f855150ec4c2f2bf34eb214a27747240325af4ffeaac544b2156e508e7c7e",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0115",
+      "source": "page",
+      "page": 224,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        92.0,
+        56.0,
+        156.0,
+        100.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            46.0,
+            28.0,
+            78.0,
+            50.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0115.jpg",
+      "sha256": "b2239f3e289ff04efb2c68610a3cf295db65ccca714d3bf5bb5deb96038606c0",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0116",
+      "source": "page",
+      "page": 224,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        168.0,
+        60.0,
+        232.0,
+        100.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            84.0,
+            30.0,
+            116.0,
+            50.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0116.jpg",
+      "sha256": "ded61e71846019011619dbab8e8d48e20e9b7f59093c0eea4419161c381a1ded",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0117",
+      "source": "page",
+      "page": 224,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        94.0,
+        120.0,
+        156.0,
+        168.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            47.0,
+            60.0,
+            78.0,
+            84.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0117.jpg",
+      "sha256": "4fd9b20a9a4a90bcc4886f06794e5ed1d50511aa846fffc87642402dc18c3c53",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0118",
+      "source": "page",
+      "page": 224,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        94.0,
+        174.0,
+        156.0,
+        220.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            47.0,
+            87.0,
+            78.0,
+            110.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0118.jpg",
+      "sha256": "3bd2faac937e922480b1912669b77617adf38e4c0e43a6ac32b7e5536bde122a",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0119",
+      "source": "page",
+      "page": 224,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        170.0,
+        120.0,
+        244.0,
+        184.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            85.0,
+            60.0,
+            122.0,
+            92.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图9.8",
+      "file": "images/mineru-IMG-0119.jpg",
+      "sha256": "c09879952012a8bafc3aa09bf245605a649ae5e5533222325fd937867b784f7f",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0120",
+      "source": "page",
+      "page": 224,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        74.0,
+        282.0,
+        160.0,
+        332.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            37.0,
+            141.0,
+            80.0,
+            166.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0120.jpg",
+      "sha256": "ff5c4e6efb13736e54b0a26c7896635a8f3ff8b86320c743a1623b1f54381698",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0121",
+      "source": "page",
+      "page": 224,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        172.0,
+        282.0,
+        256.0,
+        334.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            86.0,
+            141.0,
+            128.0,
+            167.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0121.jpg",
+      "sha256": "6c6e98eee24afacd136c52f89e2a4259123ff4a074ff0d69524454cebfdefb7a",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0122",
+      "source": "page",
+      "page": 224,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        78.0,
+        350.0,
+        170.0,
+        398.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            39.0,
+            175.0,
+            85.0,
+            199.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0122.jpg",
+      "sha256": "3a0043eec152c0c47107729998888634f20218a62618e701c50db5540b86273b",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0123",
+      "source": "page",
+      "page": 224,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        174.0,
+        350.0,
+        258.0,
+        398.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            87.0,
+            175.0,
+            129.0,
+            199.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图9.9",
+      "file": "images/mineru-IMG-0123.jpg",
+      "sha256": "275148e233f0f6aec1ebf0b53536269cd495cd8d323427df26dd48e141f4079e",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0124",
+      "source": "page",
+      "page": 239,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        0.0,
+        0.0,
+        336.0,
+        478.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            0.0,
+            0.0,
+            168.0,
+            239.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0124.jpg",
+      "sha256": "b19e2fa6099f0a00246a2c08565d519f5f18844e405fa58cdb9b16122332bf9b",
+      "concepts": [],
+      "occurrences": []
+    }
+  ]
+}

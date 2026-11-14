@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "file_type": "tables",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.export",
+    "source_sha256": "a843174fedfad1cc527432196799e775e48f4cb1fe750b6d2848784e103524e6",
+    "field_notes": {
+      "tables[]": "表格索引；当前尚未实现表格识别，恒为空数组"
+    }
+  },
+  "note": "表格识别尚未实现（可选任务）。这里如实输出空数组，不用空壳冒充。",
+  "tables": []
+}

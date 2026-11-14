@@ -1,0 +1,184 @@
+{
+  "_meta": {
+    "file_type": "toc_review",
+    "schema_version": "2.0",
+    "generator": "aiforstudy.parse.toc.review",
+    "images": 0,
+    "model_calls": 0,
+    "tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "total": 0
+    },
+    "downgraded": false,
+    "image_mode": "none",
+    "field_notes": {}
+  },
+  "suspects": [
+    {
+      "toc_id": "T-0001",
+      "line": 1,
+      "level": 2,
+      "number": "",
+      "title": "总序",
+      "kind": "non-teaching",
+      "sources": [
+        "printed-toc"
+      ],
+      "page": {
+        "printed": "1",
+        "pdf": null
+      },
+      "reasons": [
+        "只有单源（printed-toc）",
+        "confirmed:false（目录层自己就不确定）"
+      ],
+      "bookmarks": null,
+      "printed": null,
+      "body": null
+    },
+    {
+      "toc_id": "T-0002",
+      "line": 2,
+      "level": 2,
+      "number": "",
+      "title": "前言",
+      "kind": "non-teaching",
+      "sources": [
+        "printed-toc"
+      ],
+      "page": {
+        "printed": "2",
+        "pdf": null
+      },
+      "reasons": [
+        "只有单源（printed-toc）",
+        "confirmed:false（目录层自己就不确定）"
+      ],
+      "bookmarks": null,
+      "printed": null,
+      "body": null
+    },
+    {
+      "toc_id": "T-0020",
+      "line": 20,
+      "level": 2,
+      "number": "4.2",
+      "title": "调和函数的性质和狭利克雷问题",
+      "kind": "section",
+      "sources": [
+        "body-heading-shapes",
+        "printed-toc"
+      ],
+      "page": {
+        "printed": "72",
+        "pdf": null
+      },
+      "reasons": [
+        "源间冲突：正文里写的是「调和函数的性质和狄利克雷问题」，目录里写的是「调和函数的性质和狭利克雷问题」—— 其中一个多半是 OCR 错字",
+        "confirmed:false（目录层自己就不确定）",
+        "目录里写「调和函数的性质和狭利克雷问题」，但**正文里找不到这个标题**（疑似 OCR 错字；已按标题口径折平后仍找不到）"
+      ],
+      "bookmarks": null,
+      "printed": "4.2 调和函数的性质和狭利克雷问题",
+      "body": "4.2 调和函数的性质和狄利克雷问题"
+    },
+    {
+      "toc_id": "T-0023",
+      "line": 23,
+      "level": 2,
+      "number": "5.2",
+      "title": "基级数",
+      "kind": "section",
+      "sources": [
+        "body-heading-shapes",
+        "printed-toc"
+      ],
+      "page": {
+        "printed": "82",
+        "pdf": null
+      },
+      "reasons": [
+        "源间冲突：正文里写的是「幂级数」，目录里写的是「基级数」—— 其中一个多半是 OCR 错字",
+        "confirmed:false（目录层自己就不确定）",
+        "目录里写「基级数」，但**正文里找不到这个标题**（疑似 OCR 错字；已按标题口径折平后仍找不到）"
+      ],
+      "bookmarks": null,
+      "printed": "5.2 基级数",
+      "body": "5.2 幂级数"
+    },
+    {
+      "toc_id": "T-0045",
+      "line": 45,
+      "level": 2,
+      "number": "",
+      "title": "附表1 基本法则表",
+      "kind": "non-teaching",
+      "sources": [
+        "body-heading-shapes",
+        "printed-toc"
+      ],
+      "page": {
+        "printed": "209",
+        "pdf": null
+      },
+      "reasons": [
+        "confirmed:false（目录层自己就不确定）"
+      ],
+      "bookmarks": null,
+      "printed": null,
+      "body": null
+    },
+    {
+      "toc_id": "T-0046",
+      "line": 46,
+      "level": 2,
+      "number": "",
+      "title": "附表2 拉普拉斯变换表",
+      "kind": "non-teaching",
+      "sources": [
+        "printed-toc"
+      ],
+      "page": {
+        "printed": "210",
+        "pdf": null
+      },
+      "reasons": [
+        "只有单源（printed-toc）",
+        "confirmed:false（目录层自己就不确定）"
+      ],
+      "bookmarks": null,
+      "printed": null,
+      "body": null
+    },
+    {
+      "toc_id": "T-0047",
+      "line": 47,
+      "level": 2,
+      "number": "",
+      "title": "习题参考答案",
+      "kind": "non-teaching",
+      "sources": [
+        "printed-toc"
+      ],
+      "page": {
+        "printed": "218",
+        "pdf": null
+      },
+      "reasons": [
+        "只有单源（printed-toc）",
+        "confirmed:false（目录层自己就不确定）"
+      ],
+      "bookmarks": null,
+      "printed": null,
+      "body": null
+    }
+  ],
+  "suspects_total": 7,
+  "nodes_total": 47,
+  "chunks": 0,
+  "images_sent": [],
+  "decisions": [],
+  "summary": {},
+  "note": "dry-run：没有调模型"
+}

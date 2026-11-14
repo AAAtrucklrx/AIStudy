@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "file_type": "toc_review",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.blocks.parse.review",
+    "field_notes": {
+      "inputs_digest": "这份复核是对哪一份输入（目录来源 bundle + 截图）做的；对不上就拒绝应用",
+      "decisions[].reason": "每条裁决必须写理由",
+      "decisions_digest": "决策指纹：内容变了但条数没变也能发现"
+    }
+  },
+  "inputs_digest": "sha256:866ffa44a1561e71e7ffde6a598508b8d362ee743af86b155fc9d7d49d8ef35e",
+  "decisions_digest": "sha256:d5b7118448db052ce94ad0485225992aaae5f7cf6b8e325ec46deeaf9b8148d0",
+  "produced_by": "Codex model visual inspection of original PDF; not the unverified DeepSeek draft",
+  "decisions": [
+    {
+      "subject": "T-0041",
+      "verdict": "accept-printed",
+      "title": "",
+      "reason": "PDF 第4页目录明确3.2 行列式的性质，第72页下部有同名同编号正文标题；二级节成立。",
+      "arbiter": "model",
+      "evidence": "目录核对/pdf-page-4.png; 目录核对/pdf-page-72.png; PDF SHA256 15b161f6cd7c383c5d8f531146e9e7543ee413dfe69d43a5c1e6b3f85bb17174"
+    },
+    {
+      "subject": "T-0109",
+      "verdict": "accept-printed",
+      "title": "",
+      "reason": "PDF 第6页参考文献与第八章同级独立列示，第289页为17条书目；确认为非教学尾部，不归第八章教学内容。",
+      "arbiter": "model",
+      "evidence": "目录核对/pdf-page-6.png; 目录核对/pdf-page-289.png"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH08-S01",
+    "text_sha256": "a7ed403d5f9e509fc4ad916896847e8d98d5822938cc9b004046a6371e03ea72",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "a7ed403d5f9e509fc4ad916896847e8d98d5822938cc9b004046a6371e03ea72",
+    "source": "original_text",
+    "source_path": "original_text/ch08_s01.md"
+  },
+  "unit": {
+    "unit_id": "CH08-S01",
+    "level": "section",
+    "chapter": "CH08",
+    "section": "CH08-S01",
+    "title": "导数的几何意义",
+    "anchor": "8.1"
+  },
+  "concepts": [
+    {
+      "name": "旋转角",
+      "type": "definition",
+      "formal": "曲线 C 在 $z_{0}$ 的切线通过变换以后绕着点 $z_{0}$ 转动了一个角度 $\\arg f'(z_{0})$ ，它称为变换 $w = f(z)$ 在 $z_{0}$ 点的旋转角。它仅与 $z_{0}$ 有关，而与过 $z_{0}$ 的 C 的选择无关。",
+      "source_quote": "因此我们可以认为曲线 C 在 $z_{0}$ 的切线通过变换以后绕着点 $z_{0}$ 转动了一个角度 $\\arg f'(z_{0})$ ，它称为变换 $w = f(z)$ 在 $z_{0}$ 点的旋转角。它仅与 $z_{0}$ 有关，而与过 $z_{0}$ 的 C 的选择无关。"
+    },
+    {
+      "name": "保角性",
+      "type": "property",
+      "formal": "如果函数 $w = f(z)$ 在区域 $D$ 内解析，设 $z_0 \\in D$ ，且 $f'(z_0) \\neq 0$ 则变换 $w = f(z)$ 在点 $z_0$ 具有保角性.具体地说就是：在变换 $w = f(z)$ 之下，通过 $z_0$ 的任意两条曲线的交角保持不变——不但不改变角度的大小，而且也不改变角的方向.",
+      "source_quote": "如果函数 $w = f(z)$ 在区域 $D$ 内解析，设 $z_0 \\in D$ ，且 $f'(z_0) \\neq 0$ 则变换 $w = f(z)$ 在点 $z_0$ 具有保角性.具体地说就是：在变换 $w = f(z)$ 之下，通过 $z_0$ 的任意两条曲线的交角保持不变——不但不改变角度的大小，而且也不改变角的方向."
+    },
+    {
+      "name": "伸张系数",
+      "type": "definition",
+      "formal": "$$\\mid f ^ {\\prime} (z _ {0}) \\mid = \\lim _ {z \\rightarrow z _ {0}} \\frac {\\mid \\Delta w \\mid}{\\mid \\Delta z \\mid}$$ 可以看成是曲线 $C$ 受到变换后在 $z_0$ 的伸张系数. 这个伸张系数在过 $z_0$ 的每个方向上都是一样的. 当 $|f'(z_0)| > 1$ 时, 从 $z_0$ 出发的任意无穷小距离, 变换以后都被伸长了; 当 $|f'(z_0)| < 1$ 时, 从 $z_0$ 出发的无穷小距离, 变换以后则被压缩了.",
+      "source_quote": "$$\\mid f ^ {\\prime} (z _ {0}) \\mid = \\lim _ {z \\rightarrow z _ {0}} \\frac {\\mid \\Delta w \\mid}{\\mid \\Delta z \\mid}$$ 可以看成是曲线 $C$ 受到变换后在 $z_0$ 的伸张系数. 这个伸张系数在过 $z_0$ 的每个方向上都是一样的."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 3,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "旋转角",
+    "保角性",
+    "伸张系数"
+  ]
+}

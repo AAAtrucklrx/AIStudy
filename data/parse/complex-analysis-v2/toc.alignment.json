@@ -1,0 +1,1057 @@
+{
+  "_meta": {
+    "file_type": "toc_alignment",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.toc.align",
+    "toc_sha256": "",
+    "page_offset": null,
+    "counts": {
+      "authority": 42,
+      "candidates": 101,
+      "matched": 42,
+      "unmatched_authority": 0,
+      "extra_candidates": 59,
+      "dropped_no_line": 404,
+      "by_how": {
+        "exact": 40,
+        "substring": 0,
+        "fuzzy": 2,
+        "line-search": 0
+      },
+      "by_level": {
+        "1": 9,
+        "2": 33
+      }
+    },
+    "field_notes": {
+      "matches[]": "目录节点 → 正文候选的落点（line 是 document.md 里的行号）",
+      "matches[].how": "怎么匹配上的：exact / substring / fuzzy",
+      "matches[].page_unknown": "两源页码换算不出来 → 没做页码校验（不猜，如实标注）",
+      "unmatched_authority[]": "目录有、正文没配上 —— 不是错误，是**事实**（要看得见）",
+      "extra_candidates[]": "正文标成标题、目录没有 —— 真节候选 或 页眉噪声"
+    }
+  },
+  "matches": [
+    {
+      "toc_id": "T-0003",
+      "number": "第1章",
+      "level": 1,
+      "authority_title": "复数和平面点集",
+      "line": 58,
+      "page": 10,
+      "candidate_text": "第1章 复数和平面点集",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0004",
+      "number": "1.1",
+      "level": 2,
+      "authority_title": "复数",
+      "line": 60,
+      "page": 10,
+      "candidate_text": "1.1 复数",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0005",
+      "number": "1.2",
+      "level": 2,
+      "authority_title": "平面点集",
+      "line": 351,
+      "page": 24,
+      "candidate_text": "1.2 平面点集",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0006",
+      "number": "第2章",
+      "level": 1,
+      "authority_title": "复变数函数",
+      "line": 440,
+      "page": 29,
+      "candidate_text": "第2章 复变数函数",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0007",
+      "number": "2.1",
+      "level": 2,
+      "authority_title": "复变数函数的概念",
+      "line": 442,
+      "page": 29,
+      "candidate_text": "2.1 复变数函数的概念",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0008",
+      "number": "2.2",
+      "level": 2,
+      "authority_title": "函数极限和连续性",
+      "line": 492,
+      "page": 32,
+      "candidate_text": "2.2 函数极限和连续性",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0009",
+      "number": "2.3",
+      "level": 2,
+      "authority_title": "导数和解析函数的概念",
+      "line": 531,
+      "page": 34,
+      "candidate_text": "2.3 导数和解析函数的概念",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0010",
+      "number": "2.4",
+      "level": 2,
+      "authority_title": "柯西－黎曼方程",
+      "line": 578,
+      "page": 36,
+      "candidate_text": "2.4 柯西－黎曼方程",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0011",
+      "number": "2.5",
+      "level": 2,
+      "authority_title": "初等函数",
+      "line": 623,
+      "page": 39,
+      "candidate_text": "2.5 初等函数",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0012",
+      "number": "第3章",
+      "level": 1,
+      "authority_title": "解析函数的积分表示",
+      "line": 958,
+      "page": 59,
+      "candidate_text": "第3章 解析函数的积分表示",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0013",
+      "number": "3.1",
+      "level": 2,
+      "authority_title": "复变函数的积分",
+      "line": 960,
+      "page": 59,
+      "candidate_text": "3.1 复变函数的积分",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0014",
+      "number": "3.2",
+      "level": 2,
+      "authority_title": "柯西积分定理",
+      "line": 1032,
+      "page": 63,
+      "candidate_text": "3.2 柯西积分定理",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0015",
+      "number": "3.3",
+      "level": 2,
+      "authority_title": "原函数",
+      "line": 1073,
+      "page": 65,
+      "candidate_text": "3.3 原函数",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0016",
+      "number": "3.4",
+      "level": 2,
+      "authority_title": "柯西积分公式",
+      "line": 1126,
+      "page": 68,
+      "candidate_text": "3.4 柯西积分公式",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0017",
+      "number": "3.5",
+      "level": 2,
+      "authority_title": "解析函数的性质",
+      "line": 1192,
+      "page": 72,
+      "candidate_text": "3.5 解析函数的性质",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0018",
+      "number": "第4章",
+      "level": 1,
+      "authority_title": "调和函数",
+      "line": 1308,
+      "page": 78,
+      "candidate_text": "第4章 调和函数",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0019",
+      "number": "4.1",
+      "level": 2,
+      "authority_title": "解析函数与调和函数的关系",
+      "line": 1310,
+      "page": 78,
+      "candidate_text": "4.1 解析函数与调和函数的关系",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0020",
+      "number": "4.2",
+      "level": 2,
+      "authority_title": "调和函数的性质和狭利克雷问题",
+      "line": 1373,
+      "page": 81,
+      "candidate_text": "4.2 调和函数的性质和狄利克雷问题",
+      "region": "body",
+      "how": "fuzzy",
+      "score": 0.929,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0021",
+      "number": "第5章",
+      "level": 1,
+      "authority_title": "解析函数的级数展开",
+      "line": 1442,
+      "page": 86,
+      "candidate_text": "第5章 解析函数的级数展开",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0022",
+      "number": "5.1",
+      "level": 2,
+      "authority_title": "复级数的基本性质",
+      "line": 1444,
+      "page": 86,
+      "candidate_text": "5.1 复级数的基本性质",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0023",
+      "number": "5.2",
+      "level": 2,
+      "authority_title": "基级数",
+      "line": 1555,
+      "page": 91,
+      "candidate_text": "5.2 幂级数",
+      "region": "body",
+      "how": "fuzzy",
+      "score": 0.667,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0024",
+      "number": "5.3",
+      "level": 2,
+      "authority_title": "解析函数的泰勒(Taylor)展开",
+      "line": 1610,
+      "page": 94,
+      "candidate_text": "5.3 解析函数的泰勒(Taylor)展开",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0025",
+      "number": "5.4",
+      "level": 2,
+      "authority_title": "罗朗(Laurent)级数",
+      "line": 1719,
+      "page": 100,
+      "candidate_text": "5.4 罗朗(Laurent)级数",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0026",
+      "number": "5.5",
+      "level": 2,
+      "authority_title": "解析函数的孤立奇点",
+      "line": 1831,
+      "page": 107,
+      "candidate_text": "5.5 解析函数的孤立奇点",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0027",
+      "number": "第6章",
+      "level": 1,
+      "authority_title": "留数及其应用",
+      "line": 1998,
+      "page": 116,
+      "candidate_text": "第6章 留数及其应用",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0028",
+      "number": "6.1",
+      "level": 2,
+      "authority_title": "留数定理",
+      "line": 2000,
+      "page": 116,
+      "candidate_text": "6.1 留数定理",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0029",
+      "number": "6.2",
+      "level": 2,
+      "authority_title": "积分计算",
+      "line": 2074,
+      "page": 120,
+      "candidate_text": "6.2 积分计算",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0030",
+      "number": "6.3",
+      "level": 2,
+      "authority_title": "辐角原理",
+      "line": 2373,
+      "page": 135,
+      "candidate_text": "6.3 辐角原理",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0031",
+      "number": "第7章",
+      "level": 1,
+      "authority_title": "解析开拓",
+      "line": 2525,
+      "page": 143,
+      "candidate_text": "第7章 解析开拓",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0032",
+      "number": "7.1",
+      "level": 2,
+      "authority_title": "唯一性定理和解析开拓的概念",
+      "line": 2527,
+      "page": 143,
+      "candidate_text": "7.1 唯一性定理和解析开拓的概念",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0033",
+      "number": "7.2",
+      "level": 2,
+      "authority_title": "含复参变量积分及Γ函数",
+      "line": 2596,
+      "page": 147,
+      "candidate_text": "7.2 含复参变量积分及  \\Gamma  函数",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0034",
+      "number": "第8章",
+      "level": 1,
+      "authority_title": "保形变换及其应用",
+      "line": 2730,
+      "page": 154,
+      "candidate_text": "第8章 保形变换及其应用",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0035",
+      "number": "8.1",
+      "level": 2,
+      "authority_title": "导数的几何意义",
+      "line": 2732,
+      "page": 154,
+      "candidate_text": "8.1 导数的几何意义",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0036",
+      "number": "8.2",
+      "level": 2,
+      "authority_title": "保形变换的概念",
+      "line": 2757,
+      "page": 156,
+      "candidate_text": "8.2 保形变换的概念",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0037",
+      "number": "8.3",
+      "level": 2,
+      "authority_title": "分式线性变换",
+      "line": 2781,
+      "page": 158,
+      "candidate_text": "8.3 分式线性变换",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0038",
+      "number": "8.4",
+      "level": 2,
+      "authority_title": "初等函数的映照",
+      "line": 2916,
+      "page": 165,
+      "candidate_text": "8.4 初等函数的映照",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0039",
+      "number": "*8.5",
+      "level": 2,
+      "authority_title": "许瓦兹-克利斯托菲变换",
+      "line": 3051,
+      "page": 172,
+      "candidate_text": "*8.5 许瓦兹-克利斯托菲变换",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0040",
+      "number": "8.6",
+      "level": 2,
+      "authority_title": "平面场",
+      "line": 3168,
+      "page": 180,
+      "candidate_text": "8.6 平面场",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0041",
+      "number": "第9章",
+      "level": 1,
+      "authority_title": "拉氏变换",
+      "line": 3436,
+      "page": 195,
+      "candidate_text": "第9章 拉氏变换",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0042",
+      "number": "9.1",
+      "level": 2,
+      "authority_title": "拉氏变换的定义",
+      "line": 3438,
+      "page": 195,
+      "candidate_text": "9.1 拉氏变换的定义",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0043",
+      "number": "9.2",
+      "level": 2,
+      "authority_title": "拉氏变换的基本性质",
+      "line": 3500,
+      "page": 198,
+      "candidate_text": "9.2 拉氏变换的基本性质",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    },
+    {
+      "toc_id": "T-0044",
+      "number": "9.3",
+      "level": 2,
+      "authority_title": "由像函数求本函数",
+      "line": 3735,
+      "page": 209,
+      "candidate_text": "9.3 由像函数求本函数",
+      "region": "body",
+      "how": "exact",
+      "score": 1.0,
+      "page_unknown": true
+    }
+  ],
+  "unmatched_authority": [],
+  "extra_candidates": [
+    {
+      "line": 2,
+      "page": 1,
+      "text": "复变函数",
+      "region": "front",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 10,
+      "page": 3,
+      "text": "内容简介",
+      "region": "front",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 13,
+      "page": 3,
+      "text": "图书在版编目(CIP)数据",
+      "region": "front",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 30,
+      "page": 4,
+      "text": "总序",
+      "region": "front",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 41,
+      "page": 6,
+      "text": "前言",
+      "region": "front",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 61,
+      "page": 10,
+      "text": "1.1.1 复数的四则运算",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 109,
+      "page": 12,
+      "text": "1.1.2 共轭复数",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 156,
+      "page": 14,
+      "text": "1.1.3 复数的几何表示、模与辐角",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 255,
+      "page": 19,
+      "text": "1.1.4 复数的乘方和开方",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 289,
+      "page": 20,
+      "text": "1.1.5 复数序列的极限、无穷远点",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 352,
+      "page": 24,
+      "text": "1.2.1 基本概念",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 359,
+      "page": 24,
+      "text": "1.2.2 区域与曲线",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 377,
+      "page": 26,
+      "text": "习题",
+      "region": "exercise",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 626,
+      "page": 39,
+      "text": "2.5.1 幂函数",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 659,
+      "page": 41,
+      "text": "2.5.2 根式函数",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 684,
+      "page": 43,
+      "text": "(1) 支点",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 691,
+      "page": 44,
+      "text": "(2) 支割线和多值函数的单值解析分支",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 723,
+      "page": 46,
+      "text": "(3) 关于支割线两岸的函数值",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 752,
+      "page": 48,
+      "text": "2.5.3 指数函数",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 783,
+      "page": 50,
+      "text": "2.5.4 对数函数",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 814,
+      "page": 51,
+      "text": "2.5.5 三角函数",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 848,
+      "page": 53,
+      "text": "2.5.6 双曲函数",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 860,
+      "page": 54,
+      "text": "2.5.7 一般幂函数",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 879,
+      "page": 55,
+      "text": "2.5.8 反三角函数",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 1445,
+      "page": 86,
+      "text": "5.1.1 复数项级数",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 1492,
+      "page": 88,
+      "text": "5.1.2 复变函数项级数",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 2076,
+      "page": 120,
+      "text": "6.2.1 $\\int_0^{2\\pi}R(\\cos \\theta ,\\sin \\theta)\\mathrm{d}\\theta$ 型积分",
+      "region": "body",
+      "from": "shape-fallback",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 2126,
+      "page": 122,
+      "text": "6.2.2 有理函数的积分 $\\int_{-\\infty}^{+\\infty} R(x) \\mathrm{d}x$",
+      "region": "body",
+      "from": "shape-fallback",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 2217,
+      "page": 127,
+      "text": "6.2.3 $I_{1} = \\int_{-\\infty}^{+\\infty}R(x)\\cos mx\\mathrm{d}x$ 及 $I_{2} = \\int_{-\\infty}^{+\\infty}R(x)\\sin mx\\mathrm{d}x,m > 0$ 型的积分",
+      "region": "body",
+      "from": "shape-fallback",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 2251,
+      "page": 129,
+      "text": "6.2.4 杂例",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 2301,
+      "page": 132,
+      "text": "6.2.5 多值函数的积分",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 2918,
+      "page": 165,
+      "text": "8.4.1 变换 w = z^n 和 w = \\sqrt{z}, n \\geqslant 2 是自然数",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 2972,
+      "page": 168,
+      "text": "8.4.2 变换 w = e^{z} 和 w = \\mathrm{Ln}z",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 2995,
+      "page": 169,
+      "text": "8.4.3 儒可夫斯基变换",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3501,
+      "page": 198,
+      "text": "9.2.1 线性关系",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3514,
+      "page": 199,
+      "text": "9.2.2 相似定理",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3519,
+      "page": 199,
+      "text": "9.2.3 本函数的微分法",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3543,
+      "page": 200,
+      "text": "例5 解初始问题",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3555,
+      "page": 201,
+      "text": "9.2.4 本函数的积分法",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3576,
+      "page": 202,
+      "text": "9.2.5 像函数的微分法",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3593,
+      "page": 203,
+      "text": "9.2.6 像函数的积分法",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3618,
+      "page": 204,
+      "text": "9.2.7 延迟定理",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3668,
+      "page": 206,
+      "text": "9.2.8 位移定理",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3684,
+      "page": 207,
+      "text": "9.2.9 周期函数的像函数",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3701,
+      "page": 208,
+      "text": "9.2.10 卷积定理",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3739,
+      "page": 210,
+      "text": "9.3.1 部分分式法",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3773,
+      "page": 212,
+      "text": "9.3.2 拉氏变换的反演公式",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3846,
+      "page": 216,
+      "text": "9.3.3 其他方法",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3885,
+      "page": 218,
+      "text": "附表 1 基本法则表",
+      "region": "body",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3935,
+      "page": 225,
+      "text": "8. 利用拉氏变换解下列微分方程",
+      "region": "exercise",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3952,
+      "page": 227,
+      "text": "习题参考答案",
+      "region": "answer",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 3975,
+      "page": 228,
+      "text": "第2章",
+      "region": "answer",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 4003,
+      "page": 230,
+      "text": "第3章",
+      "region": "answer",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 4012,
+      "page": 230,
+      "text": "第4章",
+      "region": "answer",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 4017,
+      "page": 230,
+      "text": "第5章",
+      "region": "answer",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 4057,
+      "page": 232,
+      "text": "第6章",
+      "region": "answer",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 4078,
+      "page": 233,
+      "text": "第7章",
+      "region": "answer",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 4081,
+      "page": 233,
+      "text": "第8章",
+      "region": "answer",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    },
+    {
+      "line": 4118,
+      "page": 235,
+      "text": "第9章",
+      "region": "answer",
+      "from": "mineru-title",
+      "why": "正文（MinerU）标成了标题、但目录里没有 —— 可能是真节，也可能是页眉/噪声"
+    }
+  ]
+}

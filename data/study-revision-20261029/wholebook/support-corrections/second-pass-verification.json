@@ -1,0 +1,55 @@
+{
+  "schema_version": "SupportErrataSecondPassVerificationV1",
+  "policy": "VERIFIED-SUPPORT-DISPLAY-ERRATA-V3",
+  "tests": "11 passed in 9.04s",
+  "actual_reader_audit": {
+    "units_checked": 76,
+    "catalogue_corrections": 380,
+    "display_blocks_corrected": 14,
+    "signature_mismatches": 0,
+    "all_anchors_preserved": true,
+    "all_owner_ids_preserved": true,
+    "all_inputs_unchanged": true
+  },
+  "new_popup_probe": {
+    "new_popup_targets": 7,
+    "katex_errors": 0
+  },
+  "global_concepts": {
+    "actual_delivery_shape": "dict keyed by concept ID; current actual delivered value is {}",
+    "schema_evidence": "blocks/render/build.py CONCEPT_COPY_FIELDS and data/parse/complex-analysis-v2/concepts.json concepts[]",
+    "mirror_test": "5 exact canonical formal records corrected in supported dictionary shape; id/occurrences/source_quotes unchanged; second application unchanged",
+    "actual_legacy_drawer_test": "4 corrected canonical mirrors opened through real data-concept-id links and app.js hash navigation; all show corrected formal math with zero KaTeX errors."
+  },
+  "counterexamples": [
+    {
+      "id": "C-0796",
+      "test": "Numerically integrate Laplace[erf(sqrt(at))] after t=s², a=3,p=2; compare sqrt(3)/(2 sqrt(5)) to old sqrt(3)/10."
+    },
+    {
+      "id": "C-0175",
+      "test": "cosh(iπ/2)=0, sinh(iπ)=0; tanh and coth pole sets assigned to correct denominators."
+    },
+    {
+      "id": "C-0522",
+      "test": "exp(2 iπ/2)=-1; leaving angle unmultiplied instead gives i."
+    },
+    {
+      "id": "C-0219",
+      "test": "D=C minus {0}, a=1,R=3,f=1/z: circle avoids 0, disk contains 0; |f′(1)|=1 exceeds old bound M/R=1/6."
+    },
+    {
+      "owner": "EXAMPLE15-COEFFICIENT",
+      "test": "Constant boundary data 1 at y=2 gives old response 1/2 and corrected Poisson response 1."
+    },
+    {
+      "owner": "NOTE-NONZERO-DERIVATIVE",
+      "test": "n=3,Δθ=π gives old min(3π,-π)=-π; modulo correction gives angle π."
+    },
+    {
+      "owner": "DERIVE-ABSOLUTE-CONVERGENCE",
+      "test": "1/(1+x²) has C=1 tail bound for |x|≥1 and full integral π>1; corrected middle+two-tail bound π/2+2 exceeds π."
+    }
+  ],
+  "strict_math_check_file": "support-corrections-math-check.json"
+}

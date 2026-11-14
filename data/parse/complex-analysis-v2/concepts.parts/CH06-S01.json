@@ -1,0 +1,112 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH06-S01",
+    "text_sha256": "6b6a88cf588c2fd2cd9fcc7f92fd6eabfc91cf290c335276bf9d54c115c9c32e",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "6b6a88cf588c2fd2cd9fcc7f92fd6eabfc91cf290c335276bf9d54c115c9c32e",
+    "source": "original_text",
+    "source_path": "original_text/ch06_s01.md"
+  },
+  "unit": {
+    "unit_id": "CH06-S01",
+    "level": "section",
+    "chapter": "CH06",
+    "section": "CH06-S01",
+    "title": "留数定理",
+    "anchor": "6.1"
+  },
+  "concepts": [
+    {
+      "name": "柯西积分定理",
+      "type": "theorem",
+      "formal": "由柯西积分定理 $$\\int_ {C} f (z) \\mathrm{d} z = 0,$$ 这里， $C$ 是 $U$ 内任一条把 $a$ 点包含在其内部的闭路；",
+      "source_quote": "由柯西积分定理 $$\\int_ {C} f (z) \\mathrm{d} z = 0,$$ 这里， $C$ 是 $U$ 内任一条把 $a$ 点包含在其内部的闭路；"
+    },
+    {
+      "name": "多连通区域的柯西积分定理",
+      "type": "theorem",
+      "formal": "根据多连通区域的柯西积分定理，这个积分的值与闭路 $C$ 在区域 $U$ 内如何选取无关，即它是一个只与函数 $f(z)$ 及 $a$ 点有关的复数.",
+      "source_quote": "根据多连通区域的柯西积分定理，这个积分的值与闭路 $C$ 在区域 $U$ 内如何选取无关，即它是一个只与函数 $f(z)$ 及 $a$ 点有关的复数."
+    },
+    {
+      "name": "留数（残数）",
+      "type": "definition",
+      "formal": "设 $a$ 是 $f(z)$ 的孤立奇点，$C$ 是 $a$ 的充分小的邻域内一条把 $a$ 点包含在其内部的闭路，积分 $$\\frac {1}{2 \\pi \\mathrm{i}} \\int_ {c} f (z) \\mathrm{d} z$$ 称为 $f(z)$ 在 a 点的留数或残数. 记作 $\\operatorname{Res}[f(z), a]$ .",
+      "source_quote": "定义1 设 $a$ 是 $f(z)$ 的孤立奇点，$C$ 是 $a$ 的充分小的邻域内一条把 $a$ 点包含在其内部的闭路，积分 $$\\frac {1}{2 \\pi \\mathrm{i}} \\int_ {c} f (z) \\mathrm{d} z$$ 称为 $f(z)$ 在 a 点的留数或残数. 记作 $\\operatorname{Res}[f(z), a]$ ."
+    },
+    {
+      "name": "留数定理",
+      "type": "theorem",
+      "formal": "如果函数 $f(z)$ 在闭路C上解析，在C的内部除去n个孤立奇点 $a_{1},a_{2},\\cdots,a_{n}$ 外也解析，则 $$\\int_ {c} f (z) \\mathrm{d} z = 2 \\pi \\mathrm{i} \\sum_ {k = 1} ^ {n} \\operatorname{Res} [ f (z), a _ {k} ].$$",
+      "source_quote": "定理1（留数定理）如果函数 $f(z)$ 在闭路C上解析，在C的内部除去n个孤立奇点 $a_{1},a_{2},\\cdots,a_{n}$ 外也解析，则 $$\\int_ {c} f (z) \\mathrm{d} z = 2 \\pi \\mathrm{i} \\sum_ {k = 1} ^ {n} \\operatorname{Res} [ f (z), a _ {k} ].$$"
+    },
+    {
+      "name": "定理2",
+      "type": "theorem",
+      "formal": "函数 $f(z)$ 在 $a$ 点的留数等于 $f(z)$ 在 $a$ 点的罗朗展开的负一次幂（即 $(x - a)^{-1}$）系数，即 $$\\operatorname{Res} [ f (z), a ] = a _ {- 1}.$$",
+      "source_quote": "定理2 函数 $f(z)$ 在 $a$ 点的留数等于 $f(z)$ 在 $a$ 点的罗朗展开的负一次幂（即 $(x - a)^{-1}$）系数，即 $$\\operatorname{Res} [ f (z), a ] = a _ {- 1}.$$"
+    },
+    {
+      "name": "推论1",
+      "type": "corollary",
+      "formal": "设 $a$ 是 $f(z)$ 的 $m$ 级极点，则 $$\\operatorname{Res} [ f (z), a ] = \\frac {1}{(m - 1) !} \\lim _ {z \\rightarrow a} \\frac {\\mathrm{d} ^ {m - 1}}{\\mathrm{d} z ^ {m - 1}} [ (z - a) ^ {m} f (z) ].\\tag{6.2}$$ 特别地，当 $m = 1$ 时 $$\\operatorname{Res} [ f (z), a ] = \\lim _ {z \\rightarrow a} (z - a) f (z).\\tag{6.3}$$",
+      "source_quote": "推论1 设 $a$ 是 $f(z)$ 的 $m$ 级极点，则 $$\\operatorname{Res} [ f (z), a ] = \\frac {1}{(m - 1) !} \\lim _ {z \\rightarrow a} \\frac {\\mathrm{d} ^ {m - 1}}{\\mathrm{d} z ^ {m - 1}} [ (z - a) ^ {m} f (z) ].\\tag{6.2}$$ 特别地，当 $m = 1$ 时 $$\\operatorname{Res} [ f (z), a ] = \\lim _ {z \\rightarrow a} (z - a) f (z).\\tag{6.3}$$"
+    },
+    {
+      "name": "推论2",
+      "type": "corollary",
+      "formal": "设 $P(z)$ 及 $Q(z)$ 都在 $a$ 点解析，且 $P(a) \\neq 0, Q(a) = 0, Q'(a) \\neq 0.$ 则 $$\\operatorname{Res} \\left[ \\frac {P (z)}{Q (z)}, a \\right] = \\frac {P (a)}{Q ^ {\\prime} (a)}.$$",
+      "source_quote": "推论2 设 $P(z)$ 及 $Q(z)$ 都在 $a$ 点解析，且 $P(a) \\neq 0, Q(a) = 0, Q'(a) \\neq 0.$ 则 $$\\operatorname{Res} \\left[ \\frac {P (z)}{Q (z)}, a \\right] = \\frac {P (a)}{Q ^ {\\prime} (a)}.$$"
+    },
+    {
+      "name": "5.4节定理17",
+      "type": "theorem",
+      "formal": "由5.4节中定理 $17, f(z)$ 在 $a$ 点的罗朗展开的系数为 $$a _ {n} = \\frac {1}{2 \\pi i} \\int_ {c} \\frac {f (z)}{(z - a) ^ {n + 1}} d z, \\quad n = 0, \\pm 1, \\pm 2, \\dots ,$$ 其中， $C$ 是 $a$ 点的充分小的邻域内一条包围 $a$ 点的闭路",
+      "source_quote": "由5.4节中定理 $17, f(z)$ 在 $a$ 点的罗朗展开的系数为 $$a _ {n} = \\frac {1}{2 \\pi i} \\int_ {c} \\frac {f (z)}{(z - a) ^ {n + 1}} d z, \\quad n = 0, \\pm 1, \\pm 2, \\dots ,$$ 其中， $C$ 是 $a$ 点的充分小的邻域内一条包围 $a$ 点的闭路"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 8,
+    "漏掉的具名结论": [
+      "定理2",
+      "推论1",
+      "推论2"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "下面的基本定理",
+      "下面的定理",
+      "节中定理",
+      "则由定理",
+      "改用定理"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "柯西积分定理",
+    "多连通区域的柯西积分定理",
+    "留数（残数）",
+    "留数定理",
+    "定理2",
+    "推论1",
+    "推论2",
+    "5.4节定理17"
+  ]
+}

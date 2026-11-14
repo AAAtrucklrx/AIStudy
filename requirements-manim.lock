@@ -1,0 +1,106 @@
+# requirements-manim.lock —— T07 独立渲染环境的**精确**版本锁（Manim CE 0.21.0）
+#
+# 这个环境**不进项目 venv**（计划 §8 T07）：Manim 依赖 pycairo／ManimPango，而这两个包在
+# Linux 上**没有 wheel**（只有 macOS/Windows），必须用系统 cairo/pango 开发包源码编译。
+# 把这条重依赖塞进基础环境会让 `pip install -e .` 变脆。
+#
+# 环境位置（可用环境变量覆盖，代码里不写死个人路径）：
+#   /home/aaatrucklrx/桌面/AI教学/.venv-manim-linux
+#   AIFORSTUDY_MANIM_PYTHON=<...>/.venv-manim-linux/bin/python
+#   config/capabilities.json → render_environment.interpreter_candidates（声明式候选）
+#
+# ## 可重建命令（逐条，实测通过）
+#
+#   1) 系统开发包（本机已装，版本见下；Ubuntu：apt install build-essential pkg-config \
+#        libcairo2-dev libpango1.0-dev libgdk-pixbuf-2.0-dev python3.12-dev）
+#   2) 建独立 venv：
+#        $ python3 -m venv --without-pip /home/aaatrucklrx/桌面/AI教学/.venv-manim-linux
+#      ⚠️ `--without-pip` 不是可选项：本机 python3.12 没装 python3.12-venv（ensurepip 缺失），
+#      直接 `python3 -m venv` 会以 "ensurepip is not available" 失败（日志见 T07 证据目录）。
+#   3) 用**已有**的项目 pip 往这个解释器里装（不需要网络装 pip 自己）：
+#        $ <repo>/../.venv-linux/bin/python -m pip --python \
+#            /home/aaatrucklrx/桌面/AI教学/.venv-manim-linux/bin/python install --upgrade pip wheel
+#   4) 装 Manim（pycairo／ManimPango／srt 现场编译，约 3–6 分钟）：
+#        $ <repo>/../.venv-linux/bin/python -m pip --python \
+#            /home/aaatrucklrx/桌面/AI教学/.venv-manim-linux/bin/python install --no-cache-dir manim==0.21.0
+#   5) 复验（必须真的渲染，不能只证明 import 成功）：
+#        $ PYTHONPATH=src ../.venv-linux/bin/python -m pytest -p offline_guard \
+#            tests/test_manim_worker.py tests/integration/test_manim_render.py -q
+#
+# ## 系统依赖（真实版本与路径，摘自 worker 的环境指纹工具）
+#   cairo            1.18.0      pkg-config cairo（pycairo 编译期与运行期）
+#   pango            1.52.1      pkg-config pango（ManimPango）
+#   pixman-1         0.42.2
+#   ffmpeg/ffprobe   6.1.1-3ubuntu5   /usr/bin/ffmpeg, /usr/bin/ffprobe（H.264 重封装/抽帧/解码核对）
+#   latex (pdfTeX)   3.141592653-2.6-1.40.29 (TeX Live 2026)  /home/aaatrucklrx/.local/bin/latex
+#   dvisvgm          3.6         /home/aaatrucklrx/.TinyTeX/bin/x86_64-linux/dvisvgm **不在 PATH**，
+#                                worker 显式把该目录加进 PATH
+#   bubblewrap       0.9.0       /usr/bin/bwrap（**本机不可用**：kernel.apparmor_restrict_unprivileged_userns=1）
+#   Landlock         ABI 7       Linux 6.17.0-14-generic；实际用的隔离后端（非特权）
+#   字体             Noto Sans CJK SC
+#                    /usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc
+#                    sha256:b76b0433203017ca80401b2ee0dd69350349871c4b19d504c34dbdd80541690a
+#                    许可 SIL Open Font License 1.1（随 Noto CJK 发布）
+#   TeX 宏包 preview  GPL-3.0-or-later（David Kastrup 等，GNU 项目）
+#                    ~/texmf/tex/latex/preview/preview.sty
+#                    sha256:917f40cc5eccb6b535d3170f98fc7f9aa4396af28e9fbe2f704381cf9abbc7b2
+#                    来源 CTAN macros/latex/contrib/preview（docstrip 生成），**不随仓库分发**
+#                    （GPL 与仓库许可不兼容，因此只装在用户 TeX 树里并记录来源与哈希）
+#                    MathTex 用最小模板（只依赖 standalone/amsmath/amssymb/xcolor + preview），
+#                    不用 Manim 默认模板（默认模板还要 physics/calligra/wasysym 等 8 个本机没有的宏包）
+#
+# ## 关键来源构件哈希（sha256，下载来源 pypi.org）
+#   manim-0.21.0-py3-none-any.whl  021001097bb568372fa8f5d1dcf46ba085c8502c10efb2312ff45f19f7facb60
+#   pycairo-1.29.2.tar.gz  3e69fff74fe64f5ba2dfa31f67c6bdf26413342574047437d2ac520d35e9a489
+#   manimpango-0.7.0.tar.gz  64330c360f5040ed356b9eb289d52e8ae8cbc3d9c39297c5e77522e1b417f1c7
+#   srt-3.5.3.tar.gz  4884315043a4f0740fd1f878ed6caa376ac06d70e135f306a6dc44632eed0cc0
+#
+# ## Python 依赖精确版本（`pip freeze` 于 2026-10-07，Python 3.12.3）
+#     名称==版本  —— 许可证（来源：包元数据 License/Classifier，取不到时写"见包内 LICENSE"）
+
+av==19.0.1    # 见包内 LICENSE
+beautifulsoup4==4.15.0    # MIT License
+click==8.5.0    # 见包内 LICENSE
+cloup==4.0.0    # 见包内 LICENSE
+decorator==5.3.1    # BSD-2-Clause
+glcontext==3.0.0    # MIT
+isosurfaces==0.1.2    # MIT
+manim==0.21.0    # 见包内 LICENSE
+ManimPango==0.7.0    # MIT
+mapbox_earcut==2.1.0    # ISC License (ISCL)
+markdown-it-py==4.2.0    # MIT License
+mdurl==0.1.2    # MIT License
+moderngl-window==3.1.1    # MIT License
+moderngl==5.12.0    # MIT
+networkx==3.7    # 见包内 LICENSE
+numpy==2.5.3    # 见包内 LICENSE
+packaging==26.3    # 见包内 LICENSE
+pillow==12.3.0    # 见包内 LICENSE
+pycairo==1.29.2    # LGPL-2.1-only OR MPL-1.1
+pydub==0.25.1    # MIT
+pyglet==2.1.16    # 见包内 LICENSE
+pyglm==2.8.3    # Zlib
+Pygments==2.21.0    # 见包内 LICENSE
+rich==15.0.0    # MIT
+scipy==1.18.1    # BSD License
+screeninfo==0.8.1    # MIT
+skia-pathops==0.9.2    # BSD-3-Clause
+soupsieve==2.10    # MIT License
+srt==3.5.3    # MIT
+svgelements==1.9.6    # MIT
+tqdm==4.70.1    # MPL-2.0 AND MIT
+typing_extensions==4.16.0    # 见包内 LICENSE
+watchdog==6.0.0    # Apache-2.0
+wheel==0.48.0    # 见包内 LICENSE
+
+# API Python 静态绘图与数学辅助，同一隔离环境（2026-10-09）
+matplotlib==3.11.2    # Matplotlib license
+contourpy==1.4.0    # BSD-3-Clause
+cycler==0.12.1    # BSD-3-Clause
+fonttools==4.66.1    # MIT
+kiwisolver==1.5.1    # BSD-3-Clause
+pyparsing==3.3.3    # MIT
+python-dateutil==2.9.0.post0    # Apache-2.0 OR BSD-3-Clause
+six==1.17.0    # MIT
+sympy==1.14.0    # BSD-3-Clause
+mpmath==1.3.0    # BSD-3-Clause

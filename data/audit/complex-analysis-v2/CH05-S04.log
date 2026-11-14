@@ -1,0 +1,85 @@
+—— CH05-S04 回路开始（run 2026-10-03 09:02:46）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 2, '教案问题明细': ['CH05-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH05-S04: 《圆环内的罗朗展开定理》(F-03) 四样都没有 —— 图 / 某步的图 / 图请求 / 正当的不配图理由，至少要有一样'], '教案提醒': 2, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 2 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH05-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH05-S04: 《圆环内的罗朗展开定理》(F-03) 四样都没有 —— 图 / 某步的图 / 图请求 / 正当的不配图理由，至少要有一样']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [3] 条 → 并集 2 条工单
+    T-R4666a [P1] hits=2 「CH05-S04: 《圆环内的罗朗展开定理》(F-03) 四样都没有 —」
+    T-fdca86 [P1] hits=1 「第二个等号的做法是：把 $J_{-n}(t)$ 里的求和指标 $l$ 换」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH05-S04 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH05-S04.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH05-S04 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH05-S04.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 1 条：['CH05-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 1 / 仍开着 3；新 P0 2 条
+  ⚠ 这一轮工单没有净减少（2 → 3）
+  ↻ 补一轮：2 条 P0 从没被交回改写（最后一轮才报出来）→ 再改一次：['T-53a7e4', 'T-f50121']
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH05-S04 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH05-S04.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 0 条（丢了 2 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R4666a [P1]：重跑规则：这一条已经不再报（代码判的，不需要模型引用）
+   · 工单没关掉 T-53a7e4 [P0]：（这一轮没给出判定）
+   · 工单没关掉 T-f50121 [P0]：（这一轮没给出判定）
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（3 条）：
+  [P0] T-53a7e4 「外圆 $C''$ 逆时针绕，内圆 $C'$ 顺时针绕，方向相反，所以第二项前面是」
+  [P0] T-f50121 「$n<0$ 时 $(\zeta-1)^{-n-1}$ 是 $\zeta-1$ 的」
+  [P1] T-R4666a 「CH05-S04: 《圆环内的罗朗展开定理》(F-03) 四样都没有 —— 图 」
+记录写到 data/audit/complex-analysis-v2/CH05-S04.loop.json
+—— CH05-S04 回路开始（run 2026-10-03 10:55:13）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 1, '教案问题明细': ['CH05-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'], '教案提醒': 3, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 1 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH05-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  上一趟的 ['T-53a7e4', 'T-R4666a', 'T-f50121', 'T-R4666a', 'T-53a7e4', 'T-f50121'] 原句已不在成品里 → 视为已改，不再背
+  每次 [5] 条 → 并集 2 条工单
+    T-R4666a [P1] hits=1 「CH05-S04: 有一张图没声明**服务什么** （缺 concept」
+    T-b53516 [P1] hits=1 「若 $R\le r$，两个域没有公共点，级数就没有收敛点。」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH05-S04 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH05-S04.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH05-S04 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH05-S04.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 1 条：['CH05-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 1 / 仍开着 1；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 0 条（丢了 4 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R4666a [P1]：另两处图已写明用途（“（过程图）罗朗级数收敛域是怎么来的”“（过程图）定理17 的证明路线”），但定理17 证明里的这张“（插图）”仍只有图
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（1 条）：
+  [P1] T-R4666a 「CH05-S04: 有一张图没声明**服务什么** （缺 concept_id/」
+记录写到 data/audit/complex-analysis-v2/CH05-S04.loop.json
+—— CH05-S04 回路开始（run 2026-10-03 12:13:01）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 0, '教案问题明细': [], '教案提醒': 3, 'audit_error': ''}
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  上一趟的 ['T-53a7e4', 'T-R4666a', 'T-f50121', 'T-R4666a'] 原句已不在成品里 → 视为已改，不再背
+  每次 [5] 条 → 并集 1 条工单
+    T-2f749a [P1] hits=1 「由 $b_n=\frac{1}{2\pi i}\int_{C}\frac」
+[轮 1] 按 1 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH05-S04 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH05-S04.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH05-S04 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH05-S04.feedback.json --temperature 0.0 --seed 42
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 1 / 仍开着 2；新 P0 2 条
+  ⚠ 这一轮工单没有净减少（1 → 2）
+  ↻ 补一轮：2 条 P0 从没被交回改写（最后一轮才报出来）→ 再改一次：['T-75ed70', 'T-4698f2']
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH05-S04 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH05-S04.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 0 条（丢了 4 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-75ed70 [P0]：（这一轮没给出判定）
+   · 工单没关掉 T-4698f2 [P0]：（这一轮没给出判定）
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（2 条）：
+  [P0] T-4698f2 「若 $R\le r$，此时开圆环 $r<|z-a|<R$ 为空，但边界 $|z-」
+  [P0] T-75ed70 「当 $m\ge-1$ 时 $m+2\ge1$，$\zeta=1$ 是 $m+1$」
+记录写到 data/audit/complex-analysis-v2/CH05-S04.loop.json

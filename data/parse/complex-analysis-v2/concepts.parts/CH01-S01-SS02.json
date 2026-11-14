@@ -1,0 +1,104 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH01-S01-SS02",
+    "text_sha256": "1ffc933c252c38eaa6f1a94a36c8fcc121df135e7f97433fbf076f99f4b9dae3",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "1ffc933c252c38eaa6f1a94a36c8fcc121df135e7f97433fbf076f99f4b9dae3",
+    "source": "original_text",
+    "source_path": "original_text/ch01_s01_ss02.md"
+  },
+  "unit": {
+    "unit_id": "CH01-S01-SS02",
+    "level": "subsection",
+    "chapter": "CH01",
+    "section": "CH01-S01",
+    "title": "共轭复数",
+    "anchor": "1.1.2"
+  },
+  "concepts": [
+    {
+      "name": "共轭复数的性质 1",
+      "type": "property",
+      "formal": "$\\bar{z} = z.$",
+      "source_quote": "1)  $\\bar{z} = z.$"
+    },
+    {
+      "name": "共轭复数的性质 2",
+      "type": "property",
+      "formal": "$$z + \\bar {z} = 2 \\mathrm{Re} z, z - \\bar {z} = 2 \\mathrm{i} \\mathrm{Im} z.$$",
+      "source_quote": "$$z + \\bar {z} = 2 \\mathrm{Re} z, z - \\bar {z} = 2 \\mathrm{i} \\mathrm{Im} z.$$"
+    },
+    {
+      "name": "共轭复数的性质 3",
+      "type": "property",
+      "formal": "$$3) \\overline {{z _ {1} \\pm z _ {2}}} = \\bar {z} _ {1} \\pm \\bar {z} _ {2}.$$",
+      "source_quote": "$$3) \\overline {{z _ {1} \\pm z _ {2}}} = \\bar {z} _ {1} \\pm \\bar {z} _ {2}.$$"
+    },
+    {
+      "name": "共轭复数的性质 4",
+      "type": "property",
+      "formal": "$$4) \\overline {{{z _ {1} z _ {2}}}} = \\bar {z} _ {1} \\cdot \\bar {z} _ {2}, \\left(\\frac {\\bar {z} _ {1}}{\\bar {z} _ {2}}\\right) = \\frac {\\bar {z} _ {1}}{\\bar {z} _ {2}}.$$",
+      "source_quote": "$$4) \\overline {{{z _ {1} z _ {2}}}} = \\bar {z} _ {1} \\cdot \\bar {z} _ {2}, \\left(\\frac {\\bar {z} _ {1}}{\\bar {z} _ {2}}\\right) = \\frac {\\bar {z} _ {1}}{\\bar {z} _ {2}}.$$"
+    },
+    {
+      "name": "共轭复数的性质 5",
+      "type": "property",
+      "formal": "$$z \\bar {z} = (\\operatorname{Re} z) ^ {2} + (\\operatorname{Im} z) ^ {2} = | z | ^ {2}.$$",
+      "source_quote": "$$z \\bar {z} = (\\operatorname{Re} z) ^ {2} + (\\operatorname{Im} z) ^ {2} = | z | ^ {2}.$$"
+    },
+    {
+      "name": "复数 z 为实数的充要条件",
+      "type": "property",
+      "formal": "复数z是实数的充要条件是 $z=\\bar{z}$",
+      "source_quote": "由性质2)的第2个式子可知，复数z是实数的充要条件是 $z=\\bar{z}$"
+    },
+    {
+      "name": "复数 z 为纯虚数的充要条件",
+      "type": "property",
+      "formal": "z是纯虚数的充要条件是 $z=-\\bar{z}$ ，且 $z \\neq 0$",
+      "source_quote": "由第1个式子得知，z是纯虚数的充要条件是 $z=-\\bar{z}$ ，且 $z \\neq 0$."
+    },
+    {
+      "name": "实系数多项式的根共轭存在",
+      "type": "proposition",
+      "formal": "设 $z_0$ 是 $n$ 次多项式 $p (z) = z ^ {n} + a _ {1} z ^ {n - 1} + \\dots + a _ {n - 1} z + a _ {n}$ 的根，其中，各系数 $a_1, a_2, \\dots, a_n$ 都是实数。这就证得  $\\bar{z}_{0}$  也是  $p(z)$  的根.",
+      "source_quote": "例4 试证明实系数多项式的根共轭存在."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 8,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "它的一些运算性质"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "共轭复数的性质 1",
+    "共轭复数的性质 2",
+    "共轭复数的性质 3",
+    "共轭复数的性质 4",
+    "共轭复数的性质 5",
+    "复数 z 为实数的充要条件",
+    "复数 z 为纯虚数的充要条件",
+    "实系数多项式的根共轭存在"
+  ]
+}

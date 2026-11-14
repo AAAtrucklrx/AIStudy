@@ -1,0 +1,53 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH09-S02-SS07",
+    "text_sha256": "203d70a4eda0885f943b667667ab7edc5258ba9f593641a1408c3b8b1d9b65b7",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "203d70a4eda0885f943b667667ab7edc5258ba9f593641a1408c3b8b1d9b65b7",
+    "source": "original_text",
+    "source_path": "original_text/ch09_s02_ss07.md"
+  },
+  "unit": {
+    "unit_id": "CH09-S02-SS07",
+    "level": "subsection",
+    "chapter": "CH09",
+    "section": "CH09-S02",
+    "title": "延迟定理",
+    "anchor": "9.2.7"
+  },
+  "concepts": [
+    {
+      "name": "延迟定理",
+      "type": "theorem",
+      "formal": "设 $\\mathrm{L}[f(t)] = F(p)$，则 $$\\mathrm{L} [ f (t - \\tau) ] = \\mathrm{e} ^ {- p t} F (p).$$",
+      "source_quote": "定理2 设 $\\mathrm{L}[f(t)] = F(p)$，则\n$$\\mathrm{L} [ f (t - \\tau) ] = \\mathrm{e} ^ {- p t} F (p).$$\n证 由定义\n$$\\mathsf {L} [ f (t - \\tau) ] = \\int_ {0} ^ {+ \\infty} f (t - \\tau) \\mathrm{e} ^ {- p t} \\mathrm{d} t = \\int_ {\\tau} ^ {+ \\infty} f (t - \\tau) \\mathrm{e} ^ {- p t} \\mathrm{d} t,$$\n作变量替换 $t_1 = t - \\tau$ ，得"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 1,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "延迟定理"
+  ]
+}

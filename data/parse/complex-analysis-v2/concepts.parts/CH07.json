@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH07",
+    "text_sha256": "beb123da3f5c6963038fbe08598b8c0ddff18c76859be471f98e3a785ee0d6d4",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "beb123da3f5c6963038fbe08598b8c0ddff18c76859be471f98e3a785ee0d6d4",
+    "source": "original_text",
+    "source_path": "original_text/ch07.md"
+  },
+  "unit": {
+    "unit_id": "CH07",
+    "level": "chapter_intro",
+    "chapter": "CH07",
+    "section": null,
+    "title": "解析开拓",
+    "anchor": "7"
+  },
+  "concepts": [
+    {
+      "name": "解析开拓",
+      "type": "definition",
+      "formal": "要讨论把已知区域内的解析函数推广到更大区域的问题，引进解析开拓的概念。",
+      "source_quote": "在本章中，要讨论把已知区域内的解析函数推广到更大区域的问题，引进解析开拓的概念。"
+    },
+    {
+      "name": "复 $\\Gamma$ 函数",
+      "type": "definition",
+      "formal": "一个非常重要的特殊函数——复 $\\Gamma$ 函数。",
+      "source_quote": "然后介绍一个非常重要的特殊函数——复 $\\Gamma$ 函数。"
+    },
+    {
+      "name": "解析函数的唯一性定理",
+      "type": "theorem",
+      "formal": "解析函数的唯一性定理",
+      "source_quote": "我们先从解析函数的唯一性定理讲起。"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 3,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "解析开拓",
+    "复 $\\Gamma$ 函数",
+    "解析函数的唯一性定理"
+  ]
+}

@@ -1,0 +1,31 @@
+—— CH02-S05-SS02 回路开始（run 2026-10-03 09:14:37）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 9, '教案问题明细': ['CH02-S05-SS02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH02-S05-SS02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH02-S05-SS02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH02-S05-SS02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH02-S05-SS02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH02-S05-SS02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH02-S05-SS02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH02-S05-SS02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH02-S05-SS02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'], '教案提醒': 3, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 9 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH02-S05-SS02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH02-S05-SS02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [7] 条 → 并集 4 条工单
+    T-R34ddf [P1] hits=9 「CH02-S05-SS02: 有一张图没声明**服务什么** （缺 co」
+    T-07e8c1 [P0] hits=1 「下面这道例9 就把这套办法用了一遍：在沿正实轴割开的 $z$ 平面上，由」
+    T-8dd98f [P1] hits=1 「其中 $r=|z|$ 是 $z$ 的模 模，$\varphi$ 是 $z」
+    T-f3d517 [P1] hits=1 「因为函数 $\sqrt{z}$ 的支点是 $0$ 及 $\infty$，」
+[轮 1] 按 4 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH02-S05-SS02 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH02-S05-SS02.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH02-S05-SS02 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH02-S05-SS02.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 9 条：['CH02-S05-SS02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH02-S05-SS02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 3 / 仍开着 2；新 P0 1 条
+  ↻ 补一轮：1 条 P0 从没被交回改写（最后一轮才报出来）→ 再改一次：['T-f70568']
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH02-S05-SS02 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH02-S05-SS02.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 2 条（丢了 1 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R34ddf [P1]：带过程说明的图已补了用途（如“（过程图）绕原点一周，根式函数换一支”“（过程图）研究一个多值函数的三步”），但仍有多处只写“（插图）”、未声
+   · 工单没关掉 T-f70568 [P0]：（这一轮没给出判定）
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（2 条）：
+  [P0] T-f70568 「在 $|z|>a$ 内任取一条闭曲线 $C$，$C$ 的内部必定同时含有 $z=」
+  [P1] T-R34ddf 「CH02-S05-SS02: 有一张图没声明**服务什么** （缺 concep」
+记录写到 data/audit/complex-analysis-v2/CH02-S05-SS02.loop.json

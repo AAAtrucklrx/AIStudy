@@ -1,0 +1,58 @@
+—— CH09-S03 回路开始（run 2026-10-03 10:19:36）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 0, '教案问题明细': [], '教案提醒': 1, 'audit_error': ''}
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [3] 条 → 并集 1 条工单
+    T-81fc7d [P0] hits=2 「拉氏变换式 只要这个积分在某个 $s$ 上收敛，一个本函数就恰好对应一个」
+[轮 1] 按 1 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S03 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH09-S03.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S03 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH09-S03.feedback.json --temperature 0.0 --seed 42
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 0 / 仍开着 1；新 P0 0 条
+  ⚠ 这一轮工单没有净减少（1 → 1）
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 1 条
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-81fc7d [P0]：已把“收敛只保证 $F(s)$ 有定义”和“唯一性需 $f(t)$ 满足逐段光滑、指数增长型，本章只处理此情形”分开说明。（引用的句子在当前
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（1 条）：
+  [P0] T-81fc7d 「拉氏变换式 只要这个积分在某个 $s$ 上收敛，一个本函数就恰好对应一个像函数。」
+记录写到 data/audit/complex-analysis-v2/CH09-S03.loop.json
+—— CH09-S03 回路开始（run 2026-10-03 11:19:18）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 0, '教案问题明细': [], '教案提醒': 1, 'audit_error': ''}
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  上一趟的 ['T-81fc7d', 'T-81fc7d'] 原句已不在成品里 → 视为已改，不再背
+  每次 [4] 条 → 并集 3 条工单
+    T-43001e [P1] hits=1 「反方向能不能唯一地走回来，是另一件事。要让一个像函数只对应一个本函数，还」
+    T-7c7b2e [P1] hits=1 「本节讨论的就是这最后一步。这个做法在后面处理应用时还会反复用到。只要最终」
+    T-f70a84 [P1] hits=1 「本章只处理满足这一条件的情形，所以后面遇到的 $F(s)$ 都能唯一地换」
+[轮 1] 按 3 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S03 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH09-S03.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S03 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH09-S03.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 1 条：['CH09-S03: 《反变换唯一性定理》(F-03) 四样都没有 —— 图 / 某步的图 / 图请求 / 正当的不配图理由，至少要有一样'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 3 / 仍开着 2；新 P0 1 条
+  ↻ 补一轮：1 条 P0 从没被交回改写（最后一轮才报出来）→ 再改一次：['T-ee9b6f']
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S03 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH09-S03.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 2 条
+  ⛔ 验收发现 P0：「设 $f(t)$ 与 $g(t)$ 在 $t\ge 0$ 上都逐段光滑，并且都是」→ 读者会把“除去有限个点”理解为整个 [0,∞) 上只有有限个差异点，但标准逐段光滑在无限区间上只保证每个有限区间内有限个
+  ↻ 验收 P0 当趟补一次最小改动改写（2 条）…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S03 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH09-S03.acceptance.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R94d8a [P1]：（这一轮没给出判定）
+   · 工单没关掉 T-ee9b6f [P0]：（这一轮没给出判定）
+   · 工单没关掉 T-16bdf6 [P0]：（这一轮没给出判定）
+
+结论：未通过（验收发现：回路说通过，但重新独立复核又抓到 P0）
+backlog（3 条）：
+  [P0] T-16bdf6 「设 $f(t)$ 与 $g(t)$ 在 $t\ge 0$ 上都逐段光滑，并且都是」
+  [P0] T-ee9b6f 「像函数不在表里时，还可以用反演积分公式 $f(t)=\frac{1}{2\pi 」
+  [P1] T-R94d8a 「CH09-S03: 《反变换唯一性定理》(F-03) 四样都没有 —— 图 / 」
+记录写到 data/audit/complex-analysis-v2/CH09-S03.loop.json

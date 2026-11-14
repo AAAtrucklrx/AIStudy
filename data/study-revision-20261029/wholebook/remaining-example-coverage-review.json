@@ -1,0 +1,3517 @@
+{
+  "schema_version": "RemainingExampleCoverageReviewV1",
+  "review_type": "read_only_semantic_audit_not_browser_acceptance",
+  "source_reader": "/Users/huang/Documents/deepseek-harness/default-workspace/fbc/复变函数全书-20261017/book/data/data.js",
+  "source_reader_sha256": "5b5d91e47c19a708cb2ef88bd239dbedc75ec863cbfb428680a1629f601212a2",
+  "manifests": {
+    "lessons-CH01-03.json": {
+      "sha256": "bd08aaf579f180957d7efbe553eafd5503b8ad2788a4f30f671c15d4729117b8",
+      "bytes": 522768
+    },
+    "lessons-CH04-06.json": {
+      "sha256": "f7927356d0825c8a531209c9055d93d75c8cfe4d8caea31a7a5550b4fbe18318",
+      "bytes": 140364
+    },
+    "lessons-CH07-09.json": {
+      "sha256": "6cafe5aa16e611d7a111be16b4ee899ef3e89cff0dd58fa4a581f5c0fb0d3016",
+      "bytes": 188513
+    }
+  },
+  "scope": {
+    "units_reviewed": 76,
+    "original_example_groups_reviewed": 169,
+    "fields": [
+      "examples label/statement/conclusion",
+      "latest body_markdown",
+      "knowledge_coverage only as locator, not proof of completeness"
+    ],
+    "chapter_end_tool_sources": [
+      "ch01_s02_ss02.md:19-74",
+      "ch02_s05_ss08.md:16-72",
+      "ch03_s05.md:62-107",
+      "ch04_s02.md:48-end",
+      "ch05_s05.md:101-157",
+      "ch06_s03.md:88-end",
+      "ch07_s02.md:100-127",
+      "ch08_s06.md:198-240",
+      "ch09_s03_ss03.md:30-95"
+    ],
+    "excluded_scope": "第9章末从习题参考答案开始的跨章普通数值答案不强行改写为新定理；固定输入的代数代入不逐条升格。",
+    "method": "先列原examples statement/conclusion与数学span，再人工按对象/参数/条件/结果比较。等价的符号、同参数一般式与其他默认单元已有同式算覆盖；417个ID覆盖本身不当作完整性证据。"
+  },
+  "summary": {
+    "confirmed_new_general_theorem_omissions": 0,
+    "recommended_explicit_textbook_identity_additions": 1,
+    "semantic_math_warnings": 3,
+    "browser_verified": false
+  },
+  "units": {
+    "CH01": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "导读的读分量练习是入门代入；实虚部定义与点坐标在CH01-S01-SS01/SS03默认可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "CH1-EXAMPLE-IMAG",
+          "reader_anchor": "reader-6a9359d3b1c70072e715",
+          "json_pointer_prefix": "/examples/0",
+          "label": "读出一个复数的实部与虚部",
+          "statement": "设 $z=3-2\\mathrm{i}$，写出 $\\operatorname{Re}z$ 与 $\\operatorname{Im}z$，并判断 $z$ 是不是实数、是不是纯虚数。",
+          "conclusion": "$\\operatorname{Re}z=3$，$\\operatorname{Im}z=-2$；$z$ 既不是实数，也不是纯虚数。在复数平面上，$z$ 对应点 $(3,-2)$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH01-S01-SS01",
+          "paragraph": "方程 $x^2+1=0$ 在实数中没有解，促使我们引入满足 $i^2=-1$ 的虚单位 $i$；方程的两个解便是 $i$ 和 $-i$。复数写成 $z=x+iy$，其中 $x,y\\in\\mathbb R$。实部 $\\operatorname{Re}z=x$ 与虚部 $\\operatorname{Im}z=y$ 都是实数，带 $i$ 的整项 $iy$ 不是虚部本身。$y=0$ 时得到实数；按本书约定，$x=0$ 且 $y\\ne0$ 才叫纯虚数。"
+        },
+        {
+          "unit_id": "CH01-S01-SS02",
+          "paragraph": "上一节把复数写成 $z=x+iy$，其中 $x,y$ 都是实数：$x=\\operatorname{Re}z$ 是实部，$y=\\operatorname{Im}z$ 是虚部。现在保留 $x$，把 $y$ 换成相反数，所得的复数叫作 $z$ 的共轭，记为\n$$\\bar z=x-iy.$$\n例如 $2+3i$ 的共轭是 $2-3i$。改变的是虚部的符号，实部仍是 $2$；这里的虚部是实数 $3$ 或 $-3$，不是带着 $i$ 的整项。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-6a9359d3b1c70072e715"
+      ]
+    },
+    "CH01-S01-SS01": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "无零因子性质默认明说；具体复除法数值为四则运算练习。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-01",
+          "reader_anchor": "reader-d57cb4e1e377bb0e812f",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例1",
+          "statement": "对于两个复数 $z_1, z_2$，证明 $z_1 z_2 = 0$ 当且仅当 $z_1 = 0$ 或 $z_2 = 0$。",
+          "conclusion": "所以 $z_1 z_2 = 0$ 当且仅当 $z_1 = 0$ 或 $z_2 = 0$。这表明复数乘法没有零因子。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-DIV-01",
+          "reader_anchor": "reader-6da591493994aff318e4",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例：复数除法",
+          "statement": "计算 $\\frac{1+i}{1-i}$。",
+          "conclusion": "$\\frac{1+i}{1-i} = i$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH01-S01-SS01",
+          "paragraph": "加减按分量进行，乘法按分配律展开，再把 $i^2$ 换成 $-1$。于是\n$$\\begin{aligned}\nz_1\\pm z_2&=(x_1\\pm x_2)+i(y_1\\pm y_2),\\\\\nz_1z_2&=(x_1x_2-y_1y_2)\\\\\n&\\quad+i(x_1y_2+x_2y_1).\n\\end{aligned}$$\n若 $z_2\\ne0$，商的可用公式是\n$$\\begin{aligned}\n\\frac{z_1}{z_2}&=\\frac{z_1\\bar z_2}{|z_2|^2},\\\\\n\\operatorname{Re}\\frac{z_1}{z_2}&=\\frac{x_1x_2+y_1y_2}{x_2^2+y_2^2},\\\\\n\\operatorname{Im}\\frac{z_1}{z_2}&=\\frac{x_2y_1-x_1y_2}{x_2^2+y_2^2}.\n\\end{aligned}$$\n分子也必须乘同一共轭才能保持商不变。视频中分母的两个虚交叉项相消，留下平方和；分母非零时这项平方和才允许继续作除法。例如 $1/(1+i)=(1-i)/2$，将结果乘回 $1+i$ 可检查是否还原为 $1$。"
+        },
+        {
+          "unit_id": "CH01-S01-SS01",
+          "paragraph": "非零复数有乘法逆元，所以 $z_1z_2=0$ 当且仅当至少一个因子为零。这个性质允许把已因式分解的复方程逐因子求根，也说明两个非零复数相乘不会突然变成零。需要约去一个因子时，仍要先说明它非零；教材例题保留了利用逆元的正式证明。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-d57cb4e1e377bb0e812f",
+        "#reader-6da591493994aff318e4"
+      ]
+    },
+    "CH01-S01-SS02": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "分式为实数的充要条件、分式的实虚部与模、实系数共轭根和模平方恒等式均逐项默认显示。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "E-02",
+          "reader_anchor": "reader-61b93af76a60d7db75a1",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例2",
+          "statement": "设 $z=x+\\mathrm{i}y$，其中 $x,y$ 为实数，$y\\ne0$，且 $z\\ne\\pm\\mathrm{i}$。证明：$\\frac{z}{1+z^2}$ 是实数当且仅当 $x^2+y^2=1$。",
+          "conclusion": "$\\frac{z}{1+z^2}$ 为实数当且仅当 $x^2+y^2=1$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "E-03",
+          "reader_anchor": "reader-d4f5f14248221dd2e93f",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例3",
+          "statement": "设 $z=x+\\mathrm{i}y$（$x,y$ 为实数），$z\\ne1$，求 $f(z)=\\frac{1+z}{1-z}$ 的实部、虚部及模。",
+          "conclusion": "实部为 $\\frac{1-x^2-y^2}{(1-x)^2+y^2}$，虚部为 $\\frac{2y}{(1-x)^2+y^2}$，模为 $\\sqrt{\\frac{(1+x)^2+y^2}{(1-x)^2+y^2}}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "E-04",
+          "reader_anchor": "reader-05c1dea551b93932c14b",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例4",
+          "statement": "设 $p(z)=z^n+a_1z^{n-1}+\\cdots+a_{n-1}z+a_n$，其中系数 $a_1,\\dots,a_n$ 都是实数。若 $z_0$ 是 $p(z)$ 的根，证明 $\\bar z_0$ 也是 $p(z)$ 的根。",
+          "conclusion": "实系数多项式的非实根成共轭对出现。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 3,
+          "owner_id": "E-05",
+          "reader_anchor": "reader-9b3292767861f89059c9",
+          "json_pointer_prefix": "/examples/3",
+          "label": "例5",
+          "statement": "设 $z_1,z_2$ 为任意复数，证明\n$$|z_1+z_2|^2=|z_1|^2+|z_2|^2+2\\operatorname{Re}(z_1\\bar z_2).$$",
+          "conclusion": "等式对任意复数 $z_1,z_2$ 成立。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH01-S01-SS02",
+          "paragraph": "整理得到的三个结果是\n$$\\begin{aligned}\\operatorname{Re}f(z)&=\\frac{1-x^2-y^2}{(1-x)^2+y^2},\\\\ \\operatorname{Im}f(z)&=\\frac{2y}{(1-x)^2+y^2}.\\end{aligned}$$\n$$|f(z)|=\\sqrt{\\frac{(1+x)^2+y^2}{(1-x)^2+y^2}}.$$\n实部与虚部的分母相同，都是先求 $1-x$ 再平方，不能把括号拆成 $1-x^2$。模是一个非负实数，所以上式取非负平方根。需要检查每一步展开时，可展开[例3的完整演算](#reader-d4f5f14248221dd2e93f)。"
+        },
+        {
+          "unit_id": "CH01-S01-SS02",
+          "paragraph": "最后，教材例5把“模的平方”与“取实部”接到一起。对任意复数 $z_1,z_2$，有\n$$|z_1+z_2|^2=|z_1|^2+|z_2|^2+2\\operatorname{Re}(z_1\\bar z_2).$$\n最后一项来自展开时的两个混合乘积：它们互为共轭，所以合在一起是其中一个的两倍实部。这一项一般不为零，因此和的模平方不能总按两个模平方直接相加。只有它为零时，两个模平方才恰好相加；完整展开保留在[例5的证明](#reader-9b3292767861f89059c9)中。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-61b93af76a60d7db75a1",
+        "#reader-d4f5f14248221dd2e93f",
+        "#reader-05c1dea551b93932c14b",
+        "#reader-9b3292767861f89059c9"
+      ]
+    },
+    "CH01-S01-SS03": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "广义圆配方的三种判别、双焦点距离和的椭圆、偏移辐角的射线及端点排除都有默认解释。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "E-CIRCLE",
+          "reader_anchor": "reader-3ea33564bef8ba573c93",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例6 圆的方程的复数形式",
+          "statement": "将圆的方程 $A(x^{2}+y^{2})+mx+ny+C=0$ 改写成复数形式，其中 $A,m,n,C$ 为实常数且 $A\\neq 0$。再讨论一般复数方程 $Az\\bar z+\\bar Bz+B\\bar z+C=0$（$A,C$ 为实常数，$A\\neq 0$，$B$ 为复数）所表示的点集。",
+          "conclusion": "圆的方程 $A(x^{2}+y^{2})+mx+ny+C=0$ 的复数形式为 $Az\\bar z+\\bar Bz+B\\bar z+C=0$，其中 $B=\\dfrac{m+n\\mathrm{i}}{2}$；一般地，这类方程在 $|B|^{2}-AC>0$ 时表示圆，$=0$ 时表示一个点，$<0$ 时表示空集。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "E-ELLIPSE",
+          "reader_anchor": "reader-3aed3de25f30048ede1e",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例7 距离之和为常数的点集",
+          "statement": "求方程 $|z-1|+|z+2-\\mathrm{i}|=6$ 所表示的复数集合，并说明不等式 $|z-1|+|z+2-\\mathrm{i}|<6$ 与 $|z-1|+|z+2-\\mathrm{i}|>6$ 分别表示什么。",
+          "conclusion": "方程 $|z-1|+|z+2-\\mathrm{i}|=6$ 表示以 $1$ 与 $-2+\\mathrm{i}$ 为焦点、长半轴为 $3$、短半轴为 $\\dfrac{\\sqrt{26}}{2}$ 的椭圆周；严格小于 $6$ 与严格大于 $6$ 分别表示该椭圆的内部与外部。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "E-RAY",
+          "reader_anchor": "reader-3b5f1ca36568c2e3558e",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例8 辐角为常值的点集",
+          "statement": "求方程 $\\arg(z-\\mathrm{i})=\\dfrac{\\pi}{4}$ 所表示的复数点集。",
+          "conclusion": "方程 $\\arg(z-\\mathrm{i})=\\dfrac{\\pi}{4}$ 表示一条从点 $\\mathrm{i}$ 出发、与 $x$ 轴正方向成 $\\dfrac{\\pi}{4}$ 角的半射线，起点 $\\mathrm{i}$ 不包含在内。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH01-S01-SS03",
+          "paragraph": "距离、方向能直接给出一些图形；已有的直角坐标方程也能统一改写。由 $z=x+iy$ 和 $\\bar z=x-iy$，可取回\n$$\nx=\\frac{z+\\bar z}{2},\\qquad y=\\frac{z-\\bar z}{2i},\\qquad x^2+y^2=z\\bar z.\n$$\n因此，任意隐式曲线 $F(x,y)=0$ 都可等价地写成\n$$\nF\\!\\left(\\frac{z+\\bar z}{2},\\frac{z-\\bar z}{2i}\\right)=0.\n$$\n这一步只是用同一位置的另一种表示替换坐标，点集没有改变。"
+        },
+        {
+          "unit_id": "CH01-S01-SS03",
+          "paragraph": "同样，对固定点 $a$ 和允许的辐角值 $\\theta$，$\\arg(z-a)=\\theta$ 表示从 $a$ 出发、沿 $\\theta$ 方向且不含端点的射线；若 $\\arg$ 取主值，须有 $\\theta\\in(-\\pi,\\pi]$。平移改变起点，辐角固定方向，长度仍可取任意正值。[例8的完整说明](#reader-3b5f1ca36568c2e3558e)保留在折叠推演中。到这里，距离条件负责“离哪里多远”，辐角条件负责“朝哪个方向”，便能把复数式子与点集互相翻译。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-3ea33564bef8ba573c93",
+        "#reader-3aed3de25f30048ede1e",
+        "#reader-3b5f1ca36568c2e3558e"
+      ]
+    },
+    "CH01-S01-SS04": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "全部n次根公式、取值数、正n边形分布与-8立方根均默认可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-CUBE-ROOT-MINUS-8",
+          "reader_anchor": "reader-4d2efbbea055d7df61d4",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例9",
+          "statement": "求 $\\sqrt[3]{-8}$ 的全部值。",
+          "conclusion": "$\\sqrt[3]{-8}$ 的全部值是 $1+\\mathrm{i}\\sqrt{3}$、$-2$、$1-\\mathrm{i}\\sqrt{3}$，共三个。代入检查：$(-2)^{3}=-8$；$1+\\mathrm{i}\\sqrt{3}$ 的模为 2、辐角为 $\\dfrac{\\pi}{3}$，三次幂为 $2^{3}\\mathrm{e}^{\\mathrm{i}\\pi}=-8$；同理 $(1-\\mathrm{i}\\sqrt{3})^{3}=8\\mathrm{e}^{-\\mathrm{i}\\pi}=-8$。三个根模都为 2，相邻辐角相差 $\\dfrac{2\\pi}{3}$，是圆 $|w|=2$ 上内接正三角形的三个顶点。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH01-S01-SS04",
+          "paragraph": "乘同一个非零复数，就是把同一次旋转和伸缩重复。写 $z=re^{i\\theta}$，则对任意整数 $m$，\n$$z^m=r^me^{im\\theta}=r^m(\\cos m\\theta+i\\sin m\\theta).$$\n其中 $z^0=1$，负整数幂用 $z^{-n}=1/z^n$ 定义；若 $z=0$，这里只谈正整数幂 $0^n=0$。取 $r=1$，就得到德莫弗公式 $(\\cos\\theta+i\\sin\\theta)^m=\\cos m\\theta+i\\sin m\\theta$：重复乘法只需把角乘以次数。"
+        },
+        {
+          "unit_id": "CH01-S01-SS04",
+          "paragraph": "教材的 $-8=8e^{i\\pi}$ 有三个立方根：$1+i\\sqrt3$、$-2$、$1-i\\sqrt3$。它们模均为 $2$，方向分别可取 $\\pi/3$、$\\pi$、$5\\pi/3$，同时满足等角分布与立方为 $-8$。只写实根 $-2$ 会漏掉两个允许的复数解；完整的三角值换算留在例题中。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-4d2efbbea055d7df61d4"
+      ]
+    },
+    "CH01-S01-SS05": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "坐标/模角极限判别、无穷远量词、球极投影正逆公式均可见；原四例的具体数列或单点代入不另立通用定理。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-REALIMAG-LIMIT",
+          "reader_anchor": "reader-214a17eb2acab1a7fc44",
+          "json_pointer_prefix": "/examples/0",
+          "label": "按实部虚部求复数序列极限",
+          "statement": "判断 $z_n=\\frac{n}{n+1}+\\frac{i}{n}$ 的极限。",
+          "conclusion": "因此 $\\lim_{n\\to\\infty}\\left(\\frac{n}{n+1}+\\frac{i}{n}\\right)=1$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-MODARG-LIMIT",
+          "reader_anchor": "reader-896916853f0cd351d7c1",
+          "json_pointer_prefix": "/examples/1",
+          "label": "按模与辐角求极限",
+          "statement": "设 $z_n=(1+\\frac1n)e^{i(\\pi/4+1/n)}$，判断它是否收敛，并求极限。",
+          "conclusion": "极限为 $e^{i\\pi/4}$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX-LIMIT-INF",
+          "reader_anchor": "reader-b668d07351de75458b03",
+          "json_pointer_prefix": "/examples/2",
+          "label": "收敛于无穷远点",
+          "statement": "判断 $z_n=n+i(-1)^n n$ 是否收敛于无穷远点。",
+          "conclusion": "该序列收敛于无穷远点。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        },
+        {
+          "index": 3,
+          "owner_id": "EX-STEREO",
+          "reader_anchor": "reader-eeef1d43c922be17a5ba",
+          "json_pointer_prefix": "/examples/3",
+          "label": "求球面投影点",
+          "statement": "求 $z=2i$ 在黎曼球面上的对应点 $Z$。",
+          "conclusion": "$z=2i$ 对应球面上的点 $Z=(0,1,1)$，位于赤道。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH01-S01-SS05",
+          "paragraph": "教材用与平面相切的单位球解释这个点：球心为 $(0,0,1)$，北极为 $N=(0,0,2)$。把平面点 $z=x+iy$ 与北极连线，另一球面交点为\n$$Z=\\left(\\frac{4x}{|z|^2+4},\\frac{4y}{|z|^2+4},\\frac{2|z|^2}{|z|^2+4}\\right).$$\n反向对非北极球面点 $(\\xi,\\eta,\\zeta)$，有\n$$z=\\frac{2\\xi}{2-\\zeta}+i\\frac{2\\eta}{2-\\zeta}.$$\n分母在北极为零，说明有限平面尚缺恰好一个对应点；这套球极投影在有限复数与非北极球面点间一一对应。"
+        },
+        {
+          "unit_id": "CH01-S01-SS05",
+          "paragraph": "无穷远点没有实部、虚部和辐角，约定 $|\\infty|=+\\infty$。有限 $a$ 满足 $a\\pm\\infty=\\infty$、$\\infty\\pm a=\\infty$、$a/\\infty=0$；有限非零 $a$ 还满足 $a\\infty=\\infty a=\\infty$、$a/0=\\infty$、$\\infty/a=\\infty$。这些是扩充平面中的特定约定，$0/0$、$0\\cdot\\infty$、$\\infty-\\infty$、$\\infty/\\infty$ 仍不能作为普通数运算。$\\{|z|>R\\}\\cup\\{\\infty\\}$ 是无穷远点的邻域，其有限部分是大圆外部。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-10b3511b3f589e891e9a",
+        "#reader-214a17eb2acab1a7fc44",
+        "#reader-896916853f0cd351d7c1",
+        "#reader-b668d07351de75458b03",
+        "#reader-eeef1d43c922be17a5ba"
+      ]
+    },
+    "CH01-S02-SS01": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "内外边界与开闭有界的定义足以覆盖三项点集分类；半开线段的逐项分类继续作练习。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-DISK-OPEN",
+          "reader_anchor": "reader-e133d6bd7972fc46ea9f",
+          "json_pointer_prefix": "/examples/0",
+          "label": "开单位圆盘的点分类",
+          "statement": "设 $E_1=\\{z\\mid |z|<1\\}$。求 $E_1$ 的内点全体、边界、外点全体，并判断 $E_1$ 是否为开集、闭集、有界集。",
+          "conclusion": "$E_1=\\{z\\mid |z|<1\\}$ 的内点全体为 $\\{z\\mid |z|<1\\}$，边界为 $\\{z\\mid |z|=1\\}$，外点全体为 $\\{z\\mid |z|>1\\}$；它是开集、有界集，但不是闭集。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-DISK-CLOSED",
+          "reader_anchor": "reader-61d92dee7ce32ce8d8de",
+          "json_pointer_prefix": "/examples/1",
+          "label": "闭单位圆盘的点分类",
+          "statement": "设 $E_2=\\{z\\mid |z|\\le 1\\}$。求 $E_2$ 的内点全体、边界与外点全体，并判断 $E_2$ 是否为开集、闭集、有界集。",
+          "conclusion": "$E_2$ 的内点全体为 $\\{z\\mid |z|<1\\}$，边界为 $\\{z\\mid |z|=1\\}$，外点全体为 $\\{z\\mid |z|>1\\}$；$E_2$ 是闭集、有界集，但不是开集。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX-SEGMENT",
+          "reader_anchor": "reader-c643e353bf278a67397a",
+          "json_pointer_prefix": "/examples/2",
+          "label": "实轴上的半开线段",
+          "statement": "设 $E_3=\\{x+\\mathrm{i}y\\mid y=0,\\ 0<x\\le 1\\}$，即实轴上从 $0$ 到 $1$ 的半开线段。判断 $E_3$ 是否为开集、闭集、有界集。",
+          "conclusion": "$E_3$ 没有内点，边界为 $[0,1]$，外点构成 $[0,1]$ 以外的所有点；$E_3$ 既不是开集（没有内点），也不是闭集（$0$ 是边界点但不属于 $E_3$），但它是有界集。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH01-S02-SS01",
+          "paragraph": "若 $E$ 的每一点都是内点，称 $E$ 为开集；全体边界点组成边界 $\\partial E$，若 $\\partial E\\subset E$，称 $E$ 为闭集。开圆盘不含自己的圆周，闭圆盘含圆周；有些集合两者都不是，有些集合同时开闭，不能把“非开”直接等同“闭”。若存在有限 $R>0$ 使 $E\\subset B(0,R)$，称有界，否则无界；有界性比较整个集合能否装进一个圆盘，与边界是否保留是两回事。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-e133d6bd7972fc46ea9f",
+        "#reader-61d92dee7ce32ce8d8de",
+        "#reader-c643e353bf278a67397a"
+      ]
+    },
+    "CH01-S02-SS02": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "圆环和去心圆盘多连通已可见；章末平方根代数式、三角和、共线/共圆、圆盘分式与根位置工具均默认列出。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EXAMPLE-ANNULUS",
+          "reader_anchor": "reader-d1e82158047697cc832f",
+          "json_pointer_prefix": "/examples/0",
+          "label": "判断圆环是否为区域",
+          "statement": "设 $0<r<R$，判断点集 $D=\\{z:r<|z|<R\\}$ 是否为区域、是否单连通，并求它的边界。",
+          "conclusion": "$D$ 是区域，不是单连通区域，而是多连通区域；边界是两个圆 $|z|=r$ 与 $|z|=R$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        },
+        {
+          "index": 1,
+          "owner_id": "EXAMPLE-PUNCTURED",
+          "reader_anchor": "reader-6669ce4cdb760d2901f3",
+          "json_pointer_prefix": "/examples/1",
+          "label": "判断去心邻域是否为区域",
+          "statement": "设 $a$ 为复常数，$\\delta>0$，判断 $D=\\{z:0<|z-a|<\\delta\\}$ 是否为区域、是否单连通，并求边界。",
+          "conclusion": "$D$ 是区域、多连通区域；边界由点 $a$ 和外圆 $|z-a|=\\delta$ 组成。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH01-S02-SS02",
+          "paragraph": "圆盘中的分式必须保留参数的共轭。对 $a\\in\\mathbb C$，定义\n$$T_a(z)=\\frac{z-a}{1-\\bar a z},\\qquad 1-\\bar a z\\ne0.$$\n当 $|z|=1$ 且分母非零时，$|T_a(z)|=1$；若 $|a|<1$ 且 $|z|<1$，分母自动非零，且 $|T_a(z)|<1$。它把单位圆盘中的点仍送入圆盘，圆周送往圆周；当参数为非实数时省掉共轭横线会改变结论。理解模比较可用恒等式\n$$|1-\\bar a z|^2-|z-a|^2=(1-|a|^2)(1-|z|^2),$$\n两因子同为正就说明分母的模更大，条件的作用一目了然。"
+        },
+        {
+          "unit_id": "CH01-S02-SS02",
+          "paragraph": "章末习题还提供不靠辐角求平方根的办法。若 $a,b\\in\\mathbb R$、$x+iy$ 的平方等于 $a+bi$，记 $r=\\sqrt{a^2+b^2}$，则\n$$x^2=\\frac{r+a}{2},\\qquad y^2=\\frac{r-a}{2},\\qquad xy=\\frac b2.$$\n先从前两式求分量的绝对值，再用第三式配对符号；非零被开方数得到互为相反数的两个根，零只给零。$b=0$ 时仍须保留符号配对：$a>0$ 的根在实轴，$a<0$ 的根在虚轴，不能因虚部为零就遗漏负实数的平方根。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-d1e82158047697cc832f",
+        "#reader-6669ce4cdb760d2901f3"
+      ]
+    },
+    "CH02": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "平方单值、根式多值的例子在后续根式定义中默认说明；导读数值g(1)=±1属代入。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "CH02-MULTI-EXAMPLE",
+          "reader_anchor": "reader-d255eb367e7432a377b4",
+          "json_pointer_prefix": "/examples/0",
+          "label": "判断单值与多值",
+          "statement": "设 $f(z)=z^2$，并设 $g(z)$ 表示 $z$ 的平方根，即所有满足 $w^2=z$ 的复数 $w$。分别判断 $f$ 与 $g$ 是单值函数还是多值函数，并求 $g(1)$ 的所有值。",
+          "conclusion": "$f(z)=z^2$ 是单值函数；$g(z)$（平方根）是多值函数，且 $g(1)=\\{1,-1\\}$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH02-S01",
+          "paragraph": "给定点集 $E\\subset\\mathbb C$，若每个输入 $z\\in E$ 按规则对应一个复数 $w$，便定义了复变函数 $w=f(z)$；$E$ 是定义域。每个输入只有一个值叫单值，多个值叫多值。例如非零有限 $z$ 的 $\\sqrt[n]{z}$ 有 $n$ 个值，$\\operatorname{Arg}z$ 有无穷多个值。未另作说明时，本书的函数指单值函数。"
+        },
+        {
+          "unit_id": "CH02-S02",
+          "paragraph": "数列只给一串接近方式，函数极限要同时照顾整个邻近点集。设 $f$ 在 $0<|z-z_0|<\\rho$ 有定义，称 $\\lim_{z\\to z_0}f(z)=w_0$，是指任给 $\\varepsilon>0$，存在 $0<\\delta\\le\\rho$，使\n$$0<|z-z_0|<\\delta\\ \\Longrightarrow\\ |f(z)-w_0|<\\varepsilon.$$\n去心条件暂不使用中心函数值；同一个 $\\delta$ 必须控制圆盘中所有方向与曲线路径，而不是每条路另给一个目标值。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-d255eb367e7432a377b4"
+      ]
+    },
+    "CH02-S01": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "非零乘法的双射与逆、平方映直线/双曲线/圆弧的结果和范围均默认可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EXAMPLE-AZ",
+          "reader_anchor": "reader-88a0a33f909476bc6bd4",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例1",
+          "statement": "考虑函数 $w=az$，其中 $a$ 是不为零的复常数。说明它是把整个 $z$ 平面映为整个 $w$ 平面的一一映照，并说明它由旋转和相似变换迭合得到。",
+          "conclusion": "$w=az$（$a\\ne0$）是整个平面的一一映照，在闭平面上也双方单值；它可分解为旋转 $\\theta$ 和以原点为中心的相似伸缩 $r$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EXAMPLE-Z2",
+          "reader_anchor": "reader-c167ddf680b2f6e8aec9",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例2",
+          "statement": "求下列曲线在映照 $w=z^2$ 下的像：1) 平行于坐标轴的直线；2) 双曲线族 $x^2-y^2=c_1$ 及 $2xy=c_2$；3) 位于第一象限内的圆弧 $z=r\\mathrm{e}^{\\mathrm{i}\\theta}$，$0<\\theta<\\pi/2$。",
+          "conclusion": "在 $w=z^2$ 下，平行于坐标轴的直线（不含坐标轴时）映为抛物线，坐标轴分别映为负实轴、正实轴；双曲线 $x^2-y^2=c_1$、$2xy=c_2$ 分别映为直线 $u=c_1$、$v=c_2$；第一象限内圆弧映为上半圆周。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH02-S01",
+          "paragraph": "平方映照会把直线弯成曲线。对 $c\\ne0$，输入直线 $x=c$ 与 $y=c$ 的像分别是\n$$\\begin{aligned}\nx=c&:\\quad u=c^2-\\frac{v^2}{4c^2},\\\\\ny=c&:\\quad u=\\frac{v^2}{4c^2}-c^2.\n\\end{aligned}$$\n两者都是整条抛物线，因为另一个输入坐标跑遍实数。$c=0$ 不能代入这些分母；要回到 $u=x^2-y^2$、$v=2xy$，得到虚轴映为非正实轴、实轴映为非负实轴，两像都包括原点。"
+        },
+        {
+          "unit_id": "CH02-S01",
+          "paragraph": "另两族曲线会被平方“拉直”：$x^2-y^2=c_1$ 映为整条 $u=c_1$，$2xy=c_2$ 映为整条 $v=c_2$。圆弧适合用极式：若 $z=re^{i\\theta}$、$r>0$、$0<\\theta<\\pi/2$，则\n$$w=r^2e^{i\\varphi},\\qquad 0<\\varphi<\\pi.$$\n这是半径 $r^2$ 的上半圆周，不含端点。像集既有方程，也有范围；丢掉原来的角度限制，就会把半圆错误地扩大成整圆。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-88a0a33f909476bc6bd4",
+        "#reader-c167ddf680b2f6e8aec9"
+      ]
+    },
+    "CH02-S02": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "主辐角及一般角区间的连续域与切口不连续已显式给出。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-ARG-CONTINUITY",
+          "reader_anchor": "reader-59bd05b0f0d44ceb396d",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例3（$\\arg z$ 的连续性）",
+          "statement": "研究函数 $$f(z)=\\begin{cases}\\arg z,& z\\ne0,\\ -\\pi<\\arg z\\le\\pi,\\\\ 0,& z=0\\end{cases}$$ 的连续性。",
+          "conclusion": "综上所述，$f(z)$ 除原点及负实轴上的点外处处连续。同理，函数 $$f(z)=\\arg z,\\quad z\\ne0,\\ \\alpha\\le\\arg z<\\alpha+2\\pi$$ 除原点及射线 $\\arg z=\\alpha$ 外处处连续。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH02-S02",
+          "paragraph": "数列只给一串接近方式，函数极限要同时照顾整个邻近点集。设 $f$ 在 $0<|z-z_0|<\\rho$ 有定义，称 $\\lim_{z\\to z_0}f(z)=w_0$，是指任给 $\\varepsilon>0$，存在 $0<\\delta\\le\\rho$，使\n$$0<|z-z_0|<\\delta\\ \\Longrightarrow\\ |f(z)-w_0|<\\varepsilon.$$\n去心条件暂不使用中心函数值；同一个 $\\delta$ 必须控制圆盘中所有方向与曲线路径，而不是每条路另给一个目标值。"
+        },
+        {
+          "unit_id": "CH02-S02",
+          "paragraph": "辐角主值 $-\\pi<\\arg z\\le\\pi$ 除零和负实轴以外连续。零处沿不同射线接近会保留不同角，补成 $0$ 也无法连续；负实轴的上、下岸分别趋于 $\\pi$、$-\\pi$，跳跃来自取角区间。一般选值 $\\alpha\\le\\arg z<\\alpha+2\\pi$ 后，断开的位置改为射线 $\\arg z=\\alpha$，原点仍须排除。点在平面上接近与选定角数值接近，必须分别检查。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-59bd05b0f0d44ceb396d"
+      ]
+    },
+    "CH02-S03": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "正整数幂导数、共轭处处不可微、倒数导数均默认可见；|z|²仅原点可微但不解析在CH02-S04明确给出。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-ZN",
+          "reader_anchor": "reader-55ebe33c5f0b1aabe488",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例4 幂函数 $w=z^n$ 的导数",
+          "statement": "设 $n$ 为正整数。证明 $w=z^n$ 在全平面解析，并求 $\\dfrac{\\mathrm{d}z^n}{\\mathrm{d}z}$。",
+          "conclusion": "对每个正整数 $n$，$(z^n)'=nz^{n-1}$，且 $w=z^n$ 是全平面上的解析函数。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-CONJ",
+          "reader_anchor": "reader-2b9ad75529bf01b3ecdb",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例5 $w=\\bar z$ 处处不可微",
+          "statement": "证明 $w=\\bar z$ 在全平面上每一点都不可微，并说明它在全平面上处处连续。",
+          "conclusion": "$w=\\bar z$ 在全平面上处处连续，却处处不可微；它给出一个处处连续而处处不可微的复变函数。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX-RECIP",
+          "reader_anchor": "reader-bdc28677b5edaa3c503c",
+          "json_pointer_prefix": "/examples/2",
+          "label": "补充例：$1/z$ 的导数与解析区域",
+          "statement": "求 $f(z)=\\dfrac{1}{z}$（$z\\ne0$）的导数，并指出它在哪些点解析。",
+          "conclusion": "$(1/z)'=-1/z^2$（$z\\ne0$）。因此 $1/z$ 在 $z\\ne0$ 的每一点解析，而 $z=0$ 是它的奇点。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 3,
+          "owner_id": "EX-MODSQ",
+          "reader_anchor": "reader-0ea848744538c69ff3c3",
+          "json_pointer_prefix": "/examples/3",
+          "label": "补充例：只在一点可微的函数 $f(z)=|z|^2$",
+          "statement": "讨论 $f(z)=|z|^{2}$ 的可微性，并说明它在 $z=0$ 处是否解析。",
+          "conclusion": "$f(z)=|z|^{2}$ 只在 $z=0$ 可微，在 $z\\ne0$ 处处不可微；因此在 $z=0$ 它可微但不解析，$z=0$ 是它的奇点。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH02-S03",
+          "paragraph": "在相应导数均存在的地方，运算法则仍为\n$$\\begin{aligned}\n(f\\pm g)'&=f'\\pm g',\\\\\n(fg)'&=f'g+fg',\\\\\n(f/g)'&=\\frac{gf'-fg'}{g^2},\\qquad g\\ne0,\\\\\n[f(g(z))]'&=f'(g(z))g'(z).\n\\end{aligned}$$\n复合公式把两次一阶乘法相乘。若解析函数 $z=\\varphi(w)$ 在 $w_0$ 处导数非零，令 $z_0=\\varphi(w_0)$，并在对应邻域选定局部解析反支 $w=f(z)$，则 $f'(z_0)=1/\\varphi'(w_0)$。反支必须在邻域连贯选择，不能每点任意更换原像。"
+        },
+        {
+          "unit_id": "CH02-S03",
+          "paragraph": "幂函数加上常数乘法与有限求和，就给出多项式在全平面解析；商法则又给出有理函数 $P(z)/Q(z)$ 在 $Q(z)\\ne0$ 处解析。对一个具体公式，先找定义域，再谈解析域；若约掉公因子后想补原来删去的点，必须把补值后的函数另行说明。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-d2eec52e0e032684e9fc",
+        "#reader-a1db2b8118b854e433bc",
+        "#reader-55ebe33c5f0b1aabe488",
+        "#reader-2b9ad75529bf01b3ecdb",
+        "#reader-bdc28677b5edaa3c503c",
+        "#reader-0ea848744538c69ff3c3"
+      ]
+    },
+    "CH02-S04": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "C-R充要条件与实可微限制、指数型正例、分式线性导数及排除点、|z|²反例均默认可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "CR-EXP-EXAMPLE",
+          "reader_anchor": "reader-76f73ce5ddf33b3cfc4d",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例6（复指数型函数的解析性）",
+          "statement": "试证 $f(z)=\\mathrm{e}^{x}(\\cos y+\\mathrm{i}\\sin y)$ 在全平面上解析，且 $f'(z)=f(z)$。",
+          "conclusion": "$f$ 在全平面解析，且 $f'(z)=f(z)$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "CR-FRACTIONAL-LINEAR-EXAMPLE",
+          "reader_anchor": "reader-934dd1fd09558c08223f",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例7（分式线性函数的解析性）",
+          "statement": "设 $w=\\frac{az+b}{cz+d}$，其中 $a,b,c,d$ 为复常数，且 $ad-bc\\ne0$。讨论它的可微性与解析性，并求导数。",
+          "conclusion": "当 $c=0$ 时，$w$ 在全平面解析；当 $c\\ne0$ 时，$w$ 在除 $z=-d/c$ 外的全平面解析。两种情形下都有 $w'=\\frac{ad-bc}{(cz+d)^2}$（在定义域内）。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "CR-MOD-SQUARE-EXAMPLE",
+          "reader_anchor": "reader-c82d2967a52e91c61293",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例8（$w=|z|^2$ 的可微性与解析性）",
+          "statement": "讨论 $w=|z|^2$ 的可微性和解析性。",
+          "conclusion": "$w=|z|^2$ 只在 $z=0$ 可微，$f'(0)=0$，但在复平面上处处不解析。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH02-S04",
+          "paragraph": "设 $f=u(x,y)+iv(x,y)$。沿实方向的候选导数是 $u_x+iv_x$，沿虚方向则是 $v_y-iu_y$；同一复导数迫使\n$$u_x=v_y,\\qquad u_y=-v_x.$$\n这就是柯西—黎曼方程，简称 $\\mathrm{C\\!-!R}$ 方程。完整充要条件还包括：$u,v$ 在该点作为二元实函数都可微。实可微给出全部小位移的统一线性近似，两条等式再保证这个近似正好是一项复乘法；仅有偏导数存在且碰巧相等还不够。"
+        },
+        {
+          "unit_id": "CH02-S04",
+          "paragraph": "对比 $f(z)=|z|^2=x^2+y^2$：虚部为零，偏导连续，但两条方程同时成立只在 $x=y=0$，故它仅在原点复可微，且 $f'(0)=0$。任何原点邻域都含其他不可微点，所以原点仍不是解析点；其他点也不解析。这把“在哪些点可微”和“哪些开区域解析”明确分成两个问题。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-1b41ffc8c2be2f04904d",
+        "#reader-76f73ce5ddf33b3cfc4d",
+        "#reader-934dd1fd09558c08223f",
+        "#reader-c82d2967a52e91c61293"
+      ]
+    },
+    "CH02-S05": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "单叶性随定义域改变已说明，平方在右半平面一一与z和−z同像足以解释单位盘反例。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EXAMPLE-SCHLICHT-CHECK",
+          "reader_anchor": "reader-b8c85a49f7daf36c5977",
+          "json_pointer_prefix": "/examples/0",
+          "label": "判断 $f(z)=z^2$ 在给定区域上是否单叶",
+          "statement": "设 $f(z)=z^2$（本节只把它当作一个具体的映照使用，幂函数的系统讨论见 §2.5.1）。分别在下列区域上判断 $f$ 是否单叶，并指出相应区域是不是 $f$ 的单叶性区域：(1) $D_1=\\{z:\\operatorname{Re}z>0\\}$；(2) $D_2=\\{z:|z|<1\\}$。",
+          "conclusion": "同一个函数 $f(z)=z^2$ 在右半平面 $D_1$ 上是单叶函数，$D_1$ 是它的单叶性区域；在单位圆盘 $D_2$ 上不是单叶函数，$D_2$ 不是它的单叶性区域。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH02-S05",
+          "paragraph": "一个函数在区域 $D$ 既解析又一一，称为 $D$ 内的单叶函数，$D$ 是它的单叶性区域。解析约束局部变化，一一排除不同输入共享像；两者缺一不可。共轭是一一但不解析，平方在全平面解析但不一一，因此都不能不带范围地称为单叶。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-b8c85a49f7daf36c5977"
+      ]
+    },
+    "CH02-S05-SS01": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "幂函数同像条件、单叶角域、标准Dk及像域都有默认结果；固定8i三原像为求根代入练习。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-POW-PREIMAGES",
+          "reader_anchor": "reader-28492bc6c20ecdeee41c",
+          "json_pointer_prefix": "/examples/0",
+          "label": "求一点在 w=z^3 下的全部原像",
+          "statement": "设 $w=z^{3}$，$w_0=8i$。求 $w_0$ 的全部原像，并指出它们分别落在哪个角域 $D_k$ 中。",
+          "conclusion": "$8i$ 的全部原像是 $\\sqrt{3}+i$、$-\\sqrt{3}+i$、$-2i$，它们分别位于 $D_0,D_1,D_2$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-POW-SECTOR",
+          "reader_anchor": "reader-5867814be3dce68e41f9",
+          "json_pointer_prefix": "/examples/1",
+          "label": "判断角域的单叶性并求像",
+          "statement": "设 $w=z^{3}$。判断角域 $G:-\\frac{\\pi}{6}<\\arg z<\\frac{\\pi}{6}$ 是否为 $w=z^{3}$ 的单叶性区域，并求 $G$ 的像。",
+          "conclusion": "$G$ 是 $w=z^{3}$ 的单叶性区域，它被映成右半 $w$ 平面 $-\\frac{\\pi}{2}<\\arg w<\\frac{\\pi}{2}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH02-S05-SS01",
+          "paragraph": "其余标准选择是\n$$D_k:\\quad\\frac{(2k-1)\\pi}{n}<\\arg z<\\frac{(2k+1)\\pi}{n},\\quad k=0,\\ldots,n-1.$$\n它们也都映成同一个负实轴割平面，只是连续像角使用 $(2k-1)\\pi<\\theta<(2k+1)\\pi$。反支为 $z=|w|^{1/n}e^{i\\theta/n}$；把角区间平移一整圈，根的角只平移 $2\\pi/n$，于是选中了另一个原像。区间与公式配套，才真正确定一支。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-c04975f8c19ee142f075",
+        "#reader-28492bc6c20ecdeee41c",
+        "#reader-5867814be3dce68e41f9"
+      ]
+    },
+    "CH02-S05-SS02": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "初值选支立方根的函数值/导数、复合平方根的支点与同支导数、两岸限制均可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-CUBE-ROOT-I",
+          "reader_anchor": "reader-23fc8a3f6d7169056e9f",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例9（沿正实轴割开时求值与求导）",
+          "statement": "设 $w=\\sqrt[3]{z}$ 确定在沿正实轴割开的 $z$ 平面上，并且 $w(\\mathrm{i})=-\\mathrm{i}$，求 $w(-\\mathrm{i})$ 及 $w'(-\\mathrm{i})$。",
+          "conclusion": "$w(-\\mathrm{i})=\\dfrac{1}{2}\\left(\\sqrt3-\\mathrm{i}\\right)$，$w'(-\\mathrm{i})=\\dfrac{1}{6}\\left(1+\\sqrt3\\,\\mathrm{i}\\right)$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH02-S05-SS02",
+          "paragraph": "复合根式要重新检查换值。设 $a>0$，$F(z)=\\sqrt{z^2-a^2}$ 的支点恰是 $a,-a$：单独绕任一点会变号，同时绕住两点则两个因子的总辐角增量为 $4\\pi$，开平方后正好一整圈，值不变，所以 $\\infty$ 不是支点。沿 $[-a,a]$ 割开后有两个解析分支；任一固定分支 $f$ 均满足\n$$f'(z)=\\frac z{f(z)},\\qquad f''(z)=-\\frac{a^2}{f(z)^3}.$$\n第二式也等于 $1/f(z)-z^2/f(z)^3$。若该支在割线上岸取负虚值，则 $f(2a)=-\\sqrt3a$，$f'(2a)=-2/\\sqrt3$，$f''(2a)=1/(3\\sqrt3a)$；初始岸值决定了这里所有符号。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-23fc8a3f6d7169056e9f"
+      ]
+    },
+    "CH02-S05-SS03": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "指数的值模角定义、同像充要条件与条带映半平面已明说，两个固定指数值无需独立定理。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-EXP-VALUES",
+          "reader_anchor": "reader-2daf125dbc5ccdcab760",
+          "json_pointer_prefix": "/examples/0",
+          "label": "按定义求值与求模、辐角",
+          "statement": "求 $e^{1+\\mathrm{i}\\pi/2}$ 与 $e^{\\mathrm{i}\\pi}$ 的值，并写出 $e^{1+\\mathrm{i}\\pi/2}$ 的模与辐角。",
+          "conclusion": "$e^{1+\\mathrm{i}\\pi/2}=\\mathrm{i}e$，它的模为 $e$、辐角主值为 $\\frac{\\pi}{2}$；$e^{\\mathrm{i}\\pi}=-1$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-EXP-EQUAL",
+          "reader_anchor": "reader-2f1aec4ca5e95e10cfef",
+          "json_pointer_prefix": "/examples/1",
+          "label": "相等条件的应用",
+          "statement": "判断 $e^{\\mathrm{i}\\pi}$ 与 $e^{3\\mathrm{i}\\pi}$ 是否相等，并说明这与“$e^{z_{1}}=e^{z_{2}}$ 当且仅当 $z_{1}-z_{2}=2k\\pi\\mathrm{i}$”是否矛盾。",
+          "conclusion": "两者相等，都等于 $-1$；这与相等条件完全一致，并不矛盾——它恰好说明 $e^{z}$ 在复平面上不是单射。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX-EXP-STRIP",
+          "reader_anchor": "reader-982c038d8e2ae8249c05",
+          "json_pointer_prefix": "/examples/2",
+          "label": "条形域的单叶像",
+          "statement": "证明 $w=e^{z}$ 把条形域 $D:0<\\operatorname{Im}z<\\pi$ 单叶地映成上半平面 $0<\\arg w<\\pi$。",
+          "conclusion": "$w=e^{z}$ 是 $D$ 到上半平面的单叶映照：像恰为 $0<\\arg w<\\pi$，且 $D$ 中不同的点映到不同的点。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH02-S05-SS03",
+          "paragraph": "加法公式仍成立：$e^{z_1+z_2}=e^{z_1}e^{z_2}$。新现象是虚方向周期 $e^{z+2k\\pi i}=e^z$，$k\\in\\mathbb Z$，而精确同像条件为\n$$e^{z_1}=e^{z_2}\\iff z_1-z_2\\in2\\pi i\\mathbb Z.$$\n同像先要求实部相同，再要求虚部相差整圈；因此指数单值解析，却在全平面不是一一。"
+        },
+        {
+          "unit_id": "CH02-S05-SS03",
+          "paragraph": "特别地，$-\\pi<\\operatorname{Im}z<\\pi$ 映为负实轴割平面，$0<\\operatorname{Im}z<\\pi$ 映为上半平面。各水平带 $(2k-1)\\pi<\\operatorname{Im}z<(2k+1)\\pi$ 都映为同一个负实轴割平面；上下边界对应两岸，但边界不属于开带。反向恢复输入时，模确定实部，连续方向确定虚部，这正为对数分支提供定义域。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-2daf125dbc5ccdcab760",
+        "#reader-2f1aec4ca5e95e10cfef",
+        "#reader-982c038d8e2ae8249c05"
+      ]
+    },
+    "CH02-S05-SS04": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "全部对数与主值、积商的值集意义、主值失效示例和各支像带均可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-LN-VALUES",
+          "reader_anchor": "reader-b450b710d4a5a339af52",
+          "json_pointer_prefix": "/examples/0",
+          "label": "求对数的全部值与主值",
+          "statement": "求 $\\mathrm{Ln}(-1)$ 与 $\\mathrm{Ln}(1+\\mathrm{i})$ 的全部值，并写出它们的主值。",
+          "conclusion": "$\\mathrm{Ln}(-1)=(2k+1)\\pi\\mathrm{i}$，主值 $\\ln(-1)=\\mathrm{i}\\pi$；$\\mathrm{Ln}(1+\\mathrm{i})=\\ln\\sqrt2+\\mathrm{i}\\left(\\frac{\\pi}{4}+2k\\pi\\right)$，主值 $\\ln(1+\\mathrm{i})=\\ln\\sqrt2+\\mathrm{i}\\frac{\\pi}{4}$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-LN-PRODUCT",
+          "reader_anchor": "reader-76aa815f0ba134e43bf1",
+          "json_pointer_prefix": "/examples/1",
+          "label": "验证多值法则并检验主值",
+          "statement": "取 $z_1=z_2=-1$。验证多值法则 $\\mathrm{Ln}(z_1z_2)=\\mathrm{Ln}\\,z_1+\\mathrm{Ln}\\,z_2$ 在此成立，并检验主值对数是否满足同样的等式。",
+          "conclusion": "多值法则在这个例子中成立：两边都是全部偶数倍 $2\\pi\\mathrm{i}$ 组成的集合；但同样的式子对主值对数不成立，两者相差 $2\\pi\\mathrm{i}$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH02-S05-SS04",
+          "paragraph": "对 $z\\ne0$，解 $e^w=z$，设 $w=u+iv$，模给出 $u=\\ln|z|$，方向给出 $v$ 可以是 $z$ 的任意辐角。所以全部对数值是\n$$\\operatorname{Ln}z=\\ln|z|+i(\\theta+2k\\pi),\\qquad k\\in\\mathbb Z.$$\n任两值相差 $2\\pi i$ 的整数倍。选 $-\\pi<\\arg z\\le\\pi$ 得主值 $\\ln z=\\ln|z|+i\\arg z$；例如 $\\ln(-1)=\\pi i$、$\\operatorname{Ln}(-1)=(2k+1)\\pi i$，而 $\\ln(1+i)=\\ln\\sqrt2+i\\pi/4$。实对数部分始终单值，多值性来自辐角。"
+        },
+        {
+          "unit_id": "CH02-S05-SS04",
+          "paragraph": "若切口改成正实轴，就在 $\\mathbb C\\setminus[0,\\infty)$ 取 $0<\\theta<2\\pi$，同样的 $L_k$ 公式给出全部解析支，像带改为 $2k\\pi<\\operatorname{Im}w<2(k+1)\\pi$。图中移动切口角 $\\beta$，比较两岸靠近的输入点与相差约 $2\\pi$ 的像虚部；取角区间同时变为 $\\beta<\\theta<\\beta+2\\pi$。切口改变了哪一边不能跨越，未消除绕零换值的事实。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-b450b710d4a5a339af52",
+        "#reader-76aa815f0ba134e43bf1"
+      ]
+    },
+    "CH02-S05-SS05": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "复正余弦的全体零点、虚轴增长、分量与模已默认显示，sin i/cos i由虚轴公式直接代入。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-TRIG-IMAG",
+          "reader_anchor": "reader-d52dbe3617bdcd0fae0b",
+          "json_pointer_prefix": "/examples/0",
+          "label": "计算 $\\sin \\mathrm{i}$ 与 $\\cos \\mathrm{i}$",
+          "statement": "求 $\\sin \\mathrm{i}$ 与 $\\cos \\mathrm{i}$ 的值，并判断 $|\\cos z|\\leqslant1$ 在复数范围内是否成立。",
+          "conclusion": "$\\cos \\mathrm{i}=\\frac{\\mathrm{e}+\\mathrm{e}^{-1}}{2}\\approx1.543$，是实数；$\\sin \\mathrm{i}=\\frac{\\mathrm{i}}{2}(\\mathrm{e}-\\mathrm{e}^{-1})$，是纯虚数，模约为 $1.175$。两者都说明实数情形的有界性不能推广到复数情形。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-TRIG-COS-ZERO",
+          "reader_anchor": "reader-c175102147190f3db2b0",
+          "json_pointer_prefix": "/examples/1",
+          "label": "求 $\\cos z=0$ 的全部解",
+          "statement": "求方程 $\\cos z=0$ 的所有复数解。",
+          "conclusion": "$\\cos z=0$ 的全部解为 $z=\\left(n+\\frac{1}{2}\\right)\\pi$，$n=0,\\pm1,\\pm2,\\cdots$。它与 $\\sin z$ 的零点 $z=n\\pi$ 在实轴上恰好交错排列。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH02-S05-SS05",
+          "paragraph": "分离输出坐标时，指数定义给出\n$$\\begin{aligned}\n\\sin(x+iy)&=\\sin x\\cosh y+i\\cos x\\sinh y,\\\\\n|\\sin(x+iy)|&=\\sqrt{\\sin^2x+\\sinh^2y},\\\\\n\\cos(x+iy)&=\\cos x\\cosh y-i\\sin x\\sinh y.\n\\end{aligned}$$\n这里 $x,y$ 都为实数，$\\cosh y=(e^y+e^{-y})/2$、$\\sinh y=(e^y-e^{-y})/2$，名称会在下一节统一研究。因而余弦取实值当且仅当 $\\sin x\\sinh y=0$，即 $y=0$ 或 $x=k\\pi$（$k\\in\\mathbb Z$）。输入有虚部并不阻止输出为实数；这些式子能直接处理章末的实虚部分离与实值轨迹习题。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-2a5458286ca26d98d6d9",
+        "#reader-d52dbe3617bdcd0fae0b",
+        "#reader-c175102147190f3db2b0"
+      ]
+    },
+    "CH02-S05-SS06": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "双曲函数定义、导数、极点排除和虚周期均默认可见，无旧examples组。",
+      "original_examples_reviewed": [],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH02-S05-SS06",
+          "paragraph": "$\\sinh z$ 与 $\\cosh z$ 的周期为 $2\\pi i$，两个商的周期为 $\\pi i$，都沿虚方向。它们保留实双曲恒等式，例如\n$$\\cosh^2z-\\sinh^2z=1,$$\n$$\\begin{aligned}\n\\sinh(z_1\\pm z_2)&=\\sinh z_1\\cosh z_2\\\\\n&\\quad\\pm\\cosh z_1\\sinh z_2.\n\\end{aligned}$$\n与三角恒等式相比的减号来自输入中的 $i$。这些是任意允许输入均成立的代数关系；看几个网格重复只是说明例子，真正的周期由指数定义保证。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-c8883c1ab700eaa8550f",
+        "#reader-60b3429aaac392a7f0a6",
+        "#reader-fe1ac94254587aa0a56b"
+      ]
+    },
+    "CH02-S05-SS07": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "整数/有理/无理/非实指数的值数、整数幂角度乘n及指数与一般幂e^(1+i)区别均可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-POWER-CONVENTION",
+          "reader_anchor": "reader-ab5a8af68c17a322c29e",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例10（e^{1+i} 的两个身份）",
+          "statement": "说明 $e^{1+\\mathrm{i}}$ 分别作为 $f(z)=e^{z}$ 在 $z=1+\\mathrm{i}$ 处的值和作为 $g(z)=z^{1+\\mathrm{i}}$ 在 $z=e$ 处的值是不同的。",
+          "conclusion": "本书约定记号 $e^{z}$ 指单值指数函数，所以 $e^{1+\\mathrm{i}}$ 只表示 $f(1+\\mathrm{i})=e(\\cos1+\\mathrm{i}\\sin1)$。若要用一般幂函数，必须写成 $g(z)=z^{1+\\mathrm{i}}$：它在 $z=e$ 处给出无穷多个值 $e^{1-2k\\pi}(\\cos1+\\mathrm{i}\\sin1)$（$k\\in\\mathbb{Z}$），其中恰有 $k=0$ 的那一个与 $e^{1+\\mathrm{i}}$ 相同，其余都不同。两者不是同一件事：一个是单值函数的一个值，一个是多值幂的整族值。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH02-S05-SS07",
+          "paragraph": "对给定 $\\alpha\\in\\mathbb C$ 与非零底数 $z$，一般幂定义为\n$$\\begin{aligned}\nz^\\alpha&=\\exp(\\alpha\\operatorname{Ln}z),\\\\\nw_k&=\\exp\\{\\alpha[\\ln|z|+i(\\theta+2k\\pi)]\\},\n\\end{aligned}$$\n其中 $k\\in\\mathbb Z$、$\\theta$ 为 $z$ 的一个辐角。若 $\\alpha$ 为正实数，另补 $0^\\alpha=0$；这个点补值并不取消绕零换值的分支问题。选定一个对数解析支 $L$ 后，$F(z)=\\exp(\\alpha L(z))$ 才是单值解析幂，导数 $F'=\\alpha F/z$ 也必须使用同一个 $L$。"
+        },
+        {
+          "unit_id": "CH02-S05-SS07",
+          "paragraph": "复变函数中 $e^z$ 约定表示单值指数。若把底数 $e$ 当一般幂的底数，则 $\\operatorname{Ln}e=1+2k\\pi i$ 给出另一组对象：指数在 $1+i$ 处只有 $e(\\cos1+i\\sin1)$，一般幂的对应全部值却为 $e^{1-2k\\pi}(\\cos1+i\\sin1)$。同样，$(a^b)^c=a^{bc}$ 不能在多值运算中无条件沿用，内外两次选值可能扩大值集；例如 $(1^2)^{1/2}$ 按全部值为 $\\{1,-1\\}$，而 $1^{2(1/2)}=\\{1\\}$。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-ab5a8af68c17a322c29e"
+      ]
+    },
+    "CH02-S05-SS08": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "反三角与反双曲的全部值表达式和例外点可见，三项固定输入求值作为代入演算；常函数判别、极坐标C-R与调和坐标变换工具也可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EXAMPLE-ARCSIN-I",
+          "reader_anchor": "reader-d46a9c3037356362a74d",
+          "json_pointer_prefix": "/examples/0",
+          "label": "求 Arcsin i 的全部值",
+          "statement": "求 $\\operatorname{Arcsin}\\,\\mathrm{i}$ 的全部值。",
+          "conclusion": "$\\operatorname{Arcsin}\\,\\mathrm{i}=k\\pi+(-1)^{k}\\mathrm{i}\\ln(1+\\sqrt{2})$，$k$ 取遍整数：实部按 $\\pi$ 的整数倍排列，虚部在 $\\pm\\ln(1+\\sqrt{2})$ 之间交替。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        },
+        {
+          "index": 1,
+          "owner_id": "EXAMPLE-ARCCOS-2",
+          "reader_anchor": "reader-d685c2381602c309c84e",
+          "json_pointer_prefix": "/examples/1",
+          "label": "求 Arccos 2 的全部值",
+          "statement": "求 $\\operatorname{Arccos}2$ 的全部值。",
+          "conclusion": "$\\operatorname{Arccos}2=2k\\pi\\pm\\mathrm{i}\\ln(2+\\sqrt{3})$，$k\\in\\mathbb{Z}$；这些值全都不是实数。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        },
+        {
+          "index": 2,
+          "owner_id": "EXAMPLE-ARSINH-2I",
+          "reader_anchor": "reader-d8b81d41fa03262f1e99",
+          "json_pointer_prefix": "/examples/2",
+          "label": "求 Arsinh 2i 的全部值",
+          "statement": "求 $\\operatorname{Arsinh}2\\mathrm{i}$ 的全部值。",
+          "conclusion": "$\\operatorname{Arsinh}2\\mathrm{i}=\\pm\\ln(2+\\sqrt{3})+\\mathrm{i}\\left(\\dfrac{\\pi}{2}+2k\\pi\\right)$，$k\\in\\mathbb{Z}$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH02-S05-SS08",
+          "paragraph": "反双曲函数也由反解指数得到：\n$$\\begin{aligned}\n\\operatorname{Arsinh}z&=\\operatorname{Ln}(z+\\sqrt{z^2+1}),\\\\\n\\operatorname{Arcosh}z&=\\operatorname{Ln}(z+\\sqrt{z^2-1}),\\\\\n\\operatorname{Artanh}z&=\\frac12\\operatorname{Ln}\\frac{1+z}{1-z},\\\\\n\\operatorname{Arcoth}z&=\\frac12\\operatorname{Ln}\\frac{z+1}{z-1}.\n\\end{aligned}$$\n后两式排除 $z=\\pm1$；所有根与对数先按全部值理解，解析支另选区域。前两式中的根决定二次方程的两种反解，对数再记录周期，所以同一处理方法能贯穿两类反函数。"
+        },
+        {
+          "unit_id": "CH02-S05-SS08",
+          "paragraph": "余弦的复加法公式为\n$$\\begin{aligned}\n\\cos(z_1+z_2)&=\\cos z_1\\cos z_2\\\\\n&\\quad-\\sin z_1\\sin z_2.\n\\end{aligned}$$\n它对任意复输入成立。前面双曲正弦和差公式与反余弦对数表达式在本组习题中也被调用；使用时直接引用已建立的等式与分支条件，不再另立一组重复公式。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-d8f596fa0744f2e70c61",
+        "#reader-d46a9c3037356362a74d",
+        "#reader-d685c2381602c309c84e",
+        "#reader-d8b81d41fa03262f1e99"
+      ]
+    },
+    "CH03": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "导读无原examples，积分路径、内部条件与边界控制在分节展开。",
+      "original_examples_reviewed": [],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH03-S01",
+          "paragraph": "先给逐段光滑曲线 $C$ 指定起点 $z_0$、终点 $Z$ 与行进方向；除有限个接头外各段有连续切向，能可靠谈弧长。设 $f$ 在 $C$ 上单值连续，沿路径顺序分成小弧段，第 $k$ 段取采样点 $\\zeta_k$，端点位移为 $\\Delta z_k=z_k-z_{k-1}$。分段充分细时，若和的极限与分法、采样无关，定义\n$$\\int_Cf(z)\\,dz=\\lim\\sum_{k=1}^nf(\\zeta_k)\\Delta z_k.$$\n每个贡献都是复数，方向进入乘积；本章以后的曲线也默认光滑或逐段光滑。分段应使各小弧段自身趋小，不能仅凭首尾接近就把绕回的小弧当成已细分。"
+        },
+        {
+          "unit_id": "CH03-S02",
+          "paragraph": "本章把简单闭曲线叫闭路，默认正向为逆时针。柯西积分定理说：若 $C$ 围成区域 $D$，而 $f$ 在整个闭域 $D\\cup C$ 上解析，则\n$$\\oint_Cf(z)\\,dz=0.$$\n“闭域上解析”包含边界周围的解析邻域；仅在路径上解析不够。教材为方便用格林公式作证，临时加入导数连续，但定理本身不需要额外添加这个假设。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": []
+    },
+    "CH03-S01": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "参数化、Re z直线积分、各整数核、ML以及大弧/小弧极限公式都可见，条件和方向均保留。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-3-1-1",
+          "reader_anchor": "reader-49ca412ed8c3b9518402",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例1",
+          "statement": "计算积分 $\\int_C \\operatorname{Re}z\\,\\mathrm{d}z$，其中 $C$ 是连接原点 $O$ 和 $1+\\mathrm{i}$ 的直线。",
+          "conclusion": "因此 $\\int_C \\operatorname{Re}z\\,\\mathrm{d}z=\\frac{1+\\mathrm{i}}2$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-3-1-2",
+          "reader_anchor": "reader-99d02c3efd3314851c69",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例2",
+          "statement": "设 $n$ 是整数，$C$ 是以 $a$ 为中心、$R$ 为半径的圆周，按逆时针方向。计算\n$$I_n=\\int_C \\frac{\\mathrm{d}z}{(z-a)^n}.$$",
+          "conclusion": "$$I_n=\\begin{cases}2\\pi\\mathrm{i},&n=1,\\\\0,&n\\ne1.\\end{cases}$$ 这个结果以后常用。若圆周取顺时针方向，由反向路径性质，结果整体变号。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX-3-1-3",
+          "reader_anchor": "reader-e21bf79675b46f9a1574",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例3",
+          "statement": "证明\n$$\\left|\\int_C e^{\\mathrm{i}z}\\,\\mathrm{d}z\\right|<\\pi,$$\n其中 $C$ 是 $|z|=R$ 的上半圆周，从 $R$ 沿上半圆到 $-R$，$R>0$。",
+          "conclusion": "因此 $\\left|\\int_C e^{\\mathrm{i}z}\\,\\mathrm{d}z\\right|<\\pi$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 3,
+          "owner_id": "EX-3-1-4",
+          "reader_anchor": "reader-a3f3c0d4e338860bd1a7",
+          "json_pointer_prefix": "/examples/3",
+          "label": "例4",
+          "statement": "若当 $\\rho$ 充分小时，$f(z)$ 在圆弧\n$$C_\\rho:\\ z=a+\\rho e^{\\mathrm{i}\\theta},\\quad \\alpha\\le\\theta\\le\\beta$$\n上连续，且\n$$\\lim_{z\\to a}(z-a)f(z)=k,$$\n证明\n$$\\lim_{\\rho\\to0}\\int_{C_\\rho} f(z)\\,\\mathrm{d}z=\\mathrm{i}(\\beta-\\alpha)k.$$",
+          "conclusion": "结论成立。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH03-S01",
+          "paragraph": "先给逐段光滑曲线 $C$ 指定起点 $z_0$、终点 $Z$ 与行进方向；除有限个接头外各段有连续切向，能可靠谈弧长。设 $f$ 在 $C$ 上单值连续，沿路径顺序分成小弧段，第 $k$ 段取采样点 $\\zeta_k$，端点位移为 $\\Delta z_k=z_k-z_{k-1}$。分段充分细时，若和的极限与分法、采样无关，定义\n$$\\int_Cf(z)\\,dz=\\lim\\sum_{k=1}^nf(\\zeta_k)\\Delta z_k.$$\n每个贡献都是复数，方向进入乘积；本章以后的曲线也默认光滑或逐段光滑。分段应使各小弧段自身趋小，不能仅凭首尾接近就把绕回的小弧当成已细分。"
+        },
+        {
+          "unit_id": "CH03-S01",
+          "paragraph": "缩短路径也不保证积分趋零。固定 $\\alpha<\\beta$，取按角度增加方向的圆弧 $C_\\rho:z=a+\\rho e^{i\\theta}$、$\\alpha\\le\\theta\\le\\beta$。若 $f$ 在充分小的各弧上连续，且 $(z-a)f(z)\\to k$，则\n$$\\lim_{\\rho\\to0^+}\\int_{C_\\rho}f(z)\\,dz=i(\\beta-\\alpha)k.$$\n函数约按 $k/(z-a)$ 增大，恰好抵消长度中的 $\\rho$；留下的是扫过角度的贡献。方向反转则变号，$k=0$ 才保证这项极限为零。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-49ca412ed8c3b9518402",
+        "#reader-99d02c3efd3314851c69",
+        "#reader-e21bf79675b46f9a1574",
+        "#reader-a3f3c0d4e338860bd1a7"
+      ]
+    },
+    "CH03-S02": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "任意闭路的基本核结果、闭域/单连通及全边界柯西条件可见；两个固定有理/多项式积分属定理代入。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "CH03-S02-EX5",
+          "reader_anchor": "reader-1a2f53944069659bf973",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例5",
+          "statement": "设 $a$ 是闭路 $C$ 内任一点，$n$ 为整数，求 $\\displaystyle\\int_{C}\\frac{\\mathrm{d}z}{(z-a)^{n}}$（$C$ 按正向取）。",
+          "conclusion": "$\\displaystyle\\int_{C}\\frac{\\mathrm{d}z}{(z-a)^{n}}=\\begin{cases}2\\pi\\mathrm{i},& n=1,\\\\ 0,& n\\text{ 是不等于 }1\\text{ 的整数}.\\end{cases}$ 结果与所取圆周 $C_1$ 的半径 $\\rho$ 无关，只与路径绕过 $a$ 这一事实有关。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "CH03-S02-EX-DERIVED-1",
+          "reader_anchor": "reader-a3ec19b1164d90f6292f",
+          "json_pointer_prefix": "/examples/1",
+          "label": "练习（奇点在闭路外部）",
+          "statement": "计算 $\\displaystyle\\int_{C}\\frac{\\mathrm{e}^{z}}{z-2}\\,\\mathrm{d}z$，其中 $C$ 是圆周 $|z|=1$，取正向。",
+          "conclusion": "积分值为 $0$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        },
+        {
+          "index": 2,
+          "owner_id": "CH03-S02-EX-DERIVED-2",
+          "reader_anchor": "reader-ee3583638e96d429d299",
+          "json_pointer_prefix": "/examples/2",
+          "label": "练习（积分与路径无关）",
+          "statement": "设 $C$ 是任一条从 $z_0=0$ 到 $z_1=1+\\mathrm{i}$ 的简单曲线。求 $\\displaystyle\\int_{C}(z^{2}+1)\\,\\mathrm{d}z$。",
+          "conclusion": "$\\int_{C}(z^{2}+1)\\,\\mathrm{d}z=\\frac{1}{3}+\\frac{5}{3}\\mathrm{i}$，与所取路径 $C$ 无关。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH03-S02",
+          "paragraph": "设 $a$ 位于正向简单闭路 $C$ 内，对任意整数 $n$，基本核结果推广为\n$$\\oint_C\\frac{dz}{(z-a)^n}=\\begin{cases}2\\pi i,&n=1,\\\\0,&n\\ne1.\\end{cases}$$\n在内部绕 $a$ 画一个小圆，原路径与小圆之间没有奇点，两个同向积分相等，于是可用圆周的结果。路径可变形的原因是两路之间整片区域解析，不能穿过 $a$，也不能把“都围着同一点”当成不需检查定义域的万能理由。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-9063dc0b757e2efe2ccc",
+        "#reader-1a2f53944069659bf973",
+        "#reader-a3ec19b1164d90f6292f",
+        "#reader-ee3583638e96d429d299"
+      ]
+    },
+    "CH03-S03": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "整数幂与余弦的端点差、对数变上限积分的净圈数增量都默认可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-CALC-INTEGRALS",
+          "reader_anchor": "reader-5eccf0b02e531c0cd2a5",
+          "json_pointer_prefix": "/examples/0",
+          "label": "用牛顿－莱布尼兹公式算两个积分",
+          "statement": "设 $z_0,z_1,a,b$ 是任意复数，$n$ 是自然数，积分路径任意（取在被积函数解析的区域中）。计算 $$\\int_{z_0}^{z_1}\\zeta^{n}\\,\\mathrm{d}\\zeta,\\qquad \\int_a^b\\cos z\\,\\mathrm{d}z .$$",
+          "conclusion": "对自然数 $n$ 有 $\\int_{z_0}^{z_1}\\zeta^{n}\\,\\mathrm{d}\\zeta=\\frac{z_1^{n+1}-z_0^{n+1}}{n+1}$，并且 $\\int_a^b\\cos z\\,\\mathrm{d}z=\\sin b-\\sin a$；两式的值都与积分路径无关。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-MULTIVALUED-INTEGRAL",
+          "reader_anchor": "reader-9f4e41e646713848d9a7",
+          "json_pointer_prefix": "/examples/1",
+          "label": "$1/z$ 的变上限积分是多值的",
+          "statement": "讨论 $f(z)=1/z$ 在 $\\mathbb{C}\\setminus\\{0\\}$ 上的变上限积分 $\\int_1^{z}\\frac{\\mathrm{d}\\zeta}{\\zeta}$：说明限制在一个单连通子区域上它可取单值解析分支 $\\ln z$（取 $\\ln 1=0$），而当路径绕原点一周后积分值增加 $2\\pi\\mathrm{i}$，从而这个变上限积分是多值的。",
+          "conclusion": "在非单连通区域 $\\mathbb{C}\\setminus\\{0\\}$ 上，$1/z$ 的变上限积分依赖于路径，等于对数 $\\mathrm{Ln}\\,z=\\ln z+2k\\pi\\mathrm{i}$（$k=0,\\pm1,\\pm2,\\dots$），其中 $k$ 由路径绕原点的净圈数决定。这也说明“变上限积分是原函数”与牛顿－莱布尼兹公式中“单连通”这一条件不能去掉。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH03-S03",
+          "paragraph": "$1/z$ 把这个障碍说得最清楚。在允许选定对数解析支 $L$、同时含 $1$ 和 $z$ 的割平面上，\n$$\\int_1^z\\frac{d\\zeta}{\\zeta}=L(z)-L(1).$$\n若 $L(1)=0$，结果就是 $L(z)$。相对固定参考路径多绕原点正向 $k$ 圈，积分增加 $2k\\pi i$；不限定路径类别时得到全部 $\\operatorname{Ln}z=\\ln z+2k\\pi i$。视频中比较同终点而相差一圈的路径，这一圈的额外贡献阻止 $1/z$ 在整个穿孔平面拥有全局单值原函数。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-d71d6381af7340e321a8",
+        "#reader-5eccf0b02e531c0cd2a5",
+        "#reader-9f4e41e646713848d9a7"
+      ]
+    },
+    "CH03-S04": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "柯西高阶公式、半径穿极点的原题限制、cos二阶核值与一般f的半角权重积分均默认可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX6",
+          "reader_anchor": "reader-d614440c67dc24ecc397",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例6",
+          "statement": "计算积分 $\\int_C \\frac{e^z}{z(z-2i)}\\,dz$，其中 $C$ 是以 $2i$ 为中心、半径 $r$ 的正向圆周。为使柯西积分公式条件成立，取 $0<r<2$（例如 $r=1$）；原资料若写 $r=2$，则 $z=0$ 落在 $C$ 上，不能直接套公式。",
+          "conclusion": "在 $0<r<2$ 的条件下，积分等于 $\\pi(\\cos2+i\\sin2)$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX7",
+          "reader_anchor": "reader-0dc9a4ba57fe387aeb66",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例7",
+          "statement": "计算积分 $\\int_C \\frac{\\cos z}{(z-i)^3}\\,dz$，其中 $C$ 是包围 $i$ 点的任意简单封闭曲线，取正向。",
+          "conclusion": "积分为 $-\\pi i\\cosh1$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX8",
+          "reader_anchor": "reader-5eb27d69058e168519fe",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例8",
+          "statement": "设 $f(z)$ 在闭圆 $|z|\\le1$ 内解析，且 $f(0)=1$。$C$ 是 $|z|=1$ 的正向。1) 证明 $\\frac{1}{2\\pi i}\\int_C \\left[2\\pm\\left(z+\\frac1z\\right)\\right]f(z)\\frac{dz}{z}=2\\pm f^{\\prime}(0)$。2) 证明 $\\int_0^{2\\pi}f(e^{i\\theta})\\cos^2\\frac{\\theta}{2}d\\theta=\\pi+\\frac{\\pi}{2}f^{\\prime}(0)$，$\\int_0^{2\\pi}f(e^{i\\theta})\\sin^2\\frac{\\theta}{2}d\\theta=\\pi-\\frac{\\pi}{2}f^{\\prime}(0)$。",
+          "conclusion": "两个实积分恒等式成立。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH03-S04",
+          "paragraph": "例8将同一方法用到单位圆权重。若 $f$ 在闭单位圆盘解析、$f(0)=1$，$C$ 为单位圆正向，则\n$$\\frac1{2\\pi i}\\oint_C\\left[2\\pm\\left(z+\\frac1z\\right)\\right]f(z)\\frac{dz}{z}=2\\pm f'(0).$$\n三部分分别读 $f(0)$、解析函数的零闭路积分和 $f'(0)$。写 $z=e^{i\\theta}$ 后，权重变成半角平方，得到\n$$\\begin{aligned}\n\\int_0^{2\\pi}f(e^{i\\theta})\\cos^2\\frac\\theta2\\,d\\theta&=\\pi+\\frac\\pi2f'(0),\\\\\n\\int_0^{2\\pi}f(e^{i\\theta})\\sin^2\\frac\\theta2\\,d\\theta&=\\pi-\\frac\\pi2f'(0).\n\\end{aligned}$$\n正负号对应两种权重，系数由 $dz=iz\\,d\\theta$ 与半角公式共同决定；不能丢掉微分因子后直接认系数。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-9063dc0b757e2efe2ccc",
+        "#reader-d614440c67dc24ecc397",
+        "#reader-0dc9a4ba57fe387aeb66",
+        "#reader-5eb27d69058e168519fe"
+      ]
+    },
+    "CH03-S05": {
+      "status": "recommended_addition",
+      "manual_assessment": "最大/最小模、闭盘柯西估计、整函数多项式增长新SC001、外域柯西和对数导数计数工具均可见；原平均值例题的实积分恒等式另列具体建议。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-MEAN-VALUE-INTEGRAL",
+          "reader_anchor": "reader-682c68b2f5b30f119239",
+          "json_pointer_prefix": "/examples/0",
+          "label": "用平均值公式计算积分",
+          "statement": "计算 $\\int_{|z|=1} \\frac{\\mathrm{e}^z}{z}\\,\\mathrm{d}z$，并证明 $$\\int_0^\\pi \\mathrm{e}^{\\cos\\theta}\\cos(\\sin\\theta)\\,\\mathrm{d}\\theta=\\pi.$$",
+          "conclusion": "积分值为 $2\\pi\\mathrm{i}$，且所证实积分为 $\\pi$。",
+          "verdict": "specific_real_integral_identity_not_stated_default_recommended_addition"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-NO-INTERIOR-MIN",
+          "reader_anchor": "reader-e86304df45ee3f9382c7",
+          "json_pointer_prefix": "/examples/1",
+          "label": "非常数解析函数无零点时模无内部最小值",
+          "statement": "设 $f(z)$ 在区域 $D$ 内解析、不恒为常数且没有零点。证明 $|f(z)|$ 不能在 $D$ 内达到最小值。",
+          "conclusion": "因此 $|f(z)|$ 不能在 $D$ 内达到最小值。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX-CAUCHY-ESTIMATE-POLYNOMIAL",
+          "reader_anchor": "reader-dbe950c766a98224e11c",
+          "json_pointer_prefix": "/examples/2",
+          "label": "用柯西不等式刻画整函数增长",
+          "statement": "设 $f$ 为整函数，且存在常数 $A>0$ 和自然数 $n$，使 $|f(z)|\\leqslant A|z|^n$ 对所有 $z$ 成立。证明 $f$ 是次数不超过 $n$ 的多项式。",
+          "conclusion": "$f$ 是次数不超过 $n$ 的多项式。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH03-S05",
+          "paragraph": "对外部区域也可读值，不过要计入无穷远的数据。若 $C$ 是逆时针简单闭路，$f$ 在 $C$ 及外部区域 $D$ 解析，且 $f(z)\\to A\\in\\mathbb C$，则对 $z\\notin C$，\n$$\\frac1{2\\pi i}\\oint_C\\frac{f(\\zeta)}{\\zeta-z}\\,d\\zeta=\\begin{cases}A-f(z),&z\\in D,\\\\A,&z\\text{在}C\\text{内部}.\\end{cases}$$\n外域的内边界方向与通常围内部的方向相反，所以出现负号；大圆边界留下 $A$。内点虽不在 $f$ 的原定义域，积分仍有值，但这里绝不能擅写一个未定义的 $f(z)$。"
+        },
+        {
+          "unit_id": "CH03-S05",
+          "paragraph": "这又给出一种找零点的判别：若 $a>0$，$f$ 在闭圆盘 $|z|\\le a$ 解析，圆周上 $|f|>m$，而 $|f(0)|<m$，则内部至少有一个零点。边界全部高于阈值而中心更低，使最小模在内部取得；若处处非零便与上一条冲突。它通过边界和中心的模比较定位零点，无须事先解方程。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-dbe950c766a98224e11c",
+        "#reader-6976e8918d6a8e2326e0",
+        "#reader-65b0ef445c9771c358d9",
+        "#reader-682c68b2f5b30f119239",
+        "#reader-e86304df45ee3f9382c7",
+        "#reader-dbe950c766a98224e11c"
+      ]
+    },
+    "CH04": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "导读的二次调和函数练习在CH04-S01默认给出共轭及等值线。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-HARMONIC-SQUARE",
+          "reader_anchor": "reader-9eec33dd0c5b53dc4608",
+          "json_pointer_prefix": "/examples/0",
+          "label": "验证调和性并求共轭调和函数",
+          "statement": "验证 $u(x,y)=x^2-y^2$ 在整个复平面上是调和函数，并求它的一个共轭调和函数 $v$，使 $u+\\mathrm{i}v$ 在整个平面上解析。",
+          "conclusion": "$u=x^2-y^2$ 是调和函数；它的共轭调和函数为 $v=2xy+C$（$C$ 为任意实常数），取 $C=0$ 时 $u+\\mathrm{i}v=z^2$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH04-S01",
+          "paragraph": "写成 $f(z)=u(x,y)+\\mathrm i v(x,y)$ 后，解析性首先表现为 C-R 方程 $u_x=v_y$、$u_y=-v_x$。解析函数有各阶连续导数，所以两式还能继续求偏导；混合偏导相等使相反项消去，得到\n$$\\Delta u:=u_{xx}+u_{yy}=0,\\qquad\\Delta v=v_{xx}+v_{yy}=0.$$\n这里下标表示偏导，$\\Delta$ 是二维拉普拉斯算子。具有二阶连续偏导并满足 $\\Delta u=0$ 的实函数叫调和函数。这个定义要求两个方向的弯曲相抵，并不要求曲面平坦：$x^2-y^2$ 调和，而 $x^2+y^2$ 不调和。推演见[解析函数分量的调和性](#reader-451cfb7e6d389d16983c)。"
+        },
+        {
+          "unit_id": "CH04-S02",
+          "paragraph": "把 $u(x,y)$ 简记成 $u(z)$ 只是记号压缩，它仍为实值函数。若 $u$ 在包含闭圆盘 $|z-a|\\le R$ 的开区域内调和，圆心值等于圆周值的平均：\n$$u(a)=\\frac1{2\\pi R}\\int_{|z-a|=R}u(z)\\,\\mathrm ds=\\frac1{2\\pi}\\int_0^{2\\pi}u(a+Re^{\\mathrm i\\theta})\\,\\mathrm d\\theta.$$\n弧长元 $\\mathrm ds=R\\,\\mathrm d\\theta$ 解释两种写法的系数。平均的是实值本身；圆盘附近调和的条件使整圈都能用于平均。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-9eec33dd0c5b53dc4608"
+      ]
+    },
+    "CH04-S01": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "z²共轭及非临界正交条件、给定二次虚部恢复解析函数都可见，未沿用旧原点“不正交”的过强表述。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-Z2-ORTHOGONAL",
+          "reader_anchor": "reader-f1bcd15721b354574c2c",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例1（$z^2$ 的共轭调和函数与等值曲线）",
+          "statement": "设 $f(z)=z^{2}$。写出 $f$ 的实部 $u$ 与虚部 $v$，说明它们是一对共轭调和函数；并考察等值曲线族 $u=C_1$ 与 $v=C_2$ 的正交性。",
+          "conclusion": "$f(z)=z^{2}$ 在全平面解析，$u=x^{2}-y^{2}$ 与 $v=2xy$ 是一对共轭调和函数；等值曲线族 $u=C_1$ 与 $v=C_2$ 除原点外处处正交，原点处因 $f'(0)=0$ 而不正交。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-CONSTRUCT-F",
+          "reader_anchor": "reader-b8b008ca7d0443bacae7",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例2（由虚部构造解析函数）",
+          "statement": "求一个解析函数 $f(z)$，使其虚部为 $v(x,y)=2x^{2}-2y^{2}+x$，且满足条件 $f(0)=1$。",
+          "conclusion": "$v=2x^{2}-2y^{2}+x$ 是全平面上的调和函数，所求解析函数为 $f(z)=2\\mathrm{i}z^{2}+\\mathrm{i}z+1$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH04-S01",
+          "paragraph": "若给定的是调和虚部 $v$，同一思路改为\n$$u(x,y)=\\int_{(x_0,y_0)}^{(x,y)}\\bigl(v_y\\,\\mathrm dx-v_x\\,\\mathrm dy\\bigr)+C_1,\\qquad C_1\\in\\mathbb R.$$\n这次解析函数相差实常数。[例2（由虚部构造解析函数）](#reader-b8b008ca7d0443bacae7)给定 $v=2x^2-2y^2+x$，先积 $u_x=-4y$ 得 $u=-4xy+\\varphi(y)$，再用 $u_y=-(4x+1)$ 求出 $\\varphi(y)=-y+C_1$。于是 $f(z)=2\\mathrm iz^2+\\mathrm iz+C_1$，由 $f(0)=1$ 得 $C_1=1$。偏导积分中的“常数”先保留为另一变量的函数，是避免漏解的关键。"
+        },
+        {
+          "unit_id": "CH04-S01",
+          "paragraph": "区域有洞时，调和性仍保证局部共轭，却未必保证全域单值；准确条件是每条闭路上的相应微分积分都为零。比如 $u=\\ln|z|$ 在 $z\\ne0$ 调和，沿单位圆累积 $-u_y\\,\\mathrm dx+u_x\\,\\mathrm dy$ 得 $2\\pi$，绕一圈便不能回到同一个虚部值。带洞本身并不强迫失败：若全部闭路周期为零，共轭仍可全域单值。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-451cfb7e6d389d16983c",
+        "#reader-f1bcd15721b354574c2c",
+        "#reader-b8b008ca7d0443bacae7"
+      ]
+    },
+    "CH04-S02": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "三次多项式调和条件、全平面有界调和常数、泊松核归一化均默认可见；章末复合/平方限制也显式显示。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-HARMONIC-COEFF",
+          "reader_anchor": "reader-0f03b2242d928c14d93a",
+          "json_pointer_prefix": "/examples/0",
+          "label": "验证调和函数条件",
+          "statement": "设 $u=ax^3+bx^2y+cxy^2+dy^3$ 是调和函数，其中 $a,b,c,d$ 为常数。问 $a,b,c,d$ 之间应满足什么关系？",
+          "conclusion": "所以 $c=-3a$，$b=-3d$，其中 $a,d$ 可任意。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-LIOUVILLE",
+          "reader_anchor": "reader-83f50a153f25fecad662",
+          "json_pointer_prefix": "/examples/1",
+          "label": "有界全平面调和函数",
+          "statement": "设 $u(z)$ 是全平面内的有界调和函数，证明 $u(z)$ 恒等于常数。",
+          "conclusion": "u 恒等于常数。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX-POISSON-NORMALIZATION",
+          "reader_anchor": "reader-b1134c002f797046ee49",
+          "json_pointer_prefix": "/examples/2",
+          "label": "泊松核的归一化",
+          "statement": "利用泊松积分公式证明 $\\frac1{2\\pi}\\int_0^{2\\pi}\\frac{R^2-r^2}{R^2-2Rr\\cos(\\theta-\\varphi)+r^2}\\,\\mathrm d\\theta=1$。",
+          "conclusion": "泊松核的积分为 $1$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH04-S02",
+          "paragraph": "偏离圆心后，近处边界应占更多权重。设 $z=a+re^{\\mathrm i\\varphi}$、$0\\le r<R$，记边界数据为 $g(\\theta)=u(a+Re^{\\mathrm i\\theta})$，泊松积分公式写成\n$$u(a+re^{\\mathrm i\\varphi})=\\frac1{2\\pi}\\int_0^{2\\pi}g(\\theta)\\frac{R^2-r^2}{R^2-2Rr\\cos(\\theta-\\varphi)+r^2}\\,\\mathrm d\\theta.$$\n这里 $u$ 仍须在闭圆盘的邻近区域调和。分式称泊松核，它在内部为正，归一化后权重总和为 $1$；$r=0$ 时核为 $1$，回到等权平均。内点方向 $\\varphi$ 固定，积分变量 $\\theta$ 扫过边界，两者不能混用。"
+        },
+        {
+          "unit_id": "CH04-S02",
+          "paragraph": "若调和函数在整个复平面有界，它必为常数。可在全平面取共轭，把 $u$ 放进解析函数 $F=u+\\mathrm iv$；$e^F$ 的模是有界的 $e^u$，整函数的刘维尔定理便迫使它、进而 $u$ 为常数。这是把第三章整函数工具转回实值函数的例子，见[有界全平面调和函数](#reader-83f50a153f25fecad662)。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-f2f9f2813f5daabfbfea",
+        "#reader-6d58f72e5246ec48ad0c",
+        "#reader-0f03b2242d928c14d93a",
+        "#reader-83f50a153f25fecad662",
+        "#reader-b1134c002f797046ee49"
+      ]
+    },
+    "CH05": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "导读例的几何展开、收敛域及圆外不等价在数项级数和Taylor正文给出。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "CH5-GEOMETRIC-SERIES",
+          "reader_anchor": "reader-d2e82703182cbde4b9ee",
+          "json_pointer_prefix": "/examples/0",
+          "label": "几何级数展开",
+          "statement": "讨论级数 $\\sum_{n=0}^{\\infty} z^n$ 在复平面上的收敛性，并说明它与函数 $\\frac{1}{1-z}$ 的关系。",
+          "conclusion": "几何级数给出了一个具体例子：同一个函数只在收敛圆内等于它的幂级数展开。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH05-S01-SS01",
+          "paragraph": "复级数 $\\sum_{k=1}^{\\infty}z_k$ 的意义由有限部分和 $S_n=\\sum_{k=1}^n z_k$ 定义：若 $S_n\\to S\\in\\mathbb C$，称级数收敛，$S$ 是它的和；没有有限复数极限就称发散。判断对象是部分和列，不能把各项趋零直接当成求和成功。"
+        },
+        {
+          "unit_id": "CH05-S01-SS02",
+          "paragraph": "各项变成 $E$ 上的函数 $f_k(z)$ 后，每个固定点都对应上一节的数项级数。如果对所有 $z\\in E$ 都收敛，便定义和函数 $f(z)=\\sum_{k=1}^{\\infty}f_k(z)$，称在 $E$ 上逐点收敛。它允许不同点需要不同的项数：给定精度后，靠近边界的点可能比中心慢得多。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": []
+    },
+    "CH05-S01-SS01": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "复级数实虚部判别、几何级数及新增几何导数专门公式均默认可见；一虚部调和级数的发散例也可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-SERIES-DIVERGE",
+          "reader_anchor": "reader-b41eee9921873b92252f",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例1 判别 $\\sum_{n=1}^{+\\infty}\\left(\\frac{1}{2^n}+\\frac{\\mathrm{i}}{n}\\right)$ 的敛散性",
+          "statement": "判别级数 $\\sum_{n=1}^{+\\infty}\\left(\\frac{1}{2^n}+\\frac{\\mathrm{i}}{n}\\right)$ 的敛散性。",
+          "conclusion": "级数 $\\sum_{n=1}^{+\\infty}\\left(\\frac{1}{2^n}+\\frac{\\mathrm{i}}{n}\\right)$ 发散。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-GEOMETRIC",
+          "reader_anchor": "reader-6eab90e736e074a236d3",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例2 讨论 $\\sum_{n=0}^{+\\infty}z^n$ 的敛散性",
+          "statement": "讨论复级数 $\\sum_{n=0}^{+\\infty}z^n$ 的敛散性（$z$ 为任意复数）。",
+          "conclusion": "当 $|z|<1$ 时，级数 $\\sum_{n=0}^{+\\infty}z^n$ 绝对收敛，和为 $\\frac{1}{1-z}$；当 $|z|\\ge1$ 时，级数发散。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX-PRODUCT-GEOM",
+          "reader_anchor": "reader-a781e9172dba3dd9adb8",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例3 用相乘法则求 $\\sum_{k=1}^{+\\infty}kz^{k-1}$",
+          "statement": "设 $|z|<1$。利用相乘法则证明 $\\sum_{k=1}^{+\\infty}kz^{k-1}=\\frac{1}{(1-z)^2}$。",
+          "conclusion": "当 $|z|<1$ 时，$\\sum_{k=1}^{+\\infty}kz^{k-1}=\\frac{1}{(1-z)^2}$，且该级数绝对收敛。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH05-S01-SS01",
+          "paragraph": "基本积木是几何级数。[例2](#reader-6eab90e736e074a236d3)先用有限等式\n$$1+z+\\cdots+z^{n-1}=\\frac{1-z^n}{1-z}\\quad(z\\ne1).$$\n当 $|z|<1$，$z^n\\to0$ 且 $\\sum|z|^n$ 收敛，所以 $\\sum_{n=0}^{\\infty}z^n=1/(1-z)$，并为绝对收敛。若 $|z|\\ge1$，项本身不趋零，故发散；$z=1$ 也直接由部分和 $n$ 发散。下一节将让 $z$ 在集合里移动，检验这个收敛是否能统一控制。"
+        },
+        {
+          "unit_id": "CH05-S01-SS01",
+          "paragraph": "与几何级数配套的常用公式是\n$$\\sum_{k=1}^{\\infty}kz^{k-1}=\\frac1{(1-z)^2},\\qquad |z|<1.$$\n下一节的幂级数逐项求导解释怎样得到它；现在先保留结果及开单位圆这个适用范围，不能把圆周上的发散级数当成同一无穷和。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-b41eee9921873b92252f",
+        "#reader-6eab90e736e074a236d3"
+      ]
+    },
+    "CH05-S01-SS02": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "指数强级数、望远镜级数小闭圆一致与开圆不一致，以及全部量词和判别均可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-3-EXP",
+          "reader_anchor": "reader-76cad8ac36e8b88744cd",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例3",
+          "statement": "证明级数 $\\sum_{k=0}^{+\\infty} \\frac{z^k}{k!}$ 在闭圆 $|z|\\le r$（$r<+\\infty$）上绝对一致收敛。",
+          "conclusion": "级数在闭圆 $|z|\\le r$ 上绝对一致收敛。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-4-TELESCOPE",
+          "reader_anchor": "reader-a0aeb64f37b0923a8118",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例4",
+          "statement": "证明级数 $z+(z^2-z)+\\cdots+(z^n-z^{n-1})+\\cdots$ 在闭圆 $|z|\\le r$（$r<1$）上绝对一致收敛。",
+          "conclusion": "级数在闭圆 $|z|\\le r$（$r<1$）上绝对一致收敛。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX-5-NONUNIFORM",
+          "reader_anchor": "reader-c1ffb8d4c469b983f89f",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例5",
+          "statement": "证明例4中的级数在单位圆 $|z|<1$ 内收敛于和函数 $f(z)\\equiv0$，但并非一致收敛。",
+          "conclusion": "该级数在 $|z|<1$ 内点态收敛于 0，但不一致收敛。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH05-S01-SS02",
+          "paragraph": "记 $S_n(z)=\\sum_{k=1}^n f_k(z)$。一致收敛要求\n$$\\forall\\varepsilon>0\\ \\exists N=N(\\varepsilon)\\ \\forall n\\ge N\\ \\forall z\\in E:\\quad |S_n(z)-f(z)|<\\varepsilon.$$\n先定同一个 $N$，再让 $z$ 任意变动；逐点收敛则把选 $N$ 放在固定 $z$ 之后，允许 $N=N(\\varepsilon,z)$。量词次序表达的是一份有限近似能否同时适用于整个集合。"
+        },
+        {
+          "unit_id": "CH05-S01-SS02",
+          "paragraph": "若各 $f_n$ 在 $D$ 内解析，且级数在 $D$ 一致收敛，则和函数也解析，并可逐项求任意阶导数：\n$$f^{(k)}(z)=\\sum_{n=1}^{\\infty}f_n^{(k)}(z),\\qquad z\\in D,\\quad k=1,2,\\ldots.$$\n复解析函数的导数可写成小圆周上的柯西积分，这才使求导受统一误差控制。实际只要每个紧含于 $D$ 的小闭圆上有这种一致收敛，就能逐点应用同一论证；下一节幂级数正以这种方式工作。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-76cad8ac36e8b88744cd",
+        "#reader-a0aeb64f37b0923a8118",
+        "#reader-c1ffb8d4c469b983f89f"
+      ]
+    },
+    "CH05-S02": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "收敛半径与圆周另判、倒比值与根值方向已默认明确；z^n/n在±1的边界现象另在CH05-S05可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-RADIUS",
+          "reader_anchor": "reader-e013d2097cb018ebe985",
+          "json_pointer_prefix": "/examples/0",
+          "label": "求幂级数的收敛半径与收敛圆",
+          "statement": "求幂级数 $\\sum_{n=1}^{+\\infty}\\frac{z^n}{n}$ 的收敛半径，并说明它在哪些点绝对收敛、哪些点发散。",
+          "conclusion": "收敛半径 $R=1$，收敛圆为 $|z|<1$；在 $|z|=1$ 上需单独判断，不能统一说收敛或发散。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH05-S02",
+          "paragraph": "对 $R>0$ 的幂级数，和函数在 $|z-a|<R$ 解析，因为任一点周围都能放进一个具有一致收敛的小闭圆。在该开圆内，对任意正整数 $k$，\n$$\\begin{aligned}f^{(k)}(z)&=\\sum_{n=k}^{\\infty}\\frac{n!}{(n-k)!}a_n(z-a)^{n-k}\\\\&=\\sum_{n=0}^{\\infty}\\frac{(n+k)!}{n!}a_{n+k}(z-a)^n.\\end{aligned}$$\n导数级数仍有同一收敛半径，边界是否收敛要重判。"
+        },
+        {
+          "unit_id": "CH05-S02",
+          "paragraph": "在导数公式中令 $z=a$，只有常数项留下，于是\n$$a_n=\\frac{f^{(n)}(a)}{n!},\\qquad n=0,1,2,\\ldots.$$\n系数因此不能任意挑：只要和函数与中心确定，它们就被各阶导数唯一确定。下一节反过来从解析函数出发，证明这些被迫的系数确实能拼回原函数。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": []
+    },
+    "CH05-S03": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "非零中心几何展开、指数三角乘积、各支对数、切比雪夫、sec首项和复合指数首项全部默认给式与范围。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "E-06",
+          "reader_anchor": "reader-1b7d792ca18450fdfd65",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例6",
+          "statement": "求 $f(z)=\\frac{1}{1-z}$ 在 $z=i$ 的泰勒展式。",
+          "conclusion": "在 $|z-i|<\\sqrt2$ 内，$f(z)=\\sum_{n=0}^{+\\infty}\\frac{(z-i)^n}{(1-i)^{n+1}}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "E-07",
+          "reader_anchor": "reader-a83f0f45f16e6beaea37",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例7",
+          "statement": "将 $e^z\\cos z$ 及 $e^z\\sin z$ 展为 $z$ 的幂级数。",
+          "conclusion": "两式在全平面成立。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "E-08",
+          "reader_anchor": "reader-7d93617dd74757e4a49b",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例8",
+          "statement": "讨论 $\\operatorname{Ln}(1+z)$ 的各单值解析分支在 $z=0$ 的泰勒展开。",
+          "conclusion": "主支展开为 $\\operatorname{Ln}_0(1+z)=\\sum_{n=1}^{+\\infty}(-1)^{n-1}\\frac{z^n}{n}$，$|z|<1$；其他分支加 $2k\\pi i$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 3,
+          "owner_id": "E-09",
+          "reader_anchor": "reader-fc7b8930601e6a3f9f34",
+          "json_pointer_prefix": "/examples/3",
+          "label": "例9",
+          "statement": "设 $t\\in[-1,1]$ 是参数，求 $f(z)=\\frac{4-z^2}{4-4tz+z^2}$ 在 $z=0$ 的泰勒展式。",
+          "conclusion": "展开式如上；系数 $T_n(t)=\\frac1{2^{n-1}}\\cos(n\\arccos t)$ 是切比雪夫多项式。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 4,
+          "owner_id": "E-10",
+          "reader_anchor": "reader-3d5d2e3af9a2110e7e88",
+          "json_pointer_prefix": "/examples/4",
+          "label": "例10",
+          "statement": "求 $\\sec z$ 在 $z=0$ 的泰勒展式（计算到第五项）。",
+          "conclusion": "$\\sec z=1+\\frac1{2!}z^2+\\frac5{4!}z^4+\\cdots$，$|z|<\\frac{\\pi}{2}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 5,
+          "owner_id": "E-11",
+          "reader_anchor": "reader-23aa816448d1fbf0925f",
+          "json_pointer_prefix": "/examples/5",
+          "label": "例11",
+          "statement": "求 $f(z)=\\exp\\left(\\frac{z}{z-1}\\right)$ 在 $z=0$ 的泰勒展开式的前四项。",
+          "conclusion": "$f(z)=1-z-\\frac{z^2}{2}-\\frac{z^3}{6}+O(z^4)$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH05-S03",
+          "paragraph": "生成函数则把一整串多项式藏在系数中。[例9](#reader-fc7b8930601e6a3f9f34)给定实参数 $-1\\le t\\le1$，令 $t=\\cos u$ 后分解为两个几何分式，得\n$$\\frac{4-z^2}{4-4tz+z^2}=1+\\sum_{n=1}^{\\infty}T_n(t)z^n,\\qquad |z|<2,$$\n$$T_n(t)=\\frac{\\cos(n\\arccos t)}{2^{n-1}},\\qquad n\\ge1.$$\n这是本书归一化的切比雪夫多项式，不能略去系数中的 $2^{n-1}$；它与常见另一归一化记法不同。"
+        },
+        {
+          "unit_id": "CH05-S03",
+          "paragraph": "把首个非零幂提出，可将非恒零解析函数局部写成\n$$f(z)=(z-z_0)^m g(z),\\qquad g\\text{ 在 }z_0\\text{ 解析},\\quad g(z_0)\\ne0.$$\n这与 $m$ 阶零点等价。因 $g$ 在足够小邻域仍不为零，$z_0$ 是其中唯一零点，所以解析函数的零点要么孤立，要么函数在一个邻域恒零。这个因子分解会在约去奇点、判断极点阶数以及用对数导数数根时反复出现。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-1b7d792ca18450fdfd65",
+        "#reader-a83f0f45f16e6beaea37",
+        "#reader-7d93617dd74757e4a49b",
+        "#reader-fc7b8930601e6a3f9f34",
+        "#reader-3d5d2e3af9a2110e7e88",
+        "#reader-23aa816448d1fbf0925f"
+      ]
+    },
+    "CH05-S04": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "两个圆环的有理函数展开、复合正弦罗朗式、贝塞尔级数及积分关系均默认可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EXAMPLE-12",
+          "reader_anchor": "reader-ffd4e4fccbef001c6ee9",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例12 两个圆环内的罗朗展开",
+          "statement": "求 $f(z)=\\frac{1}{(z-1)(z-2)}$ 在 $D_1:0<|z-1|<1$ 及 $D_2:2<|z|<\\infty$ 内的罗朗展开。",
+          "conclusion": "在 $D_1$ 内 $f(z)=-\\sum_{n=-1}^{\\infty}(z-1)^n$；在 $D_2$ 内 $f(z)=\\sum_{n=2}^{\\infty}\\frac{2^{n-1}-1}{z^n}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EXAMPLE-13",
+          "reader_anchor": "reader-000014a1807334921007",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例13 正弦函数的罗朗展开",
+          "statement": "求 $f(z)=\\sin\\frac{z}{z-1}$ 在环域 $|z-1|>0$ 内的罗朗展开。",
+          "conclusion": "$\\sin\\frac{z}{z-1}=\\sin1+\\frac{\\cos1}{z-1}-\\frac{\\sin1}{2!(z-1)^2}-\\frac{\\cos1}{3!(z-1)^3}+\\cdots+(-1)^n\\frac{\\sin1}{(2n)!(z-1)^{2n}}+(-1)^n\\frac{\\cos1}{(2n+1)!(z-1)^{2n+1}}+\\cdots$，$0<|z-1|<\\infty$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EXAMPLE-14",
+          "reader_anchor": "reader-475ad4a6ec72a084962e",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例14 贝塞尔函数的罗朗展开与积分表示",
+          "statement": "设 $t$ 为实参数，求 $f(z)=\\exp\\left[\\frac t2\\left(z-\\frac1z\\right)\\right]$ 在 $0<|z|<+\\infty$ 内的罗朗展开，并导出贝塞尔函数的积分表示。",
+          "conclusion": "$f(z)=\\sum_{n=-\\infty}^{+\\infty}J_n(t)z^n$，$0<|z|<\\infty$；$J_n(t)$ 为 $n$ 阶贝塞尔函数，且 $J_{-n}(t)=(-1)^nJ_n(t)$，并有积分表示 $J_n(t)=\\frac{1}{2\\pi}\\int_0^{2\\pi}\\cos(t\\sin\\theta-n\\theta)d\\theta$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH05-S04",
+          "paragraph": "[例14](#reader-475ad4a6ec72a084962e)把两个指数级数相乘、按同一整数次幂收集，得到贝塞尔生成展开。固定实参数 $t$ 时，在 $0<|z|<\\infty$ 有\n$$\\exp\\!\\left[\\frac t2\\left(z-\\frac1z\\right)\\right]=\\sum_{n=-\\infty}^{\\infty}J_n(t)z^n.$$\n对整数 $n\\ge0$，\n$$J_n(t)=\\sum_{\\ell=0}^{\\infty}\\frac{(-1)^\\ell}{\\ell!(n+\\ell)!}\\left(\\frac t2\\right)^{2\\ell+n},\\qquad J_{-n}(t)=(-1)^nJ_n(t).$$\n这些是整数阶贝塞尔函数；把 $t$ 当复变量，它们的级数半径为 $\\infty$，所以均为整函数。"
+        },
+        {
+          "unit_id": "CH05-S04",
+          "paragraph": "系数公式还提供同一特殊函数的另一种计算入口：对实数 $t$、任意整数 $n$，在单位圆取 $z=e^{\\mathrm i\\theta}$ 可得\n$$J_n(t)=\\frac1{2\\pi}\\int_0^{2\\pi}\\cos(t\\sin\\theta-n\\theta)\\,\\mathrm d\\theta.$$\n指数形式中的虚部由对称性积分为零。级数适合按参数求近似，积分适合研究振荡；系数唯一性保证两种表示指向同一对象。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-ffd4e4fccbef001c6ee9",
+        "#reader-000014a1807334921007",
+        "#reader-475ad4a6ec72a084962e"
+      ]
+    },
+    "CH05-S05": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "三个奇点例的类别与本性乘除条件可见；零极点阶数乘除、同阶相消、生成递推/勒让德/三角级数/商极限工具均可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "E15",
+          "reader_anchor": "reader-4401895b8cab034562aa",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例15",
+          "statement": "求函数 $$f(z)=\\frac{(z-5)\\sin z}{(z-1)^2z^2(z+1)^3}$$ 的奇点，并确定它们的类别。",
+          "conclusion": "$z=0$ 是一级极点，$z=1$ 是二级极点，$z=-1$ 是三级极点。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "E16",
+          "reader_anchor": "reader-40485690e656cc1093f1",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例16",
+          "statement": "求函数 $$f(z)=\\cos\\frac{1}{z+i}$$ 的奇点，并确定其类别。",
+          "conclusion": "$z=-i$ 是 $f(z)$ 的本性奇点。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "E17",
+          "reader_anchor": "reader-bb5724e931546e5d3bce",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例17",
+          "statement": "设 $a$ 分别是 $f(z)$ 的解析点及 $g(z)$ 的本性奇点，且 $f$ 在 $a$ 的某邻域内不恒为零。又设 $g$ 在某个去心邻域 $0<|z-a|<\\rho$ 内无零点。问 $a$ 分别是 $f(z)g(z)$、$f(z)/g(z)$ 及 $g(z)/f(z)$ 的何种奇点？",
+          "conclusion": "在题设条件下，$f(z)g(z)$、$f(z)/g(z)$ 及 $g(z)/f(z)$ 都以 $a$ 为本性奇点。两个推广：若把“$f$ 在 $a$ 解析且不恒为零”换成“$f$ 以 $a$ 为极点”，三个结论仍成立（本章习题16）；若 $F$ 以 $a$ 为本性奇点且 $F$ 在 $a$ 的某去心邻域内无零点，则 $1/F$ 也以 $a$ 为本性奇点。特别地，讨论 $f/g$ 时 $g$ 无零点的条件、讨论 $1/F$ 时 $F$ 无零点的条件不可省，否则相关函数可能不是孤立奇点，不能按本性奇点分类。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH05-S05",
+          "paragraph": "另一生成函数在 $t=0$ 附近取平方根值为 $1$ 的分支，定义勒让德多项式：\n$$\\frac1{\\sqrt{1-2zt+t^2}}=\\sum_{n=0}^{\\infty}p_n(z)t^n.$$\n对 $n\\ge1$ 有\n$$\\begin{aligned}(n+1)p_{n+1}-(2n+1)zp_n+np_{n-1}&=0,\\\\p_n&=p'_{n+1}-2zp'_n+p'_{n-1},\\\\(2n+1)p_n&=p'_{n+1}-p'_{n-1}.\\end{aligned}$$\n撇号对 $z$ 求导；先分别对生成函数的 $z$ 与 $t$ 求导，再比较同次 $t$ 系数，就把无限项展开转成可逐项计算的恒等式。"
+        },
+        {
+          "unit_id": "CH05-S05",
+          "paragraph": "做章末乘除分类时，先比较最低非零幂就能统一处理：两个零点阶数为 $m,n$ 时，乘积阶数为 $m+n$，商的阶数差为 $m-n$；正差是零点，负差是极点，零差则补成非零解析值。和的阶数在 $m\\ne n$ 时为 $\\min(m,n)$，同阶时首项可能抵消而升阶或恒零。两个极点相乘阶数相加，相除仍看阶数差；相加在不同阶时保留较高极点阶，同阶时则必须重查抵消。有限阶因子计算到这里就够，本性因子则要回到去心解析性条件。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-4401895b8cab034562aa",
+        "#reader-40485690e656cc1093f1",
+        "#reader-bb5724e931546e5d3bce"
+      ]
+    },
+    "CH06": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "导读e^z/z²的单点留数为系数读取练习，通用留数定义/阶数公式在CH06-S01默认可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-EXP-OVER-Z2",
+          "reader_anchor": "reader-5030b235b5fb11468692",
+          "json_pointer_prefix": "/examples/0",
+          "label": "从罗朗展开读留数，再算闭路积分",
+          "statement": "设 $f(z)=\\dfrac{\\mathrm{e}^{z}}{z^{2}}$。求 $f$ 在 $z=0$ 的留数，并计算 $\\displaystyle\\oint_{|z|=1}f(z)\\,\\mathrm{d}z$。",
+          "conclusion": "$\\operatorname{Res}\\left[\\dfrac{\\mathrm{e}^{z}}{z^{2}},0\\right]=1$，且 $\\displaystyle\\oint_{|z|=1}\\dfrac{\\mathrm{e}^{z}}{z^{2}}\\,\\mathrm{d}z=2\\pi\\mathrm{i}$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH06-S01",
+          "paragraph": "设 $a$ 是 $f$ 的孤立奇点，在充分小去心邻域取正向简单闭路 $C$，只包围 $a$ 一次。定义\n$$\\operatorname{Res}(f,a)=\\frac1{2\\pi\\mathrm i}\\int_C f(z)\\,\\mathrm dz.$$\n只要闭路始终留在这份去心邻域并保持绕行，形状改变不改积分；所以留数描述的是函数和奇点，积分等于 $2\\pi\\mathrm i$ 乘这个局部贡献。"
+        },
+        {
+          "unit_id": "CH06-S02",
+          "paragraph": "实积分通常只沿一条线段，而留数定理处理闭路。两者之间的工作是找复辅助函数 $F$，使实轴上的 $F(x)$，或其实部、虚部等于目标被积函数，再补一条能处理的路线。辅助函数与路线必须配合选择，单纯把实变量换成复变量还没有完成方法。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": []
+    },
+    "CH06-S01": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "四个原例的积分或留数结果均默认显示，tan整数半径含方向及根数。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-RESIDUE-1",
+          "reader_anchor": "reader-d8fcb526c5f350d68025",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例1",
+          "statement": "求 $f(z)=\\dfrac{1}{z^4-z^3}$ 在它的各个极点处的留数。",
+          "conclusion": "$\\operatorname{Res}[f(z),1]=1$，$\\operatorname{Res}[f(z),0]=-1$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-RESIDUE-2",
+          "reader_anchor": "reader-49762b2a448da763ded6",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例2",
+          "statement": "计算 $\\displaystyle\\int_C\\tan\\pi z\\,\\mathrm dz$，其中 $C$ 分别是圆周 $|z|=\\frac13$ 与圆周 $|z|=n$（$n$ 为正整数）。",
+          "conclusion": "$\\displaystyle\\int_{|z|=1/3}\\tan\\pi z\\,\\mathrm dz=0$；$\\displaystyle\\int_{|z|=n}\\tan\\pi z\\,\\mathrm dz=-4n\\mathrm i$（$n$ 为正整数）。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX-RESIDUE-3",
+          "reader_anchor": "reader-8279001fa1436a5e4894",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例3",
+          "statement": "求 $\\displaystyle\\int_C z^3\\sin^5\\frac1z\\,\\mathrm dz$，其中 $C$ 是圆周 $|z|=1$。",
+          "conclusion": "$\\operatorname{Res}\\left[z^3\\sin^5\\frac1z,0\\right]=0$，$\\displaystyle\\int_{|z|=1}z^3\\sin^5\\frac1z\\,\\mathrm dz=0$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 3,
+          "owner_id": "EX-RESIDUE-4",
+          "reader_anchor": "reader-040a84237909718a10a8",
+          "json_pointer_prefix": "/examples/3",
+          "label": "例4",
+          "statement": "求 $\\displaystyle\\int_{|z|=1}\\frac{z\\sin z}{(1-e^z)^3}\\,\\mathrm dz$。",
+          "conclusion": "$\\displaystyle\\int_{|z|=1}\\frac{z\\sin z}{(1-e^z)^3}\\,\\mathrm dz=-2\\pi\\mathrm i$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH06-S01",
+          "paragraph": "若 $a$ 是 $m$ 阶极点，先消去极点写 $\\varphi(z)=(z-a)^mf(z)$ 并在中心解析补值。要取回 $f$ 的负一次幂，就要读 $\\varphi$ 的第 $m-1$ 次系数：\n$$\\operatorname{Res}(f,a)=\\frac{\\varphi^{(m-1)}(a)}{(m-1)!}=\\frac1{(m-1)!}\\lim_{z\\to a}\\frac{\\mathrm d^{m-1}}{\\mathrm dz^{m-1}}\\bigl[(z-a)^mf(z)\\bigr].$$\n先确定真实极点阶数再用此式，若只需一个系数也可直接截取局部展开。"
+        },
+        {
+          "unit_id": "CH06-S01",
+          "paragraph": "[例3](#reader-8279001fa1436a5e4894)的 $z^3\\sin^5(1/z)$ 虽有本性奇点，但所有幂的奇偶结构排除了 $z^{-1}$，单位圆积分为 $0$。[例4](#reader-040a84237909718a10a8)的 $z\\sin z/(1-e^z)^3$ 在原点分子二阶消失、分母三阶消失，首项为 $-1/z$，故单位圆积分为 $-2\\pi\\mathrm i$。这些例子说明目标若只是积分，未必需要求完整罗朗展开。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-d8fcb526c5f350d68025",
+        "#reader-49762b2a448da763ded6",
+        "#reader-8279001fa1436a5e4894",
+        "#reader-040a84237909718a10a8"
+      ]
+    },
+    "CH06-S02": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "原例1/z闭路的结果和无全域原函数障碍已在CH03-S03/CH06-S01默认给出；本节导读解释补路。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "CH06S02-EXAMPLE-LOG",
+          "reader_anchor": "reader-ad0d58289e7bf013832d",
+          "json_pointer_prefix": "/examples/0",
+          "label": "沿单位圆的积分与牛顿－莱布尼兹公式的失效",
+          "statement": "计算 $\\oint_{|z|=1}\\frac{\\mathrm{d}z}{z}$（沿正向），并说明为什么这个积分不能直接套用牛顿－莱布尼兹公式求出。",
+          "conclusion": "$\\oint_{|z|=1}\\frac{\\mathrm{d}z}{z}=2\\pi\\mathrm{i}$。留数方法只用到 $z=0$ 处的留数 $1$；牛顿－莱布尼兹公式则因缺少单值解析原函数而无法使用。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH06-S02",
+          "paragraph": "有限实线段 $[a,b]$ 与回程 $L$ 组成正向闭路时，要先写全等式：目标所在线段的复积分、补路积分之和，等于内部留数的 $2\\pi\\mathrm i$ 倍。补路可能可直接计算，可能变成原积分的另一个倍数，或随参数趋于零。决定办法是否成功的，是这一额外项能否真正处理。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": []
+    },
+    "CH06-S02-SS01": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "三角有理代换、泊松型参数积分、正整数频率的cos/sin积分及半周期因子都可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-POISSON",
+          "reader_anchor": "reader-85b72aa49f433c037eca",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例 5（泊松积分）",
+          "statement": "计算积分 $\\displaystyle\\int_0^{2\\pi}\\frac{\\mathrm d\\theta}{1-2p\\cos\\theta+p^2}$，其中 $0<p<1$。",
+          "conclusion": "$\\displaystyle\\int_0^{2\\pi}\\frac{\\mathrm d\\theta}{1-2p\\cos\\theta+p^2}=\\frac{2\\pi}{1-p^2}$（$0<p<1$）。这个积分称为泊松积分。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-COS-MX",
+          "reader_anchor": "reader-84c3f0235e5b910f82ad",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例 6",
+          "statement": "计算积分 $I=\\displaystyle\\int_0^{\\pi}\\frac{\\cos mx}{5-4\\cos x}\\,\\mathrm dx$，其中 $m$ 为正整数。",
+          "conclusion": "$I=\\displaystyle\\int_0^{\\pi}\\frac{\\cos mx}{5-4\\cos x}\\,\\mathrm dx=\\frac{\\pi}{3\\cdot2^m}$，其中 $m$ 为正整数。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH06-S02-SS01",
+          "paragraph": "对于无瑕点的 $\\int_0^{2\\pi}R(\\cos\\theta,\\sin\\theta)\\,\\mathrm d\\theta$，令 $z=e^{\\mathrm i\\theta}$，周期参数正好沿单位圆逆时针一周，同时替换\n$$\\cos\\theta=\\frac{z+z^{-1}}2,\\quad\\sin\\theta=\\frac{z-z^{-1}}{2\\mathrm i},\\quad\\mathrm d\\theta=\\frac{\\mathrm dz}{\\mathrm iz}.$$\n于是\n$$\\int_0^{2\\pi}R(\\cos\\theta,\\sin\\theta)\\,\\mathrm d\\theta=\\int_{|z|=1}\\frac1{\\mathrm iz}R\\!\\left(\\frac{z+z^{-1}}2,\\frac{z-z^{-1}}{2\\mathrm i}\\right)\\,\\mathrm dz.$$\n右侧整个式子整理为有理函数且圆周无极点后，才按圆内奇点用留数。"
+        },
+        {
+          "unit_id": "CH06-S02-SS01",
+          "paragraph": "不能直接由周期闭合时，一般桥梁是添加回程。若 $[a,b]$ 与从 $b$ 到 $a$ 的辅助曲线 $L$ 围成正向简单闭路，$F$ 在边界解析、内部仅有有限孤立奇点 $a_k$，则\n$$\\int_a^b F(x)\\,\\mathrm dx+\\int_LF(z)\\,\\mathrm dz=2\\pi\\mathrm i\\sum_k\\operatorname{Res}(F,a_k).$$\n若目标是 $\\operatorname{Re}F(x)$ 或 $\\operatorname{Im}F(x)$，先处理回程积分，再取相应分量。这一等式将成为后面半圆、扇形、矩形与钥匙孔路线的共同起点。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-85b72aa49f433c037eca",
+        "#reader-84c3f0235e5b910f82ad"
+      ]
+    },
+    "CH06-S02-SS02": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "全轴有理留数公式、a>0三次分母例、大弧/小弧/约当引理及两种主值都默认给出；固定二次分母π/2为同法练习。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-6-2-2-1",
+          "reader_anchor": "reader-b0aa47de5b70eb6513db",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例7 计算 $\\int_{-\\infty}^{+\\infty}\\frac{\\mathrm{d}x}{(x^2+a^2)^3}$（$a>0$）",
+          "statement": "计算 $I=\\int_{-\\infty}^{+\\infty}\\frac{\\mathrm{d}x}{(x^2+a^2)^3}$，其中 $a>0$。",
+          "conclusion": "$I=\\frac{3\\pi}{8a^5}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-6-2-2-2",
+          "reader_anchor": "reader-707e086fa98e1832199d",
+          "json_pointer_prefix": "/examples/1",
+          "label": "用一般公式计算 $\\int_{-\\infty}^{+\\infty}\\frac{\\mathrm{d}x}{(x^2+1)^2}$",
+          "statement": "计算 $I=\\int_{-\\infty}^{+\\infty}\\frac{\\mathrm{d}x}{(x^2+1)^2}$。",
+          "conclusion": "$I=\\frac{\\pi}{2}$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH06-S02-SS02",
+          "paragraph": "让半径足够大以包围严格上半平面的全部极点 $a_k$，然后使大弧积分趋零，便得到\n$$\\int_{-\\infty}^{\\infty}R(x)\\,\\mathrm dx=2\\pi\\mathrm i\\sum_{\\operatorname{Im}a_k>0}\\operatorname{Res}(R,a_k).$$\n这里仍带着实轴无极点、次数差至少两次两项条件。[例7](#reader-b0aa47de5b70eb6513db)在 $a>0$ 时只有 $a\\mathrm i$ 这个上半平面三级极点，结果为\n$$\\int_{-\\infty}^{\\infty}\\frac{\\mathrm dx}{(x^2+a^2)^3}=\\frac{3\\pi}{8a^5}.$$\n相应大弧估计可写成 $\\pi T/(T^2-a^2)^3\\to0$，以确保留数等式确实回到原积分。"
+        },
+        {
+          "unit_id": "CH06-S02-SS02",
+          "paragraph": "引入指数后可用约当引理：固定 $h>0$，若 $g$ 在充分大的圆弧 $C_T=\\{|z|=T,\\ \\operatorname{Im}z>-h\\}$ 上连续，并且 $g(z)\\to0$ 在这些弧上一致成立，则对每个 $\\lambda>0$，\n$$\\lim_{T\\to\\infty}\\int_{C_T}g(z)e^{\\mathrm i\\lambda z}\\,\\mathrm dz=0.$$\n特别适用于上半圆。因为指数的模为 $e^{-\\lambda\\operatorname{Im}z}$，整体积分能比单用长大界得到更强控制；这使有理部分只需趋零即可，下一节便可放宽一次次数差。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-b0aa47de5b70eb6513db"
+      ]
+    },
+    "CH06-S02-SS03": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "指数合并、实轴单极点主值公式、a参数正弦积分及两实极点的cos/sin主值均默认可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-8-COS-SIN",
+          "reader_anchor": "reader-d1d0d9fecaa5d7f1092f",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例8",
+          "statement": "计算积分\n$$I=\\int_{0}^{+\\infty}\\frac{\\sin x}{x(x^2+a^2)^2}\\,\\mathrm{d}x,\\qquad a>0.$$",
+          "conclusion": "$$I=\\frac{\\pi}{4a^4}[2-\\mathrm{e}^{-a}(a+2)].$$",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-9-COS-SIN",
+          "reader_anchor": "reader-2587f6ed46acdb77c0c1",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例9",
+          "statement": "求\n$$I=\\mathrm{v.p.}\\int_{-\\infty}^{\\infty}\\frac{x\\cos x}{x^2-5x+6}\\,\\mathrm{d}x.$$",
+          "conclusion": "$$I=\\pi(2\\sin2-3\\sin3).$$",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH06-S02-SS03",
+          "paragraph": "[例9](#reader-2587f6ed46acdb77c0c1)的 $R(x)=x/[(x-2)(x-3)]$ 则确有两个实轴极点，上半平面无极点，故只有两份半留数贡献。取分量得\n$$\\begin{aligned}\\operatorname{v.p.}\\int_{-\\infty}^{\\infty}\\frac{x\\cos x}{x^2-5x+6}\\,\\mathrm dx&=\\pi(2\\sin2-3\\sin3),\\\\\\operatorname{v.p.}\\int_{-\\infty}^{\\infty}\\frac{x\\sin x}{x^2-5x+6}\\,\\mathrm dx&=\\pi(3\\cos3-2\\cos2).\\end{aligned}$$\n此处主值不能去掉，因为在 $2,3$ 的单极点需要局部对称抵消。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-d1d0d9fecaa5d7f1092f",
+        "#reader-2587f6ed46acdb77c0c1"
+      ]
+    },
+    "CH06-S02-SS04": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "差积分0、Fresnel双值、高斯积分和a,b参数高斯余弦式全部默认可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "E-10",
+          "reader_anchor": "reader-3d5d2e3af9a2110e7e88",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例10",
+          "statement": "求 $I=\\displaystyle\\int_0^\\infty\\frac{\\cos x-\\mathrm{e}^{-x}}{x}\\,\\mathrm{d}x$。",
+          "conclusion": "$I=0$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "E-11",
+          "reader_anchor": "reader-23aa816448d1fbf0925f",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例11",
+          "statement": "计算 $\\displaystyle\\int_0^{+\\infty}\\cos x^2\\,\\mathrm{d}x$ 及 $\\displaystyle\\int_0^{+\\infty}\\sin x^2\\,\\mathrm{d}x$。",
+          "conclusion": "两个积分相等，都等于 $\\frac{1}{2}\\sqrt{\\frac{\\pi}{2}}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "E-12",
+          "reader_anchor": "reader-906937b7cb3ea1bfb10c",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例12",
+          "statement": "计算 $I=\\displaystyle\\int_0^{+\\infty}\\exp(-ax^2)\\cos bx\\,\\mathrm{d}x$，其中 $a>0$，$b$ 为实数。由于被积函数关于 $b$ 是偶函数（$\\cos(-bx)=\\cos bx$），故 $I(-b)=I(b)$；因此不妨设 $b\\ge0$，以下矩形闭路的高为 $b/(2a)\\ge0$。",
+          "conclusion": "$I=\\frac{1}{2}\\sqrt{\\frac{\\pi}{a}}\\exp\\left(-\\frac{b^2}{4a}\\right)$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH06-S02-SS04",
+          "paragraph": "[例12](#reader-906937b7cb3ea1bfb10c)对 $a>0$、$b\\in\\mathbb R$，先把指数配方，再把积分线平移至 $\\operatorname{Im}z=b/(2a)$。用两条竖边组成矩形，整函数 $e^{-az^2}$ 的闭路积分为零，而竖边有 $e^{-aT^2}$ 的统一衰减，故平移后的积分等于实轴高斯积分。结果为\n$$\\int_0^{\\infty}e^{-ax^2}\\cos(bx)\\,\\mathrm dx=\\frac12\\sqrt{\\frac\\pi a}\\,e^{-b^2/(4a)}.$$\n$a>0$ 保证实轴衰减；$b<0$ 时可向下平移，也可用余弦对 $b$ 的偶性。关键步骤是证明连接边消失，不能仅做配方就宣布路径可平移。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-3d5d2e3af9a2110e7e88",
+        "#reader-23aa816448d1fbf0925f",
+        "#reader-906937b7cb3ea1bfb10c"
+      ]
+    },
+    "CH06-S02-SS05": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "log分支、对数积分−π/4、钥匙孔公式与−1<p<0的Euler幂积分均默认可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-13",
+          "reader_anchor": "reader-c2e7dbfb1feb23f90a8e",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例13",
+          "statement": "计算 $\\displaystyle\\int_0^{+\\infty}\\frac{\\ln x}{(x^2+1)^2}\\,\\mathrm{d}x$。",
+          "conclusion": "$\\displaystyle\\int_0^{+\\infty}\\frac{\\ln x}{(x^2+1)^2}\\,\\mathrm{d}x=-\\frac{\\pi}{4}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-14",
+          "reader_anchor": "reader-d60b0f226a665e952a2f",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例14",
+          "statement": "计算 $\\displaystyle\\int_0^{+\\infty}\\frac{x^p}{1+x}\\,\\mathrm{d}x$，其中 $-1<p<0$。",
+          "conclusion": "$\\displaystyle\\int_0^{+\\infty}\\frac{x^p}{1+x}\\,\\mathrm{d}x=-\\frac{\\pi}{\\sin p\\pi}$，其中 $-1<p<0$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH06-S02-SS05",
+          "paragraph": "对[例13](#reader-c2e7dbfb1feb23f90a8e)取 $F(z)=\\log z/(1+z^2)^2$。先沿正实轴割开平面，明确选择\n$$\\log z=\\ln|z|+\\mathrm i\\theta,\\qquad 0<\\theta<2\\pi.$$\n正轴用上岸极限 $\\theta\\to0^+$，故值为 $\\ln x$；负轴上方的角为 $\\pi$，故值为 $\\ln x+\\mathrm i\\pi$。积分闭路只用这一分支在上半平面的限制，加上外大半圆和绕原点的上方小半圆。回程方向与偶分母使两直边的目标实部相加，大弧由 $O(\\ln T/T^3)$、小弧由 $O(r|\\ln r|)$ 消失，得到普通积分\n$$\\int_0^{\\infty}\\frac{\\ln x}{(1+x^2)^2}\\,\\mathrm dx=-\\frac\\pi4.$$\n这里的角区间与通常 $(-\\pi,\\pi)$ 的主辐角命名不同，边界值和留数都使用本题刚指定的同一分支。"
+        },
+        {
+          "unit_id": "CH06-S02-SS05",
+          "paragraph": "[例14](#reader-d60b0f226a665e952a2f)的 $R(z)=1/(1+z)$ 要同时满足原点和无穷远条件，恰为 $-1<p<0$。唯一极点 $-1$ 的辐角在所选支中是 $\\pi$，故留数为 $(-1)^p=e^{\\mathrm i\\pi p}$，得到\n$$\\int_0^{\\infty}\\frac{x^p}{1+x}\\,\\mathrm dx=-\\frac\\pi{\\sin(\\pi p)},\\qquad -1<p<0.$$\n若选成另一幂值，右侧相位会错；若 $p$ 走到端点，原积分本身也不再收敛。带 $\\ln x$ 的目标也可在钥匙孔中用 $(\\log z)^2R(z)$，利用两岸平方的差产生线性对数项，但仍需重新算分支值与留数。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-c2e7dbfb1feb23f90a8e",
+        "#reader-d60b0f226a665e952a2f"
+      ]
+    },
+    "CH06-S03": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "对数导数计重、辐角原理、Rouché与虚轴计数、三例结论及无穷远留数/总和为零都可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-ARG-DEMO",
+          "reader_anchor": "reader-8bb62cbc81bdf9a6ca50",
+          "json_pointer_prefix": "/examples/0",
+          "label": "由零点与极点求辐角变化",
+          "statement": "设 $f(z)=\\frac{(z^2+1)(z-4)}{\\sin^3 z}$，求 $z$ 沿 $|z|=3$ 的正向绕行一周时，$\\Delta_C \\arg f(z)$。",
+          "conclusion": "$\\Delta_C \\arg f(z)=-2\\pi$，即当 $z$ 绕 $|z|=3$ 正向一周时，$w=f(z)$ 绕原点顺时针转了一圈。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-ROUCHE-15",
+          "reader_anchor": "reader-aab584a87964965ad6a6",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例15 用儒歇定理确定根数",
+          "statement": "求多项式 $P(z)=z^6-z^4-5z^3+2$ 在 $|z|<1$ 内有多少个根。",
+          "conclusion": "$P(z)$ 在 $|z|<1$ 内有 $3$ 个根。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX-LEFT-HALF-16",
+          "reader_anchor": "reader-85699ba620c18755acb4",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例16 左半平面零点数",
+          "statement": "研究多项式 $f(z)=z^5+z^2+1$ 在左半平面内有多少个零点。",
+          "conclusion": "$f(z)$ 在左半平面内有 $3$ 个零点。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH06-S03",
+          "paragraph": "首一多项式 $P(z)=z^n+a_1z^{n-1}+\\cdots+a_n$ 若在虚轴上无零点，可用从下到上的虚轴和左半大圆闭合。大圆上最高次项贡献 $n\\pi$；因此令连续角度变化为 $\\Delta_{y:-\\infty\\to\\infty}\\arg P(\\mathrm iy)=2k\\pi$，左半平面根数是\n$$N_L=\\frac{n+2k}{2}=\\frac n2+\\frac1{2\\pi}\\Delta\\arg P(\\mathrm iy).$$\n这里虚轴像线不是闭曲线，$k$ 可以是半整数。[例16](#reader-85699ba620c18755acb4)的 $P(z)=z^5+z^2+1$ 在虚轴变成 $(1-y^2)+\\mathrm iy^5$，实虚部不同时为零，连续角度增量为 $\\pi$，故左半平面有三根。若虚轴有根，须先单独分离，不能直接代式。"
+        },
+        {
+          "unit_id": "CH06-S03",
+          "paragraph": "若 $f$ 在扩充复平面上除有限点 $a_1,\\ldots,a_n$ 及 $\\infty$ 外解析，则\n$$\\sum_{k=1}^n\\operatorname{Res}(f,a_k)+\\operatorname{Res}(f,\\infty)=0.$$\n这允许用圆外展开代替逐个有限留数相加，也能检查符号。例如 $e^{1/z}=1+1/z+\\cdots$ 在无穷远的留数为 $-1$，尽管无穷远是可去奇点；因而“可去点留数为零”那条有限点结论不能原样搬到无穷远的定义。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-8bb62cbc81bdf9a6ca50",
+        "#reader-aab584a87964965ad6a6",
+        "#reader-85699ba620c18755acb4"
+      ]
+    },
+    "CH07": {
+      "status": "default_math_semantics_warning",
+      "manual_assessment": "导读内聚点唯一性应用的通用定理在CH07-S01位置存在，但目前TeX字符丢失，另列语义阻断。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-UNIQUENESS-DETERMINE",
+          "reader_anchor": "reader-59fed7be14696d507636",
+          "json_pointer_prefix": "/examples/0",
+          "label": "用唯一性定理确定一个解析函数",
+          "statement": "设 $f(z)$ 在区域 $D=\\{z:|z|<1\\}$ 内解析，且 $f\\left(\\frac{1}{n}\\right)=\\frac{1}{n^{2}}$ 对 $n=2,3,4,\\dots$ 成立。证明 $f(z)=z^{2}$ 在 $D$ 内处处成立。",
+          "conclusion": "在 $|z|<1$ 内解析且满足 $f\\left(\\frac{1}{n}\\right)=\\frac{1}{n^{2}}$（$n\\geqslant2$）的函数只能是 $f(z)=z^{2}$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH07",
+          "paragraph": "泰勒级数把一个点附近的函数写成可计算的多项式极限，但它的收敛圆并不总是函数的全部生存范围。几何级数在单位圆外发散，而它在圆内所代表的 $1/(1-z)$ 除了 $z=1$ 之外仍有意义。本章要弄清：怎样把已知函数延伸出去，同时保证延伸后的函数确实保留原来的解析关系？"
+        },
+        {
+          "unit_id": "CH07",
+          "paragraph": "本章的完整实例是 $Gamma$ 函数。它先由右半平面上的积分定义，再借递推式逐块向左延伸，最后成为有单极点的亚纯函数。这里的积分估计还会在第九章说明拉氏变换的解析性；$Gamma$ 与贝塔积分的关系，则会在第八章确定三角形映照的尺度。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": []
+    },
+    "CH07-S01": {
+      "status": "default_math_semantics_warning",
+      "manual_assessment": "圆链开拓与单值几何函数的中心/半径结果可见；唯一性与sin复恒等式的默认句存在但TeX损坏，不能当作已经正确呈现。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-POWER-SERIES-CONT",
+          "reader_anchor": "reader-2a93581bb8f6c952ec99",
+          "json_pointer_prefix": "/examples/0",
+          "label": "幂级数直接解析开拓：从 $\\sum z^n$ 到 $1/(1-z)$",
+          "statement": "设 $f(z)=\\sum_{n=0}^{\\infty} z^n$。求它的收敛半径，并在 $|z|<1$ 内求其和；取 $a\\in D=\\{|z|<1\\}$，说明 $f$ 在 $a$ 点的泰勒级数给出 $f$ 到 $D$ 外的直接解析开拓；特别取 $a=\\mathrm i/2$，写出开拓后的函数并说明它确实把圆盘伸到了 $D$ 外。",
+          "conclusion": "原函数 $f(z)=\\sum z^n$ 在 $D:|z|<1$ 内等于 $1/(1-z)$；在任意 $a\\in D$ 处的泰勒级数给出直接解析开拓，收敛半径为 $|1-a|$。特别地，$a=\\mathrm i/2$ 的开拓把 $D$ 扩大到了包含 $|z|<1$ 外一部分的区域。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-CONT-CHAIN",
+          "reader_anchor": "reader-3fd1347ac23d891e4a9f",
+          "json_pointer_prefix": "/examples/1",
+          "label": "解析开拓沿正实轴的受阻与绕道链",
+          "statement": "仍设 $f(z)=\\sum_{n=0}^{\\infty}z^n$（$|z|<1$），且在 $|z|<1$ 内 $f(z)=1/(1-z)$。说明：(1) 沿正实轴方向为什么不能越过 $z=1$；(2) 在 $a=2$ 处展开得到的 $h(z)$ 的圆盘与 $D$ 不相交，因此 $h$ 不是 $f$ 的直接解析开拓；(3) 在 $a=1+\\mathrm i$ 处展开得到的圆盘同时与 $|z|<1$ 和 $|z-2|<1$ 相交，$\\varphi$ 分别与 $f$、$h$ 互为直接解析开拓，从而 $f$ 与 $h$ 通过 $\\varphi$ 互为解析开拓。",
+          "conclusion": "沿正实轴方向，$z=1$ 这个极点挡住了解析开拓；但改换中心为 $1+\\mathrm i$ 后，新圆盘同时与 $|z|<1$ 和 $|z-2|<1$ 重叠，就把 $f$ 与 $a=2$ 处的局部表示链式地连成同一个解析函数 $1/(1-z)$ 的局部表示。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX-TRIG-IDENTITY",
+          "reader_anchor": "reader-9b9fbe669229112bfec6",
+          "json_pointer_prefix": "/examples/2",
+          "label": "实三角恒等式的复推广",
+          "statement": "证明：对一切复数 $z$，$\\sin 2z=2\\sin z\\cos z$。",
+          "conclusion": "对一切复数 $z$，$\\sin 2z=2\\sin z\\cos z$。",
+          "verdict": "identity_present_but_default_TeX_corrupted"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH07-S01",
+          "paragraph": "把这一拼接用于几何级数。在原圆 $|z|<1$，$f(z)=\\sum_{n=0}^{\\infty}z^n=1/(1-z)$。改在中心 $a\\ne1$ 展开得到\n$$f(z)=\\sum_{n=0}^{\\infty}\\frac{(z-a)^n}{(1-a)^{n+1}},\\qquad |z-a|<|1-a|.$$\n若先取原圆内的 $a=\\mathrm i/2$，新圆半径为 $\\sqrt5/2$，会伸出原圆；重叠处两级数都是 $1/(1-z)$，所以能拼接。这是改换中心扩大已知区域的方法，而不是让已经发散的原级数在圆外突然收敛。"
+        },
+        {
+          "unit_id": "CH07-S01",
+          "paragraph": "连续改换中心可绕开 $1$，把函数推广到 $\\mathbb C\\setminus\\{1\\}$；直接写 $F(z)=1/(1-z)$ 也能验证这个结果。$z=1$ 是真极点，不能当作解析点纳入开拓域，而单位圆其余边界只是原表达式的收敛界限。[几何级数开拓](#reader-2a93581bb8f6c952ec99)和[圆链示例](#reader-3fd1347ac23d891e4a9f)保留圆链演算。下一节用积分而不是级数定义函数，仍要遵守同一个原则：先证明新表达式解析，再在重叠域核对它与旧函数一致。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-9b9fbe669229112bfec6",
+        "#reader-2a93581bb8f6c952ec99",
+        "#reader-3fd1347ac23d891e4a9f"
+      ]
+    },
+    "CH07-S02": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "两段Gamma积分解析域、递推与极点留数、beta/反射/加倍/无零点及Gamma振荡积分工具均可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-GAMMA-INT-1",
+          "reader_anchor": "reader-bd86abf06eedd8ae925f",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例 1（无穷限积分所定义的函数）",
+          "statement": "证明 $f(z)=\\int_1^{+\\infty}\\mathrm{e}^{-t}t^{z-1}\\mathrm{d}t$ 是整函数。这里规定多值函数 $t^{z-1}$ 取主值，即 $t^{z-1}=\\mathrm{e}^{(z-1)\\ln t}$，其中 $t\\geqslant1$，$\\ln t$ 取实值。",
+          "conclusion": "$f(z)=\\int_1^{+\\infty}\\mathrm{e}^{-t}t^{z-1}\\mathrm{d}t$ 是整函数。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-GAMMA-INT-2",
+          "reader_anchor": "reader-c3f823a39e985ca2de22",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例 2（无界被积函数所定义的函数）",
+          "statement": "证明 $\\varphi(z)=\\int_0^1\\mathrm{e}^{-t}t^{z-1}\\,\\mathrm{d}t$ 在右半平面 $\\operatorname{Re}z>0$ 内解析。这里 $t^{z-1}$ 取主值。",
+          "conclusion": "$\\varphi(z)=\\int_0^1\\mathrm{e}^{-t}t^{z-1}\\mathrm{d}t$ 在 $\\operatorname{Re}z>0$ 内解析。与例 1 合并，即得 $\\Gamma(z)=\\int_0^{+\\infty}\\mathrm{e}^{-t}t^{z-1}\\mathrm{d}t$ 在 $\\operatorname{Re}z>0$ 内解析。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH07-S02",
+          "paragraph": "本章习题把Gamma联系到振荡积分。对 $0<\\operatorname{Re}s<1$，按广义积分理解有\n$$\\int_0^\\infty x^{s-1}e^{-\\mathrm ix}\\,\\mathrm dx=e^{-\\mathrm i\\pi s/2}\\Gamma(s).$$\n对实数 $n>1$ 令 $s=1/n$ 并换元 $u=x^n$，实部与虚部分别给出\n$$\\begin{aligned}\\int_0^\\infty\\cos(x^n)\\,\\mathrm dx&=\\frac{\\Gamma(1/n)}n\\cos\\frac\\pi{2n},\\\\\\int_0^\\infty\\sin(x^n)\\,\\mathrm dx&=\\frac{\\Gamma(1/n)}n\\sin\\frac\\pi{2n},\\\\\\int_0^\\infty\\frac{\\sin(x^n)}{x^n}\\,\\mathrm dx&=\\frac{\\Gamma(1/n)}{n-1}\\cos\\frac\\pi{2n}.\\end{aligned}$$\n前两式靠振荡收敛，第三式可再用分部积分连接到第一式；这些积分不能用被积函数绝对可积来解释。完整绕路与分部积分留在原习题演算中。"
+        },
+        {
+          "unit_id": "CH07-S02",
+          "paragraph": "另一个习题检验唯一性：在 $1/n\\to0$ 的点列上交替取 $0,1$ 连连续性都不允许；交替取 $0,1/(2k)$ 虽趋于零，却因一串零点迫使解析函数恒零而矛盾。每相邻一对都取 $1/(2k)$ 的方案也会被偶下标点与 $f(z)=z$ 的唯一性排除；取值 $n/(n+1)$ 则由 $f(z)=1/(1+z)$ 实现。判断存在性要先看极限，再看解析函数被一部分数据怎样锁定。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-bd86abf06eedd8ae925f",
+        "#reader-c3f823a39e985ca2de22"
+      ]
+    },
+    "CH08": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "非零导数局部保角与全局单叶区分可见；平方函数的局部导数在分节明说。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EXAMPLE-Z2-CONFORMAL",
+          "reader_anchor": "reader-a8c5b69c42f20e457d93",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例题：$w=z^2$ 在非零点与原点处的局部行为",
+          "statement": "设 $f(z)=z^2$。分别考察 $f$ 在 $z_0\\ne 0$ 处与在 $z_0=0$ 处的局部行为，并说明为什么“局部保角”要以 $f'(z_0)\\ne 0$ 为前提。",
+          "conclusion": "因此 $f(z)=z^2$ 在 $z_0\\ne 0$ 处具有局部保角性：局部相当于旋转角为 $\\arg(2z_0)$、放大倍数为 $2|z_0|$ 的旋转加均匀放大；而在 $z_0=0$ 处不保角，方向角之差被变为原来的二倍，当原夹角不超过 $\\frac{\\pi}{2}$ 时实际夹角被放大为二倍（如 $\\frac{\\pi}{4}$ 变 $\\frac{\\pi}{2}$），原夹角更大时像的实际夹角要取较小角，甚至可能为 0。可见局部保角的关键条件是 $f'(z_0)\\ne 0$，这也正是本章要先讨论导数几何意义的原因；而整体是不是保形变换，还要看 $f$ 在区域上是否单叶。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH08",
+          "paragraph": "解析性给出局部依据。非零导数在一点附近对所有方向施加相同旋转与伸缩，因而保留有向交角；整体可逆却还须单叶性。$e^z$ 处处导数非零，但相差 $2\\pi\\mathrm i$ 的点同像，说明只检查导数远远不够。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": []
+    },
+    "CH08-S01": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "通用一阶近似、旋转/伸张与小圆近似涵盖原两例；i点的旋转π/2、伸张2也已明说。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-8-1-ROT-STRETCH",
+          "reader_anchor": "reader-5d27e85204112b8013ea",
+          "json_pointer_prefix": "/examples/0",
+          "label": "求旋转角与伸张系数",
+          "statement": "设 $w=f(z)=z^2$。求变换在 $z_0=\\mathrm{i}$ 点的旋转角与伸张系数，并指出它把过 $z_0$ 的切线怎样变化。",
+          "conclusion": "在 $z_0=\\mathrm{i}$ 处，$w=z^2$ 的旋转角为 $\\dfrac{\\pi}{2}$，伸张系数为 $2$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-8-1-SMALL-CIRCLE",
+          "reader_anchor": "reader-1bd89972c89d96298652",
+          "json_pointer_prefix": "/examples/1",
+          "label": "小圆周的近似像",
+          "statement": "对 $w=f(z)=z^2$ 与 $z_0=\\mathrm{i}$，写出以 $z_0$ 为心、半径 $\\rho>0$ 充分小的圆周在该变换下的近似像，并说明为什么这只是近似。",
+          "conclusion": "近似像为圆周 $|w+1|=2\\rho$；$w+1$ 与线性主部 $2\\mathrm{i}\\rho\\mathrm{e}^{\\mathrm{i}\\theta}$ 只相差 $O(\\rho^2)$，所以 $\\rho$ 越小，真像越接近这个圆周。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH08-S01",
+          "paragraph": "固定 $z_0$，记 $w_0=f(z_0)$。若 $f$ 在附近解析且 $f'(z_0)\\ne0$，则\n$$f(z_0+\\Delta z)-w_0=f'(z_0)\\Delta z+o(|\\Delta z|).$$\n设一条正则光滑曲线 $z=z(t)$ 在 $t_0$ 经过 $z_0$，正则是指 $z'(t_0)\\ne0$。像曲线的切向量为 $w'(t_0)=f'(z_0)z'(t_0)$，于是\n$$\\arg w'(t_0)=\\arg z'(t_0)+\\arg f'(z_0)\\pmod{2\\pi}.$$\n所有过该点的切线都增加同一个角 $\\arg f'(z_0)$；旋转角依赖位置，却不依赖选了哪条曲线。"
+        },
+        {
+          "unit_id": "CH08-S01",
+          "paragraph": "若改取 $z_0=0$，平方函数导数为零，主导变化是 $(\\Delta z)^2$，角度会加倍，前面的非零乘数解释失效。即使避开原点，$z$ 与 $-z$ 仍同像；因此局部保角与整个区域上的一一对应是两个需要分别检查的问题。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-5d27e85204112b8013ea",
+        "#reader-1bd89972c89d96298652"
+      ]
+    },
+    "CH08-S02": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "单叶导数非零、指数反例、圆环不能映盘与Riemann映射条件和规范化唯一性均可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EXP-UNIVALENT-HALFPLANE",
+          "reader_anchor": "reader-bb2d6838ba2521a41bed",
+          "json_pointer_prefix": "/examples/0",
+          "label": "验证半平面上的单叶性与导数",
+          "statement": "设 $D=\\{z:\\operatorname{Re} z>0\\}$，$f(z)=z^2$。判断 $f$ 在 $D$ 上是否单叶，并验证定理1中的结论。",
+          "conclusion": "$f(z)=z^2$ 在右半平面 $D$ 上单叶，且其导数在 $D$ 内处处非零。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EXP-EXP-NOT-UNIVALENT",
+          "reader_anchor": "reader-e255810c70f0e6477d52",
+          "json_pointer_prefix": "/examples/1",
+          "label": "导数非零但不单叶",
+          "statement": "说明 $f(z)=\\mathrm{e}^z$ 在整个复平面上不是单叶的，尽管 $f'(z)=\\mathrm{e}^z$ 在整个复平面上处处不为零。",
+          "conclusion": "导数处处非零只是单叶的必要条件，不是充分条件；$\\mathrm{e}^z$ 就是反例。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EXP-MULTICONNECTED",
+          "reader_anchor": "reader-de9fe6c575cf2f88931f",
+          "json_pointer_prefix": "/examples/2",
+          "label": "多连通区域不能映为单位圆",
+          "statement": "设 $D=\\{z:1<|z|<2\\}$。能否存在保形变换把 $D$ 变为单位圆内部？",
+          "conclusion": "圆环区域 $1<|z|<2$ 不能通过保形变换映为单位圆内部。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH08-S02",
+          "paragraph": "实际解区域问题时，要从像点唯一找回原点，因此要求 $f$ 在整个区域 $D$ 单叶，即不同点不同像。单叶解析函数必有 $f'(z)\\ne0$：若某点的首个非零泰勒项是 $c(z-z_0)^n$、$n\\ge2$，附近小像值会有多个原像，儒歇定理把这种局部折叠严格化。反过来导数处处非零不保证单叶，$e^z$ 就因周期 $2\\pi\\mathrm i$ 在全平面重复，[指数示例](#reader-e255810c70f0e6477d52)说明这一限制。"
+        },
+        {
+          "unit_id": "CH08-S02",
+          "paragraph": "若再固定一个内部点的像 $f(z_0)=w_0$、$|w_0|<1$，以及该点方向 $\\arg f'(z_0)=\\alpha_0\\pmod{2\\pi}$，圆盘映照便唯一。点对应消去移动自由，方向消去旋转自由。定理保证存在并说明规范化后唯一，却没有给具体公式；下一节的分式线性变换才提供可直接操作的构造工具。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-e255810c70f0e6477d52",
+        "#reader-bb2d6838ba2521a41bed",
+        "#reader-de9fe6c575cf2f88931f"
+      ]
+    },
+    "CH08-S03": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "上半平面/圆盘自同构及半径R版、偏心环两族结果与2/3内半径均可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-1",
+          "reader_anchor": "reader-9a954f5286d1b897333f",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例1 上半平面到单位圆",
+          "statement": "求一个分式线性变换，把上半平面 $\\operatorname{Im}z>0$ 变成单位圆 $|w|<1$，并把上半平面中给定点 $z_0$ 变为 $w=0$。",
+          "conclusion": "所求变换为 $w=e^{i\\theta}\\frac{z-z_0}{z-\\bar z_0}$，$\\theta$ 为任意实数。改变 $\\theta$ 相当于把单位圆绕原点旋转。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-2",
+          "reader_anchor": "reader-7185e2efa9e559a3876c",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例2 单位圆到单位圆",
+          "statement": "求一个分式线性变换，把单位圆 $|z|<1$ 变为单位圆 $|w|<1$，并把第一个圆中给定点 $z_0$ 变为第二个圆的圆心 $w=0$。",
+          "conclusion": "所求变换为 $w=e^{i\\theta}\\frac{z-z_0}{1-\\bar z_0 z}$，$\\theta$ 为任意实数。把 $|z|<R$ 变为 $|w|<1$、把 $z_0$ 变为 $0$ 的变换是 $w=e^{i\\theta}\\frac{R(z-z_0)}{R^2-\\bar z_0 z}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX-3",
+          "reader_anchor": "reader-9f761197d18863b7bc0d",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例3 偏心环域到同心环域",
+          "statement": "求一分式线性变换，把由圆周 $C_1:|z-3|=9$ 和 $C_2:|z-8|=16$ 所界的偏心环域 $D$ 变为中心在 $w=0$ 的同心环域 $D'$，并使其外半径为 $1$。",
+          "conclusion": "两个解为 $$w=e^{i\\theta}\\frac{z+24}{3z}\\quad\\text{或}\\quad w=e^{i\\theta}\\frac{2z}{z+24},\\quad \\theta\\in\\mathbb R.$$ 它们都把偏心环域 $D$ 映成以 $0$ 为中心、外半径为 $1$ 的同心环域。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH08-S03",
+          "paragraph": "单位圆盘中指定 $|z_0|<1$ 映到零时，圆周对称点是 $1/\\bar z_0$，因此全部这样的圆盘自映照为\n$$w=e^{\\mathrm i\\theta}\\frac{z-z_0}{1-\\bar z_0z},\\qquad w'(z_0)=\\frac{e^{\\mathrm i\\theta}}{1-|z_0|^2}.$$\n故导数方向就是 $\\theta\\pmod{2\\pi}$，可再定一个方向获得唯一解。[例2](#reader-7185e2efa9e559a3876c)也给出半径 $R>0$ 的版本：对 $|z_0|<R$，\n$$w=e^{\\mathrm i\\theta}\\frac{R(z-z_0)}{R^2-\\bar z_0z}$$\n把 $|z|<R$ 映到 $|w|<1$；分子中的 $R$ 来自先将原圆缩成单位圆，不能漏掉。"
+        },
+        {
+          "unit_id": "CH08-S03",
+          "paragraph": "偏心环域展示为什么要用两条边界共有的对称点。对 $|z-3|=9$ 与 $|z-8|=16$，共有对称点 $0,-24$ 由 $(x_1-3)(x_2-3)=81$、$(x_1-8)(x_2-8)=256$ 求出。把这对点送到 $0,\\infty$ 并定外半径为 $1$，得到两族\n$$w=e^{\\mathrm i\\theta}\\frac{z+24}{3z},\\qquad w=e^{\\mathrm i\\theta}\\frac{2z}{z+24}.$$\n两者都把两圆之间的域映为 $2/3<|w|<1$，只是交换两条边界的对应。环域的洞仍保留，符合上一节的连通性限制。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-9a954f5286d1b897333f",
+        "#reader-7185e2efa9e559a3876c"
+      ]
+    },
+    "CH08-S04": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "角度工具在子节给出，平方映第一象限到上半平面是幂角域公式直接特例。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-Z2-HALFPLANE",
+          "reader_anchor": "reader-084833afc53a3c36a3a3",
+          "json_pointer_prefix": "/examples/0",
+          "label": "把角域映成上半平面：验证 $w=z^2$",
+          "statement": "设角域 $D=\\left\\{z:\\ 0<\\arg z<\\dfrac{\\pi}{2}\\right\\}$。验证 $w=z^2$ 是 $D$ 到上半平面 $\\operatorname{Im}w>0$ 的保形变换。",
+          "conclusion": "对 $D$ 中任意点 $z=r\\mathrm{e}^{\\mathrm{i}\\theta}$（$0<\\theta<\\frac{\\pi}{2}$）都有 $z^2=r^2\\mathrm{e}^{2\\mathrm{i}\\theta}$，辐角恰为 $2\\theta\\in(0,\\pi)$；因此 $w=z^2$ 双方单值、保角地把角域 $D$ 映成上半平面。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH08-S04",
+          "paragraph": "分式线性变换先把两圆交点送到 $0,\\infty$，能把两条圆弧边界变成射线；但它保交角，不能独自把任意角域变成半平面。接下来的幂变换负责调节张角，对数则把张角改成条带高度。构造时先确定中间域的位置，再选分支，最后写复合式；只保留最终公式会丢掉它为何单叶的依据。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": []
+    },
+    "CH08-S04-SS01": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "上半盘、公共透镜、双割线的三组复合映照结果及连续角支均可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-4",
+          "reader_anchor": "reader-5976c37b4d29d101bce8",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例4",
+          "statement": "求一保形变换，将上半单位圆 $D:|z|<1,\\ \\operatorname{Im}z>0$ 变成上半平面。",
+          "conclusion": "复合得 $w=\\left(\\frac{z+1}{z-1}\\right)^2$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-5",
+          "reader_anchor": "reader-1264d611226dc7a6d423",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例5",
+          "statement": "求一保形变换，把中心在 $z=0$ 和 $1$、半径均为 $1$ 的两段圆弧 $l_1,l_2$ 所围区域 $D$ 变成上半平面。",
+          "conclusion": "所求变换为 $w=-\\left(\\frac{2z-1+\\mathrm{i}\\sqrt3}{2z-1-\\mathrm{i}\\sqrt3}\\right)^{3/2}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX-6",
+          "reader_anchor": "reader-5c37e6eb2f98329dcfa5",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例6",
+          "statement": "求一保形变换，把去掉实数轴上两条射线 $1\\le x<\\infty$ 和 $-\\infty<x\\le -1$ 的 $z$ 平面 $D$ 变为上半平面。",
+          "conclusion": "复合得 $w=\\sqrt{\\frac{z+1}{z-1}}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH08-S04-SS01",
+          "paragraph": "[例5](#reader-1264d611226dc7a6d423)的公共透镜域是 $|z|<1,|z-1|<1$，交点为 $(1\\pm\\mathrm i\\sqrt3)/2$。令\n$$t=\\frac{2z-1+\\mathrm i\\sqrt3}{2z-1-\\mathrm i\\sqrt3},\\qquad \\frac{2\\pi}3<\\arg t<\\frac{4\\pi}3.$$\n两圆弧成为射线，内点 $z=1/2$ 映到 $t=-1$，定出这一张角为 $2\\pi/3$ 的角域。先旋转 $T=e^{-2\\pi\\mathrm i/3}t$，再取 $T^{3/2}$，得到 $w=-t^{3/2}$；最后一式中的幂必须沿上面连续辐角定义。它把透镜域映到上半平面，不能把原识别文本中的旋转误读为关于 $t$ 的指数函数。"
+        },
+        {
+          "unit_id": "CH08-S04-SS01",
+          "paragraph": "[例6](#reader-5c37e6eb2f98329dcfa5)从双割线域 $\\mathbb C\\setminus(( -\\infty,-1]\\cup[1,\\infty))$ 出发。分式 $t=(z+1)/(z-1)$ 将两条割线接成正实轴，原域成为 $0<\\arg t<2\\pi$ 的割开平面；再用前述第零平方根，就得到\n$$w=\\sqrt{\\frac{z+1}{z-1}}.$$\n例如原点映成 $t=-1$，所选根为 $\\mathrm i$，在上半平面。根号的选择继承中间域，不能仅凭代数式再独立挑一个正负号。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-5976c37b4d29d101bce8",
+        "#reader-1264d611226dc7a6d423",
+        "#reader-5c37e6eb2f98329dcfa5"
+      ]
+    },
+    "CH08-S04-SS02": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "月牙到条带的一般参数公式、角区间、像高度与对数支都默认给出。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "E-01",
+          "reader_anchor": "reader-da596b71c510a0b429e5",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例 7",
+          "statement": "求一个保形变换，把图 8.7(1) 中两个圆弧所围成的圆月牙形变为条形域 $0 < \\operatorname{Im} w < h$。",
+          "conclusion": "复合上述三个变换，得到所求的保形变换 $w=\\frac{h}{\\beta-\\alpha}\\left[\\ln\\frac{z+a}{z-a}-(\\pi+\\alpha)i\\right]$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH08-S04-SS02",
+          "paragraph": "[例7](#reader-da596b71c510a0b429e5)中设 $a>0$，月牙的两条边界圆弧交于 $-a,a$。先作 $t=(z+a)/(z-a)$，将这两个交点送到 $0,\\infty$，圆弧就变成两条射线。用它们的方向记参数 $\\alpha,\\beta$，取 $0\\le\\alpha<\\beta\\le\\pi$；本题所用原域可明确写成\n$$D=\\left\\{z:\\pi+\\alpha<\\operatorname{Arg}\\frac{z+a}{z-a}<\\pi+\\beta\\right\\},$$\n这里选取的是该角域内连续的角，不是强行限制在 $(-\\pi,\\pi]$ 的主值。由题设边界方向确定 $\\pi+\\alpha<\\arg t<\\pi+\\beta$，并要求此角域位于所用的 $0<\\arg t<2\\pi$ 分支内。令 $u=\\log t$，就先得到高度范围 $\\pi+\\alpha<\\operatorname{Im}u<\\pi+\\beta$；最后令\n$$\\begin{aligned}w&=\\frac h{\\beta-\\alpha}\\bigl[u-\\mathrm i(\\pi+\\alpha)\\bigr]\\\\&=\\frac h{\\beta-\\alpha}\\left[\\log\\frac{z+a}{z-a}-\\mathrm i(\\pi+\\alpha)\\right],\\quad h>0,\\end{aligned}$$\n恰将下边界移到 $0$，上边界移到 $h$。"
+        },
+        {
+          "unit_id": "CH08-S04-SS02",
+          "paragraph": "相邻演示将两条同色圆弧依次对应成射线、水平线：对数前比较它们的辐角差 $\\beta-\\alpha$，对数后这同一个量成为条带高度，最后缩放为 $h$。减去 $\\mathrm i(\\pi+\\alpha)$ 的作用是移动下边界，而不是改变条带宽度；缩放因子才负责后者。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-da596b71c510a0b429e5"
+      ]
+    },
+    "CH08-S04-SS03": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "Joukowski的单叶条件/圆与射线像/逆支以及复合根式例8的最终式和分支都可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-ZHUKOVSKY-8",
+          "reader_anchor": "reader-9829042aa45203a81879",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例8",
+          "statement": "求一个保形变换，把由上半平面除去半圆 $|z|\\le 1,\\operatorname{Im} z>0$ 与射线 $y\\ge 2, x=0$ 所得的区域 $D$ 变为上半平面。",
+          "conclusion": "所求保形变换为 $w = \\frac{\\sqrt{4z^4+17z^2+4}}{2(z^2+1)}$，其中根式取正实轴为支割线且 $\\sqrt{1}=1$ 的一支。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH08-S04-SS03",
+          "paragraph": "令 $z=re^{\\mathrm i\\varphi}$、$w=u+\\mathrm iv$，有\n$$u=\\frac{r+r^{-1}}2\\cos\\varphi,\\qquad v=\\frac{r-r^{-1}}2\\sin\\varphi.$$\n对 $r>0,r\\ne1$，固定半径给出椭圆\n$$\\frac{u^2}{(r+r^{-1})^2/4}+\\frac{v^2}{(r-r^{-1})^2/4}=1.$$\n半轴为 $a_r=(r+r^{-1})/2$、$b_r=|r-r^{-1}|/2$，且 $a_r^2-b_r^2=1$，故焦点固定为 $\\pm1$。$r<1$ 时虚部的符号反转，绕行方向也反转；$r\\to0$ 时像椭圆变大且趋圆，$r\\to1$ 时压成线段 $[-1,1]$。"
+        },
+        {
+          "unit_id": "CH08-S04-SS03",
+          "paragraph": "三角函数也能拆成这些工具。由 $\\cos z=\\tfrac12(e^{\\mathrm iz}+e^{-\\mathrm iz})$，先作 $t=\\mathrm iz$，再作 $T=e^t$，最后作 $w=J(T)$。半条形域 $0<\\operatorname{Re}z<2\\pi,\\operatorname{Im}z>0$ 经前两步成为沿正实轴割开的去心单位圆，最后保形映为 $\\mathbb C\\setminus[-1,\\infty)$。偏移圆经 $J$ 可产生机翼轮廓，但它与本节以原点为中心的椭圆族是不同参数问题，不能把同心圆演示直接读成任意机翼。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-9829042aa45203a81879"
+      ]
+    },
+    "CH08-S05": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "Schwarz–Christoffel通式、等边三角形尺度、z+log z割痕端点−1与矩形椭圆积分及逆式均可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-SC-TRIANGLE",
+          "reader_anchor": "reader-6e4d2e5c86266ace6c39",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例9 等边三角形",
+          "statement": "求一保形变换，把上半平面 $\\operatorname{Im} z>0$ 映为 $w$ 平面上边长为 $2a$ 的等边三角形 $A_1A_2A_3$ 的内区域。",
+          "conclusion": "变换由上式给出；通过选 $a_3=\\infty$ 简化了公式，常数 $A$ 为实数。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-SC-SLIT",
+          "reader_anchor": "reader-8e23f43597377da8c944",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例10 带割痕区域",
+          "statement": "求一保形变换，把上半 $z$ 平面 $\\operatorname{Im} z>0$ 映照成有割痕：$-\\infty<u\\leqslant -1$，$v=\\pi$ 的上半 $w$ 平面 $D$。（原书题干此处写作 $u\\leqslant 1$，但与表格及计算不符，按 $-1$ 处理。见[[NOTE:SC-SLIT-TYPO|原题端点笔误]]。）",
+          "conclusion": "所求变换为 $w=z+\\ln z$，其中 $\\ln z$ 取主值分支。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX-SC-RECT",
+          "reader_anchor": "reader-ca191f52a9a86ef8df0b",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例11 矩形",
+          "statement": "求一保形变换，把上半 $z$ 平面映照成 $w$ 平面上的矩形 $A_1A_2A_3A_4$ 的内区域。",
+          "conclusion": "矩形到上半平面的变换由上述椭圆积分给出；$k$ 由边长比确定，$A$ 由边长确定，反函数为 $z=\\operatorname{sn}(w/A)$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH08-S05",
+          "paragraph": "[例11](#reader-ca191f52a9a86ef8df0b)的矩形顶点为 $\\pm\\omega_1,\\pm\\omega_1+\\mathrm i\\omega_2$，$\\omega_1,\\omega_2>0$。取 $0<k<1$，四预顶点为 $\\pm1,\\pm1/k$，各指数 $-1/2$，得到\n$$w=A\\int_0^z\\frac{\\mathrm d\\zeta}{\\sqrt{(1-\\zeta^2)(1-k^2\\zeta^2)}},\\qquad A>0.$$\n根式在 $z=0$ 的边界值为 $1$，在上半平面连续解析；由两条边长确定\n$$\\begin{aligned}\\omega_1&=A\\int_0^1\\frac{\\mathrm dt}{\\sqrt{(1-t^2)(1-k^2t^2)}},\\\\\\omega_2&=A\\int_1^{1/k}\\frac{\\mathrm dt}{\\sqrt{(t^2-1)(1-k^2t^2)}}.\\end{aligned}$$\n两式相除先定只依赖边长比的 $k$，再定尺度 $A$。该积分称椭圆积分；$A=1$ 时逆函数为雅可比椭圆正弦 $z=\\operatorname{sn}w$，一般为 $z=\\operatorname{sn}(w/A)$，模数均为 $k$。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-6e4d2e5c86266ace6c39",
+        "#reader-8e23f43597377da8c944",
+        "#reader-ca191f52a9a86ef8df0b"
+      ]
+    },
+    "CH08-S06": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "场约定、复势、全部七个电/流场例的参数结果及共轭分母、上半平面泊松与弧长面积工具都默认给出。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "E-12",
+          "reader_anchor": "reader-906937b7cb3ea1bfb10c",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例12 无限长荷电直线的场强",
+          "statement": "设有一均匀荷电的无限长直线 $L$，密度为 $q$。求周围空间静电场场强的复表示，并说明它为何是平面场。",
+          "conclusion": "该场在垂直于直线的任一截面上分布相同，因此是平面场；平面点电荷指的就是这种无限长均匀荷电直线的电场。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "E-13",
+          "reader_anchor": "reader-604ba782390f22906682",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例13 均匀流动",
+          "statement": "设已知一个平面流动的复位为 $f(z)=az$，其中 $a=v_0\\mathrm{e}^{-\\mathrm{i}\\theta}$ 是复常数。试分析这个平面流动。",
+          "conclusion": "该流动是速度为 $v_0$、方向角为 $\\theta$ 的均匀流；流线和等位线分别是两族平行直线。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "E-14",
+          "reader_anchor": "reader-69cd31e11fd3b53cdde4",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例14 平面点电荷的复位",
+          "statement": "求放置在坐标原点的平面点电荷 $q$ 的电场的复位。",
+          "conclusion": "原点平面点电荷的电力线为射线 $\\operatorname{Arg}z=C_1$，等位线为圆周 $|z|=C_2$；复位为 $\\Phi=-2q\\mathrm{i}\\ln z+C$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 3,
+          "owner_id": "E-15",
+          "reader_anchor": "reader-24f739ed206f77be42ac",
+          "json_pointer_prefix": "/examples/3",
+          "label": "例15 半无穷大金属板外的电位",
+          "statement": "两块半无穷大的金属板连成一块无穷大的板，连接处绝缘。设两部分的电位分别为 $v_1$ 和 $v_2$（$v_2>v_1$），求板外的电位。",
+          "conclusion": "板外电位为 $v=\\frac{v_2-v_1}{\\pi}\\arg z+v_1$，复位为 $w=\\frac{v_2-v_1}{\\pi}\\ln z+\\mathrm{i}v_1$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 4,
+          "owner_id": "E-16",
+          "reader_anchor": "reader-4a37e1f57580f5e52d77",
+          "json_pointer_prefix": "/examples/4",
+          "label": "例16 圆柱筒内的电位",
+          "statement": "一个无限长圆柱形空筒被两条绝缘材料沿母线分成相等的两片，一片接地，另一片电位为 $1$。设半径为 $1$，求筒内电位。",
+          "conclusion": "筒内电位由上述分段函数给出，复位为 $w=\\frac1\\pi\\ln\\frac{\\mathrm{i}(1-z)}{1+z}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 5,
+          "owner_id": "E-17",
+          "reader_anchor": "reader-268839109ddd65ee2bd3",
+          "json_pointer_prefix": "/examples/5",
+          "label": "例17 同心圆柱面间的电场",
+          "statement": "两个无限长的同心圆柱面的半径分别为 $R_1,R_2$（$R_1<R_2$），其上的电位分别为 $v_1,v_2$。求二者之间的电场。",
+          "conclusion": "圆环内电位为 $v=k\\ln|z|+C_2$，等位线为同心圆，电力线为径向线段。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 6,
+          "owner_id": "E-18",
+          "reader_anchor": "reader-e65bf7628c44f3b2da63",
+          "json_pointer_prefix": "/examples/6",
+          "label": "例18 绕过半圆障碍的流动",
+          "statement": "在上半 $z$ 平面有一个不可压缩流体的无源无旋流动，绕过中心在原点、半径为 $R$ 的半圆形障碍。已知在无穷远处流速为 $v_\\infty$（平行于 $x$ 轴），试确定上半平面上的流动图景。",
+          "conclusion": "复位为 $w=v_\\infty(z+R^2/z)+C$；流线关于 $y$ 轴对称，以平行于 $x$ 轴的直线为渐近线，在半圆两端 $z=\\pm R$ 流速为零。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH08-S06",
+          "paragraph": "设分量有连续一阶偏导，$C$ 是正向简单闭曲线，场在曲线及其内部有定义。将共轭场与位移相乘：\n$$\\oint_C\\overline W\\,\\mathrm dz=\\Gamma+\\mathrm iQ,$$\n其中环量与向外通量分别为\n$$\\begin{aligned}\\Gamma&=\\oint_C(u\\,\\mathrm dx+v\\,\\mathrm dy)=\\iint_{\\operatorname{int}C}(v_x-u_y)\\,\\mathrm dx\\,\\mathrm dy,\\\\Q&=\\oint_C(-v\\,\\mathrm dx+u\\,\\mathrm dy)=\\iint_{\\operatorname{int}C}(u_x+v_y)\\,\\mathrm dx\\,\\mathrm dy.\\end{aligned}$$\n这使两个实积分合成一个复积分，也指出为什么应使用 $\\overline W$ 而非 $W$ 本身。"
+        },
+        {
+          "unit_id": "CH08-S06",
+          "paragraph": "习题把局部尺度累加成弧长与面积。对光滑曲线 $z=z(t)$、$\\alpha\\le t\\le\\beta$，\n$$\\ell(L)=\\int_\\alpha^\\beta|z'(t)|\\,\\mathrm dt,\\qquad\\ell(f(L))=\\int_\\alpha^\\beta|f'(z(t))z'(t)|\\,\\mathrm dt.$$\n若 $f:D\\to G$ 为保形双射，两个正交方向各乘 $|f'|$，面积元就乘 $|f'|^2$：\n$$\\operatorname{Area}(G)=\\iint_D|f'(z)|^2\\,\\mathrm dx\\,\\mathrm dy.$$\n例如 $z^2$ 作用于第一象限单位正方形，积分 $4(x^2+y^2)$ 得像面积 $8/3$。双射条件防止重复覆盖时把同一像面积重复计数。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-906937b7cb3ea1bfb10c",
+        "#reader-604ba782390f22906682",
+        "#reader-69cd31e11fd3b53cdde4",
+        "#reader-24f739ed206f77be42ac",
+        "#reader-4a37e1f57580f5e52d77",
+        "#reader-268839109ddd65ee2bd3",
+        "#reader-e65bf7628c44f3b2da63"
+      ]
+    },
+    "CH09": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "常函数变换1/p已在CH09-S01作为因果基本像给出。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EXAMPLE-LAPLACE-ONE",
+          "reader_anchor": "reader-bd0360b2de081c0fb77b",
+          "json_pointer_prefix": "/examples/0",
+          "label": "单位函数的拉氏变换",
+          "statement": "设 $f(t)=1$（$t\\ge0$），且 $t<0$ 时 $f(t)=0$。求 $\\mathrm{L}[f(t)]$。",
+          "conclusion": "在 $\\operatorname{Re}p>0$ 内，$\\mathrm{L}[1]=1/p$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH09",
+          "paragraph": "本章把负时间延为零。先用指数权重保证积分收敛，再逐一说明振幅叠加、时间缩放、时间求导、像求导、延迟与指数包络各自改变什么。$g_a(t)=e^{-at}h(t)$（$a>0$）可以作贯穿检查：它的像为 $1/(p+a)$，每次操作都能从这条基本衰减信号核对符号与起点。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": []
+    },
+    "CH09-S01": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "一般复指数与复幂变换、端点条件/分支以及sqrt t和t^−1/2特值均默认给出。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "CH09-S01-EX1",
+          "reader_anchor": "reader-9a68fee3ce3897fae06a",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例1 求 $\\mathrm{L}[\\mathrm{e}^{at}]$",
+          "statement": "求 $\\mathrm{L}[\\mathrm{e}^{at}]$，其中 $a$ 是实常数或复常数，并指出像函数的解析区域。",
+          "conclusion": "$\\mathrm{L}[\\mathrm{e}^{at}]=\\dfrac{1}{p-a}$（$\\operatorname{Re}p>\\operatorname{Re}a$）；等价地 $\\mathrm{L}^{-1}\\!\\left[\\dfrac{1}{p-a}\\right]=\\mathrm{e}^{at}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "CH09-S01-EX2",
+          "reader_anchor": "reader-a5684a59312f84347ec2",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例2 求 $\\mathrm{L}[t^{\\alpha}]$",
+          "statement": "求 $\\mathrm{L}[t^{\\alpha}]$，其中 $\\alpha$ 为复常数且 $\\operatorname{Re}\\alpha>-1$，并指出像函数的解析区域。",
+          "conclusion": "$\\mathrm{L}[t^{\\alpha}]=\\dfrac{\\Gamma(\\alpha+1)}{p^{\\alpha+1}}$（$\\operatorname{Re}\\alpha>-1$，$\\operatorname{Re}p>0$）。特别地，取 $\\alpha=0,1,\\frac12,-\\frac12$ 等得 $\\mathrm{L}[h(t)]=\\dfrac{1}{p}$，$\\mathrm{L}[t^{n}]=\\dfrac{n!}{p^{n+1}}$（$n=0,1,2,\\dots$），$\\mathrm{L}[\\sqrt{t}]=\\dfrac{\\sqrt{\\pi}}{2p^{3/2}}$，$\\mathrm{L}\\!\\left[\\dfrac{1}{\\sqrt{t}}\\right]=\\sqrt{\\dfrac{\\pi}{p}}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH09-S01",
+          "paragraph": "[例2](#reader-a5684a59312f84347ec2)把幂函数接回Gamma。设 $\\operatorname{Re}\\alpha>-1$，取 $t^\\alpha=e^{\\alpha\\ln t}$，先在正实 $p$ 上换元 $u=pt$，再用解析唯一性延伸到右半平面，得到\n$$\\mathcal L[t^\\alpha](p)=\\frac{\\Gamma(\\alpha+1)}{p^{\\alpha+1}},\\qquad\\operatorname{Re}p>0.$$\n$p$ 的幂用与正实轴相容的解析支，如负实轴割开的主支。于是 $\\mathcal L[h]=1/p$、$\\mathcal L[t^n]=n!/p^{n+1}$（$n\\ge0$），还有\n$$\\mathcal L[\\sqrt t]=\\frac{\\sqrt\\pi}{2p^{3/2}},\\qquad\\mathcal L[t^{-1/2}]=\\frac{\\sqrt\\pi}{p^{1/2}}.$$\n后两者在原点不满足前述逐段光滑条件，却仍有变换，说明那组条件充分而不必要；一般复幂的端点条件来自局部可积性。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-9a68fee3ce3897fae06a",
+        "#reader-a5684a59312f84347ec2"
+      ]
+    },
+    "CH09-S02-SS01": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "线性性以及全部四个三角/双曲基本像与各自收敛域均默认可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-LINEAR-TRIG",
+          "reader_anchor": "reader-56d3223dd50062b84119",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例3 由指数函数的像函数求常用像函数",
+          "statement": "已知 $\\mathrm{L}[\\mathrm{e}^{at}]=\\frac{1}{p-a}$，其中 $\\operatorname{Re}(p-a)>0$。利用拉氏变换的线性关系，求 $\\mathrm{L}[\\cos\\omega t]$、$\\mathrm{L}[\\sin\\omega t]$、$\\mathrm{L}[\\operatorname{ch}\\omega t]$、$\\mathrm{L}[\\operatorname{sh}\\omega t]$，其中 $\\omega$ 为实常数。",
+          "conclusion": "在相应的公共收敛区域内，$\\mathrm{L}[\\cos\\omega t]=\\frac{p}{p^2+\\omega^2}$，$\\mathrm{L}[\\sin\\omega t]=\\frac{\\omega}{p^2+\\omega^2}$，$\\mathrm{L}[\\operatorname{ch}\\omega t]=\\frac{p}{p^2-\\omega^2}$，$\\mathrm{L}[\\operatorname{sh}\\omega t]=\\frac{\\omega}{p^2-\\omega^2}$。三角与双曲两组的区别在分母的符号，以及余弦/双曲余弦对应分子 $p$、正弦/双曲正弦对应分子 $\\omega$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH09-S02-SS01",
+          "paragraph": "[例3](#reader-56d3223dd50062b84119)把 $\\cos\\omega t$ 写成两个复指数的平均，把 $\\sin\\omega t$ 写成它们的差除以 $2\\mathrm i$。由指数像得到，对实 $\\omega$，\n$$\\mathcal L[\\cos\\omega t]=\\frac p{p^2+\\omega^2},\\qquad\\mathcal L[\\sin\\omega t]=\\frac\\omega{p^2+\\omega^2},\\quad\\operatorname{Re}p>0.$$\n将复指数换成实指数 $e^{\\pm\\omega t}$，同样得到\n$$\\mathcal L[\\cosh\\omega t]=\\frac p{p^2-\\omega^2},\\qquad\\mathcal L[\\sinh\\omega t]=\\frac\\omega{p^2-\\omega^2},\\quad\\operatorname{Re}p>|\\omega|.$$\n双曲函数含增长项，所以半平面须更靠右；分母的加减号来自指数参数是否含 $\\mathrm i$，不是任意的记号差异。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-56d3223dd50062b84119"
+      ]
+    },
+    "CH09-S02-SS02": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "时间缩放一般式和ROC可见；正弦缩放专门结果已在前一单元基本像给出，是相同公式。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "E-SIMILARITY-SIN",
+          "reader_anchor": "reader-c7f7f64492027850752d",
+          "json_pointer_prefix": "/examples/0",
+          "label": "用相似定理求 L[sin ωt]",
+          "statement": "已知 $\\mathrm{L}[\\sin t]=\\dfrac{1}{p^2+1}$（$\\operatorname{Re}p>0$）。求 $\\mathrm{L}[\\sin\\omega t]$，其中 $\\omega>0$ 为实数。",
+          "conclusion": "$\\mathrm{L}[\\sin\\omega t]=\\dfrac{\\omega}{p^2+\\omega^2}$，定理保证成立的半平面为 $\\operatorname{Re}p>0$。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH09-S02-SS02",
+          "paragraph": "设 $F(p)=\\mathcal L[f](p)$ 在 $\\operatorname{Re}p>c$ 成立。把曲线改为 $f(\\alpha t)$、$\\alpha>0$，令 $u=\\alpha t$，则 $\\mathrm dt=\\mathrm du/\\alpha$、核变为 $e^{-(p/\\alpha)u}$，所以\n$$\\mathcal L[f(\\alpha t)](p)=\\frac1\\alpha F\\!\\left(\\frac p\\alpha\\right),\\qquad\\operatorname{Re}p>\\alpha c.$$\n$\\alpha>1$ 表示同一过程更快完成，$0<\\alpha<1$ 表示拉长时间；正号还保证非负时间区间没有翻转。倒数系数与像变量缩放分别来自微分元和核，缺一不可。"
+        },
+        {
+          "unit_id": "CH09-S02-SS02",
+          "paragraph": "例如 $f(t)=e^{-at}h(t)$、$a>0$，压缩后为 $e^{-a\\alpha t}h(t)$，定理右边化简为 $1/(p+a\\alpha)$，与直接积分一致。右侧固定 $a$，改变时间缩放 $k$，绿色曲线沿时间轴收缩时，正实像变量切片的加权积分读数随之改变；模型只演示这个正实切片，复数公式仍按前述半平面使用。[时间缩放示例](#reader-c7f7f64492027850752d)保留正弦的同类计算。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-c7f7f64492027850752d"
+      ]
+    },
+    "CH09-S02-SS03": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "含初值的各阶导数像，以及两项原初值题解与条件均默认给出。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "E-01",
+          "reader_anchor": "reader-da596b71c510a0b429e5",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例4：用拉氏变换解一阶方程的初值问题",
+          "statement": "解初始问题 $$\\left\\{\\begin{array}{l}\\dfrac{\\mathrm{d}y}{\\mathrm{d}t}+2y=\\mathrm{e}^{-t},\\\\[4pt] y\\big|_{t=0}=0.\\end{array}\\right.$$",
+          "conclusion": "所以初始问题的解是 $y(t)=\\mathrm{e}^{-t}-\\mathrm{e}^{-2t}$（$t\\ge0$）。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "E-02",
+          "reader_anchor": "reader-61b93af76a60d7db75a1",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例5：用拉氏变换解二阶方程的初值问题",
+          "statement": "解初始问题 $$\\left\\{\\begin{array}{l} y''+y=t,\\\\[4pt] y\\big|_{t=0}=y'\\big|_{t=0}=0.\\end{array}\\right.$$",
+          "conclusion": "所以初始问题的解是 $y(t)=t-\\sin t$（$t\\ge0$）。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH09-S02-SS03",
+          "paragraph": "时间求导通过分部积分转移到指数核。设 $f,f'$ 具有变换所需的分段光滑与指数界，$f$ 在正时间连续且分段绝对连续，$f(0^+)$ 存在，则在共同收敛半平面\n$$\\mathcal L[f']=[f(t)e^{-pt}]_{0^+}^{\\infty}+pF=pF-f(0^+).$$\n无穷远项由衰减消失，下端留下初始右极限，所以初值自然进入代数方程。若正时间内部有跳跃，普通导数还会产生各跳跃边界项，不能忽略；也可另用一致的分布导数约定。这里先按启动后普通函数求导，不把阶跃截断的原点冲激混入。"
+        },
+        {
+          "unit_id": "CH09-S02-SS03",
+          "paragraph": "[例4](#reader-da596b71c510a0b429e5)令 $y'+2y=e^{-t}$、$y(0)=0$。设 $Y=\\mathcal L[y]$，得到 $(p+2)Y=1/(p+1)$，故 $Y=1/(p+1)-1/(p+2)$，从而 $y(t)=e^{-t}-e^{-2t}$（$t\\ge0$）。[例5](#reader-61b93af76a60d7db75a1)的 $y''+y=t$、$y(0)=y'(0)=0$ 则有 $Y=1/[p^2(p^2+1)]=1/p^2-1/(p^2+1)$，所以 $y=t-\\sin t$。两解代回方程与初值均符合；初值已经用于像方程，最后不能再任意添加齐次解。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-da596b71c510a0b429e5",
+        "#reader-61b93af76a60d7db75a1"
+      ]
+    },
+    "CH09-S02-SS04": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "时间积分像、累计初值项与RC电流/电压参数解均默认可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-RC-CIRCUIT",
+          "reader_anchor": "reader-e62b2ac3f2f2cadfc28c",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例 6：R-C 充电电路的电流",
+          "statement": "如图 9.1 所示，电阻 $R$、电容 $C$ 与电动势为 $E$ 的直流电源串联成闭合回路，$t=0$ 时电容器上没有电荷（$R,C,E$ 均为正常数）。求回路中的电流 $i(t)$。",
+          "conclusion": "回路电流为 $$i(t)=\\frac{E}{R}\\,\\mathrm{e}^{-\\frac{t}{RC}},\\qquad t\\ge 0,$$ 即 R-C 充电过程的电流从 $i(0^+)=\\dfrac{E}{R}$ 开始按指数规律衰减到 $0$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH09-S02-SS04",
+          "paragraph": "[例6](#reader-e62b2ac3f2f2cadfc28c)的串联电路取 $R,C>0$、常电源 $E$，电容初始无电荷。电荷由电流累计，故回路方程为\n$$Ri(t)+\\frac1C\\int_0^t i(u)\\,\\mathrm du=E.$$\n变换后 $RI+I/(Cp)=E/p$，于是\n$$I(p)=\\frac E{R(p+1/(RC))},\\qquad i(t)=\\frac ER e^{-t/(RC)}.$$\n同时电容电压 $u_C=E(1-e^{-t/(RC)})$，电阻压降 $u_R=E e^{-t/(RC)}$，它们始终相加为 $E$；初始无电荷使积分项没有额外常数。"
+        },
+        {
+          "unit_id": "CH09-S02-SS04",
+          "paragraph": "右侧同一电路中，蓝色电流和绿色电阻压降下降，金色电容电压上升，读数可直接核对 $u_R+u_C=E$。时间常数是 $RC$，因此改变电阻或电容会一起改变电流衰减与电压累计的快慢；这些不是两条无关曲线。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-e62b2ac3f2f2cadfc28c"
+      ]
+    },
+    "CH09-S02-SS05": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "像各阶求导、t sin/t cos参数像、t²cos² t完整有理像与ROC都可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-TSQUARE-COS2",
+          "reader_anchor": "reader-bb843b53d817f6b2f8dc",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例 7（求 $\\mathrm{L}[t^{2}\\cos^{2}t]$）",
+          "statement": "求 $\\mathrm{L}[t^{2}\\cos^{2}t]$。函数 $t^{2}\\cos^{2}t$ 在 $t\\ge0$ 上逐段光滑；对任意给定的 $c>0$，它都满足指数增长型条件 $|t^{2}\\cos^{2}t|\\le K\\mathrm{e}^{ct}$（$t\\ge0$，其中 $K>0$ 依赖于 $c$），所以像函数的微分法对每个这样的 $c$ 都可用。",
+          "conclusion": "所以 $\\mathrm{L}[t^{2}\\cos^{2}t]=\\dfrac{2(p^{6}+24p^{2}+32)}{p^{3}(p^{2}+4)^{3}}$。函数 $t^{2}\\cos^{2}t$ 对任意给定的 $c>0$ 满足指数增长型条件，故由像函数的微分法，上式对每个 $c>0$ 在 $\\operatorname{Re}p>c$ 内成立；令 $c$ 任意小（$c\\to0^{+}$），即得它在 $\\operatorname{Re}p>0$ 内成立。这里不能把 $c$ 取成 0，原因见 [[NOTE:NOTE-GROWTH-INDEX-C|为什么不能用 c=0]]。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH09-S02-SS05",
+          "paragraph": "本节对像参数 $p$ 求导。若 $F=\\mathcal L[f]$，$f$ 逐段光滑且 $|f(t)|\\le Ke^{ct}$，在每个 $\\operatorname{Re}p\\ge\\sigma_1>c$ 上，$t^n e^{-(\\sigma_1-c)t}$ 仍可积，因而能在积分号下求导：\n$$F^{(n)}(p)=\\mathcal L[(-t)^nf(t)](p),\\qquad \\mathcal L[t^nf]=(-1)^nF^{(n)},\\quad\\operatorname{Re}p>c.$$\n负号来自核的 $-pt$；这不是对 $t$ 求导，所以没有减初值项。基本检查是 $\\mathcal L[te^{-at}]=1/(p+a)^2$。"
+        },
+        {
+          "unit_id": "CH09-S02-SS05",
+          "paragraph": "[例7](#reader-bb843b53d817f6b2f8dc)先用 $\\cos^2t=(1+\\cos2t)/2$，再以 $t^2$ 对应二阶导数，得到\n$$\\begin{aligned}\\mathcal L[t^2\\cos^2t]&=\\frac12\\frac{\\mathrm d^2}{\\mathrm dp^2}\\left(\\frac1p+\\frac p{p^2+4}\\right)\\\\&=\\frac{2(p^6+24p^2+32)}{p^3(p^2+4)^3},\\qquad\\operatorname{Re}p>0.\\end{aligned}$$\n阶数是二而不是三，符号为正；三角恒等式先化简本函数，线性与像求导再按顺序配合。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-bb843b53d817f6b2f8dc"
+      ]
+    },
+    "CH09-S02-SS06": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "像积分、Frullani参数式、sin t/t与Si像、Dirichlet积分π/2及零端/Abel限制均可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "CH09-S02-SS06-EX-QUOTIENT",
+          "reader_anchor": "reader-35f25ea9d940ab7d3d82",
+          "json_pointer_prefix": "/examples/0",
+          "label": "除以 t 的像函数计算",
+          "statement": "设 $a,b$ 为实数，$p$ 满足 $\\operatorname{Re}p>\\max\\{a,b\\}$。求 $\\mathrm{L}\\left[\\frac{\\mathrm{e}^{bt}-\\mathrm{e}^{at}}{t}\\right]$、$\\mathrm{L}\\left[\\frac{\\sin t}{t}\\right]$ 以及 $\\mathrm{L}[\\mathrm{Si}\\,t]$。",
+          "conclusion": "$\\mathrm{L}\\left[\\frac{\\mathrm{e}^{bt}-\\mathrm{e}^{at}}{t}\\right]=\\ln\\frac{p-a}{p-b}$（$\\operatorname{Re}p>\\max\\{a,b\\}$）；$\\mathrm{L}\\left[\\frac{\\sin t}{t}\\right]=\\frac{\\pi}{2}-\\arctan p$（$p>0$）；$\\mathrm{L}[\\mathrm{Si}\\,t]=\\frac{1}{p}\\left(\\frac{\\pi}{2}-\\arctan p\\right)$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "CH09-S02-SS06-EX8",
+          "reader_anchor": "reader-c682b8ac0a49bcd9b44f",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例8",
+          "statement": "计算积分 $\\int_0^{+\\infty}\\frac{\\sin t}{t}\\,\\mathrm{d}t$。",
+          "conclusion": "$\\int_0^{+\\infty}\\frac{\\sin t}{t}\\,\\mathrm{d}t=\\frac{\\pi}{2}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "CH09-S02-SS06-EX9",
+          "reader_anchor": "reader-c59a38b771f790ef27e4",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例9",
+          "statement": "设 $a>0$、$b>0$，计算积分 $\\int_0^{+\\infty}\\frac{\\mathrm{e}^{-at}-\\mathrm{e}^{-bt}}{t}\\,\\mathrm{d}t$。",
+          "conclusion": "$\\int_0^{+\\infty}\\frac{\\mathrm{e}^{-at}-\\mathrm{e}^{-bt}}{t}\\,\\mathrm{d}t=\\ln\\frac{b}{a}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH09-S02-SS06",
+          "paragraph": "若无权积分 $\\int_0^\\infty f(t)/t\\,\\mathrm dt$ 收敛，正实轴有相应收敛的像表示，并能用 $p\\downarrow0$ 的Abel极限接回该广义积分，则\n$$\\int_0^\\infty\\frac{f(t)}t\\,\\mathrm dt=\\int_0^\\infty F(p)\\,\\mathrm dp.$$\n于是[例8](#reader-c682b8ac0a49bcd9b44f)给出 $\\int_0^\\infty\\sin t/t\\,\\mathrm dt=\\pi/2$，这是条件收敛；[例9](#reader-c59a38b771f790ef27e4)对 $a,b>0$ 给出\n$$\\int_0^\\infty\\frac{e^{-at}-e^{-bt}}t\\,\\mathrm dt=\\ln\\frac ba.$$\n后式两端均可积；前式则须先保留指数权重，再由极限回到振荡积分，不能把权重直接形式上删掉。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-c682b8ac0a49bcd9b44f",
+        "#reader-c59a38b771f790ef27e4"
+      ]
+    },
+    "CH09-S02-SS07": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "延迟一般式及三个阶跃波形的分段表达式与像均可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EXAMPLE-DELAY-10",
+          "reader_anchor": "reader-cf62b5831ba3e0daa8c1",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例10",
+          "statement": "求图9.3所示波形的像函数，其中\n$$f(t)=\\begin{cases}0,&t<0,\\\\ t,&0\\le t\\le1,\\\\ 1,&t>1.\\end{cases}$$",
+          "conclusion": "$\\mathrm{L}[f(t)]=\\frac{1-\\mathrm{e}^{-p}}{p^2}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EXAMPLE-DELAY-11",
+          "reader_anchor": "reader-c814b49db336a6f6ca62",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例11",
+          "statement": "求函数\n$$f(t)=\\begin{cases}0,&t<0,\\\\ 1-t,&0\\le t\\le1,\\\\ 0,&t>1\\end{cases}$$\n的像函数。",
+          "conclusion": "$\\mathrm{L}[f(t)]=\\frac{1}{p}-\\frac{1}{p^2}+\\frac{\\mathrm{e}^{-p}}{p^2}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EXAMPLE-DELAY-12",
+          "reader_anchor": "reader-f5d95c28d33cd2154cd0",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例12",
+          "statement": "求阶梯函数\n$$K(t)=\\begin{cases}0,&t<0,\\\\ E,&0\\le t<\\tau,\\\\ 2E,&\\tau\\le t<2\\tau,\\\\ \\dots\\\\ nE,&(n-1)\\tau\\le t<n\\tau,\\\\ \\dots\\end{cases}$$\n的像函数。",
+          "conclusion": "$\\mathrm{L}[K(t)]=\\frac{E}{p(1-\\mathrm{e}^{-p\\tau})}$，在 $\\operatorname{Re}p>0$ 时成立。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH09-S02-SS07",
+          "paragraph": "将整个因果过程晚 $\\tau>0$ 启动，定义\n$$f_\\tau(t)=f(t-\\tau)h(t-\\tau)=\\begin{cases}0,&t<\\tau,\\\\f(t-\\tau),&t\\ge\\tau.\\end{cases}$$\n积分有效下限变为 $\\tau$；令 $u=t-\\tau$，则 $e^{-pt}=e^{-pu}e^{-p\\tau}$，与 $u$ 无关的因子提出后得到\n$$\\mathcal L[f_\\tau](p)=e^{-p\\tau}F(p)$$\n在原收敛半平面内成立。固定延迟量是 $\\tau$，不是积分时间 $t$。$f(t)h(t-\\tau)$ 只截掉前段；只有自变量和开关同时右移，才是整个原过程延迟。"
+        },
+        {
+          "unit_id": "CH09-S02-SS07",
+          "paragraph": "[例12](#reader-f5d95c28d33cd2154cd0)每隔 $\\tau$ 增加 $E$，即 $K(t)=nE$ 于 $(n-1)\\tau\\le t<n\\tau$、$n\\ge1$。它是 $K(t)=E\\sum_{n=0}^\\infty h(t-n\\tau)$，故\n$$\\mathcal L[K](p)=\\frac Ep\\sum_{n=0}^\\infty e^{-np\\tau}=\\frac E{p(1-e^{-p\\tau})},\\qquad\\operatorname{Re}p>0.$$\n共同的比值是 $e^{-p\\tau}$，第五章的几何级数条件 $|e^{-p\\tau}|<1$ 正好给出该半平面。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-cf62b5831ba3e0daa8c1",
+        "#reader-c814b49db336a6f6ca62",
+        "#reader-f5d95c28d33cd2154cd0"
+      ]
+    },
+    "CH09-S02-SS08": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "复参数指数位移一般式、幂和sin/cos三条位移像及反向例均可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-SHIFT-SIN",
+          "reader_anchor": "reader-43b05bbdd54bb95dcd1a",
+          "json_pointer_prefix": "/examples/0",
+          "label": "正向：由基本公式求像函数",
+          "statement": "求 $\\mathrm{L}[\\mathrm{e}^{-t}\\sin 2t]$。",
+          "conclusion": "$\\mathrm{L}[\\mathrm{e}^{-t}\\sin 2t]=\\dfrac{2}{(p+1)^2+4}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-SHIFT-INVERSE",
+          "reader_anchor": "reader-118dcbcac9214b51db33",
+          "json_pointer_prefix": "/examples/1",
+          "label": "反向：由像函数求本函数",
+          "statement": "求 $\\mathrm{L}^{-1}\\!\\left[\\dfrac{1}{(p-3)^4}\\right]$。",
+          "conclusion": "$\\mathrm{L}^{-1}\\!\\left[\\dfrac{1}{(p-3)^4}\\right]=\\dfrac16t^3\\mathrm{e}^{3t}$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH09-S02-SS08",
+          "paragraph": "将基本像中所有 $p$ 一起替换，得到\n$$\\begin{aligned}\\mathcal L[e^{\\lambda t}t^n]&=\\frac{n!}{(p-\\lambda)^{n+1}},\\quad n\\ge0,\\\\\\mathcal L[e^{\\lambda t}\\sin\\omega t]&=\\frac\\omega{(p-\\lambda)^2+\\omega^2},\\\\\\mathcal L[e^{\\lambda t}\\cos\\omega t]&=\\frac{p-\\lambda}{(p-\\lambda)^2+\\omega^2}.\\end{aligned}$$\n对实 $\\omega$ 均可在 $\\operatorname{Re}p>\\operatorname{Re}\\lambda$ 使用；余弦的分子也须移动。[位移示例](#reader-43b05bbdd54bb95dcd1a)保留带衰减振荡计算，[反向示例](#reader-118dcbcac9214b51db33)的 $1/(p-3)^4$ 则还原为 $t^3e^{3t}h(t)/6$。同时遇到 $e^{-p\\tau}$ 时，先还原其余整块，再将整块延迟并乘开关。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-43b05bbdd54bb95dcd1a",
+        "#reader-118dcbcac9214b51db33"
+      ]
+    },
+    "CH09-S02-SS09": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "一般周期公式和全波整流正弦coth像与周期/ROC均默认可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-FULLWAVE-SINE",
+          "reader_anchor": "reader-4e157ee3889ffeeb4cd1",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例 13 全波整流正弦波",
+          "statement": "求全波整流后的正弦波 $f(t)=|\\sin\\omega t|$（$\\omega>0$）的拉普拉斯变换 $\\mathrm{L}[f(t)]$。",
+          "conclusion": "全波整流正弦波 $|\\sin\\omega t|$ 的像函数为 $\\frac{\\omega}{p^2+\\omega^2}\\coth\\frac{p\\pi}{2\\omega}$（$\\operatorname{Re}p>0$）。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH09-S02-SS09",
+          "paragraph": "[例13](#reader-4e157ee3889ffeeb4cd1)对 $\\omega>0$ 的全波整流 $|\\sin\\omega t|$，实际周期是 $T=\\pi/\\omega$。这一周期内正弦非负，积分为 $\\omega(1+e^{-pT})/(p^2+\\omega^2)$，于是\n$$\\begin{aligned}\\mathcal L[|\\sin\\omega t|]&=\\frac\\omega{p^2+\\omega^2}\\frac{1+e^{-pT}}{1-e^{-pT}}\\\\&=\\frac\\omega{p^2+\\omega^2}\\coth\\frac{\\pi p}{2\\omega},\\qquad\\operatorname{Re}p>0.\\end{aligned}$$\n这是双曲余切；使用原正弦的周期 $2\\pi/\\omega$ 而只积分半波，会错误地把每隔一段的信号丢掉。"
+        },
+        {
+          "unit_id": "CH09-S02-SS09",
+          "paragraph": "若每个周期都重新启动一段 $e^{-au}$、$0\\le u<T$，则像为 $[1-e^{-(p+a)T}]/[(p+a)(1-e^{-pT})]$。它在每个周期起点重置，区别于从零时刻一直衰减的单条指数；若只保留第一段后关闭，则去掉永久重复的分母因子。这能帮助先确定波形，再选择周期公式。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-4e157ee3889ffeeb4cd1"
+      ]
+    },
+    "CH09-S02-SS10": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "卷积性质、变换乘积、参数指数卷积与积分方程解可见；t*1=t²/2为定义直接积分练习。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-CONV-SIMPLE",
+          "reader_anchor": "reader-2663a43cb62c799fba50",
+          "json_pointer_prefix": "/examples/0",
+          "label": "计算两个简单函数的卷积",
+          "statement": "设 $f(t)=t$（$t\\ge0$），$g(t)=1$（$t\\ge0$），且 $t<0$ 时 $f(t)=g(t)=0$。求 $(f*g)(t)$。",
+          "conclusion": "$(f*g)(t)=t^2/2$（$t>0$），$t\\le0$ 时为零。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-CONV-INTEGRAL-EQ",
+          "reader_anchor": "reader-e1684a7db8864a9fd442",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例14（卷积型积分方程）",
+          "statement": "解卷积型积分方程 $$y(t)=at+\\int_0^t y(\\tau)\\sin(t-\\tau)\\,\\mathrm{d}\\tau,\\quad t\\ge0,$$ 其中 $a$ 为常数。",
+          "conclusion": "方程的解为 $y(t)=a\\left(t+\\dfrac{t^3}{6}\\right)$（$t\\ge0$）。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH09-S02-SS10",
+          "paragraph": "若两函数负时间为零，只有 $0\\le u\\le t$ 时两因子可能同时非零，因此\n$$(f_1*f_2)(t)=\\begin{cases}0,&t\\le0,\\\\\\displaystyle\\int_0^t f_1(t-u)f_2(u)\\,\\mathrm du,&t>0.\\end{cases}$$\n两函数逐段光滑且增长指数为 $c_1,c_2$ 时，卷积也有所需正则性。令 $c=\\max(c_1,c_2)$，则模不超过 $Mt e^{ct}$；对任意 $\\varepsilon>0$ 又可由 $M_\\varepsilon e^{(c+\\varepsilon)t}$ 控制。指数加权还能分给两个因子：$e^{-\\alpha t}(f_1*f_2)=(e^{-\\alpha t}f_1)*(e^{-\\alpha t}f_2)$。"
+        },
+        {
+          "unit_id": "CH09-S02-SS10",
+          "paragraph": "[例14](#reader-e1684a7db8864a9fd442)把 $y(t)=at+\\int_0^t y(u)\\sin(t-u)\\,\\mathrm du$ 中的历史项认成卷积，得到 $Y=a/p^2+Y/(p^2+1)$。解出 $Y=a(1/p^2+1/p^4)$，反变换即\n$$y(t)=a\\left(t+\\frac{t^3}{6}\\right),\\qquad t\\ge0.$$\n未知函数从积分号里变成代数未知量；再将所得多项式代回原积分方程，才完成对解的核验。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-2663a43cb62c799fba50",
+        "#reader-e1684a7db8864a9fd442"
+      ]
+    },
+    "CH09-S03": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "固定1/[s(s+1)]的反演由后节部分分式一般式与因果基本像立即给出，作为导读练习不要求再独立列值。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-PREVIEW-INVERSE",
+          "reader_anchor": "reader-462a50864a271a3ee7b6",
+          "json_pointer_prefix": "/examples/0",
+          "label": "用部分分式法求 $\\frac{1}{s(s+1)}$ 的本函数",
+          "statement": "设 $F(s)=\\dfrac{1}{s(s+1)}$（$\\operatorname{Re}s>0$），求它的本函数 $f(t)$。",
+          "conclusion": "所求本函数为 $f(t)=1-\\mathrm{e}^{-t}$（$t\\ge0$）。代回检验：$\\mathscr{L}[f]=\\dfrac{1}{s}-\\dfrac{1}{s+1}=\\dfrac{1}{s(s+1)}=F(s)$，与给定的像函数一致。",
+          "verdict": "fixed_input_drill_retained_folded_general_method_visible"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH09-S03",
+          "paragraph": "像域解 $Y(p)$ 只是中间结果。要解释过程何时启动、怎样衰减或增长，还须还原 $y(t)$。先检查结构：线性组合逐项还原；$p$ 的平移对应指数包络；$e^{-p\\tau}$ 对应整个时间结果的延迟。给每个中间函数命名，可以避免把两种平移混用。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": []
+    },
+    "CH09-S03-SS01": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "全部三例的参数反演式/特例及零参数和重合参数限制均可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX15-PARTIAL",
+          "reader_anchor": "reader-bf6ace727b99ce038ad8",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例15",
+          "statement": "求 $f(t)=\\mathrm{L}^{-1}\\left[\\dfrac{1}{(p^{2}+a^{2})(p^{2}+b^{2})}\\right]$，设 $a^{2}\\neq b^{2}$。",
+          "conclusion": "$f(t)=\\dfrac{1}{b^{2}-a^{2}}\\left(\\dfrac{\\sin at}{a}-\\dfrac{\\sin bt}{b}\\right)$（要求 $a^{2}\\neq b^{2}$ 且 $a,b\\neq0$）。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX16-PARTIAL",
+          "reader_anchor": "reader-89fc02b7f0f4ab1b5a71",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例16",
+          "statement": "求 $F(p)=\\dfrac{p+7}{(p-1)(p^{2}+2p+5)}$ 的本函数。",
+          "conclusion": "$\\mathrm{L}^{-1}[F(p)]=\\mathrm{e}^{t}-\\mathrm{e}^{-t}\\left(\\cos 2t+\\dfrac{1}{2}\\sin 2t\\right)$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX17-PARTIAL",
+          "reader_anchor": "reader-3c7ec0196512737c673c",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例17",
+          "statement": "求 $\\dfrac{1}{(p^{2}+a^{2})^{2}}$ 的本函数（$a\\neq0$）。",
+          "conclusion": "$\\mathrm{L}^{-1}\\left[\\dfrac{1}{(p^{2}+a^{2})^{2}}\\right]=\\dfrac{1}{2a^{3}}(\\sin at-at\\cos at)$（$a\\neq0$）。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH09-S03-SS01",
+          "paragraph": "设约分后 $F(p)=A(p)/B(p)$ 是有理真分式，$\\deg A<\\deg B$，分母零点 $a_k$ 的重数为 $m_k$。可分解为\n$$F(p)=\\sum_{k=1}^m\\sum_{s=1}^{m_k}\\frac{A_{ks}}{(p-a_k)^s}.$$\n每个重根应预留一次到 $m_k$ 次的全部分母幂，求出后某些系数才可能为零。由幂函数与位移公式，\n$$f(t)=h(t)\\sum_{k=1}^m\\sum_{s=1}^{m_k}A_{ks}\\frac{t^{s-1}}{(s-1)!}e^{a_kt}$$\n是它的因果本函数，可在 $\\operatorname{Re}p>\\max_k\\operatorname{Re}a_k$ 使用。极点越重，时间中可能出现的多项式次数越高。"
+        },
+        {
+          "unit_id": "CH09-S03-SS01",
+          "paragraph": "[例17](#reader-3c7ec0196512737c673c)的平方二次因子可结合像求导和时间积分：$-\\mathrm d[a/(p^2+a^2)]/\\mathrm dp=2ap/(p^2+a^2)^2$。再除以 $2ap$ 并还原，得到\n$$\\mathcal L^{-1}\\!\\left[\\frac1{(p^2+a^2)^2}\\right]=\\frac{\\sin at-at\\cos at}{2a^3}h(t),\\qquad a\\ne0.$$\n$a=0$ 时连续极限为 $t^3h(t)/6$。部分分式提供结构，前面的运算性质可以帮助减少系数演算；完整计算仍可在原例展开查看。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-bf6ace727b99ce038ad8",
+        "#reader-89fc02b7f0f4ab1b5a71",
+        "#reader-3c7ec0196512737c673c"
+      ]
+    },
+    "CH09-S03-SS02": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "Bromwich条件、留数反演充分条件、两项有理像/方程组/延迟例结果均默认显示。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-18",
+          "reader_anchor": "reader-e522900defd23227e936",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例18（单极点）",
+          "statement": "求 $F(p)=\\dfrac{2p^{2}-4p}{(2p+1)(p^{2}+1)}$ 的本函数 $f(t)$。",
+          "conclusion": "$f(t)=\\mathrm{e}^{-t/2}-2\\sin t\\ (t>0)$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-19",
+          "reader_anchor": "reader-26b2cee8111a7de265fd",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例19（高阶极点）",
+          "statement": "求 $f(t)=L^{-1}\\left[\\dfrac{2p^{2}+3p+3}{(p+1)(p+3)^{3}}\\right]$。",
+          "conclusion": "$f(t)=\\dfrac14\\mathrm{e}^{-t}+\\left(-3t^{2}+\\dfrac32t-\\dfrac14\\right)\\mathrm{e}^{-3t}\\ (t>0)$。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX-20",
+          "reader_anchor": "reader-6e55d00e57a242057e91",
+          "json_pointer_prefix": "/examples/2",
+          "label": "例20（用拉氏变换解微分方程组）",
+          "statement": "解初值问题 $$\\begin{cases}\\dfrac{\\mathrm{d}x}{\\mathrm{d}t}-x-2y=t,\\\\ -2x+\\dfrac{\\mathrm{d}y}{\\mathrm{d}t}-y=t,\\end{cases}\\qquad x(0)=2,\\quad y(0)=4 .$$",
+          "conclusion": "$x(t)=\\dfrac{28}{9}\\mathrm{e}^{3t}-\\dfrac{t}{3}-\\dfrac{1}{9}-\\mathrm{e}^{-t}$，$y(t)=\\dfrac{28}{9}\\mathrm{e}^{3t}-\\dfrac{t}{3}-\\dfrac{1}{9}+\\mathrm{e}^{-t}$。回代检验：$x(0)=3-1=2$，$y(0)=3+1=4$，与初值一致。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 3,
+          "owner_id": "EX-21",
+          "reader_anchor": "reader-cafada0c840d852c2fda",
+          "json_pointer_prefix": "/examples/3",
+          "label": "例21（带延迟因子的像函数）",
+          "statement": "求 $L^{-1}\\left[\\dfrac{1-\\mathrm{e}^{-4p}}{p^{2}-2}\\right]$。",
+          "conclusion": "$$L^{-1}\\left[\\dfrac{1-\\mathrm{e}^{-4p}}{p^{2}-2}\\right]=\\begin{cases}0,&t<0,\\\\ \\dfrac{1}{\\sqrt2}\\sinh(\\sqrt2\\,t),&0\\le t<4,\\\\ \\dfrac{1}{\\sqrt2}\\left[\\sinh(\\sqrt2\\,t)-\\sinh\\left(\\sqrt2(t-4)\\right)\\right],&t\\ge4.\\end{cases}$$",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH09-S03-SS02",
+          "paragraph": "单极点 $p_k$ 的贡献是 $e^{p_kt}\\operatorname{Res}(F,p_k)$；重极点须对消去奇性后的整个 $F(p)e^{pt}$ 求导，所以自然产生时间多项式。[例18](#reader-e522900defd23227e936)与[例19](#reader-26b2cee8111a7de265fd)分别给出\n$$\\begin{aligned}\\mathcal L^{-1}\\!\\left[\\frac{2p^2-4p}{(2p+1)(p^2+1)}\\right]&=(e^{-t/2}-2\\sin t)h(t),\\\\\\mathcal L^{-1}\\!\\left[\\frac{2p^2+3p+3}{(p+1)(p+3)^3}\\right]&=\\left[\\frac14e^{-t}+\\left(-3t^2+\\frac32t-\\frac14\\right)e^{-3t}\\right]h(t).\\end{aligned}$$\n第一式的实极点是 $-1/2$，所以对应衰减 $e^{-t/2}$，不是原识别文本误写的虚指数；第二式三级极点产生二次多项式。"
+        },
+        {
+          "unit_id": "CH09-S03-SS02",
+          "paragraph": "延迟因子常先用 $\\mathcal L^{-1}[e^{-p\\tau}F(p)]=f(t-\\tau)h(t-\\tau)$ 处理，比重新闭路更清楚。[例21](#reader-cafada0c840d852c2fda)先认出 $(p^2-2)^{-1}$ 对应 $\\sinh(\\sqrt2t)/\\sqrt2$，再得到\n$$\\begin{aligned}\\mathcal L^{-1}\\!\\left[\\frac{1-e^{-4p}}{p^2-2}\\right]=\\frac1{\\sqrt2}\\bigl[&\\sinh(\\sqrt2t)h(t)\\\\-&\\sinh(\\sqrt2(t-4))h(t-4)\\bigr].\\end{aligned}$$\n$t<4$ 时第二项尚未启动，之后扣去的也是完整延迟响应，开关与括号内时间必须同步移动。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-e522900defd23227e936",
+        "#reader-26b2cee8111a7de265fd",
+        "#reader-6e55d00e57a242057e91",
+        "#reader-cafada0c840d852c2fda"
+      ]
+    },
+    "CH09-S03-SS03": {
+      "status": "reviewed_no_further_general_result_gap",
+      "manual_assessment": "无穷远收敛级数反演、Bessel/erf、冲激与双边Z及ROC、调制/受迫振动工具和附表使用条件都默认可见。",
+      "original_examples_reviewed": [
+        {
+          "index": 0,
+          "owner_id": "EX-CH22",
+          "reader_anchor": "reader-b5e1be918be0bcfa58bf",
+          "json_pointer_prefix": "/examples/0",
+          "label": "例 22",
+          "statement": "求 $F(p)=\\dfrac{1}{p^{n+1}}\\mathrm{e}^{-1/p}$（$n=0,1,2,\\cdots$）的本函数。",
+          "conclusion": "$\\mathrm{L}^{-1}\\!\\left[\\dfrac{1}{p^{n+1}}\\mathrm{e}^{-1/p}\\right]=t^{n/2}\\mathrm{J}_n(2\\sqrt t)$（$t\\geqslant0$，$n=0,1,2,\\cdots$）；特别地 $n=0$ 时 $\\mathrm{L}^{-1}\\!\\left[\\dfrac{1}{p}\\mathrm{e}^{-1/p}\\right]=\\mathrm{J}_0(2\\sqrt t)$（附表 2 公式 50）。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 1,
+          "owner_id": "EX-CH23",
+          "reader_anchor": "reader-84a918c889b9ef7d09b9",
+          "json_pointer_prefix": "/examples/1",
+          "label": "例 23",
+          "statement": "求 $\\mathrm{L}^{-1}\\!\\left[\\dfrac{\\sqrt a}{p\\sqrt{p+a}}\\right]$，$a>0$。",
+          "conclusion": "$\\mathrm{L}^{-1}\\!\\left[\\dfrac{\\sqrt a}{p\\sqrt{p+a}}\\right]=\\operatorname{erf}(\\sqrt{at})$（$a>0$，$t\\geqslant0$）（附表 2 公式 53）。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        },
+        {
+          "index": 2,
+          "owner_id": "EX-Z-TRANSFORM",
+          "reader_anchor": "reader-9d8f94b53ca9ec99e87b",
+          "json_pointer_prefix": "/examples/2",
+          "label": "抽样序列的 Z 变换",
+          "statement": "取采样周期 $T=1$，测得连续函数 $f(t)$ 的离散数列 $f(n)=2^{-|n|}$（$n=0,\\pm1,\\pm2,\\cdots$）。求它的 Z 变换，并指出收敛区域。",
+          "conclusion": "$Z[f(t)]=-\\dfrac{3z}{2(z-2)\\left(z-\\dfrac12\\right)}$，$\\dfrac12<|z|<2$；这个表达式正是它在圆环 $\\dfrac12<|z|<2$ 内的罗朗级数。",
+          "verdict": "covered_by_visible_formula_or_equivalent_parameterized_rule"
+        }
+      ],
+      "default_body_evidence": [
+        {
+          "unit_id": "CH09-S03-SS03",
+          "paragraph": "若像为两个已知像的乘积，满足卷积条件时可用 $\\mathcal L^{-1}[FG](t)=\\int_0^t f(t-u)g(u)\\,\\mathrm du$，负时间取零。[例23](#reader-84a918c889b9ef7d09b9)对 $a>0$ 将 $\\sqrt a/[p\\sqrt{p+a}]$ 拆成常数倍的 $1/p$ 与 $(p+a)^{-1/2}$。后者本函数为 $e^{-at}/\\sqrt{\\pi t}$（$t>0$），所以\n$$\\sqrt{\\frac a\\pi}\\int_0^t\\frac{e^{-au}}{\\sqrt u}\\,\\mathrm du=\\operatorname{erf}(\\sqrt{at}),$$\n其中 $\\operatorname{erf}(x)=2\\int_0^x e^{-u^2}\\,\\mathrm du/\\sqrt\\pi$。因此 $\\mathcal L^{-1}[\\sqrt a/(p\\sqrt{p+a})]=\\operatorname{erf}(\\sqrt{at})h(t)$；根式从正实轴相容的右半平面分支选定，原文漏掉根号的转录不能沿用。"
+        },
+        {
+          "unit_id": "CH09-S03-SS03",
+          "paragraph": "查附表时继续沿用本节的函数定义：$\\operatorname{erfc}(x)=1-\\operatorname{erf}(x)$ 是互补误差函数；$J_\\nu$ 与修正贝塞尔函数 $I_\\nu$ 也不能混用。每行的参数范围、因果约定和与正实轴相容的根式或对数分支都属于公式。反演结果最后仍应核对原问题的初值、零段和适用域。"
+        }
+      ],
+      "new_reader_anchors_preserved_as_source": [
+        "#reader-b5e1be918be0bcfa58bf",
+        "#reader-84a918c889b9ef7d09b9",
+        "#reader-9d8f94b53ca9ec99e87b"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "id": "REMAINING-REAL-AVERAGE-INTEGRAL",
+      "priority": "P2",
+      "category": "recommended_default_textbook_identity",
+      "unit_id": "CH03-S05",
+      "classification_note": "这不是新定理；是教材明确提出的可复用实积分恒等式，复杂函数的实平均与半周期对称的转换未在默认正文给出最终结果。一般平均值定理可推它，但未显式写出该实积分等式。若root将其归为普通代入示例，可作为可选补强而非阻断交付。",
+      "original_reader_anchor": "reader-682c68b2f5b30f119239",
+      "original_pointers": [
+        "/examples/0/statement",
+        "/examples/0/conclusion"
+      ],
+      "original_source": {
+        "path": "data/parse/complex-analysis-v2/original_text/ch03_s05.md",
+        "lines": [
+          84,
+          84
+        ]
+      },
+      "new_default_evidence": "正文给f(a)的圆周平均与ds平均，但仅在末尾链接“用平均值公式计算积分”，没有e^{cosθ} cos(sinθ)半周期积分=π。",
+      "suggested_default_paragraph": "平均值公式还能把一个复积分直接转成可复用的实积分恒等式。对整函数 $f(z)=e^z$，单位圆 $C$ 取正向时有 $\\oint_C e^z\\,\\mathrm dz/z=2\\pi\\mathrm i$。令 $z=e^{\\mathrm i\\theta}$ 并比较实部，再利用 $\\theta$ 与 $2\\pi-\\theta$ 的对称性，可得\n$$\\int_0^\\pi e^{\\cos\\theta}\\cos(\\sin\\theta)\\,\\mathrm d\\theta=\\pi.$$\n这里的结果包含从复圆周积分回到实振荡积分的转换；完整参数化与相消过程仍留在[平均值公式例题](#reader-682c68b2f5b30f119239)中。",
+      "source_snapshot_preserved": true
+    }
+  ],
+  "semantic_math_warnings": [
+    {
+      "unit_id": "CH07",
+      "priority": "P2",
+      "category": "existing_result_TeX_semantic_corruption",
+      "before": "本章的完整实例是 $Gamma$ 函数。它先由右半平面上的积分定义，再借递推式逐块向左延伸，最后成为有单极点的亚纯函数。这里的积分估计还会在第九章说明拉氏变换的解析性；$Gamma$ 与贝塔积分的关系，则会在第八章确定三角形映照的尺度。",
+      "before_repr": "'本章的完整实例是 $Gamma$ 函数。它先由右半平面上的积分定义，再借递推式逐块向左延伸，最后成为有单极点的亚纯函数。这里的积分估计还会在第九章说明拉氏变换的解析性；$Gamma$ 与贝塔积分的关系，则会在第八章确定三角形映照的尺度。'",
+      "suggested_exact_paragraph": "本章的完整实例是 $\\Gamma$ 函数。它先由右半平面上的积分定义，再借递推式逐块向左延伸，最后成为有单极点的亚纯函数。这里的积分估计还会在第九章说明拉氏变换的解析性；$\\Gamma$ 与贝塔积分的关系，则会在第八章确定三角形映照的尺度。",
+      "reader_anchor": null,
+      "coverage_ids_to_sync": [],
+      "reason": "Gamma/alpha/in/equiv/sin/cos等命令反斜线丢失；KaTeX会将字母连乘，不一定报katex-error。"
+    },
+    {
+      "unit_id": "CH07-S01",
+      "priority": "P1",
+      "category": "existing_result_TeX_semantic_corruption",
+      "before": "设 $f,g$ 在同一个区域 $D$ 解析；“区域”要求开且连通。如果存在互不相同的点 $alpha_kin D$，满足 $f(alpha_k)=g(alpha_k)$，且 $alpha_k\to ain D$，那么 $fequiv g$ 于整个 $D$。理解这个唯一性定理，只要令 $F=f-g$：若 $F$ 不恒为零，零点应当孤立，便不允许这些零点在内部点 $a$ 聚集。先在 $a$ 附近得到恒零，再用重叠小圆沿域内曲线传到任意点。有限多个相等点不够，聚点只在边界也不够；例如 $sin(1/(1-z))$ 在 $|z|<1$ 的零点趋向边界点 $1$，并不迫使函数恒零。",
+      "before_repr": "'设 $f,g$ 在同一个区域 $D$ 解析；“区域”要求开且连通。如果存在互不相同的点 $alpha_kin D$，满足 $f(alpha_k)=g(alpha_k)$，且 $alpha_k\\to ain D$，那么 $fequiv g$ 于整个 $D$。理解这个唯一性定理，只要令 $F=f-g$：若 $F$ 不恒为零，零点应当孤立，便不允许这些零点在内部点 $a$ 聚集。先在 $a$ 附近得到恒零，再用重叠小圆沿域内曲线传到任意点。有限多个相等点不够，聚点只在边界也不够；例如 $sin(1/(1-z))$ 在 $|z|<1$ 的零点趋向边界点 $1$，并不迫使函数恒零。'",
+      "suggested_exact_paragraph": "设 $f,g$ 在同一个区域 $D$ 解析；“区域”要求开且连通。如果存在互不相同的点 $\\alpha_k\\in D$，满足 $f(\\alpha_k)=g(\\alpha_k)$，且 $\\alpha_k\\to a\\in D$，那么 $f\\equiv g$ 于整个 $D$。理解这个唯一性定理，只要令 $F=f-g$：若 $F$ 不恒为零，零点应当孤立，便不允许这些零点在内部点 $a$ 聚集。先在 $a$ 附近得到恒零，再用重叠小圆沿域内曲线传到任意点。有限多个相等点不够，聚点只在边界也不够；例如 $\\sin(1/(1-z))$ 在 $|z|<1$ 的零点趋向边界点 $1$，并不迫使函数恒零。",
+      "reader_anchor": "reader-ced8d556a1276f3ea9a7",
+      "coverage_ids_to_sync": [
+        "CH07-S01-C001"
+      ],
+      "reason": "Gamma/alpha/in/equiv/sin/cos等命令反斜线丢失；KaTeX会将字母连乘，不一定报katex-error。"
+    },
+    {
+      "unit_id": "CH07-S01",
+      "priority": "P1",
+      "category": "existing_result_TeX_semantic_corruption",
+      "before": "一段位于 $D$ 内的非退化曲线已经提供无穷多个有内部聚点的点，所以两解析函数沿这段曲线相等就会在 $D$ 恒等。这解释了实恒等式为何能推广：先确认两边都有解析的复版本，再把实轴当作比较集合。例如 $e^z$ 是全平面上与实指数相容的唯一整函数，而 $sin2z=2sin zcos z$ 由实轴等式确定；实三角、双曲恒等式同理。有分母的等式仍须排除分母零点，不能从实等式直接跳过定义域。[三角恒等式示例](#reader-9b9fbe669229112bfec6)保留原应用。",
+      "before_repr": "'一段位于 $D$ 内的非退化曲线已经提供无穷多个有内部聚点的点，所以两解析函数沿这段曲线相等就会在 $D$ 恒等。这解释了实恒等式为何能推广：先确认两边都有解析的复版本，再把实轴当作比较集合。例如 $e^z$ 是全平面上与实指数相容的唯一整函数，而 $sin2z=2sin zcos z$ 由实轴等式确定；实三角、双曲恒等式同理。有分母的等式仍须排除分母零点，不能从实等式直接跳过定义域。[三角恒等式示例](#reader-9b9fbe669229112bfec6)保留原应用。'",
+      "suggested_exact_paragraph": "一段位于 $D$ 内的非退化曲线已经提供无穷多个有内部聚点的点，所以两解析函数沿这段曲线相等就会在 $D$ 恒等。这解释了实恒等式为何能推广：先确认两边都有解析的复版本，再把实轴当作比较集合。例如 $e^z$ 是全平面上与实指数相容的唯一整函数，而 $\\sin 2z=2\\sin z\\cos z$ 由实轴等式确定；实三角、双曲恒等式同理。有分母的等式仍须排除分母零点，不能从实等式直接跳过定义域。[三角恒等式示例](#reader-9b9fbe669229112bfec6)保留原应用。",
+      "reader_anchor": "reader-ced8d556a1276f3ea9a7",
+      "coverage_ids_to_sync": [
+        "CH07-S01-C002"
+      ],
+      "reason": "Gamma/alpha/in/equiv/sin/cos等命令反斜线丢失；KaTeX会将字母连乘，不一定报katex-error。"
+    }
+  ],
+  "built_support_correction_impact": {
+    "built_data_sha256": "bca7a74b57502f131747dd3f9553d5f17d3bd99629076b8d09f28ef784db2140",
+    "correction_tool_modified": false,
+    "unit_count": 76,
+    "global_concepts_count": 0,
+    "observations": [
+      {
+        "unit_id": "CH05-S02",
+        "frozen_snapshot_present": true,
+        "textbook_snapshot_present": true,
+        "non_body_display_changes_vs_frozen_snapshot": [
+          {
+            "pointer": "/corrections/0/original",
+            "owner_id": "CORR-C0256-DALEMBERT",
+            "anchor": "reader-2f45b9b2e116a19ab753",
+            "anchor_preserved": true,
+            "source_map_length": 386,
+            "visible_text_length": 386
+          },
+          {
+            "pointer": "/reference_catalog/entries/126/markdown",
+            "owner_id": "C-0256",
+            "anchor": "reader-b2d1feb0c361060b4b8d",
+            "anchor_preserved": true,
+            "source_map_length": 318,
+            "visible_text_length": 318
+          }
+        ],
+        "visual_params": [],
+        "media_request_ids": [],
+        "visual_params_match_current_manifest": true,
+        "media_request_ids_match_current_manifest": true
+      },
+      {
+        "unit_id": "CH05-S05",
+        "frozen_snapshot_present": true,
+        "textbook_snapshot_present": true,
+        "non_body_display_changes_vs_frozen_snapshot": [
+          {
+            "pointer": "/annotations/3/markdown",
+            "owner_id": "PITFALL-LIMIT-FINITE",
+            "anchor": "reader-883a9fe4d23b5a962319",
+            "anchor_preserved": true,
+            "source_map_length": 171,
+            "visible_text_length": 171
+          },
+          {
+            "pointer": "/annotations/6/markdown",
+            "owner_id": "INTUITION-BALANCE",
+            "anchor": "reader-38ce81abd87cce98b33f",
+            "anchor_preserved": true,
+            "source_map_length": 121,
+            "visible_text_length": 121
+          }
+        ],
+        "visual_params": [
+          {
+            "id": "CH05-E",
+            "kind": "essential",
+            "params": {
+              "extent": 0.6,
+              "phase": 0
+            }
+          }
+        ],
+        "media_request_ids": [],
+        "visual_params_match_current_manifest": true,
+        "media_request_ids_match_current_manifest": true
+      },
+      {
+        "unit_id": "CH06-S03",
+        "frozen_snapshot_present": true,
+        "textbook_snapshot_present": true,
+        "non_body_display_changes_vs_frozen_snapshot": [
+          {
+            "pointer": "/annotations/6/markdown",
+            "owner_id": "LEFT-HALF-PITFALL",
+            "anchor": "reader-825f87b76bd66d6b4b08",
+            "anchor_preserved": true,
+            "source_map_length": 214,
+            "visible_text_length": 214
+          },
+          {
+            "pointer": "/reference_catalog/entries/63/markdown",
+            "owner_id": "C-0124",
+            "anchor": "reader-05ccf1492bc948620c6f",
+            "anchor_preserved": true,
+            "source_map_length": 225,
+            "visible_text_length": 225
+          }
+        ],
+        "visual_params": [
+          {
+            "id": "CH06-N",
+            "kind": "argument",
+            "params": {
+              "order": 3,
+              "radius": 1,
+              "shift": 0.4,
+              "poleOrder": 0
+            }
+          }
+        ],
+        "media_request_ids": [],
+        "visual_params_match_current_manifest": true,
+        "media_request_ids_match_current_manifest": true
+      },
+      {
+        "unit_id": "CH02-S05-SS06",
+        "frozen_snapshot_present": true,
+        "textbook_snapshot_present": true,
+        "non_body_display_changes_vs_frozen_snapshot": [
+          {
+            "pointer": "/reference_catalog/entries/74/markdown",
+            "owner_id": "C-0175",
+            "anchor": "reader-fce64847228fbe86f89e",
+            "anchor_preserved": true,
+            "source_map_length": 187,
+            "visible_text_length": 187
+          }
+        ],
+        "visual_params": [
+          {
+            "id": "CH02-hyperbolic",
+            "kind": "hyperbolic",
+            "params": {}
+          }
+        ],
+        "media_request_ids": [],
+        "visual_params_match_current_manifest": true,
+        "media_request_ids_match_current_manifest": true
+      },
+      {
+        "unit_id": "CH02-S05-SS07",
+        "frozen_snapshot_present": true,
+        "textbook_snapshot_present": true,
+        "non_body_display_changes_vs_frozen_snapshot": [
+          {
+            "pointer": "/reference_catalog/entries/256/markdown",
+            "owner_id": "C-0522",
+            "anchor": "reader-bc5ce40d52081bccedcb",
+            "anchor_preserved": true,
+            "source_map_length": 227,
+            "visible_text_length": 227
+          }
+        ],
+        "visual_params": [],
+        "media_request_ids": [
+          "MR-90744e16dbe5f48e0d03"
+        ],
+        "visual_params_match_current_manifest": true,
+        "media_request_ids_match_current_manifest": true
+      },
+      {
+        "unit_id": "CH03-S05",
+        "frozen_snapshot_present": true,
+        "textbook_snapshot_present": true,
+        "non_body_display_changes_vs_frozen_snapshot": [
+          {
+            "pointer": "/reference_catalog/entries/101/markdown",
+            "owner_id": "C-0219",
+            "anchor": "reader-3d11d49532b16af02732",
+            "anchor_preserved": true,
+            "source_map_length": 203,
+            "visible_text_length": 203
+          }
+        ],
+        "visual_params": [
+          {
+            "id": "CH03-maximum",
+            "kind": "maximum",
+            "params": {}
+          }
+        ],
+        "media_request_ids": [],
+        "visual_params_match_current_manifest": true,
+        "media_request_ids_match_current_manifest": true
+      },
+      {
+        "unit_id": "CH09-S03-SS03",
+        "frozen_snapshot_present": true,
+        "textbook_snapshot_present": true,
+        "non_body_display_changes_vs_frozen_snapshot": [
+          {
+            "pointer": "/reference_catalog/entries/474/markdown",
+            "owner_id": "C-0796",
+            "anchor": "reader-3f01c0a9666788386f2a",
+            "anchor_preserved": true,
+            "source_map_length": 294,
+            "visible_text_length": 294
+          }
+        ],
+        "visual_params": [],
+        "media_request_ids": [],
+        "visual_params_match_current_manifest": true,
+        "media_request_ids_match_current_manifest": true
+      },
+      {
+        "unit_id": "CH08",
+        "frozen_snapshot_present": true,
+        "textbook_snapshot_present": true,
+        "non_body_display_changes_vs_frozen_snapshot": [
+          {
+            "pointer": "/annotations/0/markdown",
+            "owner_id": "NOTE-NONZERO-DERIVATIVE",
+            "anchor": "reader-1d3c3a7cc52a7eefa21f",
+            "anchor_preserved": true,
+            "source_map_length": 801,
+            "visible_text_length": 801
+          }
+        ],
+        "visual_params": [],
+        "media_request_ids": [],
+        "visual_params_match_current_manifest": true,
+        "media_request_ids_match_current_manifest": true
+      },
+      {
+        "unit_id": "CH08-S06",
+        "frozen_snapshot_present": true,
+        "textbook_snapshot_present": true,
+        "non_body_display_changes_vs_frozen_snapshot": [
+          {
+            "pointer": "/annotations/5/markdown",
+            "owner_id": "EXAMPLE15-COEFFICIENT",
+            "anchor": "reader-20516fd9897631e28cf9",
+            "anchor_preserved": true,
+            "source_map_length": 281,
+            "visible_text_length": 281
+          }
+        ],
+        "visual_params": [],
+        "media_request_ids": [],
+        "visual_params_match_current_manifest": true,
+        "media_request_ids_match_current_manifest": true
+      },
+      {
+        "unit_id": "CH06-S02-SS02",
+        "frozen_snapshot_present": true,
+        "textbook_snapshot_present": true,
+        "non_body_display_changes_vs_frozen_snapshot": [
+          {
+            "pointer": "/annotations/8/markdown",
+            "owner_id": "DERIVE-ABSOLUTE-CONVERGENCE",
+            "anchor": "reader-c241684990503822ff44",
+            "anchor_preserved": true,
+            "source_map_length": 477,
+            "visible_text_length": 477
+          }
+        ],
+        "visual_params": [
+          {
+            "id": "CH06-A",
+            "kind": "arc-decay",
+            "params": {
+              "radius": 3,
+              "degree": 2
+            }
+          }
+        ],
+        "media_request_ids": [],
+        "visual_params_match_current_manifest": true,
+        "media_request_ids_match_current_manifest": true
+      }
+    ],
+    "parameter_effect_assessment": "校正入口只接收/返回reader_document和全局concepts的深拷贝，不接收视觉plan；本次构建被查单元的visual kind/params与media request IDs均逐项与manifest比较，以上标志记录实测结果。未改任何参数、代码或构建文件。",
+    "correction_tool_sha256": "d9b135e2ec4fa0cfae39d933114456b465faf53a8b36af37d423e1753dcaf558"
+  }
+}

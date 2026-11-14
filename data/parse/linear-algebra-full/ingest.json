@@ -1,0 +1,7 @@
+{
+  "route": "mineru",
+  "source_sha256": "15b161f6cd7c383c5d8f531146e9e7543ee413dfe69d43a5c1e6b3f85bb17174",
+  "mineru": {
+    "layout_sha256": "dc9b35284043bab4f95073b4ace0532428b79aa9bf865b17f7dac35c0a8b3aa2"
+  }
+}

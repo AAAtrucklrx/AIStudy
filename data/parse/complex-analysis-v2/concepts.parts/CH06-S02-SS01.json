@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH06-S02-SS01",
+    "text_sha256": "656c3df535974c530b6af943dd845c47061120ac62d6b34a94a4913af4727bd7",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "656c3df535974c530b6af943dd845c47061120ac62d6b34a94a4913af4727bd7",
+    "source": "original_text",
+    "source_path": "original_text/ch06_s02_ss01.md"
+  },
+  "unit": {
+    "unit_id": "CH06-S02-SS01",
+    "level": "subsection",
+    "chapter": "CH06",
+    "section": "CH06-S02",
+    "title": "$\\int_0^{2\\pi}R(\\cos \\theta ,\\sin \\theta)\\mathrm{d}\\theta$ 型积分",
+    "anchor": "6.2.1"
+  },
+  "concepts": [
+    {
+      "name": "留数定理",
+      "type": "theorem",
+      "formal": "$$\\int_ {c} \\frac {\\mathrm{d} z}{\\mathrm{i} (1 - p z) (z - p)} = 2 \\pi \\mathrm{iRes} [ f (z), p ]$$",
+      "source_quote": "故由留数定理 $$\\int_ {c} \\frac {\\mathrm{d} z}{\\mathrm{i} (1 - p z) (z - p)} = 2 \\pi \\mathrm{iRes} [ f (z), p ],$$"
+    },
+    {
+      "name": "泊松积分",
+      "type": "formula",
+      "formal": "$$\\int_ {0} ^ {2 \\pi} \\frac {\\mathrm{d} \\theta}{1 - 2 p \\cos \\theta + p ^ {2}} = \\frac {2 \\pi}{1 - p ^ {2}}, \\quad 0 < p < 1.$$",
+      "source_quote": "故有 $$\\int_ {0} ^ {2 \\pi} \\frac {\\mathrm{d} \\theta}{1 - 2 p \\cos \\theta + p ^ {2}} = \\frac {2 \\pi}{1 - p ^ {2}}.$$ 这个积分称为泊松积分."
+    },
+    {
+      "name": "式(6.5)",
+      "type": "formula",
+      "formal": "$$\\int_ {a} ^ {b} f (x) \\mathrm{d} x + \\int_ {f} f (z) \\mathrm{d} z = 2 \\pi \\mathrm{i} \\sum_ {k} \\operatorname{Res} [ f (z), a _ {k} ]\\tag{6.5}$$ 这里，$a_{k}$ 是 $f(z)$ 在 $D$ 中的极点.",
+      "source_quote": "对函数 $f(x)$ 应用留数定理得 $$\\int_ {a} ^ {b} f (x) \\mathrm{d} x + \\int_ {f} f (z) \\mathrm{d} z = 2 \\pi \\mathrm{i} \\sum_ {k} \\operatorname{Res} [ f (z), a _ {k} ]\\tag{6.5}$$ 这里， $a_{k}$ 是 $f(z)$ 在 $D$ 中的极点."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 3,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "留数定理",
+    "泊松积分",
+    "式(6.5)"
+  ]
+}

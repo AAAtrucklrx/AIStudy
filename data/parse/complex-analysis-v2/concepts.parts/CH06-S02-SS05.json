@@ -1,0 +1,69 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH06-S02-SS05",
+    "text_sha256": "a13f93b205e29ac0f4f75fb6cebb2c598e0c42d58675a3c6f4dd6ec6a95e087e",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "a13f93b205e29ac0f4f75fb6cebb2c598e0c42d58675a3c6f4dd6ec6a95e087e",
+    "source": "original_text",
+    "source_path": "original_text/ch06_s02_ss05.md"
+  },
+  "unit": {
+    "unit_id": "CH06-S02-SS05",
+    "level": "subsection",
+    "chapter": "CH06",
+    "section": "CH06-S02",
+    "title": "多值函数的积分",
+    "anchor": "6.2.5"
+  },
+  "concepts": [
+    {
+      "name": "留数定理",
+      "type": "theorem",
+      "formal": "由留数定理，有 $$2 \\pi \\mathrm{iRes} [ f (z), \\mathrm{i} ] = \\int_ {[ - R, r)} f (z) \\mathrm{d} z + \\int_ {C _ {r}} f (z) \\mathrm{d} z + \\int_ {r} ^ {R} \\frac {\\ln x}{(x ^ {2} + 1) ^ {2}} \\mathrm{d} x + \\int_ {C _ {R}} f (z) \\mathrm{d} z.\\tag{6.14}$$",
+      "source_quote": "由留数定理，有"
+    },
+    {
+      "name": "计算极点的留数公式",
+      "type": "formula",
+      "formal": "$$\\operatorname{Res} [ f (z), i ] = \\lim _ {z \\rightarrow 0} \\frac {\\mathrm{d}}{\\mathrm{d} z} [ f (z) (z - i) ^ {2} ] = \\left. \\frac {\\mathrm{d}}{\\mathrm{d} z} \\frac {\\ln z}{(z + i) ^ {2}} \\right| _ {z = i} = \\left[ \\frac {1}{z} \\frac {1}{(z + i) ^ {2}} - \\frac {2}{(z + i) ^ {3}} \\ln z \\right] _ {z = i} = - \\frac {1}{4 i} + \\frac {2}{8 i} \\ln i.$$",
+      "source_quote": "依计算极点的留数公式，有"
+    },
+    {
+      "name": "公式(6.17)",
+      "type": "formula",
+      "formal": "$$\\int_ {0} ^ {+ \\infty} x ^ {p} R (x) d x = \\frac {2 \\pi i}{1 - e ^ {2 p \\pi i}} \\sum \\operatorname{Res} z ^ {p} R (z).\\tag{6.17}$$",
+      "source_quote": "在(6.16)式两边令 $r\\to0,R\\to+\\infty$ ，取极限得 $$\\int_ {0} ^ {+ \\infty} x ^ {p} R (x) d x = \\frac {2 \\pi i}{1 - e ^ {2 p \\pi i}} \\sum \\operatorname{Res} z ^ {p} R (z).\\tag{6.17}$$"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 3,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "前面推导公式"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "留数定理",
+    "计算极点的留数公式",
+    "公式(6.17)"
+  ]
+}

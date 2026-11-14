@@ -1,0 +1,19 @@
+{
+  "boundary": {
+    "duplicate": false,
+    "missing": false
+  },
+  "input_fingerprint": "1b1e5101a2f3d7d118b2d68e33c89489cc9d7772b297e5456afdb9f91a61bc1a",
+  "logical_book_id": "logical-book-1b1e5101a2f3d7d1",
+  "normalized_source_sha256": "2fb901476e339913698738d585d420fcd364edee6f8e4b2fa23e3789290d13a4",
+  "normalizer_version": "logical-markdown-v6-images",
+  "parts": [
+    {
+      "file": "/home/aaatrucklrx/桌面/AI教学/AIforStudy/data/books/linear-algebra-full/runs/run-20261007-151704-b55a5a/work/prepared-parse/structured.anchor3.md",
+      "first_anchor": "1",
+      "last_anchor": "8.5",
+      "order": 1,
+      "sha256": "c5022585c6a4552d9fd4791d1584762ef1ad080647d2a4176617e02606f85ef9"
+    }
+  ]
+}

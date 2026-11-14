@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH07-S01",
+    "text_sha256": "7d42135767213da5dfb1f6fec8ce208066d1e71b67979ffd235b3a7d7efb4292",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "7d42135767213da5dfb1f6fec8ce208066d1e71b67979ffd235b3a7d7efb4292",
+    "source": "original_text",
+    "source_path": "original_text/ch07_s01.md"
+  },
+  "unit": {
+    "unit_id": "CH07-S01",
+    "level": "section",
+    "chapter": "CH07",
+    "section": "CH07-S01",
+    "title": "唯一性定理和解析开拓的概念",
+    "anchor": "7.1"
+  },
+  "concepts": [
+    {
+      "name": "唯一性定理",
+      "type": "theorem",
+      "formal": "如果区域 $D$ 内的两个解析函数 $f(z)$ 及 $g(z)$ 在一串互不相同的点列 $$\\alpha_ {1}, \\alpha_ {2}, \\dots , \\alpha_ {k}, \\dots$$ 上的值相等，并且这个点列以 $D$ 内某点 $a$ 为极限，那么这两个函数在 $D$ 内恒等，即 $$f (z) \\equiv g (z), \\quad z \\in D.$$",
+      "source_quote": "定理1（唯一性定理）如果区域 $D$ 内的两个解析函数 $f(z)$ 及 $g(z)$ 在一串互不相同的点列 $$\\alpha_ {1}, \\alpha_ {2}, \\dots , \\alpha_ {k}, \\dots$$ 上的值相等，并且这个点列以 $D$ 内某点 $a$ 为极限，那么这两个函数在 $D$ 内恒等，即 $$f (z) \\equiv g (z), \\quad z \\in D.$$"
+    },
+    {
+      "name": "推论1",
+      "type": "corollary",
+      "formal": "设 $f(z)$ 及 $g(z)$ 都在区域 $D$ 内解析，且在 $D$ 内的某一段曲线上它们的值相同，则这两个函数在 $D$ 内恒等.",
+      "source_quote": "推论1 设 $f(z)$ 及 $g(z)$ 都在区域 $D$ 内解析，且在 $D$ 内的某一段曲线上它们的值相同，则这两个函数在 $D$ 内恒等."
+    },
+    {
+      "name": "推论2",
+      "type": "corollary",
+      "formal": "设在实数轴上有恒等式 $f(x) \\equiv g(x), f(z)$ 及 $g(z)$ 在全平面内解析，且在实轴上分别与 $f(x)$ 与 $g(x)$ 相一致，则对一切复数 $z$，有 $f(z) \\equiv g(z)$。",
+      "source_quote": "推论2 设在实数轴上有恒等式 $f(x) \\equiv g(x), f(z)$ 及 $g(z)$ 在全平面内解析，且在实轴上分别与 $f(x)$ 与 $g(x)$ 相一致，则对一切复数 $z$，有 $f(z) \\equiv g(z)$."
+    },
+    {
+      "name": "解析开拓",
+      "type": "definition",
+      "formal": "设 $f(z)$ 在集合 $E$ 上有定义，$D$ 是一个包含 $E$ 的更大的区域，如果存在 $D$ 内的解析函数 $F(z)$，使得当 $z \\in E$ 时，有 $F(z) = f(z)$. 则称 $F(z)$ 是 $f(z)$ 在区域 $D$ 内的解析开拓.",
+      "source_quote": "定义1 设 $f(z)$ 在集合 $E$ 上有定义，$D$ 是一个包含 $E$ 的更大的区域，如果存在 $D$ 内的解析函数 $F(z)$，使得当 $z \\in E$ 时，有 $F(z) = f(z)$. 则称 $F(z)$ 是 $f(z)$ 在区域 $D$ 内的解析开拓."
+    },
+    {
+      "name": "直接解析开拓",
+      "type": "definition",
+      "formal": "设函数 $f_{1}(z)$ 在区域 $D_{1}$ 内解析，$D_{2}$ 是另一个区域，$D_{1}$ 与 $D_{2}$ 相交于区域 $D$（图7.2）。如果存在一个在区域 $D_{2}$ 内解析的函数 $f_{2}(z)$，且在 $D$ 内有 $$f _ {1} (z) = f _ {2} (z),$$ 则 $f_{2}(z)$ 称为 $f_{1}(z)$ 在 $D_{2}$ 内的直接解析开拓；反过来，$f_{1}(z)$ 也是 $f_{2}(z)$ 在 $D_{1}$ 内的直接解析开拓。而 $f_{1}(z)$ 和 $f_{2}(z)$ 称为互为直接解析开拓。",
+      "source_quote": "定义2 设函数 $f_{1}(z)$ 在区域 $D_{1}$ 内解析，$D_{2}$ 是另一个区域，$D_{1}$ 与 $D_{2}$ 相交于区域 $D$（图7.2）。如果存在一个在区域 $D_{2}$ 内解析的函数 $f_{2}(z)$，且在 $D$ 内有 $$f _ {1} (z) = f _ {2} (z),$$ 则 $f_{2}(z)$ 称为 $f_{1}(z)$ 在 $D_{2}$ 内的直接解析开拓；反过来，$f_{1}(z)$ 也是 $f_{2}(z)$ 在 $D_{1}$ 内的直接解析开拓。而 $f_{1}(z)$ 和 $f_{2}(z)$ 称为互为直接解析开拓。"
+    },
+    {
+      "name": "互为直接解析开拓",
+      "type": "definition",
+      "formal": "而 $f_{1}(z)$ 和 $f_{2}(z)$ 称为互为直接解析开拓。",
+      "source_quote": "而 $f_{1}(z)$ 和 $f_{2}(z)$ 称为互为直接解析开拓。"
+    },
+    {
+      "name": "奇点",
+      "type": "definition",
+      "formal": "并称这两个收敛圆的切边角点为奇点，于是极点、本性奇点、支点都是奇点。",
+      "source_quote": "并称这两个收敛圆的切边角点为奇点，于是极点、本性奇点、支点都是奇点。"
+    },
+    {
+      "name": "达朗贝尔公式",
+      "type": "formula",
+      "formal": "用达朗贝尔公式易求得右端幂级数的收敛半径 $R = 1$.",
+      "source_quote": "用达朗贝尔公式易求得右端幂级数的收敛半径 $R = 1$."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 8,
+    "漏掉的具名结论": [
+      "推论1",
+      "推论2"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "唯一性定理",
+    "推论1",
+    "推论2",
+    "解析开拓",
+    "直接解析开拓",
+    "互为直接解析开拓",
+    "奇点",
+    "达朗贝尔公式"
+  ]
+}

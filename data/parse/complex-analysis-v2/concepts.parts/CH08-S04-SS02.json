@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH08-S04-SS02",
+    "text_sha256": "7c99c3adaa4174065cc78aaa638150466e88cedc6a1957fc49860fc3197fb25a",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "7c99c3adaa4174065cc78aaa638150466e88cedc6a1957fc49860fc3197fb25a",
+    "source": "original_text",
+    "source_path": "original_text/ch08_s04_ss02.md"
+  },
+  "unit": {
+    "unit_id": "CH08-S04-SS02",
+    "level": "subsection",
+    "chapter": "CH08",
+    "section": "CH08-S04",
+    "title": "变换 w = e^{z} 和 w = \\mathrm{Ln}z",
+    "anchor": "8.4.2"
+  },
+  "concepts": [
+    {
+      "name": "指数映射的保形性",
+      "type": "property",
+      "formal": "$w = e^{z}$ 把条形域 $a < \\operatorname{Im} z < b, b - a \\leqslant 2\\pi$ 保形映照成角域 $a < \\arg w < b$.",
+      "source_quote": "$w = e^{z}$ 把条形域 $a < \\operatorname{Im} z < b, b - a \\leqslant 2\\pi$ 保形映照成角域 $a < \\arg w < b$."
+    },
+    {
+      "name": "对数函数 $\\mathrm{Ln}z$",
+      "type": "definition",
+      "formal": "$w = \\mathrm{Ln}z$ 是 $w = e^z$ 的反函数，取正实轴为支割线，在沿正实轴割开了的 $z$ 平面 $D$ 内可以分出它的无穷多个单值解析分支",
+      "source_quote": "$w = \\mathrm{Ln}z$ 是 $w = e^z$ 的反函数，取正实轴为支割线"
+    },
+    {
+      "name": "对数函数的单值解析分支",
+      "type": "formula",
+      "formal": "$(\\mathrm{Ln}z)_n = \\ln |z| + i\\theta + 2n\\pi i, n = 0, \\pm 1, \\pm 2, \\dots, 0 < \\theta < 2\\pi.$",
+      "source_quote": "$(\\mathrm{Ln}z)_n = \\ln |z| + i\\theta + 2n\\pi i, n = 0, \\pm 1, \\pm 2, \\dots, 0 < \\theta < 2\\pi.$"
+    },
+    {
+      "name": "对数映射的保形性",
+      "type": "property",
+      "formal": "其中每一个分支都可用来作保形变换，它们分别把顶点在 $z = 0$ 的角域保形地变成条形域\n$$2 n \\pi + a <   \\mathrm{Im} w <   2 n \\pi + b.$$",
+      "source_quote": "其中每一个分支都可用来作保形变换，它们分别把顶点在 $z = 0$ 的角域保形地变成条形域"
+    },
+    {
+      "name": "指数函数保形映照的特殊情形",
+      "type": "property",
+      "formal": "特别地，条形域 $0 < \\operatorname{Im} z < \\pi$ 被保形映照成上半 $w$ 平面.",
+      "source_quote": "特别地，条形域 $0 < \\operatorname{Im} z < \\pi$ 被保形映照成上半 $w$ 平面."
+    },
+    {
+      "name": "主值分支 $\\ln z$",
+      "type": "formula",
+      "formal": "$$\\ln z = \\ln | z | + i \\theta , \\quad 0 <   \\theta <   2 \\pi .$$",
+      "source_quote": "最常用的是 $n = 0$ 的一支\n$$\\ln z = \\ln | z | + i \\theta , \\quad 0 <   \\theta <   2 \\pi .$$"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 6,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "指数映射的保形性",
+    "对数函数 $\\mathrm{Ln}z$",
+    "对数函数的单值解析分支",
+    "对数映射的保形性",
+    "指数函数保形映照的特殊情形",
+    "主值分支 $\\ln z$"
+  ]
+}

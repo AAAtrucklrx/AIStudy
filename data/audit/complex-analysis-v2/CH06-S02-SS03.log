@@ -1,0 +1,55 @@
+—— CH06-S02-SS03 回路开始（run 2026-10-03 09:05:14）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 1, '教案问题明细': ['CH06-S02-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'], '教案提醒': 3, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 1 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH06-S02-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [5] 条 → 并集 3 条工单
+    T-5fe94c [P1] hits=1 「把积分区间对称地取成 $[-R,R]$，再让 $R\to+\infty$」
+    T-960f15 [P1] hits=1 「在 (6.9) 中令 $R\to+\infty$、$r\to0$ 取极限」
+    T-R99ff2 [P1] hits=1 「CH06-S02-SS03: 有一张图没声明**服务什么** （缺 co」
+[轮 1] 按 3 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06-S02-SS03 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH06-S02-SS03.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06-S02-SS03 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH06-S02-SS03.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 1 条：['CH06-S02-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 1 / 仍开着 2；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 2 条（丢了 1 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-960f15 [P1]：过渡句已补：先说明两小圆弧极限为 −πi Res，再说明移项变号成 +πi Res，并交代三段实轴积分（挖 r 邻域、R→∞）的极限即主值。
+   · 工单没关掉 T-R99ff2 [P1]：流程图已加「$I_1$、$I_2$ 的计算流程」的服务声明，但轮廓图仍只是裸的「（插图）」，未声明它服务什么内容。
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（2 条）：
+  [P1] T-960f15 「在 (6.9) 中令 $R\to+\infty$、$r\to0$ 取极限。左边只」
+  [P1] T-R99ff2 「CH06-S02-SS03: 有一张图没声明**服务什么** （缺 concep」
+记录写到 data/audit/complex-analysis-v2/CH06-S02-SS03.loop.json
+—— CH06-S02-SS03 回路开始（run 2026-10-03 10:58:09）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 3, '确定性已知误报': 0, '教案硬问题': 1, '教案问题明细': ['CH06-S02-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'], '教案提醒': 3, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 1 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH06-S02-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  上一趟的 ['T-960f15', 'T-R99ff2', 'T-960f15', 'T-R99ff2'] 原句已不在成品里 → 视为已改，不再背
+  每次 [4] 条 → 并集 3 条工单
+    T-592cc8 [P1] hits=1 「算出右边以后，取实部得 $I_1$，取虚部得 $I_2$。」
+    T-8c5ecb [P1] hits=1 「例8 走的就是这条流程：$R(z)=\frac{1}{z(z^2+a^2」
+    T-R99ff2 [P1] hits=1 「CH06-S02-SS03: 有一张图没声明**服务什么** （缺 co」
+[轮 1] 按 3 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06-S02-SS03 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH06-S02-SS03.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06-S02-SS03 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH06-S02-SS03.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 1 条：['CH06-S02-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 2 / 仍开着 1；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 4 条
+  📌 发现 3 处**原文疑似有错** → 记进勘误清单（不改成品）
+  📌 原文疑似有错：这一节 3 条 → 原文疑似有错.json（共 46 条）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R99ff2 [P1]：流程图已注明服务对象「（过程图）$I_1$、$I_2$ 的计算流程」，但图6.5那张插图仍只写「（插图）」，没有声明它服务什么。
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（1 条）：
+  [P1] T-R99ff2 「CH06-S02-SS03: 有一张图没声明**服务什么** （缺 concep」
+记录写到 data/audit/complex-analysis-v2/CH06-S02-SS03.loop.json

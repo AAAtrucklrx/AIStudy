@@ -1,0 +1,173 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH05-S03",
+    "text_sha256": "455551019fd2c699030fd99ebe9eefa4893a53f7f2931ce4a2424498780f9813",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "455551019fd2c699030fd99ebe9eefa4893a53f7f2931ce4a2424498780f9813",
+    "source": "original_text",
+    "source_path": "original_text/ch05_s03.md"
+  },
+  "unit": {
+    "unit_id": "CH05-S03",
+    "level": "section",
+    "chapter": "CH05",
+    "section": "CH05-S03",
+    "title": "解析函数的泰勒(Taylor)展开",
+    "anchor": "5.3"
+  },
+  "concepts": [
+    {
+      "name": "定理11",
+      "type": "theorem",
+      "formal": "现在要讨论定理11的反问题，是否每一解析函数都可以展开成幂级数。",
+      "source_quote": "现在要讨论定理11的反问题，是否每一解析函数都可以展开成幂级数。"
+    },
+    {
+      "name": "柯西公式",
+      "type": "formula",
+      "formal": "由柯西公式有 $$f (z) = \\frac {1}{2 \\pi \\mathrm{i}} \\int_ {\\mathrm{C}} \\frac {f (\\zeta)}{\\zeta - z} \\mathrm{d} \\zeta .$$",
+      "source_quote": "由柯西公式有 $$f (z) = \\frac {1}{2 \\pi \\mathrm{i}} \\int_ {\\mathrm{C}} \\frac {f (\\zeta)}{\\zeta - z} \\mathrm{d} \\zeta .$$"
+    },
+    {
+      "name": "定理12",
+      "type": "theorem",
+      "formal": "定理12 设函数 $f(z)$ 在点 $a$ 解析，如果以 $a$ 为中心作一个圆，并命圆的半径不断扩大，直到圆周碰上 $f(z)$ 的奇点为止（如果 $f(z)$ 是整函数，这个圆的半径就是无限大），则在此圆域的内部 $f(z)$ 可展开成幂级数 $$f (z) = \\sum_ {n = 0} ^ {+ \\infty} a _ {n} (z - a) ^ {n},$$ 这里， $a_{n}=\\frac{f^{(n)}(a)}{n!},n=0,1,2,\\cdots.$",
+      "source_quote": "定理12 设函数 $f(z)$ 在点 $a$ 解析，如果以 $a$ 为中心作一个圆，并命圆的半径不断扩大，直到圆周碰上 $f(z)$ 的奇点为止（如果 $f(z)$ 是整函数，这个圆的半径就是无限大），则在此圆域的内部 $f(z)$ 可展开成幂级数"
+    },
+    {
+      "name": "泰勒展式",
+      "type": "definition",
+      "formal": "上式右端的幂级数的收敛半径 $R$ 等于 $a$ 到 $f(z)$ 的离 $a$ 最近的一个奇点的距离. 这个幂级数称为 $f(z)$ 在 $a$ 点或在圆：$|z - a| < R$ 内的泰勒展式.",
+      "source_quote": "这个幂级数称为 $f(z)$ 在 $a$ 点或在圆：$|z - a| < R$ 内的泰勒展式."
+    },
+    {
+      "name": "定理10",
+      "type": "theorem",
+      "formal": "由定理10及定理11立即可以得到下面的推论.",
+      "source_quote": "由定理10及定理11立即可以得到下面的推论."
+    },
+    {
+      "name": "推论1",
+      "type": "corollary",
+      "formal": "推论1 函数 $f(z)$ 在任一解析点的泰勒展式是唯一的.",
+      "source_quote": "推论1 函数 $f(z)$ 在任一解析点的泰勒展式是唯一的."
+    },
+    {
+      "name": "推论2",
+      "type": "corollary",
+      "formal": "推论2 幂级数即是它的和函数在收敛圆内的泰勒展式.",
+      "source_quote": "推论2 幂级数即是它的和函数在收敛圆内的泰勒展式."
+    },
+    {
+      "name": "定理13",
+      "type": "theorem",
+      "formal": "定理13 $f(z)$ 在区域 $D$ 内解析的必要充分条件是：$f(z)$ 在 $D$ 内任一点 $a$ 可以展开成 $z - a$ 的幂级数.",
+      "source_quote": "定理13 $f(z)$ 在区域 $D$ 内解析的必要充分条件是：$f(z)$ 在 $D$ 内任一点 $a$ 可以展开成 $z - a$ 的幂级数."
+    },
+    {
+      "name": "切比雪夫多项式",
+      "type": "definition",
+      "formal": "由三角学知识得知，所求得的幂级数系数 $$T _ {n} (t) = \\frac {1}{2 ^ {n - 1}} \\cos (n \\operatorname{arccost}), \\quad n = 1, 2, \\dots$$ 是一个 t 的 n 次多项式, 它称为切比雪夫(Чебышев)多项式.",
+      "source_quote": "它称为切比雪夫(Чебышев)多项式."
+    },
+    {
+      "name": "幂级数展开的唯一性",
+      "type": "property",
+      "formal": "由幂级数展开的唯一性，比较上式两边系数，得",
+      "source_quote": "由幂级数展开的唯一性，比较上式两边系数，得"
+    },
+    {
+      "name": "定义5（零点）",
+      "type": "definition",
+      "formal": "定义5 设 $f(z)$ 在 $z_0$ 点解析，且 $f(z_0) = 0$，则称 $z_0$ 是 $f(z)$ 的零点。",
+      "source_quote": "定义5 设 $f(z)$ 在 $z_0$ 点解析，且 $f(z_0) = 0$，则称 $z_0$ 是 $f(z)$ 的零点。"
+    },
+    {
+      "name": "m阶零点",
+      "type": "definition",
+      "formal": "2) 如果 $a_1, a_2, a_3, \\cdots$ 不全为零，则必存在有一个自然数 $m, a_m \\neq 0$，而对于 $n < m, a_n = 0$. 这时我们称 $z_0$ 是 $f(z)$ 的 $m$ 阶（或 $m$ 级）零点.",
+      "source_quote": "这时我们称 $z_0$ 是 $f(z)$ 的 $m$ 阶（或 $m$ 级）零点."
+    },
+    {
+      "name": "单零点",
+      "type": "definition",
+      "formal": "特别地，$m = 1$ 时，称 $z_0$ 是 $f(z)$ 的单零点.",
+      "source_quote": "特别地，$m = 1$ 时，称 $z_0$ 是 $f(z)$ 的单零点."
+    },
+    {
+      "name": "定理14",
+      "type": "theorem",
+      "formal": "定理 14 点  $z_{0}$  是  $f(z)$  的 m 阶零点的必要充分条件是:  $f(z_{0}) = f'(z_{0}) = \\cdots = f^{(m-1)}(z_{0}) = 0$ , 而  $f^{(m)}(z_{0}) \\neq 0$ .",
+      "source_quote": "定理 14 点  $z_{0}$  是  $f(z)$  的 m 阶零点的必要充分条件是:  $f(z_{0}) = f'(z_{0}) = \\cdots = f^{(m-1)}(z_{0}) = 0$ , 而  $f^{(m)}(z_{0}) \\neq 0$ ."
+    },
+    {
+      "name": "定理15",
+      "type": "theorem",
+      "formal": "定理15 点 $z_0$ 是不恒为零的解析函数 $f(z)$ 的 $m$ 阶零点的充要条件是在 $z_0$ 点的附近有 $$f (z) = \\left(z - z _ {0}\\right) ^ {m} g (z), \\quad g \\left(z _ {0}\\right) \\neq 0,$$ 而且 $g(z)$ 在 $z_0$ 解析.",
+      "source_quote": "定理15 点 $z_0$ 是不恒为零的解析函数 $f(z)$ 的 $m$ 阶零点的充要条件是在 $z_0$ 点的附近有 $$f (z) = \\left(z - z _ {0}\\right) ^ {m} g (z), \\quad g \\left(z _ {0}\\right) \\neq 0,$$ 而且 $g(z)$ 在 $z_0$ 解析."
+    },
+    {
+      "name": "定理16（零点的孤立性）",
+      "type": "theorem",
+      "formal": "定理16（零点的孤立性）设 $f(z)$ 在 $z_0$ 解析，且 $z_0$ 是它的一个零点.那么$f(z)$ 或者在 $z_0$ 的一个邻域内恒等于零；或者存在着 $z_0$ 的一个邻域，在此邻域内 $z_0$ 是 $f(z)$ 的唯一零点.",
+      "source_quote": "定理16（零点的孤立性）设 $f(z)$ 在 $z_0$ 解析，且 $z_0$ 是它的一个零点.那么$f(z)$ 或者在 $z_0$ 的一个邻域内恒等于零；或者存在着 $z_0$ 的一个邻域，在此邻域内 $z_0$ 是 $f(z)$ 的唯一零点."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 16,
+    "漏掉的具名结论": [
+      "定理11",
+      "定理12",
+      "定理10",
+      "推论1",
+      "推论2",
+      "定理13",
+      "定理14",
+      "定理15"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "现在要讨论定理",
+      "则由定理",
+      "综合定理",
+      "节中的定理",
+      "下面的定理"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "定理11",
+    "柯西公式",
+    "定理12",
+    "泰勒展式",
+    "定理10",
+    "推论1",
+    "推论2",
+    "定理13",
+    "切比雪夫多项式",
+    "幂级数展开的唯一性",
+    "定义5（零点）",
+    "m阶零点",
+    "单零点",
+    "定理14",
+    "定理15",
+    "定理16（零点的孤立性）"
+  ]
+}

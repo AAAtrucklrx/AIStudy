@@ -1,0 +1,1704 @@
+{
+  "schema_version": "TextbookConclusionsV1",
+  "units": {
+    "CH01": {
+      "unit_id": "CH01",
+      "source_path": "original_text/ch01.md",
+      "conclusions": []
+    },
+    "CH01-S01-SS01": {
+      "unit_id": "CH01-S01-SS01",
+      "source_path": "original_text/ch01_s01_ss01.md",
+      "conclusions": [
+        {
+          "id": "CH01-S01-SS01-C001",
+          "title": "虚单位、复数及其分量",
+          "statement_markdown": "规定 $i^2=-1$。复数写作 $z=x+iy$，其中 $x,y\\in\\mathbb R$，$\\operatorname{Re}z=x$，$\\operatorname{Im}z=y$。当 $y=0$ 时为实数；当 $x=0$ 且 $y\\ne0$ 时为纯虚数。方程 $x^2+1=0$ 的根为 $\\pm i$。",
+          "source_start_line": 3,
+          "source_end_line": 14,
+          "source_quote": "复数的概念是为了解决数学本身发展过程中所遇到的矛盾而产生的.由于二次方程\n$$x ^ {2} + 1 = 0\\tag{1.1}$$\n在实数范围内没有解，为了使这个方程有解，就把数的概念扩大，引进了虚单位\n$$i = \\sqrt {- 1},$$\n要求它能和普通的实数一道进行运算，服从实数范围内原来成立的那些基本运算法则，并满足条件\n$$\\mathrm{i} ^ {2} = - 1.$$\n这样引进一个虚单位后，不仅方程(1.1)有了两个解 $x = \\pm i$ ，而且（以后将要证明）任何代数方程的解都可以用 $a + \\mathrm{i}b(a,b$ 为实数）这种形式的数表示出来.\n我们把形如\n$$z = x + \\mathrm{i} y$$\n的数称为复数，其中， $x$ 和 $y$ 是任意实数，分别称为 $z$ 复数的实部和虚部.记为\n$$x = \\operatorname{Re} z, \\quad y = \\operatorname{Im} z.$$\n特别地，当 $\\mathrm{Im}z = 0$ 时，$z = \\mathrm{Re}z + \\mathrm{i}0 = x$ 是实数；当 $\\mathrm{Re}z = 0$ 且 $\\mathrm{Im}z \\neq 0$ 时，$z = \\mathrm{i}lmz = \\mathrm{i}y$ 称为纯虚数.",
+          "after": "一个复数写成 $z=x+iy$，其中 $x,y$ 都是实数。$x=\\operatorname{Re}z$ 叫实部，$y=\\operatorname{Im}z$ 叫虚部。例如 $3-2i$ 的虚部是 $-2$，不是 $-2i$；后者是虚部对应的那一项。$y=0$ 时复数就是实数；按本书的约定，只有 $x=0$ 且 $y\\ne0$ 时才叫纯虚数。零的实部和虚部都为零。"
+        },
+        {
+          "id": "CH01-S01-SS01-C002",
+          "title": "复数相等与零复数",
+          "statement_markdown": "对 $z_j=x_j+iy_j$，$z_1=z_2$ 当且仅当 $x_1=x_2$ 且 $y_1=y_2$；$z=0$ 当且仅当实部与虚部均为零。",
+          "source_start_line": 15,
+          "source_end_line": 17,
+          "source_quote": "两个复数 $z_{1} = x_{1} + \\mathrm{i}y_{1}, z_{2} = x_{2} + \\mathrm{i}y_{2}$ 相等，是指它们的实部和虚部分别相等，即\n$$x _ {1} = x _ {2}, \\quad y _ {1} = y _ {2}.$$\n如果一个复数的实部和虚部都等于零，就称这个复数等于零，即 $0 + \\mathrm{i}0 = 0$",
+          "after": "为什么要分清两个分量？因为复数相等要求它们同时相等：$x_1+iy_1=x_2+iy_2$ 当且仅当 $x_1=x_2$、$y_1=y_2$。加减也分别进行，例如 $(2+i)+(1-3i)=3-2i$。计算乘法时可以像乘多项式一样分配展开，再利用 $i^2=-1$ 整理。所以\n$$\n(x_1+iy_1)(x_2+iy_2)=(x_1x_2-y_1y_2)+i(x_1y_2+x_2y_1).\n$$\n公式中的下标只是区分两个复数；两个括号分别给出乘积的实部、虚部。理解展开的来由，比孤立背这四个交叉项更可靠。"
+        },
+        {
+          "id": "CH01-S01-SS01-C003",
+          "title": "共轭的定义",
+          "statement_markdown": "$z=x+iy$ 的共轭为 $\\bar z=x-iy$，两者互为共轭。实数的共轭仍是自身。",
+          "source_start_line": 18,
+          "source_end_line": 18,
+          "source_quote": "两复数 $x + \\mathrm{i}y$ 和 $x - \\mathrm{i}y$ 称为相互共轭的，如果其中之一用 $z$ 表示，则另一个用 $\\bar{z}$ 表示.显然实数的共轭仍为该实数",
+          "after": "除法的问题是分母含有 $i$。对 $z=x+iy$，把 $y$ 的符号反过来，得到共轭 $\\bar z=x-iy$。相乘时交叉项消掉：$z\\bar z=x^2+y^2$，这是实数；只要 $z\\ne0$，它还严格大于零。定义 $|z|=\\sqrt{x^2+y^2}$，就能写成 $z\\bar z=|z|^2$。因此，算 $z_1/z_2$ 时，分子分母同乘 $\\bar z_2$，最后只需除以实数 $|z_2|^2$。先看动画中这一招怎样把分母化实，特别注意虚交叉项为何相消。"
+        },
+        {
+          "id": "CH01-S01-SS01-C004",
+          "title": "四则运算公式",
+          "statement_markdown": "设 $z_j=x_j+iy_j$，则\n$$z_1\\pm z_2=(x_1\\pm x_2)+i(y_1\\pm y_2),$$\n$$z_1z_2=(x_1x_2-y_1y_2)+i(x_1y_2+x_2y_1).$$\n当 $z_2\\ne0$ 时，\n$$\\frac{z_1}{z_2}=\\frac{z_1\\bar z_2}{|z_2|^2}=\\frac{x_1x_2+y_1y_2+i(x_2y_1-x_1y_2)}{x_2^2+y_2^2}.$$\n除法是乘法的逆运算：$z_2(z_1/z_2)=z_1$。",
+          "source_start_line": 19,
+          "source_end_line": 32,
+          "source_quote": "设有两个复数 $z_{1} = x_{1} + \\mathrm{i}y_{1}$ 和 $z_{2} = x_{2} + \\mathrm{i}y_{2}$，它们的四则运算规则定义如下：\n加法和减法： $z_{1}$ 及 $z_{2}$ 的和与差分别为\n$$z _ {1} + z _ {2} = (x _ {1} + x _ {2}) + \\mathrm{i} (y _ {1} + y _ {2})$$\n$$z _ {1} - z _ {2} = \\left(x _ {1} - x _ {2}\\right) + \\mathrm{i} \\left(y _ {1} - y _ {2}\\right).$$\n乘法： $z_{1}$ 和 $z_{2}$ 相乘，可以按多项式的乘法法则来进行，只需将结果中的 $\\mathfrak{I}^2$ 代之以-1，即\n$$z _ {1} \\cdot z _ {2} = (x _ {1} x _ {2} - y _ {1} y _ {2}) + i (x _ {1} y _ {2} + x _ {2} y _ {1}).$$\n特别地，当 $z = x + \\mathrm{i}y$ 时，有\n$$z \\bar {z} = x ^ {2} + y ^ {2}.$$\n通常称非负实数 $\\sqrt{x^2 + y^2}$ 为复数 $z$ 的模，记为 $|z|$. 于是可写成下式\n$$\\bar {z z} = | z | ^ {2}.$$\n除法： $z_{1}$ 除以 $z_{2} \\neq 0$ 的商定义为\n$$\\begin{array}{r l} \\frac {z _ {1}}{z _ {2}} = \\frac {z _ {1} \\bar {z} _ {2}}{z _ {2} z _ {2}} = & \\frac {(x _ {1} + \\mathrm{i} y _ {1}) (x _ {2} - \\mathrm{i} y _ {2})}{| z _ {2} | ^ {2}} \\\\ = & \\frac {(x _ {1} x _ {2} + y _ {1} y _ {2}) + \\mathrm{i} (x _ {2} y _ {1} - x _ {1} y _ {2})}{x _ {2} ^ {2} + y _ {2} ^ {2}}. \\end{array}$$\n读者很容易利用乘法运算规则直接验证，这样定义的除法运算是乘法运算的逆运算，即有\n$$z _ {2} \\cdot \\frac {z _ {1}}{z _ {2}} = z _ {1}.$$",
+          "after": "相消以后，除法就回到了乘法与实数除法：例如 $1/(1+i)=(1-i)/2$。分母不为零是整个操作的前提，不能先约去一个可能为零的因子再检查条件。",
+          "source_note": "原文商式分母共轭位置有录入错误，依坐标展开订正。"
+        },
+        {
+          "id": "CH01-S01-SS01-C005",
+          "title": "模与共轭乘积",
+          "statement_markdown": "对 $z=x+iy$，定义 $|z|=\\sqrt{x^2+y^2}$，并有\n$$z\\bar z=x^2+y^2=|z|^2.$$\n因此 $z\\ne0$ 时 $z^{-1}=\\bar z/|z|^2$。",
+          "source_start_line": 25,
+          "source_end_line": 30,
+          "source_quote": "特别地，当 $z = x + \\mathrm{i}y$ 时，有\n$$z \\bar {z} = x ^ {2} + y ^ {2}.$$\n通常称非负实数 $\\sqrt{x^2 + y^2}$ 为复数 $z$ 的模，记为 $|z|$. 于是可写成下式\n$$\\bar {z z} = | z | ^ {2}.$$\n除法： $z_{1}$ 除以 $z_{2} \\neq 0$ 的商定义为\n$$\\begin{array}{r l} \\frac {z _ {1}}{z _ {2}} = \\frac {z _ {1} \\bar {z} _ {2}}{z _ {2} z _ {2}} = & \\frac {(x _ {1} + \\mathrm{i} y _ {1}) (x _ {2} - \\mathrm{i} y _ {2})}{| z _ {2} | ^ {2}} \\\\ = & \\frac {(x _ {1} x _ {2} + y _ {1} y _ {2}) + \\mathrm{i} (x _ {2} y _ {1} - x _ {1} y _ {2})}{x _ {2} ^ {2} + y _ {2} ^ {2}}. \\end{array}$$",
+          "after": "相消以后，除法就回到了乘法与实数除法：例如 $1/(1+i)=(1-i)/2$。分母不为零是整个操作的前提，不能先约去一个可能为零的因子再检查条件。",
+          "source_note": "第28行横线位置错误，依第26行订正。"
+        },
+        {
+          "id": "CH01-S01-SS01-C006",
+          "title": "交换律、结合律与分配律",
+          "statement_markdown": "任意复数 $z_1,z_2,z_3$ 满足\n$$z_1+z_2=z_2+z_1,\\quad z_1z_2=z_2z_1,$$\n$$(z_1+z_2)+z_3=z_1+(z_2+z_3),\\quad(z_1z_2)z_3=z_1(z_2z_3),$$\n$$z_1(z_2+z_3)=z_1z_2+z_1z_3.$$",
+          "source_start_line": 33,
+          "source_end_line": 35,
+          "source_quote": "从上面的运算规则可见，复数运算满足下列规律，设 $z_{1}, z_{2}, z_{3}$ 是复数，则 $z_{1} + z_{2} = z_{2} + z_{1}, z_{1} \\cdot z_{2} = z_{2} \\cdot z_{1}$ （交换律）；\n$(z_{1}+z_{2})+z_{3}=z_{1}+(z_{2}+z_{3}),(z_{1}\\cdot z_{2})z_{3}=z_{1}(z_{2}\\cdot z_{3})$ （结合律）；\n$z_{1}(z_{2} + z_{3}) = z_{1}z_{2} + z_{1}z_{3}$ (分配律).",
+          "after": "这些运算保留交换律、结合律和分配律；任意非零复数都有乘法逆元，因此乘积等于零时至少有一个因子为零。不过，复数整体没有与实数大小相同、又兼容这些运算的次序。可以比较 $|z_1|$ 与 $|z_2|$ 这两个实数，却不能直接把任意复数写成 $z_1>z_2$。"
+        },
+        {
+          "id": "CH01-S01-SS01-C007",
+          "title": "复数域没有相容的大小次序",
+          "statement_markdown": "全体复数按上述相等关系和四则运算构成复数域。复数域不能赋予与实数大小次序相同、同时与加法和乘法相容的次序，因而任意两个复数一般不能直接比较大小。",
+          "source_start_line": 36,
+          "source_end_line": 37,
+          "source_quote": "全体复数引进了上述相等关系及算术运算后称为复数域. 在复数域中, 两个复数是不能比较大小的, 这是复数与实数的一个不同之处. 这是因为实数域中的大小用“>”表示. 且存在 $A \\subset \\mathbb{R}_{\\alpha} = (0, +\\infty)$ 具有下列性质: $1' \\forall \\alpha \\neq 0, \\alpha$ 或 $-\\alpha$ (但不同时) $\\in A_{1}2'$ 若 $\\alpha, \\beta \\in A$, 则 $\\alpha + \\beta \\in A; 3'$ 若 $\\alpha, \\beta \\in A$, 则 $\\alpha \\beta \\in A$. 当 $A$ 存在时, 记 $\\alpha > \\beta$, 即 $\\alpha - \\beta \\in A$.\n不过，对复数域是不存在非空集合 $A$ 满足上述条件. 若不然，假定存在 $A \\subset \\mathbb{R}$，使 $1^{\\circ} \\sim 3^{\\circ}$ 成立. 取 $\\alpha = \\mathrm{i} \\in A$，再取 $\\beta = 2\\mathrm{i}, \\alpha = \\mathrm{i} \\in A$. 若 $\\alpha + \\beta = 3\\mathrm{i} \\in A$，但 $\\alpha \\beta = \\mathrm{i} \\cdot 2\\mathrm{i} = -2\\overline{\\in} A$. 这与假设矛盾. 故 $\\mathrm{i} \\in A$，同样 $-\\mathrm{i} \\in A$. 因此 $A$ 不存在，所以无法判断复数的大小.",
+          "after": "这些运算保留交换律、结合律和分配律；任意非零复数都有乘法逆元，因此乘积等于零时至少有一个因子为零。不过，复数整体没有与实数大小相同、又兼容这些运算的次序。可以比较 $|z_1|$ 与 $|z_2|$ 这两个实数，却不能直接把任意复数写成 $z_1>z_2$。",
+          "source_note": "原文关于正元素集合的证明有多处录入损坏，仅恢复明确陈述的结论。"
+        },
+        {
+          "id": "CH01-S01-SS01-C008",
+          "title": "乘积为零的充要条件",
+          "statement_markdown": "对任意复数 $z_1,z_2$，\n$$z_1z_2=0\\iff z_1=0\\ \\text{或}\\ z_2=0.$$\n等价地，两个非零复数的乘积必非零。",
+          "source_start_line": 38,
+          "source_end_line": 46,
+          "source_quote": "例1 对于两复数 $z_{1}, z_{2}$，求证 $z_{1}z_{2} = 0$ 的充要条件是 $z_{1}$ 与 $z_{2}$ 中至少有一个为零.\n证 1) 设 $z_{1} = 0$，由乘法法则，得\n$$z _ {1} z _ {2} = (0 + 0 \\mathrm{i}) \\left(x _ {2} + \\mathrm{i} y _ {2}\\right) = 0.$$\n2) 设 $z_{1}z_{2} = 0$ 且 $z_{2} \\neq 0$. 则 $z_{2}^{-1}$ 存在，于是由1)可得\n$$\\left(z _ {1} z _ {2}\\right) z _ {2} ^ {- 1} = 0 \\cdot z _ {2} ^ {- 1} = 0.$$\n另一方面，有\n$$\\left(z _ {1} z _ {2}\\right) z _ {2} ^ {- 1} = z _ {1} \\left(z _ {2} z _ {2} ^ {- 1}\\right) = z _ {1} \\cdot 1 = z _ {1}.$$\n比较以上两式，可知  $z_{1}=0$ .\n由上例的结论可知，两个都不为零的复数的乘积必不为零，这给复数运算带来很大的方便。我们知道，并非数学中所研究的对象都有这一性质。例如，矩阵的乘法就不具备这个性质。",
+          "after": "这些运算保留交换律、结合律和分配律；任意非零复数都有乘法逆元，因此乘积等于零时至少有一个因子为零。不过，复数整体没有与实数大小相同、又兼容这些运算的次序。可以比较 $|z_1|$ 与 $|z_2|$ 这两个实数，却不能直接把任意复数写成 $z_1>z_2$。"
+        }
+      ]
+    },
+    "CH01-S01-SS02": {
+      "unit_id": "CH01-S01-SS02",
+      "source_path": "original_text/ch01_s01_ss02.md",
+      "conclusions": [
+        {
+          "id": "CH01-S01-SS02-C001",
+          "title": "共轭运算的基本规律",
+          "statement_markdown": "任意复数满足\n$$\\overline{\\bar z}=z,\\quad z+\\bar z=2\\operatorname{Re}z,\\quad z-\\bar z=2i\\operatorname{Im}z,$$\n$$\\overline{z_1\\pm z_2}=\\bar z_1\\pm\\bar z_2,\\quad\\overline{z_1z_2}=\\bar z_1\\bar z_2.$$\n当 $z_2\\ne0$ 时，$\\overline{z_1/z_2}=\\bar z_1/\\bar z_2$；并且 $z\\bar z=(\\operatorname{Re}z)^2+(\\operatorname{Im}z)^2=|z|^2$。",
+          "source_start_line": 3,
+          "source_end_line": 8,
+          "source_quote": "共轭复数的运用，在复数运算上有着重大意义.先把它的一些运算性质罗列如下：\n1)  $\\bar{z} = z.$\n$$z + \\bar {z} = 2 \\mathrm{Re} z, z - \\bar {z} = 2 \\mathrm{i} \\mathrm{Im} z.$$\n$$3) \\overline {{z _ {1} \\pm z _ {2}}} = \\bar {z} _ {1} \\pm \\bar {z} _ {2}.$$\n$$4) \\overline {{{z _ {1} z _ {2}}}} = \\bar {z} _ {1} \\cdot \\bar {z} _ {2}, \\left(\\frac {\\bar {z} _ {1}}{\\bar {z} _ {2}}\\right) = \\frac {\\bar {z} _ {1}}{\\bar {z} _ {2}}.$$\n$$z \\bar {z} = (\\operatorname{Re} z) ^ {2} + (\\operatorname{Im} z) ^ {2} = | z | ^ {2}.$$",
+          "after": "共轭还与四则运算相容：和、差、积先算后共轭，等于各数先共轭后作相同运算；商也如此，但分母必须非零。例如 $\\overline{z_1z_2}=\\bar z_1\\bar z_2$，$\\overline{z_1/z_2}=\\bar z_1/\\bar z_2$。实系数在共轭下不变，所以实系数多项式满足 $p(\\bar z)=\\overline{p(z)}$。这解释了为什么一个非实根出现时，它的共轭也会是根，而不必重新解一次方程。",
+          "source_note": "第4行遗漏外层共轭，第7行商式左侧共轭错误，按共轭定义订正。"
+        },
+        {
+          "id": "CH01-S01-SS02-C002",
+          "title": "实数与纯虚数的共轭判别",
+          "statement_markdown": "$z$ 为实数当且仅当 $z=\\bar z$；$z$ 为纯虚数当且仅当 $z=-\\bar z$ 且 $z\\ne0$。特别地，\n$$\\operatorname{Re}z=\\frac{z+\\bar z}{2},\\qquad\\operatorname{Im}z=\\frac{z-\\bar z}{2i}.$$",
+          "source_start_line": 9,
+          "source_end_line": 10,
+          "source_quote": "这些性质都不难证明，留给读者做练习。此外，由性质2)的第2个式子可知，复数z是实数的充要条件是 $z=\\bar{z}$ ；由第1个式子得知，z是纯虚数的充要条件是 $z=-\\bar{z}$ ，\n且 $z \\neq 0$.",
+          "after": "共轭还与四则运算相容：和、差、积先算后共轭，等于各数先共轭后作相同运算；商也如此，但分母必须非零。例如 $\\overline{z_1z_2}=\\bar z_1\\bar z_2$，$\\overline{z_1/z_2}=\\bar z_1/\\bar z_2$。实系数在共轭下不变，所以实系数多项式满足 $p(\\bar z)=\\overline{p(z)}$。这解释了为什么一个非实根出现时，它的共轭也会是根，而不必重新解一次方程。"
+        },
+        {
+          "id": "CH01-S01-SS02-C003",
+          "title": "分式取实数值的判别",
+          "statement_markdown": "设 $z=x+iy$，$y\\ne0$ 且 $z\\ne\\pm i$，则\n$$\\frac{z}{1+z^2}\\in\\mathbb R\\iff x^2+y^2=1.$$",
+          "source_start_line": 11,
+          "source_end_line": 20,
+          "source_quote": "例2 设 $z = x + \\mathrm{i}y, y \\neq 0, y \\neq \\pm \\mathrm{i}$. 证明：当且只当 $x^{2} + y^{2} = 1$ 时，$\\frac{z}{1 + z^2}$ 是实数.\n证 $\\frac{z}{1 + z^2}$ 是实数等价于\n$$\\frac {z}{1 + z ^ {2}} = \\left(\\overline {{\\frac {z}{1 + z ^ {2}}}}\\right) = \\frac {\\bar {z}}{1 + \\bar {z} ^ {2}},$$\n$$z + z \\bar {z} ^ {2} = \\bar {z} + \\bar {z} z ^ {2},$$\n亦即\n$$(z - \\bar {z}) (1 - z \\bar {z}) = 0.$$\n因 $y \\neq 0$ ，故 $2\\mathrm{i}y = z - \\bar{z} \\neq 0$ ，从而\n$$1 - z \\bar {z} = 0, \\quad | z | ^ {2} = 1.$$\n$$x ^ {2} + y ^ {2} = 1.$$\n由于上述推导的每一步都是可逆的，故命题得证.",
+          "after": "另一个反复使用的关系是 $|z|^2=z\\bar z$。面对“求模”的任务，先求模的平方往往能避开根号。面对“这个分式为实数”的任务，则可令分式等于它的共轭，再整理成关于 $z,\\bar z$ 的等式。教材例2最后出现 $(z-\\bar z)(1-z\\bar z)=0$：若已知虚部不为零，就能排除第一因子，留下 $|z|=1$；若没有这项已知条件，不能擅自约去它。",
+          "source_note": "原题 y≠±i 与 y 为实数不合；由分母非零条件订正为 z≠±i。"
+        },
+        {
+          "id": "CH01-S01-SS02-C004",
+          "title": "分式 (1+z)/(1-z) 的实部、虚部与模",
+          "statement_markdown": "设 $z=x+iy\\ne1$，$f(z)=(1+z)/(1-z)$，则\n$$\\operatorname{Re}f(z)=\\frac{1-x^2-y^2}{(1-x)^2+y^2},\\quad\\operatorname{Im}f(z)=\\frac{2y}{(1-x)^2+y^2},$$\n$$|f(z)|=\\sqrt{\\frac{(1+x)^2+y^2}{(1-x)^2+y^2}}.$$",
+          "source_start_line": 21,
+          "source_end_line": 27,
+          "source_quote": "例3 求 $f(z) = \\frac{1 + z}{1 - z}$ 的实部、虚部及模.\n$$\\begin{array}{r l} f (z) & = \\frac {1 + z}{1 - z} = \\frac {(1 + z) (1 - \\bar {z})}{(1 - z) (1 - \\bar {z})} \\\\ & = \\frac {1 + z - \\bar {z} - z \\bar {z}}{1 - z - \\bar {z} + z \\bar {z}} = \\frac {1 - x ^ {2} - y ^ {2} + i 2 y}{(1 - x) ^ {2} + y ^ {2}}, \\end{array}$$\n$$\\operatorname{Re} f (z) = \\frac {1 - x ^ {2} - y ^ {2}}{(1 - x) ^ {2} + y ^ {2}},$$\n$$\\operatorname{Im} f (z) = \\frac {2 y}{(1 - x ^ {2}) + y ^ {2}}.$$\n因为\n$$\\begin{array}{r l} | f (z) | ^ {2} & = f (z) \\overline {{f (z)}} = \\frac {(1 + z) (1 + \\bar {z})}{(1 - z) (1 - \\bar {z})} \\\\ & = \\frac {1 + z + z + \\bar {z z}}{1 - z - z + \\bar {z z}} = \\frac {(1 + x) ^ {2} + y ^ {2}}{(1 - x) ^ {2} + y ^ {2}}, \\end{array}$$\n$$\\mid f (z) \\mid = \\sqrt {\\frac {(1 + x) ^ {2} + y ^ {2}}{(1 - x) ^ {2} + y ^ {2}}}.$$",
+          "after": "实际化简分式仍要同乘“整个分母”的共轭。比如分母 $1-z$ 的共轭是 $1-\\bar z$，两者相乘为 $(1-x)^2+y^2$，绝不是 $1-x^2+y^2$。这样求出的实部、虚部必须有同一个实分母，且要保留原式不定义的点。",
+          "source_note": "第24行分母错误，依第22行订正为 (1-x)^2+y^2。"
+        },
+        {
+          "id": "CH01-S01-SS02-C005",
+          "title": "实系数多项式的根共轭成对",
+          "statement_markdown": "若多项式 $p$ 的全部系数均为实数，则 $p(\\bar z)=\\overline{p(z)}$。因此 $p(z_0)=0$ 蕴含 $p(\\bar z_0)=0$，非实根与其共轭根成对出现。",
+          "source_start_line": 28,
+          "source_end_line": 33,
+          "source_quote": "例4 试证明实系数多项式的根共轭存在.\n证 设 $z_0$ 是 $n$ 次多项式\n$$p (z) = z ^ {n} + a _ {1} z ^ {n - 1} + \\dots + a _ {n - 1} z + a _ {n}$$\n的根，其中，各系数 $a_1, a_2, \\dots, a_n$ 都是实数。由共轭复数的性质，有\n$$\\begin{array}{r l} p (\\bar {z} _ {0}) & = (\\bar {z} _ {0}) ^ {n} + a _ {1} (\\bar {z} _ {0}) ^ {n - 1} + \\dots + a _ {n - 1} \\bar {z} _ {0} + a _ {n} \\\\ & = \\overline {{z _ {0} ^ {n}}} + \\bar {a} _ {1} \\overline {{z _ {0} ^ {n - 1}}} + \\dots + \\overline {{a _ {n - 1}}} \\bar {z} _ {0} + \\bar {a} _ {n} \\\\ & = \\overline {{z _ {0} ^ {n}}} + a _ {1} z _ {0} ^ {n - 1} + \\dots + a _ {n - 1} z _ {0} + a _ {n} = \\overline {{p (z _ {0})}} = 0. \\end{array}$$\n这就证得  $\\bar{z}_{0}$  也是  $p(z)$  的根.",
+          "after": "实际化简分式仍要同乘“整个分母”的共轭。比如分母 $1-z$ 的共轭是 $1-\\bar z$，两者相乘为 $(1-x)^2+y^2$，绝不是 $1-x^2+y^2$。这样求出的实部、虚部必须有同一个实分母，且要保留原式不定义的点。"
+        },
+        {
+          "id": "CH01-S01-SS02-C006",
+          "title": "和的模平方恒等式",
+          "statement_markdown": "对任意复数 $z_1,z_2$，\n$$|z_1+z_2|^2=|z_1|^2+|z_2|^2+2\\operatorname{Re}(z_1\\bar z_2).$$",
+          "source_start_line": 34,
+          "source_end_line": 39,
+          "source_quote": "例5 设 $z_{1}, z_{2}$ 为任意复数，证明\n$$\\left| z _ {1} + z _ {2} \\right| ^ {2} = \\left| z _ {1} \\right| ^ {2} + \\left| z _ {2} \\right| ^ {2} + 2 \\operatorname{Re} \\left(z _ {1} \\bar {z} _ {2}\\right).$$\n证 由共轭复数的性质,有\n$$\\begin{array}{r l} | z _ {1} + z _ {2} | ^ {2} & = (z _ {1} + z _ {2}) \\overline {{(z _ {1} + z _ {2})}} = (z _ {1} + z _ {2}) (\\bar {z} _ {1} + \\bar {z} _ {2}) \\\\ & = | z _ {1} | ^ {2} + | z _ {2} | ^ {2} + z _ {1} \\bar {z} _ {2} + z _ {2} \\bar {z} _ {1}. \\end{array}$$\n$$z _ {1} \\dot {z} _ {2} + z _ {2} \\bar {z} _ {1} = z _ {1} \\bar {z} _ {2} + (\\overline {{z _ {1} z _ {2}}}) = 2 \\mathrm{Re} (z _ {1} \\bar {z} _ {2}),$$\n$$\\left| z _ {1} + z _ {2} \\right| ^ {2} = \\left| z _ {1} \\right| ^ {2} + \\left| z _ {2} \\right| ^ {2} + 2 \\operatorname{Re} \\left(z _ {1} \\bar {z} _ {2}\\right).$$",
+          "after": "实际化简分式仍要同乘“整个分母”的共轭。比如分母 $1-z$ 的共轭是 $1-\\bar z$，两者相乘为 $(1-x)^2+y^2$，绝不是 $1-x^2+y^2$。这样求出的实部、虚部必须有同一个实分母，且要保留原式不定义的点。"
+        }
+      ]
+    },
+    "CH01-S01-SS03": {
+      "unit_id": "CH01-S01-SS03",
+      "source_path": "original_text/ch01_s01_ss03.md",
+      "conclusions": [
+        {
+          "id": "CH01-S01-SS03-C001",
+          "title": "复平面与向量表示",
+          "statement_markdown": "复数 $z=x+iy$ 与平面点 $(x,y)$ 一一对应，也可由投影为 $(x,y)$ 的自由向量表示。横轴为实轴，纵轴为虚轴。",
+          "source_start_line": 3,
+          "source_end_line": 4,
+          "source_quote": "在平面上取定直角坐标系 Oxy，命坐标为  $(x, y)$  的点与复数  $z = x + iy$  相应对，显然，对于每一个复数，平面上都有唯一的一个点与之相应；反之，对于平面上的每一个点有唯一的复数与之相应。这就是说，复数的全体和平面上的点之间建立了一对应关系。当平面上的点被用来代表复数时，我们就把这个平面叫做复数平面。复平面上 x 轴上的点代表实数，故 x 轴称实轴，y 轴上的点（除坐标原点）代表纯虚数  $iy, y \\neq 0$ ，故 y 轴也称为虚轴，以后我们对复数和平面上的点将不加区别，代表复数 z 的点，就称点 z。例如说点 3+2i 也是指定这个复数。按照表示复数的字母  $z, w, \\cdots, \\cdots$ ，把相应的复平面则简化为 z 平面；w 平面……\n复数 $z$ 也可以用平面上的一个自由向量来表示，这个自由向量在实轴和虚轴上的投影分别为 $x$ 和 $y$ ，它的起点可以是平面上任意一点.如果起点是原点，则向量的终点即是平面上的点 $z$ ，点 $z$ 的位置也可以用它的极坐标 $r$ 和 $\\varphi$ 来确定",
+          "after": "计算已经告诉我们复数有两个实分量。现在要问：能否像在数轴上看实数那样，看见一个复数的位置？在直角坐标系中，让 $z=x+iy$ 对应点 $(x,y)$，便得到复平面。实轴是横轴，虚轴是纵轴；从原点指向这个点的向量也代表 $z$。一个数、一点、一个向量，是同一对象的三种观察方式。"
+        },
+        {
+          "id": "CH01-S01-SS03-C002",
+          "title": "模、辐角与辐角主值",
+          "statement_markdown": "对 $z=x+iy\\ne0$，$r=|z|=\\sqrt{x^2+y^2}$；若 $\\theta$ 是一个辐角，则\n$$\\operatorname{Arg}z=\\theta+2k\\pi,\\quad k\\in\\mathbb Z.$$\n落在 $(-\\pi,\\pi]$ 的唯一值称为辐角主值。正实轴、负实轴、正虚轴、负虚轴的主值分别为 $0,\\pi,\\pi/2,-\\pi/2$。零的辐角无意义。",
+          "source_start_line": 7,
+          "source_end_line": 15,
+          "source_quote": "$$r = \\sqrt {x ^ {2} + y ^ {2}}, \\quad \\tan \\varphi = \\frac {y}{x},$$\nr 就是复数 z 的模， $\\varphi$  称为复数 z 的辐角，记作\n$$r = \\mid z \\mid , \\quad \\varphi = \\operatorname{Arg} z.$$\n关于辐角有两点必须注意：\n1) 对于任一复数 $z \\neq 0$ 有无穷多个辐角. 我们约定, 以下用 $\\arg z$ 表示 $\\operatorname{Arg} z$ 中的某一个确定的值, 必要时将指出是哪一个值. 对于 $\\operatorname{Arg} z$ 的任何一个确定值 $\\arg z$, 则\n$$\\mathrm{Arg} z = \\mathrm{arg} z + 2 n \\pi , \\quad n \\text {为任意整数}$$\n给出了 z 的全部辐角. 又把落在  $-\\pi < \\varphi \\leqslant \\pi$  这个范围内的值称为辐角的主值, 也记作 argz. 显然, 主值 argz 是由 z 唯一确定的. 例如, 在正、负实轴上辐角的主值分别是 0 及  $\\pi$ ; 在上、下半虚轴上辐角的主值分别是  $\\pi/2$  及  $-\\pi/2$ ; 一般地根据辐角主值范围的规定, 可得\n$$\\arg z = \\left\\{ \\begin{array}{l l} \\arctan \\frac {y}{x}, & (z \\text {在第一、四象限内}) \\\\ \\pi + \\arctan \\frac {y}{x}, & (z \\text {在第二象限内}) \\\\ - \\pi + \\arctan \\frac {y}{x}, & (z \\text {在第三象限内}) \\end{array} \\right.$$\n2) 当 z = 0 时，辐角是无意义的.",
+          "after": "转一整圈回到原点的同一位置，所以非零复数的辐角不是唯一数值：全体记为 $\\operatorname{Arg}z=\\theta+2k\\pi$，$k$ 是整数。本书把 $-\\pi<\\arg z\\le\\pi$ 内的值叫主值；负实轴取 $\\pi$，零则没有辐角。相同复数的模必须相等，辐角允许相差整圈；使用主值相加以后，必要时应减去整圈放回约定区间。"
+        },
+        {
+          "id": "CH01-S01-SS03-C003",
+          "title": "辐角主值的分象限公式",
+          "statement_markdown": "设 $z=x+iy\\ne0$。当 $x\\ne0$ 时，\n$$\\arg z=\\begin{cases}\\arctan(y/x),&x>0,\\\\\\pi+\\arctan(y/x),&x<0,\\ y\\ge0,\\\\-\\pi+\\arctan(y/x),&x<0,\\ y<0.\\end{cases}$$\n当 $x=0$ 时，上、下半虚轴分别取 $\\pi/2$ 与 $-\\pi/2$。",
+          "source_start_line": 13,
+          "source_end_line": 15,
+          "source_quote": "给出了 z 的全部辐角. 又把落在  $-\\pi < \\varphi \\leqslant \\pi$  这个范围内的值称为辐角的主值, 也记作 argz. 显然, 主值 argz 是由 z 唯一确定的. 例如, 在正、负实轴上辐角的主值分别是 0 及  $\\pi$ ; 在上、下半虚轴上辐角的主值分别是  $\\pi/2$  及  $-\\pi/2$ ; 一般地根据辐角主值范围的规定, 可得\n$$\\arg z = \\left\\{ \\begin{array}{l l} \\arctan \\frac {y}{x}, & (z \\text {在第一、四象限内}) \\\\ \\pi + \\arctan \\frac {y}{x}, & (z \\text {在第二象限内}) \\\\ - \\pi + \\arctan \\frac {y}{x}, & (z \\text {在第三象限内}) \\end{array} \\right.$$\n2) 当 z = 0 时，辐角是无意义的.",
+          "after": "转一整圈回到原点的同一位置，所以非零复数的辐角不是唯一数值：全体记为 $\\operatorname{Arg}z=\\theta+2k\\pi$，$k$ 是整数。本书把 $-\\pi<\\arg z\\le\\pi$ 内的值叫主值；负实轴取 $\\pi$，零则没有辐角。相同复数的模必须相等，辐角允许相差整圈；使用主值相加以后，必要时应减去整圈放回约定区间。"
+        },
+        {
+          "id": "CH01-S01-SS03-C004",
+          "title": "三角式、欧拉公式与指数式",
+          "statement_markdown": "若 $z\\ne0$ 的模为 $r$、辐角为 $\\theta$，则\n$$x=r\\cos\\theta,\\quad y=r\\sin\\theta,\\quad e^{i\\theta}=\\cos\\theta+i\\sin\\theta,$$\n$$z=r(\\cos\\theta+i\\sin\\theta)=re^{i\\theta}.$$\n特别地，$e^{i\\pi}=-1$、$e^{i\\pi/2}=i$。",
+          "source_start_line": 16,
+          "source_end_line": 25,
+          "source_quote": "知道了复数 $z(\\neq 0)$ 的模 $\\pmb{r}$ 和辐角 $\\varphi$ 后，这个复数也就完全确定了.因\n$$x = r \\cos \\varphi , \\quad y = r \\sin \\varphi ,$$\n$$z = r (\\cos \\varphi + \\mathrm{i} \\sin \\varphi).$$\n这就是复数的三角表示.例如\n$$\\begin{array}{l} - 2 \\mathrm{i} = 2 \\left[ \\cos \\left(- \\frac {\\pi}{2}\\right) + \\mathrm{i} \\sin \\left(- \\frac {\\pi}{2}\\right) \\right], \\\\ 1 + \\mathrm{i} = \\sqrt {2} \\left(\\cos \\frac {\\pi}{4} + \\mathrm{i} \\sin \\frac {\\pi}{4}\\right). \\end{array}$$\n利用欧拉(Euler)公式\n$$\\mathbf {e} ^ {\\mathrm{i} \\varphi} = \\cos \\varphi + \\mathrm{i} \\sin \\varphi ,$$\n还可以把复数写成指数形式\n$$z = r \\mathrm{e} ^ {\\mathrm{i} \\varphi},$$\n例如： $-2i=2e^{-im/2},1+i=\\sqrt{2}e^{im/4},i=e^{im/2},e^{in}=-1.$",
+          "after": "转一整圈回到原点的同一位置，所以非零复数的辐角不是唯一数值：全体记为 $\\operatorname{Arg}z=\\theta+2k\\pi$，$k$ 是整数。本书把 $-\\pi<\\arg z\\le\\pi$ 内的值叫主值；负实轴取 $\\pi$，零则没有辐角。相同复数的模必须相等，辐角允许相差整圈；使用主值相加以后，必要时应减去整圈放回约定区间。",
+          "source_note": "原文例子的 m、n 等指数符号为 π 的录入错误，按欧拉公式订正。"
+        },
+        {
+          "id": "CH01-S01-SS03-C005",
+          "title": "极式相等与共轭的条件",
+          "statement_markdown": "对非零复数 $z_j=r_je^{i\\theta_j}$，\n$$z_1=z_2\\iff r_1=r_2\\ \\text{且}\\ \\theta_1-\\theta_2\\in2\\pi\\mathbb Z.$$\n共轭满足 $|\\bar z|=|z|$，辐角相反（模 $2\\pi$）。对主值，若 $\\arg z\\ne\\pi$ 则 $\\arg\\bar z=-\\arg z$；若 $z$ 为负实数，两者主值均为 $\\pi$。",
+          "source_start_line": 27,
+          "source_end_line": 31,
+          "source_quote": "两个指数形式(或三角形式)的复数  $z_{1}=r_{1}e^{i\\varphi_{1}}$  及  $z_{2}=r_{2}e^{i\\varphi_{2}}$  相等的充要条件是\n$$r _ {1} = r _ {2}, \\quad \\varphi_ {1} = \\varphi_ {2} + 2 k \\pi ,$$\n其中， $k$ 为任意正负整数或零.而两个复数共轭的条件则可以用关系\n$$| \\bar {z} | = | z |, \\quad \\arg \\bar {z} = - \\arg z, \\quad \\arg z \\neq \\pi$$\n来表示，",
+          "after": "转一整圈回到原点的同一位置，所以非零复数的辐角不是唯一数值：全体记为 $\\operatorname{Arg}z=\\theta+2k\\pi$，$k$ 是整数。本书把 $-\\pi<\\arg z\\le\\pi$ 内的值叫主值；负实轴取 $\\pi$，零则没有辐角。相同复数的模必须相等，辐角允许相差整圈；使用主值相加以后，必要时应减去整圈放回约定区间。"
+        },
+        {
+          "id": "CH01-S01-SS03-C006",
+          "title": "加减法与模的不等式",
+          "statement_markdown": "复数加减对应向量的平行四边形法则或三角形法则。对任意 $z=x+iy$ 与 $z_1,z_2$，\n$$|x|\\le|z|,\\quad |y|\\le|z|,\\quad |z|\\le|x|+|y|,$$\n$$|z_1+z_2|\\le|z_1|+|z_2|,\\qquad\\big||z_1|-|z_2|\\big|\\le|z_1-z_2|.$$\n后二式等号成立当且仅当至少一个数为零，或两个非零复数辐角相同（模 $2\\pi$）。推广到有限项，有\n$$\\left|\\sum_{j=1}^n z_j\\right|\\le\\sum_{j=1}^n|z_j|.$$",
+          "source_start_line": 32,
+          "source_end_line": 45,
+          "source_quote": "现在说明复数四则运算的几何意义，先讲加减法的几何意义。两个复数相加减时，其实部和虚部分别相加减，因此代表复数的向量应按平行四边形法则或三角形法则相加减，如图1.2所示。\n由图1.1及图1.2，可以得到关于复数模的几个重要不等式：\n1) $|x| = |\\text{Re} z| \\leqslant |z|$,\n$$| y | = | \\operatorname{Im} z | \\leqslant | z |.$$\n2) $|z| \\leqslant |\\text{Re} z| + |\\text{Im} z|$.\n3) $|z_1 + z_2| \\leqslant |z_1| + |z_2|$ （三角形两边和 $\\geqslant$ 第三边）.\n4) $||z_1| - |z_2|| \\leqslant |z_1 - z_2|$ （三角形两边差 $\\leqslant$ 第三边）.\n在3)及4)的两个不等式中，等号当且只当 $z_{1}$ 和 $z_{2}$ 有相同的辐角才成立.这时三角形成为退化的（即三\n图1.2\n点共线). 这两个不等式还可以用代数方法证明. 由前面例 5 的结果及 1) 的第一个不等式, 得\n$$\\begin{array}{r l} \\mid z _ {1} + z _ {2} \\mid^ {2} & = \\mid z _ {1} \\mid^ {2} + \\mid z _ {2} \\mid^ {2} + 2 \\mathrm{Re} (z _ {1} \\bar {z} _ {2}) \\\\ & \\leqslant \\mid z _ {1} \\mid^ {2} + \\mid z _ {2} \\mid^ {2} + 2 \\mid z _ {1} \\bar {z} _ {2} \\mid \\\\ & = \\mid z _ {1} \\mid^ {2} + \\mid z _ {2} \\mid^ {2} + 2 \\mid z _ {1} \\mid^ {*} \\mid z _ {2} \\mid \\\\ & = (\\mid z _ {1} \\mid + \\mid z _ {2} \\mid) ^ {2}, \\\\ & \\mid z _ {1} + z _ {2} \\mid \\leqslant \\mid z _ {1} \\mid + \\mid z _ {2} \\mid . \\end{array}$$\n4) 中的不等式可类似证明.\n利用 3) 的不等式及数学归纳法, 读者可自行证明:\n$$5) \\left| z _ {1} + z _ {2} + \\dots + z _ {n} \\right| \\leqslant \\left| z _ {1} \\right| + \\left| z _ {2} \\right| + \\dots + \\left| z _ {n} \\right|.$$",
+          "after": "加减法现在就是向量加减。首尾相接的折线路程至少和直达距离一样长，得到三角不等式 $|z_1+z_2|\\le|z_1|+|z_2|$；反向估计是 $\\big||z_1|-|z_2|\\big|\\le|z_1-z_2|$。它们比较的都是实数长度。更关键的是 $|z-a|$ 表示两点距离，所以 $|z-a|=R$ 是圆周，$|z-a|<R$ 是不含圆周的圆盘；这为后面的邻域定义准备了语言。",
+          "source_note": "原文等号条件未提零复数，补明零向量的退化情形。"
+        },
+        {
+          "id": "CH01-S01-SS03-C007",
+          "title": "距离、圆周、圆内与圆外",
+          "statement_markdown": "$|z_1-z_2|$ 是两点距离。对固定 $z_0\\in\\mathbb C$、$\\rho>0$，$|z-z_0|=\\rho$ 表示以 $z_0$ 为圆心、$\\rho$ 为半径的圆周；$|z-z_0|<\\rho$ 与 $|z-z_0|>\\rho$ 分别表示圆内与圆外。",
+          "source_start_line": 46,
+          "source_end_line": 48,
+          "source_quote": "再强调指出， $|z_{1} - z_{2}|$ 在几何上就是点 $z_{1}$ 和 $z_{2}$ 之间的距离.因此，对任意固定的复数 $z_0$ 和实数 $\\rho >0$ ，由条件\n$$\\mid z - z _ {0} \\mid = \\rho$$\n所确定的复数集合，就是以 $z_0$ 为中心 $\\rho$ 为半径的圆周. 集合 $\\{z \\mid |z - z_0| < \\rho\\}$ 则表示上述圆周的内部（不包括圆周），集合 $\\{z \\mid |z - z_0| > \\rho\\}$ 则是上述圆周的外部.",
+          "after": "加减法现在就是向量加减。首尾相接的折线路程至少和直达距离一样长，得到三角不等式 $|z_1+z_2|\\le|z_1|+|z_2|$；反向估计是 $\\big||z_1|-|z_2|\\big|\\le|z_1-z_2|$。它们比较的都是实数长度。更关键的是 $|z-a|$ 表示两点距离，所以 $|z-a|=R$ 是圆周，$|z-a|<R$ 是不含圆周的圆盘；这为后面的邻域定义准备了语言。"
+        },
+        {
+          "id": "CH01-S01-SS03-C008",
+          "title": "乘除法的模、辐角与几何意义",
+          "statement_markdown": "设 $z_j=r_je^{i\\theta_j}\\ne0$，则\n$$z_1z_2=r_1r_2e^{i(\\theta_1+\\theta_2)},\\quad\\frac{z_1}{z_2}=\\frac{r_1}{r_2}e^{i(\\theta_1-\\theta_2)},$$\n$$|z_1z_2|=|z_1||z_2|,\\quad\\left|\\frac{z_1}{z_2}\\right|=\\frac{|z_1|}{|z_2|}.$$\n乘积辐角为两辐角之和，商的辐角为两辐角之差，均按全体值或模 $2\\pi$ 理解。乘以固定 $r_2e^{i\\theta_2}$ 对应旋转 $\\theta_2$ 并伸缩 $r_2$ 倍；乘以 $i$ 是逆时针转 $\\pi/2$ 且长度不变。模公式对零分子也成立。",
+          "source_start_line": 49,
+          "source_end_line": 62,
+          "source_quote": "利用复数的指数形式作乘除法不仅比较简单，而且有明显的几何意义.设有两个复数\n$$\\begin{array}{l} z _ {1} = r _ {1} \\mathrm{e} ^ {\\mathrm{i} \\varphi_ {1}} = r _ {1} (\\cos \\varphi_ {1} + \\mathrm{i} \\sin \\varphi_ {1}), \\\\ z _ {2} = r _ {2} \\mathrm{e} ^ {\\mathrm{i} \\varphi_ {2}} = r _ {2} (\\cos \\varphi_ {2} + \\mathrm{i} \\sin \\varphi_ {2}). \\end{array}$$\n那么\n$$\\begin{array}{r l} z _ {1} z _ {2} & = r _ {1} r _ {2} \\left[ (\\cos \\varphi_ {1} \\cos \\varphi_ {2} - \\sin \\varphi_ {1} \\sin \\varphi_ {2}) + i (\\sin \\varphi_ {1} \\cos \\varphi_ {2} + \\cos \\varphi_ {1} \\sin \\varphi_ {2}) \\right] \\\\ & = r _ {1} r _ {2} \\left[ \\cos (\\varphi_ {1} + \\varphi_ {2}) + i \\sin (\\varphi_ {1} + \\varphi_ {2}) \\right] \\\\ & = r _ {1} r _ {2} e ^ {i (\\varphi_ {1} + \\varphi_ {2})}. \\end{array}$$\n这就是说，两个复数的乘积是这样一个复数：它的模等于原两复数模的乘积，它的辐角等于原来两复数辐角之和.即\n$$\\left| z _ {1} z _ {2} \\right| = \\left| z _ {1} \\right| \\left| z _ {2} \\right|, \\quad \\operatorname{Arg} \\left(z _ {1} z _ {2}\\right) = \\operatorname{Arg} z _ {1} + \\operatorname{Arg} z _ {2}.\\tag{1.2}$$\n图1.3\n由于第二个等式的两边各是无穷多个数，应这样来理解：对于 $\\mathrm{Arg}(z_1z_2)$ 的任一值，一定有 $\\mathrm{Arg}z_{1}$ 及$\\mathrm{Arg}z_{2}$ 的各一值与它相应，使得等式成立；反过来也是这样.\n由上讨论得知，把表示 $z_{1}$ 的那个向量转动一个角度 $\\varphi_{2}$，并将长度“放大”$r_{2}$ 倍，就得到代表 $z_{1}z_{2}$ 的向量。应该注意，当 $r_2 < 1$ 时，所谓“放大”其实是缩小（图1.3）。例如，复数 $\\mathrm{e}^{\\theta}$ 的模为1，辐角为 $\\theta$。因此把向量 $z$ 转动一个角就得到向量 $\\mathrm{e}^{\\theta}z$。特别地，由于 $\\mathrm{i} =$\n$e^{i\\omega/2}$ ，所以向量iz是一个与向量z垂直，且与z长度相等的向量.\n对于除法，同样有公式 $(z_{2}\\neq0)$\n$$\\frac {z _ {1}}{z _ {2}} = \\frac {r _ {1}}{r _ {2}} \\left[ \\cos \\left(\\varphi_ {1} - \\varphi_ {2}\\right) + i \\sin \\left(\\varphi_ {1} - \\varphi_ {2}\\right) \\right],$$\n$$\\left| \\frac {z _ {1}}{z _ {2}} \\right| = \\frac {\\left| z _ {1} \\right|}{\\left| z _ {2} \\right|}, \\quad \\operatorname{Arg} \\left(\\frac {z _ {1}}{z _ {2}}\\right) = \\operatorname{Arg} z _ {1} - \\operatorname{Arg} z _ {2}.$$\n对于后一个等式应与前面(1.2)式中第二个等式一样理解.",
+          "after": "乘法的图景不同。把 $z_1=r_1e^{i\\theta_1}$ 与 $z_2=r_2e^{i\\theta_2}$ 相乘，得到 $r_1r_2e^{i(\\theta_1+\\theta_2)}$：模相乘、辐角相加。因而乘以固定复数，就是旋转再伸缩；乘以 $i$ 恰好逆时针转 $\\pi/2$，长度不变。除以非零复数则把模相除、方向相减。这些规律不仅方便计算，也能用来辨认复数方程代表的圆、椭圆或射线。",
+          "source_note": "原文旋转因子漏写 i，依乘法公式订正为 e^{iθ}。"
+        },
+        {
+          "id": "CH01-S01-SS03-C009",
+          "title": "平面曲线的复数方程",
+          "statement_markdown": "隐式曲线 $F(x,y)=0$ 可写为\n$$F\\!\\left(\\frac{z+\\bar z}{2},\\frac{z-\\bar z}{2i}\\right)=0.$$\n特别地，$A(x^2+y^2)+mx+ny+C=0$（$A,m,n,C\\in\\mathbb R$、$A\\ne0$）等价于\n$$Az\\bar z+\\bar Bz+B\\bar z+C=0,\\quad B=(m+ni)/2.$$",
+          "source_start_line": 64,
+          "source_end_line": 74,
+          "source_quote": "例6 试将圆的方程\n$$A \\left(x ^ {2} + y ^ {2}\\right) + m x + n y + C = 0$$\n改写成复数形式，其中， $A,m,n,C$ 为实常数，且 $A\\neq 0$\n解 令 $z = x + \\mathrm{i}y$ ，则有\n$$x = \\frac {z + \\bar {z}}{2}, \\quad y = \\frac {z - \\bar {z}}{2 i}$$\n$$x ^ {2} + y ^ {2} = z \\bar {z}.$$\n将以上三式代入圆的方程，得复数方程\n$$A z \\bar {z} + \\bar {B} z + B \\bar {z} + C = 0,\\tag{1.3}$$\n其中， $B = (m + n\\mathrm{i})/2.$\n从这个例子可以看出，任何一条用隐式方程 $F(x, y) = 0$ 表示的平面曲线，都可表示为复数方程\n$$F \\left(\\frac {z + \\bar {z}}{2}, \\frac {z - \\bar {z}}{2 i}\\right) = 0.$$",
+          "after": "教材中的[例6 圆的方程的复数形式](#reader-3ea33564bef8ba573c93)、[例7 距离之和为常数的点集](#reader-3aed3de25f30048ede1e)、[例8 辐角为常值的点集](#reader-3b5f1ca36568c2e3558e)保留了完整题目和推演，可展开对照本节的思路。"
+        },
+        {
+          "id": "CH01-S01-SS03-C010",
+          "title": "复数圆方程的分类",
+          "statement_markdown": "设 $A,C\\in\\mathbb R$、$A\\ne0$、$B\\in\\mathbb C$。方程 $Az\\bar z+\\bar Bz+B\\bar z+C=0$ 等价于\n$$\\left|z+\\frac BA\\right|^2=\\frac{|B|^2-AC}{A^2}.$$\n若 $|B|^2-AC>0$，它是圆心 $-B/A$、半径 $\\sqrt{|B|^2-AC}/|A|$ 的圆；若差为零，只表示点 $-B/A$；若差小于零，点集为空。",
+          "source_start_line": 75,
+          "source_end_line": 80,
+          "source_quote": "下面讨论方程(1.3)(设 A, C 为实常数,  $A \\neq 0$ , B 是复数). 把它改写成\n$$\\bar {z} \\bar {z} + \\frac {\\bar {B}}{A} z + \\frac {B}{A} \\bar {z} + \\frac {B \\bar {B}}{A ^ {2}} = \\frac {B \\bar {B}}{A ^ {2}} - \\frac {C}{A},$$\n$$\\left(z + \\frac {B}{A}\\right) \\left(\\bar {z} + \\frac {\\bar {B}}{A}\\right) = \\frac {| B | ^ {2} - A C}{A ^ {2}},$$\n亦即\n$$\\left| z + \\frac {B}{A} \\right| ^ {2} = \\frac {\\mid B \\mid^ {2} - A C}{A ^ {2}}.$$\n由此可见，当 $|B|^2 - AC > 0$ 时，复方程(1.3)表示一个圆，其圆心为 $-B / A$ ，半径为 $\\sqrt{\\frac{|B|^2 - AC}{A^2}}$；当 $|B|^2 = AC$ 时，方程(1.3)表示一个点；当 $|B|^2 - AC < 0$ 时，方程(1.3)是一个虚圆(空集).",
+          "after": "教材中的[例6 圆的方程的复数形式](#reader-3ea33564bef8ba573c93)、[例7 距离之和为常数的点集](#reader-3aed3de25f30048ede1e)、[例8 辐角为常值的点集](#reader-3b5f1ca36568c2e3558e)保留了完整题目和推演，可展开对照本节的思路。"
+        },
+        {
+          "id": "CH01-S01-SS03-C011",
+          "title": "距离和条件表示椭圆",
+          "statement_markdown": "$|z-1|+|z+2-i|=6$ 表示焦点为 $1$ 和 $-2+i$、长半轴为 $3$、短半轴为 $\\sqrt{26}/2$ 的椭圆周。等号改为 $<6$ 或 $>6$，分别表示椭圆内部或外部。",
+          "source_start_line": 81,
+          "source_end_line": 86,
+          "source_quote": "例7 求方程\n$$\\mid z - 1 \\mid + \\mid z + 2 - i \\mid = 6$$\n所表示的复数集合.\n解 上式表示点 z 到点 1 及点  $-2 + i$  的距离之和为 6，所以这个方程表示以 1 及  $-2 + i$  为焦点，长、短半径分别是 3 及  $\\sqrt{26}/2$  的椭圆周。而不等式\n$$\\mid z - 1 \\mid + \\mid z + 2 - \\mathrm{i} \\mid <   6 \\quad \\text {及} \\quad \\mid z - 1 \\mid + \\mid z + 2 - \\mathrm{i} \\mid > 6,$$\n则分别表示上述椭圆周的内部及外部.",
+          "after": "教材中的[例6 圆的方程的复数形式](#reader-3ea33564bef8ba573c93)、[例7 距离之和为常数的点集](#reader-3aed3de25f30048ede1e)、[例8 辐角为常值的点集](#reader-3b5f1ca36568c2e3558e)保留了完整题目和推演，可展开对照本节的思路。"
+        },
+        {
+          "id": "CH01-S01-SS03-C012",
+          "title": "辐角条件表示射线",
+          "statement_markdown": "$\\arg(z-i)=\\pi/4$ 表示从 $i$ 出发、与实轴正向成 $\\pi/4$ 角的射线，不包括起点。一般地，$\\arg(z-a)=\\theta$（固定允许的辐角值）表示从 $a$ 出发且不含起点的相应方向射线。",
+          "source_start_line": 87,
+          "source_end_line": 90,
+          "source_quote": "例8 求方程\n$$\\arg (z - \\mathrm{i}) = \\frac {\\pi}{4}$$\n所表示的复数点集.\n解 $\\arg (z - i)$ 是从 $x$ 轴正向到向量 $z - i$ 的旋转角. 故所给方程表示一条从 $i$ 点出发的与 $x$ 轴交角为 $\\pi /4$ 的半射线(不包括起点 $i$).",
+          "after": "同理，$\\arg(z-a)=\\theta$ 先固定的是从 $a$ 出发的方向，因此描述一条不含起点的射线，起点不能加进去，因为零向量没有方向。把距离条件和方向条件结合，就能够清楚地逐步表示圆弧、扇形和圆环中的一片区域，而不必每次重新翻译成两个坐标。"
+        }
+      ]
+    },
+    "CH01-S01-SS04": {
+      "unit_id": "CH01-S01-SS04",
+      "source_path": "original_text/ch01_s01_ss04.md",
+      "conclusions": [
+        {
+          "id": "CH01-S01-SS04-C001",
+          "title": "整数乘方与德莫弗公式",
+          "statement_markdown": "设 $z=re^{i\\theta}\\ne0$，$m\\in\\mathbb Z$，则\n$$z^m=r^me^{im\\theta}=r^m(\\cos m\\theta+i\\sin m\\theta).$$\n其中 $z^0=1$、$z^{-n}=1/z^n$（$n\\ge1$）。特别地，\n$$(\\cos\\theta+i\\sin\\theta)^m=\\cos m\\theta+i\\sin m\\theta.$$\n对 $z=0$，正整数次幂为 $0$。",
+          "source_start_line": 3,
+          "source_end_line": 10,
+          "source_quote": "设 $n$ 是正整数，$z^n$ 表示 $n$ 个 $z$ 的乘积。当 $z = 0$ 时，$z^n = 0$。当 $z \\neq 0$ 时，设 $z = r e^{i\\varphi}$，由乘法规则，得\n$$z ^ {n} = r ^ {n} \\mathrm{e} ^ {\\mathrm{i} m \\varphi} = r ^ {n} (\\cos n \\varphi + \\mathrm{i} \\sin n \\varphi).\\tag{1.4}$$\n显然，上式对 $n = 0$ （定义 $z^{\\circ} = 1$）时也成立.如果定义\n$$z ^ {- n} = \\frac {1}{z ^ {n}},$$\n$$z ^ {- n} = r ^ {- n} [ \\cos (- n \\varphi) + \\mathrm{i} \\sin (- n \\varphi) ] = r ^ {- n} \\mathrm{e} ^ {- i n \\varphi}.\\tag{1.5}$$\n特别地，在(1.4)及(1.5)式中，令 $r = 1$ ，得\n$$(\\cos \\varphi + \\mathrm{i} \\sin \\varphi) ^ {n} = \\cos n \\varphi + \\mathrm{i} \\sin n \\varphi .$$\n这个公式称为德·莫弗(de Moivre)公式，它对任意整数 $n$ 都成立.",
+          "after": "上一节把乘法解释成模相乘、辐角相加。重复乘同一个复数时，就不必每次展开括号了。设 $z=re^{i\\theta}\\ne0$，$n$ 是正整数，连乘 $n$ 次后，长度乘成 $r^n$，角度加成 $n\\theta$，即\n$$z^n=r^ne^{in\\theta}=r^n(\\cos n\\theta+i\\sin n\\theta).$$\n当 $r=1$ 时，这就是德·莫弗公式。它把复杂的三角式乘方变成一次角度乘法。非零复数还可定义 $z^0=1$、$z^{-n}=1/z^n$；负指数意味着长度取倒数、方向反过来。零的正整数次幂仍为零，但不能给零使用负指数。",
+          "source_note": "原文第4行指数 m 为 n 的录入误差，统一用整数 m 表述。"
+        },
+        {
+          "id": "CH01-S01-SS04-C002",
+          "title": "n 次方根的全部值",
+          "statement_markdown": "设 $n\\ge1$ 是整数。$z=0$ 时，$w^n=z$ 只有解 $w=0$。若 $z=re^{i\\theta}\\ne0$，则全部互异根为\n$$w_k=r^{1/n}\\left(\\cos\\frac{\\theta+2k\\pi}{n}+i\\sin\\frac{\\theta+2k\\pi}{n}\\right),\\quad k=0,1,\\ldots,n-1.$$\n$r^{1/n}$ 指正实数的算术根；其他整数 $k$ 只重复这些值。",
+          "source_start_line": 11,
+          "source_end_line": 26,
+          "source_quote": "设 $z$ 为已给复数，方程\n$$w ^ {n} = z\\tag{1.6}$$\n的所有解，称为 $z$ 的 $n$ 次方根，记作 $\\sqrt[n]{z}$ 当 $z = 0$ 时，方程(1.6)只有唯一解 $w = 0$ 当 $z \\neq 0$ 时，设 $z = r\\mathrm{e}^{i\\varphi}, w = \\rho \\mathrm{e}^{\\mathrm{i}\\varphi}$，代入(1.3)式，并利用德·莫弗公式，得\n$$\\rho^ {n} \\mathrm{e} ^ {\\mathrm{i} \\omega t} = r \\mathrm{e} ^ {\\mathrm{i} \\varphi},$$\n再比较两端得\n$$\\rho^ {n} = r, \\quad n \\theta = \\varphi + 2 k \\pi , \\quad k = 0, \\pm 1, \\pm 2, \\dots .$$\n由于 $\\rho$ 和 $r$ 都是正实数，故由第一式即可唯一确定 $\\rho$ ，并记之为\n$$\\rho = (\\sqrt [ n ]{r}),$$\n其中，圆括号表示 $\\rho$ 是 $r$ 的唯一正实根（算术根）.由第二式可得\n$$\\theta = \\frac {\\varphi + 2 k \\pi}{n}.$$\n由此即得出公式\n$$\\sqrt [ n ]{z} = (\\sqrt [ n ]{r}) \\left(\\cos \\frac {\\varphi + 2 k \\pi}{n} + \\mathrm{i} \\sin \\frac {\\varphi + 2 k \\pi}{n}\\right).$$\n这个公式里 k 虽然可以取任意整数，但所得出的复数只有 n 个是互不相同的，即相当于  $k = 0, 1, 2, \\cdots, n - 1$  的情形：\n$$w _ {0} = (\\sqrt [ n ]{r}) \\left(\\cos \\frac {\\varphi}{n} + \\mathrm{i} \\sin \\frac {\\varphi}{n}\\right),$$\n$$w _ {1} = (\\sqrt [ n ]{r}) \\left(\\cos \\frac {\\varphi + 2 \\pi}{n} + \\mathrm{i} \\sin \\frac {\\varphi + 2 \\pi}{n}\\right),$$\n$$w _ {n - 1} = (\\sqrt [ n ]{r}) \\left[ \\cos \\frac {\\varphi + 2 (n - 1) \\pi}{n} + \\mathrm{i} \\sin \\frac {\\varphi + 2 (n - 1) \\pi}{n} \\right].$$",
+          "after": "开方则是反过来的任务：已知 $z$，找出所有满足 $w^n=z$ 的复数 $w$。这里问的是全部解，不是默认选择一个正数。把未知数写成 $w=\\rho e^{i\\varphi}$，需要同时满足 $\\rho^n=r$ 与 $n\\varphi=\\theta+2k\\pi$。第一式只有一个正实解 $\\rho=r^{1/n}$；第二式却要保留已知数的全部辐角。因此\n$$w_k=r^{1/n}\\exp\\left(i\\frac{\\theta+2k\\pi}{n}\\right),\\quad k=0,1,\\ldots,n-1.$$\n$r$ 是原数的模，$\\theta$ 是任选的一个辐角，$k$ 用来枚举不同方向。不能先把 $2k\\pi$ 删掉再除以 $n$，那样会漏解。"
+        },
+        {
+          "id": "CH01-S01-SS04-C003",
+          "title": "方根的几何分布与代数运算",
+          "statement_markdown": "非零复数的 $n$ 个 $n$ 次方根的模均为 $r^{1/n}$，相邻辐角相差 $2\\pi/n$，在以原点为中心的圆周上等分排列；$n\\ge3$ 时是正 $n$ 边形顶点。复数的加、减、乘、除、乘方和开方统称代数运算，其中除法须排除零分母，负整数幂须排除零底数。",
+          "source_start_line": 27,
+          "source_end_line": 28,
+          "source_quote": "这 $n$ 个 $n$ 次根的模都是 $(\\sqrt[n]{r})$，因此它们都位于以原点为中心，$(\\sqrt[n]{r})$ 为半径的圆上。且由于相邻二根的辐角相差都是 $2\\pi / n$，所以这 $n$ 个点刚好把圆周分成 $n$ 等分。它们是内接于圆的正 $n$ 边形的顶点。\n加、减、乘、除、开方及乘方这六种运算合称为代数运算.从以上的讨论可见，在复数域内代数运算是通行无阻的(除了除法要求分母不为零)，这是复数域与实数域的一个重要区别.",
+          "after": "这些根都落在半径 $r^{1/n}$ 的圆上，相邻角差 $2\\pi/n$，构成正多边形的顶点；取 $n$ 次幂后，角差变成整圈，于是全部合到同一个 $z$。这同时给出求根的做法和验算的方法：数一数根的个数，检查模是否相同，再把任意一个根乘方。"
+        },
+        {
+          "id": "CH01-S01-SS04-C004",
+          "title": "负八的全部立方根",
+          "statement_markdown": "$w^3=-8$ 的全部解为 $-2,\\ 1+i\\sqrt3,\\ 1-i\\sqrt3$。",
+          "source_start_line": 29,
+          "source_end_line": 32,
+          "source_quote": "例9 求 $\\sqrt[3]{-8}$ 的全部值.\n解 把 -8 表成三角形式为： $-8 = 2^{3}(\\cos\\pi + \\mathrm{i}\\sin\\pi)$ ，则\n$$\\sqrt [ 3 ]{- 8} = 2 \\Big (\\cos \\frac {\\pi + 2 k \\pi}{3} + \\mathrm{i} \\sin \\frac {\\pi + 2 k \\pi}{3} \\Big), \\quad k = 0, 1, 2,$$\n$$\\sqrt [ 3 ]{- 8} = \\left\\{ \\begin{array}{l l} 1 + \\mathrm{i} \\sqrt {3}, & k = 0 \\\\ - 2, & k = 1 \\\\ 1 - \\mathrm{i} \\sqrt {3}, & k = 2. \\end{array} \\right.$$",
+          "after": "例如平方等于 $1$ 的数有 $1$ 和 $-1$；实数里的“正平方根”只是其中一个选择。教材求 $-8$ 的立方根时，同样有三个复数解，其中一个为实数 $-2$，另两个并不因为不在实轴上就可以忽略。另一方面，若原数是零，$w^n=0$ 只有 $w=0$，前面的非零多边形图景便退化为一个点。"
+        }
+      ]
+    },
+    "CH01-S01-SS05": {
+      "unit_id": "CH01-S01-SS05",
+      "source_path": "original_text/ch01_s01_ss05.md",
+      "conclusions": [
+        {
+          "id": "CH01-S01-SS05-C001",
+          "title": "复数列极限的定义",
+          "statement_markdown": "$z_n\\to z_0\\in\\mathbb C$ 指 $|z_n-z_0|\\to0$。等价地，对任意 $\\varepsilon>0$，存在自然数 $N$，使所有 $n>N$ 满足 $|z_n-z_0|<\\varepsilon$。",
+          "source_start_line": 3,
+          "source_end_line": 9,
+          "source_quote": "定义 1 设  $z_{1}, z_{2}, \\cdots, z_{n}, \\cdots$  是一个复数序列， $z_{0}$  是已给复数，如果\n$$\\lim _ {n \\rightarrow + \\infty} | z _ {n} - z _ {0} | = 0,$$\n就称复数 $z_0$ 是复数列 $\\{z_n\\}$ 的极限，记作\n$$\\lim _ {n \\to + \\infty} z _ {n} = z _ {0} \\quad \\text {或} \\quad z _ {n} \\to z _ {0}.$$\n上述定义用“$\\varepsilon - N$”的语言来说就是：对任给正数 $\\varepsilon > 0$，存在自然数 $N$，使当 $n > N$ 时，总有\n$$\\left| z _ {n} - z _ {0} \\right| <   \\epsilon .$$\n也就是说，当 $n > N$ 时，点 $z_{n}$ 全部落入以 $z_0$ 为圆心，$\\varepsilon$ 为半径的圆内.",
+          "after": "定义的精确意思是：任给一个很小的实数 $\\varepsilon>0$，都能找到自然数 $N$，使所有 $n>N$ 都满足 $|z_n-z_0|<\\varepsilon$。$\\varepsilon$ 是你提出的精度，$N$ 是满足该精度后所需的起始序号。允许前面有限项离得很远，要求的是此后每一项都留在圆内；偶尔进入一次不算收敛。以 $z_n=(1+i)/n$ 为例，距离是 $\\sqrt2/n$，可以直接按给定精度求出合适的 $N$。先缩小圆盘，再看需要把序号推到多后。"
+        },
+        {
+          "id": "CH01-S01-SS05-C002",
+          "title": "实部、虚部收敛判别",
+          "statement_markdown": "设 $z_n=x_n+iy_n$、$z_0=x_0+iy_0$，则\n$$z_n\\to z_0\\iff x_n\\to x_0\\ \\text{且}\\ y_n\\to y_0.$$",
+          "source_start_line": 10,
+          "source_end_line": 16,
+          "source_quote": "定理1 设 $z_0 = x_0 + \\mathrm{i}y_0, z_n = x_n + \\mathrm{i}y_n, n = 1,2,\\dots$，则 $\\lim_{n\\to \\infty}z_n = z_0$ 的充分必要条件是\n$$\\lim _ {n \\to + \\infty} x _ {n} = x _ {0} \\quad {\\text {及}} \\quad \\lim _ {n \\to + \\infty} y _ {n} = y _ {0}.$$\n证 由不等式\n$$\\mid x _ {n} - x _ {0} \\mid \\quad \\text {或} \\quad \\mid y _ {n} - y _ {0} \\mid \\leqslant \\mid z _ {n} - z _ {0} \\mid$$\n即得条件的必要性.而由不等式\n$$\\mid z _ {n} - z _ {0} \\mid \\leqslant \\mid x _ {n} - x _ {0} \\mid + \\mid y _ {n} - y _ {0} \\mid$$\n可得条件的充分性.",
+          "after": "如果写成 $z_n=x_n+iy_n$、$z_0=x_0+iy_0$，那么复数收敛等价于两个实分量分别收敛。这让计算回到实数极限，但两分量必须同时趋近。其依据是每个坐标误差不超过总距离，而总距离不超过两坐标误差之和；完整的双向论证可展开[实部虚部判别法](#reader-10b3511b3f589e891e9a)阅读。"
+        },
+        {
+          "id": "CH01-S01-SS05-C003",
+          "title": "非零极限的模与辐角判别",
+          "statement_markdown": "设 $z_0\\ne0$。$z_n\\to z_0$ 当且仅当 $|z_n|\\to|z_0|$，且对 $z_0$ 的任一选定辐角 $\\theta_0$，可以给充分大的 $n$ 选取 $\\theta_n\\in\\operatorname{Arg}z_n$，使 $\\theta_n\\to\\theta_0$。这里允许调整整圈数，不要求辐角主值必收敛。",
+          "source_start_line": 17,
+          "source_end_line": 19,
+          "source_quote": "定理2 如果 $z_0 \\neq 0$，则 $\\lim_{n \\to \\infty} z_n = z_0$ 的充分必要条件是\n$$\\lim _ {n \\to + \\infty} | z _ {n} | = | z _ {0} | \\quad \\text {及} \\quad \\lim _ {n \\to + \\infty} \\mathrm{Arg} z _ {n} = \\mathrm{Arg} z _ {0}.$$\n上面的第二个等式应这样来理解：对于 $\\mathrm{Argz}_0$ 的任一个值 $\\arg z_0$ ，总可以选取一个序列 $\\{\\arg z_n\\}$ ，使得 $\\arg z_n \\to \\arg z_0$",
+          "after": "当 $z_0\\ne0$ 时，也可用“模趋近、辐角适当选取后趋近”判断。但要注意选取连续接近的角，而不是强迫主值连续。一个点从负实轴下方靠近负实数时，主值靠近 $-\\pi$；负实数本身的主值却是 $\\pi$，点的距离仍可趋零。若目标是零，则只要求模趋零，方向可以不断旋转，根本没有目标辐角。"
+        },
+        {
+          "id": "CH01-S01-SS05-C004",
+          "title": "收敛于无穷远点",
+          "statement_markdown": "$z_n\\to\\infty$ 指：对任意 $M>0$，存在自然数 $N$，使 $n>N$ 时 $|z_n|>M$。等价地，$|z_n|\\to+\\infty$。复平面只有一个无穷远点。",
+          "source_start_line": 35,
+          "source_end_line": 37,
+          "source_quote": "如果数列  $z_{1}, z_{2}, \\cdots, z_{n}, \\cdots$  具有这样的性质：对任意正数 M，总可以找到一个自然数 N，使当 n > N 时，有  $|z_{n}| > M$ ，即当 n 增大时  $z_{n}$  的模可以变得大于任意预先指定的界限，那么我们就说这个数列收敛于无穷远点，并记作\n$$\\lim _ {n \\to \\infty} z _ {n} = \\infty .$$\n通过上面的定义实际上是在复数平面上增加了一个“理想点”——无穷远点，记作 $\\infty$ ，对此我们通过复数的球面表示法来作出一个直观的解释.",
+          "after": "还有一种变化：点跑出每个预先指定的有限圆盘，而且最终一直在外。精确说，任给 $M>0$，充分大的 $n$ 都有 $|z_n|>M$，就记为 $z_n\\to\\infty$。这里的无穷远点只有一个，不分向左、向右或其他方向；仅仅“数列无界”还不够，因为点也可能反复回到原点。"
+        },
+        {
+          "id": "CH01-S01-SS05-C005",
+          "title": "球极投影的坐标公式",
+          "statement_markdown": "对球面 $\\xi^2+\\eta^2+(\\zeta-1)^2=1$，以北极 $N=(0,0,2)$ 投影，$z=x+iy$ 对应\n$$Z=\\left(\\frac{4x}{|z|^2+4},\\frac{4y}{|z|^2+4},\\frac{2|z|^2}{|z|^2+4}\\right).$$\n反之，球面上 $\\zeta\\ne2$ 的点对应\n$$z=\\frac{2\\xi}{2-\\zeta}+i\\frac{2\\eta}{2-\\zeta}.$$\n这给出有限复平面与球面除北极外的点的一一对应。",
+          "source_start_line": 38,
+          "source_end_line": 45,
+          "source_quote": "取一个在原点 $O$ 与 $z$ 平面相切的单位球面，过 $O$ 点作 $z$ 平面的垂线与球面交于 $N$ 点，$N$ 称为北极或球极（图1.5）。对于平面上的任一点 $z$ ，用一条空间直线把它和\n图1.5\n球极 N 连接起来，这条直线还球面相对于另一点 Z。显然，对于每一复数 z 都对应于球面上不是 N 的唯一的点 Z；反之，球面上除 N 以外的每一个点 Z，也对应于唯一的复数。这样，就建立起球面上的点（不包括北极点 N）与复平面上的点之间的一一对应，因而可以用球面上的点 Z 表示复数： $x + iy$ 。从几何上很容易看出，z 平面上的每一个原点为圆心的圆周，都对应着球面上的某个经纬圈；这个圆周外面的点，则对应于相应纬圈以北的点。而且若点 z 的模越大，它的相应的点 Z 就越靠近北极 N。为了使得球面上的北极 N；也在 z 平面上有一个对应点，我们就约定在 z 平面上引进一个理想点，称为无穷远点。\n实际上，如知 $z$ 平面上的点 $z = (x, y)$。设单位球面为 $\\xi^2 + \\eta^2 + (\\zeta - 1)^2 = 1$。过北极 $N = (0, 0, 2)$ 与点 $z$ 的空前直线参数方程为 $\\xi = tx, \\eta = ty, \\zeta = 2 - 2t, -\\infty <$\n$t < +\\alpha$ .代入球面方程后，得到参数 $t$ 应满足的方程 $t^2 (x^2 +y^2 +4) - 4t = 0.$\n其根 $t = 0$ 对应于北极 $N = (0,0,2)$，而根 $t = \\frac{4}{|z|^2 + 4}$ 就对应于此直线与球面的交点\n$$Z = \\left(\\frac {4 \\operatorname{Re} z}{| z | ^ {2} + 4}, \\frac {4 \\operatorname{Im} z}{| z | ^ {2} + 4}, \\frac {2 | z | ^ {2}}{| z | ^ {2} + 4}\\right).$$\n反之，如知球面上的点 $Z(\\xi, \\eta, \\zeta)$，从 $x = \\frac{\\xi}{t}, y = \\frac{\\eta}{t}$ 及 $t = \\frac{2 - \\zeta}{2}$ 消去 $t$，得到 $z$ 平面上与 $Z$ 对应的唯一点 $z = \\left(\\frac{2\\xi}{2 - \\zeta}, \\frac{2\\eta}{2 - \\zeta}\\right)$.",
+          "after": "球极投影给这一约定一个直观解释：把平面与球面上除北极外的点对应，模越来越大的点都越来越接近同一北极。补上无穷远点后便得到扩充复平面。无穷远点没有实部、虚部和辐角；含它的运算只能在约定的意义下使用，不能当作一个普通数任意相减。"
+        },
+        {
+          "id": "CH01-S01-SS05-C006",
+          "title": "同心圆在球面上的对应",
+          "statement_markdown": "圆周 $|z|=R$ 对应球面纬圆 $\\zeta=2R^2/(4+R^2)$。原点对应南极；$|z|=2$ 对应赤道 $\\zeta=1$；$|z|<2$ 与 $|z|>2$ 分别对应南半球、北半球。当 $|z|\\to\\infty$ 时，对应球面点趋于北极。",
+          "source_start_line": 46,
+          "source_end_line": 51,
+          "source_quote": "如知 z 平面上一个以原点为圆心的圆周为  $x^{2} + y^{2} = R^{2}$ ，故有  $4(\\xi^{2} + \\eta^{2}) = R^{2}(2 - \\zeta)^{2}$ .\n当 $\\zeta \\neq 2$ 时，恰有平行于 $O\\xi \\eta$ 平面的平面方程 $\\zeta = \\frac{2R^2}{4 + R^2}$，故某个纬圆为\n$$\\left\\{ \\begin{array}{l} \\xi^ {2} + \\eta^ {2} + (\\zeta - 1) ^ {2} = 1 \\\\ \\zeta = \\frac {2 R ^ {2}}{4 + R ^ {2}}. \\end{array} \\right.$$\n若 $\\zeta < 1$ ，即球面上南半球面的点，有 $R^2 < 4$ ，就与 $z$ 平面上在 $x^{2} + y^{2} = R^{2}$ 内的点相对应；若 $\\zeta > 1$ ，即球面上北半球面的点，且有 $R^2 > 4$ ，就与在 $x^{2} + y^{2} = R^{2}$ 外的点相对应。当 $R = 0$ 时，$x = y = 0$ 就与 $\\xi = \\eta = \\zeta = 0$ 对应，即原点映射成南极；当 $R = 2$ 时，有 $\\zeta = 1$ ，故 $z$ 平面上半径为2的圆周映射成赤道圆周，即有\n$$\\left\\{ \\begin{array}{l} \\xi^ {2} + \\eta^ {2} = 1 \\\\ \\zeta = 1. \\end{array} \\right.$$\n当 $|z|$ 越大，即 $R$ 越大时，$Z$ 就越靠近北极点 $N = (0,0,2)$. 当 $z \\to \\infty$ 时，$Z$ 就是 $N$.",
+          "after": "球极投影给这一约定一个直观解释：把平面与球面上除北极外的点对应，模越来越大的点都越来越接近同一北极。补上无穷远点后便得到扩充复平面。无穷远点没有实部、虚部和辐角；含它的运算只能在约定的意义下使用，不能当作一个普通数任意相减。",
+          "source_note": "第49行将一般 R 的内外关系与半球关系混写；依第47行公式，半球分界半径为2。"
+        },
+        {
+          "id": "CH01-S01-SS05-C007",
+          "title": "扩充复平面与黎曼球面",
+          "statement_markdown": "复平面加上唯一的无穷远点，称扩充复平面或闭复平面，其球面模型称复数球面或黎曼球面；原复平面称开平面或有限平面。",
+          "source_start_line": 52,
+          "source_end_line": 52,
+          "source_quote": "增加了 $\\infty$ 点的复数平面称为扩充平面或闭复平面，与它对应的就是整个球面，称为复数球面或黎曼（Riemann）球面，由上讨论可知，扩充平面的一个几何模型就是复数球面。原来的复数平面则称为开平面或有限平面。",
+          "after": "球极投影给这一约定一个直观解释：把平面与球面上除北极外的点对应，模越来越大的点都越来越接近同一北极。补上无穷远点后便得到扩充复平面。无穷远点没有实部、虚部和辐角；含它的运算只能在约定的意义下使用，不能当作一个普通数任意相减。"
+        },
+        {
+          "id": "CH01-S01-SS05-C008",
+          "title": "无穷远点的约定运算与邻域",
+          "statement_markdown": "$\\infty$ 的实部、虚部和辐角无意义，规定 $|\\infty|=+\\infty$。对有限复数 $a$，有\n$$a\\pm\\infty=\\infty\\pm a=\\infty,\\qquad a/\\infty=0.$$\n当有限 $a\\ne0$ 时，还有\n$$a\\infty=\\infty a=\\infty,\\quad a/0=\\infty,\\quad\\infty/a=\\infty.$$\n$\\{z:|z|>R\\}\\cup\\{\\infty\\}$（$R>0$）构成无穷远点的邻域。未特别说明时，本书讨论有限复平面。",
+          "source_start_line": 53,
+          "source_end_line": 58,
+          "source_quote": "关于无穷远点，还作如下一些约定：\n1) $\\infty$ 点的实部、虚部及辐角都无意义，其模 $|\\infty| = +\\infty$\n2) 若 $a \\neq 0$, 则 $a \\cdot \\infty = \\infty \\cdot a = \\infty, \\frac{a}{0} = \\infty$.\n3) 若 $a \\neq \\infty$，则 $a \\pm \\infty = \\infty \\pm a = \\infty, \\frac{a}{\\infty} = 0, \\frac{\\infty}{a} = \\infty$.\n4）在闭复平面上任何一个以原点 $O$ 为中心的圆的外部 $\\mid z\\mid >R$ ，都称为无穷远点的邻域，从复数球面上看，就是某个纬圈以北的地区.\n我们约定，以后某些论断涉及闭平面时，则强调“闭”字，凡是没有特别指明的地方，均指开复平面.",
+          "after": "球极投影给这一约定一个直观解释：把平面与球面上除北极外的点对应，模越来越大的点都越来越接近同一北极。补上无穷远点后便得到扩充复平面。无穷远点没有实部、虚部和辐角；含它的运算只能在约定的意义下使用，不能当作一个普通数任意相减。",
+          "source_note": "原文第三项未排除 ∞/0；保守地将 ∞/a 的条件写为有限且非零。"
+        }
+      ]
+    },
+    "CH01-S02-SS01": {
+      "unit_id": "CH01-S02-SS01",
+      "source_path": "original_text/ch01_s02_ss01.md",
+      "conclusions": [
+        {
+          "id": "CH01-S02-SS01-C001",
+          "title": "邻域",
+          "statement_markdown": "给定 $z_0\\in\\mathbb C$、$\\rho>0$，$U_\\rho(z_0)=\\{z:|z-z_0|<\\rho\\}$ 称为 $z_0$ 的 $\\rho$ 邻域。",
+          "source_start_line": 4,
+          "source_end_line": 6,
+          "source_quote": "设 $z_0$ 是复平面上一点，$\\rho$ 是任一正数，点集\n$$\\{z \\mid | z - z _ {0} | <   p \\}$$\n称为 $z_0$ 的 $\\rho$ 邻域.",
+          "after": "给定点 $a$ 和正实数 $\\rho$，集合 $\\{z:|z-a|<\\rho\\}$ 称为 $a$ 的 $\\rho$ 邻域。$|z-a|$ 是点到中心的距离，$\\rho$ 是半径；严格小于表示不包括圆周。谈某点的邻域时，中心固定，半径可以缩小。不要把“附近”理解成一条线上左右的一小段，在复平面中它包含中心周围的全部方向。",
+          "source_note": "原文半径 p 为 ρ 的录入误差。"
+        },
+        {
+          "id": "CH01-S02-SS01-C002",
+          "title": "内点、外点与边界点",
+          "statement_markdown": "设 $E\\subset\\mathbb C$。$M$ 的某邻域完全包含于 $E$ 时，$M$ 为内点；某邻域与 $E$ 不相交时，为外点；每个邻域都同时含有 $E$ 中和 $E$ 外的点时，为边界点。边界点可以属于 $E$，也可以不属于 $E$。",
+          "source_start_line": 7,
+          "source_end_line": 7,
+          "source_quote": "设已给集 $E$ ，利用邻域可以把复平面上的点分类：设 $M$ 是复平面上一点，如果$M$ 有一个 $\\rho$ 邻域完全属于 $E,M$ 称为 $E$ 的内点； $M$ 的任一 $\\rho$ 邻域内既有集 $E$ 的点，也有非 $E$ 的点， $M$ 称为 $E$ 的边界点.边界点可以属于集 $E$ ，也可不属于集 $E;M$ 有一个 $\\rho$ 邻域完全不属于集 $E,M$ 称为集 $E$ 的外点.",
+          "after": "内点的小圆盘整个留在集合里，外点的小圆盘整个留在集合外，边界点的小圆盘则始终同时遇到两边。图中只展示有限次缩小；数学定义要求任意小半径都如此。这个量词差别，才是三个名称背后的判断方法。"
+        },
+        {
+          "id": "CH01-S02-SS01-C003",
+          "title": "开集、闭集、边界及有界性",
+          "statement_markdown": "若 $E$ 的每个点均为内点，则 $E$ 为开集；全部边界点组成边界 $\\partial E$；若 $\\partial E\\subset E$，则为闭集。若存在 $R>0$ 使 $E\\subset\\{|z|<R\\}$，则为有界集，否则为无界集。",
+          "source_start_line": 8,
+          "source_end_line": 8,
+          "source_quote": "如果集 E 的点全部是内点，E 称为开集。E 的全部边界点的集合，称为 E 的边界。如果 E 的边界全属于 E，E 称为闭集。如果集 E 可以包含在原点的某个邻域内，E 称为有界集；否则集 E 称为无界集。",
+          "after": "另一个独立的问题是集合能否被一个有限圆盘整个罩住。若存在 $R>0$，使每个 $z\\in E$ 都有 $|z|<R$，称它有界；找不到任何这样的 $R$，便称无界。开闭讨论边界是否包含，有界讨论是否向远处延伸，不能相互代替：单位开圆盘有界，整条实轴则闭而无界。处理一个新点集时，先用不等式还原位置，再判断边界归属和是否有统一距离上限，会比靠图形印象可靠。"
+        }
+      ]
+    },
+    "CH01-S02-SS02": {
+      "unit_id": "CH01-S02-SS02",
+      "source_path": "original_text/ch01_s02_ss02.md",
+      "conclusions": [
+        {
+          "id": "CH01-S02-SS02-C001",
+          "title": "区域与闭域",
+          "statement_markdown": "非空点集 $D$ 称为区域，当且仅当它是开集，且任意两点能用完全位于 $D$ 内的折线连接。若边界为 $C=\\partial D$，则 $\\bar D=D\\cup C$ 称为闭域。",
+          "source_start_line": 3,
+          "source_end_line": 6,
+          "source_quote": "定义2 具有下列性质的非空点集 $D$ 称为区域：\n1) $D$ 是开集；\n2) D 中任意两点可以用一条全在 D 中的折线连接起来(连通性).\n区域 D 加上它的边界 C 称为闭域，记为  $\\bar{D} = C + D$ .",
+          "after": "区域记为 $D$。它加上全部边界得到闭域 $\\bar D$；上面的横线在这里表示闭包，和对单个复数作共轭的含义要靠对象区分。单位开圆盘是区域，两个分离圆盘的并不是区域。圆环也是区域：两点之间可能不能直走，但绕开中间空洞仍能连接。"
+        },
+        {
+          "id": "CH01-S02-SS02-C002",
+          "title": "连续曲线、约当曲线与简单闭曲线",
+          "statement_markdown": "若实函数 $x(t),y(t)$ 在 $[\\alpha,\\beta]$ 连续，则 $z(t)=x(t)+iy(t)$ 描述连续曲线。除首尾参数可对应同一点外，任意不同参数均对应不同点的曲线，称约当曲线或简单曲线；若还满足 $z(\\alpha)=z(\\beta)$，称约当闭曲线或简单闭曲线。",
+          "source_start_line": 7,
+          "source_end_line": 10,
+          "source_quote": "为了研究区域的边界,下面介绍约当(Jordan)意义下的曲线概念.设 $x(t)$ 及 $y(t)$ 是定义在 $[\\alpha,\\beta]$ 上的连续函数,则由方程\n$$\\left\\{ \\begin{array}{l l} {x = x (t)} \\\\ {y = y (t)} \\end{array} \\right. \\text {或} z = z (t) = x (t) + \\mathrm{i} y (t), \\quad \\alpha \\leqslant t \\leqslant \\beta$$\n所决定的点集 $l$ ，称为复平面上的一条连续曲线；设已给一条连续曲线 $l$ ，如果 $t_1$\n$t_2$ 是 $[\\alpha, \\beta]$ 上的两个不同的参数值，且它们不同时是 $[\\alpha, \\beta]$ 的端点，那么它们就对应着曲线 $l$ 上不同的点，即 $z(t_1) \\neq z(t_2)$，这样的曲线叫做约当曲线或简单曲线；一条约当曲线，如果满足 $z(\\alpha) = z(\\beta)$，称为约当闭曲线或简单闭曲线。由定义可见，简单曲线是一条无重点的连续曲线。",
+          "after": "为了讨论边界和以后积分所走的路径，我们还需要描述一条曲线。用实参数 $t$ 驱动平面点：\n$$z(t)=x(t)+iy(t),\\quad \\alpha\\le t\\le\\beta.$$\n这里 $x(t),y(t)$ 是连续的实函数，参数增加时，点在平面上连续移动。首尾位置相等时路径闭合；若不同的参数不会给出同一点，只有闭合情形允许首尾重合，这才叫简单曲线，也叫约当曲线。连续仅说明移动不跳跃，并不排除中间相交或走回头路。"
+        },
+        {
+          "id": "CH01-S02-SS02-C003",
+          "title": "约当曲线定理",
+          "statement_markdown": "任意简单闭曲线把复平面分成两个互不相交的区域：一个有界，称内区域；一个无界，称外区域。这两个区域共同以该曲线为边界。",
+          "source_start_line": 11,
+          "source_end_line": 11,
+          "source_quote": "显然，圆是一条简单闭曲线，它把平面分成两个没有公共点的区域，其中一个有界，一个无界，并且这两个区域都以已给圆为边界。任一条简单闭曲线也把整个平面分成两个没有公共点的区域，其中一个有界称为它的内区域，一个无界称为它的外区域，这两个区域都可以这条简单闭曲线作为边界。这个结果看来很直观，但是它的严格证明比较复杂，超出了本课程的范围。用简单闭曲线所围成的区域，是比较简单的区域，也是通常所考虑的区域。",
+          "after": "约当曲线定理告诉我们，任意简单闭曲线都把平面分成一个有界的内区域和一个无界的外区域，以这条曲线为共同边界。接着，教材用“有没有洞”进一步分类区域：如果 $D$ 中每一条简单闭曲线围出的整个内部仍属于 $D$，就称 $D$ 单连通；否则称多连通。圆盘、半平面和水平带域是单连通的。圆环则不是：可以沿空洞绕一圈，曲线本身在圆环里，但它围出的中心不在圆环里。"
+        },
+        {
+          "id": "CH01-S02-SS02-C004",
+          "title": "单连通域与多连通域",
+          "statement_markdown": "若区域 $D$ 内任意简单闭曲线的整个内区域都包含在 $D$ 中，则 $D$ 为单连通域；否则为多连通域。简单闭曲线的内区域是单连通域；圆环 $r<|z|<R$（$0<r<R$）及去心邻域 $0<|z-a|<\\delta$（$\\delta>0$）是多连通域。",
+          "source_start_line": 12,
+          "source_end_line": 15,
+          "source_quote": "约当闭曲线的内区域 D 有这样一个性质: 域 D 中任何简单闭曲线的内区域中的每一点都属于 D. 一般地, 我们把具有这种性质的区域, 叫做单连通区域, 简称单连域. 不是单连通的区域, 称为多连通区域.\n复平面上的区域,常是由复数的实部、虚部、模及辐角的不等式所确定的点集.例如,上半平面:Imz>0;左半平面:Rez<0.1水平带域:y1<Imz<y2,y1,y2是实常数;上半圆:|z|<1,Imz>0(也可表为0<argz<n)等等都是单连通区域;而圆环:|z|-a<R(r及R是正实常数)及去掉常数轴上的线段-1≤Rez≤1的竖直带域-2<Rez<2(图1.6)是多连通区域.如果把一个单连通域挖去若干个点,所得的区域也是多连通域.例如,a点的去心邻域\n$$0 <   | z - a | <   \\delta .$$\n这种多连通域以后常用到.一般说来,多连通区域的边界是由有限条闭曲线及一些割痕和点组成的(图1.7).",
+          "after": "挖去的即使只有一个点，也会破坏这个条件。去心邻域 $0<|z-a|<\\delta$ 仍能让任意两点绕着中心连通，因而是区域；但中心 $a$ 不属于它，围住中心的小圆便提供了非单连通的见证。不要把“连通”与“单连通”混为一谈：前者问能否走到，后者还问走一圈围住的地方是否完整。以后遇到 $1/(z-a)$ 的积分，这个被挖去的点将产生实际影响。",
+          "source_note": "原文圆环和角域示例有录入损坏，圆环按标准含义规范化。"
+        }
+      ],
+      "supplementary_conclusions": [
+        {
+          "id": "CH01-S02-SS02-C005",
+          "title": "单位三次根与有限三角和",
+          "statement_markdown": "若 $\\omega^3=1$ 且 $\\omega\\ne1$，则 $1+\\omega+\\omega^2=0$。对正整数 $n$ 及 $0<\\theta<\\pi$，\n$$\\sum_{k=1}^n\\cos k\\theta=-\\frac12+\\frac{\\sin((n+\\tfrac12)\\theta)}{2\\sin(\\theta/2)},$$\n$$\\sum_{k=1}^n\\sin k\\theta=\\frac12\\cot\\frac\\theta2-\\frac{\\cos((n+\\tfrac12)\\theta)}{2\\sin(\\theta/2)}.$$",
+          "source_start_line": 24,
+          "source_end_line": 28,
+          "source_quote": "3. 如果 $\\omega$ 是1的立方根中的一个复根，求证 $1 + \\omega + \\omega^2 = 0$.\n4. 设  $x + iy = \\sqrt{a + bi}$ ，求 x, y，这里要求用 a, b 的代数式表示 x, y.\n5. 利用复数的指数式，证明以下等式：\n$$\\sum_ {k = 1} ^ {n} \\cos k \\theta = - \\frac {1}{2} + \\frac {\\sin \\left(n + \\frac {1}{2}\\right) \\theta}{2 \\sin \\frac {1}{2} \\theta}; \\tag {1}$$\n$$\\sum_ {k = 1} ^ {n} \\sin k \\theta = \\frac {1}{2} \\cot \\frac {\\theta}{2} - \\frac {\\cos \\left(n + \\frac {1}{2}\\right) \\theta}{2 \\sin \\frac {1}{2} \\theta}, 0 <   \\theta <   \\pi .$$",
+          "after": "教材中的[判断圆环是否为区域](#reader-d1e82158047697cc832f)、[判断去心邻域是否为区域](#reader-6669ce4cdb760d2901f3)保留了完整题目和推演，可展开对照本节的思路。"
+        },
+        {
+          "id": "CH01-S02-SS02-C006",
+          "title": "平行四边形恒等式与反向三角估计",
+          "statement_markdown": "对任意复数，\n$$|z_1+z_2|^2+|z_1-z_2|^2=2(|z_1|^2+|z_2|^2),$$\n$$\\left|\\sum_{j=1}^n z_j\\right|\\ge|z_1|-\\sum_{j=2}^n|z_j|.$$\n第一式表示平行四边形两条对角线长度平方之和等于四条边长度平方之和。",
+          "source_start_line": 29,
+          "source_end_line": 33,
+          "source_quote": "6. 证明 $|z_1 + z_2|^2 + |z_1 - z_2|^2 = 2(|z_1|^2 + |z_2|^2)$，并说明其几何意义。\n7. (1) 如果 $|z| = 1$，证明 $\\left|\\frac{z - a}{1 - az}\\right| = 1$.\n(2) 如果 $|z| < 1, |a| < 1$，证明 $\\left|\\frac{z - a}{1 - az}\\right| < 1$.\n8.（1）证明\n$$\\left| z _ {1} + z _ {2} + \\dots + z _ {n} \\right| \\geqslant \\left| z _ {1} \\right| - \\left| z _ {2} \\right| - \\dots - \\left| z _ {n} \\right|.$$",
+          "after": "教材中的[判断圆环是否为区域](#reader-d1e82158047697cc832f)、[判断去心邻域是否为区域](#reader-6669ce4cdb760d2901f3)保留了完整题目和推演，可展开对照本节的思路。"
+        },
+        {
+          "id": "CH01-S02-SS02-C007",
+          "title": "圆盘分式的模判别",
+          "statement_markdown": "设 $a\\in\\mathbb C$，在 $1-\\bar a z\\ne0$ 处定义\n$$T_a(z)=\\frac{z-a}{1-\\bar a z}.$$\n若 $|z|=1$ 且分母非零，则 $|T_a(z)|=1$；若 $|a|<1$ 且 $|z|<1$，则分母自动非零且 $|T_a(z)|<1$。\n\n这里的 $\\bar a$ 表示 $a$ 的共轭，横线不能省掉。",
+          "source_start_line": 30,
+          "source_end_line": 31,
+          "source_quote": "7. (1) 如果 $|z| = 1$，证明 $\\left|\\frac{z - a}{1 - az}\\right| = 1$.\n(2) 如果 $|z| < 1, |a| < 1$，证明 $\\left|\\frac{z - a}{1 - az}\\right| < 1$.",
+          "after": "教材中的[判断圆环是否为区域](#reader-d1e82158047697cc832f)、[判断去心邻域是否为区域](#reader-6669ce4cdb760d2901f3)保留了完整题目和推演，可展开对照本节的思路。",
+          "source_note": "已对照用户教材PDF第19页、印刷第17页习题7：分母确为1-共轭a乘z，解析OCR漏了a的共轭横线。恢复复参数版本，并补明分母非零与单位圆内条件；原解析文本保留作来源对照。",
+          "source_pdf_page": 19
+        },
+        {
+          "id": "CH01-S02-SS02-C008",
+          "title": "系数单调的多项式零点限制",
+          "statement_markdown": "若实数 $0<a_0\\le a_1\\le\\cdots\\le a_n$，则 $p_n(z)=a_0z^n+a_1z^{n-1}+\\cdots+a_n$ 在 $|z|<1$ 内无零点。",
+          "source_start_line": 34,
+          "source_end_line": 36,
+          "source_quote": "(2) 设  $0 < a_{0} \\leqslant a_{1} \\leqslant \\cdots \\leqslant a_{n}$ ，证明：方程\n$$p _ {n} (z) = a _ {0} z ^ {n} + a _ {1} z ^ {n - 1} + \\dots + a _ {n - 1} z + a _ {n} = 0$$\n在圆 $|z| < 1$ 内无根.",
+          "after": "教材中的[判断圆环是否为区域](#reader-d1e82158047697cc832f)、[判断去心邻域是否为区域](#reader-6669ce4cdb760d2901f3)保留了完整题目和推演，可展开对照本节的思路。"
+        },
+        {
+          "id": "CH01-S02-SS02-C009",
+          "title": "三点共线的复数判别",
+          "statement_markdown": "对三个互异点 $z_1,z_2,z_3$，下列各条件均等价于共线：\n$$\\frac{z_1-z_2}{z_2-z_3}\\in\\mathbb R;\\qquad\\bar z_1z_2+\\bar z_2z_3+\\bar z_3z_1\\in\\mathbb R;$$\n存在不全为零的实数 $\\lambda_j$，使\n$$\\lambda_1+\\lambda_2+\\lambda_3=0,\\qquad\\lambda_1z_1+\\lambda_2z_2+\\lambda_3z_3=0.$$",
+          "source_start_line": 37,
+          "source_end_line": 40,
+          "source_quote": "9. 证明下列三条件之任一，都是三点 $z_{1}, z_{2}, z_{3}$ 共线的充要条件：\n(1) $\\frac{z_{1}-z_{2}}{z_{2}-z_{3}}=$ 实数；(2) $\\bar{z}_{1}z_{2}+\\bar{z}_{2}z_{3}+\\bar{z}_{3}z_{1}=$ 实数；\n(3) 存在不全为零的实数  $\\lambda_{1}, \\lambda_{2}, \\lambda_{3}$ ，使\n$$\\left\\{ \\begin{array}{l} \\lambda_ {1} + \\lambda_ {2} + \\lambda_ {3} = 0 \\\\ \\lambda_ {1} z _ {1} + \\lambda_ {2} z _ {2} + \\lambda_ {3} z _ {3} = 0. \\end{array} \\right.$$",
+          "after": "教材中的[判断圆环是否为区域](#reader-d1e82158047697cc832f)、[判断去心邻域是否为区域](#reader-6669ce4cdb760d2901f3)保留了完整题目和推演，可展开对照本节的思路。",
+          "source_note": "补明互异的非退化情形，保证分式有意义。"
+        },
+        {
+          "id": "CH01-S02-SS02-C010",
+          "title": "四点共圆或共线的复数判别",
+          "statement_markdown": "对四个互异有限点 $z_1,z_2,z_3,z_4$，它们共圆或共线，当且仅当交比为实数：\n$$\\frac{z_1-z_3}{z_2-z_3}\\bigg/\\frac{z_1-z_4}{z_2-z_4}\\in\\mathbb R.$$",
+          "source_start_line": 41,
+          "source_end_line": 42,
+          "source_quote": "10. 证明：四点共圆共线的充要条件是\n$$\\frac {z _ {1} - z _ {3}}{z _ {2} - z _ {3}}: \\frac {z _ {1} - z _ {4}}{z _ {2} - z _ {4}} = \\text {实数}.$$",
+          "after": "教材中的[判断圆环是否为区域](#reader-d1e82158047697cc832f)、[判断去心邻域是否为区域](#reader-6669ce4cdb760d2901f3)保留了完整题目和推演，可展开对照本节的思路。",
+          "source_note": "补明点互异，保证原式各分母及除数非零。"
+        },
+        {
+          "id": "CH01-S02-SS02-C011",
+          "title": "正三角形及实和实积判别",
+          "statement_markdown": "若 $|z_1|=|z_2|=|z_3|=1$ 且 $z_1+z_2+z_3=0$，三点为单位圆内接正三角形顶点。若 $z_1+z_2$ 和 $z_1z_2$ 均为实数，则两数或均为实数，或互为共轭。",
+          "source_start_line": 43,
+          "source_end_line": 44,
+          "source_quote": "11. 如果 $|z_1| = |z_2| = |z_3| = 1$，且 $z_1 + z_2 + z_3 = 0$，证明 $z_1, z_2, z_3$ 构成一内接于单位圆的内接正三角形.\n12. 设 $z_{1}, z_{2}$ 是两复数，如果 $z_{1} + z_{2}$ 和 $z_{1}z_{2}$ 都是实数，证明 $z_{1}$ 和 $z_{2}$ 或者都是实数，或者是一对共轭复数.",
+          "after": "教材中的[判断圆环是否为区域](#reader-d1e82158047697cc832f)、[判断去心邻域是否为区域](#reader-6669ce4cdb760d2901f3)保留了完整题目和推演，可展开对照本节的思路。"
+        },
+        {
+          "id": "CH01-S02-SS02-C012",
+          "title": "共轭与辐角主值的极限性质",
+          "statement_markdown": "若 $z_n\\to z_0\\in\\mathbb C$，则 $\\bar z_n\\to\\bar z_0$。若 $z_0$ 既非零也非负实数，则 $\\arg z_n\\to\\arg z_0$；在零及负实轴处不能普遍作此断言。",
+          "source_start_line": 50,
+          "source_end_line": 53,
+          "source_quote": "15. 设 $z_{n} \\to z_{0}, \\arg z$ 表示主值，证明：\n(1) $\\bar{z}_n \\to \\bar{z}_0$.\n(2) 当  $z_{0} \\neq 0$  及负数时， $\\arg z_{n} \\rightarrow \\arg z_{0}$ ，又问当  $z_{0} = 0$  及负数时结论如何？\n(3) 当  $z_{0} = \\infty$  时，上述结论是否成立？",
+          "after": "教材中的[判断圆环是否为区域](#reader-d1e82158047697cc832f)、[判断去心邻域是否为区域](#reader-6669ce4cdb760d2901f3)保留了完整题目和推演，可展开对照本节的思路。",
+          "source_note": "原文“非0及负数”按上下文理解为既非零也非负实数。"
+        },
+        {
+          "id": "CH01-S02-SS02-C013",
+          "title": "直线的复数方程",
+          "statement_markdown": "任意直线可写为\n$$a\\bar z+\\bar az=C,\\qquad a\\in\\mathbb C\\setminus\\{0\\},\\quad C\\in\\mathbb R.$$\n反过来，每个这样的方程都表示直线。",
+          "source_start_line": 67,
+          "source_end_line": 68,
+          "source_quote": "18. 证明复平面上的直线方程可以写成\n$a\\bar{z}+\\bar{a}z=C,\\quad a\\neq0$ 是复常数，C是实常数.",
+          "after": "教材中的[判断圆环是否为区域](#reader-d1e82158047697cc832f)、[判断去心邻域是否为区域](#reader-6669ce4cdb760d2901f3)保留了完整题目和推演，可展开对照本节的思路。"
+        }
+      ]
+    },
+    "CH02": {
+      "unit_id": "CH02",
+      "source_path": "original_text/ch02.md",
+      "conclusions": []
+    },
+    "CH02-S01": {
+      "unit_id": "CH02-S01",
+      "source_path": "original_text/ch02_s01.md",
+      "conclusions": [
+        {
+          "id": "CH02-S01-C001",
+          "title": "复变函数、单值函数与多值函数",
+          "statement_markdown": "设 $E\\subset\\mathbb C$。若按一定规律，对每个 $z\\in E$ 对应一个复数 $w$，称在 $E$ 上定义复变函数 $w=f(z)$。每个输入只对应一个值时称单值；对应多个值时称多值。$\\sqrt[n]{z}$ 在每个非零有限输入有 $n$ 个不同值，$\\operatorname{Arg}z$ 在每个非零输入有无穷多个值。未特别声明时，函数指单值函数。",
+          "source_start_line": 3,
+          "source_end_line": 5,
+          "source_quote": "复变数函数的概念和微积分中一元函数的概念形式上完全相同，不过自变量和因变量都取复数值（当然也包括取实数值）.\n定义1 设 $E$ 是复平面上的一个点集，如果对 $E$ 中的每一个点 $z$ ，可以按照一定的规律找到一个复数 $w$ 与之相对应，就称在 $E$ 上定义了一个复变数函数，也简称为函数.记作 $w = f(z)$\n如果和每个点 z 对应的复数 w 不止一个，而是好几个，那么这个函数就称为一个多值函数。如  $w = \\sqrt[n]{2}$ ， $n \\geqslant 2$  就是定义在整个平面上的多值函数，对应于 z 的每个不为零的值，w 有 n 个互不相同的值。又如函数  $w = Argz$  是无穷多值的，对应于每个  $z \\neq 0$ ，w 有无限多个值，每两个这样的值相差  $2\\pi$  的一个整数倍。在以下的讨论中，如未作特殊声明时，所谈到的函数都指单值函数。",
+          "after": "第一章让一个复数对应一个平面点，现在我们让一个点按规则移动到另一个平面点。若集合 $E$ 中每个 $z$ 都按确定规则对应一个复数 $w$，就记为 $w=f(z)$。$z$ 是输入，$w$ 是输出，$E$ 是定义域。复数是平面上的点，所以也把这条规则叫作映照或变换。这一用语提醒我们：函数可以把一条直线弯成曲线，也可以把一片区域改变形状。",
+          "source_note": "原文根式示例根号内的2应为自变量z，按随后每个z有n个值的说明订正。"
+        },
+        {
+          "id": "CH02-S01-C002",
+          "title": "复变函数与两个实函数",
+          "statement_markdown": "设 $z=x+iy$、$w=u+iv$，则 $w=f(z)$ 等价于两个实函数 $u=u(x,y)$、$v=v(x,y)$。特别地，$w=z^2$ 等价于\n$$u=x^2-y^2,\\qquad v=2xy.$$",
+          "source_start_line": 6,
+          "source_end_line": 11,
+          "source_quote": "设 $z = x + \\mathrm{i}y, w = u + \\mathrm{i}v$，则函数关系 $w = f(z)$ 相当于实变量 $x, y$ 的两个实值函数\n$$u = u (x, y) \\quad {\\text {及}} \\quad v = v (x, y),$$\n例如，当 $w = z^2$ 时，命 $z = x + \\mathrm{i}y, w = u + \\mathrm{i}v$ ，则由\n$$u + \\mathrm{i} v = (x + \\mathrm{i} y) ^ {2} = (x ^ {2} - y ^ {2}) + \\mathrm{i} 2 x y,$$\n有\n$$u = x ^ {2} - y ^ {2} \\quad {\\text {及}} \\quad v = 2 x y.$$",
+          "after": "为了读懂输出，把 $z=x+iy$、$w=u+iv$ 代入表达式。函数就相当于两个实变量的实值函数 $u(x,y)$、$v(x,y)$，分别决定像点的横、纵坐标。比如 $w=z^2$ 给出\n$$u=x^2-y^2,\\qquad v=2xy.$$\n输入并非只有实部在动；实部与虚部可以同时变化。因此研究像曲线时，要把原来曲线的条件也代入这两个式子，不能把其中一个变量随意看成常数。"
+        },
+        {
+          "id": "CH02-S01-C003",
+          "title": "像、原像与一一映照",
+          "statement_markdown": "函数 $f:E\\to\\mathbb C$ 把点 $z_0$ 映为像 $w_0=f(z_0)$，把点集 $E$ 映为 $f(E)$；$z_0,E$ 分别称相应的原像。若不同输入必有不同输出，即 $z_1\\ne z_2\\Rightarrow f(z_1)\\ne f(z_2)$，称为一一映照或双方单值映照。单值函数的一个像点可以有多个原像。",
+          "source_start_line": 12,
+          "source_end_line": 15,
+          "source_quote": "为了赋予复变数函数 $w = f(z)$ 以几何意义，我们取两个复数平面：z 平面和 w 平面。对 z 平面上点集 E 中的每个点 z，我们在 w 平面上描出相应的点 $w(f(z))$ 。当 z 在 z 平面跑遍 E 时，w 就相应地跑遍 w 平面上的一个点集 $E'$ （图 2.1）。这样一来，函数 $w = f(z)$ 就可以看成是一个变换（或映照），它把 z 平面上的一个点集 E 变换成 w 平面上的一个点集 $E'$、$E'$ 常记作 $f(E)$。在映照 $w = f(z)$ 下，$w_0 = f(z_0)$ 及 $E' = f(E)$ 分别称为点 $z_0$ 及点集 E 的像，而点 $z_0$ 及点集 E 则分别称为 $w_0$ 及 $E'$ 的原像。\n图2.1\n对于单值函数 $w = f(z)$，每一个点 $z$ 只能对应一个像点 $w$. 但是一个像点的原像却可能不止一个. 例如 $w = z^2$，点 $z = \\pm 1$ 的像点都是 $w = 1$，即点 $w = 1$ 有两个原像 $z = 1$ 和 $z = -1$.\n定义2 设 $w = f(z)$ 是集合 $E$ 上的单值函数，如果对于 $E$ 中的任意两个不同点 $z_{1}$ 及 $z_{2}$，它们在（函数值）集合 $E'$ 中对应的点 $w_{1} = f(z_{1})$ 及 $w_{2} = f(z_{2})$ 也不同，则称 $w = f(z)$ 是集 $E$ 中的一个一一映照（或双方单值映照）。或者说，$w = f(z)$ 双方单值地把集 $E$ 映成集 $E'$。",
+          "after": "这里容易混淆两件事。“单值”只要求每个输入有一个输出，“一一”还要求不同输入不能共享输出。$z^2$ 是单值函数，但 $1$ 和 $-1$ 都映到 $1$，所以它在全平面并非一一。图中先保留完整平面，再限制到右半平面，比较那一对相反原像能否同时留下。"
+        },
+        {
+          "id": "CH02-S01-C004",
+          "title": "非零常数乘法是旋转与伸缩",
+          "statement_markdown": "设 $a=re^{i\\theta}\\ne0$，则 $w=az$ 是有限复平面之间的一一映照，也以 $\\infty\\mapsto\\infty$ 扩为闭复平面间的一一映照。几何上它先绕原点旋转 $\\theta$，再以原点为中心伸缩 $r$ 倍。",
+          "source_start_line": 17,
+          "source_end_line": 21,
+          "source_quote": "例1 考虑函数 $w = az$，其中，$a$ 是不为零的复常数。虽然这是一个把整个 $z$ 平面映为整个 $w$ 平面的一一映照。依我们对 $\\infty$ 所规定的运算，它把 $z$ 平面上的无穷远点映为 $w$ 平面上无穷远点，因此它把闭 $z$ 平面双方单值地映为闭 $w$ 平面。\n令 $a = r(\\cos \\theta +\\mathrm{i}\\sin \\theta)$ ，则函数 $w = az$ 是由下面两个函数复合而成：\n$$\\omega = (\\cos \\theta + \\mathrm{i} \\sin \\theta) z, \\quad w = r _ {\\omega}.$$\n如果把 $z, \\omega, w$ 都看作是同一个平面上的点，由于 $\\omega$ 与 $z$ 的模相同，而 $\\omega$ 的辐角等于\nz 的辐角加  $\\theta$ ，因此上列第一个映照，是 z 平面上的一个旋转；w 与  $\\omega$  有相同辐角，w 的模是  $\\omega$  的模的 r 倍，因此第二个映照是一个以原点为中心的相似变换（图 2.2）。综上所述，映照 w = az 是由一个旋转和一个相似映照迭合而得。",
+          "after": "计算像集有两条常用路线。对 $w=az$，第一章已说明它是固定旋转与伸缩，且 $a\\ne0$ 时可以除以 $a$ 唯一回到原点，所以是一一映照。对 $w=z^2$，直线可先用 $u=x^2-y^2,v=2xy$ 消去参数得到像曲线；圆弧则用极式，直接读出半径平方、辐角加倍。例如第一象限的一段四分之一圆弧，会变成上半平面的一段半圆弧。每次计算都要同时带上参数范围，否则算出的整条代数曲线可能比真正的像集大。"
+        },
+        {
+          "id": "CH02-S01-C005",
+          "title": "平方映照下平行坐标轴的直线像",
+          "statement_markdown": "在 $w=z^2$ 下，$u=x^2-y^2$、$v=2xy$。直线 $x=c\\ne0$ 的像为抛物线\n$$u=c^2-\\frac{v^2}{4c^2};$$\n直线 $y=c\\ne0$ 的像为\n$$u=\\frac{v^2}{4c^2}-c^2.$$\n虚轴的像是非正实轴，实轴的像是非负实轴，两者都包含原点。",
+          "source_start_line": 22,
+          "source_end_line": 39,
+          "source_quote": "例2 求下列曲线在映照 $w = z^2$ 下的像：\n1) 平行于坐标轴的直线.\n2) 双曲线族  $x^{2}-y^{2}=c_{1}$  及 2xy=c_{2}.\n图2.2\n3）位于第一像限内的圆弧 $z = r\\mathrm{e}^{\\theta},0 < \\theta < \\pi /2.$\n解 1) 先求直线 $x = c_{1}$ 的像. 令 $z = x + \\mathrm{i}y, w = u + \\mathrm{i}v$, 则\n$$u = x ^ {2} - y ^ {2}, \\quad v = 2 x y.$$\n将 $x = c_{1}$ 代入上面两式，得\n$$u = c _ {1} ^ {2} - y ^ {2}, \\quad v = 2 c _ {1} y.$$\n从这两个方程消去 $y$ 得（当 $c_{1} \\neq 0$ 时）\n$$u = c _ {1} ^ {2} - \\frac {\\nu^ {2}}{4 c _ {1} ^ {2}}.$$\n这是 $w$ 平面上的一族抛物线. 此外易见 $z$ 平面上的虚轴 $x = 0$ 被变换成\n$$u = - y ^ {2}, \\quad v = 0,$$\n这是 $w$ 平面上的负实轴，同样道理，它把 $y = c$ 变成\n$$u = x ^ {2} - c ^ {2}, \\quad v = 2 c x,$$\n消去 $x$ 得\n$$u = \\frac {v ^ {2}}{4 c ^ {2}} - c ^ {2}, \\quad c \\neq 0.$$\n这也是 $w$ 平面上一族抛物线. 容易知道 $y = 0$ 这时被变成 $w$ 平面上的正实轴.",
+          "after": "计算像集有两条常用路线。对 $w=az$，第一章已说明它是固定旋转与伸缩，且 $a\\ne0$ 时可以除以 $a$ 唯一回到原点，所以是一一映照。对 $w=z^2$，直线可先用 $u=x^2-y^2,v=2xy$ 消去参数得到像曲线；圆弧则用极式，直接读出半径平方、辐角加倍。例如第一象限的一段四分之一圆弧，会变成上半平面的一段半圆弧。每次计算都要同时带上参数范围，否则算出的整条代数曲线可能比真正的像集大。"
+        },
+        {
+          "id": "CH02-S01-C006",
+          "title": "平方映照下双曲线与圆弧的像",
+          "statement_markdown": "在 $w=z^2$ 下，点集 $x^2-y^2=c_1$ 映为整条直线 $u=c_1$；$2xy=c_2$ 映为整条直线 $v=c_2$。对 $r>0$，第一象限内圆弧 $z=re^{i\\theta}$、$0<\\theta<\\pi/2$ 映为\n$$w=r^2e^{i\\varphi},\\qquad0<\\varphi<\\pi,$$\n即上半圆周，不含两个端点。",
+          "source_start_line": 40,
+          "source_end_line": 48,
+          "source_quote": "2）因为 $u = x^{2} - y^{2}$ ，所以双曲线 $x^{2} - y^{2} = c_{1}$ 的像曲线上的点 $(u,v)$ ，满足方程\n$$u = c _ {1}.$$\n又点 $(x, y)$ 在双曲线上变化时，$v = 2xy$ 可取全体实数。这就是说，$x^2 - y^2 = c_1$ 在映照 $w = z^2$ 下的像是 $w$ 平面上的直线 $u = c_1$。\n同理，双曲线 $2xy = c_{2}$ 在映照 $w = z^{2}$ 下的像是直线 $\\nu = c_{2}$.\n3) 令 $w = z^2 = \\rho e^{i\\varphi}$, 因 $z = r e^{i\\theta}$, 所以\n$$\\rho = r ^ {2}, \\quad \\varphi = 2 \\theta .$$\n当 $\\theta$ 在 $(0, \\pi / 2)$ 内变化时，$\\varphi$ 在 $(0, \\pi)$ 内变化。因而所求的像是 $w$ 平面内以原点为圆·22·\n心， $r^{2}$  为半径的位于 u 轴上方的半圆周\n$$w = r ^ {2} \\mathrm{e} ^ {\\mathrm{i} \\varphi}, 0 <   \\varphi <   \\pi .$$",
+          "after": "计算像集有两条常用路线。对 $w=az$，第一章已说明它是固定旋转与伸缩，且 $a\\ne0$ 时可以除以 $a$ 唯一回到原点，所以是一一映照。对 $w=z^2$，直线可先用 $u=x^2-y^2,v=2xy$ 消去参数得到像曲线；圆弧则用极式，直接读出半径平方、辐角加倍。例如第一象限的一段四分之一圆弧，会变成上半平面的一段半圆弧。每次计算都要同时带上参数范围，否则算出的整条代数曲线可能比真正的像集大。"
+        }
+      ]
+    },
+    "CH02-S02": {
+      "unit_id": "CH02-S02",
+      "source_path": "original_text/ch02_s02.md",
+      "conclusions": [
+        {
+          "id": "CH02-S02-C001",
+          "title": "复变函数极限的定义",
+          "statement_markdown": "设 $f$ 在 $0<|z-z_0|<\\rho$ 内有定义。称 $\\lim_{z\\to z_0}f(z)=w_0$，是指对任意 $\\varepsilon>0$，存在 $0<\\delta\\le\\rho$，使\n$$0<|z-z_0|<\\delta\\Rightarrow |f(z)-w_0|<\\varepsilon.$$\n输入可沿任何允许的路径趋近 $z_0$。",
+          "source_start_line": 3,
+          "source_end_line": 7,
+          "source_quote": "先给出复变函数的极限概念.\n定义3 设函数 $w = f(z)$ 在区域 $0 < |z - z_0| < \\rho$ 内有定义. 如果对任意 $\\varepsilon > 0$，总能找到 $\\delta > 0$，使当 $0 < |z - z_0| < \\delta, \\delta \\leqslant \\rho$ 时，就有 $|f(z) - w_0| < \\varepsilon$ 成立，就称当 $z$ 趋于 $z_0$ 时，$f(z)$ 的极限值是 $w_0$，记作\n$$\\lim _ {z \\rightarrow z _ {0}} f (z) = w _ {0}.$$\n这个定义在几何上意味着：当变点进入 $z_0$ 的一个充分小的 $\\delta$ 邻域时，它们的像点就落入 $w_0$ 的一个给定的 $\\varepsilon$ 邻域（图2.3）.\n图2.3",
+          "after": "教材假设函数在 $z_0$ 的某个去心邻域有定义，要求\n$$\\lim_{z\\to z_0}f(z)=w_0.$$\n去心表示暂不使用中心 $z_0$ 的函数值。精确含义是：任给输出精度 $\\varepsilon>0$，都能找到输入精度 $\\delta>0$，只要 $0<|z-z_0|<\\delta$，就有 $|f(z)-w_0|<\\varepsilon$。$\\varepsilon$ 限制像点误差，$\\delta$ 限制原像误差；一次选择的 $\\delta$ 必须照顾圆盘内所有允许的输入，而不是每换一个方向就改一个目标值。"
+        },
+        {
+          "id": "CH02-S02-C002",
+          "title": "连续性及其实部、虚部判别",
+          "statement_markdown": "$f$ 在 $z_0$ 连续是指 $f(z_0)$ 有定义且 $\\lim_{z\\to z_0}f(z)=f(z_0)$；在区域中每点连续称在该区域连续。对 $f(z)=u(x,y)+iv(x,y)$，在 $z_0=x_0+iy_0$ 连续，当且仅当 $u,v$ 作为二元实函数在 $(x_0,y_0)$ 均连续。",
+          "source_start_line": 9,
+          "source_end_line": 12,
+          "source_quote": "定义4 如果等式\n$$\\lim _ {z \\rightarrow z _ {0}} f (z) = f \\left(z _ {0}\\right)$$\n成立，就称函数 $f(z)$ 在点 $z_0$ 连续.如果 $f(z)$ 在区域 $D$ 中的每点都连续，就称 $f(z)$ 在区域 $D$ 中连续.\n定理1 函数 $f(z) = u(x, y) + \\mathrm{i}v(x, y)$ 在 $z_0 = x_0 + \\mathrm{i}y_0$ 连续的充要条件是 $u(x, y)$ 和 $v(x, y)$ 作为二元函数在 $(x_0, y_0)$ 处连续.",
+          "after": "连续性在极限之外再加一个连接条件：中心已有定义，而且极限恰好等于中心值，即 $\\lim_{z\\to z_0}f(z)=f(z_0)$。极限存在但中心填了别的值，仍不连续；极限不存在，随意补一个中心值也救不了它。把函数拆成 $u+iv$ 后，复连续等价于两个二元实函数同时连续，因为坐标误差与复距离能互相控制。"
+        },
+        {
+          "id": "CH02-S02-C003",
+          "title": "连续函数的运算与常见连续区域",
+          "statement_markdown": "连续函数的和、差、积仍连续；商在分母非零处连续；适当定义的复合函数仍连续。因此，多项式在整个有限复平面连续，有理函数在分母非零处连续。",
+          "source_start_line": 21,
+          "source_end_line": 27,
+          "source_quote": "上面引进的复变函数极限和连续性的定义与实变数函数的极限和连续性的定义在形式上完全相同.因此，数学分析中证明过的关于连续函数的和、差、积、商（分母不为0的点）及复合函数仍然连续的定理依然成立.由此，即可断定幂函数\n$$w = z ^ {n}, \\quad n \\text {为正整数}.$$\n更一般地，多项式\n$$P (z) = a _ {0} z ^ {n} + a _ {1} z ^ {n - 1} + \\dots + a _ {n}$$\n是全平面上的连续函数；而有理函数\n$$R (z) = \\frac {a _ {0} z ^ {n} + a _ {1} z ^ {n - 1} + \\cdots + a _ {n}}{b _ {0} z ^ {m} + b _ {1} z ^ {m - 1} + \\cdots + b _ {m}},$$\n除去若干个使分母为零的点外，在全平面处处连续.",
+          "after": "和、差、积以及复合保留连续性，商要求分母在考察点不为零。因而多项式处处连续，有理式在分母非零处连续。这些结论能节省逐点验证的工作，但不能替定义域里原本缺少的点自动补值。"
+        },
+        {
+          "id": "CH02-S02-C004",
+          "title": "辐角选值的连续区域",
+          "statement_markdown": "取主值 $-\\pi<\\arg z\\le\\pi$，并在 $z=0$ 补值为 $0$，所得函数除原点及负实轴外处处连续，在这些被排除点不连续。一般地，取值范围为 $\\alpha\\le\\arg z<\\alpha+2\\pi$ 的辐角函数，除原点及射线 $\\arg z=\\alpha$ 外处处连续。",
+          "source_start_line": 28,
+          "source_end_line": 38,
+          "source_quote": "例3 研究函数\n$$f (z) = \\left\\{ \\begin{array}{l l} \\arg z, & z \\neq 0, - \\pi <   \\arg z \\leqslant \\pi \\\\ 0, & z = 0 \\end{array} \\right.$$\n的连续性.\n解 分几种情形考虑：\n1）若 $z_0 = 0$。由于当 $z$ 沿直线 $\\arg z = \\theta_0, -\\pi < \\theta_0 \\leqslant \\pi$ 趋于原点时，$f(z)$ 趋于 $\\theta_0$。这里 $\\theta_0$ 可以取各种不同值，因而 $f(z)$ 在 $z = 0$ 处不连续。\n2）若 $z_0 = x(< 0)$。由定义当 $z$ 从上半平面趋于 $z_0$ 时，$f(z)$ 趋于 $\\pi$；当 $z$ 从下半平面趋于 $z_0$ 时，$f(z)$ 趋于 $-\\pi$。所以 $f(z)$ 在负实轴上不连续。\n3）其他点 $z_0$ ，作一个以 $z_0$ 为中心， $\\delta$ 为半径的圆，只要 $\\delta$ 充分小，这个圆总可以不与负实轴相交（参看图2.3).以下用第1章定理2中必要性的证明完全相同的叙述，即可证得 $f(z)$ 在 $z_0$ 连续.\n综上讨论得知， $f(z)$ 除原点及负实轴上的点外处处连续.\n同理可证：函数\n$$f (z) = \\arg z, \\quad z \\neq 0, \\alpha \\leqslant \\arg z <   \\alpha + 2 \\pi ,$$\n除原点及射线 $\\arg z = \\alpha$ 外处处连续.",
+          "after": "教材特别讨论辐角主值。沿不同射线靠近零会得到不同角，所以给原点补成零仍不连续；靠近负实轴时，上侧主值趋于 $\\pi$，下侧趋于 $-\\pi$，也发生跳跃。这不是点的位置跳了，而是我们把所有方向硬选进一个长度为 $2\\pi$ 的角度区间造成的。避开原点和这条切口后，附近可以连续选角，主值函数便连续。"
+        }
+      ]
+    },
+    "CH02-S03": {
+      "unit_id": "CH02-S03",
+      "source_path": "original_text/ch02_s03.md",
+      "conclusions": [
+        {
+          "id": "CH02-S03-C001",
+          "title": "复导数的定义",
+          "statement_markdown": "设 $f$ 在 $z_0$ 的某邻域有定义。若有限极限\n$$f'(z_0)=\\lim_{\\Delta z\\to0}\\frac{f(z_0+\\Delta z)-f(z_0)}{\\Delta z}$$\n存在，则称 $f$ 在 $z_0$ 可微。此极限必须对复平面内任意趋近方式给出同一个值。",
+          "source_start_line": 4,
+          "source_end_line": 8,
+          "source_quote": "定义5 设 $w = f(z)$ 在 $z$ 点的某邻域 $U$ 内有定义，$z + \\Delta z \\in U$. 如果极限\n$$\\lim _ {\\Delta z \\rightarrow 0} \\frac {f (z + \\Delta z) - f (z)}{\\Delta z}$$\n存在，就称函数 $f(z)$ 在 $z$ 点可微，而且这个极限称为 $f(z)$ 在 $z$ 点的导数或微商.记为\n$$f ^ {\\prime} (z), \\quad {\\frac {\\mathrm{d} f}{\\mathrm{d} z}} \\quad {\\text {或}} \\quad {\\frac {\\mathrm{d} w}{\\mathrm{d} z}}.$$\n$$f ^ {\\prime} (z) = \\lim _ {\\Delta z \\rightarrow 0} \\frac {f (z + \\Delta z) - f (z)}{\\Delta z}.\\tag{2.1}$$",
+          "after": "连续说明附近的输入得到附近的输出，但并不说明变化有什么统一比例。实函数用差商描述瞬时变化，复函数也从同样的式子出发：\n$$f'(z_0)=\\lim_{\\Delta z\\to0}\\frac{f(z_0+\\Delta z)-f(z_0)}{\\Delta z}.$$\n$\\Delta z$ 是非零的复增量，分子是输出增量，整个商是两次变化之间的复比例。与实变量不同，$\\Delta z$ 可以沿平面中任意方向趋零；只有所有方式都得到同一个有限值，复导数才存在。"
+        },
+        {
+          "id": "CH02-S03-C002",
+          "title": "一阶展开与可微蕴含连续",
+          "statement_markdown": "$f$ 在 $z_0$ 可微时，\n$$f(z_0+\\Delta z)-f(z_0)=f'(z_0)\\Delta z+o(|\\Delta z|).$$\n因而 $f$ 在 $z_0$ 连续。",
+          "source_start_line": 9,
+          "source_end_line": 15,
+          "source_quote": "设 $f(z)$ 在点 $z$ 可微，令\n$$\\alpha = \\frac {f (z + \\Delta z) - f (z)}{\\Delta z} - f ^ {\\prime} (z),$$\n$$\\lim _ {\\Delta x \\to 0} \\alpha = 0.$$\n$$f (z + \\Delta z) - f (z) = f ^ {\\prime} (z) \\Delta z + o (\\mid \\Delta z \\mid).\\tag{2.2}$$\n其中， $o(|\\Delta z|) = a\\Delta z$ 是 $|\\Delta z|$ 的高阶无穷小量.由(2.2)式立即得到\n$$\\lim _ {\\Delta z \\rightarrow 0} f (z + \\Delta z) = f (z).$$\n这就证得，若 $f(z)$ 在点 $z$ 可微，则在此点连续.",
+          "after": "如果导数存在，就可把变化写成\n$$f(z_0+\\Delta z)-f(z_0)=f'(z_0)\\Delta z+o(|\\Delta z|).$$\n这里 $o(|\\Delta z|)$ 表示误差除以 $|\\Delta z|$ 后趋零。第一项是乘以固定复数 $f'(z_0)$，也就是统一的旋转与伸缩；误差相对于输入变化越来越小。所以复可微的直观含义是：足够放大一点附近，函数看起来越来越像同一次复数乘法。这也立即说明可微必连续。"
+        },
+        {
+          "id": "CH02-S03-C003",
+          "title": "解析函数、解析点与奇点",
+          "statement_markdown": "$f$ 在区域 $D$ 的每一点可微，称在 $D$ 内解析；在点 $z_0$ 解析，指在 $z_0$ 的某个邻域内处处可微；若在该点不解析，则称 $z_0$ 为奇点。说 $f$ 在闭域 $\\bar D$ 上解析，指在包含 $\\bar D$ 的某个开区域内解析。",
+          "source_start_line": 16,
+          "source_end_line": 18,
+          "source_quote": "定义6 如果 $f(z)$ 在区域 $D$ 内的每一点可微，则称 $f(z)$ 在 $D$ 内解析，或者说 $f(z)$ 是 $D$ 内的解析函数；如果 $f(z)$ 在点 $z_0$ 的某个邻域内可微，则称 $f(z)$ 在点 $z_0$ 解析；如果 $f(z)$ 在点 $z_0$ 不解析，则 $z_0$ 称为 $f(z)$ 的奇点.\n从定义可见，函数的解析性概念是与一个区域联系在一起的。即使是说到 $f(z)$ 在点 $z_{0}$ 解析，也是指它在 $z_{0}$ 的某个邻域内解析。由于区域是开集，所以函数在区域内解析和函数在区域内每一点解析的说法是等价的。以后还要用到 $f(z)$ 在闭区域 $\\bar{D}$ 上\n解析的概念, 这应理解为  $f(z)$  在包含  $\\bar{D}$  的某个区域内解析. 解析函数是复变函数中一类加了很强条件的函数, 它有许多完美的性质, 将在以下各章中陆续讨论.",
+          "after": "接着教材区分“可微”与“解析”。在一个点可微只是该点的性质；在一个点解析，则要求存在该点的某个邻域，邻域里的每一点都可微。在区域 $D$ 内处处可微，就称在 $D$ 内解析。若说在闭域上解析，也要理解为在包含这个闭域的某个开区域内解析，给边界周围留下空间。只有某个孤立点恰好可微，并不足以称在那里解析。"
+        },
+        {
+          "id": "CH02-S03-C004",
+          "title": "幂函数可微与共轭函数不可微",
+          "statement_markdown": "对正整数 $n$，$z^n$ 在全平面解析，且 $(z^n)'=nz^{n-1}$。共轭函数 $f(z)=\\bar z$ 在全平面处处连续，却处处不可微，说明连续性不足以保证复可微性。",
+          "source_start_line": 19,
+          "source_end_line": 26,
+          "source_quote": "例4幂函数 $w = z^{n}$ 是全平面上的解析函数，且\n$$\\frac {\\mathrm{d} z ^ {n}}{\\mathrm{d} z} = n z ^ {n - 1}.$$\n事实上，由二项式定理有\n$$\\begin{array}{r l}(z ^ {n}) ^ {\\prime}&= \\lim _ {\\Delta z \\rightarrow 0} \\frac {(z + \\Delta z) ^ {n} - z ^ {n}}{\\Delta z}\\\\&= \\lim _ {\\Delta z \\rightarrow 0} \\frac {1}{\\Delta z} \\left[ C _ {n} ^ {1} z ^ {n - 1} \\Delta z + C _ {n} ^ {2} z ^ {n - 2} (\\Delta z) ^ {2} + \\dots + (\\Delta z) ^ {n} \\right]\\\\&= n z ^ {n - 1}.\\end{array}$$\n这说明 $w = z^n$ 在全平面上每一点都可微，因而是全平面上的解析函数.\n例5 $w = \\bar{z}$ 在全平面上每一点都不可微.事实上\n$$\\frac {\\Delta w}{\\Delta z} = \\frac {\\overline {{z + \\Delta z}} - \\bar {z}}{\\Delta z} = \\frac {\\overline {{\\Delta z}}}{\\Delta z}$$\n当 $\\Delta z$ 沿实轴方向（即令 $\\Delta z = \\Delta x$）趋于0时，它趋于1；而让 $\\Delta z$ 沿虚轴方向（即令 $\\Delta z = i\\Delta y$）趋于0时，它趋于-1，所以当 $\\Delta z \\to 0$ 时，$\\frac{\\Delta w}{\\Delta z}$ 的极限不存在。又显然 $w = z = x - iy$ 在全平面上处处连续。这样，我们就轻而易举地得到了一个在全平面处处连续，但却处处不可求导的函数。在实函数中虽然也有这样的函数，但要把这样的函数具体地构造出来就不那么容易了。",
+          "after": "接着教材区分“可微”与“解析”。在一个点可微只是该点的性质；在一个点解析，则要求存在该点的某个邻域，邻域里的每一点都可微。在区域 $D$ 内处处可微，就称在 $D$ 内解析。若说在闭域上解析，也要理解为在包含这个闭域的某个开区域内解析，给边界周围留下空间。只有某个孤立点恰好可微，并不足以称在那里解析。"
+        },
+        {
+          "id": "CH02-S03-C005",
+          "title": "和差、乘积、商与复合函数的导数",
+          "statement_markdown": "在右侧所需导数均存在时，\n$$[f\\pm g]'=f'\\pm g',\\qquad(fg)'=f'g+fg',$$\n$$\\left(\\frac fg\\right)'=\\frac{gf'-fg'}{g^2}\\quad(g\\ne0),$$\n$$[f(g(z))]'=f'(g(z))g'(z).$$\n\n设 $\\varphi$ 在 $w_0$ 的邻域内解析，且 $\\varphi^{\\prime}(w_0)\\ne0$。令 $z_0=\\varphi(w_0)$，$f$ 为 $z_0$ 附近与该点对应的局部解析反函数，则\n$$f^{\\prime}(z_0)=\\frac{1}{\\varphi^{\\prime}(w_0)}.$$\n这里取的是同一局部反支，不能在邻域内任意切换不同分支。",
+          "source_start_line": 27,
+          "source_end_line": 33,
+          "source_quote": "由于复变函数的导数定义在形式上与实变数函数的定义完全一样.因此关于微商运算的基本法则也与实的情形相同.现将几个求导法则罗列如下：\n1) $[f(z)\\pm g(z)]' = f'(z)\\pm g'(z).$\n2) $[f(z)g(z)]' = f'(z)g(z) + f(z)g'(z)$.\n3) $\\left[\\frac{f(z)}{g(z)}\\right]' = \\frac{1}{g^2(z)} [g(z)f'(z) - f(z)g'(z)], g(z) \\neq 0.$\n4) $\\{f[g(z)]\\}^{\\prime} = f^{\\prime}(w)g^{\\prime}(z)$, 其中, $w = g(z)$.\n5) $f^{\\prime}(z) = \\frac{1}{\\varphi^{\\prime}(w)}$，其中，$w = f(z)$ 与 $z = \\varphi(w)$ 是两个互为反函数的单值函数，且 $\\varphi^{\\prime}(w) \\neq 0$.\n当然，这些法则的成立，要求各式右边出现的微商都存在。这些公式的证明建议读者自己来完成。",
+          "after": "求导的和差、乘积、商、复合法则仍适用，但先要有相应的导数，商的分母还要非零。链式法则 $[f(g(z))]'=f'(g(z))g'(z)$ 表示两次一阶乘法的复合；反函数求导则要求已选单值反函数，且原导数非零。多项式由幂函数组合而成，因而处处解析；有理函数在分母非零处解析。正式推演可展开[可微必连续](#reader-d2eec52e0e032684e9fc)与[求导法则](#reader-a1db2b8118b854e433bc)对照。",
+          "source_note": "补明原书反函数求导的局部反支及解析条件，以保证逆函数连续可微。"
+        },
+        {
+          "id": "CH02-S03-C006",
+          "title": "多项式与有理函数的解析区域",
+          "statement_markdown": "任意复系数多项式在整个有限复平面解析；有理函数 $P(z)/Q(z)$ 在 $Q(z)\\ne0$ 的各点解析。",
+          "source_start_line": 34,
+          "source_end_line": 38,
+          "source_quote": "根据这些法则及 $z^{*}$ 的可微性，我们立刻可以断定，多项式\n$$P (z) = a _ {0} z ^ {n} + a _ {1} z ^ {n - 1} + \\dots + a _ {n}$$\n是全平面上的解析函数；有理函数\n$$R (z) = \\frac {a _ {0} z ^ {n} + a _ {1} z ^ {n - 1} + \\cdots + a _ {n}}{b _ {0} z ^ {m} + b _ {1} z ^ {m - 1} + \\cdots + b _ {m}}$$\n除掉分母为0的点外也在全平面上处处解析.",
+          "after": "求导的和差、乘积、商、复合法则仍适用，但先要有相应的导数，商的分母还要非零。链式法则 $[f(g(z))]'=f'(g(z))g'(z)$ 表示两次一阶乘法的复合；反函数求导则要求已选单值反函数，且原导数非零。多项式由幂函数组合而成，因而处处解析；有理函数在分母非零处解析。正式推演可展开[可微必连续](#reader-d2eec52e0e032684e9fc)与[求导法则](#reader-a1db2b8118b854e433bc)对照。"
+        },
+        {
+          "id": "CH02-S03-C007",
+          "title": "解析函数的高阶可微性与局部幂级数性质",
+          "statement_markdown": "若复变函数在区域内每点都有一阶复导数，即在该区域解析，则它在每点都有任意阶导数，并可在每个解析点附近展开成幂级数。此处为教材预告性质，详细结论在后续章节建立。",
+          "source_start_line": 39,
+          "source_end_line": 43,
+          "source_quote": "到这里为止，读者可能会有这样一种印象：整个复变函数论就只是把数学分析中许多概念和定理，如连续性、导数和积分等一个个照搬到复变数函数来而已，至多也不过是把实变数 $x$ 换成复变数 $z$。这只是一种表面现象！实际上，就是由于把实变数 $x$ 换成复函数 $z$，二者产生了很大的差别。拿导数概念来说，一个复变函数 $f(z)$ 在点 $z$ 可微，意味着当 $z + \\Delta z$ 沿复平面上任意的路径趋于点 $z$ 时，比值\n$$\\frac {f (z + \\Delta z) - f (z)}{\\Delta z}$$\n的极限都存在，而且所有这些极限都相等，这是一个很强的要求。而实变数函数 $f(z)$ 在点 $x$ 可微只是要求当点 $x + \\Delta x$ 由 $x$ 的左边 $(\\Delta x < 0)$ 或 $x$ 的右边 $(\\Delta x > 0)$ 两个方向趋于 $x$ 时，比值\n$$\\frac {f (x + \\Delta x) - f (x)}{\\Delta x}$$\n的极限存在而且相等。这个要求显然比前者低得多。正是由于这个原因，复变函数和实变函数在可微性问题上显出深刻的差异。以后会看到：只要一个复变函数在某个域内的每一点都有阶微商，那么就可以证明在这个域中的每一点都有任意阶微商，而且在这点附近还可以展开成幂级数。读者在数学分析的学习中已经知道，对于实变数函数这些都是办不到的。这些特殊的性质是我们今后要讨论的，也正是由于这些特殊的性质，才构成了复变函数这门学科的内容。",
+          "after": "当导数恰为零时，一阶近似只剩常值，变化可能由更高阶项主导，例如平方函数在原点就是如此。这仍然符合导数定义，并不表示函数在该点附近完全不变。"
+        }
+      ]
+    },
+    "CH02-S04": {
+      "unit_id": "CH02-S04",
+      "source_path": "original_text/ch02_s04.md",
+      "conclusions": [
+        {
+          "id": "CH02-S04-C001",
+          "title": "复可微的充要条件：实可微加 C-R 方程",
+          "statement_markdown": "设 $f(z)=u(x,y)+iv(x,y)$。$f$ 在 $z_0=x_0+iy_0$ 复可微，当且仅当 $u,v$ 在 $(x_0,y_0)$ 作为二元实函数均可微，且该点满足\n$$u_x=v_y,\\qquad u_y=-v_x.$$\n仅有偏导数存在并满足这两式，并不足以代替二元实可微条件。",
+          "source_start_line": 6,
+          "source_end_line": 9,
+          "source_quote": "定理2 函数 $f(z) = u(x, y) + \\mathrm{i}v(x, y)$ 在点 $z = x + \\mathrm{i}y$ 可微的充要条件是：\n1) 二元函数 $u(x, y), v(x, y)$ 在点 $(x, y)$ 可微.\n2) $u(x,y)$ 及 $\\nu (x,y)$ 在点 $(x,y)$ 满足柯西－黎曼方程（简称C-R方程）\n$$\\frac {\\partial u}{\\partial x} = \\frac {\\partial v}{\\partial y}, \\quad \\frac {\\partial u}{\\partial y} = - \\frac {\\partial v}{\\partial x}.$$",
+          "after": "仅比较水平、竖直方向还不能自动照顾全部路径。教材的完整定理是：$u,v$ 作为二元实函数在该点可微，并满足 C-R 方程，当且仅当 $f$ 在该点复可微。这里“二元可微”要求所有小增量都有统一线性近似，强于两个偏导数恰好存在。实际题里，若偏导数在邻域连续，就有这一实可微性保证；于是可以放心用 C-R 作判断。完整双向证明保留在[可微的充要条件](#reader-1b41ffc8c2be2f04904d)中。"
+        },
+        {
+          "id": "CH02-S04-C002",
+          "title": "用偏导数计算复导数",
+          "statement_markdown": "在实可微且满足 C-R 方程的条件下，\n$$f'(z)=u_x+iv_x=v_y+iv_x=u_x-iu_y=v_y-iu_y.$$",
+          "source_start_line": 19,
+          "source_end_line": 20,
+          "source_quote": "从上面的讨论可见，当定理2的条件满足时，可按下列公式之任一计算 $f'(z)$\n$$\\begin{array}{r} f ^ {\\prime} (z) = \\frac {\\partial u}{\\partial x} + \\mathrm{i} \\frac {\\partial v}{\\partial x} = \\frac {\\partial v}{\\partial y} + \\mathrm{i} \\frac {\\partial v}{\\partial x} \\\\ = \\frac {\\partial u}{\\partial x} - \\mathrm{i} \\frac {\\partial u}{\\partial y} = \\frac {\\partial v}{\\partial y} - \\mathrm{i} \\frac {\\partial u}{\\partial y}. \\end{array}\\tag{2.7}$$",
+          "after": "条件满足后，不用再从头求极限，导数可直接算为 $f'=u_x+iv_x=u_x-iu_y$。若条件在整个区域处处成立且两个实分量处处实可微，就得到区域内解析。这一判别把上一节的抽象定义变成了计算步骤：先分离实虚部，再说明实可微性，最后同时检查两个等式，确定它们究竟在哪些点成立。"
+        },
+        {
+          "id": "CH02-S04-C003",
+          "title": "区域内解析的 C-R 判别",
+          "statement_markdown": "$f=u+iv$ 在区域 $D$ 内解析，当且仅当 $u,v$ 在 $D$ 内每点实可微，并处处满足 $u_x=v_y$、$u_y=-v_x$。",
+          "source_start_line": 21,
+          "source_end_line": 25,
+          "source_quote": "从定理2还立即得到解析函数的另一个等价定义：\n定理3 函数 $f(z) = u(x, y) + \\mathrm{i}v(x, y)$ 在区域 $D$ 内可微（即在 $D$ 内解析）\n的充要条件是：\n1) 二元函数 $u(x, y)$ 及 $\\nu(x, y)$ 在 $D$ 内可微.\n2) $u(x,y)$ 及 $\\nu (x,y)$ 在 $D$ 内处处满足C-R方程.",
+          "after": "条件满足后，不用再从头求极限，导数可直接算为 $f'=u_x+iv_x=u_x-iu_y$。若条件在整个区域处处成立且两个实分量处处实可微，就得到区域内解析。这一判别把上一节的抽象定义变成了计算步骤：先分离实虚部，再说明实可微性，最后同时检查两个等式，确定它们究竟在哪些点成立。"
+        },
+        {
+          "id": "CH02-S04-C004",
+          "title": "复指数型函数的解析性",
+          "statement_markdown": "$f(z)=e^x(\\cos y+i\\sin y)$（$z=x+iy$）在全平面解析，且 $f'(z)=f(z)$。",
+          "source_start_line": 26,
+          "source_end_line": 31,
+          "source_quote": "例6 试证 $f(z) = \\mathrm{e}^{x}(\\cos y + \\mathrm{i}\\sin y)$ 在全平面上解析，且 $f'(z) = f(z)$.\n证 因为 $u = \\mathrm{e}^{x}\\cos y$ 及 $v = \\mathrm{e}^{x}\\sin y$ 在全平面上都有连续的偏导数，且\n$$\\frac {\\partial u}{\\partial x} = e ^ {x} \\cos y = \\frac {\\partial v}{\\partial y}, \\quad \\frac {\\partial u}{\\partial y} = - e ^ {x} \\sin y = - \\frac {\\partial v}{\\partial x},$$\n即C-R方程处处成立.由定理3，它是全平面上的解析函数.又由(2.7)式\n$$f ^ {\\prime} (z) = \\frac {\\partial u}{\\partial x} + \\mathrm{i} \\frac {\\partial y}{\\partial x} = \\mathrm{e} ^ {x} \\cos y + \\mathrm{i} \\mathrm{e} ^ {x} \\sin y = f (z).$$\n读者还记得，实指数函数 $f(x) = \\mathrm{e}^{x}$ 的一个特征性质就是它的变化率等于函数自身，即 $f'(x) = f(x)$. 例6中所讨论的函数也有这一性质，下一节我们将把这个函数，作为复指数函数，并详细研究它.",
+          "after": "条件满足后，不用再从头求极限，导数可直接算为 $f'=u_x+iv_x=u_x-iu_y$。若条件在整个区域处处成立且两个实分量处处实可微，就得到区域内解析。这一判别把上一节的抽象定义变成了计算步骤：先分离实虚部，再说明实可微性，最后同时检查两个等式，确定它们究竟在哪些点成立。"
+        },
+        {
+          "id": "CH02-S04-C005",
+          "title": "分式线性函数的导数与解析区域",
+          "statement_markdown": "设 $a,b,c,d\\in\\mathbb C$、$ad-bc\\ne0$，则\n$$f(z)=\\frac{az+b}{cz+d},\\qquad f'(z)=\\frac{ad-bc}{(cz+d)^2}.$$\n它在 $cz+d\\ne0$ 处解析。若 $c\\ne0$，排除点为 $-d/c$；若 $c=0$，则 $d\\ne0$，它在全平面解析。",
+          "source_start_line": 32,
+          "source_end_line": 36,
+          "source_quote": "例7 研究分式线性函数\n$$w = \\frac {a z + b}{c z + d}$$\n的解析性，式中，a, b, c, d 为复常数，且 ad - bc ≠ 0.\n解 由导数的运算法则，除了使得分母为零的点 $z = -d / c$ 外，这个函数在全平面上处处可微。因而，除点 $z = -d / c$ 外，它在全平面上处处解析。且\n$$w ^ {\\prime} = \\frac {a (c z + d) - c (a z + b)}{(c z + d) ^ {2}} = \\frac {a d - b c}{(c z + d) ^ {2}}.$$",
+          "after": "条件满足后，不用再从头求极限，导数可直接算为 $f'=u_x+iv_x=u_x-iu_y$。若条件在整个区域处处成立且两个实分量处处实可微，就得到区域内解析。这一判别把上一节的抽象定义变成了计算步骤：先分离实虚部，再说明实可微性，最后同时检查两个等式，确定它们究竟在哪些点成立。"
+        },
+        {
+          "id": "CH02-S04-C006",
+          "title": "模平方仅在原点可微且处处不解析",
+          "statement_markdown": "$f(z)=|z|^2=x^2+y^2$ 仅在 $z=0$ 复可微，且 $f'(0)=0$；在任何点均不解析。",
+          "source_start_line": 37,
+          "source_end_line": 42,
+          "source_quote": "例8 讨论 $w = |z|^2$ 的可微性和解析性.\n解 $w = |z|^2 = x^2 + y^2$，所以 $u = x^2 + y^2$ 及 $\\nu = 0$ 都是全平面上的可微函数，由\n$$\\frac {\\partial u}{\\partial x} = 2 x, \\quad \\frac {\\partial u}{\\partial y} = 2 y, \\quad \\frac {\\partial v}{\\partial x} = 0, \\quad \\frac {\\partial v}{\\partial y} = 0,$$\n可知 C-R 方程只在点  $(0,0)$  成立. 由定理 2, 这个函数在 z = 0 可微, 且由  $(2.7)$  式, 得\n$$f ^ {\\prime} (0) = \\left. \\frac {\\partial u}{\\partial x} + \\mathrm{i} \\frac {\\partial v}{\\partial x} \\right| _ {(0, 0)} = 0.$$\n对于其他的点 $z \\neq 0$，这个函数不可微。所以这个函数在 $z = 0$ 不解析。从而，这个函数在复平面上处处不解析。",
+          "after": "教材的 $|z|^2=x^2+y^2$ 很能说明最后一步。它的虚部为零，C-R 只在 $x=y=0$ 成立，所以仅在原点复可微，导数为零；任何原点邻域都含不可微点，故在原点仍不解析。另一例 $e^x(\\cos y+i\\sin y)$ 却处处满足条件，且导数等于自身，为下面复指数的定义作好准备。"
+        }
+      ]
+    },
+    "CH02-S05": {
+      "unit_id": "CH02-S05",
+      "source_path": "original_text/ch02_s05.md",
+      "conclusions": [
+        {
+          "id": "CH02-S05-C001",
+          "title": "单叶函数与单叶性区域",
+          "statement_markdown": "若 $f$ 在区域 $D$ 内既解析又是一一映照，则称 $f$ 是 $D$ 内的单叶函数，$D$ 是它的单叶性区域。",
+          "source_start_line": 3,
+          "source_end_line": 4,
+          "source_quote": "这一节把数学分析中几个最常用的初等函数推广到复变量的情形，并研究它们的性质.先引进单叶函数的概念.\n定义7 如果 $w = f(z)$ 是区域 $D$ 内的一一解析映照，则称 $f(z)$ 是 $D$ 内的单叶函数，$D$ 称为 $f(z)$ 的单叶性区域.",
+          "after": "前面已经分别讲过一一映照与解析函数。进入初等函数之前，教材把它们合成一个常用概念：若 $f$ 在区域 $D$ 内既解析，又是一一映照，就称它是 $D$ 内的单叶函数，$D$ 叫它的单叶性区域。这里“一一”约束不同点的像，解析性约束每点附近的变化，两方面必须同时检查。"
+        }
+      ]
+    },
+    "CH02-S05-SS01": {
+      "unit_id": "CH02-S05-SS01",
+      "source_path": "original_text/ch02_s05_ss01.md",
+      "conclusions": [
+        {
+          "id": "CH02-S05-SS01-C001",
+          "title": "整数幂函数的解析性与原像数",
+          "statement_markdown": "设整数 $n>1$。$w=z^n$ 在有限复平面解析，$w'=nz^{n-1}$；在闭复平面把 $0,\\infty$ 分别映为 $0,\\infty$。每个非零有限 $w$ 有恰好 $n$ 个原像\n$$z_k=|w|^{1/n}\\exp\\!\\left(i\\frac{\\theta+2k\\pi}{n}\\right),\\quad k=0,\\ldots,n-1,$$\n其中 $\\theta$ 为 $w$ 的任一辐角。",
+          "source_start_line": 3,
+          "source_end_line": 7,
+          "source_quote": "设 $n$ 是大于1的自然数，幂函数\n$$w = z ^ {n}$$\n定义在整个闭复平面上，把 $z = 0$ 及 $\\infty$ 分别映为 $w = 0$ 及 $\\infty$。它在有限复平面上解析，且 $w' = nz^{n-1}$。当 $w \\neq 0$ 及 $\\infty$ 时，由\n$$z = \\sqrt [ 3 ]{w} = \\sqrt [ 3 ]{| w |} \\exp \\left(i \\frac {\\arg w + 2 k \\pi}{n}\\right), \\quad k = 0, 1, 2, \\dots , n - 1,$$\n得知(这里  $\\exp(i\\theta)$  即是  $e^{i\\theta}$ )，w 有 n 个原像。即  $w = z^{n}$  在有限复平面上不是——映照。下面先研究它在怎样的区域是单叶的。设有两个不同点  $z_{1} = r_{1}e^{i\\theta_{1}}$  及  $z_{2} = r_{2}e^{i\\theta_{2}}$  经  $w = z^{n}$  映照成同一点，即",
+          "after": "第一章求过 $w^n=z$ 的全部解，现在把方向反过来，固定函数 $w=z^n$，问它怎样改变一整个区域。这里 $n>1$ 是整数，它在有限复平面处处解析，导数为 $nz^{n-1}$。但解析并不自动带来一一性：同一个非零像点通常有 $n$ 个原像，这正是我们已经算出的 $n$ 个方根。",
+          "source_note": "原文第6行数处三次根符号应为n次根，按同一公式的n和k范围订正。"
+        },
+        {
+          "id": "CH02-S05-SS01-C002",
+          "title": "幂函数同像条件与单叶判别",
+          "statement_markdown": "两个非零点 $z_j=r_je^{i\\theta_j}$ 满足 $z_1^n=z_2^n$，当且仅当 $r_1=r_2$ 且 $\\theta_1-\\theta_2\\in(2\\pi/n)\\mathbb Z$。因此 $z^n$ 在区域 $D$ 内单叶，当且仅当不存在两个不同点 $z_1,z_2\\in D$ 互相相差非平凡的 $n$ 次单位根因子。",
+          "source_start_line": 8,
+          "source_end_line": 13,
+          "source_quote": "$$r _ {1} ^ {n} \\mathrm{e} ^ {\\mathrm{i} n p _ {1}} = r _ {2} ^ {n} \\mathrm{e} ^ {\\mathrm{i} n p _ {2}}.$$\n$$r _ {1} = r _ {2}, \\quad n \\varphi_ {1} = n \\varphi_ {2} + 2 k _ {\\pi}, \\quad k \\text {为任一整数}$$\n$$r _ {1} = r _ {2}, \\quad \\varphi_ {1} = \\varphi_ {2} + k \\frac {2 \\pi}{n}.\\tag{2.8}$$\n反之，映照 $w = z^{n}$ 把任何两个满足(2.8)式的点 $z_{1}$ 及 $z_{2}$ 变为同一点.这就是说， $w = z^{n}$ 是区域 $D$ 内的一一映照的充分必要条件是： $D$ 内不得含有任何两个满足条件\n$$\\mid z _ {1} \\mid = \\mid z _ {2} \\mid , \\quad \\arg z _ {1} = \\arg z _ {2} + k   {\\frac {2 \\pi}{n}}, \\quad k \\neq 0   \\text {是整数}$$\n的点 $z_{1}$ 和 $z_{2}$.",
+          "after": "要避免两个输入重合到同一个像，先把重合条件写出来。若 $z_1^n=z_2^n$ 且二者非零，那么它们模相等，辐角之差为 $2k\\pi/n$。因此，一个区域里不能同时保留同一圆上、相差这种角度的不同点。形式完整的条件与论证可展开[幂函数单叶性的充分必要条件](#reader-c04975f8c19ee142f075)。",
+          "source_note": "原文k≠0还应排除n的倍数造成同一点；采用不同点表述避免歧义。"
+        },
+        {
+          "id": "CH02-S05-SS01-C003",
+          "title": "角域的单叶性及射线、圆弧对应",
+          "statement_markdown": "开角域 $\\alpha<\\arg z<\\beta$、$\\beta-\\alpha\\le2\\pi/n$ 是 $z^n$ 的单叶性区域，并映为连续角度范围 $n\\alpha<\\arg w<n\\beta$。射线 $\\arg z=\\theta_0$ 映为 $\\arg w=n\\theta_0$；圆弧 $|z|=R$ 映为 $|w|=R^n$ 的相应圆弧。特别地，$0<\\arg z<\\pi/n$ 单叶地映为上半平面。",
+          "source_start_line": 14,
+          "source_end_line": 18,
+          "source_quote": "由上讨论可知， $z$ 平面上的任何一个以原点为顶点而跨度不大于 $2\\pi /n$ 的角域\n$$\\alpha <   \\arg z <   \\beta , \\quad \\beta - \\alpha \\leqslant 2 \\pi / n$$\n都是变换 $w = z^n$ 的单叶性区域. 现在我们把函数 $w = z^n$ 的定义域限制在这个角域上, 令 $z = r e^{i\\varphi}$, 则\n$$w = z ^ {n} = r ^ {n} \\mathbf {e} ^ {i m \\varphi}.$$\n现设 z 在此角域内的一条射线 L（不包括原点）； $\\varphi = a_{0} \\cdot a < a_{0} < \\beta$  变动，那么  $w = r^{*} \\exp(ina_{0})$ 。于是  $|w| = r^{*}, 0 < r + \\infty$  从  $(不包括0)$  增大到  $+\\infty$ ，而  $\\arg w = na_{0}$  构不变。因此，w 就相应地描出一条射线 L1； $\\arg w = na_{0}$  （不包括 w = 0）。如果证上从  $\\alpha$  （不包括  $\\alpha$ ）递增时  $\\beta$  （不包括  $\\beta$ ），这射线 L 将按反针方向扫过角域  $<\\alpha \\exp(\\beta$  图  $(2)$  图  $(2)$ ，相应的  $\\arg w = na_{0}$  。从  $n_{4}$  （不包括  $n_{4}$ ）递增到  $n_{3}$  （不包括  $n_{3}$ ），射线 L1 按按反针方向扫过角域  $<\\arg w < n_{3}$ ；由此可见，w = z* 确定从角域  $<\\alpha \\exp(\\beta, -\\beta, -\\alpha \\leqslant 2\\pi / n$  到角域  $<\\alpha \\arg w < n_{3}$  的单叶映照：由  $|w| = |z|^{\\star}$ ，可见这个映照把位于角域  $<\\alpha \\exp(\\beta < \\alpha$  中的一段圆弧  $|z| = R_{7}$ ，变为角域  $<\\alpha \\arg w < n_{3}$  中的一段圆弧； $w = R_{7}^{*}$ ，特别地，w = z* 把角域  $0 < \\alpha z < n/ \\pi$  单叶地截起上半 × 平面  $0 < \\alpha \\arg w < n_{3}$ 。",
+          "after": "一个直接可用的选择是开角域\n$$\\alpha<\\arg z<\\beta,\\qquad \\beta-\\alpha\\le\\frac{2\\pi}{n}.$$\n这里 $\\alpha,\\beta$ 是边界方向。张角不超过一整圈的 $1/n$，而边界两侧都排除，即使取等号也不会同时保留那一对相差 $2\\pi/n$ 的边界点。所以这是单叶区域的一个充分选择，不必声称所有可能的单叶区域都只能长成这种形状。",
+          "source_note": "第18行多处OCR损坏；由紧邻的 w=r^n e^{inφ} 和可读的角域条件恢复，不添加超出该公式的条件。"
+        },
+        {
+          "id": "CH02-S05-SS01-C004",
+          "title": "主角域与主根分支",
+          "statement_markdown": "角域 $-\\pi/n<\\arg z<\\pi/n$ 在 $w=z^n$ 下单叶地映为沿负实轴割开的平面 $-\\pi<\\arg w<\\pi$。两边界分别对应切口下岸与上岸。反函数为\n$$z=(\\sqrt[n]{w})_0=|w|^{1/n}e^{i\\arg w/n},\\qquad-\\pi<\\arg w<\\pi.$$",
+          "source_start_line": 20,
+          "source_end_line": 24,
+          "source_quote": "现在考虑张角为 $2\\pi / n$ 的角域. 首先是角域 $D_{01} - \\pi / n < \\arg z < \\pi / n$, 它被单叶地映成沿负实轴割开了 (即去掉负实轴) 的 $w$ 平面 $-\\pi < \\arg w < \\pi$ (图 2.5).\n图2.5\n角域的一边 $\\arg z = -\\pi / n$ 映为 $w$ 平面的负实轴的下岸 $\\arg w = -\\pi$，另一边\n$\\arg z = \\pi / n$ 映为 $w$ 平面的负实轴的上岸 $\\arg w = \\pi$. 由于 $w = z^n$ 把定义域限制在角域 $-\\pi / n < \\arg z < \\pi / n$ 是单叶函数, 由此可以定义它的一个单值反函数, 我们把它记作 $z = (\\sqrt[n]{w})_0$, 它把沿负实轴割开了的 $w$ 平面 $-\\pi < \\arg w < \\pi$ 映成角域 $-\\pi / n < \\arg z < \\pi / n$. 由复数的开方运算可知, 这个反函数的表达式是\n$$z = (\\sqrt [ n ]{w}) _ {0} = \\sqrt [ n ]{| w |} \\exp \\left(\\mathrm{i} \\frac {\\arg w}{n}\\right), - \\pi <   \\arg w <   \\pi .$$",
+          "after": "特别取 $-\\pi/n<\\arg z<\\pi/n$，像域成为沿负实轴割开的平面 $-\\pi<\\arg w<\\pi$。两条输入边界分别对应负实轴的两岸；因为边界不含在内，不能把它们直接粘在一起。现在每个像点只有一个允许的原像，就可以反向定义 $z=|w|^{1/n}e^{i\\arg w/n}$。其他相邻角域会给出其他根式分支；公式的取角区间和允许的输出区域必须配套写明。"
+        },
+        {
+          "id": "CH02-S05-SS01-C005",
+          "title": "全部标准角域及其根分支",
+          "statement_markdown": "对 $k=0,\\ldots,n-1$，角域\n$$D_k:\\quad\\frac{(2k-1)\\pi}{n}<\\arg z<\\frac{(2k+1)\\pi}{n}$$\n经 $w=z^n$ 单叶地映为沿负实轴割开的平面。选择连续角度 $(2k-1)\\pi<\\theta<(2k+1)\\pi$ 后，其反函数为 $z=|w|^{1/n}e^{i\\theta/n}$。",
+          "source_start_line": 25,
+          "source_end_line": 29,
+          "source_quote": "同样，角域 $D_{1}: \\pi / n < \\arg z < 3\\pi / n$ ，被单叶地映成区域 $\\pi < \\arg w < 3\\pi$ ，这仍是一个去掉了负实轴的 $w$ 平面。一般地，$w = z^{n}$ 把角域 $D_{k}$ ：\n$$\\frac {2 k - 1}{n} \\pi <   \\arg z <   \\frac {2 k + 1}{n} \\pi , \\quad k = 0, 1, 2, \\dots , n - 1$$\n单叶地映照成沿负实轴割开了的 $w$ 平面 $(2k - 1)\\pi < \\arg w < (2k + 1)\\pi.$ 于是，把 $w = z^n$ 的定义域限制在角域 $D_{k}$ 上就可以确定出相应的单值反函数\n$$z = (\\sqrt [ n ]{w}) _ {k} = \\sqrt [ n ]{| w |} \\exp \\left(\\mathrm{i} \\frac {\\arg w}{n}\\right), (2 k - 1) \\pi <   \\arg w <   (2 k + 1) \\pi .$$\n这样，每一个单值函数 $z = (\\sqrt[n]{w})_k$ 都把沿负实轴割开了的 $w$ 平面变成相应的角域$D_{k}$ .依习惯用 $z$ 作自变量.图2.6画出了 $n = 6$ 时，函数 $w = (\\sqrt[n]{z})_k$ 的对应关系.",
+          "after": "特别取 $-\\pi/n<\\arg z<\\pi/n$，像域成为沿负实轴割开的平面 $-\\pi<\\arg w<\\pi$。两条输入边界分别对应负实轴的两岸；因为边界不含在内，不能把它们直接粘在一起。现在每个像点只有一个允许的原像，就可以反向定义 $z=|w|^{1/n}e^{i\\arg w/n}$。其他相邻角域会给出其他根式分支；公式的取角区间和允许的输出区域必须配套写明。"
+        }
+      ]
+    },
+    "CH02-S05-SS02": {
+      "unit_id": "CH02-S05-SS02",
+      "source_path": "original_text/ch02_s05_ss02.md",
+      "conclusions": [
+        {
+          "id": "CH02-S05-SS02-C001",
+          "title": "根式函数的全部值",
+          "statement_markdown": "设整数 $n>1$。$\\sqrt[n]{z}$ 在 $z=0$、$\\infty$ 分别取 $0$、$\\infty$。在非零有限点 $z=re^{i\\theta}$，它有 $n$ 个不同值\n$$w_k=r^{1/n}e^{i(\\theta+2k\\pi)/n},\\quad k=0,\\ldots,n-1.$$",
+          "source_start_line": 3,
+          "source_end_line": 7,
+          "source_quote": "下面一般地研究幂函数 $w = z^n$ 的反函数\n$w = \\sqrt[n]{z}$ ，n 是大于 1 的自然数.\n当 $z = 0$ 及 $\\infty$ 时，$w$ 分别为0及 $\\infty$。当 $z \\neq 0$ 及 $\\infty$ 时，令 $z = r\\mathrm{e}^{i\\varphi}$，有\n$$w = \\sqrt [ 3 ]{z} = \\sqrt [ 3 ]{r} \\exp \\left(i \\frac {\\varphi + 2 k \\pi}{n}\\right) = \\sqrt [ 3 ]{r} \\exp \\left(i \\frac {\\operatorname{Arg} z}{n}\\right), \\quad k = 0, 1, 2, \\dots , n - 1.\\tag{2.9}$$\n这就是说，它是一个 $n$ 值函数. 多值函数是复函中一个比较复杂的问题，下面以根",
+          "after": "对非零 $z=re^{i\\theta}$，全部根为 $w_k=r^{1/n}e^{i(\\theta+2k\\pi)/n}$。沿路径连续取角时，角可以超过主值区间，不能一到 $\\pi$ 就突然改成 $-\\pi$。若输入绕原点一整圈，连续角增加 $2\\pi$，根的角只增加 $2\\pi/n$，所以根换成下一个值；绕满 $n$ 圈才回来。原点具有这种绕行换值的性质，称为支点；在扩充平面上，无穷远点也是这个根式的支点。"
+        },
+        {
+          "id": "CH02-S05-SS02-C002",
+          "title": "沿曲线的辐角变化",
+          "statement_markdown": "曲线不经过原点时，从起点选定一个辐角，并沿曲线连续变化，得到 $\\Delta_l\\arg z$；增量与起点辐角代表值的选择无关。沿闭曲线正向绕原点 $k$ 圈时，\n$$\\Delta_l\\arg z=2k\\pi,\\quad k\\in\\mathbb Z.$$\n简单正向闭曲线内含原点时为 $2\\pi$，原点在外部时为 $0$。",
+          "source_start_line": 9,
+          "source_end_line": 24,
+          "source_quote": "设在 z 平面上有一条起点为 a 终点为 b 的曲线 l，如果选定点 a 的辐角 arga，当 z 沿 l 从 a 向 b 运动时，辐角也将从 arga 开始连续变化，而得到 b 点的辐角的一个确定的值 argb = arga + a（图 2.7）。并称 a = argb - arga 为 z 沿曲线 l 的辐角变化，记为  $\\Delta_{z}$  argb。显然， $\\Delta_{z}$  argz 与 arga 的选定值无关。例如，l 是 |z| = 1 的上半圆周（图 2.8），当 z 沿 l 从 1 变到 -1 时，辐角增加了  $\\pi$ ，因而\n$$\\Delta_ {i} \\arg z = \\arg (- 1) - \\arg 1 = \\pi .$$\n图2.7\n图2.8\n现在考虑 z 沿着一条闭曲线 l 运动时，它的辐角的变化。这里有两种不同情况：\n1. 设原点在 $l$ 的内部(图2.9). 这时当 $z$ 由点 $A$ 出发沿着 $l$ 的正向转一圈回到 $A$ 点时，辐角增加了 $2\\pi$ ，即 $\\Delta_{l}\\arg z = 2\\pi$\n一般地，如果 $z$ 沿一条闭曲线 $l$ 的正向绕原点运行了 $k$ 圈（图2.10），则\n$$\\Delta_ {i} \\arg z = 2 k \\pi .$$\n这里，我们允许 $k$ 取负整数，这时 $z$ 实际上是沿 $l$ 的负向绕原点转 $|k|$ 圈. 更一般地，可能是绕负向转的圈数比绕正向转的圈数多 $|k|$ 圈.\n图2.9\n图2.10\n2. 设原点在 $l$ 的外部(图2.11)这时 $z$ 由点 $A$ 出发绕 $l$ 一周回到 $A$ 时，辐角没有变化，即\n$$\\Delta_ {i} \\arg z = 0.$$\n图2.11\n总之， $z$ 沿一闭曲线 $l$ 的正向绕原点转 $k$ 圈时，我们有\n$$\\Delta_ {i} \\arg z = 2 k \\pi , \\quad k = 0, \\pm 1, \\pm 2, \\dots .$$",
+          "after": "对非零 $z=re^{i\\theta}$，全部根为 $w_k=r^{1/n}e^{i(\\theta+2k\\pi)/n}$。沿路径连续取角时，角可以超过主值区间，不能一到 $\\pi$ 就突然改成 $-\\pi$。若输入绕原点一整圈，连续角增加 $2\\pi$，根的角只增加 $2\\pi/n$，所以根换成下一个值；绕满 $n$ 圈才回来。原点具有这种绕行换值的性质，称为支点；在扩充平面上，无穷远点也是这个根式的支点。"
+        },
+        {
+          "id": "CH02-S05-SS02-C003",
+          "title": "支点定义与根式的两个支点",
+          "statement_markdown": "若绕 $a$ 的充分小闭曲线连续运行一周后，多值函数由一个值变为另一个值，则称 $a$ 为支点。$\\sqrt[n]{z}$（$n>1$）在闭复平面的支点恰为 $0$ 与 $\\infty$。绕零正向一周使根值乘以 $e^{2\\pi i/n}$，绕 $n$ 周才回到原值。",
+          "source_start_line": 25,
+          "source_end_line": 30,
+          "source_quote": "(1) 支点\n由(2.9)式可见, 核式函数 $w = \\sqrt{z}$ 进出现多值性的原因, 是由于 a 确定后, 其辐角并不难确定, 即辐角数 Argz 是多值的. 读者可能会想到要确定 $w \\nmid z$ 的一一对应关系, 可以在 (2.9) 式取定一个 $k$ 值 (例如 $k = 0$), 并且限制用 $w_0 = \\sqrt[3]{\\exp}\\left(\\frac{\\varphi}{n}\\right)$ 计算式根函数值, 但仅仅这样规定还是不够的. 事实上, 设在 $z$ 平面上一定点之 $z = re^{\\alpha r}$, 按上述规定计算出 $w_0$, 再让点 $z$ 在 $z$ 平面上沿一条简单闭曲线, 按图 2.12 中着头方向连续变化, 这时点的辐角也将从 $\\varphi$ 开始连续地变化, 再注意到 $z$ 的概率也是连续地变化的, 因而 $w_0$ 的值从 $w_0$ 开始连续地变化. 如果这些闭曲线的内部不包含原点 (如直线 $c^r$), 则当动点回到原来的位置时, 这样改变的辐角也回到原来的值, 与此相反, $w$ 的值也回到原来的值。但如果其闭曲线 (如 C) 内部包含原点时, 那么动点沿箭头方向绕一周回到原来的位置时, $z$ 的辐角并不回到原来的值, 而但是增加了 $2\\pi$, 即成为 $\\varphi + 2\\pi$, 与此相近的 $w$ 值就从 $w_0$ 变到了另一个值, $w_1 = \\sqrt[3]{\\exp}\\left(\\frac{\\varphi + 2\\pi}{n}\\right) = w_0 \\exp\\left(\\frac{2\\pi n}{n}\\right)$ (它也是在 (2.9) 式中取 $k = 1$ 而得的值). 让 $z$ 继续按上述方向绕 $C$ 一周后回到原来的位置时, $w$ 值又从 $w_1$ 变到 $w_2 = w_1 \\exp\\left(\\frac{2\\pi n}{n}\\right)$. 如此继续下去, 按上述方向绕行 $n$ 周后回到原来的位置时, $w$ 才能回到原来的价值 $w_0$.\n从上面的分析看，对于函数 $w = \\sqrt[3]{z}$ 来说， $z = 0$ 具有这样一个特性：当 $z$ 绕 $z = 0$ 点转一整圈回到原处时，多变值函数 $w = \\sqrt[3]{z}$ 将由一个值变为另一个值，这时 $z =$\n0 称为多值函数 $w = \\sqrt[3]{z}$ 的支点. 一般说来, 有下述定义:\n定义8 对于某个多值函数 $w = f(z)$，若点 $z = a$ 具有这样一个特性：在 $z = a$ 点的充分小的邻域内，作一条包围该点的闭曲线 $C$，当 $z$ 从 $C$ 上某点出发，绕 $C$ 连续变动一周回到出发点时，$f(z)$ 将从它的一个值变到另一个值，就称 $a$ 是 $f(z)$ 的支点.\n如果在闭复平面上考虑，无穷远点也是 $w = \\frac{1}{2}$ 的支点，这是因为在无穷远点的充分“小”的邻域（即在 $|z| > R$）内（R 为充分大的正数），任作一条闭曲线 C 围绕 $\\infty$ 点。由于原点必在此曲线的内部，因而当点 z 沿此曲线按某一方向绕行一周，回到原处时，辐角连续变动的值也将变化 $\\pm 2\\pi$，根式的值也要相应变化。此外，这个函数再无其他支点，因为对任何 $z \\neq 0$，总可以作这点的充分小的邻域，使原点不在其内，于是此邻域内任何包围点 z 的闭曲线内不会包含原点，因而从一点出发沿此曲线一周回到原处时，辐角不会变化，故根式的值也不变。",
+          "after": "对非零 $z=re^{i\\theta}$，全部根为 $w_k=r^{1/n}e^{i(\\theta+2k\\pi)/n}$。沿路径连续取角时，角可以超过主值区间，不能一到 $\\pi$ 就突然改成 $-\\pi$。若输入绕原点一整圈，连续角增加 $2\\pi$，根的角只增加 $2\\pi/n$，所以根换成下一个值；绕满 $n$ 圈才回来。原点具有这种绕行换值的性质，称为支点；在扩充平面上，无穷远点也是这个根式的支点。",
+          "source_note": "原文多处将n次根识别成三次根或分数，依第2.9式与绕n周回值叙述订正。"
+        },
+        {
+          "id": "CH02-S05-SS02-C004",
+          "title": "支割线及根式的各单值分支",
+          "statement_markdown": "从 $0$ 到 $\\infty$ 取一条适当射线或简单曲线割开平面，称为支割线。选定起点的一个根，并按连续辐角确定其他点的值，可得到 $n$ 个单值连续分支。负实轴为切口时，令 $-\\pi<\\theta<\\pi$，有\n$$w_k=|z|^{1/n}e^{i(\\theta+2k\\pi)/n}=w_0e^{2k\\pi i/n},\\quad k=0,\\ldots,n-1.$$\n第 $k$ 支单叶地映为 $\\frac{(2k-1)\\pi}{n}<\\arg w<\\frac{(2k+1)\\pi}{n}$。",
+          "source_start_line": 31,
+          "source_end_line": 47,
+          "source_quote": "(2) 支割线和多值函数的单值解析分支\n上面已经看到，在函数 $w = \\frac{z}{2}$ 的支点 $o \\infty$ 的某领域内，当 $z$ 沿一苯包围该点的连续闭曲线绕行一周回到原处时，函数会发生变化。为了避免这一情况，通常在 $z$ 平面上从原点 $0$ 到 $\\infty$ 任意引一条射线或一条简单曲线，将 $z$ 平面割开。这条线称为支割线。这个割开的 $z$ 平面构成一个区域 $G$，在 $G$ 内的任何闭曲线是不会把支点包含在内部的，因为在 $G$ 内的某个 $z_0$，选定了点 $z_0$ 辐角 $\\arg z_e$ 的值，也就是选定了 $z_e^*$ 在 $z_0$ 处的 $n$ 个值中的一个，那么 $G$ 中其他各点的值都可以由辐角的连续变化而单值确定，这样确定的单值函数，叫做 $z_e^*$ 在 $G$ 内的一个单位连续分支。显然，在 $G$ 内有 $n$ 个单值连续分支。\n例如，取负半实轴为支割线，选定 $\\arg 1 = 0$ ，因而割开了的 $z$ 平面的辐角为\n$$- \\pi <   \\arg z <   \\pi .$$\n这样确定的 $\\sqrt[6]{z}$ 的单值分支，即是(2.9)式取 $k = 0$ 的一支\n$$w _ {0} = (\\sqrt [ n ]{z}) _ {0} = \\sqrt [ n ]{r} \\exp \\left(\\mathrm{i} \\frac {\\arg z}{n}\\right), - \\pi <   \\arg z <   \\pi .$$\n这一支把沿负实轴割开了的 z 平面  $-\\pi < \\arg z < \\pi$  双方单值地映为角域  $D_{0}: -\\pi/n < \\arg w < \\pi/n$ 。回顾一下，以前曾把幂函数的定义域限制在角域  $D_{0}$  上，使  $z = w^{*}$  成为单叶函数，这一支  $w_{0}$  就是这个单叶函数的反函数。仍取负实轴为支剖线，但选定  $\\arg1 = 2\\pi$ ，相应地割开了的 z 平面的辐角为  $\\pi < \\arg z < 3\\pi$ 。这时又得到  $\\sqrt{z}$  的另一个分支。\n$$w _ {1} = (\\sqrt [ n ]{z}) _ {1} = \\sqrt [ n ]{r} \\exp \\left(\\mathrm{i} \\frac {\\arg z}{n}\\right), \\quad \\pi <   \\arg z <   3 \\pi .$$\n它把沿负实轴割开了的 $z$ 平面 $\\pi < \\arg z < 3\\pi$ 单叶地映为角域 $D_{1}:\\pi /n < \\arg w < 3\\pi /n.$ 一般地，取负实轴为支割线，多值函数 $\\sqrt[5]{z}$ 有 $n$ 个单值分支\n$$w _ {k} = (\\sqrt [ n ]{z}) _ {k} = \\sqrt [ n ]{r} \\exp \\left(\\mathrm{i} \\frac {\\arg z}{n}\\right),$$\n$$(2 k - 1) \\pi <   \\arg z <   (2 k + 1) \\pi , \\quad k = 0, 1, 2, \\dots , n - 1.$$\n这些分支之间满足下面关系\n$$w _ {k} = w _ {k + 1} \\exp \\left(\\mathrm{i} \\frac {2 \\pi}{n}\\right), \\quad k = 1, 2, \\dots , n - 1.$$\n所以，第 $k$ 支的表达式也可以写成\n$$\\begin{array}{r l} w _ {k} & = \\sqrt [ n ]{r} \\exp \\left(\\mathrm{i} \\frac {\\arg z + 2 k \\pi}{n}\\right), - \\pi <   \\arg z <   \\pi . \\\\ k & = 0, 1, 2, \\dots , n - 1. \\end{array}$$\n$w_{k}$ 把割开了的 $z$ 平面 $(2k - 1)\\pi < \\arg z < (2k + 1)\\pi$ 映为角域 $D_{k}$\n$$(2 k - 1) \\pi / n <   \\arg w <   (2 k + 1) \\pi / n.$$",
+          "after": "为了使选择不受绕行影响，可以从零到无穷远去掉一条射线或适当的简单曲线，称为支割线。它阻止允许路径围原点走完整圈。若去掉负实轴，就能在 $-\\pi<\\theta<\\pi$ 连续取角，得到\n$$w_k=|z|^{1/n}\\exp\\left(i\\frac{\\theta+2k\\pi}{n}\\right),\\quad k=0,\\ldots,n-1.$$\n固定一个 $k$ 才固定一支；每一点的值既要是一个根，还要与其他点连续配合。单纯在每个点任意挑一个根，通常不构成解析分支。",
+          "source_note": "第43行相邻分支关系方向错误，以第45行可读公式恢复为 w_k=w_0 e^{2kπi/n}。"
+        },
+        {
+          "id": "CH02-S05-SS02-C005",
+          "title": "单值解析分支及根式分支的导数",
+          "statement_markdown": "若 $f$ 在区域 $D$ 单值解析，且每点 $f(z)$ 都是多值函数 $F(z)$ 在该点的一个值，则称 $f$ 为 $F$ 的单值解析分支。根式的上述各分支均解析，并且\n$$w_k'(z)=\\frac1{n\\,w_k(z)^{n-1}}=\\frac{w_k(z)}{nz}.$$\n求函数值与导数值必须使用同一分支；切口改变时，分支定义域及像域也会改变。",
+          "source_start_line": 48,
+          "source_end_line": 52,
+          "source_quote": "定义9 设 $F(z)$ 是区域 $D$ 内的多值函数，$f(z)$ 是 $D$ 内的单值解析函数。如果 $f(z)$ 在 $D$ 内每一点的值，都等于 $F(z)$ 在该点的一个值，则 $f(z)$ 称为 $F(z)$ 在 $D$ 内的一个单值解析分支。\n对于上面讨论的  $\\sqrt[n]{z}$  的 n 个单值分支  $w_{k}, k = 0, 1, 2, \\cdots, n - 1$ ，因  $z = w_{k}^{n}$ ，所以，由反函数的求导法则，有\n$$\\frac {\\mathrm{d} w _ {k}}{\\mathrm{d} z} = \\frac {1}{\\frac {\\mathrm{d} z}{\\mathrm{d} w _ {k}}} = \\frac {1}{n w _ {k} ^ {n - 1}} = \\frac {w _ {k}}{n z}.\\tag{2.10}$$\n这样，我们确定的 $\\sqrt[5]{z}$ 的几个分支都是沿负实轴割开了的 $z$ 平面内的单值解析分支。还必须指出，按(2.10)式计算导数值，两边要取同一分支的值。\n应当注意把一个多值函数划分为单值分支是与支割线密切相关的.对应于不同的支割线,多值函数的各单值分支的定义域和值域也就不同.",
+          "after": "固定解析分支后，可以在不含零的域内求导：从 $w^n=z$ 得到 $w'=1/(nw^{n-1})=w/(nz)$。式中 $w$ 必须是你正在使用的那一支；算函数值时选一个根，算导数时又换一个根，会使结果不再属于同一个函数。教材例9正是先用指定点上的值辨认分支，再沿允许路径求另一个点的值。"
+        },
+        {
+          "id": "CH02-S05-SS02-C006",
+          "title": "切口两岸的根值与分支存在条件",
+          "statement_markdown": "单值根式分支在切口两岸的极限值一般不同。例如正实轴为切口、$0<\\arg z<2\\pi$ 的立方根第一支，在 $x>0$ 的上岸极限为 $x^{1/3}$，下岸为 $x^{1/3}e^{2\\pi i/3}$。区域中没有包围原点的闭曲线时可选定根式解析分支；圆环 $1<|z|<2$ 中不能选出 $\\sqrt[n]{z}$（$n>1$）的全局单值分支。",
+          "source_start_line": 61,
+          "source_end_line": 63,
+          "source_quote": "(3) 关于支割线两岸的函数值\n一般说来，每个单值分支在支割线的两岸取不同的值。例如，考虑 $w = \\sqrt[3]{z}$ 在沿正实轴割开了的 $z$ 平面上的单值分支 $w_{0}$ 。因为在支割线的上岸： $z = x\\mathrm{e}^{x}$， $x > 0$，所以 $w_{0} = \\sqrt[3]{x}$ （算术根）；而在支割线的下岸： $z = x\\mathrm{e}^{2x}$，所以 $w_{0} = \\sqrt[3]{x}\\mathrm{e}^{2n/3}$ 。\n总之，如果在 $z$ 平面上给定一个区域 $D$ ，且 $D$ 中没有包含原点的闭曲线（如图2.13中所示各区域），就可以先用一条支割线将 $z$ 平面割破，从而得到 $\\sqrt[n]{z}$ 在区域 $D$ 上的各单值分支.反之.如果区域 $D$ 中含有包围原点的闭曲线，则在 $D$ 上就不能分出 $\\sqrt[n]{z}$ 的单值分支.例如在圆环 $1 < |z| < 2$ 上，$\\sqrt[n]{z}$ 就不能分出单值分支.",
+          "after": "固定解析分支后，可以在不含零的域内求导：从 $w^n=z$ 得到 $w'=1/(nw^{n-1})=w/(nz)$。式中 $w$ 必须是你正在使用的那一支；算函数值时选一个根，算导数时又换一个根，会使结果不再属于同一个函数。教材例9正是先用指定点上的值辨认分支，再沿允许路径求另一个点的值。",
+          "source_note": "第62行指数漏写i及π，按辐角0和2π恢复。"
+        },
+        {
+          "id": "CH02-S05-SS02-C007",
+          "title": "根式 sqrt(z²-a²) 的支点、分支与导数",
+          "statement_markdown": "设实数 $a>0$，$F(z)=\\sqrt{z^2-a^2}$。支点恰为 $a,-a$，$\\infty$ 不是支点。沿线段 $[-a,a]$ 割开平面后，有两个单值解析分支。对任一固定分支 $f$，\n$$f'(z)=\\frac z{f(z)},\\qquad f''(z)=\\frac1{f(z)}-\\frac{z^2}{f(z)^3}=-\\frac{a^2}{f(z)^3}.$$\n两式须取同一分支。",
+          "source_start_line": 66,
+          "source_end_line": 74,
+          "source_quote": "最后，我们以函数 $f(z) = \\sqrt{z^2 - a^2}$ （$a$ 为正常数）为例来进一步阐明上述讨论。因为函数 $\\sqrt{z}$ 的支点是0及 $\\infty$ ，所以函数 $f(z)$ 的可能的支点是使 $z^2 - a^2$ 为0或 $\\infty$ 的点，即 $a, -a$ 及 $\\infty$ 。下面分析这三点是否为\n$$f (z) = \\sqrt {\\left| z ^ {2} - a ^ {2} \\right|} \\exp \\left[ i \\frac {\\operatorname{Arg} (z - a) + \\operatorname{Arg} (z + a)}{2} \\right]\\tag{2.11}$$\n的支点. 先就 $z = a$ 讨论，作一条内部包含 $z = a$ （但不包含 $z = -a$ ，且不通过 $z = -a$ ）的简单闭曲线，对此曲线上一点 $z$ ，先分别选定 $\\operatorname{Arg}(z - a)$ 及 $\\operatorname{Arg}(z + a)$ 的值为 $\\varphi_{1}$ 及 $\\varphi_{2}$，当 $z$ 沿此闭曲线的正向绕行一周时（图2.14），$\\varphi_{1}$ 增加 $2\\pi, \\varphi_{2}$ 未改\n图2.14\n变，所以由(2.11)式可知， $f(z)$  的辐角将增加  $(2m+0)/2=\\pi$ . 因而函数  $f(z)$  的值要改变一个因子  $e^{ai}=-1$ . 这就是说，z=a 是  $f(z)$  的支点. 同样的讨论得知 z=-a 也是  $f(z)$  的支点. 对于  $z=\\infty$  点的邻域  $|z|>a$  内任一闭曲线 C(图2.15)，在 C 内必含 z=a 及 z=-a，当 z 沿 C 的正向运行一周时， $\\varphi_{1}$  及  $\\varphi_{2}$  各获得增量\n$2\\pi$ ，因而 $f(z)$ 的辐角 $(\\varphi_{1} + \\varphi_{2}) / 2$ 也增加 $2\\pi$ ，结果只是原来的函数值乘以 $\\mathrm{e}^{2\\pi i} = 1$ 因而函数值未变.即 $z = \\infty$ 不是 $f(z)$ 的支点.这样，函数在割去线段 $[-a,a]$ 的平面上能分出它的二个单值解析分支．其一阶及二阶导数分别为\n$$f ^ {\\prime} (z) = \\frac {z}{\\sqrt {z ^ {2} - a ^ {2}}} = \\frac {z}{f (z)},\\tag{2.12}$$\n$$f ^ {\\prime \\prime} (z) = \\frac {1}{f (z)} - \\frac {z f ^ {\\prime} (z)}{f ^ {2} (z)} = \\frac {1}{f (z)} - \\frac {z ^ {2}}{f ^ {3} (z)}.\\tag{2.13}$$\n再提请读者注意，计算导数值时，两边必须取同一分支。",
+          "after": "更复杂的根式还要重新检查支点，不能把内部表达式的所有无穷点都机械判成支点。例如 $\\sqrt{z^2-a^2}$ 在 $a,-a$ 附近各绕一圈会变号；同时围住两点时，两个辐角共增加 $4\\pi$，开平方后增加整圈，值不变，所以无穷远不是支点。可以用线段 $[-a,a]$ 作切口。在它外面选定一支以后，所有函数值和导数都要沿同一连续选择来确定。"
+        }
+      ]
+    },
+    "CH02-S05-SS03": {
+      "unit_id": "CH02-S05-SS03",
+      "source_path": "original_text/ch02_s05_ss03.md",
+      "conclusions": [
+        {
+          "id": "CH02-S05-SS03-C001",
+          "title": "复指数的定义、欧拉公式与导数",
+          "statement_markdown": "对 $z=x+iy$，定义\n$$e^z=e^x(\\cos y+i\\sin y)=e^xe^{iy}.$$\n当 $z$ 为实数时，与实指数一致；在全平面解析，且 $(e^z)'=e^z$。特别地，$e^{i\\pi}=-1$、$e^{i\\pi/2}=i$。",
+          "source_start_line": 3,
+          "source_end_line": 12,
+          "source_quote": "设复变数 $z = x + \\mathrm{i}y$ ，应使复指数函数 $\\mathbf{e}^z$ 的定义能保持 $\\mathbf{e}^x$ 具有的一些基本性质.先由乘法性质，有 $\\mathrm{e}^z = \\mathrm{e}^{x + \\mathrm{i}y} = \\mathrm{e}^x\\cdot \\mathrm{e}^{iy}$\n现只要清楚如何对纯虚数取幂，就可对 z 取幂了。其次，要求  $(e^{iy})' = ie^{iy}$  以及  $(e^{iy})'' + e^{iy} = 0$  成立。\n于是，易验证 $\\cos y$ 与 $\\sin y$ 是此二阶方程的两个线性无关的解，故通解为\n$$\\mathrm{e} ^ {\\mathrm{i} y} = C _ {1} \\cos y + C _ {2} \\sin y.$$\n应用初始条件 $\\mathrm{e}^{iy} = 1 = C_1, \\mathrm{i}\\mathrm{e}^{iy} = \\mathrm{i} = C_2$. 就有 $\\mathrm{e}^{iy} = \\cos y + \\mathrm{i}\\sin y$. 定义复指数函数为\n$$\\mathrm{e} ^ {x} = \\mathrm{e} ^ {x + \\mathrm{i} y} = \\mathrm{e} ^ {x} (\\cos y + \\mathrm{i} \\sin y)$$\n例如\n$$\\mathrm{e} ^ {1 \\cdot \\mathrm{i}} = \\mathrm{e} (\\cos 1 + \\mathrm{i} \\sin 1), \\quad \\mathrm{e} ^ {\\mathrm{i} \\pi} = \\mathrm{e} ^ {\\circ} (\\cos \\pi + \\mathrm{i} \\sin \\pi) = - 1,$$\n$$\\mathrm{e} ^ {\\mathrm{i} \\omega / 2} = \\cos \\frac {\\pi}{2} + \\mathrm{i} \\sin \\frac {\\pi}{2} = \\mathrm{i}.$$\n当 $z$ 为实数时，由于 $y = 0, \\cos y + \\mathrm{i} \\sin y = 1$ ，这样定义的指数函数就和普通的实变数指数函数相一致，2.4节例6中，已指出指数函数在全平面上解析，且 $(\\mathbf{e}^t)' = \\mathbf{e}^t$",
+          "after": "第一章用 $e^{i\\theta}$ 简记单位圆上的方向，本节正式把指数推广到任意复数。我们希望它在实轴上仍是原来的 $e^x$，又保留乘法与求导的规律。对 $z=x+iy$，定义\n$$e^z=e^x(\\cos y+i\\sin y)=e^xe^{iy}.$$\n这一个式子把两个坐标分工说清楚：实部 $x$ 控制输出的模，虚部 $y$ 控制输出的辐角。$y=0$ 时便回到实指数；$x=0$ 时则沿单位圆转动。前面已经用 C-R 方程验证，它在全平面解析，且 $(e^z)'=e^z$。",
+          "source_note": "第8行左端e^x应为e^z，依z=x+iy订正。"
+        },
+        {
+          "id": "CH02-S05-SS03-C002",
+          "title": "指数不为零且无无穷远极限",
+          "statement_markdown": "对有限 $z=x+iy$，$|e^z|=e^x>0$，因而 $e^z\\ne0$。$\\lim_{z\\to\\infty}e^z$ 不存在（既无有限极限，也不趋于无穷远）：沿正实轴趋于无穷远时指数趋于无穷远，沿负实轴时趋于零。",
+          "source_start_line": 14,
+          "source_end_line": 16,
+          "source_quote": "1) 对任何复数 $z, \\mathrm{e}^z \\neq 0$，这是因为 $|\\mathrm{e}^z| = \\mathrm{e}^x \\neq 0$.\n2)  $\\lim_{z\\to\\infty}e^{z}$  不存在(有限或无限). 这是因为当 z 沿正实轴趋于  $\\infty$  时,  $e^{z}$  趋于  $\\infty$ , 而当 z 沿负实轴趋于  $\\infty$  时,  $e^{z}$  趋于零.\n由性质2)可知， $e^{*}$ 无意义.",
+          "after": "模为 $|e^z|=e^x>0$，因此任何有限复数的指数都不等于零。不过它可以任意接近零：只需让实部趋于负无穷。这与“取到零”是两件事。它也不能在扩充平面的无穷远点补一个统一的极限；沿正实轴向远处走时模增大，沿负实轴向远处走时模缩小，两条路径无法给出同一个答案。"
+        },
+        {
+          "id": "CH02-S05-SS03-C003",
+          "title": "指数的加法公式、周期与同像条件",
+          "statement_markdown": "对任意复数 $z_1,z_2$，\n$$e^{z_1+z_2}=e^{z_1}e^{z_2},\\qquad e^{z+2k\\pi i}=e^z\\quad(k\\in\\mathbb Z).$$\n并且\n$$e^{z_1}=e^{z_2}\\iff z_1-z_2\\in2\\pi i\\mathbb Z.$$",
+          "source_start_line": 17,
+          "source_end_line": 22,
+          "source_quote": "3）加法公式： $e^{z_{1}}\\cdot e^{z_{2}}=e^{z_{1}+z_{2}}$\n图2.17\n事实上，设 $z_{1} = x_{1} + \\mathrm{i}y_{1}, z_{2} = x_{2} + \\mathrm{i}y_{2}$，则\n$$\\begin{array}{r l} \\mathrm{e} ^ {x _ {1}} \\cdot \\mathrm{e} ^ {x _ {2}} & = \\mathrm{e} ^ {x _ {1}} (\\cos y _ {1} + \\mathrm{i} \\sin y _ {1}) \\cdot \\mathrm{e} ^ {x _ {2}} (\\cos y _ {2} + \\mathrm{i} \\sin y _ {2}) \\\\ & = \\mathrm{e} ^ {x _ {1} + x _ {2}} [ \\cos (y _ {1} + y _ {2}) + \\mathrm{i} \\sin (y _ {1} + y _ {2}) ] = \\mathrm{e} ^ {x _ {1} + x _ {2}}. \\\\ \\mathrm{e} ^ {x + 2 k m i} & = \\mathrm{e} ^ {x} \\cdot \\mathrm{e} ^ {2 k m i} = \\mathrm{e} ^ {x}, k = 0, \\pm 1, \\pm 2, \\dots . \\end{array}$$\n这就是说， $e^{x}$  是一个以  $2\\pi i$  为周期的函数，这个性质是实变量指数函数  $e^{x}$  所没有的。\n5) 如果  $e^{z_{1}} = e^{z_{2}}$ ，则  $z_{1} = z_{2} + 2k\\pi i$ ，其中，k 为任一整数.",
+          "after": "在计算中，加法公式 $e^{z_1+z_2}=e^{z_1}e^{z_2}$ 仍然成立，因为实部相加使模相乘，虚部相加使角度相加。新的现象是虚方向的周期性：\n$$e^{z+2k\\pi i}=e^z,\\quad k\\in\\mathbb Z.$$\n这不是实轴上的周期。实部增加会改变正模 $e^x$；虚部增加 $2\\pi$，却只把方向多转一圈。"
+        },
+        {
+          "id": "CH02-S05-SS03-C004",
+          "title": "指数的单叶区域与几何对应",
+          "statement_markdown": "$e^z$ 在区域 $D$ 单叶，当且仅当 $D$ 不含两个相差非零 $2k\\pi i$ 的点。水平带 $a<\\operatorname{Im}z<b$（$0<b-a\\le2\\pi$）单叶地映为连续角度范围 $a<\\arg w<b$。其中 $|w|=e^x$、$\\arg w=y$：水平线映为射线，竖直线段映为圆弧。特别地，$-\\pi<\\operatorname{Im}z<\\pi$ 映为沿负实轴割开的平面，$0<\\operatorname{Im}z<\\pi$ 映为上半平面；各带 $(2k-1)\\pi<\\operatorname{Im}z<(2k+1)\\pi$ 均映为负实轴割平面。",
+          "source_start_line": 26,
+          "source_end_line": 30,
+          "source_quote": "由性质 5) 可见, 区域 D 是  $w = e^{z}$  的单叶性区域的充要条件是: D 内不得含有任何两个满足条件  $z_{1} = z_{2} + 2k\\pi i$  的点  $z_{1}$  和  $z_{2}$ . 特别地, 水平条形域  $D_{0}: -\\pi < \\operatorname{Im} z < \\pi$  是它的一个单叶性区域. 下面讨论  $w = e^{z}$  在  $D_{0}$  内的映照性质. 由  $w = e^{z} = e^{x}e^{y}$ , 得\n$$| w | = e ^ {z}, \\quad \\arg w = y.$$\n于是，当 $z$ 从左向右描述 $D_{0}$ 内的直线 $L: \\mathrm{Im}z = y_{0}, -\\pi < y_{0} < \\pi$ 时，由于 $|w| = e^{i}, -\\infty < x < +\\infty$ 从 $0$ （不包括 $0$）增大到 $+\\infty$ ，且 $\\arg w = y_0$ 保持不变，因此 $w$ 描述射线 $L_{1}$ 同arg，$y_{0} = y_{0}$ （不包括 $w = 0$）（图2.17）。即 $w = e^{i} \\rightarrow$ 一地将直线 $U$ 映为射线 $L_{1}$ 同样，它把 $D_{0}$ 内的直线段 $\\operatorname{Rez} = x_{0}, -\\pi < y < \\pi$ 一一地映成圆周 $|w| = e^{i}$，但要除去负实轴上的点 $-e^{i}$，从上讨论可见，$w = e^{i}$ 把条形域 $D_{0}$ 单叶地映为沿轴负割给了的 $w$ 平面 $-\\pi < \\arg w < \\pi$。而水平条形域：$0 < \\mathrm{Im}z < \\pi$ 则被它单叶地映为上半 $w$ 平面 $0 < \\arg w < \\pi$。\n更一般地， $w = e^{x}$  把条形域  $a < Imz < b, b - a \\leqslant 2\\pi$  单叶地映为角域  $a < argw < b$ ; 把条形域  $D_{x}: (2k - 1)\\pi < Imz < (2k + 1)\\pi, k = 0, \\pm 1, \\pm 2, \\cdots$  单\n叶地映为沿负实轴剪开了的 $w$ 平面.",
+          "after": "特别地，$-\\pi<\\operatorname{Im}z<\\pi$ 被映成沿负实轴割开的平面：原来的上下边界会趋向切口两岸，但并不在域内。高度为 $\\pi$ 的带域 $0<\\operatorname{Im}z<\\pi$ 则映为上半平面。反向读这些对应，输出点的距离告诉我们输入实部，输出点的角度告诉我们输入虚部；下一节的对数就是把这个过程写成公式。",
+          "source_note": "第26行单叶条件须限定不同点，原文k遗漏非零；后文e^x、e^i混写按z=x+iy恢复。"
+        }
+      ]
+    },
+    "CH02-S05-SS04": {
+      "unit_id": "CH02-S05-SS04",
+      "source_path": "original_text/ch02_s05_ss04.md",
+      "conclusions": [
+        {
+          "id": "CH02-S05-SS04-C001",
+          "title": "复对数的全部值与主值",
+          "statement_markdown": "对 $z\\ne0$，方程 $e^w=z$ 的全部解称为对数：\n$$\\operatorname{Ln}z=\\ln|z|+i\\operatorname{Arg}z=\\ln|z|+i\\arg z+2k\\pi i,\\quad k\\in\\mathbb Z.$$\n其中任意两值相差 $2\\pi i$ 的整数倍。取 $-\\pi<\\arg z\\le\\pi$ 时，主值为 $\\ln z=\\ln|z|+i\\arg z$。例如 $\\operatorname{Ln}(-1)=(2k+1)\\pi i$，$\\ln(-1)=\\pi i$。",
+          "source_start_line": 3,
+          "source_end_line": 14,
+          "source_quote": "设已给复数 $z \\neq 0$，满足 $\\mathrm{e}^w = z$ 的复数 $w$ 称为 $z$ 的对数，记作 $w = \\mathrm{Ln}z$. 把 $z$ 看成复变数，它就是 $z$ 的对数函数. 对数函数是指数函数的反函数.\n设 $w = u + \\mathrm{i}\\nu$ ，由等式 $\\mathbf{e}^{\\mathbf{x}}\\cdot \\mathbf{e}^{\\mathbf{i}\\nu} = z$ 得\n$$u = \\ln | z |, \\quad v = \\operatorname{Arg} z,$$\n这里 $\\ln |z|$ 是通常的实对数.所以\n$$\\begin{array}{l} \\operatorname{Ln} z = \\ln | z | + \\mathrm{iArg} z \\\\ = \\ln | z | + \\mathrm{iarg} z + 2 k \\pi \\mathrm{i}, \\quad k = 0, \\pm 1, \\pm 2, \\dots . \\end{array}$$\n由此可见，任何不是零的复数都有无穷多个对数，其中任意两个相差 $2\\pi \\mathrm{i}$ 的整数倍.相应于Argz的主值，也常取\n$$\\ln z = \\ln | z | + \\operatorname{iarg} z, - \\pi <   \\arg z \\leqslant \\pi$$\n作 $\\mathrm{Ln}z$ 的主值.例如\n$$\\ln (- 1) = \\ln | - 1 | + \\mathrm{iarg} (- 1) = \\mathrm{i} \\pi ,$$\n$$\\mathrm{Ln} (- 1) = \\ln (- 1) + 2 k \\pi \\mathrm{i} = (2 k + 1) \\pi \\mathrm{i}.$$\n$$\\ln (1 + \\mathrm{i}) = \\ln | 1 + \\mathrm{i} | + \\operatorname{iarg} (1 + \\mathrm{i}) = \\ln \\sqrt {2} + \\mathrm{i} \\frac {\\pi}{4},$$\n$$\\mathrm{Ln} (1 + \\mathrm{i}) = \\ln \\sqrt {2} + \\mathrm{i} \\left(\\frac {\\pi}{4} + 2 k \\pi\\right), \\quad k = 0, \\pm 1, \\pm 2, \\dots .$$",
+          "after": "例如 $-1$ 虽然没有实对数，却有复对数 $(2k+1)\\pi i$，因为这些数的指数都是 $-1$。取 $-\\pi<\\arg z\\le\\pi$ 时，本书用小写 $\\ln z$ 表示主值，所以 $\\ln(-1)=\\pi i$。要把一个点上的主值，与一个开区域里的解析分支区别开：主值可以给负实轴指定数值，但其两侧仍有跳跃，不能因此说主值在那里解析。"
+        },
+        {
+          "id": "CH02-S05-SS04-C002",
+          "title": "复对数的乘除运算法则",
+          "statement_markdown": "对 $z_1,z_2\\ne0$，\n$$\\operatorname{Ln}(z_1z_2)=\\operatorname{Ln}z_1+\\operatorname{Ln}z_2,\\qquad\\operatorname{Ln}(z_1/z_2)=\\operatorname{Ln}z_1-\\operatorname{Ln}z_2.$$\n等式表示全部值集合的对应：左侧任一值能由右侧适当选值获得，反之亦然。任意固定主值一般不能直接沿用这两个等式。",
+          "source_start_line": 15,
+          "source_end_line": 20,
+          "source_quote": "对数有以下运算法则：\n1)  $\\mathrm{Ln}(z_{1}z_{2})=\\mathrm{Ln}z_{1}+\\mathrm{Ln}z_{2}$\n2) $\\mathrm{Ln}\\frac{z_1}{z_2} = \\mathrm{Ln}z_1 - \\mathrm{Ln}z_2.$\n下面只证明1）：\n$$\\begin{array}{r l} \\mathrm{Ln} (z _ {1} z _ {2}) & = \\ln | z _ {1} z _ {2} | + \\mathrm{iArg} (z _ {1} z _ {2}) \\\\ & = \\ln | z _ {1} | + \\ln | z _ {2} | + \\mathrm{i} (\\mathrm{Arg} z _ {1} + \\mathrm{Arg} z _ {2}) \\\\ & = \\mathrm{Ln} z _ {1} + \\mathrm{Ln} z _ {2}. \\end{array}$$\n这两个等式与通常运算规则相同，但对它们必需这样理解：对于它们左边的多值函数的任一个值，一定有右边的两多值函数的各一值与它对应，使得等式成立；反过来也是这样。",
+          "after": "例如 $-1$ 虽然没有实对数，却有复对数 $(2k+1)\\pi i$，因为这些数的指数都是 $-1$。取 $-\\pi<\\arg z\\le\\pi$ 时，本书用小写 $\\ln z$ 表示主值，所以 $\\ln(-1)=\\pi i$。要把一个点上的主值，与一个开区域里的解析分支区别开：主值可以给负实轴指定数值，但其两侧仍有跳跃，不能因此说主值在那里解析。"
+        },
+        {
+          "id": "CH02-S05-SS04-C003",
+          "title": "对数的支点与绕行变化",
+          "statement_markdown": "$\\operatorname{Ln}z$ 的支点恰为 $0$、$\\infty$。绕原点正向一周，连续对数值增加 $2\\pi i$；反向一周减少 $2\\pi i$。",
+          "source_start_line": 21,
+          "source_end_line": 23,
+          "source_quote": "上面已经见到，对数函数\n$$\\mathrm{Ln} z = \\ln | z | + \\mathrm{iArg} z\\tag{2.14}$$\n是无穷多值函数. 它的多值性也是由辐角函数 $\\operatorname{Arg} z$ 的多值性引起的. 用前面用过的办法, 不难断定 $0$ 及 $\\infty$ 是它的支点. 事实上, 例如就原点来说, 作一个包围原点的闭曲线 $C$, 当变点从 $C$ 上一点 (它的辐角已经选定了) 出发, 连续变动一周回到原处时, 辐角将变化 $\\pm 2\\pi$, 因面由 (2.14) 式可知 $\\operatorname{Ln} z$ 将从原来的值变到另一个值, 故原点为其支点. 同理 $\\infty$ 点也是 $\\operatorname{Ln} z$ 的支点, 其他点都不是它的支点.",
+          "after": "跟根式一样，连续绕原点一圈会改变值；这次增加的是 $2\\pi i$，绕多少圈也不会回到原对数值。因此零和无穷远是支点。去掉连接它们的切口以后，可以连续选角。以负实轴为切口、$-\\pi<\\arg z<\\pi$ 为角区间，得到解析分支 $\\operatorname{Log}z=\\ln|z|+i\\arg z$；其余各支再加 $2k\\pi i$。"
+        },
+        {
+          "id": "CH02-S05-SS04-C004",
+          "title": "负实轴割平面的对数分支、像域与导数",
+          "statement_markdown": "在 $D=\\mathbb C\\setminus(-\\infty,0]$ 中取 $-\\pi<\\theta<\\pi$，全部单值解析分支为\n$$L_k(z)=\\ln|z|+i\\theta+2k\\pi i,\\quad k\\in\\mathbb Z,\\qquad L_k'(z)=1/z.$$\n$L_k$ 把 $D$ 单叶地映为 $(2k-1)\\pi<\\operatorname{Im}w<(2k+1)\\pi$；将其中角域 $a<\\theta<b$ 映为水平带 $2k\\pi+a<\\operatorname{Im}w<2k\\pi+b$。",
+          "source_start_line": 24,
+          "source_end_line": 28,
+          "source_quote": "为了得到 $\\mathrm{Ln}z$ 的各单值分支，仍用连接支点0及 $\\infty$ 的支割线把 $z$ 平面割开.例如取负实轴为支割线，可以得到 $\\mathrm{Ln}z$ 在沿负轴割开了的 $z$ 平面 $D$ 上的无穷多个单值分支\n$$\\begin{array}{r l} w _ {k} = (\\mathrm{Ln} z) _ {k} & = \\ln | z | + \\mathrm{iarg} z + 2 k \\pi \\mathrm{i}, \\quad k = 0, \\pm 1, \\pm 2, \\dots , \\\\ & - \\pi <   \\arg z <   \\pi . \\end{array}$$\n这些分支把角域:  $a < \\arg z < b, -\\pi < a, b < \\pi$  双方单值地分别变成条形域:  $2k\\pi + a < Imw < 2k\\pi + b$ . 特别地, 把区域 D 双方单值地变为条形域:  $(2k - 1)\\pi < Imw < (2k + 1)\\pi$ . 由  $z = e^{w_k}$ , 可用反函数求导的办法求出各单值分支的微商\n$$\\frac {\\mathrm{d} w _ {k}}{\\mathrm{d} z} = \\frac {1}{\\frac {\\mathrm{d} z}{\\mathrm{d} w _ {k}}} = \\frac {1}{\\mathrm{e} ^ {w _ {k}}} = \\frac {1}{z}.$$\n因而这些分支都是 D 内的单值解析分支.",
+          "after": "每一个解析分支的导数都是 $1/z$。从 $e^w=z$ 求反函数导数即可得到；相差常数 $2k\\pi i$ 的分支导数相同。这不意味着函数值可以随意换支，反而说明仅知道导数还需要一个初始值才能确定具体一支。"
+        },
+        {
+          "id": "CH02-S05-SS04-C005",
+          "title": "正实轴割平面的对数分支",
+          "statement_markdown": "在 $\\mathbb C\\setminus[0,\\infty)$ 中取 $0<\\theta<2\\pi$，$L_k(z)=\\ln|z|+i\\theta+2k\\pi i$ 给出全部解析分支，它们分别单叶地映为 $2k\\pi<\\operatorname{Im}w<2(k+1)\\pi$，且导数均为 $1/z$。",
+          "source_start_line": 29,
+          "source_end_line": 31,
+          "source_quote": "又如果取正实轴为支割线，也可以得到 $\\mathrm{Ln}z$ 在沿正实轴割开了的 $z$ 平面 $D_{1}$ 上的无穷多个单值解析分支\n$$\\begin{array}{r l} w _ {k} = (\\mathrm{Ln} z) _ {k} & = \\ln | z | + \\mathrm{iarg} z + 2 k \\pi \\mathrm{i}, \\quad k = 0, \\pm 1, \\pm 2, \\dots , \\\\ & 0 <   \\arg z <   2 \\pi . \\end{array}$$\n它们把区域 $D_{1}$ 单叶地变成条形域： $2k\\pi < 1\\mathrm{Im}w < 2k\\pi + 2\\pi.$",
+          "after": "每一个解析分支的导数都是 $1/z$。从 $e^w=z$ 求反函数导数即可得到；相差常数 $2k\\pi i$ 的分支导数相同。这不意味着函数值可以随意换支，反而说明仅知道导数还需要一个初始值才能确定具体一支。"
+        }
+      ]
+    },
+    "CH02-S05-SS05": {
+      "unit_id": "CH02-S05-SS05",
+      "source_path": "original_text/ch02_s05_ss05.md",
+      "conclusions": [
+        {
+          "id": "CH02-S05-SS05-C001",
+          "title": "复正弦、余弦的定义与导数",
+          "statement_markdown": "对任意 $z\\in\\mathbb C$，\n$$\\cos z=\\frac{e^{iz}+e^{-iz}}2,\\qquad\\sin z=\\frac{e^{iz}-e^{-iz}}{2i}.$$\n两者均在全平面解析，$(\\sin z)'=\\cos z$、$(\\cos z)'=-\\sin z$。",
+          "source_start_line": 3,
+          "source_end_line": 11,
+          "source_quote": "由指数函数的定义，对任何实数 $x$ 有\n$$\\mathrm{e} ^ {\\mathrm{i} x} = \\cos x + \\mathrm{i} \\sin x, \\quad \\mathrm{e} ^ {- \\mathrm{i} x} = \\cos x - \\mathrm{i} \\sin x.$$\n两式相加、减后分别除以2及2i，得\n$$\\cos x = \\frac {1}{2} \\left(e ^ {i x} + e ^ {- i x}\\right), \\quad \\sin x = \\frac {1}{2 i} \\left(e ^ {i x} - e ^ {- i x}\\right).$$\n因此我们定义复变数正弦函数及余弦函数为\n$$\\cos z = \\frac {1}{2} \\left(\\mathrm{e} ^ {\\mathrm{i} z} + \\mathrm{e} ^ {- \\mathrm{i} z}\\right), \\quad \\sin z = \\frac {1}{2 \\mathrm{i}} \\left(\\mathrm{e} ^ {\\mathrm{i} z} - \\mathrm{e} ^ {- \\mathrm{i} z}\\right).$$\n由指数函数的解析性及导数运算法则，复正弦函数及复余弦函数都是全平面的解析函数.而且\n$$\\begin{array}{r l} \\left(\\cos z\\right) ^ {\\prime} & = \\frac {1}{2} \\left(e ^ {i z} + e ^ {- i z}\\right) ^ {\\prime} = \\frac {i}{2} \\left(e ^ {i z} - e ^ {- i z}\\right) \\\\ & = - \\frac {e ^ {i z} - e ^ {- i z}}{2 i} = - \\sin z. \\end{array}$$\n类似地 $(\\sin z)' = \\cos z$ .",
+          "after": "为什么这是一种方便的定义？指数已经处处解析，有限次相加与乘常数仍解析，所以正弦、余弦在整个有限平面解析；利用链式求导，还得到 $(\\sin z)'=\\cos z$、$(\\cos z)'=-\\sin z$。例如求 $e^{iz}$ 的导数时会多出 $i$，求 $e^{-iz}$ 时会多出 $-i$，不能把内层系数漏掉。"
+        },
+        {
+          "id": "CH02-S05-SS05-C002",
+          "title": "正弦、余弦的周期和全部零点",
+          "statement_markdown": "$\\sin(z+2\\pi)=\\sin z$，$\\cos(z+2\\pi)=\\cos z$。对整数 $k$，\n$$\\sin z=0\\iff z=k\\pi,\\qquad\\cos z=0\\iff z=(k+\\tfrac12)\\pi.$$\n它们的零点均在实轴上。",
+          "source_start_line": 12,
+          "source_end_line": 20,
+          "source_quote": "复正弦函数及复余弦函数保留了实正弦函数及实余弦函数的一些重要性质：\n1) 它们都是以 $2\\pi$ 为周期的函数.\n事实上，由于 $\\mathbf{e}^2$ 是以 $2\\pi \\mathrm{i}$ 为周期的，故有\n$$\\begin{array}{r l} \\cos (z + 2 \\pi) & = \\frac {1}{2} \\left[ e ^ {i (z + 2 \\pi)} + e ^ {- i (z + 2 \\pi)} \\right] \\\\ & = \\frac {1}{2} \\left(e ^ {i z} + e ^ {- i z}\\right) = \\cos z, \\end{array}$$\n$$\\sin (z + 2 \\pi) = \\sin z.$$\n2)  $\\sin z = 0$  必须而且只需  $z = n\\pi, n = 0, \\pm 1, \\pm 2, \\cdots; \\cos z = 0$  必须而且只需  $z = \\left(n + \\frac{1}{2}\\right)\\pi, n = 0, \\pm 1, \\pm 2, \\cdots.$\n事实上，例如 $\\sin z = 0$ 等价于 $\\frac{\\mathrm{e}^{\\mathrm{i}z} - \\mathrm{e}^{-\\mathrm{i}z}}{2\\mathrm{i}} = 0$ ，即 $\\mathrm{e}^{2\\mathrm{i}z} = 1.$ 如令 $z = x + \\mathrm{i}y$ ，则有\n$$\\mathrm{e} ^ {- 2 y} (\\cos 2 x + \\mathrm{i} \\sin 2 x) = 1,$$\n比较等式两边的模及辐角即可求得  $x = n\\pi, y = 0$ . 也就是说,  $z = n\\pi, n = 0, \\pm 1, \\pm 2, \\cdots$ .",
+          "after": "零点仍只出现在熟悉的实轴位置。$\\sin z=0$ 等价于 $e^{2iz}=1$，比较模得到虚部必须为零，再比较方向得到 $z=k\\pi$；余弦的零点是 $z=(k+1/2)\\pi$。完整零点求解可展开[指数方程的解法](#reader-2a5458286ca26d98d6d9)。"
+        },
+        {
+          "id": "CH02-S05-SS05-C003",
+          "title": "正切、余切的定义、解析性和导数",
+          "statement_markdown": "$$\\tan z=\\frac{\\sin z}{\\cos z},\\qquad\\cot z=\\frac{\\cos z}{\\sin z}.$$\n$\\tan z$ 在 $z\\ne(k+\\tfrac12)\\pi$ 处解析，$\\cot z$ 在 $z\\ne k\\pi$ 处解析（$k\\in\\mathbb Z$）；二者周期均为 $\\pi$，并有\n$$(\\tan z)'=1/\\cos^2z,\\qquad(\\cot z)'=-1/\\sin^2z.$$",
+          "source_start_line": 21,
+          "source_end_line": 25,
+          "source_quote": "其他的三角函数，仿照实变数的情形定义，例如\n$$\\tan z = \\frac {\\sin z}{\\cos z}, \\quad \\cot z = \\frac {\\cos z}{\\sin z}.$$\n由导数的运算法则，复正切函数除了  $z = (n + 1/2)\\pi$  外，在全平面处处解析，而复杂切函数则是在除去  $z = n\\pi, n = 0, \\pm 1, \\pm 2, \\cdots$  以外的全平面上的解析函数，而且\n$$\\left(\\tan z\\right) ^ {\\prime} = \\frac {1}{\\cos^ {2} z}, \\quad \\left(\\cot z\\right) ^ {\\prime} = - \\frac {1}{\\sin^ {2} z}.$$\n$\\tan z$ 和 $\\cot z$ 都是以 $\\pi$ 为周期的函数.",
+          "after": "然后定义 $\\tan z=\\sin z/\\cos z$、$\\cot z=\\cos z/\\sin z$。它们的周期为 $\\pi$，但分母零点必须排除，分别在余弦零点和正弦零点不定义；其余地方解析。判断商函数的解析域，总要先查分母，而不是因为分子分母都是整函数就认定商也处处解析。"
+        },
+        {
+          "id": "CH02-S05-SS05-C004",
+          "title": "复三角恒等式",
+          "statement_markdown": "实三角函数的代数恒等式可推广到复变量；本节直接列出\n$$\\sin(-z)=-\\sin z,\\qquad\\cos^2z+\\sin^2z=1.$$\n这些是复数平方恒等式，不能把平方换为模平方。",
+          "source_start_line": 26,
+          "source_end_line": 29,
+          "source_quote": "在第7章中我们将统一地证明:所有实三角函数公式在复的情形仍成立.这里只从定义出发证明下面两个公式:\n$$\\sin (- z) = - \\sin z, \\quad \\cos^ {2} z + \\sin^ {2} z = 1.$$\n事实上，有\n$$\\begin{array}{r l} \\sin (- z) & = \\frac {1}{2 i} [ e ^ {i (z - z)} - e ^ {- i (z - z)} ] \\\\ & = - \\frac {1}{2 i} (e ^ {i z} - e ^ {- i z}) = - \\sin z. \\\\ \\cos^ {2} z + \\sin^ {2} z & = \\left(\\frac {e ^ {i z} + e ^ {- i z}}{2}\\right) ^ {2} + \\left(\\frac {e ^ {i z} - e ^ {- i z}}{2 i}\\right) ^ {2} \\\\ & = \\frac {e ^ {2 i z} + 2 + e ^ {- 2 i z}}{4} - \\frac {e ^ {2 i z} - 2 + e ^ {- 2 i z}}{4} = 1. \\end{array}$$",
+          "after": "然后定义 $\\tan z=\\sin z/\\cos z$、$\\cot z=\\cos z/\\sin z$。它们的周期为 $\\pi$，但分母零点必须排除，分别在余弦零点和正弦零点不定义；其余地方解析。判断商函数的解析域，总要先查分母，而不是因为分子分母都是整函数就认定商也处处解析。"
+        },
+        {
+          "id": "CH02-S05-SS05-C005",
+          "title": "复正弦、余弦无界",
+          "statement_markdown": "$|\\sin z|\\le1$ 与 $|\\cos z|\\le1$ 在整个复平面不成立；两者均无界。例如对实数 $y$，\n$$\\cos(iy)=\\frac{e^y+e^{-y}}2\\to+\\infty\\quad(y\\to+\\infty).$$",
+          "source_start_line": 30,
+          "source_end_line": 32,
+          "source_quote": "实变数三角函数与复变数三角函数有没有区别呢?有的.在复变数的情形,不等式 $|\\sin z|\\leqslant1,\\left|\\cos z\\right|\\leqslant1$ 已不再成立.而且 $|\\sin z|$ 及 $|\\cos z|$ 是无界的.例如,当y为实数时,由\n$$\\cos i y = \\frac {1}{2} \\left(e ^ {- y} + e ^ {y}\\right),$$\n显然有 $\\lim_{y\\to\\infty}\\cosiy=\\infty$ .",
+          "after": "然后定义 $\\tan z=\\sin z/\\cos z$、$\\cot z=\\cos z/\\sin z$。它们的周期为 $\\pi$，但分母零点必须排除，分别在余弦零点和正弦零点不定义；其余地方解析。判断商函数的解析域，总要先查分母，而不是因为分子分母都是整函数就认定商也处处解析。"
+        }
+      ]
+    },
+    "CH02-S05-SS06": {
+      "unit_id": "CH02-S05-SS06",
+      "source_path": "original_text/ch02_s05_ss06.md",
+      "conclusions": [
+        {
+          "id": "CH02-S05-SS06-C001",
+          "title": "四个双曲函数的定义",
+          "statement_markdown": "$$\\cosh z=\\frac{e^z+e^{-z}}2,\\quad\\sinh z=\\frac{e^z-e^{-z}}2,$$\n$$\\tanh z=\\frac{\\sinh z}{\\cosh z},\\qquad\\coth z=\\frac{\\cosh z}{\\sinh z},$$\n商函数仅在对应分母非零处定义。",
+          "source_start_line": 3,
+          "source_end_line": 4,
+          "source_quote": "复双曲函数亦如实双曲函数类似定义\n$$\\begin{array}{l l} \\cosh z = \\frac {\\mathrm{e} ^ {z} + \\mathrm{e} ^ {- z}}{2}, & \\sinh z = \\frac {\\mathrm{e} ^ {z} - \\mathrm{e} ^ {- z}}{2}, \\\\ \\tanh z = \\frac {\\sinh z}{\\cosh z}, & \\coth z = \\frac {\\cosh z}{\\sinh z}. \\end{array}$$",
+          "after": "上一节从 $e^{iz}$ 与 $e^{-iz}$ 定义三角函数。若改用 $e^z$ 与 $e^{-z}$ 的对称和、反对称差，就得到双曲函数：\n$$\\cosh z=\\frac{e^z+e^{-z}}2,\\qquad\n\\sinh z=\\frac{e^z-e^{-z}}2.$$\n两个名称分别读作双曲余弦、双曲正弦。它们不是另造一套无关规则，而是用同一个复指数组合出的两个函数。和式在 $z$ 改成 $-z$ 后不变，差式改变符号，所以前者为偶函数，后者为奇函数。"
+        },
+        {
+          "id": "CH02-S05-SS06-C002",
+          "title": "双曲函数与三角函数的关系",
+          "statement_markdown": "$$\\sinh z=-i\\sin(iz),\\quad\\cosh z=\\cos(iz),$$\n$$\\tanh z=-i\\tan(iz),\\quad\\coth z=i\\cot(iz).$$\n商式均在分母非零处成立。",
+          "source_start_line": 5,
+          "source_end_line": 6,
+          "source_quote": "双曲函数与三角函数有下列关系：\n$$\\begin{array}{l l} \\sinh z = - \\text { isiniz }, & \\cosh z = \\cos i z, \\\\ \\tanh z = - \\text { itaniz }, & \\coth z = \\text { icotiz }, \\end{array}$$",
+          "after": "现在比较两套定义。把三角函数的自变量改成 $iz$，得到 $\\cosh z=\\cos(iz)$、$\\sinh z=-i\\sin(iz)$。后一式的系数 $-i$ 很重要：$\\sin(iz)$ 的指数差除以的是 $2i$，双曲正弦的指数差除以的是 $2$。实变量时看起来分别描述周期振荡和增长，在复数范围内却能通过乘 $i$ 的方向转换联系起来。",
+          "source_note": "原文连写的isin、itan等规范化为i与函数乘积。"
+        },
+        {
+          "id": "CH02-S05-SS06-C003",
+          "title": "双曲函数的解析区域与导数",
+          "statement_markdown": "$\\sinh z$、$\\cosh z$ 均为整函数；$\\tanh z$ 除 $z=(k+\\tfrac12)\\pi i$ 外处处解析；$\\coth z$ 除 $z=k\\pi i$ 外处处解析，$k\\in\\mathbb Z$。在各自定义域中，\n$$(\\sinh z)'=\\cosh z,\\quad(\\cosh z)'=\\sinh z,$$\n$$(\\tanh z)'=1/\\cosh^2z,\\quad(\\coth z)'=-1/\\sinh^2z.$$",
+          "source_start_line": 7,
+          "source_end_line": 8,
+          "source_quote": "从这些等式可以看出，双曲正弦函数和双曲余弦函数都是全平面的解析函数，而双曲正切函数及双曲余切函数，则是分别除去 $z = n\\pi \\mathrm{i}$ 及 $z = (n + 1 / 2)\\pi \\mathrm{i}, n = 0, \\pm 1, \\pm 2, \\dots$ 的全平面上的解析函数，而且\n$$\\begin{array}{l l} (\\sinh z) ^ {\\prime} = \\cosh z, & (\\cosh z) ^ {\\prime} = \\sinh z; \\\\ (\\tanh z) ^ {\\prime} = \\frac {1}{\\cosh^ {2} z}, & (\\coth z) ^ {\\prime} = - \\frac {1}{\\sinh^ {2} z}. \\end{array}$$",
+          "after": "有了这套定义，不必单独死记每个导数。商法则和基本恒等式立即给出 $(\\tanh z)'=1/\\cosh^2z$、$(\\coth z)'=-1/\\sinh^2z$，使用范围仍是分母不为零的地方。学习时从指数定义、三角对应、零点与商这条链回推，能同时核对符号、周期和解析域。",
+          "source_note": "原文把tanh与coth须排除的两组零点顺序写反；依据第4行分母及第6行关系订正。"
+        },
+        {
+          "id": "CH02-S05-SS06-C004",
+          "title": "双曲函数的周期与恒等式",
+          "statement_markdown": "$\\sinh z$、$\\cosh z$ 以 $2\\pi i$ 为周期，$\\tanh z$、$\\coth z$ 以 $\\pi i$ 为周期。实双曲函数恒等式在复变量下仍成立，例如\n$$\\cosh^2z-\\sinh^2z=1,$$\n$$\\sinh(z_1\\pm z_2)=\\sinh z_1\\cosh z_2\\pm\\cosh z_1\\sinh z_2.$$",
+          "source_start_line": 9,
+          "source_end_line": 12,
+          "source_quote": "此外，复双曲函数也是周期函数，$\\sinh z$ 及 $\\cosh z$ 的周期为 $2\\pi i$，而 $\\tanh z$ 及 $\\coth z$ 的周期为 $\\pi i$。如同三角函数一样，实双曲函数的恒等式在复的情形仍然成立。例如\n$$\\cosh^ {2} z - \\sinh^ {2} z = 1,$$\n$$\\sinh \\left(z _ {1} \\pm z _ {2}\\right) = \\sinh z _ {1} \\cosh z _ {2} \\pm \\cosh z _ {1} \\sinh z _ {2},$$\n等等，这些公式请读者自己证明.",
+          "after": "有了这套定义，不必单独死记每个导数。商法则和基本恒等式立即给出 $(\\tanh z)'=1/\\cosh^2z$、$(\\coth z)'=-1/\\sinh^2z$，使用范围仍是分母不为零的地方。学习时从指数定义、三角对应、零点与商这条链回推，能同时核对符号、周期和解析域。"
+        }
+      ]
+    },
+    "CH02-S05-SS07": {
+      "unit_id": "CH02-S05-SS07",
+      "source_path": "original_text/ch02_s05_ss07.md",
+      "conclusions": [
+        {
+          "id": "CH02-S05-SS07-C001",
+          "title": "一般幂函数的定义",
+          "statement_markdown": "设 $\\alpha\\in\\mathbb C$、$z\\ne0$，定义\n$$z^\\alpha=\\exp(\\alpha\\operatorname{Ln}z)=\\exp\\{\\alpha[\\ln|z|+i(\\theta+2k\\pi)]\\},\\quad k\\in\\mathbb Z.$$\n这里 $\\theta$ 为 $z$ 的一个辐角。若 $\\alpha$ 为正实数，补充定义 $0^\\alpha=0$。",
+          "source_start_line": 3,
+          "source_end_line": 5,
+          "source_quote": "设 $\\alpha$ 是任意给定的复数，对于复变数 $z \\neq 0$ ，定义 $z$ 的 $\\alpha$ 次幂函数为\n$$\\begin{array}{r l} w = z ^ {a} & = \\exp (\\alpha \\mathrm{Ln} z) = \\exp \\{\\alpha [ \\ln | z | + i (\\arg z + 2 k \\pi) ] \\}, \\\\ k & = 0, \\pm 1, \\pm 2, \\dots \\end{array}\\tag{2.15}$$\n若 $\\alpha$ 为正实数，且当 $z = 0$ 时，补充规定 $z^{\\circ} = 0$。随 $\\alpha$ 的取值不同，$w = z^{\\circ}$ 可能是单值、有限多值或无限多值的函数。具体讨论如下：",
+          "after": "整数幂可以连乘，分数幂可以求根；若指数本身是无理数，甚至是复数，该怎样理解 $z^\\alpha$？教材用前面已经建立的指数与对数作统一定义：对 $z\\ne0$，\n$$z^\\alpha=\\exp(\\alpha\\operatorname{Ln}z)\n=\\exp\\{\\alpha[\\ln|z|+i\\theta+2k\\pi i]\\},\\quad k\\in\\mathbb Z.$$\n$\\alpha$ 是给定常数，$z$ 是自变量，$\\theta$ 是 $z$ 的一个辐角。要读懂结果有多少个值，只需追问：对数增加 $2\\pi i$ 后，外层指数是否把变化重新折回同一个数？",
+          "source_note": "原文α被识别为a或圆圈，按第2.15式统一为α。"
+        },
+        {
+          "id": "CH02-S05-SS07-C002",
+          "title": "整数指数与有理指数的值数",
+          "statement_markdown": "当 $\\alpha=n$ 为正整数时，$z^n=|z|^ne^{in\\theta}$ 与通常单值整数幂一致。对既约有理数 $\\alpha=m/n$（$n\\ge1$），非零 $z$ 的 $z^{m/n}$ 有恰好 $n$ 个不同值，且作为值集合，\n$$z^{m/n}=\\sqrt[n]{z^m}.$$\n特别地，$z^{1/n}$ 与 $n$ 次根式一致。",
+          "source_start_line": 6,
+          "source_end_line": 12,
+          "source_quote": "1) 当 $\\alpha$ 为正整数 $n$ 时，因为 $\\exp (\\mathrm{i}2kn\\pi) = 1$ ，所以由(2.15)式，得\n$$z ^ {n} = \\exp [ n (\\ln | z | + \\operatorname{iarg} z) ] = | z | ^ {n} \\exp (\\operatorname{iarg} z),$$\n与通常幂函数一致，是一个单值函数.\n2）当 $\\alpha = 1 / n$ （ $n$ 为正整数）时，由(2.15)式得\n$$z ^ {1 / n} = | z | ^ {1 / n} \\exp \\left(\\mathrm{i} \\frac {\\arg z + 2 k \\pi}{u}\\right), \\quad k = 0, 1, 2, \\dots , n - 1,$$\n与根式函数 $\\sqrt[3]{z}$ 一致，是一 $n$ 值函数. 类似地，当 $\\alpha$ 是有理数时，设 $\\alpha$ 为既约分数 $m / n, n \\geqslant 1$. $z^{*}$ 是 $n$ 值函数，且\n$$z ^ {m / n} = \\sqrt [ n ]{z ^ {m}}.$$",
+          "after": "把 $k=0$ 的值记作 $w_0$，其他值就是 $w_k=w_0e^{2k\\pi i\\alpha}$。这个因子把全部情况连在一起。若 $\\alpha=n$ 为整数，增加的角是整数圈，因子恒为 $1$，所以回到普通单值整数幂；负整数也一样，但零点要排除。若 $\\alpha=m/n$ 是既约有理数，因子在 $n$ 次变化后重复，得到恰好 $n$ 个不同值，和根式的结果一致。",
+          "source_note": "原文整数幂指数遗漏n，若干根号n误作3；依2.15式订正。"
+        },
+        {
+          "id": "CH02-S05-SS07-C003",
+          "title": "无理实指数与非实指数的多值性",
+          "statement_markdown": "当 $\\alpha$ 为无理实数或 $\\operatorname{Im}\\alpha\\ne0$ 时，非零 $z$ 的 $z^\\alpha$ 有无穷多个不同值。若以 $w_0=\\exp(\\alpha[\\ln|z|+i\\theta])$ 为一值，则\n$$w_k=w_0e^{2k\\pi i\\alpha}.$$\n例如\n$$i^i=e^{-\\pi/2-2k\\pi},\\qquad2^{1+i}=2e^{-2k\\pi}(\\cos\\ln2+i\\sin\\ln2),\\quad k\\in\\mathbb Z.$$",
+          "source_start_line": 13,
+          "source_end_line": 14,
+          "source_quote": "3）当 $\\alpha$ 是无理数或一般复数 $(\\mathrm{Im}\\alpha \\neq 0)$ 时，由(2.15)式可知，$z^n$ 是无穷多值的。例如\n$$\\begin{array}{l} \\mathrm{i} ^ {2} = \\exp (\\mathrm{iLni}) = \\exp \\left[ \\mathrm{i} ^ {2} \\left(\\frac {\\pi}{2} + 2 k \\pi\\right) \\right] \\\\ = \\exp \\left(- \\frac {\\pi}{2} - 2 k \\pi\\right), \\quad k = 0, \\pm 1, \\pm 2, \\dots , \\\\ 2 ^ {2 + i} = \\exp [ (1 + i) (\\ln 2 + i 2 k \\pi) ] \\\\ = \\exp [ \\ln 2 - 2 k \\pi + i (\\ln 2 + 2 k \\pi) ] \\\\ = 2 c ^ {- 2 k} (\\cos \\ln 2 + i \\sin \\ln 2), \\quad k = 0, \\pm 1, \\pm 2, \\dots . \\end{array}$$",
+          "after": "当 $\\alpha=a+ib$ 且 $b\\ne0$ 时，因子还能改变量值的模：$|e^{2k\\pi i\\alpha}|=e^{-2k\\pi b}$。所以这些值也不会重复，而且一般不再落在同一圆上。例如 $i^i$ 的所有值为 $e^{-\\pi/2-2k\\pi}$，每一个都是正实数。复数的复数次幂不必还是非实数，必须按定义算，不能凭名称猜。",
+          "source_note": "原文例子i^2、2^{2+i}与随后的指数展开不一致；可分别确认为i^i、2^{1+i}，以下写出定义可核验的值。"
+        },
+        {
+          "id": "CH02-S05-SS07-C004",
+          "title": "指数记号与一般幂记号的约定",
+          "statement_markdown": "在复变函数中，$e^z$ 约定表示单值指数函数。若把底数 $e$ 按一般幂的定义计算，则 $\\operatorname{Ln}e=1+2k\\pi i$，可能得到多个值。例如单值指数在 $1+i$ 处为 $e(\\cos1+i\\sin1)$；一般幂定义的 $e^{1+i}$ 全部值为 $e^{1-2k\\pi}(\\cos1+i\\sin1)$。使用记号时须区分这两个含义。",
+          "source_start_line": 15,
+          "source_end_line": 19,
+          "source_quote": "例10 说明 $\\mathrm{e}^{1 + i}$ 分别作为 $f(z) = \\mathrm{e}^{\\mathrm{t}}$ 在 $z = 1 + \\mathrm{i}$ 的值和 $g(z) = z^{1 + i}$ 在 $z = \\mathrm{e}$ 的值是不同的.\n解 依定义\n$$\\begin{array}{l} f (1 + \\mathrm{i}) = \\mathrm{e} (\\cos 1 + \\mathrm{i} \\sin 1), \\\\ g (\\mathrm{e}) = \\exp [ (1 + \\mathrm{i}) \\mathrm{Lne} ] = \\exp [ (1 + \\mathrm{i}) (1 + 2 k \\pi \\mathrm{i}) ] \\\\ = \\mathrm{e} ^ {1 - 2 k \\pi} (\\cos 1 + \\mathrm{i} \\sin 1), \\quad k = 0, \\pm 1, \\pm 2, \\dots . \\end{array}$$\n故两者不同.\n由于本例所出现的情况，为不致引起混淆，在复变函数里约定 $e^2$ 是指数函数.",
+          "after": "教材最后提醒，记号 $e^z$ 在复变函数中约定指已经定义好的单值指数函数。若把底数 $e$ 当作一般幂的底数，再让 $\\operatorname{Ln}e=1+2k\\pi i$ 跑遍所有值，得到的是另一组对象；相同的外观记号不能抹去定义上的不同。"
+        }
+      ]
+    },
+    "CH02-S05-SS08": {
+      "unit_id": "CH02-S05-SS08",
+      "source_path": "original_text/ch02_s05_ss08.md",
+      "conclusions": [
+        {
+          "id": "CH02-S05-SS08-C001",
+          "title": "反三角函数的定义",
+          "statement_markdown": "若 $z=\\sin w$，称 $w$ 为 $z$ 的反正弦值，记作 $\\operatorname{Arcsin}z$；若 $z=\\cos w$，称 $w$ 为反余弦值，记作 $\\operatorname{Arccos}z$；其他反三角函数同样按原函数方程反解定义。",
+          "source_start_line": 3,
+          "source_end_line": 3,
+          "source_quote": "三角函数 $\\sin z$ 及 $\\cos z$ 的反函数的定义如常. 如果 $z = \\sin w$, 则 $w$ 称为 $z$ 的反正弦函数, 记作 $w = \\operatorname{Arcsin} z$; 如果 $z = \\cos w$, 则 $w$ 称为 $z$ 的反余弦函数, 记作 $w = \\operatorname{Arccos} z$, 其他的反三角函数类似定义.",
+          "after": "前面定义三角函数时，从复指数出发得到一个单值输出。现在反过来，给定 $z$，求满足 $\\sin w=z$ 的所有 $w$，称为 $\\operatorname{Arcsin}z$。因为正弦具有周期，同一个输出本就来自多个输入；反函数不再能只凭一个熟悉的实数区间来确定。我们将用已经学过的根式和对数，把这种多值性明确写出来。"
+        },
+        {
+          "id": "CH02-S05-SS08-C002",
+          "title": "反正弦的对数表达式",
+          "statement_markdown": "$$\\operatorname{Arcsin}z=-i\\operatorname{Ln}\\!\\left(iz+\\sqrt{1-z^2}\\right).$$\n根式取两个值，对数取全部值；无需再在根号前重复添加 $\\pm$。由根式与对数的多值性，反正弦是无穷多值函数。",
+          "source_start_line": 4,
+          "source_end_line": 12,
+          "source_quote": "如果 $z = \\sin w$ ，则由\n$$z = \\frac {\\mathrm{e} ^ {\\mathrm{i} w} - \\mathrm{e} ^ {- \\mathrm{i} w}}{2 \\mathrm{i}},$$\n$$\\mathrm{e} ^ {\\mathrm{i} w} - 2 \\mathrm{i} z - \\mathrm{e} ^ {- \\mathrm{i} w} = 0$$\n$$\\mathrm{e} ^ {2 i w} - 2 \\mathrm{i} z e ^ {\\mathrm{i} w} - 1 = 0.$$\n把后面这个方程当作 $c^{jw}$ 的二次方程，解之得\n$$\\mathrm{e} ^ {\\mathrm{i} w} = \\mathrm{i} z + \\sqrt {- z ^ {2} + 1}$$\n$$\\mathrm{i} w = \\mathrm{Ln} (\\mathrm{i} z + \\sqrt {1 - z ^ {2}}),$$\n$$w = \\operatorname{Arcsin} z = - \\mathrm{iLn} (\\mathrm{i} z + \\sqrt {1 - z ^ {2}}).$$\n这里，根式理解为双值函数，所以就不必像平常解二次方程时，在根号前添加 $\\pm$ 号.由于平方根和对数函数的多值性，Arcsinz是无穷多值函数.",
+          "after": "看教材的反正弦推导思路：先写 $\\sin w=(e^{iw}-e^{-iw})/(2i)$，再设 $X=e^{iw}$。由于指数永远不为零，可以乘以 $X$，把原式变为普通二次方程\n$$X^2-2izX-1=0.$$\n这一步是重要的连接：一个三角反解问题先变成代数开方，再把 $X$ 反解成 $w$，才需要对数。结果是\n$$\\operatorname{Arcsin}z=-i\\operatorname{Ln}\\left(iz+\\sqrt{1-z^2}\\right).$$\n这里根号表示两个根，外层对数又有无穷多个值。若根号已经按多值解释，就不必再多加一个重复的 $\\pm$；如果明确选一个平方根分支，则另一个符号才代表另一选择。完整换元和回代可展开[反正弦的对数表达式](#reader-d8f596fa0744f2e70c61)。"
+        },
+        {
+          "id": "CH02-S05-SS08-C003",
+          "title": "其他反三角函数的对数表达式",
+          "statement_markdown": "$$\\operatorname{Arccos}z=-i\\operatorname{Ln}\\!\\left(z+\\sqrt{z^2-1}\\right),$$\n$$\\operatorname{Arctan}z=-\\frac i2\\operatorname{Ln}\\frac{1+iz}{1-iz},\\qquad\\operatorname{Arccot}z=\\frac i2\\operatorname{Ln}\\frac{z-i}{z+i}.$$\n根式、对数均按全部值理解；反正切与反余切的有限值要求 $z\\ne\\pm i$。若需单值解析函数，还必须选定相容的分支及定义区域。",
+          "source_start_line": 13,
+          "source_end_line": 15,
+          "source_quote": "其余反函数及反双曲函数可仿照上例讨论，不再赘述，兹集录其表达式如下：\n$$\\begin{array}{r l} & {\\mathrm{Arccosz} = - \\mathrm{iLn} (z + \\sqrt {z ^ {2} - 1}),} \\\\ & {\\mathrm{Arctanz} = - \\frac {\\mathrm{i}}{2} \\mathrm{Ln} \\frac {1 + \\mathrm{i} z}{1 - \\mathrm{i} z},} \\\\ & {\\mathrm{Arccotz} = \\frac {\\mathrm{i}}{2} \\mathrm{Ln} \\frac {z - \\mathrm{i}}{z + \\mathrm{i}},} \\\\ & {\\mathrm{Arsinhz} = \\mathrm{Ln} (z + \\sqrt {z ^ {2} + 1}),} \\\\ & {\\mathrm{Arcoshz} = \\mathrm{Ln} (z + \\sqrt {z ^ {2} - 1}),} \\\\ & {\\mathrm{Artanhz} = \\frac {1}{2} \\mathrm{Ln} \\frac {1 + z}{1 - z},} \\\\ & {\\mathrm{Arcothz} = \\frac {1}{2} \\mathrm{Ln} \\frac {z + 1}{z - 1}.} \\end{array}$$\n其中后面四个不等式是反双曲函数的表达式. 对于这些函数也可用前面类似的方法讨论它们的支点, 但是讨论起来很复杂, 这里就从略了.",
+          "after": "反正切的式子更能显出对数的作用：\n$$\\operatorname{Arctan}z=\\frac{1}{2i}\\operatorname{Ln}\\frac{1+iz}{1-iz}.$$\n$z=\\pm i$ 使比值出现零或分母为零，不能由这个式子得到有限值。下面只画选定的一支反正切，在被排除的点附近观察像网格；它并不表示全部反正切值都已经放进同一张图中。"
+        },
+        {
+          "id": "CH02-S05-SS08-C004",
+          "title": "反双曲函数的对数表达式",
+          "statement_markdown": "$$\\operatorname{Arsinh}z=\\operatorname{Ln}(z+\\sqrt{z^2+1}),$$\n$$\\operatorname{Arcosh}z=\\operatorname{Ln}(z+\\sqrt{z^2-1}),$$\n$$\\operatorname{Artanh}z=\\tfrac12\\operatorname{Ln}\\frac{1+z}{1-z},\\qquad\\operatorname{Arcoth}z=\\tfrac12\\operatorname{Ln}\\frac{z+1}{z-1}.$$\n根式与对数按全部值理解；后两式要求 $z\\ne\\pm1$。解析分支须在适当区域中连续、相容地选择。",
+          "source_start_line": 13,
+          "source_end_line": 15,
+          "source_quote": "其余反函数及反双曲函数可仿照上例讨论，不再赘述，兹集录其表达式如下：\n$$\\begin{array}{r l} & {\\mathrm{Arccosz} = - \\mathrm{iLn} (z + \\sqrt {z ^ {2} - 1}),} \\\\ & {\\mathrm{Arctanz} = - \\frac {\\mathrm{i}}{2} \\mathrm{Ln} \\frac {1 + \\mathrm{i} z}{1 - \\mathrm{i} z},} \\\\ & {\\mathrm{Arccotz} = \\frac {\\mathrm{i}}{2} \\mathrm{Ln} \\frac {z - \\mathrm{i}}{z + \\mathrm{i}},} \\\\ & {\\mathrm{Arsinhz} = \\mathrm{Ln} (z + \\sqrt {z ^ {2} + 1}),} \\\\ & {\\mathrm{Arcoshz} = \\mathrm{Ln} (z + \\sqrt {z ^ {2} - 1}),} \\\\ & {\\mathrm{Artanhz} = \\frac {1}{2} \\mathrm{Ln} \\frac {1 + z}{1 - z},} \\\\ & {\\mathrm{Arcothz} = \\frac {1}{2} \\mathrm{Ln} \\frac {z + 1}{z - 1}.} \\end{array}$$\n其中后面四个不等式是反双曲函数的表达式. 对于这些函数也可用前面类似的方法讨论它们的支点, 但是讨论起来很复杂, 这里就从略了.",
+          "after": "教材还列出反双曲函数，例如 $\\operatorname{Arsinh}z=\\operatorname{Ln}(z+\\sqrt{z^2+1})$，以及 $\\operatorname{Artanh}z=\\tfrac12\\operatorname{Ln}((1+z)/(1-z))$。它们同样是“先反解指数，再取对数”的结果。复杂的支点分类本节不展开，但所需方法已经出现：找根式内部的零点，找对数内部的零或极点，再追踪绕行是否换值。"
+        }
+      ],
+      "supplementary_conclusions": [
+        {
+          "id": "CH02-S05-SS08-C005",
+          "title": "非恒定多项式在无穷远的极限",
+          "statement_markdown": "若 $p_n$ 为次数 $n\\ge1$ 的复系数多项式（最高次系数非零），则\n$$\\lim_{z\\to\\infty}p_n(z)=\\infty.$$",
+          "source_start_line": 22,
+          "source_end_line": 22,
+          "source_quote": "3. 设 $p_n(z)$ 是 $n(\\geqslant 1)$ 次多项式，证明：当 $z \\to \\infty$ 时，$p_n(z) \\to \\infty$",
+          "after": "到这里，初等函数的学习串成一条完整路线：复指数提供基本解析函数，根式和对数解释反解的多值性，分支让选择在区域内连贯起来，其他函数再由这些材料组合。后面研究积分时，我们会始终针对定义清楚的单值函数或已选定的一支来讨论。"
+        },
+        {
+          "id": "CH02-S05-SS08-C006",
+          "title": "简单零点分母下的商极限",
+          "statement_markdown": "若 $f,g$ 在 $z_0$ 解析，且 $f(z_0)=g(z_0)=0$、$g'(z_0)\\ne0$，则\n$$\\lim_{z\\to z_0}\\frac{f(z)}{g(z)}=\\frac{f'(z_0)}{g'(z_0)}.$$",
+          "source_start_line": 30,
+          "source_end_line": 33,
+          "source_quote": "7. 若 $f(z)$ 及 $g(z)$ 在 $z_0$ 解析，且\n$$f (z _ {0}) = g (z _ {0}) = 0, \\quad g ^ {\\prime} (z _ {0}) \\neq 0.$$\n试证\n$$\\lim _ {z \\rightarrow z _ {0}} \\frac {f (z)}{g (z)} = \\frac {f ^ {\\prime} (z _ {0})}{g ^ {\\prime} (z _ {0})}.$$",
+          "after": "到这里，初等函数的学习串成一条完整路线：复指数提供基本解析函数，根式和对数解释反解的多值性，分支让选择在区域内连贯起来，其他函数再由这些材料组合。后面研究积分时，我们会始终针对定义清楚的单值函数或已选定的一支来讨论。"
+        },
+        {
+          "id": "CH02-S05-SS08-C007",
+          "title": "解析函数为常数的六种充分条件",
+          "statement_markdown": "设 $f$ 在区域 $D$ 内解析。若在 $D$ 中满足下列任一条件，则 $f$ 为常数：$f'\\equiv0$；$\\overline{f}$ 也解析；$\\operatorname{Re}f$ 为常数；$\\operatorname{Im}f$ 为常数；$|f|$ 为常数；或在 $f\\ne0$ 的意义下 $\\arg f$ 为常数。",
+          "source_start_line": 34,
+          "source_end_line": 37,
+          "source_quote": "8. 证明区域 $D$ 内满足下列条件之一的解析函数必为常数：\n(1) $f'(z)=0$ ; (2) $\\overline{f(z)}$  解析; (3) $\\mathrm{Ref}(z)=\\text{常数}$ ;\n(4)  $\\mathrm{Im}f(z)=\\text{常数};\\quad(5)\\left|f(z)\\right|=$  常数；\n(6) $\\arg f(z) =$ 常数.",
+          "after": "到这里，初等函数的学习串成一条完整路线：复指数提供基本解析函数，根式和对数解释反解的多值性，分支让选择在区域内连贯起来，其他函数再由这些材料组合。后面研究积分时，我们会始终针对定义清楚的单值函数或已选定的一支来讨论。"
+        },
+        {
+          "id": "CH02-S05-SS08-C008",
+          "title": "解析坐标变换下的拉普拉斯算子",
+          "statement_markdown": "设 $\\zeta=f(z)=\\xi(x,y)+i\\eta(x,y)$ 为区域 $D$ 内的单叶函数，$H(x,y)=h(\\xi(x,y),\\eta(x,y))$，并有所需的二阶连续偏导数，则\n$$H_{xx}+H_{yy}=|f'(z)|^2(h_{\\xi\\xi}+h_{\\eta\\eta}).$$",
+          "source_start_line": 38,
+          "source_end_line": 39,
+          "source_quote": "9. 设 $H(x, y)$ 在 $z$ 平面的区域 $D$ 内有直到二阶连续的偏导数，$\\zeta = f(z) = \\xi(x, y) + \\mathrm{i}\\eta(x, y)$ 是 $D$ 内的单叶函数。求证\n$$\\frac {\\partial^ {2} H}{\\partial x ^ {2}} + \\frac {\\partial^ {2} H}{\\partial y ^ {2}} = | f ^ {\\prime} (z) | ^ {2} \\left(\\frac {\\partial^ {2} H}{\\partial \\xi^ {2}} + \\frac {\\partial^ {2} H}{\\partial \\eta^ {2}}\\right).$$",
+          "after": "到这里，初等函数的学习串成一条完整路线：复指数提供基本解析函数，根式和对数解释反解的多值性，分支让选择在区域内连贯起来，其他函数再由这些材料组合。后面研究积分时，我们会始终针对定义清楚的单值函数或已选定的一支来讨论。",
+          "source_note": "原题H同时被用作两组坐标下的函数；用H(x,y)=h(ξ,η)明确复合关系。单叶按本章定义含解析性。"
+        },
+        {
+          "id": "CH02-S05-SS08-C009",
+          "title": "极坐标下的 C-R 方程",
+          "statement_markdown": "在 $z=re^{i\\theta}$、$r>0$ 的局部连续极角坐标中，C-R 方程写为\n$$u_r=\\frac1r v_\\theta,\\qquad\\frac1r u_\\theta=-v_r.$$\n仍须结合实可微性条件使用。$z^n$ 与选定分支 $\\ln z=\\ln r+i\\theta$ 满足这些方程。",
+          "source_start_line": 40,
+          "source_end_line": 42,
+          "source_quote": "10. 证明在极坐标下，C-R 方程变为\n$$\\frac {\\partial u}{\\partial r} = \\frac {1}{r} \\frac {\\partial v}{\\partial \\theta}, \\quad \\frac {1}{r} \\frac {\\partial u}{\\partial \\theta} = - \\frac {\\partial v}{\\partial r}.$$\n并验证函数 $f(z) = z^n$ 及 $\\ln z = \\ln r + \\mathrm{i}\\theta, z = r\\mathrm{e}^{\\mathrm{i}\\theta}, -\\pi < \\theta \\leqslant \\pi$，满足C-R方程.",
+          "after": "到这里，初等函数的学习串成一条完整路线：复指数提供基本解析函数，根式和对数解释反解的多值性，分支让选择在区域内连贯起来，其他函数再由这些材料组合。后面研究积分时，我们会始终针对定义清楚的单值函数或已选定的一支来讨论。"
+        },
+        {
+          "id": "CH02-S05-SS08-C010",
+          "title": "复余弦加法公式",
+          "statement_markdown": "对任意复数 $z_1,z_2$，\n$$\\cos(z_1+z_2)=\\cos z_1\\cos z_2-\\sin z_1\\sin z_2.$$\n双曲正弦的和差公式、反余弦对数表达式也在此作为通用恒等式重申。",
+          "source_start_line": 58,
+          "source_end_line": 61,
+          "source_quote": "20. 证明下列恒等式：\n(1) $\\cos (z_{1} + z_{2}) = \\cos z_{1}\\cos z_{2} - \\sin z_{1}\\sin z_{2};$\n(2) $\\sinh (z_1\\pm z_2) = \\sinh z_1\\cosh z_2\\pm \\cosh z_1\\sinh z_2;$\n(3) $\\operatorname{Arccos} z = -\\mathrm{iLn}(z + \\sqrt{z^2 - 1})$.",
+          "after": "到这里，初等函数的学习串成一条完整路线：复指数提供基本解析函数，根式和对数解释反解的多值性，分支让选择在区域内连贯起来，其他函数再由这些材料组合。后面研究积分时，我们会始终针对定义清楚的单值函数或已选定的一支来讨论。"
+        }
+      ]
+    },
+    "CH03": {
+      "unit_id": "CH03",
+      "source_path": "original_text/ch03.md",
+      "conclusions": []
+    },
+    "CH03-S01": {
+      "unit_id": "CH03-S01",
+      "source_path": "original_text/ch03_s01.md",
+      "conclusions": [
+        {
+          "id": "CH03-S01-C001",
+          "title": "复曲线积分的定义",
+          "statement_markdown": "设 $C$ 为从 $z_0$ 到 $Z$ 的有向逐段光滑曲线，$f$ 在 $C$ 上单值连续。按路径顺序分割，记 $\\Delta z_k=z_k-z_{k-1}$，在各小段取 $\\zeta_k$。当分割足够细时，若极限与分法及采样点无关，则定义\n$$\\int_C f(z)\\,dz=\\lim\\sum_{k=1}^n f(\\zeta_k)\\Delta z_k.$$\n本章所称曲线均约定为光滑或逐段光滑曲线。",
+          "source_start_line": 3,
+          "source_end_line": 10,
+          "source_quote": "定义1 设 $C$ 是平面上的一条逐段光滑的曲线，其起点是 $z_0$ ，终点是 $Z, w = f(z)$ 是定义在曲线 $C$ 上的一个单值连续函数，任意用一系列分点\n$$z _ {k} = x _ {k} + \\mathrm{i} y _ {k}, \\quad k = 0, 1, 2, \\dots , n,$$\n图3.1\n把曲线 C 分成许多小段(图 3.1)，在每一小段  $\\overline{z_{k-1}z_k}$  中任取一点  $\\zeta_k$ ，作和\n$$\\sum_ {k = 1} ^ {n} f \\left(\\zeta_ {k}\\right) \\Delta z _ {k}, \\quad \\Delta z _ {k} = z _ {k} - z _ {k - 1}.$$\n命 $\\lambda = \\max_k |\\Delta z_k|$，如果当 $\\lambda \\to 0$ 时，上述和式的极限存在，而且其值与弧段的分法和各个 $\\zeta_k$ 的选取无关，就称这个极限为 $f(z)$ 沿曲线 $C$ 自 $z_0$ 到 $Z$ 的积分.记作\n$$\\int_ {c} f (z) \\mathrm{d} z.$$\n为了叙述的方便,约定以后提到的曲线(包括简单曲线)都是光滑或逐段光滑的.",
+          "after": "把路径分成小段，第 $k$ 段的端点位移是 $\\Delta z_k=z_k-z_{k-1}$，段内选一个采样点 $\\zeta_k$。累加\n$$\\sum_{k=1}^n f(\\zeta_k)\\Delta z_k$$\n并让分段足够细，若极限不依赖分法和采样选择，就记作 $\\int_C f(z)\\,dz$。每个乘积都是复数，小段的方向也进入结果；最终积分仍为一个复数。不要把 $dz$ 换成非负长度后还期待得到同一个积分。",
+          "source_note": "原文以最大弦长作为分割尺度；这里规范表述为沿路径的分割足够细，避免闭合或回转弧段弦长为零造成歧义。"
+        },
+        {
+          "id": "CH03-S01-C002",
+          "title": "连续函数复积分的存在与实线积分表示",
+          "statement_markdown": "若 $f=u+iv$ 在逐段光滑曲线 $C$ 上连续，则 $\\int_C f(z)\\,dz$ 存在，而且\n$$\\int_C f(z)\\,dz=\\int_C(u\\,dx-v\\,dy)+i\\int_C(v\\,dx+u\\,dy).$$\n可形式地记为 $\\int_C(u+iv)(dx+i\\,dy)$。",
+          "source_start_line": 11,
+          "source_end_line": 19,
+          "source_quote": "定理1 设 $f(z) = u(x, y) + \\mathrm{i}v(x, y)$ 在曲线 $C$ 上连续，则复积分 $\\int_{C} f(z) \\, \\mathrm{d}z$ 存在，而且可以表示为两个线积分的和，即\n$$\\int_ {C} f (z) \\mathrm{d} z = \\int_ {C} u (x, y) \\mathrm{d} x - v (x, y) \\mathrm{d} y + \\mathrm{i} \\int_ {C} v (x, y) \\mathrm{d} x + u (x, y) \\mathrm{d} y\\tag{3.1}$$\n证 设 $z_{k} = x_{k} + \\mathrm{i}y_{k},\\Delta z_{k} = \\Delta x_{k} + \\mathrm{i}\\Delta y_{k},\\zeta_{k} = \\xi_{k} + \\mathrm{i}\\eta_{k}$ ，则\n$$\\begin{array}{r l} \\sum_ {k = 1} ^ {n} f (\\zeta_ {k}) \\Delta z _ {k} & = \\sum_ {k = 1} ^ {n} \\left[ u (\\xi_ {k}, \\eta_ {k}) + i v (\\xi_ {k}, \\eta_ {k}) \\right] (\\Delta x _ {k} + i \\Delta y _ {k}) \\\\ & = \\sum_ {k = 1} ^ {n} \\left[ u (\\xi_ {k}, \\eta_ {k}) \\Delta x _ {k} - v (\\xi_ {k}, \\eta_ {k}) \\Delta y _ {k} \\right] \\\\ & + i \\sum_ {k = 1} ^ {n} \\left[ v (\\xi_ {k}, \\eta_ {k}) \\Delta x _ {k} + u (\\xi_ {k}, \\eta_ {k}) \\Delta y _ {k} \\right], \\end{array}$$\n令 $\\lambda \\rightarrow 0$ ，由数学分析中关于第二型曲线积分的结果，上式右端有极限\n$$\\int_ {C} u (x, y) \\mathrm{d} x - v (x, y) \\mathrm{d} y + \\mathrm{i} \\int_ {C} v (x, y) \\mathrm{d} x + u (x, y) \\mathrm{d} y$$\n这就证得 $f(z)$ 沿曲线 $C$ 的积分存在，且(3.1)式成立.\n(3.1) 式提供了计算复积分的方法,为了记忆上的方便,可把它形式地写成\n$$\\int_ {C} f (z) \\mathrm{d} y = \\int_ {C} (u + \\mathrm{i} v) (\\mathrm{d} x + \\mathrm{i} \\mathrm{d} y).$$",
+          "after": "若 $f=u+iv$、$dz=dx+i\\,dy$，相乘得到实部 $u\\,dx-v\\,dy$，虚部 $v\\,dx+u\\,dy$。因此复积分可以拆成两个实线积分。这说明为什么连续性足以保证它存在，也说明它实际累加哪些量；不熟悉线积分时，可以直接走下面的参数化路线。",
+          "source_note": "第19行左端微分dy为dz的录入误差，依定理公式规范化。"
+        },
+        {
+          "id": "CH03-S01-C003",
+          "title": "复积分的参数化公式",
+          "statement_markdown": "设有向光滑曲线由 $z=z(t)$、$a\\le t\\le b$ 描述，参数增加方向与积分方向一致，且 $f$ 在曲线上连续，则\n$$\\int_Cf(z)\\,dz=\\int_a^b f(z(t))z'(t)\\,dt.$$\n逐段光滑曲线按各段计算后相加。",
+          "source_start_line": 20,
+          "source_end_line": 23,
+          "source_quote": "利用公式(3.1)，还可以把复积分化成普通的定积分. 设 C 是简单光滑曲线； $x = x(t)$ ， $y = y(t)$ ， $a \\leqslant t \\leqslant b$ ，且 a 及 b 分别对应于起点  $z_{0}$  及终点 Z. 把 C 的方程写成复形式\n$$z = z (t) = x (t) + \\mathrm{i} y (t).$$\n且 $z^{\\prime}(t)\\cdot = x^{\\prime}(t) + \\mathrm{i}y^{\\prime}(t)$. 于是由(3.1)式便有\n$$\\begin{array}{r l} \\int_ {c} f (z) \\mathrm{d} z & = \\int_ {c} u \\mathrm{d} x - v \\mathrm{d} y + i \\int_ {c} v \\mathrm{d} x + u \\mathrm{d} y \\\\ & = \\int_ {a} ^ {b} [ u x ^ {\\prime} (t) - v y ^ {\\prime} (t) ] \\mathrm{d} t + i \\int_ {a} ^ {b} [ v x ^ {\\prime} (t) + u y ^ {\\prime} (t) ] \\mathrm{d} t \\\\ & = \\int_ {a} ^ {b} (u + i v) [ x ^ {\\prime} (t) + i y ^ {\\prime} (t) ] \\mathrm{d} t \\\\ & = \\int_ {a} ^ {b} f (z (t)) z ^ {\\prime} (t) \\mathrm{d} t. \\end{array}\\tag{3.2}$$",
+          "after": "让一个实参数 $t$ 从 $a$ 增加到 $b$，点 $z(t)$ 沿指定方向走完 $C$。小位移由 $dz=z'(t)dt$ 表示，于是\n$$\\int_C f(z)\\,dz=\\int_a^b f(z(t))z'(t)\\,dt.$$\n这里必须同时替换函数的输入和微分元。下面的动画先追踪动点，再把切向与这两处替换连起来；注意 $z'(t)$ 的箭头与只有长度的弧长元有何不同。"
+        },
+        {
+          "id": "CH03-S01-C004",
+          "title": "绕圆周的整数幂核积分",
+          "statement_markdown": "设 $C$ 为以 $a$ 为圆心、半径 $R>0$ 的圆周，取逆时针方向。对任意整数 $n$，\n$$\\oint_C\\frac{dz}{(z-a)^n}=\\begin{cases}2\\pi i,&n=1,\\\\0,&n\\ne1.\\end{cases}$$",
+          "source_start_line": 33,
+          "source_end_line": 37,
+          "source_quote": "例2 设 $n$ 是整数, $C$ 是以 $a$ 点为中心 $R$ 为半径的圆周, 试按逆时针方向计算积分\n$$\\int_ {C} \\frac {\\mathrm{d} z}{(z - a) ^ {n}}.$$\n解 $C$ 的参数方程是 $z = a + R\\mathrm{e}^{\\mathrm{i}\\theta}, 0 \\leqslant \\theta < 2\\pi.$ 且 $z'(\\theta) = \\mathrm{i}R\\mathrm{e}^{\\mathrm{i}\\theta}$，于是由(3.2)式得\n$$\\begin{array}{r l} {\\int_ {c} \\frac {\\mathrm{d} z}{(z - a) ^ {n}} = \\frac {\\mathrm{i}}{R ^ {n - 1}} \\int_ {0} ^ {2 n} \\mathrm{e} ^ {i (1 - n) \\theta} \\mathrm{d} \\theta} \\\\ & {= \\frac {\\mathrm{i}}{R ^ {n - 1}} \\int_ {0} ^ {2 n} \\cos (n - 1) \\theta \\mathrm{d} \\theta + \\frac {1}{R ^ {n - 1}} \\int_ {0} ^ {2 n} \\sin (n - 1) \\theta \\mathrm{d} \\theta} \\\\ & {= \\left\\{ \\begin{array}{l l} {2 \\pi \\mathrm{i},} & {\\text {如果} n = 1} \\\\ {0,} & {\\text {如果} n \\neq 1.} \\end{array} \\right.} \\end{array}$$\n这个结果以后常要用，请读者记住.",
+          "after": "教材随后算出一组会反复出现的结果：逆时针绕 $a$ 的圆周，有 $\\int_C dz/(z-a)=2\\pi i$；换成整数幂 $(z-a)^{-n}$，$n\\ne1$ 时积分为零。结论来自代入圆周参数，并不要求把圆内的 $a$ 也放进函数定义域。完整演算与直线路径的例题可在下方展开。",
+          "source_note": "原文积分上限2n应为2π，最终分段结论完整可读。"
+        },
+        {
+          "id": "CH03-S01-C005",
+          "title": "复积分的线性、反向与分段可加性",
+          "statement_markdown": "在相关积分存在时，对复常数 $k$，\n$$\\int_Ckf\\,dz=k\\int_Cf\\,dz,\\quad\\int_C(f\\pm g)\\,dz=\\int_Cf\\,dz\\pm\\int_Cg\\,dz.$$\n若 $C^-$ 是同一路径的反方向，则 $\\int_{C^-}f\\,dz=-\\int_Cf\\,dz$。若 $C=C_1+C_2$ 按方向首尾连接，则\n$$\\int_Cf\\,dz=\\int_{C_1}f\\,dz+\\int_{C_2}f\\,dz.$$",
+          "source_start_line": 38,
+          "source_end_line": 44,
+          "source_quote": "由于复积分实际是两个曲线积分的和.因此，曲线积分的一些基本性质对复积分也成立.例如，我们有：\n1) 如果 $k$ 是复常数，则\n$$\\begin{array}{c} \\int_ {c} k f (z) \\mathrm{d} z = k \\int_ {c} f (z) \\mathrm{d} z; \\\\ \\int_ {c} [ f (z) \\pm g (z) ] \\mathrm{d} z = \\int_ {c} f (z) \\mathrm{d} z \\pm \\int_ {c} g (z) \\mathrm{d} z; \\end{array}$$\n3) $\\int_{C} f(z) \\mathrm{d}z = -\\int_{C^+} f(z) \\mathrm{d}z;$\n这里， $C^{-}$ 表示与 C 相同但方向相反的曲线。\n4) 如果曲线 $C$ 由 $C_1$ 和 $C_2$ 组成，则\n$$\\int_ {C} f (z) \\mathrm{d} z = \\int_ {\\mathrm{c} _ {1}} f (z) \\mathrm{d} z + \\int_ {\\mathrm{c} _ {2}} f (z) \\mathrm{d} z;$$",
+          "after": "积分还有线性、分段可加和反向变号的性质。反向时曲线上的几何点没变，$dz$ 的方向反了，所以值改变符号。估计大小则使用实数弧长：\n$$\\left|\\int_C f(z)\\,dz\\right|\\le\\int_C|f(z)|\\,ds\\le ML,$$\n其中 $M$ 是整条路径上的统一模上界，$L$ 是路径长度。这是长大不等式，也叫 ML 估计，它给上界而不是一般的等号。",
+          "source_note": "原文第41行反向曲线符号C+与第42行C-不一致，统一用C^-。"
+        },
+        {
+          "id": "CH03-S01-C006",
+          "title": "复积分的模估计与长大不等式",
+          "statement_markdown": "若 $f$ 在逐段光滑曲线 $C$ 上连续，则\n$$\\left|\\int_C f(z)\\,dz\\right|\\le\\int_C|f(z)|\\,ds=\\int_C|f(z)|\\,|dz|.$$\n若全曲线满足 $|f(z)|\\le M$，且 $C$ 长为 $L$，则\n$$\\left|\\int_Cf(z)\\,dz\\right|\\le ML.$$\n后式称长大不等式（ML估计）。",
+          "source_start_line": 45,
+          "source_end_line": 54,
+          "source_quote": "5)\n$$\\left| \\int_ {c} f (z) \\mathrm{d} z \\right| \\leqslant \\int_ {c} | f (z) | \\mathrm{d} s.\\tag{3.3}$$\n上式右端是实连续函数 $|f(z)|$ 沿曲线 $C$ 的第一型曲线积分.\n性质1)一4）的证明很容易，只要利用复积分的定义或者把曲线积分的有关性质移过来就可以了.下面证明性质5).事实上，由于\n$$\\left| \\sum_ {k = 1} ^ {n} f (\\zeta_ {k}) \\Delta z _ {k} \\right| \\leqslant \\sum_ {k = 1} ^ {n} | f (\\zeta_ {k}) | | \\Delta z | \\leqslant \\sum_ {k = 1} ^ {n} | f (\\zeta_ {k}) | \\Delta s _ {k},$$\n这里，$\\Delta s_k$ 是小段 $z_{k-1}z_k$ 的长，将此不等式两边取极限，即得不等式(3.3). 它也常写成\n$$\\left| \\int_ {C} f (z) \\mathrm{d} z \\right| \\leqslant \\int_ {C} | f (z) | | \\mathrm{d} z |.$$\n特别地，若在曲线 $C$ 上有 $\\mid f(z)\\mid \\leqslant M$ ，曲线 $C$ 的长为 $l$ ，则(3.3)式成为\n$$\\left| \\int_ {c} f (z) d z \\right| \\leqslant M l.\\tag{3.4}$$\n(3.4) 式叫做长大不等式，(3.3) 式和 (3.4) 式以后常用作积分估计。",
+          "after": "积分还有线性、分段可加和反向变号的性质。反向时曲线上的几何点没变，$dz$ 的方向反了，所以值改变符号。估计大小则使用实数弧长：\n$$\\left|\\int_C f(z)\\,dz\\right|\\le\\int_C|f(z)|\\,ds\\le ML,$$\n其中 $M$ 是整条路径上的统一模上界，$L$ 是路径长度。这是长大不等式，也叫 ML 估计，它给上界而不是一般的等号。"
+        },
+        {
+          "id": "CH03-S01-C007",
+          "title": "上半圆弧上指数积分的统一估计",
+          "statement_markdown": "设 $C_R$ 为 $|z|=R$（$R>0$）的上半圆弧，从 $R$ 到 $-R$。则\n$$\\left|\\int_{C_R}e^{iz}\\,dz\\right|\\le\\pi(1-e^{-R})<\\pi.$$\n其依据的实不等式为 $2\\theta/\\pi\\le\\sin\\theta\\le\\theta$（$0\\le\\theta\\le\\pi/2$）。",
+          "source_start_line": 55,
+          "source_end_line": 57,
+          "source_quote": "例3 证明： $\\left|\\int_{C}c^{iz}dz\\right| < \\pi$ ，其中， $C$ 为 $|z| = R$ 的上半圆周从 $R$ 到- $R$\n证 应用性质 5) 与不等式  $\\frac{2\\theta}{\\pi} \\leqslant \\sin\\theta \\leqslant \\theta, 0 \\leqslant \\theta \\leqslant \\frac{\\pi}{2}$ . 因  $C_{1}z = Re^{w}, 0 \\leqslant \\theta \\leqslant \\pi$ , 故有\n$$\\begin{array}{r l} \\left| \\int_ {C} \\mathrm{e} ^ {\\mathrm{i} z} \\mathrm{d} z \\right| & \\leqslant \\int_ {0} ^ {\\pi} \\mathrm{e} ^ {- R \\sin \\theta} R \\mathrm{d} \\theta = 2 \\int_ {0} ^ {\\frac {\\pi}{2}} \\mathrm{e} ^ {- R \\omega \\theta} R \\mathrm{d} \\theta \\\\ & \\leqslant 2 \\int_ {0} ^ {\\frac {\\pi}{2}} \\mathrm{e} ^ {- 2 R / \\theta} R \\mathrm{d} \\theta = \\pi (1 - \\mathrm{e} ^ {- R}) <   \\pi . \\end{array}$$",
+          "after": "积分还有线性、分段可加和反向变号的性质。反向时曲线上的几何点没变，$dz$ 的方向反了，所以值改变符号。估计大小则使用实数弧长：\n$$\\left|\\int_C f(z)\\,dz\\right|\\le\\int_C|f(z)|\\,ds\\le ML,$$\n其中 $M$ 是整条路径上的统一模上界，$L$ 是路径长度。这是长大不等式，也叫 ML 估计，它给上界而不是一般的等号。",
+          "source_note": "原文指数c^{iz}为e^{iz}，中间估计指数多处OCR损坏，依明确的结论和sin下界规范化。"
+        },
+        {
+          "id": "CH03-S01-C008",
+          "title": "收缩小圆弧的积分极限",
+          "statement_markdown": "设 $\\alpha<\\beta$ 固定，$C_\\rho$ 按 $\\theta$ 增加方向由 $z=a+\\rho e^{i\\theta}$、$\\alpha\\le\\theta\\le\\beta$ 描述；$f$ 在充分小的这些圆弧上连续，且\n$$\\lim_{z\\to a}(z-a)f(z)=k.$$\n则\n$$\\lim_{\\rho\\to0^+}\\int_{C_\\rho}f(z)\\,dz=i(\\beta-\\alpha)k.$$",
+          "source_start_line": 58,
+          "source_end_line": 62,
+          "source_quote": "例4 如果当 $\\rho$ 充分小时，$f(z)$ 在圆弧 $C_{\\rho}$ (图3.2).\n$$z = a + \\rho e ^ {i \\theta}, \\quad \\alpha \\leqslant \\theta \\leqslant \\beta$$\n上连续，且\n$$\\lim _ {z \\rightarrow a} (z - a) f (z) = k.\\tag{3.5}$$\n$$\\lim _ {p \\rightarrow 0} \\int_ {C _ {p}} f (z) d z = i (\\beta - \\alpha) k.\\tag{3.6}$$",
+          "after": "短路径不必意味着积分小：若路径缩向奇点，同时函数模按距离倒数增大，长度与模可能抵消。教材的小圆弧例子正说明，若 $(z-a)f(z)\\to k$，从角 $\\alpha$ 到 $\\beta$ 的收缩圆弧积分会趋于 $ik(\\beta-\\alpha)$。估计时必须一起查看路径长度和被积函数大小，不能只盯住其中一个。"
+        }
+      ]
+    },
+    "CH03-S02": {
+      "unit_id": "CH03-S02",
+      "source_path": "original_text/ch03_s02.md",
+      "conclusions": [
+        {
+          "id": "CH03-S02-C001",
+          "title": "闭路方向与柯西积分定理",
+          "statement_markdown": "本章称简单闭曲线为闭路，默认正向为逆时针。若 $C$ 围成单连通区域 $D$，$f$ 在闭域 $D\\cup C$ 上解析，则\n$$\\oint_Cf(z)\\,dz=0.$$\n教材证明为使用格林公式另加 $f'$ 连续的临时假设，定理本身无需该额外假设。",
+          "source_start_line": 4,
+          "source_end_line": 9,
+          "source_quote": "今后把简单闭曲线叫做闭路，如非特别声明，凡沿闭路的积分都是按正向（即逆时针方向）取的.\n定理2（柯否积分定理）设 $D$ 是由闭路 $C$ 所围成的单连通区域，$f(z)$ 在闭域 $C + D$ 上解析，则\n证 这个定理本来不作进一步假设就可证明. 但为节省时间起见, 我们假定 $f'(z)$ 在所围成的域 $D$ 内是连续的. 这时可以利用格林(Green)公式, 得\n$$\\begin{array}{l} \\int_ {c} f (z) \\mathrm{d} z = \\int_ {c} u \\mathrm{d} x - v \\mathrm{d} y + \\mathrm{i} \\int_ {c} v \\mathrm{d} x + u \\mathrm{d} y \\\\ = - \\iint_ {D} \\left(\\frac {\\partial v}{\\partial x} + \\frac {\\partial u}{\\partial y}\\right) \\mathrm{d} x \\mathrm{d} y + \\mathrm{i} \\iint_ {D} \\left(\\frac {\\partial u}{\\partial x} - \\frac {\\partial v}{\\partial y}\\right) \\mathrm{d} x \\mathrm{d} y, \\end{array}$$\n但依C-R方程\n$$\\frac {\\partial v}{\\partial x} + \\frac {\\partial u}{\\partial y} \\equiv 0, \\quad \\frac {\\partial u}{\\partial x} - \\frac {\\partial v}{\\partial y} \\equiv 0,$$",
+          "after": "柯西积分定理给出解析函数的基本结论：若简单闭路 $C$ 及其内部都处在函数的解析范围内，取正向即逆时针方向，则\n$$\\oint_C f(z)\\,dz=0.$$\n也可说，函数在单连通区域 $D$ 内解析时，沿 $D$ 内任意闭曲线的积分为零，因而固定端点的积分与路径无关。条件不仅是函数在曲线上有定义，还要求曲线围出的内部没有不允许的点。",
+          "source_note": "第5行定理结论公式缺失，依第7-9行C-R积分证明及第11行积分为零明确陈述恢复。"
+        },
+        {
+          "id": "CH03-S02-C002",
+          "title": "单连通域内任意闭曲线积分为零",
+          "statement_markdown": "若 $f$ 在单连通区域 $D$ 解析，则对 $D$ 内任意逐段光滑闭曲线 $C$，包括可自交的闭曲线，均有\n$$\\oint_C f(z)\\,dz=0.$$",
+          "source_start_line": 10,
+          "source_end_line": 11,
+          "source_quote": "推论1 设 $f(z)$ 在单连通域 $D$ 内解析，$C$ 是 $D$ 内的任意封闭曲线，则\n事实上，如果 $C$ 是简单封闭曲线，结论由定理2即得.如果 $C$ 不是简单封闭曲线，则可将它分解成几个简单封闭曲线的和， $f(z)$ 沿每个简单封闭曲线的积分为零，从而沿 $C$ 的积分亦为零.",
+          "after": "柯西积分定理给出解析函数的基本结论：若简单闭路 $C$ 及其内部都处在函数的解析范围内，取正向即逆时针方向，则\n$$\\oint_C f(z)\\,dz=0.$$\n也可说，函数在单连通区域 $D$ 内解析时，沿 $D$ 内任意闭曲线的积分为零，因而固定端点的积分与路径无关。条件不仅是函数在曲线上有定义，还要求曲线围出的内部没有不允许的点。",
+          "source_note": "原文推论1在“则”后的公式缺失，依紧随的说明恢复。"
+        },
+        {
+          "id": "CH03-S02-C003",
+          "title": "解析函数积分与路径无关",
+          "statement_markdown": "若 $f$ 在单连通区域 $D$ 解析，则在 $D$ 内从固定 $z_0$ 到 $z$ 的积分只依赖两端点，与所选路径无关，可记为\n$$\\int_{z_0}^z f(\\zeta)\\,d\\zeta.$$",
+          "source_start_line": 12,
+          "source_end_line": 16,
+          "source_quote": "推论2 设 $f(z)$ 在单连通域 $D$ 内解析，$C$ 是 $D$ 内任一条起于点 $z_0$ 而终于点 $z$ 的简单曲线，则积分\n$$\\int_ {\\zeta} f (\\zeta) \\mathrm{d} \\zeta$$\n的值不依赖于积分路线 $C$ ，而只由 $z_0$ 及 $z$ 确定.所以这个积分也可记作\n$$\\int_ {z _ {0}} ^ {t} f (\\zeta) \\mathrm{d} \\zeta \\quad \\text {或} \\quad \\int_ {z _ {0}} ^ {t} f (z) \\mathrm{d} z.$$\n推论2由推论1立即可以得到.",
+          "after": "柯西积分定理给出解析函数的基本结论：若简单闭路 $C$ 及其内部都处在函数的解析范围内，取正向即逆时针方向，则\n$$\\oint_C f(z)\\,dz=0.$$\n也可说，函数在单连通区域 $D$ 内解析时，沿 $D$ 内任意闭曲线的积分为零，因而固定端点的积分与路径无关。条件不仅是函数在曲线上有定义，还要求曲线围出的内部没有不允许的点。",
+          "source_note": "原文上限z误作t，按推论所述起终点规范化。"
+        },
+        {
+          "id": "CH03-S02-C004",
+          "title": "复闭路及正方向",
+          "statement_markdown": "设 $C_1,\\ldots,C_n$ 互不相交、互在外部，并均位于外闭路 $C_0$ 内，所围区域的全边界称复闭路。其正方向规定为行进时区域始终在左侧，即外边界逆时针、各孔边界顺时针。若各 $C_j$ 自身均按逆时针记，则正向复闭路为 $C=C_0+C_1^-+\\cdots+C_n^-$。",
+          "source_start_line": 17,
+          "source_end_line": 17,
+          "source_quote": "下面把柯西定理推广到多连通区域. 设有 $n + 1$ 条简单闭曲线 $C_0, C_1, C_2, \\cdots, C_n$, 其中, $C_1, C_2, \\cdots, C_n$ 每一条都在其余各条的外区域内, 而且它们又全在 $C_0$ 的内部, 由 $C_0$ 及 $C_1, C_2, \\cdots, C_n$. 围成一个多连通区域 $D$, 区域区域 $D$ 的全部边界 $C$ 称为一个复闭路. 当观察者在 $C$ 上行进时, 区域 $D$ 总在它的左边的方向, 称为 $C$ 的正向. 所以, 沿正向的复闭路 $C$ 包括在外取逆时针方向的闭路 $C_n$ 及在内取顺时针方向的闭路 $C_1, C_2, \\cdots, C_n$. 常把复闭路记作 $C = C_0 + C_1 - C_2 + \\cdots + C_n$. 以后讲到沿复闭路的积分, 如不作特殊声明, 都是沿正向取的.",
+          "after": "辅助线分别属于相邻两块的边界，方向相反，积分相消，最后只剩真正边界。若把每个内边界也统一记为逆时针，则等式写成外边界积分等于各内边界积分之和；若保留边界正方向，则全部积分之和为零。这是两种记号安排，几何方向并没有互相矛盾。",
+          "source_note": "原文复闭路记号加减混乱，以后续定理的C0+C1^-+…为准。"
+        },
+        {
+          "id": "CH03-S02-C005",
+          "title": "多连通区域的柯西积分定理",
+          "statement_markdown": "若 $f$ 在多连通区域及其全部边界上解析，外边界为 $C_0$，各孔边界为 $C_1,\\ldots,C_n$，则沿区域正向全边界有\n$$\\oint_Cf(z)\\,dz=0.$$\n若每条 $C_j$ 均单独取逆时针方向，则等价于\n$$\\oint_{C_0}f(z)\\,dz=\\sum_{j=1}^n\\oint_{C_j}f(z)\\,dz.$$",
+          "source_start_line": 18,
+          "source_end_line": 20,
+          "source_quote": "定理 3(多连通区域的柯西定理) 设  $f(z)$  在复闭路  $C = C_{0} + C_{1}^{-} + C_{2}^{-} + \\cdots + C_{n}^{-}$  及其所围成的多连通区域解析，则\n$$\\int_ {C _ {0}} f (z) \\mathrm{d} z = \\int_ {C _ {1}} f (z) \\mathrm{d} z + \\int_ {C _ {2}} f (z) \\mathrm{d} z + \\dots + \\int_ {C _ {n}} f (z) \\mathrm{d} z,$$\n$$\\int_ {C} f (z) \\mathrm{d} z = 0.$$",
+          "after": "辅助线分别属于相邻两块的边界，方向相反，积分相消，最后只剩真正边界。若把每个内边界也统一记为逆时针，则等式写成外边界积分等于各内边界积分之和；若保留边界正方向，则全部积分之和为零。这是两种记号安排，几何方向并没有互相矛盾。"
+        },
+        {
+          "id": "CH03-S02-C006",
+          "title": "一般闭路的整数幂核积分",
+          "statement_markdown": "若 $a$ 位于正向简单闭路 $C$ 内，则对任意整数 $n$，\n$$\\oint_C\\frac{dz}{(z-a)^n}=\\begin{cases}2\\pi i,&n=1,\\\\0,&n\\ne1.\\end{cases}$$\n这是圆周核积分在一般闭路上的推广。",
+          "source_start_line": 29,
+          "source_end_line": 33,
+          "source_quote": "例5 设 $a$ 是闭路 $C$ 内任一点，则\n$$\\int_ {c} {\\frac {\\mathrm{d} z}{(z - a) ^ {n}}} = \\left\\{ \\begin{array}{l l} {2 \\pi \\mathrm{i},} & {n = 1} \\\\ {0,} & {n \\text {是不为} 1 \\text {的整数}.} \\end{array} \\right.$$\n解 在 $C$ 内作一个以 $a$ 为中心的圆 $C_1$ ，由定理2得\n$$\\int_ {c} \\frac {\\mathrm{d} z}{(z - a) ^ {n}} = \\int_ {c _ {1}} \\frac {\\mathrm{d} z}{(z - a) ^ {n}},$$\n再由3.1节例2的结果即得.",
+          "after": "这一定理还允许我们在解析范围内改变积分路径。比如 $a$ 位于一般简单闭路内，而函数 $1/(z-a)^n$ 只在 $a$ 处有问题，可以在内部绕 $a$ 画一个小圆。原闭路与小圆之间形成的环形区域内处处解析，故它们同向的积分相等，便能搬用上一节的圆周结果。不能把小圆继续缩成穿过 $a$ 的一点，因为那会越出解析范围。"
+        }
+      ]
+    },
+    "CH03-S03": {
+      "unit_id": "CH03-S03",
+      "source_path": "original_text/ch03_s03.md",
+      "conclusions": [
+        {
+          "id": "CH03-S03-C001",
+          "title": "原函数的定义",
+          "statement_markdown": "若在区域 $D$ 内 $F'(z)=f(z)$，则称单值函数 $F$ 为 $f$ 在 $D$ 内的一个原函数。",
+          "source_start_line": 3,
+          "source_end_line": 3,
+          "source_quote": "定义2 如果在区域 $D$ 内有 $F^{\\prime}(z) = f(z)$，则 $F(z)$ 称为 $f(z)$ 在区域 $D$ 内的一个原函数.",
+          "after": "原函数的定义是 $F'(z)=f(z)$。教材证明上面的变上限积分恰好满足这一关系，思路并不神秘：终点从 $z$ 移到 $z+\\Delta z$ 后，多出的积分可以取在这两个点之间的短直线段上；连续性让这段里的函数值都接近 $f(z)$，除以总位移后便趋于 $f(z)$。完整误差控制可展开[变上限积分是原函数](#reader-d71d6381af7340e321a8)，其中用到的正是第一节的 ML 估计。"
+        },
+        {
+          "id": "CH03-S03-C002",
+          "title": "单连通域中变上限积分是原函数",
+          "statement_markdown": "若 $f$ 在单连通区域 $D$ 内解析，固定 $z_0\\in D$，则\n$$F(z)=\\int_{z_0}^zf(\\zeta)\\,d\\zeta$$\n是 $D$ 内的单值解析函数，并有 $F'(z)=f(z)$。",
+          "source_start_line": 5,
+          "source_end_line": 7,
+          "source_quote": "定理4 如果 $f(z)$ 是单连通区域 $D$ 内的解析函数，那么，由变上限的积分所确定的函数\n$$F (z) = \\int_ {z _ {0}} ^ {z} f (z) d z$$\n也是 D 内的解析函数. 而且  $F'(z) = f(z)$ .",
+          "after": "原函数的定义是 $F'(z)=f(z)$。教材证明上面的变上限积分恰好满足这一关系，思路并不神秘：终点从 $z$ 移到 $z+\\Delta z$ 后，多出的积分可以取在这两个点之间的短直线段上；连续性让这段里的函数值都接近 $f(z)$，除以总位移后便趋于 $f(z)$。完整误差控制可展开[变上限积分是原函数](#reader-d71d6381af7340e321a8)，其中用到的正是第一节的 ML 估计。"
+        },
+        {
+          "id": "CH03-S03-C003",
+          "title": "原函数构造所需的路径无关条件",
+          "statement_markdown": "变上限积分求导的论证实际只需要 $f$ 连续，并且在区域内从 $z_0$ 到 $z$ 的积分与路径无关；在此条件下，同样有\n$$\\left(\\int_{z_0}^z f(\\zeta)\\,d\\zeta\\right)'=f(z).$$",
+          "source_start_line": 21,
+          "source_end_line": 21,
+          "source_quote": "顺便提请读者注意，在上述证明中实际上只用到沿自 $z_0$ 到 $z$ 的任何路线 $C$ ，积分 $\\int_{C}f(z)\\mathrm{d}z$ 与路线无关这一条件，在下面定理3的证明中要用到这一事实.",
+          "after": "原函数的定义是 $F'(z)=f(z)$。教材证明上面的变上限积分恰好满足这一关系，思路并不神秘：终点从 $z$ 移到 $z+\\Delta z$ 后，多出的积分可以取在这两个点之间的短直线段上；连续性让这段里的函数值都接近 $f(z)$，除以总位移后便趋于 $f(z)$。完整误差控制可展开[变上限积分是原函数](#reader-d71d6381af7340e321a8)，其中用到的正是第一节的 ML 估计。"
+        },
+        {
+          "id": "CH03-S03-C004",
+          "title": "同一区域的原函数相差常数",
+          "statement_markdown": "若 $F,H$ 是同一区域内 $f$ 的两个单值原函数，则 $H(z)-F(z)=C$，其中 $C$ 为复常数。因此在上述单连通域条件下，全部原函数为\n$$H(z)=\\int_{z_0}^zf(\\zeta)\\,d\\zeta+C.$$",
+          "source_start_line": 22,
+          "source_end_line": 28,
+          "source_quote": "现在设 $H(z)$ 是 $f(z)$ 在区域 $D$ 中的另一个原函数，即 $H'(z) = f(z)$. 那么这两个原函数之间有什么关系呢？这里也有类似于实变数函数中的结论，两者相差一个常数，即\n$$H (z) = F (z) + C.$$\n其中，C 是复常数. 事实上，由  $\\left[H(z)-F(z)\\right]'=0$ ，如命  $H(z)-F(z)=u+iv$ ，则有\n$$\\left[ H (z) - F (z) \\right] ^ {\\prime} = \\frac {\\partial u}{\\partial x} + \\mathrm{i} \\frac {\\partial v}{\\partial x} = 0,$$\n故得 $\\frac{\\partial u}{\\partial x} = \\frac{\\partial v}{\\partial x} = 0$ ，再由C-R方程，得 $\\frac{\\partial v}{\\partial y} = \\frac{\\partial u}{\\partial y} = 0$ ，故 $u,v$ 必为常数，设 $u = C_{1}$ $v = C_2$ ，得\n$$\\begin{array}{l} H (z) - F (z) = C _ {1} + \\mathrm{i} C _ {2} = C, \\\\ H (z) = \\int_ {z _ {0}} ^ {z} f (z) \\mathrm{d} z + C. \\end{array}\\tag{3.7}$$\n从上述讨论可见，在定理4的条件下，当 $C$ 为任意复常数时，(3.7)式给出了 $f(z)$ 的全体原函数.在(3.7)式中，令 $z = z_0$ ，便得 $C = H(z_0)$ .所以",
+          "after": "如果另一个函数 $H$ 也满足 $H'=f$，两者之差的导数为零，在同一个区域里就只能相差一个复常数。因此，找到了一个原函数，就得到了所有原函数：$H=F+C$。这个常数有实部也有虚部，不能只允许它是实数；给定某一点的函数值，才可把它确定下来。"
+        },
+        {
+          "id": "CH03-S03-C005",
+          "title": "复积分的牛顿－莱布尼兹公式",
+          "statement_markdown": "若 $H$ 是路径所在区域内 $f$ 的同一个单值原函数，则对从 $z_0$ 到 $z$ 的路径，\n$$\\int_{z_0}^zf(\\zeta)\\,d\\zeta=H(z)-H(z_0).$$\n尤其适用于单连通域内的解析被积函数。",
+          "source_start_line": 28,
+          "source_end_line": 30,
+          "source_quote": "从上述讨论可见，在定理4的条件下，当 $C$ 为任意复常数时，(3.7)式给出了 $f(z)$ 的全体原函数.在(3.7)式中，令 $z = z_0$ ，便得 $C = H(z_0)$ .所以\n$$\\int_ {z _ {0}} ^ {z} f (z) \\mathrm{d} z = H (z) - H (z _ {0}).$$\n这就是牛顿－莱布尼兹公式.这里 $H(z)$ 是 $f(z)$ 的任一原函数",
+          "after": "于是有牛顿－莱布尼兹公式\n$$\\int_C f(z)\\,dz=H(b)-H(a),$$\n其中 $a,b$ 为路径的起终点，$H$ 必须是在路径所在范围内实际存在的同一个单值原函数。对于 $2z$，可用 $H=z^2$；对于 $\\cos z$，可用 $H=\\sin z$。无论路径弯成什么形状，只要始终在同一允许范围内，端点差都不变。"
+        },
+        {
+          "id": "CH03-S03-C006",
+          "title": "幂函数与余弦的基本积分公式",
+          "statement_markdown": "对整数 $n\\ne-1$，在路径及端点处均有定义时，\n$$\\int_{z_0}^{z_1}\\zeta^n\\,d\\zeta=\\frac{z_1^{n+1}-z_0^{n+1}}{n+1}.$$\n当 $n<0$ 时路径须避开零。并且\n$$\\int_a^b\\cos z\\,dz=\\sin b-\\sin a.$$",
+          "source_start_line": 31,
+          "source_end_line": 32,
+          "source_quote": "有了这个公式,算一些复积分就方便了.例如\n$$\\begin{array}{l} \\int_ {z _ {0}} ^ {z _ {1}} \\zeta^ {n} d \\zeta = \\frac {\\zeta^ {n + 1}}{n + 1} \\Big | _ {z _ {0}} ^ {z _ {1}} = \\frac {1}{n + 1} (z _ {1} ^ {n + 1} - z _ {0} ^ {n + 1}), \\\\ \\int_ {a} ^ {b} \\cos z d z = \\sin z \\Big | _ {a} ^ {b} = \\sin b - \\sin a. \\end{array}$$",
+          "after": "于是有牛顿－莱布尼兹公式\n$$\\int_C f(z)\\,dz=H(b)-H(a),$$\n其中 $a,b$ 为路径的起终点，$H$ 必须是在路径所在范围内实际存在的同一个单值原函数。对于 $2z$，可用 $H=z^2$；对于 $\\cos z$，可用 $H=\\sin z$。无论路径弯成什么形状，只要始终在同一允许范围内，端点差都不变。",
+          "source_note": "原文n未说明范围，补明整数幂条件和负幂路径须避零的适用条件。"
+        },
+        {
+          "id": "CH03-S03-C007",
+          "title": "多连通域中的路径比较",
+          "statement_markdown": "即使区域多连通，只要两条同端点路径所围闭域仍在 $f$ 的解析范围中，两条路径的积分就相等；若所围内部含奇点或不在解析范围内，则不能据柯西定理断定相等。",
+          "source_start_line": 33,
+          "source_end_line": 37,
+          "source_quote": "必须注意以上的讨论只适用于 $f(z)$ 在单连通域 $D$ 中解析的情形. 如果 $D$ 是一个多连通域, 情况就不同了. 在 $D$ 内作两条连接点 $z_0$ 与 $z_1$ 的简单曲线 $C_1, C_2$. 如果 $f(z)$ 在 $C_1$ 及 $C_2$ 所围成的闭区域内解析 (图3.5(a)), 这时柯西定理仍然适用, 因而\n$$\\int_ {z _ {0}, C _ {1}} ^ {z} f (z) \\mathrm{d} z = \\int_ {z _ {0}, C _ {2}} ^ {z} f (z) \\mathrm{d} z.$$\n图3.5\n但是如果 $f(z)$ 在 $C_1$ 及 $C_2$ 所围成的闭区域内不解析(图3.5(b))，这时不能应用柯西定理，而沿这两条曲线的积分可能不相等.现假定它们不相等\n$$\\int_ {t _ {0}, C _ {1}} ^ {t} f (z) \\mathrm{d} z \\neq \\int_ {t _ {0}, C _ {2}} ^ {t} f (z) \\mathrm{d} z,$$",
+          "after": "但不能因此说任何解析函数在任何区域都存在全局原函数。穿孔平面上的 $1/z$ 处处解析，却沿绕零一圈的路径积分不为零，不可能拥有那样一个全局单值原函数；否则同一点减同一点只能得到零。这与第二章对数不能在绕原点的整个区域里选定一支，是同一件事的两种表现。"
+        },
+        {
+          "id": "CH03-S03-C008",
+          "title": "对数作为 1/z 的路径积分",
+          "statement_markdown": "在避开原点、允许选出对数解析分支 $L$ 的割平面上，\n$$\\int_{1}^{z}\\frac{d\\zeta}{\\zeta}=L(z)-L(1).$$\n取 $L(1)=0$ 时即为 $L(z)$。若相对于一条固定参考路径多绕原点正向 $k$ 圈，积分增加 $2k\\pi i$。因此不指定路径类别时全部值为\n$$\\operatorname{Ln}z=\\ln z+2k\\pi i,\\quad k\\in\\mathbb Z.$$",
+          "source_start_line": 40,
+          "source_end_line": 50,
+          "source_quote": "是多值的. 以 $f(z) = 1 / z$ 为例讨论. 它的解析区域是除去 $z = 0$ 的整个平面. 任意取定 $z \\neq 0$，选一条从原点出发不经过点 1 及 $z$ 的射线，用 $D$ 表示去掉这条射线的复平面，在 $D$ 内可以分出 $\\mathrm{Ln}z$ 的单值解析分支，对任一确定的分支，有 $\\ln^{\\prime}z = 1 / z$. 如果 $l$ 是 $D$ 内任一简单曲线，则\n$$\\int_ {1, i} ^ {z} \\frac {\\mathrm{d} \\zeta}{\\zeta} = \\ln \\zeta | _ {1} ^ {z} = \\ln z - \\ln 1.$$\n特别地，对 $\\ln 1 = 0$ 的一支，有\n$$\\int_ {1, 1} ^ {z} \\frac {\\mathrm{d} \\zeta}{\\zeta} = \\ln z.\\tag{3.8}$$\n下面设 $L = ABCD$ 是一条起于点1终于点 $z$ 的不经过原点的简单曲线，它沿逆时针方向绕过原点一圈（图3.6).由3.2节例题5及(3.8)式，得\n$$\\int_ {1. 5} ^ {t} \\frac {\\mathrm{d} \\zeta}{\\zeta} = \\int_ {\\widehat {A B C A}} \\frac {\\mathrm{d} \\zeta}{\\zeta} + \\int_ {\\widehat {A C D}} \\frac {\\mathrm{d} \\zeta}{\\zeta} = \\ln z + 2 \\pi \\mathrm{i}.$$\n图3.6\n一般地，如果积分路线沿逆时针方向绕过原点的圈数与顺时针方向绕过原点的圈数之差为  $k, k = 0, \\pm 1, \\pm 2, \\cdots$ ，则\n$$\\int_ {1} ^ {z} \\frac {\\mathrm{d} \\zeta}{\\zeta} = \\ln z + 2 k \\pi \\mathrm{i}.$$\n这就是说，我们所讨论的变上限的积分是一个多值函数，并且\n$$\\int_ {1} ^ {z} \\frac {\\mathrm{d} \\zeta}{\\zeta} = \\mathrm{Ln} z = \\ln z + 2 k \\pi \\mathrm{i}, \\quad k = 0, \\pm 1, \\pm 2, \\dots .$$",
+          "after": "多出的一圈贡献 $2\\pi i$，逆向一圈则少 $2\\pi i$。所以不记录路径类别时，变上限积分给出的是 $\\operatorname{Ln}z$ 的全部可能值。若先去掉一条从零伸向无穷远的支割线，就在割开区域内选定了一个对数分支，$1/z$ 才在那里有可用的单值原函数。"
+        }
+      ]
+    },
+    "CH03-S04": {
+      "unit_id": "CH03-S04",
+      "source_path": "original_text/ch03_s04.md",
+      "conclusions": [
+        {
+          "id": "CH03-S04-C001",
+          "title": "柯西积分公式",
+          "statement_markdown": "若 $f$ 在正向闭路或正向复闭路 $C$ 及其围成区域 $D$ 上解析，则对任意 $z\\in D$，\n$$f(z)=\\frac1{2\\pi i}\\oint_C\\frac{f(\\zeta)}{\\zeta-z}\\,d\\zeta.$$\n$z$ 是区域内固定点，$\\zeta$ 是边界上的积分变量。",
+          "source_start_line": 4,
+          "source_end_line": 5,
+          "source_quote": "定理5 设函数 $f(z)$ 在闭路(或复闭路) $C$ 及其所围区域 $D$ 内解析，则对 $D$ 内任一点 $z$，有\n$$f (z) = \\frac {1}{2 \\pi i} \\int_ {C} \\frac {f (\\zeta)}{\\zeta - z} d \\zeta .$$",
+          "after": "柯西积分定理说解析函数本身的闭路积分为零；本节在积分中加入一个特定核，竟能读出内部函数值。这就是柯西积分公式。设 $f$ 在闭路 $C$ 及其内部解析，$a$ 是内部一点，路径取正向，则\n$$f(a)=\\frac1{2\\pi i}\\oint_C\\frac{f(\\zeta)}{\\zeta-a}\\,d\\zeta.$$\n$a$ 是固定的取值位置，$\\zeta$ 是边界上移动的积分变量。分母刻意在内部点 $a$ 为零，所以被积函数本身并不在整个内部解析；不能把积分定理直接用在整个圆盘上说它等于零。"
+        },
+        {
+          "id": "CH03-S04-C002",
+          "title": "边界值决定解析函数",
+          "statement_markdown": "在柯西积分公式的条件下，解析函数在整个边界上的值唯一确定区域内各点的值。因此，若两个解析函数在区域及其边界上满足上述解析条件，且边界上处处相等，则它们在整个区域内相等。",
+          "source_start_line": 17,
+          "source_end_line": 17,
+          "source_quote": "这个公式叫做柯西积分公式. 它告诉我们对于解析函数, 只要知道了它在区域边界上的值, 那么通过这个公式, 区域内部任一点上的值就完全确定了. 特别地, 从这里可以得到下述重要结论: 如果两个解析函数在区域的边界上处处相等, 则它们在整个区域上也恒等. 不但如此, 我们还可以进一步证明解析函数在区域的内部有任意阶微商, 并且这些微商也可以通过函数在边界上的值表示出来.",
+          "after": "柯西积分定理说解析函数本身的闭路积分为零；本节在积分中加入一个特定核，竟能读出内部函数值。这就是柯西积分公式。设 $f$ 在闭路 $C$ 及其内部解析，$a$ 是内部一点，路径取正向，则\n$$f(a)=\\frac1{2\\pi i}\\oint_C\\frac{f(\\zeta)}{\\zeta-a}\\,d\\zeta.$$\n$a$ 是固定的取值位置，$\\zeta$ 是边界上移动的积分变量。分母刻意在内部点 $a$ 为零，所以被积函数本身并不在整个内部解析；不能把积分定理直接用在整个圆盘上说它等于零。"
+        },
+        {
+          "id": "CH03-S04-C003",
+          "title": "任意阶导数的柯西公式",
+          "statement_markdown": "在柯西积分公式的同一解析条件下，$f$ 在 $D$ 内有任意阶导数，且对 $n=0,1,2,\\ldots$，\n$$f^{(n)}(z)=\\frac{n!}{2\\pi i}\\oint_C\\frac{f(\\zeta)}{(\\zeta-z)^{n+1}}\\,d\\zeta.$$\n等价地，积分值为 $2\\pi i\\,f^{(n)}(z)/n!$。解析函数的各阶导数仍解析。",
+          "source_start_line": 18,
+          "source_end_line": 20,
+          "source_quote": "定理6 在定理5的条件下，对 $D$ 内任一点 $z, f(z)$ 有任意阶导数，且\n$$f ^ {(n)} (z) = \\frac {n !}{2 \\pi i} \\int_ {C} \\frac {f (\\zeta)}{(\\zeta - z) ^ {n + 1}} d \\zeta .$$\n这个公式也叫柯西公式.",
+          "after": "更强的是同一组边界值还能决定所有内部导数：\n$$f^{(n)}(a)=\\frac{n!}{2\\pi i}\\oint_C\\frac{f(\\zeta)}{(\\zeta-a)^{n+1}}\\,d\\zeta.$$\n$n$ 是非负整数，$n!$ 是阶乘。分母幂为 $n+1$，读出的是第 $n$ 阶导数，而不是同阶幂。原先解析只要求一阶导数处处存在，现在却得到任意阶导数，并且这些导数仍解析。这是通过边界积分表示获得的实质新信息。"
+        },
+        {
+          "id": "CH03-S04-C004",
+          "title": "单位圆上的加权积分公式",
+          "statement_markdown": "设 $f$ 在闭单位圆盘上解析、$f(0)=1$，$C$ 为单位圆周正向，则\n$$\\frac1{2\\pi i}\\oint_C\\left[2\\pm\\left(z+\\frac1z\\right)\\right]f(z)\\frac{dz}{z}=2\\pm f'(0).$$\n相应地，\n$$\\int_0^{2\\pi}f(e^{i\\theta})\\cos^2\\frac\\theta2\\,d\\theta=\\pi+\\frac\\pi2f'(0),$$\n$$\\int_0^{2\\pi}f(e^{i\\theta})\\sin^2\\frac\\theta2\\,d\\theta=\\pi-\\frac\\pi2f'(0).$$",
+          "source_start_line": 51,
+          "source_end_line": 56,
+          "source_quote": "例8 设 $f(z)$ 在闭圆 $|z| \\leqslant 1$ 内解析，且 $f(0) = 1$.\n1）证明\n$$\\frac {1}{2 \\pi i} \\int_ {C} \\left[ 2 \\pm \\left(z + \\frac {1}{z}\\right) \\right] f (z) \\frac {\\mathrm{d} z}{z} = 2 \\pm f ^ {\\prime} (0).$$\n2）证明\n$$\\int_ {0} ^ {2 \\pi} f (\\mathbf {c} ^ {\\mathrm{i} \\theta}) \\cos^ {2} \\frac {\\theta}{2} \\mathrm{d} \\theta = \\pi + \\frac {\\pi}{2} f ^ {\\prime} (0), \\quad \\int_ {0} ^ {2 \\pi} f (\\mathbf {c} ^ {\\mathrm{i} \\theta}) \\sin^ {2} \\frac {\\theta}{2} \\mathrm{d} \\theta = \\pi - \\frac {\\pi}{2} f ^ {\\prime} (0).$$\n1) 中的积分路线 C 是圆周  $\\left| z \\right| = 1$  的正向，左边的加减号分别对应右边的加减号.",
+          "after": "做积分题时可反向使用：把 $\\oint f(\\zeta)/(\\zeta-a)^{n+1}\\,d\\zeta$ 写成 $2\\pi i f^{(n)}(a)/n!$。但被分离出来的 $f$ 必须在整片闭域内解析，其他分母零点不能躲在它里面。教材例7读二阶导数；例8将积分拆成几个核，分别对应函数值、一阶导数和零积分，正是这一方法的组合。",
+          "source_note": "第55行e误作c，按后续参数化订正。"
+        }
+      ],
+      "supplementary_conclusions": [
+        {
+          "id": "CH03-S04-EX6-RESULT",
+          "title": "教材例6：积分路径不能穿过奇点",
+          "source_start_line": 45,
+          "source_end_line": 47,
+          "source_quote": "例6 计算积分 $\\int_{C} \\frac{\\mathrm{e}^{z}}{z(z - 2\\mathrm{i})} \\mathrm{d}z$，其中，$C$ 是以2i为中心、2为半径的圆周的正方向.\n解 函数 $f(z) = \\mathrm{e}^z / z$ 在以 $C$ 为边界的闭圆内解析，故由柯西积分公式，得\n$$\\begin{array}{r l} \\int_ {c} \\frac {\\mathrm{e} ^ {z}}{z (z - 2 \\mathrm{i})} \\mathrm{d} z & = \\int_ {c} \\frac {f (z)}{z - 2 \\mathrm{i}} \\mathrm{d} z = 2 \\pi \\mathrm{i} f (2 \\mathrm{i}) = 2 \\pi \\mathrm{i} \\cdot \\frac {\\mathrm{e} ^ {z}}{2 \\mathrm{i}} \\\\ & = \\pi (\\cos 2 + \\mathrm{i} \\sin 2). \\end{array}$$",
+          "statement_markdown": "原题取圆心 $2i$、半径 $2$ 时，路径穿过被积函数 $e^z/[z(z-2i)]$ 的极点 $z=0$，普通曲线积分没有定义。若将路径改为以 $2i$ 为心、任意半径 $0<r<2$ 的正向圆周，才有 $$\\oint_C\\frac{e^z}{z(z-2i)}\\,\\mathrm dz=\\pi e^{2i}=\\pi(\\cos2+i\\sin2).$$",
+          "source_note": "已对照来源PDF第71页、用户PDF第64页，原印半径确实为2，不是OCR误识。保留原件，教学结果明确所需的路径条件。",
+          "after": "做积分题时可反向使用：把 $\\oint f(\\zeta)/(\\zeta-a)^{n+1}\\,d\\zeta$ 写成 $2\\pi i f^{(n)}(a)/n!$。但被分离出来的 $f$ 必须在整片闭域内解析，其他分母零点不能躲在它里面。教材例7读二阶导数；例8将积分拆成几个核，分别对应函数值、一阶导数和零积分，正是这一方法的组合。"
+        },
+        {
+          "id": "CH03-S04-EX7-RESULT",
+          "title": "教材例7：高阶柯西公式的计算结果",
+          "source_start_line": 48,
+          "source_end_line": 50,
+          "source_quote": "例7 计算积分 $\\int_{C} \\frac{\\cos z}{(z - i)^3} dz$，其中，$C$ 是包围 $i$ 点的任意简单封闭曲线。\n解 对函数 $f(z) = \\cos z$ 用定理6中的柯西积分公式得\n$$\\int_ {C} \\frac {\\cos z}{(z - i) ^ {3}} d z = \\frac {2 \\pi i}{2 !} \\frac {d ^ {2}}{d z ^ {2}} \\cos z \\Big | _ {z = i} = - \\pi i \\cos i = - \\pi i \\cosh 1.$$",
+          "statement_markdown": "若 $C$ 是正向简单闭曲线，且 $i$ 在其内部，则 $$\\oint_C\\frac{\\cos z}{(z-i)^3}\\,\\mathrm dz=-\\pi i\\cos i=-\\pi i\\cosh1.$$",
+          "after": "做积分题时可反向使用：把 $\\oint f(\\zeta)/(\\zeta-a)^{n+1}\\,d\\zeta$ 写成 $2\\pi i f^{(n)}(a)/n!$。但被分离出来的 $f$ 必须在整片闭域内解析，其他分母零点不能躲在它里面。教材例7读二阶导数；例8将积分拆成几个核，分别对应函数值、一阶导数和零积分，正是这一方法的组合。"
+        }
+      ]
+    },
+    "CH03-S05": {
+      "unit_id": "CH03-S05",
+      "source_path": "original_text/ch03_s05.md",
+      "conclusions": [
+        {
+          "id": "CH03-S05-C001",
+          "title": "解析函数的平均值公式",
+          "statement_markdown": "若 $f$ 在闭圆盘 $|z-a|\\le R$（$R>0$）上解析，$C$ 为边界圆周，则\n$$f(a)=\\frac1{2\\pi R}\\int_Cf(\\zeta)\\,ds=\\frac1{2\\pi}\\int_0^{2\\pi}f(a+Re^{i\\theta})\\,d\\theta.$$\n这里 $ds$ 是实弧长微分。",
+          "source_start_line": 4,
+          "source_end_line": 6,
+          "source_quote": "平均值公式 设 $f(z)$ 在闭圆 $|z - a| \\leqslant R$ 上解析，则 $f(z)$ 在圆心 $a$ 的值，等于它在圆周上的值的算术平均值。即\n$$f (a) = \\frac {1}{2 \\pi R} \\int_ {c} f (\\zeta) d s.$$\n其中， $C$ 是圆周 $\\mid z - a\\mid = R,\\mathrm{d}s$ 是 $C$ 上的弧长的微分.",
+          "after": "上一节把内部函数值写成边界积分。本节按教材顺序，看这一个表示怎样逐步约束函数的平均、极值和增长。先把积分路径取为以 $a$ 为中心、半径 $R$ 的圆，令 $\\zeta=a+Re^{i\\theta}$。柯西公式中的方向因子与分母抵消，得到\n$$f(a)=\\frac1{2\\pi}\\int_0^{2\\pi}f(a+Re^{i\\theta})\\,d\\theta\n=\\frac1{2\\pi R}\\oint_C f(\\zeta)\\,ds.$$\n这叫平均值公式：圆心的复函数值等于圆周各值的均匀平均。第二式用弧长平均，圆周总长为 $2\\pi R$；不能把 $ds$ 换成 $d\\theta$ 却保留原来的分母。"
+        },
+        {
+          "id": "CH03-S05-C002",
+          "title": "最大模原理",
+          "statement_markdown": "若 $D$ 为有界区域，$f$ 在 $D$ 内解析、在闭域 $\\bar D$ 上连续，且不恒为常数，则 $|f|$ 在 $\\bar D$ 上的最大值只能在边界取得。",
+          "source_start_line": 12,
+          "source_end_line": 12,
+          "source_quote": "最大模原理 设 $f(z)$ 在有界域 $D$ 内解析，在有界闭域 $C + D$ 上连续，这里 $C$ 是 $D$ 的边界. 并且 $f(z)$ 不恒等于常数. 那么它的模 $\\mid f(z) \\mid$ 只能在边界 $C$ 上取到它在整个有界闭域 $C + D$ 上的最大值.",
+          "after": "为什么平均会约束极值？设圆心的模已经比周围任何值都大，周围值的平均却必须恰好回到这个最大长度。要达到这种极限情况，周围值就受到很强的相等约束，最终迫使函数在连通区域内成为常数。因此，非恒定解析函数的模不能在内部取得局部最大值；若区域有界、闭域上连续，全域最大模只能在边界上取得。这里比较的是模，不是不能排序的复数本身。"
+        },
+        {
+          "id": "CH03-S05-C003",
+          "title": "柯西不等式与一阶导数估计",
+          "statement_markdown": "若 $f$ 在包含闭圆盘 $|\\zeta-a|\\le R$ 的开区域解析，设\n$$M(R)=\\max_{|\\zeta-a|=R}|f(\\zeta)|,$$\n则对整数 $n\\ge1$，\n$$|f^{(n)}(a)|\\le\\frac{n!M(R)}{R^n}.$$\n特别地，$|f'(a)|\\le M(R)/R$。",
+          "source_start_line": 30,
+          "source_end_line": 36,
+          "source_quote": "下面是关于解析函数导数模的一个估计.\n柯西不等式 设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则\n$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$\n事实上由定理6及长大不等式，有\n$$\\begin{array}{r l} \\mid f ^ {(n)} (z) \\mid & = \\left| \\frac {n !}{2 \\pi \\mathrm{i}} \\int_ {C} \\frac {f (\\zeta)}{(\\zeta - z) ^ {n + 1}} \\mathrm{d} \\zeta \\right| \\\\ & = \\frac {n !}{2 \\pi} \\left| \\int_ {C} \\frac {f (\\zeta)}{(\\zeta - z) ^ {n + 1}} \\mathrm{d} \\zeta \\right| \\\\ & \\leqslant \\frac {n !}{2 \\pi} \\frac {M}{R ^ {n + 1}} \\cdot 2 \\pi R = \\frac {n ! M}{R ^ {n}}, \\end{array}$$\n这个关系称为柯西不等式.特别当 $n = 1$ 时，有\n$$\\mid f ^ {\\prime} (z) \\mid \\leqslant \\frac {M}{R}.$$",
+          "after": "接着将高阶导数公式用 ML 估计，得到柯西不等式\n$$|f^{(n)}(a)|\\le\\frac{n!M(R)}{R^n},$$\n其中 $M(R)$ 是半径 $R$ 圆周上的最大模，整个闭圆盘都必须处在解析范围内。特别地，$|f'(a)|\\le M(R)/R$。它把边界函数值的上限，变成了内部变化率的上限。增大 $R$ 时必须同时留意 $M(R)$ 是否也在增加，不能只看分母。"
+        },
+        {
+          "id": "CH03-S05-C004",
+          "title": "整函数与刘维尔定理",
+          "statement_markdown": "在整个有限复平面解析的函数称为整函数。若存在统一有限常数 $M$，使整函数 $f$ 对所有 $z\\in\\mathbb C$ 都满足 $|f(z)|\\le M$，则 $f$ 必为常数。",
+          "source_start_line": 37,
+          "source_end_line": 38,
+          "source_quote": "如果 $f(z)$ 在有限复平面上解析，就把它叫做整函数.如多项式， $\\mathrm{e}^z$ ，cosz，sinz，$\\cosh z,\\sinh z$ 等都是整函数.从柯西不等式可以得到关于整函数的一个重要结论\n定理7（刘维尔(Liouville）定理）如果整函数在整个平面上有界，即对所有$z$ 满足不等式 $|f(z)|\\leqslant M$ ，则 $f(z)$ 必是常数.",
+          "after": "如果函数在全平面解析，称为整函数。若它还在整个平面共用同一个有限界 $M$，那么上面的导数估计允许把圆半径取得任意大，迫使导数为零。这就是刘维尔定理：有界整函数必为常数。只在每个有限圆盘内各有一个界并不够；任何多项式都满足后者，但它的界一般随圆盘增大而增长。正式证明可展开[刘维尔定理](#reader-65b0ef445c9771c358d9)。"
+        },
+        {
+          "id": "CH03-S05-C005",
+          "title": "代数学基本定理与多项式一次因式分解",
+          "statement_markdown": "任意复系数多项式\n$$p(z)=a_0z^n+a_1z^{n-1}+\\cdots+a_n,\\quad n\\ge1,\\quad a_0\\ne0$$\n至少有一个复零点。进一步可分解为\n$$p(z)=a_0(z-z_1)\\cdots(z-z_n).$$\n因此 $n$ 次复多项式恰有 $n$ 个根，重根按重数计算。",
+          "source_start_line": 43,
+          "source_end_line": 52,
+          "source_quote": "代数学的基本定理 $^{①}$  任何复系数多项式\n$$f (z) = a _ {0} z ^ {n} + a _ {1} z ^ {n - 1} + \\dots + a _ {n - 1} z + a _ {n}, \\quad n \\geqslant 1, a _ {0} \\neq 0$$\n必有零点.亦即，方程 $f(z) = 0$ 必有根\n证 若 $a_{n} = 0, z = 0$ 就是 $f(z)$ 的零点. 因此, 不妨设 $a_{n} \\neq 0$, 下面用反证法证明定理. 假设 $f(z)$ 没有零点, 因为 $f(z)$ 在全平面解析, 所以 $\\varphi(z) = 1 / f(z)$ 也在全平面解析, 因为 (应用第2章习题3)\n$$\\lim _ {z \\rightarrow \\infty} \\varphi (z) = \\lim _ {z \\rightarrow \\infty} \\frac {1}{f (z)} = 0,$$\n所以，对于充分大的 $R$ ，当 $|z| > R$ 时，$|\\varphi(z)|$ 有界.又在圆 $|z|\\leqslant R$ 内，$\\varphi(z)$ 解析，故 $|\\varphi(z)|$ 有界.这就是说，$\\varphi(z)$ 在全平面有界，由刘维尔定理 $\\varphi(z)$ 必是常数，因\n而 $f(z)$ 也必是常数，此与假设矛盾.所以，至少存在一个复数 $z_{1}$ ，使 $f(z_{1}) = 0$\n根据代数学的基本定理,读者不难证明:n 次多项式  $f(z)$  必可分解成 n 个一次因式的乘积,即\n$$f (z) = a _ {0} \\left(z - z _ {1}\\right) \\left(z - z _ {2}\\right) \\dots \\left(z - z _ {n}\\right),$$\n由此可知，在复数域内 $n$ 次多项式有 $n$ 个根（重根按重数计算）.",
+          "after": "教材再由它证明代数学基本定理：非恒定复系数多项式必有零点。关键思路是反设无零点，则倒数是整函数；倒数在远处趋零，在剩下的有限圆盘内也有界，因而应为常数，产生矛盾。此后反复提出一次因式，就得到 $n$ 次多项式有 $n$ 个根，重根按重数计。这回应了第一章扩充数域时留下的问题。"
+        },
+        {
+          "id": "CH03-S05-C006",
+          "title": "莫雷拉定理",
+          "statement_markdown": "若 $f$ 在区域 $D$ 内连续，且对 $D$ 内任意逐段光滑闭曲线 $C$ 都有\n$$\\oint_C f(z)\\,dz=0,$$\n则 $f$ 在 $D$ 内解析。该条件不要求 $D$ 单连通。",
+          "source_start_line": 54,
+          "source_end_line": 59,
+          "source_quote": "定理8（莫雷拉(Morera)定理）如果函数 $f(z)$ 在域 $D$ 中是连续的，并且对$D$ 中任意封闭曲线 $C$ 有\n$$\\int_ {C} f (z) \\mathrm{d} z = 0,$$\n则 $f(z)$ 在 $D$ 内解析.\n证 既然 $f(z)$ 沿 $D$ 中任意封闭曲线的积分为0，积分（当 $z_0$ 为 $D$ 内固定的一点时）\n$$F (z) = \\int_ {t _ {0}} ^ {t} f (\\zeta) d \\zeta ,$$\n就只依赖于上限 z，而与自  $z_{0}$  到 z 的积分路线无关，因而是 D 内的一个单值函数。前面已经指出，在这一条件下定理 4 仍成立，即  $F(z)$  在 D 中解析，且  $F'(z) = f(z)$ 。又据定理 6，解析函数的各阶导数仍是解析函数，从而  $f(z)$  在 D 内解析。",
+          "after": "最后，莫雷拉定理提供反向判别：连续函数若在区域内沿每条闭曲线的积分均为零，就解析。并非只试一个圆算出零便足够；它要求所有这些路径都成立。思路是先由路径无关造原函数，再利用解析函数的导数仍解析。这样，解析性既能用导数和 C-R 方程检查，也能由合适的积分性质识别。"
+        },
+        {
+          "id": "CH03-S05-C007",
+          "title": "单连通域中解析性的积分判别",
+          "statement_markdown": "在单连通区域 $D$ 内，$f$ 解析，当且仅当 $f$ 在 $D$ 连续，并且对 $D$ 中任意闭路 $C$ 都有\n$$\\oint_Cf(z)\\,dz=0.$$",
+          "source_start_line": 60,
+          "source_end_line": 61,
+          "source_quote": "综合柯西积分定理及莫累拉定理，得到解析函数的又一个特征性质.\n定理9 $f(z)$ 在单连通区域 $D$ 内解析的充分必要条件是：$f(z)$ 在 $D$ 内连续，且对 $D$ 内的任何闭路 $C$ ，有",
+          "after": "最后，莫雷拉定理提供反向判别：连续函数若在区域内沿每条闭曲线的积分均为零，就解析。并非只试一个圆算出零便足够；它要求所有这些路径都成立。思路是先由路径无关造原函数，再利用解析函数的导数仍解析。这样，解析性既能用导数和 C-R 方程检查，也能由合适的积分性质识别。",
+          "source_note": "原文定理9末尾结论公式缺失，依前述柯西定理和莫雷拉定理补回闭路积分为零。"
+        }
+      ],
+      "supplementary_conclusions": [
+        {
+          "id": "CH03-S05-C008",
+          "title": "大圆弧的积分极限",
+          "statement_markdown": "设 $f$ 在扇形外域 $|z|>R_0$、$0\\le\\arg z\\le\\alpha$（$0<\\alpha\\le2\\pi$）连续，且 $\\lim_{z\\to\\infty}zf(z)=A$。令 $C_R$ 沿 $z=Re^{i\\theta}$、$0\\le\\theta\\le\\alpha$ 正向，则\n$$\\lim_{R\\to\\infty}\\int_{C_R}f(z)\\,dz=iA\\alpha.$$",
+          "source_start_line": 78,
+          "source_end_line": 81,
+          "source_quote": "7. 设  $f(z)$  在域  $D: |z| > R_{0}, 0 \\leqslant \\arg z \\leqslant \\alpha, 0 < \\alpha \\leqslant 2\\pi$  内连续，且存在极限\n $\\lim_{z\\to\\infty}zf(z)=A.$\n设 $C_R$ 是位于 $D$ 内的圆弧 $|z| = R$ ，试证明\n$$\\lim _ {R \\rightarrow + \\infty} \\int_ {C _ {R}} f (z) \\mathrm{d} z = \\mathrm{i} A _ {\\alpha}.$$",
+          "after": "教材中的[用平均值公式计算积分](#reader-682c68b2f5b30f119239)、[非常数解析函数无零点时模无内部最小值](#reader-e86304df45ee3f9382c7)、[用柯西不等式刻画整函数增长](#reader-dbe950c766a98224e11c)保留了完整题目和推演，可展开对照本节的思路。",
+          "source_note": "原式iA下标α按圆弧参数和小圆弧对应公式理解为乘积iAα；补明正向。"
+        },
+        {
+          "id": "CH03-S05-C009",
+          "title": "有理函数在大圆周上的衰减积分",
+          "statement_markdown": "若多项式 $P,Q$ 满足 $\\deg Q\\ge\\deg P+2$，则对充分大的正向圆周（避开 $Q$ 的全部零点），\n$$\\lim_{R\\to\\infty}\\oint_{|z|=R}\\frac{P(z)}{Q(z)}\\,dz=0.$$",
+          "source_start_line": 82,
+          "source_end_line": 83,
+          "source_quote": "8. 若多项式  $Q(z)$  比多项式  $P(z)$  高二次，试证\n$$\\lim _ {R \\rightarrow \\infty} \\int_ {| z | = R} \\frac {P (z)}{Q (z)} d z = 0.$$",
+          "after": "教材中的[用平均值公式计算积分](#reader-682c68b2f5b30f119239)、[非常数解析函数无零点时模无内部最小值](#reader-e86304df45ee3f9382c7)、[用柯西不等式刻画整函数增长](#reader-dbe950c766a98224e11c)保留了完整题目和推演，可展开对照本节的思路。"
+        },
+        {
+          "id": "CH03-S05-C010",
+          "title": "对数导数积分计算多项式零点数",
+          "statement_markdown": "设 $p(z)=\\prod_{j=1}^n(z-a_j)$，其中各 $a_j$ 互异，正向简单闭路 $C$ 不经过零点，则\n$$\\frac1{2\\pi i}\\oint_C\\frac{p'(z)}{p(z)}\\,dz$$\n等于 $C$ 内部零点的个数。这里\n$$\\frac{p'(z)}{p(z)}=\\sum_{j=1}^n\\frac1{z-a_j}.$$",
+          "source_start_line": 93,
+          "source_end_line": 96,
+          "source_quote": "15. 设  $p(z)=(z-a_{1})(z-a_{2})\\cdots(z-a_{n})$ ，其中， $a_{i}(i=1,\\cdots,n)$  各不相同，闭路 C 不通过  $a_{1}, a_{2}, \\cdots, a_{n}$ ，证明积分\n$$\\frac {1}{2 \\pi \\mathrm{i}} \\int_ {c} \\frac {p ^ {\\prime} (z)}{p (z)} \\mathrm{d} z$$\n等于位于 C 内的  $p(z)$  的零点的个数.\n提示 $\\frac{p'(z)}{p(z)} = \\frac{1}{z - a_1} +\\frac{1}{z - a_2} +\\dots +\\frac{1}{z - a_n}.$",
+          "after": "教材中的[用平均值公式计算积分](#reader-682c68b2f5b30f119239)、[非常数解析函数无零点时模无内部最小值](#reader-e86304df45ee3f9382c7)、[用柯西不等式刻画整函数增长](#reader-dbe950c766a98224e11c)保留了完整题目和推演，可展开对照本节的思路。"
+        },
+        {
+          "id": "CH03-S05-C011",
+          "title": "无界区域的柯西积分公式",
+          "statement_markdown": "若 $f$ 在正向简单闭路 $C$ 及其外部区域 $D$ 解析，且 $\\lim_{z\\to\\infty}f(z)=A\\in\\mathbb C$，则\n$$\\frac1{2\\pi i}\\oint_C\\frac{f(\\zeta)}{\\zeta-z}\\,d\\zeta=\\begin{cases}A-f(z),&z\\in D,\\\\A,&z\\text{在}C\\text{内部}.\\end{cases}$$\n$z$ 不能位于积分路径 $C$ 上。",
+          "source_start_line": 98,
+          "source_end_line": 103,
+          "source_quote": "17. 试证明下述定理(无界区域的柯西积分公式): 设  $f(z)$  在闭路 C 及其外部区域 D 内解析, 且  $\\lim_{z\\to\\infty}f(z)=A\\neq\\infty$ . 则\n$$\\frac {1}{2 \\pi i} \\int_ {C} \\frac {f (\\zeta)}{\\zeta - z} \\mathrm{d} \\zeta = \\left\\{ \\begin{array}{l l} {- f (z) + A,} & {z \\in D} \\\\ {A,} & {z \\in C \\text {的内部区域}.} \\end{array} \\right.$$\n提示 当 $z \\in D$ 时，以充分大的 $R$ 为半径作圆周 $\\Gamma: |\\zeta| = R$。使 $z$ 在复闭路 $L = \\Gamma + C^{-}$ 内，则\n$$\\frac {1}{2 \\pi \\mathrm{i}} \\int_ {L} \\frac {f (\\zeta)}{\\zeta - z} \\mathrm{d} \\zeta = f (z).$$\n再证明\n$$\\lim _ {R \\rightarrow \\infty} \\frac {1}{2 \\pi \\mathrm{i}} \\int_ {r} \\frac {f (\\zeta)}{\\zeta - z} \\mathrm{d} \\zeta = A.$$",
+          "after": "教材中的[用平均值公式计算积分](#reader-682c68b2f5b30f119239)、[非常数解析函数无零点时模无内部最小值](#reader-e86304df45ee3f9382c7)、[用柯西不等式刻画整函数增长](#reader-dbe950c766a98224e11c)保留了完整题目和推演，可展开对照本节的思路。"
+        },
+        {
+          "id": "CH03-S05-C012",
+          "title": "无零点解析函数的最小模原理",
+          "statement_markdown": "若 $f$ 在区域 $D$ 内解析、不恒为常数且没有零点，则 $|f|$ 不可能在 $D$ 内部取得局部最小值。",
+          "source_start_line": 104,
+          "source_end_line": 104,
+          "source_quote": "18. 如果 $f(z)$ 是区域 $D$ 内不恒为常数的解析函数且没有零点，证明 $|f(z)|$ 不可能在 $D$ 内达到最小值.",
+          "after": "教材中的[用平均值公式计算积分](#reader-682c68b2f5b30f119239)、[非常数解析函数无零点时模无内部最小值](#reader-e86304df45ee3f9382c7)、[用柯西不等式刻画整函数增长](#reader-dbe950c766a98224e11c)保留了完整题目和推演，可展开对照本节的思路。"
+        },
+        {
+          "id": "CH03-S05-C013",
+          "title": "边界模大而中心模小时必有零点",
+          "statement_markdown": "若 $f$ 在闭圆盘 $|z|\\le a$（$a>0$）上解析，圆周上 $|f(z)|>m$，且 $|f(0)|<m$，则 $f$ 在 $|z|<a$ 中至少有一个零点。",
+          "source_start_line": 105,
+          "source_end_line": 106,
+          "source_quote": "19. 设 $f(z)$ 在 $|z| \\leqslant a$ 解析，在圆周 $|z| = a$ 上有 $|f(z)| > m$，且 $|f(0)| < m$，证明 $f(z)$ 在 $|z| < a$ 内至少有一个零点。\n提示 利用上题.",
+          "after": "教材中的[用平均值公式计算积分](#reader-682c68b2f5b30f119239)、[非常数解析函数无零点时模无内部最小值](#reader-e86304df45ee3f9382c7)、[用柯西不等式刻画整函数增长](#reader-dbe950c766a98224e11c)保留了完整题目和推演，可展开对照本节的思路。"
+        },
+        {
+          "id": "CH03-S05-SC001",
+          "title": "整函数的多项式增长判别",
+          "statement_markdown": "柯西估计还给出常用的整函数增长判别：设 $f$ 在全平面解析，存在 $A>0$ 和非负整数 $n$，使所有复数 $z$ 都满足 $|f(z)|\\le A(1+|z|)^n$，则 $f$ 是次数不超过 $n$ 的多项式。教材解析例题采用的更强条件 $|f(z)|\\le A|z|^n$ 也保证同一结论。这里是对整个平面的统一增长限制；只在一条射线或一个固定圆盘内成立不够。正式估计过程仍放在[整函数增长例题](#reader-dbe950c766a98224e11c)中。",
+          "source_start_line": 31,
+          "source_end_line": 38,
+          "source_quote": "柯西不等式 设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则\n$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$\n事实上由定理6及长大不等式，有\n$$\\begin{array}{r l} \\mid f ^ {(n)} (z) \\mid & = \\left| \\frac {n !}{2 \\pi \\mathrm{i}} \\int_ {C} \\frac {f (\\zeta)}{(\\zeta - z) ^ {n + 1}} \\mathrm{d} \\zeta \\right| \\\\ & = \\frac {n !}{2 \\pi} \\left| \\int_ {C} \\frac {f (\\zeta)}{(\\zeta - z) ^ {n + 1}} \\mathrm{d} \\zeta \\right| \\\\ & \\leqslant \\frac {n !}{2 \\pi} \\frac {M}{R ^ {n + 1}} \\cdot 2 \\pi R = \\frac {n ! M}{R ^ {n}}, \\end{array}$$\n这个关系称为柯西不等式.特别当 $n = 1$ 时，有\n$$\\mid f ^ {\\prime} (z) \\mid \\leqslant \\frac {M}{R}.$$\n如果 $f(z)$ 在有限复平面上解析，就把它叫做整函数.如多项式， $\\mathrm{e}^z$ ，cosz，sinz，$\\cosh z,\\sinh z$ 等都是整函数.从柯西不等式可以得到关于整函数的一个重要结论\n定理7（刘维尔(Liouville）定理）如果整函数在整个平面上有界，即对所有$z$ 满足不等式 $|f(z)|\\leqslant M$ ，则 $f(z)$ 必是常数.",
+          "after": "如果函数在全平面解析，称为整函数。若它还在整个平面共用同一个有限界 $M$，那么上面的导数估计允许把圆半径取得任意大，迫使导数为零。这就是刘维尔定理：有界整函数必为常数。只在每个有限圆盘内各有一个界并不够；任何多项式都满足后者，但它的界一般随圆盘增大而增长。正式证明可展开[刘维尔定理](#reader-65b0ef445c9771c358d9)。",
+          "source_note": "由教材柯西估计得到的通用推论；原解析增长例题的结果默认可见，完整演算仍折叠。"
+        }
+      ]
+    }
+  }
+}

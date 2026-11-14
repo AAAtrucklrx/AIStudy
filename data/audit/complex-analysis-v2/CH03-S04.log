@@ -1,0 +1,51 @@
+—— CH03-S04 回路开始（run 2026-10-03 08:59:33）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 2, '教案问题明细': ['CH03-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH03-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'], '教案提醒': 2, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 2 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH03-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH03-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [6] 条 → 并集 4 条工单
+    T-Rc4a5b [P1] hits=2 「CH03-S04: 有一张图没声明**服务什么** （缺 concept」
+    T-8d426c [P0] hits=1 「例6 用定理5 计算 $\int_C\frac{\mathrm{e}^{」
+    T-a947c0 [P0] hits=1 「例8 把定理5 与柯西积分定理合起来用，证明两个含 $f(0)$ 与 $」
+    T-582c37 [P1] hits=1 「例7 用定理6 计算 $\int_C\frac{\cos z}{(z-i」
+[轮 1] 按 4 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH03-S04 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH03-S04.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH03-S04 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH03-S04.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 2 条：['CH03-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH03-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 3 / 仍开着 1；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 0 条（丢了 3 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-Rc4a5b [P1]：两张过程图已标注服务内容（「定理5 的证明路线」「定理6 中 $n=1$ 的证明路线」），但仍有两处「（插图）」未声明服务什么，工单未完全落
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（1 条）：
+  [P1] T-Rc4a5b 「CH03-S04: 有一张图没声明**服务什么** （缺 concept_id/」
+记录写到 data/audit/complex-analysis-v2/CH03-S04.loop.json
+—— CH03-S04 回路开始（run 2026-10-03 11:06:18）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 2, '教案问题明细': ['CH03-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH03-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'], '教案提醒': 3, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 2 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH03-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH03-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  上一趟的 ['T-Rc4a5b', 'T-Rc4a5b'] 原句已不在成品里 → 视为已改，不再背
+  每次 [3] 条 → 并集 2 条工单
+    T-Rc4a5b [P1] hits=2 「CH03-S04: 有一张图没声明**服务什么** （缺 concept」
+    T-fd47ad [P1] hits=1 「半径在 $(0,2)$ 里怎么取都不影响结果，因为任意两条这样的圆周之间」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH03-S04 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH03-S04.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH03-S04 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH03-S04.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 2 条：['CH03-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH03-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 1 / 仍开着 1；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 0 条（丢了 3 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-Rc4a5b [P1]：定理5 的图已加了「下面这张图服务的是定理5 的证明：…」的声明，但定理6 证明中「只要 |h|<δ，点 z+h 就还在 D 内」后面那张图
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（1 条）：
+  [P1] T-Rc4a5b 「CH03-S04: 有一张图没声明**服务什么** （缺 concept_id/」
+记录写到 data/audit/complex-analysis-v2/CH03-S04.loop.json

@@ -1,0 +1,137 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH03-S05",
+    "text_sha256": "a1f37bfe38a5f85b30eef156478f856ac17f6ab9595060b68a7877316ed11631",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "a1f37bfe38a5f85b30eef156478f856ac17f6ab9595060b68a7877316ed11631",
+    "source": "original_text",
+    "source_path": "original_text/ch03_s05.md"
+  },
+  "unit": {
+    "unit_id": "CH03-S05",
+    "level": "section",
+    "chapter": "CH03",
+    "section": "CH03-S05",
+    "title": "解析函数的性质",
+    "anchor": "3.5"
+  },
+  "concepts": [
+    {
+      "name": "平均值公式",
+      "type": "formula",
+      "formal": "设 $f(z)$ 在闭圆 $|z - a| \\leqslant R$ 上解析，则 $f(z)$ 在圆心 $a$ 的值，等于它在圆周上的值的算术平均值。即\n$$f (a) = \\frac {1}{2 \\pi R} \\int_ {c} f (\\zeta) d s.$$\n其中， $C$ 是圆周 $\\mid z - a\\mid = R,\\mathrm{d}s$ 是 $C$ 上的弧长的微分.",
+      "source_quote": "平均值公式 设 $f(z)$ 在闭圆 $|z - a| \\leqslant R$ 上解析，则 $f(z)$ 在圆心 $a$ 的值，等于它在圆周上的值的算术平均值。"
+    },
+    {
+      "name": "最大模原理",
+      "type": "law",
+      "formal": "设 $f(z)$ 在有界域 $D$ 内解析，在有界闭域 $C + D$ 上连续，这里 $C$ 是 $D$ 的边界. 并且 $f(z)$ 不恒等于常数. 那么它的模 $\\mid f(z) \\mid$ 只能在边界 $C$ 上取到它在整个有界闭域 $C + D$ 上的最大值.",
+      "source_quote": "最大模原理 设 $f(z)$ 在有界域 $D$ 内解析，在有界闭域 $C + D$ 上连续，这里 $C$ 是 $D$ 的边界. 并且 $f(z)$ 不恒等于常数."
+    },
+    {
+      "name": "柯西不等式",
+      "type": "formula",
+      "formal": "设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则\n$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$",
+      "source_quote": "这个关系称为柯西不等式.特别当 $n = 1$ 时，有 $$\\mid f ^ {\\prime} (z) \\mid \\leqslant \\frac {M}{R}.$$"
+    },
+    {
+      "name": "长大不等式",
+      "type": "formula",
+      "formal": "由长大不等式，并注意到在 $K_{1}$ 上有 $\\mid f(z)\\mid \\leqslant M$",
+      "source_quote": "由定理6及长大不等式，有"
+    },
+    {
+      "name": "刘维尔定理",
+      "type": "theorem",
+      "formal": "如果整函数在整个平面上有界，即对所有$z$ 满足不等式 $|f(z)|\\leqslant M$ ，则 $f(z)$ 必是常数.",
+      "source_quote": "定理7（刘维尔(Liouville）定理）如果整函数在整个平面上有界，即对所有$z$ 满足不等式 $|f(z)|\\leqslant M$ ，则 $f(z)$ 必是常数."
+    },
+    {
+      "name": "代数学的基本定理",
+      "type": "theorem",
+      "formal": "任何复系数多项式\n$$f (z) = a _ {0} z ^ {n} + a _ {1} z ^ {n - 1} + \\dots + a _ {n - 1} z + a _ {n}, \\quad n \\geqslant 1, a _ {0} \\neq 0$$\n必有零点.亦即，方程 $f(z) = 0$ 必有根",
+      "source_quote": "代数学的基本定理 $^{①}$  任何复系数多项式 $$f (z) = a _ {0} z ^ {n} + a _ {1} z ^ {n - 1} + \\dots + a _ {n - 1} z + a _ {n}, \\quad n \\geqslant 1, a _ {0} \\neq 0$$ 必有零点."
+    },
+    {
+      "name": "莫雷拉定理",
+      "type": "theorem",
+      "formal": "如果函数 $f(z)$ 在域 $D$ 中是连续的，并且对$D$ 中任意封闭曲线 $C$ 有\n$$\\int_ {C} f (z) \\mathrm{d} z = 0,$$\n则 $f(z)$ 在 $D$ 内解析.",
+      "source_quote": "定理8（莫雷拉(Morera)定理）如果函数 $f(z)$ 在域 $D$ 中是连续的，并且对$D$ 中任意封闭曲线 $C$ 有 $$\\int_ {C} f (z) \\mathrm{d} z = 0,$$ 则 $f(z)$ 在 $D$ 内解析."
+    },
+    {
+      "name": "定理9",
+      "type": "theorem",
+      "formal": "$f(z)$ 在单连通区域 $D$ 内解析的充分必要条件是：$f(z)$ 在 $D$ 内连续，且对 $D$ 内的任何闭路 $C$ ，有",
+      "source_quote": "定理9 $f(z)$ 在单连通区域 $D$ 内解析的充分必要条件是：$f(z)$ 在 $D$ 内连续，且对 $D$ 内的任何闭路 $C$ ，有"
+    },
+    {
+      "name": "整函数",
+      "type": "definition",
+      "formal": "如果 $f(z)$ 在有限复平面上解析，就把它叫做整函数.",
+      "source_quote": "如果 $f(z)$ 在有限复平面上解析，就把它叫做整函数.如多项式， $\\mathrm{e}^z$ ，cosz，sinz，$\\cosh z,\\sinh z$ 等都是整函数."
+    },
+    {
+      "name": "柯西积分公式",
+      "type": "formula",
+      "formal": "由柯西积分公式，得\n$$f (a) = \\frac {1}{2 \\pi \\mathrm{i}} \\int_ {c} \\frac {f (\\zeta)}{\\zeta - a} \\mathrm{d} \\zeta$$",
+      "source_quote": "于是，由柯西积分公式，得 $$f (a) = \\frac {1}{2 \\pi \\mathrm{i}} \\int_ {c} \\frac {f (\\zeta)}{\\zeta - a} \\mathrm{d} \\zeta$$"
+    },
+    {
+      "name": "柯西积分定理",
+      "type": "theorem",
+      "formal": "综合柯西积分定理及莫累拉定理，得到解析函数的又一个特征性质.",
+      "source_quote": "综合柯西积分定理及莫累拉定理，得到解析函数的又一个特征性质."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 11,
+    "漏掉的具名结论": [
+      "定理9"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "解析函数的性质",
+      "得到的解析函数的性质",
+      "解析函数理论中的一个重要原理",
+      "事实上由定理",
+      "下面用反证法证明定理",
+      "下面的定理",
+      "一条件下定理",
+      "又据定理",
+      "得到解析函数的又一个特征性质",
+      "试证明下述定理",
+      "证明代数学基本定理"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "平均值公式",
+    "最大模原理",
+    "柯西不等式",
+    "长大不等式",
+    "刘维尔定理",
+    "代数学的基本定理",
+    "莫雷拉定理",
+    "定理9",
+    "整函数",
+    "柯西积分公式",
+    "柯西积分定理"
+  ]
+}

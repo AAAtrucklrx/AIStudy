@@ -1,0 +1,60 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH06-S02",
+    "text_sha256": "7e767959e3105d8973e8179afb8d03fd2cff0519fcbecefb65714bf9dbd0da04",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "7e767959e3105d8973e8179afb8d03fd2cff0519fcbecefb65714bf9dbd0da04",
+    "source": "original_text",
+    "source_path": "original_text/ch06_s02.md"
+  },
+  "unit": {
+    "unit_id": "CH06-S02",
+    "level": "section_intro",
+    "chapter": "CH06",
+    "section": "CH06-S02",
+    "title": "积分计算",
+    "anchor": "6.2"
+  },
+  "concepts": [
+    {
+      "name": "留数定理",
+      "type": "theorem",
+      "formal": "留数定理给定积分或广义积分的计算提供了一个有效的工具。",
+      "source_quote": "留数定理给定积分或广义积分的计算提供了一个有效的工具。"
+    },
+    {
+      "name": "牛顿－莱布尼兹公式",
+      "type": "formula",
+      "formal": "牛顿－莱布尼兹公式",
+      "source_quote": "在某些积分中被积函数的原函数，不能用初等函数表示，因而牛顿－莱布尼兹公式根本就无能为力；"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 2,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "留数定理",
+    "牛顿－莱布尼兹公式"
+  ]
+}

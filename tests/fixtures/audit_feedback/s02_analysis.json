@@ -1,0 +1,47 @@
+{
+  "unit": "CH04-S02",
+  "phenomenon": "verdict 判 closed，quote 与正文只有 LaTeX 空白差异（如 `\\int _ {0}` vs `\\int_{0}`）",
+  "current_text_source": "data/books/complex-analysis-v2/runs/run-20261006-142529-bad4aa/work/legacy/lesson/lessons/CH04-S02.json",
+  "current_text_sha256": "010c260cf35b1e55f3ed48a02906479b7ed9b3dac31c8dc0d1c522e9c01c9100",
+  "current_text_len": 9808,
+  "lesson_file_sha256": "168ebfdcfe4dfa7f73d4bbe95e27cf264ba0abee1ad5bc99d26fc543031767ae",
+  "window": {
+    "start": 1682,
+    "end": 6643,
+    "len": 4961
+  },
+  "window_exact_span_coverage": [
+    {
+      "start": 3229,
+      "end": 3350
+    },
+    {
+      "start": 1862,
+      "end": 2008
+    },
+    {
+      "start": 4977,
+      "end": 5417
+    },
+    {
+      "start": 1901,
+      "end": 2008
+    },
+    {
+      "start": 5631,
+      "end": 5900
+    },
+    {
+      "start": 6226,
+      "end": 6333
+    },
+    {
+      "start": 4977,
+      "end": 5417
+    },
+    {
+      "start": 5619,
+      "end": 6455
+    }
+  ]
+}

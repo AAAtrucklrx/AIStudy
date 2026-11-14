@@ -1,0 +1,17 @@
+# Local credentials and execution environments
+.secrets/
+.env
+.env.local
+.venv*/
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+*.egg-info/
+build/
+dist/
+# New run outputs and local model caches
+.models/
+data/books/*/runs/
+outputs/

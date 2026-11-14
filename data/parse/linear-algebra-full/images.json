@@ -1,0 +1,1089 @@
+{
+  "_meta": {
+    "file_type": "images",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.export",
+    "source_sha256": "2fb901476e339913698738d585d420fcd364edee6f8e4b2fa23e3789290d13a4",
+    "field_notes": {
+      "images[].id": "图片 id；教案正文用 [[FIGURE:IMG-0001]] 引用",
+      "images[].source": "markdown=正文里的 ![]() 引用；page=从 PDF 页面提取的插图",
+      "images[].page/bbox": "仅 source=page：插图所在页 + 在整页图上的像素框",
+      "images[].bbox_source": "local=本地几何检出；model=模型检出；both=两个来源都框到同一张图",
+      "images[].confidence": "high=两个来源重叠；medium=只有一个来源；low=两者差得远，建议人工看",
+      "images[].needs_review": "true 表示建议人工抽查这个框",
+      "images[].candidates": "这张图各来源给的原框，人工抽查时两个都能看",
+      "images[].file": "已裁出的单图文件；null 表示展示层按 bbox 从整页图裁即可",
+      "images[].concepts": "关联的概念 id（由教案块回填）"
+    }
+  },
+  "note": "两种来源：markdown 引用 + PDF 页面提取。页面提取的框有置信度分级（见任务基线 T1.5 的实测结论），needs_review=true 的框建议抽查。",
+  "sources": {
+    "markdown_refs": 0,
+    "page_figures": 29,
+    "figures_json": "figures.json"
+  },
+  "images": [
+    {
+      "id": "IMG-0001",
+      "source": "page",
+      "page": 8,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        404.0,
+        544.0,
+        686.0,
+        684.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            202.0,
+            272.0,
+            343.0,
+            342.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.1 向量的加法",
+      "file": "images/mineru-IMG-0001.jpg",
+      "sha256": "0411f1faa717f9ffc900152e215cea366d39a300655c8aff3d96a2bfb3bdbed2",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0002",
+      "source": "page",
+      "page": 10,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        426.0,
+        228.0,
+        658.0,
+        412.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            213.0,
+            114.0,
+            329.0,
+            206.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.2 三向量共面条件",
+      "file": "images/mineru-IMG-0002.jpg",
+      "sha256": "b44fb518900fed658ac59c555c7792bd5443b59e35886ad8493e09671faa031f",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0003",
+      "source": "page",
+      "page": 12,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        408.0,
+        222.0,
+        686.0,
+        430.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            204.0,
+            111.0,
+            343.0,
+            215.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图1.3",
+      "file": "images/mineru-IMG-0003.jpg",
+      "sha256": "1104a3f89360b2ac047eef90474446e3c3fcb2e19ff8ee0f24a173fbff6311d2",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0004",
+      "source": "page",
+      "page": 13,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        476.0,
+        228.0,
+        766.0,
+        452.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            238.0,
+            114.0,
+            383.0,
+            226.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.4 向量基本定理",
+      "file": "images/mineru-IMG-0004.jpg",
+      "sha256": "2645a39a017fd8ef8b9934c074fd3756b2648f2e4cbf29def63b7498783fa515",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0005",
+      "source": "page",
+      "page": 15,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        266.0,
+        222.0,
+        874.0,
+        454.0
+      ],
+      "bbox_source": "mineru-merged",
+      "bbox_picked": "mineru-merged",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            133.0,
+            112.0,
+            249.0,
+            227.0
+          ]
+        },
+        {
+          "source": "mineru",
+          "bbox": [
+            321.0,
+            111.0,
+            437.0,
+            227.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图1.5",
+      "file": "images/mineru-IMG-0005.jpg",
+      "sha256": "35b5114783cde4f16908cc00b669fd6846b4746ed4dd47af5c03d6c1fdc329cc",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0006",
+      "source": "page",
+      "page": 16,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        430.0,
+        928.0,
+        662.0,
+        1142.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            215.0,
+            464.0,
+            331.0,
+            571.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.6 方向余弦",
+      "file": "images/mineru-IMG-0006.jpg",
+      "sha256": "45595dbdff89642d2717dd700ca7ac8351e08d139b8d1a4da5a8773809722130",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0007",
+      "source": "page",
+      "page": 18,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        398.0,
+        400.0,
+        696.0,
+        562.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            199.0,
+            200.0,
+            348.0,
+            281.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.7",
+      "file": "images/mineru-IMG-0007.jpg",
+      "sha256": "4c633d5b8cdcbe13372c8abaa49a628ad2f9b45f98fa225f6401881c66bbe90c",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0008",
+      "source": "page",
+      "page": 20,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        478.0,
+        1166.0,
+        636.0,
+        1384.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            239.0,
+            583.0,
+            318.0,
+            692.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.8 向量的外积",
+      "file": "images/mineru-IMG-0008.jpg",
+      "sha256": "5241a414992c91eef59f5cae2ce5d416feb6a12dbb1d374bdd7481eb75887306",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0009",
+      "source": "page",
+      "page": 21,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        224.0,
+        854.0,
+        898.0,
+        1062.0
+      ],
+      "bbox_source": "mineru-merged",
+      "bbox_picked": "mineru-merged",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            112.0,
+            427.0,
+            263.0,
+            531.0
+          ]
+        },
+        {
+          "source": "mineru",
+          "bbox": [
+            288.0,
+            428.0,
+            449.0,
+            530.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.9",
+      "file": "images/mineru-IMG-0009.jpg",
+      "sha256": "50fe9c7e1107b7177fad7c8aced0e4649557fad17746f982ffc77877c23e57ab",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0010",
+      "source": "page",
+      "page": 24,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        434.0,
+        1088.0,
+        658.0,
+        1300.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            217.0,
+            544.0,
+            329.0,
+            650.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.10 向量的混合积",
+      "file": "images/mineru-IMG-0010.jpg",
+      "sha256": "a6818aba1ddd9f0420e3a9e93be9d18f959009571d192eb7a4b0a1cc05ee0d40",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0011",
+      "source": "page",
+      "page": 29,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        290.0,
+        412.0,
+        422.0,
+        538.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            145.0,
+            206.0,
+            211.0,
+            269.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.11 集合的包含",
+      "file": "images/mineru-IMG-0011.jpg",
+      "sha256": "30614efe53f05ff6a7d510b146bb42ddd2dd3b086a29f3575c5abdb6c4503305",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0012",
+      "source": "page",
+      "page": 29,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        524.0,
+        414.0,
+        720.0,
+        542.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            262.0,
+            207.0,
+            360.0,
+            271.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.12 集合的交",
+      "file": "images/mineru-IMG-0012.jpg",
+      "sha256": "3fc1e54ab5e6f8fe5d3aaf64c53126255d2235cd3bd77e3aa459e744ea99eb52",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0013",
+      "source": "page",
+      "page": 29,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        778.0,
+        418.0,
+        960.0,
+        538.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            389.0,
+            209.0,
+            480.0,
+            269.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.13 集合的并",
+      "file": "images/mineru-IMG-0013.jpg",
+      "sha256": "93ef9a70e80c2d1b72635cda36e5174c511435891d09713e80ad7171999078fc",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0014",
+      "source": "page",
+      "page": 30,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        224.0,
+        1182.0,
+        462.0,
+        1336.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            112.0,
+            591.0,
+            231.0,
+            668.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.14 集合的差集 A - B",
+      "file": "images/mineru-IMG-0014.jpg",
+      "sha256": "14d08572b8891bdd651eaa8290563bd97b3b281ed94f10e1024a7c8fcb4cd8b6",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0015",
+      "source": "page",
+      "page": 30,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        654.0,
+        1204.0,
+        846.0,
+        1354.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            327.0,
+            602.0,
+            423.0,
+            677.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图1.15 集合的补集 A^c",
+      "file": "images/mineru-IMG-0015.jpg",
+      "sha256": "e10d5d37568d6b3bba3b6735a2287057121c0ffa756387cb1b6411a6af9eb34a",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0016",
+      "source": "page",
+      "page": 38,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        414.0,
+        894.0,
+        674.0,
+        1110.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            207.0,
+            447.0,
+            337.0,
+            555.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.16 复数的几何定义",
+      "file": "images/mineru-IMG-0016.jpg",
+      "sha256": "98295b76b56be5ff690e46d2bd9e1525144822fa5c7a4db67a53402655462b81",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0017",
+      "source": "page",
+      "page": 59,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        348.0,
+        1240.0,
+        884.0,
+        1424.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            174.0,
+            620.0,
+            442.0,
+            712.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0017.jpg",
+      "sha256": "eb93b4ea8bd0fd9c08b700521df70c9baf8f443acda8657a9dc292eaa5bfdfac",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0018",
+      "source": "page",
+      "page": 62,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        422.0,
+        296.0,
+        712.0,
+        476.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            211.0,
+            148.0,
+            356.0,
+            238.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0018.jpg",
+      "sha256": "6501abe036fd85c64066dd1d229ea2b86e8d230c2d45e305c0af4afc628f8216",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0019",
+      "source": "page",
+      "page": 72,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        396.0,
+        250.0,
+        690.0,
+        518.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            198.0,
+            125.0,
+            345.0,
+            259.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 3.1 二阶行列式的几何意义",
+      "file": "images/mineru-IMG-0019.jpg",
+      "sha256": "018ee64964f6b405f72625ff8c4f38370f06c321974697be8ea55cd26cf91478",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0020",
+      "source": "page",
+      "page": 72,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        388.0,
+        760.0,
+        706.0,
+        1056.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            194.0,
+            380.0,
+            353.0,
+            528.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 3.2 三阶行列式的几何意义",
+      "file": "images/mineru-IMG-0020.jpg",
+      "sha256": "41cb5f25b3492760c0a4dd6b62a5885065da4afdbd783699b0a70b8ab6d56a1e",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0021",
+      "source": "page",
+      "page": 75,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        464.0,
+        666.0,
+        768.0,
+        976.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            232.0,
+            333.0,
+            384.0,
+            488.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 3.3 行列式性质4的几何解释.",
+      "file": "images/mineru-IMG-0021.jpg",
+      "sha256": "24444671600dbc8c6b8ffdf4c5cd0ddee13a59f4ac46bf396585cb9e005aa51a",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0022",
+      "source": "page",
+      "page": 91,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        512.0,
+        250.0,
+        720.0,
+        518.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            256.0,
+            125.0,
+            360.0,
+            259.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 4.1 图的邻接矩阵",
+      "file": "images/mineru-IMG-0022.jpg",
+      "sha256": "f78b44fb20f7a4196fd6a0b832fa65c95a92861a5da91faca7abc511fc45914e",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0023",
+      "source": "page",
+      "page": 92,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        402.0,
+        440.0,
+        690.0,
+        728.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            201.0,
+            220.0,
+            345.0,
+            364.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 4.2 数字图像",
+      "file": "images/mineru-IMG-0023.jpg",
+      "sha256": "7afd95df70d9cf04438feae111ba2dfecf13b5cebbb7962baebb05671407d2d1",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0024",
+      "source": "page",
+      "page": 101,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        210.0,
+        354.0,
+        1046.0,
+        476.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            105.0,
+            177.0,
+            523.0,
+            238.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 4.3 矩阵乘积行列式的几何意义",
+      "file": "images/mineru-IMG-0024.jpg",
+      "sha256": "b5005c516ab8ac46fa857683876b55cb39d5165b3fa3891ee8e2f39d77727a4e",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0025",
+      "source": "page",
+      "page": 180,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        172.0,
+        434.0,
+        918.0,
+        836.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            86.0,
+            217.0,
+            459.0,
+            418.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 6.1 图形的线性变换",
+      "file": "images/mineru-IMG-0025.jpg",
+      "sha256": "cae86b303095481b0b37433a5ce4dd0edc4c5cf9d5fa3ea60be7ce7e03402168",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0026",
+      "source": "page",
+      "page": 184,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        190.0,
+        250.0,
+        890.0,
+        592.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            95.0,
+            125.0,
+            445.0,
+            296.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 6.2 线性变换的特征值与特征向量的几何意义",
+      "file": "images/mineru-IMG-0026.jpg",
+      "sha256": "0df409da385a7bc90f208277e830da4f003f20232e47b7e4addc581c71a1a90a",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0027",
+      "source": "page",
+      "page": 224,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        442.0,
+        552.0,
+        622.0,
+        684.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            221.0,
+            276.0,
+            311.0,
+            342.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0027.jpg",
+      "sha256": "c4911c29db9672a009d9f8e9083870c45c1849bb48d00a2b4cc1ee4475bb4b74",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0028",
+      "source": "page",
+      "page": 229,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        370.0,
+        250.0,
+        856.0,
+        618.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            185.0,
+            125.0,
+            428.0,
+            309.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 7.1 向量的正交投影",
+      "file": "images/mineru-IMG-0028.jpg",
+      "sha256": "86ee475ed80eced5087e10ef2e7f144bbc83a509575ce733dbc0bcccfda1fe12",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0029",
+      "source": "page",
+      "page": 248,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        176.0,
+        244.0,
+        916.0,
+        1088.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            88.0,
+            122.0,
+            458.0,
+            544.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "file": "images/mineru-IMG-0029.jpg",
+      "sha256": "6502435bbea4fa52310e5346b284d270f4c5aed25f9efad456ea6f9fbf45b067",
+      "concepts": [],
+      "occurrences": []
+    }
+  ]
+}

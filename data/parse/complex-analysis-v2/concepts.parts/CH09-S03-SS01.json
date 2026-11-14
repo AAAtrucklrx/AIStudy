@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH09-S03-SS01",
+    "text_sha256": "5ef27e09395ffe6c3210aa5deacf910662ac734ae35e2a368d4b2b5f2ac7aaff",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "5ef27e09395ffe6c3210aa5deacf910662ac734ae35e2a368d4b2b5f2ac7aaff",
+    "source": "original_text",
+    "source_path": "original_text/ch09_s03_ss01.md"
+  },
+  "unit": {
+    "unit_id": "CH09-S03-SS01",
+    "level": "subsection",
+    "chapter": "CH09",
+    "section": "CH09-S03",
+    "title": "部分分式法",
+    "anchor": "9.3.1"
+  },
+  "concepts": [
+    {
+      "name": "拉氏逆变换的线性性",
+      "type": "property",
+      "formal": "据拉氏逆变换的线性性，得\n$$\\begin{array}{r l} \\mathrm{L} ^ {- 1} \\left[ \\frac {A (p)}{B (p)} \\right] & = \\sum_ {k = 1} ^ {m} \\sum_ {s = 1} ^ {m _ {k}} \\mathrm{L} ^ {- 1} \\left[ \\frac {A _ {k s}}{(p - a _ {k}) ^ {s}} \\right] \\\\ & = \\sum_ {k = 1} ^ {m} \\sum_ {s = 1} ^ {m _ {k}} A _ {k s} \\frac {t ^ {s - 1}}{(s - 1) !} \\mathrm{e} ^ {a _ {k} t}. \\end{array}$$",
+      "source_quote": "其中， $A_{\\mathrm{b}}$ 是复常数.于是，据拉氏逆变换的线性性，得"
+    },
+    {
+      "name": "本函数积分法",
+      "type": "formula",
+      "formal": "$\\mathrm{L}\\left[\\int_0^t f(t)\\mathrm{d}t\\right] = \\frac{F(p)}{p}$",
+      "source_quote": "故由本函数积分法 $\\mathrm{L}\\left[\\int_0^t f(t)\\mathrm{d}t\\right] = \\frac{F(p)}{p}$ 及"
+    },
+    {
+      "name": "有理真分式函数存在本函数",
+      "type": "proposition",
+      "formal": "有理真分式函数一定存在本函数.",
+      "source_quote": "首先证明有理真分式函数一定存在本函数."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 3,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "拉氏逆变换的线性性",
+    "本函数积分法",
+    "有理真分式函数存在本函数"
+  ]
+}

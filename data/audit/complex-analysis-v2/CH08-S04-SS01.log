@@ -1,0 +1,48 @@
+—— CH08-S04-SS01 回路开始（run 2026-10-03 11:16:58）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 3, '教案问题明细': ['CH08-S04-SS01: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH08-S04-SS01: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH08-S04-SS01: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'], '教案提醒': 5, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 3 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH08-S04-SS01: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH08-S04-SS01: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [5] 条 → 并集 3 条工单
+    T-Re9ebc [P1] hits=3 「CH08-S04-SS01: 有一张图没声明**服务什么** （缺 co」
+    T-b4e148 [P1] hits=1 「剩下的交给分式幂函数 $w=T^{3/2}$，它把张口 $2\pi/3$」
+    T-c28520 [P1] hits=1 「角域到手后，用幂函数或分式幂函数把张口张开成 $\pi$，就得到上半平面」
+[轮 1] 按 3 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH08-S04-SS01 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH08-S04-SS01.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH08-S04-SS01 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH08-S04-SS01.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 3 条：['CH08-S04-SS01: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH08-S04-SS01: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 2 / 仍开着 1；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 2 条
+  📌 发现 1 处**原文疑似有错** → 记进勘误清单（不改成品）
+  📌 原文疑似有错：这一节 1 条 → 原文疑似有错.json（共 57 条）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-Re9ebc [P1]：两处「（过程图）从 $w^n=z$ 解出 $n$ 个分支」「（过程图）把区域化成上半平面的三步」已带上说明内容的标题，但例4/例5/例6 这
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（1 条）：
+  [P1] T-Re9ebc 「CH08-S04-SS01: 有一张图没声明**服务什么** （缺 concep」
+记录写到 data/audit/complex-analysis-v2/CH08-S04-SS01.loop.json
+—— CH08-S04-SS01 回路开始（run 2026-10-03 12:18:25）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 0, '教案问题明细': [], '教案提醒': 5, 'audit_error': ''}
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  上一趟的 ['T-Re9ebc', 'T-Re9ebc'] 原句已不在成品里 → 视为已改，不再背
+  每次 [2] 条 → 并集 1 条工单
+    T-b94502 [P1] hits=1 「若区域的两条边界是相交的直线或圆弧，先用分式线性变换把一个交点送到无穷远」
+[轮 1] 按 1 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH08-S04-SS01 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH08-S04-SS01.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH08-S04-SS01 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH08-S04-SS01.feedback.json --temperature 0.0 --seed 42
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 1 / 仍开着 0；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 1 条（丢了 1 条没引到原句的）
+  ✓ 验收：重新独立发现没有 P0
+── 卡在哪（这一趟）──────────────────────────────
+   · 没有卡住：工单全部关闭、验收无 P0
+
+结论：通过（工单全部关闭，且没有新的 P0）
+记录写到 data/audit/complex-analysis-v2/CH08-S04-SS01.loop.json

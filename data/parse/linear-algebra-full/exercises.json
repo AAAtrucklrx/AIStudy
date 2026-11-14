@@ -1,0 +1,3563 @@
+{
+  "_meta": {
+    "file_type": "exercises",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.exercises",
+    "field_notes": {
+      "entries[]": "一条习题或一条答案；**只搬不改**，text 逐行等于 document.md",
+      "entries[].kind": "exercise=习题 / answer=答案（**答案可以没有**）",
+      "entries[].placement": "习题所在位置：section=节后 / chapter=章后 / book=全书之后（由**发现到的位置**决定，不预设）",
+      "entries[].answer_of": "答案指向哪道题；按 (章, 题号) 配对，**配不上就是 null**",
+      "entries[].source_lines": "在 document.md 里的行号区间（可逐字节复核）",
+      "segments": "这次发现到的习题/答案区段（页码区间）",
+      "统计": "数量账：习题多少、答案多少、配上的多少"
+    },
+    "note": "这一层**先不用**：不生成教案、不抽概念、不进交付页"
+  },
+  "书": "",
+  "segments": [
+    {
+      "region": "exercise",
+      "start_line": 643,
+      "end_line": 681,
+      "start_page": 44,
+      "end_page": 47
+    },
+    {
+      "region": "exercise",
+      "start_line": 1866,
+      "end_line": 1969,
+      "start_page": 127,
+      "end_page": 133
+    },
+    {
+      "region": "exercise",
+      "start_line": 2640,
+      "end_line": 2751,
+      "start_page": 171,
+      "end_page": 179
+    },
+    {
+      "region": "exercise",
+      "start_line": 3299,
+      "end_line": 3431,
+      "start_page": 211,
+      "end_page": 219
+    },
+    {
+      "region": "exercise",
+      "start_line": 4096,
+      "end_line": 4201,
+      "start_page": 253,
+      "end_page": 259
+    },
+    {
+      "region": "exercise",
+      "start_line": 4653,
+      "end_line": 4753,
+      "start_page": 283,
+      "end_page": 289
+    }
+  ],
+  "entries": [
+    {
+      "id": "EX-0001",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-82f4b69930",
+      "number": "1",
+      "page": 44,
+      "source_lines": [
+        644,
+        644
+      ],
+      "text": "1. 设  $\\overrightarrow{AM} = \\overrightarrow{MB}$ ，证明：对任意一点 O,  $\\overrightarrow{OM} = \\frac{1}{2} (\\overrightarrow{OA} + \\overrightarrow{OB})$ .",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0002",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-82f4b69930",
+      "number": "2",
+      "page": 44,
+      "source_lines": [
+        645,
+        646
+      ],
+      "text": "2. 设 O 为一定点, A, B, C 为不共线的三点. 证明点 M 位于平面 ABC 上的充分必要条件是存在实数  $k_{1}, k_{2}, k_{3}$ , 使得\n$$\\overrightarrow {O M} = k _ {1} \\overrightarrow {O A} + k _ {2} \\overrightarrow {O B} + k _ {3} \\overrightarrow {O C}, \\quad \\text {且} \\quad k _ {1} + k _ {2} + k _ {3} = 1.$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0003",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-cd30173a12",
+      "number": "3",
+      "page": 44,
+      "source_lines": [
+        647,
+        647
+      ],
+      "text": "3. 证明向量 $\\mathbf{a} - \\mathbf{b} + \\mathbf{c}, -2\\mathbf{a} + 3\\mathbf{b} - 2\\mathbf{c}, 2\\mathbf{a} - \\mathbf{b} + 2\\mathbf{c}$ 线性相关.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0004",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-cd30173a12",
+      "number": "4",
+      "page": 44,
+      "source_lines": [
+        648,
+        648
+      ],
+      "text": "4. 证明: 三维空间中四个或四个以上的向量一定线性相关.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0005",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-cd30173a12",
+      "number": "5",
+      "page": 44,
+      "source_lines": [
+        649,
+        651
+      ],
+      "text": "5. 设  $e_{1}, e_{2}, e_{3}$  为一组基.\n(1) 证明:  $a = e_{1} + 2e_{2} - e_{3}, b = 2e_{1} + e_{2} + e_{3}, c = 3e_{1} + 2e_{3}$  为一组基;\n(2) 设  $\\tilde{c}=3e_{1}+xe_{2}+2e_{3}$ ，当 x 取何值时，a,b, $\\tilde{c}$  共面.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0006",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-cd30173a12",
+      "number": "6",
+      "page": 44,
+      "source_lines": [
+        652,
+        652
+      ],
+      "text": "6. 已知三点 $A(2,1,-1), B(3,5,1), C(1,-3,-3)$, 问 $A, B, C$ 是否共线?",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0007",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-cd30173a12",
+      "number": "7",
+      "page": 44,
+      "source_lines": [
+        653,
+        653
+      ],
+      "text": "7. 已知线段 AB 被点  $C(1,2,3)$  和  $D(2,-1,5)$  三等分, 求端点 A, B 的坐标.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0008",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-1f8bd9600f",
+      "number": "8",
+      "page": 44,
+      "source_lines": [
+        654,
+        654
+      ],
+      "text": "8. 设  $\\mathbf{a}=(1,-2,4)$ ,  $\\mathbf{b}=(2,2,1)$ , 试计算  $\\mathbf{a}\\cdot\\mathbf{b}, (\\mathbf{a}+\\mathbf{b})\\cdot(\\mathbf{a}-\\mathbf{b}), (\\mathbf{a}-\\mathbf{b})^{2}$ .",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0009",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-1f8bd9600f",
+      "number": "9",
+      "page": 44,
+      "source_lines": [
+        655,
+        655
+      ],
+      "text": "9. 设三个向量 $\\mathbf{a}, \\mathbf{b}, \\mathbf{c}$ 两两间的夹角为 $45^{\\circ}$, 且 $|\\mathbf{a}| = 1, |\\mathbf{b}| = 2, |\\mathbf{c}| = 3$. 求向量 $\\mathbf{a} + 2\\mathbf{b} - \\mathbf{c}$ 的模.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0010",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-1f8bd9600f",
+      "number": "10",
+      "page": 44,
+      "source_lines": [
+        656,
+        656
+      ],
+      "text": "10. 设 a, b, c 是满足  $a + b + c = 0$  的单位向量, 试求  $a \\cdot b + b \\cdot c + c \\cdot a$  的值.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0011",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-1f8bd9600f",
+      "number": "11",
+      "page": 44,
+      "source_lines": [
+        657,
+        657
+      ],
+      "text": "11. 设向量 a, b 的夹角为  $60^{\\circ}$ ，且  $|a| = 1, |b| = 2$ ，试求  $(\\mathbf{a} \\times \\mathbf{b})^{2}, |(\\mathbf{a} + \\mathbf{b}) \\times (\\mathbf{a} - \\mathbf{b})|$ .",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0012",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-29e30f4dab",
+      "number": "12",
+      "page": 44,
+      "source_lines": [
+        658,
+        658
+      ],
+      "text": "12. 设向量 $\\mathbf{a} = (1, -1, 2), \\mathbf{b} = (2, 3, -4)$, 求 $\\mathbf{a} \\times \\mathbf{b}, (\\mathbf{a} + \\mathbf{b}) \\times (\\mathbf{a} - \\mathbf{b})$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0013",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-29e30f4dab",
+      "number": "13",
+      "page": 44,
+      "source_lines": [
+        659,
+        659
+      ],
+      "text": "13. 一个四面体的顶点为 $A(1,2,3), B(-1,0,2), C(2,4,5), D(0,-3,4)$, 求它的体积.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0014",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-29e30f4dab",
+      "number": "14",
+      "page": 44,
+      "source_lines": [
+        660,
+        668
+      ],
+      "text": "14. 判断下列结论是否成立, 不成立时请举例说明.\n(1) 若 $\\mathbf{a} \\cdot \\mathbf{b} = 0$, 则 $\\mathbf{a} = \\mathbf{0}$ 或 $\\mathbf{b} = \\mathbf{0}$;\n(2) 若  $a \\times b = a \\times c$ ，则必有 b = c;\n(3) $(\\mathbf{a} \\cdot \\mathbf{b})\\mathbf{c} = \\mathbf{a}(\\mathbf{b} \\cdot \\mathbf{c})$;\n[第 45 页]\n§1.10 求和符号*\n(4) $(\\mathbf{a} \\cdot \\mathbf{b})^2 = \\mathbf{a}^2 \\cdot \\mathbf{b}^2$;\n(5)  $(\\mathbf{a}+\\mathbf{b})\\times(\\mathbf{a}+\\mathbf{b})=\\mathbf{a}\\times\\mathbf{a}+2\\mathbf{a}\\times\\mathbf{b}+\\mathbf{b}\\times\\mathbf{b};$\n(6)  $(\\mathbf{a} \\times \\mathbf{b}) \\cdot \\mathbf{c} = \\mathbf{a} \\times (\\mathbf{b} \\cdot \\mathbf{c})$ .",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0015",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-b4266fd6e3",
+      "number": "15",
+      "page": 45,
+      "source_lines": [
+        669,
+        671
+      ],
+      "text": "15. 证明下列等式:\n(1) $(\\mathbf{a} \\times \\mathbf{b})^2 = \\mathbf{a}^2\\mathbf{b}^2 - (\\mathbf{a} \\cdot \\mathbf{b})^2$.\n(2)  $(\\mathbf{a} \\times \\mathbf{b}) \\times \\mathbf{c} + (\\mathbf{b} \\times \\mathbf{c}) \\times \\mathbf{a} + (\\mathbf{c} \\times \\mathbf{a}) \\times \\mathbf{b} = \\mathbf{0}.$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0016",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-58286d048b",
+      "number": "16",
+      "page": 45,
+      "source_lines": [
+        672,
+        673
+      ],
+      "text": "16. 证明共轭复数的下列性质:\n$$| z | ^ {2} = z \\bar {z}, \\quad \\overline {{z _ {1} + z _ {2}}} = \\overline {{z _ {1}}} + \\overline {{z _ {2}}}, \\quad \\overline {{z _ {1} z _ {2}}} = \\overline {{z _ {1}}} \\overline {{z _ {2}}}.$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0017",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-58286d048b",
+      "number": "17",
+      "page": 45,
+      "source_lines": [
+        674,
+        674
+      ],
+      "text": "17. 设 $z = \\cos \\theta + i \\sin \\theta \\neq 1$, 求 $\\frac{1 + z}{1 - z}$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0018",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-58286d048b",
+      "number": "18",
+      "page": 45,
+      "source_lines": [
+        675,
+        677
+      ],
+      "text": "18. 求下列和式:\n(1)  $1 + \\cos\\theta + \\cos2\\theta + \\cdots + \\cos n\\theta;$\n(2)  $\\sin\\theta + \\sin2\\theta + \\cdots + \\sin n\\theta.$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0019",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-58286d048b",
+      "number": "19",
+      "page": 45,
+      "source_lines": [
+        678,
+        681
+      ],
+      "text": "19. 证明: $|1 + z_1 \\bar{z}_2|^2 + |z_1 - z_2|^2 = (1 + |z_2|^2)(1 + |z_1|^2)$.\n[第 46 页]\n[第 47 页]\n第二章 线性方程组",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0020",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "1",
+      "page": 127,
+      "source_lines": [
+        1870,
+        1870
+      ],
+      "text": "1. 完成定理4.2.1、定理4.2.2的证明.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0021",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "2",
+      "page": 127,
+      "source_lines": [
+        1871,
+        1871
+      ],
+      "text": "2. 证明: 每个方阵都可以表示为一个对称阵与一个反对称阵之和的形式.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0022",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "3",
+      "page": 127,
+      "source_lines": [
+        1872,
+        1874
+      ],
+      "text": "3. 设 $A = \\begin{pmatrix} -3 & -1 & -2 \\\\ 1 & 3 & 4 \\end{pmatrix}, B = \\begin{pmatrix} 2 & 2 & -2 \\\\ 4 & -1 & -4 \\\\ 4 & 3 & -3 \\end{pmatrix}, C = \\begin{pmatrix} 1 & 1 \\\\ -4 & 1 \\\\ -1 & -2 \\end{pmatrix}$ ，计算AB, BC, ABC,\n $B^{2}$ , AC, CA.\n$$4. \\text {计算} \\left( \\begin{array}{c c c c c} 1 & x & x ^ {2} & \\dots & x ^ {n} \\\\ 1 & y & y ^ {2} & \\dots & y ^ {n} \\\\ 1 & z & z ^ {2} & \\dots & z ^ {n} \\end{array} \\right) \\left( \\begin{array}{c c c} a _ {0} & b _ {0} & c _ {0} \\\\ a _ {1} & b _ {1} & c _ {1} \\\\ a _ {2} & b _ {2} & c _ {2} \\\\ \\vdots & \\vdots & \\vdots \\\\ a _ {n} & b _ {n} & c _ {n} \\end{array} \\right).$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0023",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "5",
+      "page": 127,
+      "source_lines": [
+        1875,
+        1876
+      ],
+      "text": "5. 计算 $\\begin{pmatrix} x_{1} & x_{2} & \\cdots & x_{m} \\end{pmatrix}$ $\\begin{pmatrix} a_{11} & a_{12} & \\cdots & a_{1n} \\\\ a_{21} & a_{22} & \\cdots & a_{2n} \\\\ \\vdots & \\vdots & \\cdots & \\vdots \\\\ a_{m1} & a_{m2} & \\cdots & a_{mn} \\end{pmatrix}$ $\\begin{pmatrix} y_{1} \\\\ y_{2} \\\\ \\vdots \\\\ y_{n} \\end{pmatrix}$ .\n[第 128 页]",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0024",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "6",
+      "page": 128,
+      "source_lines": [
+        1877,
+        1878
+      ],
+      "text": "6. 举例求满足条件的2阶实方阵A.\n(1) $A^{2}=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$  (2) $A^{2}=\\begin{pmatrix}0&1\\\\-1&0\\end{pmatrix}$  (3) $A^{3}=I$ 且 $A\\neq I$ .",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0025",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "7",
+      "page": 128,
+      "source_lines": [
+        1879,
+        1884
+      ],
+      "text": "7. 计算下列方阵的k次方幂, k为正整数.\n(1) $\\begin{pmatrix}\\cos\\theta&\\sin\\theta\\\\-\\sin\\theta&\\cos\\theta\\end{pmatrix}$  (2) $\\begin{pmatrix}a&b\\\\-b&a\\end{pmatrix}$  (3) $\\begin{pmatrix}1&a&1&0\\\\0&1&0&1\\\\0&0&1&a\\\\0&0&0&1\\end{pmatrix}$\n(4)\n$$\\left( \\begin{array}{c c c c} 1 & 1 & & \\\\ & 1 & \\ddots & \\\\ & & \\ddots & 1 \\\\ & & & 1 \\end{array} \\right)$$\n(5)\n$$\\left( \\begin{array}{c c c c} a _ {1} b _ {1} & a _ {1} b _ {2} & \\dots & a _ {1} b _ {n} \\\\ a _ {2} b _ {1} & a _ {2} b _ {2} & \\dots & a _ {2} b _ {n} \\\\ \\vdots & \\vdots & \\dots & \\vdots \\\\ a _ {n} b _ {1} & a _ {n} b _ {2} & \\dots & a _ {n} b _ {n} \\end{array} \\right)$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0026",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "8",
+      "page": 128,
+      "source_lines": [
+        1885,
+        1885
+      ],
+      "text": "8. 设A,B都是n阶对称方阵,且AB=BA.证明AB也是对称方阵.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0027",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "9",
+      "page": 128,
+      "source_lines": [
+        1886,
+        1886
+      ],
+      "text": "9. 证明: 两个 $n$ 阶上(下)三角方阵的乘积仍是上(下)三角.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0028",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "10",
+      "page": 128,
+      "source_lines": [
+        1887,
+        1887
+      ],
+      "text": "10. 证明: 与任意 $n$ 阶方阵都乘法可交换的方阵一定是数量阵.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0029",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "11",
+      "page": 128,
+      "source_lines": [
+        1888,
+        1888
+      ],
+      "text": "11. 完成定理 4.2.5 的证明.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0030",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "12",
+      "page": 128,
+      "source_lines": [
+        1889,
+        1889
+      ],
+      "text": "12. 设 $A_{1}, A_{2}, \\ldots, A_{k}$ 都是 $n$ 阶可逆方阵. 证明: $(A_{1}A_{2} \\cdots A_{k})^{-1} = A_{k}^{-1} \\cdots A_{2}^{-1}A_{1}^{-1}$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0031",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "13",
+      "page": 128,
+      "source_lines": [
+        1890,
+        1890
+      ],
+      "text": "13. 设方阵A满足 $A^{k}=O$ , k为正整数. 证明:  $I+A$ 可逆, 并求 $(I+A)^{-1}$ .",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0032",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "14",
+      "page": 128,
+      "source_lines": [
+        1891,
+        1891
+      ],
+      "text": "14. 设方阵A满足 $I-2A-3A^{2}+4A^{3}+5A^{4}-6A^{5}=O$ . 证明: I-A可逆. 并求 $(I-A)^{-1}$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0033",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "15",
+      "page": 128,
+      "source_lines": [
+        1892,
+        1892
+      ],
+      "text": "15. 完成定理4.2.6, 定理4.2.7, 定理4.2.8的证明.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0034",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "16",
+      "page": 128,
+      "source_lines": [
+        1893,
+        1893
+      ],
+      "text": "16. 证明:  $(A_{1}A_{2}\\cdots A_{k})^{T}=A_{k}^{T}\\cdots A_{2}^{T}A_{1}^{T}$  (假设其中的矩阵乘法有意义).",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0035",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "17",
+      "page": 128,
+      "source_lines": [
+        1894,
+        1894
+      ],
+      "text": "17. 求所有满足 $A^2 = O, B^2 = I, \\overline{C}^T C = I$ 的2阶复方阵 $A, B, C$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0036",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "18",
+      "page": 128,
+      "source_lines": [
+        1895,
+        1895
+      ],
+      "text": "18. 证明: 不存在n阶复方阵A,B满足AB-BA= $I_{n}$ .",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0037",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "19",
+      "page": 128,
+      "source_lines": [
+        1896,
+        1896
+      ],
+      "text": "19. 证明: 可逆上(下)三角、准对角、对称、反对称方阵的逆矩阵仍然分别是上(下)三角、准对角、对称、反对称的.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0038",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "20",
+      "page": 128,
+      "source_lines": [
+        1897,
+        1899
+      ],
+      "text": "20. 设 $A = \\begin{pmatrix} 2 & 1 & 0 \\\\ 1 & 2 & 1 \\\\ 2 & -1 & 1 \\end{pmatrix}$. 求 $A$ 的LU分解, 并基于 $A$ 的LU分解, 求解线性方程组 $A\\mathbf{x} = \\mathbf{b}$, 这里 $\\mathbf{b} = (1, -2, 1)^T$.\n[第 129 页]\n习题三",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0039",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "21",
+      "page": 129,
+      "source_lines": [
+        1900,
+        1902
+      ],
+      "text": "21. 求解下列矩阵方程\n(1)  $X\\begin{pmatrix}-2 & -2 & 1 \\\\ 1 & 4 & -3 \\\\ 1 & -1 & 1\\end{pmatrix} = \\begin{pmatrix} 2 & -1 & 3 \\\\ -3 & 2 & 5 \\\\ -1 & 5 & 4\\end{pmatrix}$ \n(2) $\\begin{pmatrix}0&1&0\\\\0&0&1\\\\1&0&0\\end{pmatrix}X-X\\begin{pmatrix}0&1&0\\\\0&0&1\\\\0&0&0\\end{pmatrix}=\\begin{pmatrix}1&2&3\\\\2&4&6\\\\3&6&9\\end{pmatrix}$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0040",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "22",
+      "page": 129,
+      "source_lines": [
+        1903,
+        1903
+      ],
+      "text": "22. 设 $A, B$ 是 $n$ 阶方阵, $\\lambda$ 是数. 证明: (1) $(\\lambda A)^{*} = \\lambda^{n-1}A^{*}$; (2) $(AB)^{*} = B^{*}A^{*}$; (3) $\\det(A^{*}) = (\\det(A))^{n-1}$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0041",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "23",
+      "page": 129,
+      "source_lines": [
+        1904,
+        1904
+      ],
+      "text": "23. 设方阵 $A$ 的逆矩阵 $A^{-1} = \\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 1 & 3 \\end{pmatrix}$, 求 $A^{*}$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0042",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "24",
+      "page": 129,
+      "source_lines": [
+        1905,
+        1905
+      ],
+      "text": "24. 设方阵 $A$ 的伴随矩阵 $A^{*} = \\begin{pmatrix} 0 & 0 & 0 & 1 \\\\ 0 & 0 & 2 & 0 \\\\ 0 & -1 & 0 & 0 \\\\ 4 & 0 & 0 & 0 \\end{pmatrix}$, 求 $A$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0043",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "25",
+      "page": 129,
+      "source_lines": [
+        1906,
+        1906
+      ],
+      "text": "25. 设 $n$ 阶方阵 $A$ 的每行、每列元素之和都是0, 证明: $A^{*}$ 的所有元素都相等.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0044",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "26",
+      "page": 129,
+      "source_lines": [
+        1907,
+        1907
+      ],
+      "text": "26. 设A是方阵, 证明: 线性方程组 $A\\mathbf{x} = \\mathbf{0}$ 有非零解当且仅当 $\\det(A) = 0$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0045",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "27",
+      "page": 129,
+      "source_lines": [
+        1908,
+        1908
+      ],
+      "text": "27. 完成定理4.3.1、定理4.3.2的证明.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0046",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "28",
+      "page": 129,
+      "source_lines": [
+        1909,
+        1909
+      ],
+      "text": "28. 设 $A = \\begin{pmatrix} 1 & -1 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 1 & 0 & 1 & -1 \\\\ 0 & 1 & 0 & 1 \\end{pmatrix}$. 计算 $A^n$ 及 $A^{-1}$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0047",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "29",
+      "page": 129,
+      "source_lines": [
+        1910,
+        1910
+      ],
+      "text": "29. 设 $A, B$ 为同阶方阵, 且满足 $AB = BA$. 计算 $\\begin{pmatrix} A & B \\\\ O & A \\end{pmatrix}^n$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0048",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "30",
+      "page": 129,
+      "source_lines": [
+        1911,
+        1911
+      ],
+      "text": "30. 设 $A$ 为 $n$ 阶方阵, 且满足 $A^3 = I_n$. 计算 $\\begin{pmatrix} O & I_n \\\\ A & O \\end{pmatrix}^{2024}$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0049",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "31",
+      "page": 129,
+      "source_lines": [
+        1912,
+        1913
+      ],
+      "text": "31. 设 $A \\in F^{m \\times m}, B \\in F^{n \\times n}, C \\in F^{n \\times m}$, 且 $A, B$ 可逆. 求分块矩阵 $\\begin{pmatrix} A & O \\\\ C & B \\end{pmatrix}$ 的逆.\n[第 130 页]",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0050",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "32",
+      "page": 130,
+      "source_lines": [
+        1914,
+        1917
+      ],
+      "text": "32. 证明: 初等方阵具有以下性质\n(1) $T_{ij}(\\lambda)T_{ij}(\\mu) = T_{ij}(\\lambda +\\mu);$\n(2) 当 $i \\neq q$ 且 $j \\neq p$ 时, $T_{ij}(\\lambda) T_{pq}(\\mu) = T_{pq}(\\mu) T_{ij}(\\lambda)$;\n(3) $D_{i}(-1)S_{ij} = S_{ij}D_{j}(-1) = T_{ji}(1)T_{ij}(-1)T_{ji}(1).$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0051",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "33",
+      "page": 130,
+      "source_lines": [
+        1918,
+        1922
+      ],
+      "text": "33. 将单位矩阵做一系列(有限次)行与行的对换得到的矩阵称为置换矩阵. 证明:\n(1) 将单位矩阵做一系列的列与列的对换得到的矩阵也为置换矩阵;\n(2) 置换矩阵可以通过按某种次序排列单位阵的行(或列)得到;\n(3) 置换矩阵的乘积仍为置换矩阵;\n(4) 置换矩阵的逆、转置也是置换矩阵.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0052",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "34",
+      "page": 130,
+      "source_lines": [
+        1923,
+        1934
+      ],
+      "text": "34. 计算下列矩阵的逆矩阵\n(1)\n$$\\left( \\begin{array}{c c c c} 1 & 0 & 1 & - 4 \\\\ - 1 & - 3 & - 4 & - 2 \\\\ 2 & - 1 & 4 & 4 \\\\ 2 & 3 & - 3 & 2 \\end{array} \\right)$$\n(2)\n$$\\left( \\begin{array}{c c c c} 1 & 4 & - 1 & - 1 \\\\ 1 & - 2 & - 1 & 1 \\\\ - 3 & 3 & - 4 & - 2 \\\\ 0 & 1 & - 1 & - 1 \\end{array} \\right)$$\n(3)\n$$\\left( \\begin{array}{c c c c} & & & 1 \\\\ & & 1 & 1 \\\\ & \\ddots & \\ddots & \\vdots \\\\ 1 & 1 & \\dots & 1 \\end{array} \\right)$$\n(4)\n$$\\left( \\begin{array}{c c c c} & & & A _ {1} \\\\ & & A _ {2} \\\\ & \\ddots & \\\\ A _ {k} & & \\end{array} \\right)$$\n$A_{i}$ 可逆\n(5)\n$$\\left( \\begin{array}{c c c c} 1 + a _ {1} & 1 & \\dots & 1 \\\\ 1 & 1 + a _ {2} & \\ddots & \\vdots \\\\ \\vdots & \\ddots & \\ddots & 1 \\\\ 1 & \\dots & 1 & 1 + a _ {n} \\end{array} \\right)$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0053",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "35",
+      "page": 130,
+      "source_lines": [
+        1935,
+        1938
+      ],
+      "text": "35. 本题给出定理 4.2.3 的另一个证明. 设 A, B 均为 n 阶方阵.\n(1) 若A或者B不可逆, 证明AB也不可逆.\n(2) 设 $P$ 为初等方阵, 证明 $\\operatorname{det}(PB) = \\operatorname{det}(P) \\operatorname{det}(B)$.\n(3) 证明: $\\operatorname{det}(AB) = \\operatorname{det}(A)\\operatorname{det}(B)$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0054",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "36",
+      "page": 130,
+      "source_lines": [
+        1939,
+        1942
+      ],
+      "text": "36. 设A是n阶可逆方阵, a为n维列向量. 证明:\n$$\\det (A - \\mathbf {a} \\mathbf {a} ^ {T}) = (1 - \\mathbf {a} ^ {T} A ^ {- 1} \\mathbf {a}) \\det (A).$$\n[第 131 页]\n习题三",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0055",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "37",
+      "page": 131,
+      "source_lines": [
+        1943,
+        1944
+      ],
+      "text": "37. 设 $A$ 是 $n$ 阶可逆方阵, $\\mathbf{a}, \\mathbf{b}$ 为 $n$ 维列向量. 证明: $A + \\mathbf{ab}^T$ 可逆当且仅当 $1 + \\mathbf{b}^T A^{-1} \\mathbf{a} \\neq 0$. 且 $A + \\mathbf{ab}^T$ 可逆时,\n$$(A + \\mathbf {a b} ^ {T}) ^ {- 1} = A ^ {- 1} - \\frac {A ^ {- 1} \\mathbf {a b} ^ {T} A ^ {- 1}}{1 + \\mathbf {b} ^ {T} A ^ {- 1} \\mathbf {a}}.$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0056",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "38",
+      "page": 131,
+      "source_lines": [
+        1945,
+        1945
+      ],
+      "text": "38. 设 $A \\in F^{m \\times m}, B \\in F^{n \\times n}, C \\in F^{n \\times m}$, 且 $A$ 为对称可逆方阵. 证明: 存在可逆方阵 $P$ 使得 $P\\begin{pmatrix} A & C^T \\\\ C & B \\end{pmatrix} P^T$ 为准对角阵.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0057",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "39",
+      "page": 131,
+      "source_lines": [
+        1946,
+        1947
+      ],
+      "text": "39. 设 $A$ 是 $m \\times n$ 矩阵, $B$ 是 $n \\times m$ 矩阵. 证明:\n$$\\det (I _ {n} - B A) = \\det \\left( \\begin{array}{c c} I _ {m} & A \\\\ B & I _ {n} \\end{array} \\right) = \\det (I _ {m} - A B).$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0058",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "40",
+      "page": 131,
+      "source_lines": [
+        1948,
+        1953
+      ],
+      "text": "40. 计算下列矩阵的秩.\n$$\\left( \\begin{array}{c c c c} 3 & 2 & - 1 & 9 \\\\ - 2 & 1 & - 4 & 2 \\\\ - 1 & - 2 & 3 & - 2 \\\\ 3 & 2 & - 1 & 9 \\end{array} \\right) \\tag {1}$$\n(2)\n$$\\left( \\begin{array}{c c c c} 0 & 4 & 8 & - 5 \\\\ - 7 & 9 & - 3 & 1 \\\\ 1 & - 7 & - 1 1 & 7 \\\\ - 5 & 7 & - 1 & 0 \\end{array} \\right)$$\n(3)\n$$\\left( \\begin{array}{c c c c} 1 & 4 & 9 & 1 6 \\\\ 4 & 9 & 1 6 & 2 5 \\\\ 9 & 1 6 & 2 5 & 3 6 \\\\ 1 6 & 2 5 & 3 6 & 4 9 \\end{array} \\right)$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0059",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "41",
+      "page": 131,
+      "source_lines": [
+        1954,
+        1954
+      ],
+      "text": "41. 对于 $a, b$ 的各种取值, 讨论实矩阵 $\\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & a \\\\ 3 & b & 9 \\end{pmatrix}$ 的秩.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0060",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "42",
+      "page": 131,
+      "source_lines": [
+        1955,
+        1955
+      ],
+      "text": "42. 设 $A$ 为 $n$ 阶方阵, 且 $A^2 = I$. 求方阵 $\\operatorname{diag}(I + A, I - A)$ 的相抵标准形.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0061",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "43",
+      "page": 131,
+      "source_lines": [
+        1956,
+        1956
+      ],
+      "text": "43. 设 $A$ 是 $n$ 阶方阵, 证明: $\\operatorname{rank}(A^*) = \\begin{cases} n, & \\operatorname{rank}(A) = n; \\\\ 1, & \\operatorname{rank}(A) = n - 1; \\\\ 0, & \\operatorname{rank}(A) \\leq n - 2. \\end{cases}$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0062",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "44",
+      "page": 131,
+      "source_lines": [
+        1957,
+        1957
+      ],
+      "text": "44. 设 $A \\in F^{m \\times n}$. 证明: 线性方程组 $A\\mathbf{x} = \\mathbf{0}$ 有非零解的充分必要条件是 $\\operatorname{rank}(A) < n$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0063",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "45",
+      "page": 131,
+      "source_lines": [
+        1958,
+        1969
+      ],
+      "text": "45. 证明下列关于秩的不等式.\n(1) $\\max\\left(\\operatorname{rank}(A), \\operatorname{rank}(B), \\operatorname{rank}(A+B)\\right) \\leq \\operatorname{rank}\\left(A - B\\right)$;\n(2) $\\operatorname{rank}\\left( \\begin{array}{cc}A & B \\end{array} \\right)\\leq \\operatorname{rank}(A) + \\operatorname{rank}(B);$\n(3) $\\left( \\begin{array}{cc}A & C\\\\ O & B \\end{array} \\right)\\geq \\mathrm{rank}(A) + \\mathrm{rank}(B).$\n[第 132 页]\n其中A,B,C是使运算有意义的矩阵.\n46* 设 $n$ 阶方阵 $A$ 满足 $A^2 = I$, 证明: $\\operatorname{rank}(I + A) + \\operatorname{rank}(I - A) = n$.\n47* 设A是 $m \\times n$ 矩阵, B是 $n \\times p$ 矩阵. 证明: $\\text{rank}(AB) \\geq \\text{rank}(A) + \\text{rank}(B) - n$.\n$$m + \\operatorname{rank} (I _ {n} - B A) = \\operatorname{rank} \\left( \\begin{array}{c c} I _ {m} & A \\\\ B & I _ {n} \\end{array} \\right) = n + \\operatorname{rank} (I _ {m} - A B).$$\n48* 设A是 $m \\times n$ 矩阵, B是 $n \\times m$ 矩阵. 证明\n[第 133 页]\n第五章 线性空间",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0064",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "1",
+      "page": 171,
+      "source_lines": [
+        2640,
+        2640
+      ],
+      "text": "1. 设 $\\mathbf{a}_1 = (1,2, - 1)$, $\\mathbf{a}_2 = (2,0,3)$, $\\mathbf{a}_3 = (2,1,0)$ 是三维几何空间中的三个向量. 能否将其中某一个向量写成其它两个向量的线性组合? 这三个向量是否共面?",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0065",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "2",
+      "page": 171,
+      "source_lines": [
+        2641,
+        2642
+      ],
+      "text": "2. 设 $\\mathbf{a}_1 = (0,1, - 2),\\mathbf{a}_2 = (2,1,3),\\mathbf{a}_3 = (4,5,0)$ 是三维几何空间中的三个向量. 能否将其中某一个向量写成其它两个向量的线性组合? 这三个向量是否共面?\n[第 172 页]",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0066",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "3",
+      "page": 172,
+      "source_lines": [
+        2643,
+        2645
+      ],
+      "text": "3. 在 $F^{4}$ 中, 判断向量b能否写成 $a_{1}, a_{2}, a_{3}$ 的线性组合. 若能, 请写出一种表示方式.\n$$\\begin{array}{l l} (1) & \\mathbf {a} _ {1} = (- 1, 3, 0, - 5), \\mathbf {a} _ {2} = (2, 0, 7, - 3), \\\\ & \\mathbf {a} _ {3} = (- 4, 1, - 2, 6), \\mathbf {b} = (8, 3, - 1, - 2 5). \\end{array}$$\n$$\\begin{array}{l l} (2) & \\mathbf {a} _ {1} = (3, - 5, 2, - 4) ^ {T}, \\mathbf {a} _ {2} = (- 1, 7, - 3, 6) ^ {T}, \\\\ & \\mathbf {a} _ {3} = (3, 1 1, - 5, 1 0) ^ {T}, \\mathbf {b} = (2, - 3 0, 1 3, - 2 6) ^ {T}. \\end{array}$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0067",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "4",
+      "page": 172,
+      "source_lines": [
+        2646,
+        2646
+      ],
+      "text": "4. 设 $\\mathbf{a}_1 = (1,0,0,0), \\mathbf{a}_2 = (1,1,0,0), \\mathbf{a}_3 = (1,1,1,0), \\mathbf{a}_4 = (1,1,1,1)$. 证明: $F^4$ 中任何向量可以写成 $\\mathbf{a}_1, \\mathbf{a}_2, \\mathbf{a}_3, \\mathbf{a}_4$ 的线性组合, 且表示唯一.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0068",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "5",
+      "page": 172,
+      "source_lines": [
+        2647,
+        2648
+      ],
+      "text": "5. 设 $\\mathbf{P}_i = (x_i, y_i, z_i)$, $i = 1, 2, 3, 4$ 是三维几何空间中的点. 证明: $\\mathbf{P}_i$, $i = 1, 2, 3, 4$ 共面的条件是\n$$\\left| \\begin{array}{c c c c} x _ {1} & y _ {1} & z _ {1} & 1 \\\\ x _ {2} & y _ {2} & z _ {2} & 1 \\\\ x _ {3} & y _ {3} & z _ {3} & 1 \\\\ x _ {4} & y _ {4} & z _ {4} & 1 \\end{array} \\right| = 0.$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0069",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "6",
+      "page": 172,
+      "source_lines": [
+        2649,
+        2649
+      ],
+      "text": "6. 设 $\\mathbf{a}_1, \\mathbf{a}_2, \\mathbf{a}_3, \\mathbf{a}_4$ 是三维几何空间中的四个向量. 证明它们必线性相关.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0070",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "7",
+      "page": 172,
+      "source_lines": [
+        2650,
+        2650
+      ],
+      "text": "7. 设 $\\mathbf{b}_1, \\mathbf{b}_2, \\ldots, \\mathbf{b}_s$ 中每一个向量是 $n$ 维数组向量 $\\mathbf{a}_1, \\mathbf{a}_2, \\ldots, \\mathbf{a}_r$ 的线性组合。证明: $\\mathbf{b}_1, \\mathbf{b}_2, \\ldots, \\mathbf{b}_s$ 的任何线性组合都是 $\\mathbf{a}_1, \\mathbf{a}_2, \\ldots, \\mathbf{a}_r$ 的线性组合。",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0071",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "8",
+      "page": 172,
+      "source_lines": [
+        2651,
+        2651
+      ],
+      "text": "8. 证明: 对线性方程组做初等变换后得到的线性方程组中的每一个方程都是原方程组的线性组合.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0072",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "9",
+      "page": 172,
+      "source_lines": [
+        2652,
+        2656
+      ],
+      "text": "9. 判别下列线性方程组是否线性相关\n(1)\n$$\\left\\{ \\begin{array}{l} - x _ {1} + 2 x _ {2} + 3 x _ {3} = 4 \\\\ 5 x _ {1} - x _ {3} = - 1 \\\\ 8 x _ {1} - 6 x _ {2} - 1 0 x _ {3} = - 1 3 \\end{array} \\right.$$\n(2)\n$$\\left\\{ \\begin{array}{l} 2 x _ {1} + 3 x _ {2} + x _ {3} + 5 x _ {4} = 2 \\\\ 3 x _ {1} + 2 x _ {2} + 4 x _ {3} + 2 x _ {4} = 3 \\\\ x _ {1} + x _ {2} + 2 x _ {3} + 4 x _ {4} = 1 \\end{array} \\right.$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0073",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "10",
+      "page": 172,
+      "source_lines": [
+        2657,
+        2662
+      ],
+      "text": "10. 判断下列向量组是否线性相关\n(1) $\\mathbf{a}_1 = (1,1,1),\\mathbf{a}_2 = (1, - 2,3),\\mathbf{a}_3 = (1,4,9);$\n(2) $\\mathbf{a}_1 = (3,1,2, - 4),\\mathbf{a}_2 = (1,0,5,2),\\mathbf{a}_3 = (-1,2,0,3);$\n(3)  $\\mathbf{a}_{1}=(-2,1,0,3),\\mathbf{a}_{2}=(1,-3,2,4),\\mathbf{a}_{3}=(3,0,2,-1),\\mathbf{a}_{4}=(2,-2,4,6);$\n(4) $\\mathbf{a}_1 = (1, - 1,0,0),\\mathbf{a}_2 = (0,1, - 1,0),\\mathbf{a}_3 = (0,0,1, - 1),\\mathbf{a}_4 = (-1,0,0,1).$\n[第 173 页]",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0074",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "11",
+      "page": 173,
+      "source_lines": [
+        2663,
+        2667
+      ],
+      "text": "11. 证明: 任何一个经过以下两个平面\n$$A _ {1} x + B _ {1} y + C _ {1} z + D _ {1} = 0, \\quad A _ {2} x + B _ {2} y + C _ {2} z + D _ {2} = 0$$\n交线的平面的方程能写成:\n$$\\lambda \\left(A _ {1} x + B _ {1} y + C _ {1} z + D _ {1}\\right) + \\mu \\left(A _ {2} x + B _ {2} y + C _ {2} z + D _ {2}\\right) = 0.$$\n其中 $\\lambda,\\mu$ 为不全为零的常数.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0075",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "12",
+      "page": 173,
+      "source_lines": [
+        2668,
+        2676
+      ],
+      "text": "12. 下列说法是否正确? 为什么?\n(1) 若  $a_{1}, a_{2}, \\ldots, a_{s} (s \\geq 2)$  线性相关, 则其中每一个向量都可以表示成其它向量的线性组合.\n(2) 如果向量组的任何不是它本身的子向量组都线性无关, 则该向量组也线性无关.\n(3) 若向量组线性无关, 则它的任何子向量组都线性无关.\n(4) $F^n$ 的 $n + 1$ 个向量组成的向量组必线性相关.\n(5) 设  $a_{1}, a_{2}, \\ldots, a_{s}$  线性无关，则  $a_{1} + a_{2}, a_{2} + a_{3}, \\ldots, a_{s} + a_{1}$  必线性无关.\n(6) 设  $a_{1}, a_{2}, \\ldots, a_{s}$  线性相关，则  $a_{1} + a_{2}, a_{2} + a_{3}, \\ldots, a_{s} + a_{1}$  必线性相关.\n(7) 设  $a_{1}, a_{2}, \\ldots, a_{s} \\in F^{n}$  线性无关, 则它们的加长向量组也必线性无关.\n(8) 设  $a_{1}, a_{2}, \\ldots, a_{s} \\in F^{n}$  线性相关, 则它们的加长向量组也必线性相关.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0076",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "13",
+      "page": 173,
+      "source_lines": [
+        2677,
+        2677
+      ],
+      "text": "13. 若向量组 $a_{1},a_{2},\\ldots,a_{n}\\in F^{n}$ 线性无关, 而 $a_{1},a_{2},\\ldots,a_{n},b$ 线性相关, 则b可以表示成 $a_{1},a_{2},\\ldots,a_{n}$ 的线性组合, 且表示唯一.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0077",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "14",
+      "page": 173,
+      "source_lines": [
+        2678,
+        2678
+      ],
+      "text": "14. 证明向量表示基本定理: 设 $a_{1}, a_{2}, \\ldots, a_{n} \\in F^{n}$ 线性无关, 则任意向量 $b \\in F^{n}$ 可以表示为 $a_{1}, a_{2}, \\ldots, a_{n}$ 的线性组合, 且表示唯一.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0078",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "15",
+      "page": 173,
+      "source_lines": [
+        2679,
+        2679
+      ],
+      "text": "15. 证明: 非零向量组 $\\mathbf{a}_1, \\mathbf{a}_2, \\ldots, \\mathbf{a}_s$ 线性无关的充要条件是, 每个 $\\mathbf{a}_i (1 < i \\leq s)$ 都不能用它前面的向量线性表示.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0079",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "16",
+      "page": 173,
+      "source_lines": [
+        2680,
+        2680
+      ],
+      "text": "16. 设向量组  $a_{1}, a_{2}, \\ldots, a_{s}$  线性无关,  $b = \\lambda_{1}a_{1} + \\ldots + \\lambda_{s}a_{s}$ . 如  $\\lambda_{i} \\neq 0$ , 则用 b 代替  $a_{i}$  后, 向量组  $a_{1}, \\ldots, a_{i-1}, b, a_{i+1}, \\ldots, a_{s}$  线性无关.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0080",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "17",
+      "page": 173,
+      "source_lines": [
+        2681,
+        2681
+      ],
+      "text": "17. 设向量组 $a_{1},a_{2},\\ldots,a_{r}$ 线性无关，且 $a_{1},a_{2},\\ldots,a_{r}$ 可以由向量组 $b_{1},b_{2},\\ldots,b_{r}$ 线性表示，则 $b_{1},b_{2},\\ldots,b_{r}$ 也线性无关.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0081",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "18",
+      "page": 173,
+      "source_lines": [
+        2682,
+        2683
+      ],
+      "text": "18. 证明: 向量组等价具有自身性、对称性与传递性.\n[第 174 页]",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0082",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "19",
+      "page": 174,
+      "source_lines": [
+        2684,
+        2687
+      ],
+      "text": "19. 求下列向量组的极大无关组与秩\n(1)  $\\mathbf{a}_{1}=(3,-2,0),\\mathbf{a}_{2}=(27,-18,0),\\mathbf{a}_{3}=(-1,5,8).$ \n(2)  $\\mathbf{a}_{1}=(1,-1,2,4),\\mathbf{a}_{2}=(0,3,1,2),\\mathbf{a}_{3}=(3,0,7,14),\\mathbf{a}_{4}=(1,-1,2,0),$ $\\mathbf{a}_{5}=(2,1,5,6).$ \n(3)  $\\mathbf{a}_{1}=(0,1,2,3),\\mathbf{a}_{2}=(1,2,3,4),\\mathbf{a}_{3}=(3,4,5,6),\\mathbf{a}_{4}=(4,3,2,1),$ $\\mathbf{a}_{5}=(6,5,4,3).$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0083",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "20",
+      "page": 174,
+      "source_lines": [
+        2688,
+        2688
+      ],
+      "text": "20. 证明： $a_{i_{1}},a_{i_{2}},\\cdots,a_{i_{r}}$ 是 $a_{1},a_{2},\\cdots,a_{m}$ 的极大无关组，当且仅当 $\\langle a_{1},a_{2},\\cdots,a_{m}\\rangle=\\langle a_{i_{1}},a_{i_{2}},\\cdots,a_{i_{r}}\\rangle$ 且 $a_{i_{1}},a_{i_{2}},\\cdots,a_{i_{r}}$ 线性无关.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0084",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "21",
+      "page": 174,
+      "source_lines": [
+        2689,
+        2689
+      ],
+      "text": "21. 证明: 若向量 $\\mathbf{b}$ 可以由向量组 $\\mathbf{a}_1, \\mathbf{a}_2, \\ldots, \\mathbf{a}_m$ 线性表示, 则 $\\mathbf{b}$ 可以由 $\\mathbf{a}_1, \\mathbf{a}_2, \\ldots, \\mathbf{a}_m$ 的极大无关组表示.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0085",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "22",
+      "page": 174,
+      "source_lines": [
+        2690,
+        2690
+      ],
+      "text": "22. 设向量组 $\\mathbf{a}_1, \\mathbf{a}_2, \\ldots, \\mathbf{a}_m$ 的秩为 $r$, 则其中任何 $r$ 个线性无关的向量构成 $\\mathbf{a}_1, \\mathbf{a}_2, \\ldots, \\mathbf{a}_m$ 的极大无关组.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0086",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "23",
+      "page": 174,
+      "source_lines": [
+        2691,
+        2691
+      ],
+      "text": "23. 设向量组 $a_{1},a_{2},\\ldots,a_{m}$ 的秩为r,如 $a_{1},a_{2},\\ldots,a_{m}$ 可以由它的r个向量线性表示,则这r个向量构成 $a_{1},a_{2},\\ldots,a_{m}$ 的极大无关组.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0087",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "24",
+      "page": 174,
+      "source_lines": [
+        2692,
+        2692
+      ],
+      "text": "24. 证明定理 5.3.5 的 1, 2, 4.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0088",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "25",
+      "page": 174,
+      "source_lines": [
+        2693,
+        2696
+      ],
+      "text": "25. 求下列矩阵的秩, 并求出它的行空间、列空间及零空间的一组基.\n(1)\n$$\\left( \\begin{array}{c c c c} 3 & - 2 & 0 & 1 \\\\ - 1 & - 3 & 2 & 0 \\\\ 2 & 0 & - 4 & 5 \\\\ 4 & 1 & - 2 & 1 \\end{array} \\right)\\tag{2}$$\n$$\\left( \\begin{array}{c c c c} 3 & 6 & 1 & 5 \\\\ 1 & 4 & - 1 & 3 \\\\ - 1 & - 1 0 & 5 & - 7 \\\\ 4 & - 2 & 8 & 0 \\end{array} \\right)$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0089",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "26",
+      "page": 174,
+      "source_lines": [
+        2697,
+        2697
+      ],
+      "text": "26. 证明: 线性方程组(5.4)有解, 当且仅当 $b \\in \\langle a_{1}, a_{2}, \\cdots, a_{m} \\rangle$, 当且仅当 $\\langle a_{1}, a_{2}, \\cdots, a_{m} \\rangle = \\langle a_{1}, a_{2}, \\cdots, a_{m}, b \\rangle$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0090",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "27",
+      "page": 174,
+      "source_lines": [
+        2698,
+        2698
+      ],
+      "text": "27. 证明: $\\operatorname{rank}(\\mathbf{a}_1, \\mathbf{a}_2, \\ldots, \\mathbf{a}_r, \\mathbf{b}_1, \\mathbf{b}_2, \\ldots, \\mathbf{b}_s) \\leq \\operatorname{rank}(\\mathbf{a}_1, \\mathbf{a}_2, \\ldots, \\mathbf{a}_r) + \\operatorname{rank}(\\mathbf{b}_1, \\mathbf{b}_2, \\ldots, \\mathbf{b}_s)$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0091",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "28",
+      "page": 174,
+      "source_lines": [
+        2699,
+        2699
+      ],
+      "text": "28. 证明: $n$ 阶方阵 $A$ 可逆 $\\Leftrightarrow \\operatorname{rank}(A) = n \\Leftrightarrow A$ 的行向量线性无关 $\\Leftrightarrow A$ 的列向量线性无关.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0092",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "29",
+      "page": 174,
+      "source_lines": [
+        2700,
+        2702
+      ],
+      "text": "29. 设矩阵 $A \\in F^{m \\times n}$ 的秩为 $r$，则 $A$ 的不等于零的 $r$ 阶子式所在行(列)构成 $A$ 的行(列)向量的极大无关组.\n[第 175 页]\n§5.7 子空间运算*",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0093",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "30",
+      "page": 175,
+      "source_lines": [
+        2703,
+        2703
+      ],
+      "text": "30. 设A,B是同阶矩阵. 证明:  $\\operatorname{rank}(A+B) \\leq \\operatorname{rank}(A) + \\operatorname{rank}(B)$ .",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0094",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "31",
+      "page": 175,
+      "source_lines": [
+        2704,
+        2706
+      ],
+      "text": "31. 设 $a_{1},a_{2},\\ldots,a_{n}$ 是 $F^{n}$ 的基, 向量组 $b_{1},b_{2},\\ldots,b_{n}$ 与 $a_{1},a_{2},\\ldots,a_{n}$ 有关系式\n$$\\left(\\mathbf {b} _ {1}, \\mathbf {b} _ {2}, \\dots , \\mathbf {b} _ {n}\\right) = \\left(\\mathbf {a} _ {1}, \\mathbf {a} _ {2}, \\dots , \\mathbf {a} _ {n}\\right) T.$$\n证明:  $b_{1}, b_{2}, \\ldots, b_{n}$  为  $F^{n}$  的基当且仅当 T 为可逆方阵.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0095",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "32",
+      "page": 175,
+      "source_lines": [
+        2707,
+        2707
+      ],
+      "text": "32. 证明定理 5.4.2.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0096",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "33",
+      "page": 175,
+      "source_lines": [
+        2708,
+        2708
+      ],
+      "text": "33. 证明定理 5.4.3.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0097",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "34",
+      "page": 175,
+      "source_lines": [
+        2709,
+        2709
+      ],
+      "text": "34. 以向量组 $\\mathbf{a}_1 = (3,1,0)$, $\\mathbf{a}_2 = (6,3,2)$, $\\mathbf{a}_3 = (1,3,5)$ 为基, 求 $\\beta = (2, -1,2)$ 的坐标.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0098",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "35",
+      "page": 175,
+      "source_lines": [
+        2710,
+        2713
+      ],
+      "text": "35. 设 $\\mathbf{a}_{1}=(3,2,-1,4),\\mathbf{a}_{2}=(2,3,0,-1)$ .\n(1) 将 $a_{1}, a_{2}$ 扩充为 $R^{4}$ 的一组基;\n(2) 给出标准基在该组基下的表示;\n(3) 求 $\\beta = (1, 3, 4, -2)$ 在该组基下的坐标.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0099",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "36",
+      "page": 175,
+      "source_lines": [
+        2714,
+        2714
+      ],
+      "text": "36. 将三维几何空间中的直角坐标系 $[O; \\mathbf{e}_1, \\mathbf{e}_2, \\mathbf{e}_3]$ 绕单位向量 $\\mathbf{e} = \\frac{1}{\\sqrt{3}} (1, 1, 1)$ 逆时针旋转 $\\theta$ 角, 求新坐标与原坐标之间的关系.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0100",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "37",
+      "page": 175,
+      "source_lines": [
+        2715,
+        2715
+      ],
+      "text": "37. 设 $a_{1},a_{2},\\ldots,a_{s}$ 为非齐次线性方程组Ax=b的一组线性无关解, $\\lambda_{1},\\lambda_{2},\\ldots,\\lambda_{s}$ 为常数.给出 $\\lambda_{1}a_{1}+\\lambda_{2}a_{2}+\\ldots+\\lambda_{s}a_{s}$ 为该线性方程组的解的充要条件.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0101",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "38",
+      "page": 175,
+      "source_lines": [
+        2716,
+        2716
+      ],
+      "text": "38. 给出三个平面 $a_{i}x + b_{i}y + c_{i}z = d_{i}, i = 1,2,3$ 相交于一条直线的充要条件.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0102",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "39",
+      "page": 175,
+      "source_lines": [
+        2717,
+        2720
+      ],
+      "text": "39. 求下列齐次线性方程组的基础解系与通解\n(1)\n$$\\left\\{ \\begin{array}{l} x _ {1} - 3 x _ {2} + x _ {3} - 2 x _ {4} = 0 \\\\ - 5 x _ {1} + x _ {2} - 2 x _ {3} + 3 x _ {4} = 0 \\\\ - x _ {1} - 1 1 x _ {2} + 2 x _ {3} - 5 x _ {4} = 0 \\\\ 3 x _ {1} + 5 x _ {2} + x _ {4} = 0 \\end{array} \\right. \\left\\{ \\begin{array}{l} x _ {1} + x _ {2} + x _ {3} + x _ {4} - 4 x _ {5} = 0 \\\\ x _ {1} - 2 x _ {2} + 3 x _ {3} - 4 x _ {4} + 2 x _ {5} = 0 \\\\ - x _ {1} + 3 x _ {2} - 5 x _ {3} + 7 x _ {4} - 4 x _ {5} = 0 \\\\ x _ {1} + 2 x _ {2} - x _ {3} + 4 x _ {4} - 6 x _ {5} = 0 \\end{array} \\right.\\tag{2}$$\n[第 176 页]",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0103",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "40",
+      "page": 176,
+      "source_lines": [
+        2721,
+        2721
+      ],
+      "text": "40. 已知 $F^5$ 中向量 $\\mathbf{a}_1 = (1,2,3,2,1)^T$ 及 $\\mathbf{a}_2 = (1,3,2,1,2)^T$, 求找一个齐次线性方程组使得 $\\mathbf{a}_1$ 与 $\\mathbf{a}_2$ 为该方程组的基础解系.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0104",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "41",
+      "page": 176,
+      "source_lines": [
+        2722,
+        2727
+      ],
+      "text": "41. 判断下列集合关于规定的运算是否构成线性空间\n(1) V 是所有实数对  $(x, y)$  的集合, 数域 F = R. 定义\n$$(x _ {1}, y _ {1}) + (x _ {2}, y _ {2}) = (x _ {1} + x _ {2}, y _ {1} + y _ {2}), \\quad \\lambda (x, y) = (x, y).$$\n(2) $V$ 是所有满足 $f(-1) = 0$ 的实函数的集合, 数域 $F = \\mathbf{R}$. 定义加法为函数的加法, 数乘为数与函数的乘法.\n(3) $V$ 是所有满足 $f(0) \\neq 0$ 的实函数的集合, 数域 $F = \\mathbf{R}$. 定义加法为函数的加法, 数乘为数与函数的乘法.\n(4) $V$ 是数域 $F$ 上所有 $n$ 阶可逆方阵的全体, 加法为矩阵的加法, 数乘为矩阵的数乘.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0105",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "42",
+      "page": 176,
+      "source_lines": [
+        2728,
+        2733
+      ],
+      "text": "42. 设V是所有实函数全体在实数域上构成的线性空间, 判断V中下列函数组是否线性相关.\n(1)  $1, x, \\sin x;$\n(2) $1, x, e^{x}$;\n(3)  $1, \\cos 2x, \\cos^{2} x;$\n(4) $1, x^{2}, (x - 1)^{3}, (x + 1)^{3}$;\n(5)  $\\cos x, \\cos 2x, \\ldots, \\cos(nx).$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0106",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "43",
+      "page": 176,
+      "source_lines": [
+        2734,
+        2734
+      ],
+      "text": "43. 证明定理 5.6.1.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0107",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "44",
+      "page": 176,
+      "source_lines": [
+        2735,
+        2738
+      ],
+      "text": "44. 设 $F_{n}[x]$ 是次数小于或等于 $n$ 的多项式全体构成的线性空间.\n(1) 证明: $S = \\{1, x - 1, (x - 1)^2, \\ldots, (x - 1)^n\\}$ 构成 $F^n$ 的一组基;\n(2) 求 $S$ 到基 $T = \\{1, x, \\ldots, x^n\\}$ 的过渡矩阵;\n(3) 求多项式 $p(x)=a_{0}+a_{1}x+\\ldots+a_{n}x^{n}\\in F_{n}[x]$ 在基S下的坐标.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0108",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "45",
+      "page": 176,
+      "source_lines": [
+        2739,
+        2741
+      ],
+      "text": "45. V 是数域 F 上 n 阶对称方阵的全体, 定义加法为矩阵的加法, 数乘为矩阵的数乘. 证明: V 是线性空间, 并求 V 的一组基及维数.\n[第 177 页]\n§5.7 子空间运算*",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0109",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "46",
+      "page": 177,
+      "source_lines": [
+        2742,
+        2744
+      ],
+      "text": "46. 给定矩阵\n$$A = \\left( \\begin{array}{c c c} 0 & 0 & 1 \\\\ 1 & 0 & 0 \\\\ 4 & - 2 & 1 \\end{array} \\right)$$\n令V是与A乘法可交换的三阶实方阵的全体. 证明: V在矩阵加法与数乘下构成实数域上的线性空间, 并求V的一组基与维数.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0110",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "47",
+      "page": 177,
+      "source_lines": [
+        2745,
+        2751
+      ],
+      "text": "47. $V = F^{n \\times n}$ 是数域 $F$ 上所有 $n$ 阶矩阵构成的线性空间, 令 $W$ 是数域 $F$ 上所有满足 $Tr(A) = 0$ 的 $n$ 阶矩阵的全体. 证明: $W$ 是 $V$ 的线性子空间, 并求 $W$ 的一组基与维数.\n48* 证明定理 5.7.3.\n49* 证明:有限维线性空间的任何子空间都有补空间.\n50* 令 $F_{n}[x]$ 是数域F上次数不超过n的多项式全体按多项式的加法与数乘构成的线性空间, $W_{1}$ 是 $F_{n}[x]$ 的偶多项式(满足 $f(-x)=f(x)$ )全体, $W_{2}$ 是 $F_{n}[x]$ 奇多项式(满足 $f(-x)=-f(x)$ )全体.证明: $W_{1},W_{2}$ 是 $F_{n}[x]$ 的子空间,且 $F_{n}[x]=W_{1}\\oplus W_{2}$.\n[第 178 页]\n[第 179 页]\n第六章 线性变换",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0111",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "1",
+      "page": 211,
+      "source_lines": [
+        3299,
+        3302
+      ],
+      "text": "1. 判断下面所定义的变换A,哪些是线性的,哪些不是线性的.\n(1) 在 $\\mathbb{R}^2$ 中, $\\mathcal{A}(x,y)^T = (x + y,x^2)^T$;\n(2) 在 $\\mathbb{R}^3$ 中, $\\mathcal{A}(x,y,z)^T = (3x - 2y + z,0,x + 2y)^T$;\n(3) 在 $\\mathbb{R}^3$ 中, $\\mathcal{A}(x,y,z)^T = (x - y,z,x + 1)^T$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0112",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "2",
+      "page": 211,
+      "source_lines": [
+        3303,
+        3303
+      ],
+      "text": "2. 给定  $R^{2}$  上的线性变换  $\\mathcal{A}(x,y)^{T}=(2x-y,x+y)^{T}$ . 绘制图形, 观察 A 将四边形网格变成什么图形? 将单位圆变为什么图形?",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0113",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "3",
+      "page": 211,
+      "source_lines": [
+        3304,
+        3304
+      ],
+      "text": "3. 在平面直角坐标系中, 求关于直线  $\\sin(\\theta)x - \\cos(\\theta)y = 0$  的对称变换.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0114",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "4",
+      "page": 211,
+      "source_lines": [
+        3305,
+        3305
+      ],
+      "text": "4. 求  $R^{2}$  中如下线性变换 A: A 沿方向  $(2,1)$  拉伸 2 倍, 沿方向  $(1,-2)$  压缩 2 倍.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0115",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "5",
+      "page": 211,
+      "source_lines": [
+        3306,
+        3306
+      ],
+      "text": "5. 证明: $\\mathbb{R}^2$ 上的可逆线性变换可以分解为关于坐标轴的伸缩、反射及旋转变换的复合.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0116",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "6",
+      "page": 211,
+      "source_lines": [
+        3307,
+        3307
+      ],
+      "text": "6. 在三维几何空间的直角坐标系中, 求关于平面 $x + 2y + 3z = 0$ 的对称变换.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0117",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "7",
+      "page": 211,
+      "source_lines": [
+        3308,
+        3308
+      ],
+      "text": "7. 在三维几何空间的直角坐标系中, 求关于直线 z = 2y = 3x 的对称变换.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0118",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "8",
+      "page": 211,
+      "source_lines": [
+        3309,
+        3309
+      ],
+      "text": "8. 在三维几何空间的直角坐标系中, 求绕单位向量 $\\mathbf{e} = (1, -1, 1)^T$ 逆时针旋转 $30^\\circ$ 角的变换.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0119",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "9",
+      "page": 211,
+      "source_lines": [
+        3310,
+        3310
+      ],
+      "text": "9. 求  $R^{3}$  中如下线性变换 A: A 沿方向  $(1,1,0)$  拉伸 2 倍, 沿方向  $(1,-1,1)$  压缩 2 倍, 沿方向  $(1,-1,-2)$  拉伸 3 倍.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0120",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "10",
+      "page": 211,
+      "source_lines": [
+        3311,
+        3312
+      ],
+      "text": "10. 证明:三维几何空间中的可逆线性变换将平面变为平面,平行平面变为平行平面.\n[第 212 页]",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0121",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "11",
+      "page": 212,
+      "source_lines": [
+        3313,
+        3313
+      ],
+      "text": "11. 给定 $\\mathbb{R}^3$ 中的线性变换 $\\mathcal{A}(x,y,z)^T = (2x + y - z,x + 2y + z,4x + 5y + z)^T$. 求 $\\mathcal{A}$ 的像空间与核空间的维数及一组基.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0122",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "12",
+      "page": 212,
+      "source_lines": [
+        3314,
+        3314
+      ],
+      "text": "12. 证明: 从高维数组空间到低维数组空间的投影变换不是可逆变换.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0123",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "13",
+      "page": 212,
+      "source_lines": [
+        3315,
+        3327
+      ],
+      "text": "13. 求下列矩阵的全部特征值和特征向量\n(1)\n$$\\left( \\begin{array}{c c} 0 & a \\\\ - a & 0 \\end{array} \\right)$$\n(2)\n$$\\left( \\begin{array}{c c} \\cos \\theta & - \\sin \\theta \\\\ \\sin \\theta & \\cos \\theta \\end{array} \\right)$$\n(3)\n$$\\left( \\begin{array}{c c c} 0 & 0 & 1 \\\\ 0 & 1 & 0 \\\\ 1 & 0 & 0 \\end{array} \\right);$$\n(4)\n$$\\left( \\begin{array}{c c c} 3 & - 2 & 1 \\\\ 2 & - 2 & 2 \\\\ 3 & - 6 & 5 \\end{array} \\right)$$\n(5)\n$$\\left( \\begin{array}{c c c} 2 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 1 & 2 \\end{array} \\right);$$\n(6)\n$$\\left( \\begin{array}{c c c c} 1 & 1 & 1 & 1 \\\\ 1 & 1 & - 1 & - 1 \\\\ 1 & - 1 & 1 & - 1 \\\\ 1 & 1 & - 1 & 1 \\end{array} \\right)$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0124",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "14",
+      "page": 212,
+      "source_lines": [
+        3328,
+        3328
+      ],
+      "text": "14. 给定 $\\mathbb{R}^2$ 上的线性变换 $\\mathcal{A}(x, y)^T = (3x + 2y, 2x + y)^T$. $\\mathcal{A}$ 将单位圆 $C$ 映射为椭圆 $C'$. 求椭圆 $C'$ 的长短半轴方向与长度, 以及椭圆的面积.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0125",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "15",
+      "page": 212,
+      "source_lines": [
+        3329,
+        3329
+      ],
+      "text": "15. 设 $A$ 是可逆方阵. 证明: 若 $\\lambda$ 是 $A$ 的一个特征值, 则 $\\lambda^{-1}$ 是 $A^{-1}$ 的特征值, 且对应的特征向量相同.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0126",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "16",
+      "page": 212,
+      "source_lines": [
+        3330,
+        3330
+      ],
+      "text": "16. 设 A 为方阵,  $f(\\lambda)$  为多项式. 证明: 如果  $\\lambda_{0}$  是 A 的特征值, 则  $f(\\lambda_{0})$  是  $f(A)$  的特征值; 且如果 x 是属于  $\\lambda_{0}$  的特征向量, 则 x 也是矩阵  $f(A)$  的属于特征值  $f(\\lambda_{0})$  的特征向量.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0127",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "17",
+      "page": 212,
+      "source_lines": [
+        3331,
+        3331
+      ],
+      "text": "17. 设三阶方阵 $A$ 的特征多项式为 $p_A(\\lambda) = (\\lambda - 1)^2 (\\lambda - 2)$. 求方阵 $3A + 2I$ 的特征值与行列式.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0128",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "18",
+      "page": 212,
+      "source_lines": [
+        3332,
+        3333
+      ],
+      "text": "18. (1) 若  $A^{2}=I$ ，证明: A 的特征值只能是  $\\pm1$ ;\n(2) 设 n 阶实方阵 A 满足  $A^{T} = -A$ ，证明 A 的特征值为零或纯虚数.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0129",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "19",
+      "page": 212,
+      "source_lines": [
+        3334,
+        3334
+      ],
+      "text": "19. 设  $\\lambda_{1}, \\lambda_{2}$  是方阵 A 的两个不同的特征值,  $x_{1}, x_{2}$  是分别属于  $\\lambda_{1}, \\lambda_{2}$  的特征向量. 证明:  $x_{1} + x_{2}$  不是 A 的特征向量.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0130",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "20",
+      "page": 212,
+      "source_lines": [
+        3335,
+        3338
+      ],
+      "text": "20. 设 n 阶方阵  $A = (a_{ij})$  的全部特征值为  $\\lambda_{i} (i = 1, 2, \\cdots, n)$ ，证明\n$$\\sum_ {i = 1} ^ {n} \\lambda_ {i} ^ {2} = \\sum_ {i, j = 1} ^ {n} a _ {i j} a _ {j i}.$$\n[第 213 页]\n§6.5 若当标准形简介*",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0131",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "21",
+      "page": 213,
+      "source_lines": [
+        3339,
+        3343
+      ],
+      "text": "21. 判断以下矩阵A,B是否相似?请说明理由.\n$$A = \\left( \\begin{array}{c c c} 1 & 2 & 3 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{array} \\right),$$\n$$B = \\left( \\begin{array}{c c c} 1 & 2 & 0 \\\\ 0 & 1 & 3 \\\\ 0 & 0 & 1 \\end{array} \\right);\\tag{2}$$\n$$A = \\left( \\begin{array}{c c c c} 1 & 2 & 0 & 0 \\\\ 0 & 1 & 3 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \\end{array} \\right),$$\n$$B = \\left( \\begin{array}{c c c c} 1 & 2 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 3 \\\\ 0 & 0 & 0 & 1 \\end{array} \\right).$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0132",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "22",
+      "page": 213,
+      "source_lines": [
+        3344,
+        3344
+      ],
+      "text": "22. 求三阶可逆方阵 $P$ 使得 $P\\left( \\begin{array}{lll}1 & 0 & 0\\\\ 0 & 2 & 0\\\\ 0 & 0 & 3 \\end{array} \\right)P^{-1} = \\left( \\begin{array}{lll}3 & 0 & 0\\\\ 0 & 1 & 0\\\\ 0 & 0 & 2 \\end{array} \\right).$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0133",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "23",
+      "page": 213,
+      "source_lines": [
+        3345,
+        3345
+      ],
+      "text": "23. 设A,B为同阶方阵,且A可逆.证明;A与B相似.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0134",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "24",
+      "page": 213,
+      "source_lines": [
+        3346,
+        3346
+      ],
+      "text": "24. 设A与B相似, C与D相似. 证明:  $\\mathrm{diag}(A,C)$ 与 $\\mathrm{diag}(B,D)$ 相似. 反之是否成立?",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0135",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "25",
+      "page": 213,
+      "source_lines": [
+        3347,
+        3349
+      ],
+      "text": "25. 设方阵 A 与 B 相似, 证明:\n(1) 对每个正整数 $k, A^k$ 相似于 $B^k$;\n(2) 对每个多项式 $f, f(A)$ 相似于 $f(B)$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0136",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "26",
+      "page": 213,
+      "source_lines": [
+        3350,
+        3350
+      ],
+      "text": "26. 设矩阵 $A = \\begin{pmatrix} 0 & 0 & 1 \\\\ x & 1 & y \\\\ 1 & 0 & 0 \\end{pmatrix}$ 有三个线性无关的特征向量, 求 $x$ 和 $y$ 应满足的条件.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0137",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "27",
+      "page": 213,
+      "source_lines": [
+        3351,
+        3354
+      ],
+      "text": "27. 设矩阵 $A$ 与 $B$ 相似, 其中\n$$A = \\left( \\begin{array}{c c c} - 2 & 0 & 0 \\\\ 2 & x & 2 \\\\ 3 & 1 & 1 \\end{array} \\right), \\quad B = \\left( \\begin{array}{c c c} - 1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & y \\end{array} \\right).$$\n(1) 求 $x$ 和 $y$ 的值;\n(2) 求可逆矩阵 T, 使得  $T^{-1}AT = B$ .",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0138",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "28",
+      "page": 213,
+      "source_lines": [
+        3355,
+        3359
+      ],
+      "text": "28. 设 n 阶方阵  $A \\neq 0$ , 满足  $A^{m} = 0$ , 其中  $m \\geq 2$  为正整数.\n(1) 求 A 的特征值;\n(2) 证明: A 不能相似于对角阵;\n[第 214 页]\n(3) 证明: $|I+A|=1$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0139",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "29",
+      "page": 214,
+      "source_lines": [
+        3360,
+        3364
+      ],
+      "text": "29. 判断下列矩阵 A 是否可对角化? 若可以, 试求变换矩阵 T, 使得  $T^{-1}AT$  为对角阵.\n(1)  $A = \\begin{pmatrix} -2 & 0 & 0 \\\\ 3 & 1 & 1 \\\\ 2 & 2 & 0 \\end{pmatrix};$ \n(2)  $A = \\begin{pmatrix} 1 & -1 & 1 \\\\ 2 & 4 & -2 \\\\ -3 & -3 & 5 \\end{pmatrix};$ \n(3)  $A = \\begin{pmatrix} 3 & 0 & 1 \\\\ 4 & -2 & -8 \\\\ -4 & 0 & -1 \\end{pmatrix};$ \n(4)  $A = \\begin{pmatrix} 2 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 1 & 2 \\end{pmatrix}.$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0140",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "30",
+      "page": 214,
+      "source_lines": [
+        3365,
+        3365
+      ],
+      "text": "30. 设 $A, B$ 均为 $n$ 阶方阵, $A$ 有 $n$ 个互异的特征值且 $AB = BA$. 证明 $B$ 相似于对角阵.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0141",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "31",
+      "page": 214,
+      "source_lines": [
+        3366,
+        3366
+      ],
+      "text": "31. 设 $n$ 阶方阵 $A$ 满足 $A^2 = I$, 证明 $A$ 相似于 $\\begin{pmatrix} I_r & 0 \\\\ 0 & -I_{n-r} \\end{pmatrix}$, 其中 $0 \\leq r \\leq n$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0142",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "32",
+      "page": 214,
+      "source_lines": [
+        3367,
+        3367
+      ],
+      "text": "32. 设 A 为 3 阶实方阵, 若 A 不实相似于上三角阵, 问 A 是否一定复相似于对角阵?",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0143",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "33",
+      "page": 214,
+      "source_lines": [
+        3368,
+        3368
+      ],
+      "text": "33. 设n阶复方阵A的全部特征值为 $\\lambda_{1},\\lambda_{2},\\ldots,\\lambda_{n},f(\\lambda)$ 为多项式.证明: $f(A)$ 的全部特征值为 $f(\\lambda_{1}),f(\\lambda_{2}),\\ldots,f(\\lambda_{n})$ ,由此 $\\det(f(A))=f(\\lambda_{1})f(\\lambda_{2})\\cdots f(l_{n})$ .",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0144",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "34",
+      "page": 214,
+      "source_lines": [
+        3369,
+        3369
+      ],
+      "text": "34. 设三阶方阵 $A$ 的特征多项式为 $p_A(\\lambda) = (\\lambda - 1)^2 (\\lambda - 2)$. 求多项式矩阵 $A^3 - 2A + 3I$ 的特征值与行列式.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0145",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "35",
+      "page": 214,
+      "source_lines": [
+        3370,
+        3372
+      ],
+      "text": "35. 判断下面所定义的变换, 哪些是线性的, 哪些不是线性的.\n(3) 取定  $A, B \\in M_{n}(F)$ ，对每个  $\\mathbf{x} \\in M_{n}(F)$ ， $\\mathcal{A}(\\mathbf{x}) = A\\mathbf{x} - \\mathbf{x}B;$\n(4) 在线性空间 V 中,  $\\mathcal{A}(x)=\\alpha$ , 其中  $\\alpha$  为 V 中的一个固定的向量.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0146",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "36",
+      "page": 214,
+      "source_lines": [
+        3373,
+        3384
+      ],
+      "text": "36. 求下列线性变换在所指定的基下的矩阵\n(1) 在  $F_{n}[x]$  中,  $\\mathcal{A}(P(x)) = P'(x)$ , 在基  $e_{0} = 1, e_{1} = x, \\cdots, e_{n-1} = \\frac{x^{n-1}}{(n-1)!}$  下;\n(2) 以四个线性无关的函数\n$$\\alpha_ {1} = e ^ {a x} \\cos b x$$\n$$\\alpha_ {2} = e ^ {a x} \\sin b x$$\n$$\\alpha_ {3} = x e ^ {a x} \\cos b x$$\n$$\\alpha_ {4} = x e ^ {a x} \\sin b x$$\n为基的四维空间中, 线性变换为微分变换;\n[第 215 页]\n(3) 给定 2 阶实方阵 A, 求 2 阶实方阵构成的线性空间上的线性变换  $\\mathcal{A}(\\mathbf{x}) = A\\mathbf{x} - \\mathbf{x}A$  在基\n$$e _ {1} = \\left( \\begin{array}{c c} 1 & 0 \\\\ 0 & 0 \\end{array} \\right), e _ {2} = \\left( \\begin{array}{c c} 0 & 1 \\\\ 0 & 0 \\end{array} \\right), e _ {3} = \\left( \\begin{array}{c c} 0 & 0 \\\\ 1 & 0 \\end{array} \\right), e _ {4} = \\left( \\begin{array}{c c} 0 & 0 \\\\ 0 & 1 \\end{array} \\right).$$\n下的矩阵.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0147",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "37",
+      "page": 215,
+      "source_lines": [
+        3385,
+        3387
+      ],
+      "text": "37. 在 $\\mathbb{R}^3$ 中定义线性变换\n$$\\mathscr {A} (x, y, z) ^ {T} = (x + 2 y, x - 3 z, 2 y - z) ^ {T}.$$\n求 $\\mathcal{A}$ 在基 $\\mathbf{e}_1 = (1,0,0)^T, \\mathbf{e}_2 = (0,1,0)^T, \\mathbf{e}_3 = (0,0,1)^T$ 下的矩阵.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0148",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "38",
+      "page": 215,
+      "source_lines": [
+        3388,
+        3392
+      ],
+      "text": "38. 设 $\\mathbb{R}^3$ 中的线性变换 $\\mathcal{A}$ 将\n$$\\alpha_ {1} = (0, 0, 1) ^ {T}, \\quad \\alpha_ {2} = (0, 1, 1) ^ {T}, \\quad \\alpha_ {3} = (1, 1, 1) ^ {T}$$\n变换到\n$$\\beta_ {1} = (2, 3, 5) ^ {T}, \\quad \\beta_ {2} = (1, 0, 0) ^ {T}, \\quad \\beta_ {3} = (0, 1, - 1) ^ {T}.$$\n求 A 在自然基和  $\\alpha_{1}, \\alpha_{2}, \\alpha_{3}$  下的矩阵.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0149",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "39",
+      "page": 215,
+      "source_lines": [
+        3393,
+        3393
+      ],
+      "text": "39. 设线性变换 $\\mathcal{A}$ 在基 $\\alpha_{1} = (1, - 1),\\alpha_{2} = (1,1)$ 下的矩阵为 $\\left( \\begin{array}{ll}2 & 3\\\\ 0 & 1 \\end{array} \\right)$ ，求 $\\mathcal{A}$ 在基$\\beta_{1} = (2,0),\\beta_{2} = (-1,1)$ 下的矩阵.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0150",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "40",
+      "page": 215,
+      "source_lines": [
+        3394,
+        3398
+      ],
+      "text": "40. 设 $\\mathcal{A}$ 在基 $\\alpha_{1}, \\alpha_{2}, \\alpha_{3}$ 下的矩阵为\n$$A = \\left( \\begin{array}{c c c} 1 & 2 & 3 \\\\ - 1 & 0 & 3 \\\\ 2 & 1 & 5 \\end{array} \\right),$$\n求 $\\mathcal{A}$ 在基 $\\beta_{1},\\beta_{2},\\beta_{3}$ 下的矩阵:\n(1) $\\beta_{1} = \\alpha_{3},\\beta_{2} = \\alpha_{1},\\beta_{3} = \\alpha_{2};$\n(2) $\\beta_{1} = \\alpha_{1},\\beta_{2} = \\alpha_{2} + \\alpha_{3},\\beta_{3} = \\alpha_{2} - \\alpha_{3}.$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0151",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "41",
+      "page": 215,
+      "source_lines": [
+        3399,
+        3405
+      ],
+      "text": "41. 在 $\\mathbb{R}^3$ 中给定两组基:\n$$\\alpha_ {1} = (1, 0, 1) ^ {T}, \\quad \\alpha_ {2} = (2, 1, 0) ^ {T}, \\quad \\alpha_ {3} = (1, 1, 1) ^ {T};$$\n$$\\beta_ {1} = (2, 3, 1) ^ {T}, \\quad \\beta_ {2} = (7, 9, 5) ^ {T}, \\quad \\beta_ {3} = (3, 4, 3) ^ {T}.$$\n定义线性变换  $\\mathcal{A}(\\alpha_{i})=\\beta_{i}(i=1,2,3)$ .\n[第 216 页]\n(1) 求 A 在基  $\\alpha_{1}, \\alpha_{2}, \\alpha_{3}$  下的矩阵;\n(2) 求 $\\mathcal{A}$ 在基 $\\beta_{1}, \\beta_{2}, \\beta_{3}$ 下的矩阵.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0152",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "42",
+      "page": 216,
+      "source_lines": [
+        3406,
+        3407
+      ],
+      "text": "42. 设 $V$ 为 $n$ 维线性空间, $\\mathcal{A}: V \\to V$ 为线性变换. 若存在 $\\alpha \\in V$, 使得 $\\mathcal{A}^{n-1} \\alpha \\neq 0$, 但是 $\\mathcal{A}^n(\\alpha) = 0$, 证明: $\\mathcal{A}$ 在某组基下的矩阵为\n$$\\left( \\begin{array}{c c c c c} 0 & 1 & 0 & \\dots & 0 \\\\ & 0 & 1 & \\ddots & \\vdots \\\\ & & \\ddots & \\ddots & 0 \\\\ & & & 0 & 1 \\\\ & & & & 0 \\end{array} \\right)$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0153",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "43",
+      "page": 216,
+      "source_lines": [
+        3408,
+        3408
+      ],
+      "text": "43. 设  $\\alpha_{1},\\alpha_{2},\\cdots,\\alpha_{n}$  为线性空间 V 的一组基, 证明: 对于任意  $\\beta_{1},\\beta_{2},\\cdots,\\beta_{n}\\in V$ , 存在线性变换 A, 使得  $\\mathcal{A}(\\alpha_{i})=\\beta_{i}(i=1,2,\\cdots,n)$ .",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0154",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "44",
+      "page": 216,
+      "source_lines": [
+        3409,
+        3411
+      ],
+      "text": "44. 设 V 为次数不超过 2 的多项式构成的线性空间, 线性变换  $\\mathscr{A}: V \\to V$  满足\n$$\\mathscr {A} (1) = x ^ {2} + x + 3, \\quad \\mathscr {A} (x) = 2 x + 1, \\quad \\mathscr {A} (x ^ {2}) = 2 x ^ {2} + 3.$$\n求 A 的特征值和特征向量.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0155",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "45",
+      "page": 216,
+      "source_lines": [
+        3412,
+        3431
+      ],
+      "text": "45. 设 $V = F^{n \\times n}$.\n(1) 证明: $V$ 的变换 $\\mathcal{A}: \\mathbf{x} \\to \\mathbf{x}^T$ 是线性变换;\n(2) 求 $\\mathcal{A}$ 的特征值与特征向量. $\\mathcal{A}$ 是否可对角化?\n46* 求下列矩阵的若当标准形\n(1)\n$$\\left( \\begin{array}{c c c} 2 & - 2 & 3 \\\\ 1 & 1 & 1 \\\\ 1 & 3 & - 1 \\end{array} \\right)$$\n(2)\n$$\\left( \\begin{array}{c c c} 4 & - 9 & - 4 \\\\ 6 & - 1 2 & - 5 \\\\ - 7 & 1 3 & 5 \\end{array} \\right)$$\n(3)\n$$\\left( \\begin{array}{c c c c} 1 & 2 & 3 & 4 \\\\ 0 & 1 & 2 & 3 \\\\ 0 & 0 & 1 & 2 \\\\ 0 & 0 & 0 & 1 \\end{array} \\right)\\tag{4}$$\n$$\\left( \\begin{array}{c c c c c c} 0 & 1 & 0 & \\dots & 0 & 0 \\\\ 0 & 0 & 1 & \\dots & 0 & 0 \\\\ \\dots & \\dots & \\dots & \\dots & \\dots & \\dots \\\\ 0 & 0 & 0 & \\dots & 0 & 1 \\\\ 1 & 0 & 0 & \\dots & 0 & 0 \\end{array} \\right) _ {n \\times n}$$\n47* 设 $A = \\begin{pmatrix} 2 & -2 & 3 \\\\ 10 & -4 & 5 \\\\ 5 & -4 & 6 \\end{pmatrix}$, 求方阵 $T$, 使 $T^{-1}AT$ 为若当标准形.\n[第 217 页]\n§6.5 若当标准形简介*\n48* 设方阵A满足 $A^{2}=A$ .用矩阵的若当标准型证明: $Tr(A)=\\operatorname{rank}(A)$ .\n$$\\left\\{ \\begin{array}{l} \\frac {\\mathrm{d} x}{\\mathrm{d} t} = 2 x - 2 y + 3 z \\\\ \\frac {\\mathrm{d} y}{\\mathrm{d} t} = 1 0 x - 4 y + 5 z \\\\ \\frac {\\mathrm{d} z}{\\mathrm{d} t} = 5 x - 4 y + 6 z \\end{array} \\right.$$\n49* 设 $x = x(t), y = y(t), z = z(t)$, 求解常微分方程组\n[第 218 页]\n[第 219 页]\n第七章 内积空间及变换",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0156",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "1",
+      "page": 253,
+      "source_lines": [
+        4096,
+        4098
+      ],
+      "text": "1. 已知 $\\alpha_{1} = (1,2, - 1,1)$, $\\alpha_{2} = (2,3,1, - 1)$, $\\alpha_{3} = (-1, - 1, - 2,2)$.\n(1) 求  $\\alpha_{1}, \\alpha_{2}, \\alpha_{3}$  的长度及彼此间的夹角.\n(2) 求与  $\\alpha_{1}, \\alpha_{2}, \\alpha_{3}$  都正交的向量.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0157",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "2",
+      "page": 253,
+      "source_lines": [
+        4099,
+        4101
+      ],
+      "text": "2. 设 $\\mathbf{x}, \\mathbf{y}, \\mathbf{z}$ 是欧氏空间 $\\mathbb{R}^n$ 中的向量, 证明以下不等式:\n(1) $|\\mathbf{x} - \\mathbf{y}| \\geq |\\mathbf{x}| - |\\mathbf{y}|$;\n(2) $|\\mathbf{x} - \\mathbf{y}| + |\\mathbf{y} - \\mathbf{z}| \\geq |\\mathbf{x} - \\mathbf{z}|$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0158",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "3",
+      "page": 253,
+      "source_lines": [
+        4102,
+        4105
+      ],
+      "text": "3. 设 $\\mathbf{x}, \\mathbf{y}$ 是欧氏空间 $\\mathbb{R}^n$ 的两个向量, 它们之间的夹角为 $\\theta$. 证明:\n(1) (余弦定理) $|\\mathbf{x} - \\mathbf{y}|^2 = |\\mathbf{x}|^2 + |\\mathbf{y}|^2 - 2|\\mathbf{x}||\\mathbf{y}|\\cos \\theta$.\n(2) (平行四边形定理) $|\\mathbf{x} + \\mathbf{y}|^2 + |\\mathbf{x} - \\mathbf{y}|^2 = 2(|\\mathbf{x}|^2 + |\\mathbf{y}|^2)$.\n(3) (菱形对角线定理) 若 $|\\mathbf{x}| = |\\mathbf{y}|$, 则 $(\\mathbf{x} + \\mathbf{y}) \\perp (\\mathbf{x} - \\mathbf{y})$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0159",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "4",
+      "page": 253,
+      "source_lines": [
+        4106,
+        4106
+      ],
+      "text": "4. 设 $\\mathbf{a}_1, \\mathbf{a}_2, \\ldots, \\mathbf{a}_n$ 为 $\\mathbb{R}^n$ 的一组基，$\\mathbf{a} \\in \\mathbb{R}^{\\mathbf{n}}$。证明：$\\mathbf{a} = \\mathbf{0}$ 当且仅当 $(\\mathbf{a}, \\mathbf{a}_i) = 0, i = 1, 2, \\ldots, n$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0160",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "5",
+      "page": 253,
+      "source_lines": [
+        4107,
+        4110
+      ],
+      "text": "5. 用Schmidt正交化方法构造标准正交向量组:\n[第 254 页]\n(1)  $(0,0,1)$ ,  $(0,1,1)$ ,  $(1,1,1)$ ;\n(2) $(1,1,1,2),(1,1,-5,3),(3,2,8,-7).$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0161",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "6",
+      "page": 254,
+      "source_lines": [
+        4111,
+        4113
+      ],
+      "text": "6. 设在 $\\mathbb{R}^3$ 中, 基 $\\mathbf{a}_1, \\mathbf{a}_2, \\mathbf{a}_3$ 的度量矩阵是\n$$\\left( \\begin{array}{c c c} 1 & 0 & - 1 \\\\ 0 & 2 & 0 \\\\ - 1 & 0 & 2 \\end{array} \\right)$$\n试求 $\\mathbb{R}^3$ 中由 $\\mathbf{a}_1, \\mathbf{a}_2, \\mathbf{a}_3$ 表示的一组标准正交基.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0162",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "7",
+      "page": 254,
+      "source_lines": [
+        4114,
+        4114
+      ],
+      "text": "7. 证明: n 维向量空间中任一个正交向量组都能扩充成一组正交基.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0163",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "8",
+      "page": 254,
+      "source_lines": [
+        4115,
+        4117
+      ],
+      "text": "8. 验证下列各组向量是正交的, 并添加向量改造为标准正交基:\n(1) $(2,1,2),(1,2,-2);$\n(2) $(1,1,1,2),(1,2,3,-3)$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0164",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "9",
+      "page": 254,
+      "source_lines": [
+        4118,
+        4118
+      ],
+      "text": "9. 如 $\\mathbf{b}$ 与 $\\mathbf{a}_1, \\mathbf{a}_2, \\ldots, \\mathbf{a}_n$ 都正交, 证明: $\\mathbf{b}$ 与 $\\mathbf{a}_1, \\mathbf{a}_2, \\ldots, \\mathbf{a}_n$ 的任意线性组合也正交.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0165",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "10",
+      "page": 254,
+      "source_lines": [
+        4119,
+        4121
+      ],
+      "text": "10. 设 $\\mathbf{e}_1, \\mathbf{e}_2, \\mathbf{e}_3$ 是 $\\mathbb{R}^3$ 的一组标准正交基. 令\n$$\\begin{array}{l} \\mathbf {a} _ {1} = \\frac {1}{3} (2 \\mathbf {e} _ {1} + 2 \\mathbf {e} _ {2} - \\mathbf {e} _ {3}), \\\\ \\mathbf {a} _ {2} = \\frac {1}{3} (2 \\mathbf {e} _ {1} - \\mathbf {e} _ {2} + 2 \\mathbf {e} _ {3}), \\\\ \\mathbf {a} _ {3} = \\frac {1}{3} (\\mathbf {e} _ {1} - 2 \\mathbf {e} _ {2} - 2 \\mathbf {e} _ {3}), \\end{array}$$\n证明: $a_{1},a_{2},a_{3}$ 也是 $R^{3}$ 的一组标准正交基.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0166",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "11",
+      "page": 254,
+      "source_lines": [
+        4122,
+        4123
+      ],
+      "text": "11. 设 $\\mathbf{e}_1, \\mathbf{e}_2, \\ldots, \\mathbf{e}_n$ 是 $\\mathbb{R}^n$ 的标准正交基，$\\mathbf{x}_1, \\mathbf{x}_2, \\ldots, \\mathbf{x}_k$ 是 $\\mathbb{R}^n$ 中任意 $k$ 个向量，试证：$\\mathbf{x}_1, \\mathbf{x}_2, \\ldots, \\mathbf{x}_k$ 两两正交的充分必要条件是\n$$\\sum_ {s = 1} ^ {n} \\left(\\mathbf {x} _ {i}, \\mathbf {e} _ {s}\\right) \\left(\\mathbf {x} _ {j}, \\mathbf {e} _ {s}\\right) = 0, \\quad i, j = 1, 2, \\dots , k, i \\neq j$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0167",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "12",
+      "page": 254,
+      "source_lines": [
+        4124,
+        4128
+      ],
+      "text": "12. 设 $\\mathbf{a}_1, \\mathbf{a}_2, \\ldots, \\mathbf{a}_n$ 是 $\\mathbb{R}^n$ 的标准正交基. 证明:\n(1) 对任意 $\\mathbf{a}, \\mathbf{b} \\in \\mathbb{R}^n$, $(\\mathbf{a}, \\mathbf{b}) = \\sum_{i=1}^{n} (\\mathbf{a}, \\mathbf{a}_i)(\\mathbf{b}, \\mathbf{a}_i)$.\n(2) 对任意 $\\mathbf{a} \\in \\mathbb{R}^n$, $|\\mathbf{a}|^2 = \\sum_{i=1}^{n} (\\mathbf{a}, \\mathbf{a}_i)^2$.\n[第 255 页]\n§7.5 酉空间*",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0168",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "13",
+      "page": 255,
+      "source_lines": [
+        4129,
+        4130
+      ],
+      "text": "13. 证明二阶正交矩阵必取下面两种形式之一:\n$$\\left( \\begin{array}{c c} \\cos \\theta & \\sin \\theta \\\\ - \\sin \\theta & \\cos \\theta \\end{array} \\right), \\quad \\left( \\begin{array}{c c} \\cos \\theta & \\sin \\theta \\\\ \\sin \\theta & - \\cos \\theta \\end{array} \\right), \\qquad - \\pi \\leq \\theta <   \\pi$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0169",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "14",
+      "page": 255,
+      "source_lines": [
+        4131,
+        4131
+      ],
+      "text": "14. 写出所有3阶正交矩阵, 它的元素是0或1.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0170",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "15",
+      "page": 255,
+      "source_lines": [
+        4132,
+        4132
+      ],
+      "text": "15. 如果一个正交阵中每个元素都是 $\\frac{1}{4}$ 或 $-\\frac{1}{4}$, 这个正交阵是几阶的?",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0171",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "16",
+      "page": 255,
+      "source_lines": [
+        4133,
+        4133
+      ],
+      "text": "16. 若 $\\mathbf{a}$ 是 $\\mathbb{R}^n$ 的单位向量, 证明: $Q = I_n - 2\\mathbf{a}\\mathbf{a}^T$ 是一个正交阵. 当 $\\mathbf{a} = \\frac{1}{\\sqrt{3}} (\\mathbf{1}, \\mathbf{1}, \\mathbf{1})^{\\mathrm{T}}$ 时, 具体求出 $Q$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0172",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "17",
+      "page": 255,
+      "source_lines": [
+        4134,
+        4134
+      ],
+      "text": "17. 在什么条件下, 对角矩阵是正交矩阵?",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0173",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "18",
+      "page": 255,
+      "source_lines": [
+        4135,
+        4139
+      ],
+      "text": "18. 设A,B都为n阶正交阵,证明:\n(1) A的伴随矩阵 $A^{*}$ 也是正交阵;\n(2) $AB$ 也为正交阵;\n(3) $A^{-1}$ 也为正交阵.\n(4) $A$ 的行列式为1或-1.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0174",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "19",
+      "page": 255,
+      "source_lines": [
+        4140,
+        4140
+      ],
+      "text": "19. 给定三阶矩阵 $A = \\begin{pmatrix} 1 & 2 & 0 \\\\ 0 & 1 & 2 \\\\ 2 & 0 & 1 \\end{pmatrix}$. 求 $A$ 的QR分解.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0175",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "20",
+      "page": 255,
+      "source_lines": [
+        4141,
+        4144
+      ],
+      "text": "20. 设 $W$ 是由 $(1,1,0)$, $(1,-2,1)$ 生成的 $\\mathbb{R}^3$ 的子空间.\n(1) 求 $W$ 的一组标准正交基.\n(2) 求 $W^{\\perp}$ 的标准正交基.\n(3) 求向量 $(0,0,2)$ 在 $W$ 的正交投影.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0176",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "21",
+      "page": 255,
+      "source_lines": [
+        4145,
+        4145
+      ],
+      "text": "21. 在三维空间直角坐标系中, 已知点 $A, B, C, D$ 的坐标分别是 $(1, 1, 0)$, $(3, 1, 2)$, $(0, 1, 3)$, $(2, 2, 4)$. 求四面体的顶点 $A$ 到底面 $BCD$ 的高.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0177",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "22",
+      "page": 255,
+      "source_lines": [
+        4146,
+        4149
+      ],
+      "text": "22. 求线性方程组\n$$\\left\\{ \\begin{array}{l} 2 x - y = 1 \\\\ x + 2 y = 1 \\\\ x + y = 1 \\end{array} \\right.$$\n的最小二乘解.\n[第 256 页]",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0178",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "23",
+      "page": 256,
+      "source_lines": [
+        4150,
+        4150
+      ],
+      "text": "23. 证明: 三维空间中绕过原点的某条直线的旋转变换是正交变换.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0179",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "24",
+      "page": 256,
+      "source_lines": [
+        4151,
+        4151
+      ],
+      "text": "24. 设 $\\mathbf{a}$ 为 $\\mathbb{R}^n$ 中的单位向量. 定义线性变换: $\\mathcal{A}\\mathbf{b} = \\mathbf{b} - 2(\\mathbf{a},\\mathbf{b})\\mathbf{a}$. 证明: $\\mathcal{A}$ 为正交变换, 并找 $\\mathbb{R}^n$ 的一组标准正交基, 使得 $\\mathcal{A}$ 在该组基下的矩阵为对角阵.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0180",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "25",
+      "page": 256,
+      "source_lines": [
+        4152,
+        4152
+      ],
+      "text": "25. 证明: 第五章习题4,9给出的线性变换是对称变换.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0181",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "26",
+      "page": 256,
+      "source_lines": [
+        4153,
+        4155
+      ],
+      "text": "26. 设\n$$A = \\left( \\begin{array}{c c c} 1 & - 2 & 0 \\\\ - 2 & 2 & - 2 \\\\ 0 & - 2 & 3 \\end{array} \\right),$$\n求正交矩阵P, 使 $P^{-1}AP$ 为对角阵. 由此求 $A^{k}, k$ 是自然数.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0182",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "27",
+      "page": 256,
+      "source_lines": [
+        4156,
+        4157
+      ],
+      "text": "27. 证明:下列三个条件中只要有二个成立,另一个也必成立.\n(1)A是对称的；(2)A是正交的；(3) $A^{2}=I$ .",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0183",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "28",
+      "page": 256,
+      "source_lines": [
+        4158,
+        4162
+      ],
+      "text": "28. 求正交阵 $T$, 使 $T^{-1} A T$ 为对角矩阵\n$$(1) A = \\left( \\begin{array}{c c} 2 & 1 \\\\ 1 & 2 \\end{array} \\right)$$\n$$(2) A = \\left( \\begin{array}{c c c} 0 & - 1 & - 1 \\\\ - 1 & 0 & - 1 \\\\ - 1 & - 1 & 0 \\end{array} \\right)$$\n$$(3) A = \\left( \\begin{array}{c c c} 1 & 2 & 4 \\\\ 2 & - 2 & 2 \\\\ 4 & 2 & 1 \\end{array} \\right)$$\n$$(4) A = \\left( \\begin{array}{c c c} 3 & - 2 & 0 \\\\ - 2 & 2 & - 2 \\\\ 0 & - 2 & 1 \\end{array} \\right)$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0184",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "29",
+      "page": 256,
+      "source_lines": [
+        4163,
+        4163
+      ],
+      "text": "29. 设 $A$ 为 $n$ 阶实对称方阵，且 $A^2 = A$. 证明：存在正交方阵 $T$ 使得 $T^{-1}AT = \\mathrm{diag}(I_r, O)$. 这里 $r = \\mathrm{rank}(A)$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0185",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "30",
+      "page": 256,
+      "source_lines": [
+        4164,
+        4201
+      ],
+      "text": "30. 设 $A$ 为 $n$ 阶实对称方阵. 证明: $\\max_{\\mathbf{0} \\neq \\mathbf{x} \\in \\mathbb{R}^n} \\frac{\\mathbf{x}^T A \\mathbf{x}}{\\mathbf{x}^T \\mathbf{x}} = \\lambda_{\\max}$, 这里 $\\lambda_{\\max}$ 是 $A$ 的最大特征值.\n31* 设 $V$ 是 $n$ 阶实方阵全体构成的线性空间. 对 $A, B \\in V$, 定义 $(A, B) = Tr(AB^T)$.\n(1) 证明: $(A, B)$ 构成内积, 从而 $V$ 在该内积下成为欧氏空间.\n(2) 设 $A=(a_{ij})_{n\\times n}\\in V$ , 求A的模长.\n(3) 基本矩阵 $E_{ij}$ 是否构成V的一组标准正交基? 请说明理由.\n32 设 $\\alpha_{1}, \\alpha_{2}, \\ldots, \\alpha_{n}$ 是 $n$ 维欧氏空间 $V$ 的一组向量. 定义其Gram矩阵 $G = ((\\alpha_{i}, \\alpha_{j})) \\in \\mathbb{R}^{n \\times n}$.\n(1) 证明: $\\alpha_{1}, \\alpha_{2}, \\ldots, \\alpha_{n}$ 构成 $V$ 的一组基当且仅当 $\\operatorname{det}(G) \\neq 0$.\n[第 257 页]\n(2) 设 $\\alpha_{i}$ 在一组标准正交基下的坐标为 $\\mathbf{x}_i, i = 1,2,\\ldots,n$. 记 $X = (\\mathbf{x}_1,\\dots ,\\mathbf{x}_n)\\in$ $\\mathbb{R}^{n\\times n}$. 则 $\\operatorname *{det}(G) = \\operatorname *{det}(X)^2$.\n33 设 $\\mathbb{R}_n[x]$ 是次数不超过 $n$ 次的实系数多项式全体构在内积 $(f(x), g(x)) = \\int_{-1}^{1} f(x) g(x) dx$ 下的欧氏空间. 令\n$$P _ {0} (x) = 1, P _ {1} (x) = x, P _ {n} (x) = \\frac {2 n + 1}{n + 1} x P _ {n - 1} (x) - \\frac {n}{n + 1} P _ {n - 2} (x), \\quad n \\geq 2.$$\n证明: $P_0(x), P_1(x), \\ldots, P_n(x)$ 是 $\\mathbb{R}_n[x]$ 的一组正交基. 称 $P_n(x)$ 为 Legendre 多项式.\n34 设 $\\mathbb{R}_n[x]$ 是次数不超过 $n$ 次的实系数多项式全体构在内积 $(f(x), g(x)) = \\int_{-1}^{1} \\frac{f(x)g(x)}{\\sqrt{1 - x^2}} dx$ 下的欧氏空间. 令\n$$T _ {0} (x) = 1, T _ {1} (x) = x, T _ {n} (x) = 2 x T _ {n - 1} (x) - T _ {n - 2} (x), \\quad n \\geq 2.$$\n证明: $T_{0}(x), T_{1}(x), \\ldots, T_{n}(x)$ 是 $\\mathbb{R}_{n}[x]$ 的一组标准正交基. 称 $T_{n}(x)$ 为 Chebyshev 多项式.\n35* 验证\n(1) $A = \\left( \\begin{array}{ccc} - (\\frac{1}{2} +\\frac{\\sqrt{2}}{4})i & \\frac{1}{2} i & -(\\frac{1}{2} -\\frac{\\sqrt{2}}{4})i\\\\ \\frac{1}{2} i & \\frac{\\sqrt{2}}{2} i & -\\frac{1}{2} i\\\\ (\\frac{1}{2} -\\frac{\\sqrt{2}}{4})i & \\frac{1}{2} i & (\\frac{1}{2} +\\frac{\\sqrt{2}}{4})i \\end{array} \\right)$ 为酉阵；\n(2) $B = \\left( \\begin{array}{ccc}1 & 1 + i & i\\\\ 1 - i & 2 & -i\\\\ -i & i & 0 \\end{array} \\right)$ 为Hermite阵.\n36* 证明:酉变换的特征值的模等于1.\n37* 证明:\n(1) 酉阵的不同特征值所对应的特征向量是两两正交的;\n(2) Hermite阵的不同特征值所对应的特征向量是两两正交的.\n38* 证明:\n(1) 设A为可逆Hermite阵, 则 $A^{-1}$ 也为Hermite阵;\n(2) 设 $A, B$ 都是 $n$ 阶Hermite阵, 那么 $AB$ 也是Hermite阵的充分必要条件是 $AB = BA$.\n39* 设A为Hermite阵, 证明:\n[第 258 页]\n(1)  $I \\pm iA$  为可逆阵;\n(2) $I+iA$ 与I-iA乘法可交换;\n(3) $U = (I + iA)(I - iA)^{-1}$ 为酉阵.\n40* 若 $AA^{H}=0$ , 证明:A=0.\n41* 设 $U$ 为酉阵, 且 $U^{-1}AU = B$, 证明:\n$$\\operatorname{tr} (A ^ {H} A) = \\operatorname{tr} (B ^ {H} B).$$\n42* 已知Hermite阵\n$$H = \\left( \\begin{array}{c c c} 0 & - i & 1 \\\\ i & 0 & i \\\\ 1 & - i & 0 \\end{array} \\right)$$\n求酉方阵U使得 $U^{-1}HU$ 为对角阵.\n[第 259 页]\n第八章 实二次型",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0186",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "1",
+      "page": 283,
+      "source_lines": [
+        4653,
+        4658
+      ],
+      "text": "1. 将下列二次型表示成矩阵形式\n[第 284 页]\n$$Q (x _ {1}, x _ {2}, x _ {3}) = - x _ {1} ^ {2} + x _ {2} ^ {2} + 2 x _ {3} ^ {2} + 4 x _ {1} x _ {2} + 3 x _ {1} x _ {3} + 4 x _ {2} x _ {3}; \\tag {1}$$\n$$Q (x _ {1}, x _ {2}, x _ {3}) = 2 x _ {1} ^ {2} + 2 x _ {1} x _ {2} - x _ {2} x _ {3}; \\tag {2}$$\n$$Q (x _ {1}, x _ {2}, x _ {3}, x _ {4}) = x _ {1} x _ {2} + 3 x _ {1} x _ {3} + 5 x _ {1} x _ {4} + 6 x _ {2} x _ {3} + 7 x _ {2} x _ {4} + 1 0 x _ {3} x _ {4}; \\tag {3}$$\n$$(4) Q (x _ {1}, x _ {2}, \\dots , x _ {n}) = \\sum_ {i = 1} ^ {n - 2} (x _ {i} - x _ {i + 2}) ^ {2}.$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0187",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "2",
+      "page": 284,
+      "source_lines": [
+        4659,
+        4660
+      ],
+      "text": "2. 写出下列对称矩阵对应的二次型\n$$\\begin{array}{l} (1) A = \\left( \\begin{array}{c c c} 1 & 3 & 5 \\\\ 3 & 2 & 6 \\\\ 5 & 6 & 4 \\end{array} \\right) \\quad (2) A = \\left( \\begin{array}{c c c} a & b & 0 \\\\ b & a & b \\\\ 0 & b & a \\end{array} \\right) \\\\ (3) A = \\left( \\begin{array}{c c c c} 0 & - 1 & 2 & - 3 \\\\ - 1 & 0 & 3 & - 2 \\\\ 2 & 3 & 0 & 2 \\\\ - 3 & - 2 & 2 & 0 \\end{array} \\right) \\end{array}$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0188",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "3",
+      "page": 284,
+      "source_lines": [
+        4661,
+        4665
+      ],
+      "text": "3. 用配方法将下列二次型化为标准形, 并求相应的可逆线性变换\n$$(1) Q = x _ {1} ^ {2} + x _ {2} ^ {2} + x _ {3} ^ {2} + x _ {1} x _ {2} + x _ {1} x _ {3} + x _ {2} x _ {3}$$\n$$(2) Q = x _ {1} ^ {2} + x _ {2} x _ {3}$$\n$$(3) Q = x _ {1} x _ {2} + x _ {2} x _ {3} + x _ {3} x _ {4} + x _ {4} x _ {1}$$\n$$(4) Q = x _ {1} ^ {2} + 5 x _ {2} ^ {2} - 4 x _ {3} ^ {2} + 2 x _ {1} x _ {2} - 4 x _ {2} x _ {3}$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0189",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "4",
+      "page": 284,
+      "source_lines": [
+        4666,
+        4668
+      ],
+      "text": "4. 用初等变换法将下列二次型化成标准形, 并求相应的可逆线性变换\n$$(1) Q = \\mathbf {x} ^ {T} \\left( \\begin{array}{c c c} 2 & 1 & 1 \\\\ 1 & 3 & 2 \\\\ 1 & 2 & 1 \\end{array} \\right) \\mathbf {x} \\qquad (2) Q = \\mathbf {x} ^ {T} \\left( \\begin{array}{c c c} 0 & - 1 & 0 \\\\ - 1 & 1 & 1 \\\\ 0 & 1 & 1 \\end{array} \\right) \\mathbf {x}$$\n$$(3) Q = \\mathbf {x} ^ {T} \\left( \\begin{array}{c c c} 0 & 1 & 1 \\\\ 1 & 0 & - 1 \\\\ 1 & - 1 & 0 \\end{array} \\right) \\mathbf {x} \\quad (4) Q = \\mathbf {x} ^ {T} \\left( \\begin{array}{c c c c} 0 & \\frac {1}{2} & 0 & \\frac {1}{2} \\\\ \\frac {1}{2} & 0 & \\frac {1}{2} & 0 \\\\ 0 & \\frac {1}{2} & 0 & \\frac {1}{2} \\\\ \\frac {1}{2} & 0 & \\frac {1}{2} & 0 \\end{array} \\right) \\mathbf {x}$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0190",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "5",
+      "page": 284,
+      "source_lines": [
+        4669,
+        4673
+      ],
+      "text": "5. 求正交变换化下列实二次型为标准形\n$$Q = x _ {1} ^ {2} + 4 x _ {2} ^ {2} + 4 x _ {3} ^ {2} - 4 x _ {1} x _ {2} + 4 x _ {1} x _ {3} - 8 x _ {2} x _ {3}$$\n$$Q = x _ {1} ^ {2} + 7 x _ {2} ^ {2} + x _ {3} ^ {2} + 8 x _ {1} x _ {2} + 8 x _ {2} x _ {3} - 1 6 x _ {1} x _ {3}$$\n$$(3) Q = 6 x _ {1} x _ {2} + 6 x _ {1} x _ {3} + 6 x _ {2} x _ {3}$$\n$$(4) Q = 2 x _ {1} x _ {2} - 2 x _ {3} x _ {4}$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0191",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "6",
+      "page": 284,
+      "source_lines": [
+        4674,
+        4675
+      ],
+      "text": "6. 试证: 在实数域上, 对称矩阵  $\\begin{pmatrix}1 & 0 \\\\ 0 & 1\\end{pmatrix}$  和  $\\begin{pmatrix}1 & 0 \\\\ 0 & -1\\end{pmatrix}$  不相合.\n[第 285 页]",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0192",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "7",
+      "page": 285,
+      "source_lines": [
+        4676,
+        4676
+      ],
+      "text": "7. 证明: 秩等于 r 的对称矩阵可以表成 r 个秩等于 1 的对称矩阵之和.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0193",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "8",
+      "page": 285,
+      "source_lines": [
+        4677,
+        4679
+      ],
+      "text": "8. 设A是一个n阶方阵, 证明:\n(1)A是反对称阵, 当且仅当对任一个n维向量X, 有 $x^{T}Ax=0$ ;\n(2)如果A为对称阵,且对任一个n维向量x,有 $x^{T}Ax=0$ ,那么A=0.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0194",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "9",
+      "page": 285,
+      "source_lines": [
+        4680,
+        4680
+      ],
+      "text": "9. 求习题5中二次型的规范形.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0195",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "10",
+      "page": 285,
+      "source_lines": [
+        4681,
+        4681
+      ],
+      "text": "10. 设A是n阶实对称阵, 且 $A^{2}=I$ , 求A的相合规范形.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0196",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "11",
+      "page": 285,
+      "source_lines": [
+        4682,
+        4685
+      ],
+      "text": "11. 确定以下二次曲线的类型、形状与位置.\n$$3 x ^ {2} + 4 x y + 2 y ^ {2} + 8 x + 4 y + 6 = 0; \\tag {1}$$\n$$x ^ {2} + x y - 2 y ^ {2} - 1 1 x - y + 2 8 = 0; \\tag {2}$$\n$$4 x ^ {2} - 4 x y + y ^ {2} - 2 x - 1 4 y + 7 = 0. \\tag {3}$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0197",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "12",
+      "page": 285,
+      "source_lines": [
+        4686,
+        4688
+      ],
+      "text": "12. 将二次方程化为最简形式, 并判断曲面类型.\n$$(1) 4 x ^ {2} - 6 y ^ {2} - 6 z ^ {2} - 4 y z - 4 x + 4 y + 4 z - 5 = 0.$$\n$$(2) x ^ {2} - \\frac {4}{3} y ^ {2} + \\frac {4}{3} z ^ {2} - \\frac {1 6}{3} \\sqrt {2} y z + 4 x + \\frac {8}{3} \\sqrt {3} z - 1 = 0.$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0198",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "13",
+      "page": 285,
+      "source_lines": [
+        4689,
+        4691
+      ],
+      "text": "13. 在三维空间直角坐标系中, 给定曲面方程\n$$2 x ^ {2} + 4 y ^ {2} + 5 z ^ {2} - 2 x y + 4 x z + 6 y z - 2 0 = 0.$$\n利用正交变换将其化为标准型. 该方程表示什么曲面?",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0199",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "14",
+      "page": 285,
+      "source_lines": [
+        4692,
+        4693
+      ],
+      "text": "14. 判断下列二次型是否是正定二次型\n$$\\begin{array}{l} (1) Q (x _ {1}, x _ {2}, x _ {3}) = x _ {1} ^ {2} + 2 x _ {2} ^ {2} + 4 x _ {3} ^ {2} + 2 x _ {1} x _ {2} - 4 x _ {2} x _ {3}; \\\\ (2) Q (x _ {1}, x _ {2}, x _ {3}) = - 5 x _ {1} ^ {2} - 6 x _ {2} ^ {2} - 4 x _ {3} ^ {2} + 4 x _ {1} x _ {2} + 4 x _ {1} x _ {3}; \\\\ (3) Q (x _ {1}, x _ {2}, x _ {3}) = 7 x _ {1} ^ {2} + x _ {2} ^ {2} + x _ {3} ^ {2} - 2 x _ {1} x _ {2} - 4 x _ {1} x _ {3}; \\\\ (4) Q (x _ {1}, x _ {2}, x _ {3}) = x _ {1} ^ {2} + 5 x _ {2} ^ {2} + 9 x _ {3} ^ {2} + 4 x _ {1} x _ {2} - 6 x _ {2} x _ {3} + x _ {1} x _ {3}. \\end{array}$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0200",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "15",
+      "page": 285,
+      "source_lines": [
+        4694,
+        4697
+      ],
+      "text": "15. 判断下列矩阵是否是正定矩阵\n$$\\left( \\begin{array}{c c c} 2 & \\frac {1}{2} & 2 \\\\ \\frac {1}{2} & 2 & - 2 \\\\ 2 & - 2 & 4 \\end{array} \\right)$$\n(2)\n$$\\left( \\begin{array}{c c c} 1 & - 1 & 1 \\\\ - 1 & 2 & 0 \\\\ 1 & 0 & 1 \\end{array} \\right)$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0201",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "16",
+      "page": 285,
+      "source_lines": [
+        4698,
+        4701
+      ],
+      "text": "16. 问参数t满足什么条件时, 下列二次型正定?\n$$Q (x _ {1}, x _ {2}, x _ {3}) = 2 x _ {1} ^ {2} + x _ {2} ^ {2} + x _ {3} ^ {2} + 2 x _ {1} x _ {2} + t x _ {1} x _ {3}$$\n$$(2) Q (x _ {1}, x _ {2}, x _ {3}) = x _ {1} ^ {2} + 2 x _ {2} ^ {2} + 3 x _ {3} ^ {2} + t x _ {1} x _ {2} + t x _ {1} x _ {3} + x _ {2} x _ {3}$$\n[第 286 页]",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0202",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "17",
+      "page": 286,
+      "source_lines": [
+        4702,
+        4702
+      ],
+      "text": "17. 证明: 对任意实数 $x, y$, 二元二次多项式 $f(x, y) = 2x^{2} + 3y^{2} + 4z^{2} - 2xy + 2xz - 6yz$ 恒大于零.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0203",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "18",
+      "page": 286,
+      "source_lines": [
+        4703,
+        4703
+      ],
+      "text": "18. 设 $Q = ax_{1}^{2} + bx_{2}^{2} + ax_{3}^{2} + 2cx_{1}x_{3}$，问 $a, b, c$ 满足什么条件时，$Q$ 为正定？",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0204",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "19",
+      "page": 286,
+      "source_lines": [
+        4704,
+        4704
+      ],
+      "text": "19. 试证:二次型 $Q(x_{1},x_{2},\\ldots,x_{n})=\\mathbf{x}^{T}A\\mathbf{x}$ 负定的充分必要条件是A的奇数阶顺序主子式全小于零,偶数阶顺序主子式全大于零.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0205",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "20",
+      "page": 286,
+      "source_lines": [
+        4705,
+        4707
+      ],
+      "text": "20. 设有 $n$ 元实二次型\n$$Q \\left(x _ {1}, x _ {2}, \\dots , x _ {n}\\right) = \\left(x _ {1} + a _ {1} x _ {2}\\right) ^ {2} + \\left(x _ {2} + a _ {2} x _ {3}\\right) ^ {2} + \\dots + \\left(x _ {n - 1} + a _ {n - 1} x _ {n}\\right) ^ {2} + \\left(x _ {n} + a _ {n} x _ {1}\\right) ^ {2}$$\n其中 $a_{i}(i=1,\\cdots,n)$ 为实数,试问:当 $a_{1},\\cdots,a_{n}$ 满足何种条件时, $Q(x_{1},\\cdots,x_{n})$ 为正定二次型?",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0206",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "21",
+      "page": 286,
+      "source_lines": [
+        4708,
+        4711
+      ],
+      "text": "21. 在 $Q = \\lambda (x^{2} + y^{2} + z^{2}) + 2xy + 2xz - 2yz$ 中, 问\n(1)哪些 $\\lambda$ 的值使得Q为正定?\n(2)哪些 $\\lambda$ 的值使得 $Q$ 为负定?\n(3)当 $\\lambda = 2$ 和 $\\lambda = -1$ 时, $Q$ 为什么类型?",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0207",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "22",
+      "page": 286,
+      "source_lines": [
+        4712,
+        4712
+      ],
+      "text": "22. 设A为n阶实对称阵, 证明: 若A正定, 则对任意正整数k,  $A^{k}$ 为正定.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0208",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "23",
+      "page": 286,
+      "source_lines": [
+        4713,
+        4715
+      ],
+      "text": "23. 设A为n阶可逆实对称阵, 证明:\n(1) 若 $A$ 正定, 则 $A^{-1}$ 亦正定.\n(2) 若 $A$ 正定, 则 $A$ 的伴随矩阵 $A^{*}$ 也是正定矩阵.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0209",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "24",
+      "page": 286,
+      "source_lines": [
+        4716,
+        4716
+      ],
+      "text": "24. 设A为n阶实对称矩阵, 若 $A^{2}=I$ , 证明 $A+I$ 为正定矩阵或半正定矩阵.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0210",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "25",
+      "page": 286,
+      "source_lines": [
+        4717,
+        4718
+      ],
+      "text": "25. 设A,B是两个n阶实对称正定矩阵,证明:\n(1) $A+B$ 亦正定；(2)AB正定的充分必要条件是AB=BA.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0211",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "26",
+      "page": 286,
+      "source_lines": [
+        4719,
+        4719
+      ],
+      "text": "26. 设A,B均为n阶实对称阵, 其中A为正定阵, 证明: 当实数t充分大后,  $tA+B$ 亦正定.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0212",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "27",
+      "page": 286,
+      "source_lines": [
+        4720,
+        4720
+      ],
+      "text": "27. A是实对称正定矩阵, 证明: 存在下三角阵P, 使得 $A = PP^{T}$ . 进一步证明, 存在下三角阵L, 其对角线元素均为1, 以及对角阵D, 其对角元均为正使得 $A = LDL^{T}$ .",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0213",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "28",
+      "page": 286,
+      "source_lines": [
+        4721,
+        4721
+      ],
+      "text": "28. 设 $A$ 为 $n$ 阶实对称阵, 且 $A > 0$. 求证: $\\operatorname{det}(A) \\leq \\left(\\frac{1}{n} Tr(A)\\right)^n$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0214",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "29",
+      "page": 286,
+      "source_lines": [
+        4722,
+        4722
+      ],
+      "text": "29. 证明: 若 $A = (a_{ij})$ 是 $n$ 阶正定矩阵, 则 $\\operatorname{det}(A) \\leq a_{11}a_{22} \\cdots a_{nn}$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0215",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "30",
+      "page": 286,
+      "source_lines": [
+        4723,
+        4727
+      ],
+      "text": "30. 设A为n阶实对称方阵, 证明下列命题等价\n[第 287 页]\n(1) $A$ 为半正定方阵.\n(2) $A = P^{T}P$, 其中 $P$ 为 $n$ 阶实方阵.\n(3) $A$ 的各阶主子式皆非负.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0216",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "31",
+      "page": 287,
+      "source_lines": [
+        4728,
+        4730
+      ],
+      "text": "31. 在二次型 $Q = x^{T} A x$ 中, 实对称阵 $A = (\\alpha_{ij})_{n \\times n}$, 若\n$$\\left| \\begin{array}{c c c} a _ {1 1} & \\dots & a _ {1 k} \\\\ \\dots & \\dots & \\dots \\\\ a _ {k 1} & \\dots & a _ {k k} \\end{array} \\right| > 0, \\quad k = 1, 2, \\dots , n - 1, \\quad \\det A = 0$$\n证明:Q为半正定.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0217",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "32",
+      "page": 287,
+      "source_lines": [
+        4731,
+        4732
+      ],
+      "text": "32. 设 $A \\in \\mathbb{R}^{m \\times n}$, $A = U\\begin{pmatrix} \\Lambda & O \\\\ O & O \\end{pmatrix} V$ 是 $A$ 的奇异值分解, 如定理 8.5.7 所述. 令 $A^{+} = V^{T}\\begin{pmatrix} \\Lambda^{-1} & O \\\\ O & O \\end{pmatrix} U^{T}$, 称 $A^{+}$为矩阵 $A$ 的广义逆. 证明:\n$$A A ^ {+} A = A, \\quad A ^ {+} A A ^ {+} = A ^ {+}, \\quad (A A ^ {+}) ^ {*} = A A ^ {+}, \\quad (A ^ {+} A) ^ {*} = A ^ {+} A.$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0218",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "33",
+      "page": 287,
+      "source_lines": [
+        4733,
+        4753
+      ],
+      "text": "33. 设 $A \\in \\mathbb{R}^{m \\times n}$. 证明: $|A| := \\max_{\\mathbf{x} \\neq \\mathbf{0}} \\frac{|A\\mathbf{x}|}{|\\mathbf{x}|} = \\sigma_{\\max}$, 这里 $\\sigma_{\\max}$ 是矩阵 $A$ 的最大奇异值. 称 $|A|$ 为矩阵 $A$ 的谱范数.\n[第 288 页]\n[第 289 页]\n参考文献\n[1] 代数学引论, 许以超编著, 上海科学技术出版社, 1966年5月第1版.\n[2] 高等数学引论(余篇), 华罗庚著, 科学出版社, 1984年7月第1版, 2009年4月高等教育出版社重印(王元校).\n[3] 线性代数, 李炯生、查建国编著, 中国科学技术大学出版社, 1989年4月第1版, 2010年1月第2版.\n[4] 高等代数, 刘昌堃、叶世源、叶家琛编, 同济大学出版社, 1995年4月第1版.\n[5] 解析几何, 丘维声编, 北京大学出版社, 1996年10月第2版.\n[6] 高等代数教程(上、下), 王萼芳编著, 清华大学出版社, 1997年4月第1版.\n[7] 线性代数简明教程, 陈龙玄、钟立敏编, 中国科学技术大学出版社, 1989年2月第1版, 1997年9月修订版.\n[8] 高等代数与解析几何(上、下), 陈志杰主编, 高等教育出版社, 2000年6月第1版.\n[9] 简明线性代数, 丘维声编著, 北京大学出版社, 2002年2月第1版.\n[10] 高等代数(上、下), 丘维声编著, 高等教育出版社, 2002年7月第2版.\n[11] 高等代数学, 张贤科、许甫华编著, 清华大学出版社, 2004年7月第2版.\n[12] 微积分(上、下), 谢盛刚、李娟、陈秋桂编, 科学出版社, 2005年1月第1版.\n[13] 线性代数及其应用(原书第2版),(美)David C.Lay著,刘深泉、洪毅、马东魁、郭国雄、刘勇平译,机械工业出版社,2005年8月.\n[14] 线性代数, 李尚志编著, 高等教育出版社, 2006年5月第1版.\n[15] 高等代数与解析几何(上、下), 孟道骥著, 科学出版社, 2007年1月第2版.\n[16] 高等代数简明教程(上、下), 蓝以中编著, 北京大学出版社, 2007年7月第2版.\n[17] 解析几何简明教程, 吴光磊、田畴编, 高等教育出版社, 2008年3月第2版.",
+      "answer_of": null,
+      "has_answer": false
+    }
+  ],
+  "统计": {
+    "习题": 218,
+    "答案": 0,
+    "有答案的题": 0,
+    "内联题干": 0,
+    "位置分布": {
+      "section": 218,
+      "chapter": 0,
+      "book": 0
+    }
+  }
+}

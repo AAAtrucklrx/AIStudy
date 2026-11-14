@@ -1,0 +1,1058 @@
+{
+  "_meta": {
+    "file_type": "toc",
+    "schema_version": "2.0",
+    "generator": "aiforstudy.parse.toc",
+    "slug": "complex-analysis-v2",
+    "pdf_sha256": "2028b7f926b9f65129f35daaaedf9df9aefe8ad5d336e4acd95846f00b7c5c23",
+    "document_sha256": "a260ae5d98e05331e83a6546544e4d897ebea55780bf6c96d06a66a3b32d38ab",
+    "sources_used": [
+      "printed-toc",
+      "body-heading-shapes"
+    ],
+    "confidence": "medium",
+    "page_offset": null,
+    "counts": {
+      "nodes": 47,
+      "chapters": 9,
+      "sections": 33,
+      "non_teaching": 5,
+      "disagreements": 2,
+      "unresolved": 0,
+      "suspicious": 0,
+      "unconfirmed": 7
+    },
+    "field_notes": {
+      "nodes[].toc_id": "目录条目的稳定 id（形如 T-0001）；正文层靠它绑定，不靠章-节号拼",
+      "nodes[].parent": "父节点 toc_id；null = 顶层。**显式父子**（不靠 level 现推）",
+      "nodes[].page.printed": "书上印的页码（目录页写的那个）",
+      "nodes[].page.pdf": "PDF 页码（1 起；截图/打开 PDF 用这个）",
+      "nodes[].kind": "chapter=章 / section=节 / non-teaching=前言·附录·习题集这类非教学条目",
+      "nodes[].confirmed": "true=各源一致；false=**存在但没被确认**（下游必须看见，不许当不存在）",
+      "nodes[].evidence.from": "这一条来自哪些源（见 _meta.sources_used）",
+      "nodes[].evidence.agree": "三源之间是否一致；false 时 disagreements 里有对应条目",
+      "disagreements": "两源写法/层级不一致；resolution + arbiter 说明谁裁的",
+      "unresolved": "**抽不出来/落不了页**的东西，有名字地留在这里（R-b，不许静默丢）",
+      "suspicious": "形状可疑（编号跳跃、层级跳变）—— 只提示，不改动",
+      "revisions": "模型复核的逐条改动记录（改了什么/依据什么/模型怎么说）",
+      "_meta.review_state": "本产物已经落过复核结论的标记；`build` 靠它决定要不要重放",
+      "_meta.sources_used": "pdf-bookmarks=0 条（层级判定 这份 PDF 没有内嵌书签）; printed-toc=47 条（ok）; body-heading-shapes=82 条（ok，**只作旁证，无增删权**）",
+      "_meta.page_offset": "印刷页 → PDF 页 的偏移量 **算不出来**（没有书签落点可对，或证据不足）—— 不猜，`page.pdf` 留空由 A2 空率反映"
+    }
+  },
+  "book_title": "复变函数",
+  "nodes": [
+    {
+      "toc_id": "T-0001",
+      "level": 2,
+      "number": "",
+      "title": "总序",
+      "parent": null,
+      "order": 1,
+      "page": {
+        "printed": "1",
+        "pdf": null
+      },
+      "kind": "non-teaching",
+      "confirmed": false,
+      "evidence": {
+        "from": [
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0002",
+      "level": 2,
+      "number": "",
+      "title": "前言",
+      "parent": null,
+      "order": 2,
+      "page": {
+        "printed": "2",
+        "pdf": null
+      },
+      "kind": "non-teaching",
+      "confirmed": false,
+      "evidence": {
+        "from": [
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0003",
+      "level": 1,
+      "number": "第1章",
+      "title": "复数和平面点集",
+      "parent": null,
+      "order": 3,
+      "page": {
+        "printed": "1",
+        "pdf": null
+      },
+      "kind": "chapter",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0004",
+      "level": 2,
+      "number": "1.1",
+      "title": "复数",
+      "parent": "T-0003",
+      "order": 4,
+      "page": {
+        "printed": "1",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0005",
+      "level": 2,
+      "number": "1.2",
+      "title": "平面点集",
+      "parent": "T-0003",
+      "order": 5,
+      "page": {
+        "printed": "5",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0006",
+      "level": 1,
+      "number": "第2章",
+      "title": "复变数函数",
+      "parent": null,
+      "order": 6,
+      "page": {
+        "printed": "20",
+        "pdf": null
+      },
+      "kind": "chapter",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0007",
+      "level": 2,
+      "number": "2.1",
+      "title": "复变数函数的概念",
+      "parent": "T-0006",
+      "order": 7,
+      "page": {
+        "printed": "20",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0008",
+      "level": 2,
+      "number": "2.2",
+      "title": "函数极限和连续性",
+      "parent": "T-0006",
+      "order": 8,
+      "page": {
+        "printed": "23",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0009",
+      "level": 2,
+      "number": "2.3",
+      "title": "导数和解析函数的概念",
+      "parent": "T-0006",
+      "order": 9,
+      "page": {
+        "printed": "25",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0010",
+      "level": 2,
+      "number": "2.4",
+      "title": "柯西－黎曼方程",
+      "parent": "T-0006",
+      "order": 10,
+      "page": {
+        "printed": "27",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0011",
+      "level": 2,
+      "number": "2.5",
+      "title": "初等函数",
+      "parent": "T-0006",
+      "order": 11,
+      "page": {
+        "printed": "30",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0012",
+      "level": 1,
+      "number": "第3章",
+      "title": "解析函数的积分表示",
+      "parent": null,
+      "order": 12,
+      "page": {
+        "printed": "50",
+        "pdf": null
+      },
+      "kind": "chapter",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0013",
+      "level": 2,
+      "number": "3.1",
+      "title": "复变函数的积分",
+      "parent": "T-0012",
+      "order": 13,
+      "page": {
+        "printed": "50",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0014",
+      "level": 2,
+      "number": "3.2",
+      "title": "柯西积分定理",
+      "parent": "T-0012",
+      "order": 14,
+      "page": {
+        "printed": "54",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0015",
+      "level": 2,
+      "number": "3.3",
+      "title": "原函数",
+      "parent": "T-0012",
+      "order": 15,
+      "page": {
+        "printed": "56",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0016",
+      "level": 2,
+      "number": "3.4",
+      "title": "柯西积分公式",
+      "parent": "T-0012",
+      "order": 16,
+      "page": {
+        "printed": "59",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0017",
+      "level": 2,
+      "number": "3.5",
+      "title": "解析函数的性质",
+      "parent": "T-0012",
+      "order": 17,
+      "page": {
+        "printed": "63",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0018",
+      "level": 1,
+      "number": "第4章",
+      "title": "调和函数",
+      "parent": null,
+      "order": 18,
+      "page": {
+        "printed": "69",
+        "pdf": null
+      },
+      "kind": "chapter",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0019",
+      "level": 2,
+      "number": "4.1",
+      "title": "解析函数与调和函数的关系",
+      "parent": "T-0018",
+      "order": 19,
+      "page": {
+        "printed": "69",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0020",
+      "level": 2,
+      "number": "4.2",
+      "title": "调和函数的性质和狭利克雷问题",
+      "parent": "T-0018",
+      "order": 20,
+      "page": {
+        "printed": "72",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": false,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": false
+      }
+    },
+    {
+      "toc_id": "T-0021",
+      "level": 1,
+      "number": "第5章",
+      "title": "解析函数的级数展开",
+      "parent": null,
+      "order": 21,
+      "page": {
+        "printed": "77",
+        "pdf": null
+      },
+      "kind": "chapter",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0022",
+      "level": 2,
+      "number": "5.1",
+      "title": "复级数的基本性质",
+      "parent": "T-0021",
+      "order": 22,
+      "page": {
+        "printed": "77",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0023",
+      "level": 2,
+      "number": "5.2",
+      "title": "基级数",
+      "parent": "T-0021",
+      "order": 23,
+      "page": {
+        "printed": "82",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": false,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": false
+      }
+    },
+    {
+      "toc_id": "T-0024",
+      "level": 2,
+      "number": "5.3",
+      "title": "解析函数的泰勒(Taylor)展开",
+      "parent": "T-0021",
+      "order": 24,
+      "page": {
+        "printed": "85",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0025",
+      "level": 2,
+      "number": "5.4",
+      "title": "罗朗(Laurent)级数",
+      "parent": "T-0021",
+      "order": 25,
+      "page": {
+        "printed": "91",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0026",
+      "level": 2,
+      "number": "5.5",
+      "title": "解析函数的孤立奇点",
+      "parent": "T-0021",
+      "order": 26,
+      "page": {
+        "printed": "98",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0027",
+      "level": 1,
+      "number": "第6章",
+      "title": "留数及其应用",
+      "parent": null,
+      "order": 27,
+      "page": {
+        "printed": "107",
+        "pdf": null
+      },
+      "kind": "chapter",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0028",
+      "level": 2,
+      "number": "6.1",
+      "title": "留数定理",
+      "parent": "T-0027",
+      "order": 28,
+      "page": {
+        "printed": "107",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0029",
+      "level": 2,
+      "number": "6.2",
+      "title": "积分计算",
+      "parent": "T-0027",
+      "order": 29,
+      "page": {
+        "printed": "111",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0030",
+      "level": 2,
+      "number": "6.3",
+      "title": "辐角原理",
+      "parent": "T-0027",
+      "order": 30,
+      "page": {
+        "printed": "126",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0031",
+      "level": 1,
+      "number": "第7章",
+      "title": "解析开拓",
+      "parent": null,
+      "order": 31,
+      "page": {
+        "printed": "134",
+        "pdf": null
+      },
+      "kind": "chapter",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0032",
+      "level": 2,
+      "number": "7.1",
+      "title": "唯一性定理和解析开拓的概念",
+      "parent": "T-0031",
+      "order": 32,
+      "page": {
+        "printed": "134",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0033",
+      "level": 2,
+      "number": "7.2",
+      "title": "含复参变量积分及Γ函数",
+      "parent": "T-0031",
+      "order": 33,
+      "page": {
+        "printed": "138",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0034",
+      "level": 1,
+      "number": "第8章",
+      "title": "保形变换及其应用",
+      "parent": null,
+      "order": 34,
+      "page": {
+        "printed": "145",
+        "pdf": null
+      },
+      "kind": "chapter",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0035",
+      "level": 2,
+      "number": "8.1",
+      "title": "导数的几何意义",
+      "parent": "T-0034",
+      "order": 35,
+      "page": {
+        "printed": "145",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0036",
+      "level": 2,
+      "number": "8.2",
+      "title": "保形变换的概念",
+      "parent": "T-0034",
+      "order": 36,
+      "page": {
+        "printed": "147",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0037",
+      "level": 2,
+      "number": "8.3",
+      "title": "分式线性变换",
+      "parent": "T-0034",
+      "order": 37,
+      "page": {
+        "printed": "149",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0038",
+      "level": 2,
+      "number": "8.4",
+      "title": "初等函数的映照",
+      "parent": "T-0034",
+      "order": 38,
+      "page": {
+        "printed": "156",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0039",
+      "level": 2,
+      "number": "*8.5",
+      "title": "许瓦兹-克利斯托菲变换",
+      "parent": "T-0034",
+      "order": 39,
+      "page": {
+        "printed": "163",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0040",
+      "level": 2,
+      "number": "8.6",
+      "title": "平面场",
+      "parent": "T-0034",
+      "order": 40,
+      "page": {
+        "printed": "171",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0041",
+      "level": 1,
+      "number": "第9章",
+      "title": "拉氏变换",
+      "parent": null,
+      "order": 41,
+      "page": {
+        "printed": "186",
+        "pdf": null
+      },
+      "kind": "chapter",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0042",
+      "level": 2,
+      "number": "9.1",
+      "title": "拉氏变换的定义",
+      "parent": "T-0041",
+      "order": 42,
+      "page": {
+        "printed": "186",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0043",
+      "level": 2,
+      "number": "9.2",
+      "title": "拉氏变换的基本性质",
+      "parent": "T-0041",
+      "order": 43,
+      "page": {
+        "printed": "189",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0044",
+      "level": 2,
+      "number": "9.3",
+      "title": "由像函数求本函数",
+      "parent": "T-0041",
+      "order": 44,
+      "page": {
+        "printed": "200",
+        "pdf": null
+      },
+      "kind": "section",
+      "confirmed": true,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0045",
+      "level": 2,
+      "number": "",
+      "title": "附表1 基本法则表",
+      "parent": "T-0041",
+      "order": 45,
+      "page": {
+        "printed": "209",
+        "pdf": null
+      },
+      "kind": "non-teaching",
+      "confirmed": false,
+      "evidence": {
+        "from": [
+          "body-heading-shapes",
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0046",
+      "level": 2,
+      "number": "",
+      "title": "附表2 拉普拉斯变换表",
+      "parent": "T-0041",
+      "order": 46,
+      "page": {
+        "printed": "210",
+        "pdf": null
+      },
+      "kind": "non-teaching",
+      "confirmed": false,
+      "evidence": {
+        "from": [
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    },
+    {
+      "toc_id": "T-0047",
+      "level": 2,
+      "number": "",
+      "title": "习题参考答案",
+      "parent": "T-0041",
+      "order": 47,
+      "page": {
+        "printed": "218",
+        "pdf": null
+      },
+      "kind": "non-teaching",
+      "confirmed": false,
+      "evidence": {
+        "from": [
+          "printed-toc"
+        ],
+        "agree": true
+      }
+    }
+  ],
+  "disagreements": [
+    {
+      "kind": "body-title",
+      "toc_id": "T-0020",
+      "title": "调和函数的性质和狭利克雷问题",
+      "bookmarks": null,
+      "printed": "4.2 调和函数的性质和狭利克雷问题",
+      "body": "4.2 调和函数的性质和狄利克雷问题",
+      "resolution": "留待模型视觉复核裁决（以目录页截图为准，P7）",
+      "arbiter": "pending",
+      "confidence": "low",
+      "why": "正文里写的是「调和函数的性质和狄利克雷问题」，目录里写的是「调和函数的性质和狭利克雷问题」—— 其中一个多半是 OCR 错字"
+    },
+    {
+      "kind": "body-title",
+      "toc_id": "T-0023",
+      "title": "基级数",
+      "bookmarks": null,
+      "printed": "5.2 基级数",
+      "body": "5.2 幂级数",
+      "resolution": "留待模型视觉复核裁决（以目录页截图为准，P7）",
+      "arbiter": "pending",
+      "confidence": "low",
+      "why": "正文里写的是「幂级数」，目录里写的是「基级数」—— 其中一个多半是 OCR 错字"
+    }
+  ],
+  "unresolved": [],
+  "suspicious": [],
+  "revisions": []
+}

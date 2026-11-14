@@ -1,0 +1,95 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH02-S05-SS07",
+    "text_sha256": "5e70fd27b5eff38d27fd7eb937054326232067580652492b7927697f46821a00",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "5e70fd27b5eff38d27fd7eb937054326232067580652492b7927697f46821a00",
+    "source": "original_text",
+    "source_path": "original_text/ch02_s05_ss07.md"
+  },
+  "unit": {
+    "unit_id": "CH02-S05-SS07",
+    "level": "subsection",
+    "chapter": "CH02",
+    "section": "CH02-S05",
+    "title": "一般幂函数",
+    "anchor": "2.5.7"
+  },
+  "concepts": [
+    {
+      "name": "一般幂函数",
+      "type": "definition",
+      "formal": "设 $\\alpha$ 是任意给定的复数，对于复变数 $z \\neq 0$ ，定义 $z$ 的 $\\alpha$ 次幂函数为 $$\\begin{array}{r l} w = z ^ {a} & = \\exp (\\alpha \\mathrm{Ln} z) = \\exp \\{\\alpha [ \\ln | z | + i (\\arg z + 2 k \\pi) ] \\}, \\\\ k & = 0, \\pm 1, \\pm 2, \\dots \\end{array}\\tag{2.15}$$ 若 $\\alpha$ 为正实数，且当 $z = 0$ 时，补充规定 $z^{\\circ} = 0$。",
+      "source_quote": "设 $\\alpha$ 是任意给定的复数，对于复变数 $z \\neq 0$ ，定义 $z$ 的 $\\alpha$ 次幂函数为 ..."
+    },
+    {
+      "name": "一般幂函数的多值性",
+      "type": "property",
+      "formal": "随 $\\alpha$ 的取值不同，$w = z^{\\circ}$ 可能是单值、有限多值或无限多值的函数。",
+      "source_quote": "随 $\\alpha$ 的取值不同，$w = z^{\\circ}$ 可能是单值、有限多值或无限多值的函数。"
+    },
+    {
+      "name": "正整数次幂函数的单值性",
+      "type": "property",
+      "formal": "当 $\\alpha$ 为正整数 $n$ 时，因为 $\\exp (\\mathrm{i}2kn\\pi) = 1$ ，所以由(2.15)式，得 $$z ^ {n} = \\exp [ n (\\ln | z | + \\operatorname{iarg} z) ] = | z | ^ {n} \\exp (\\operatorname{iarg} z),$$ 与通常幂函数一致，是一个单值函数.",
+      "source_quote": "当 $\\alpha$ 为正整数 $n$ 时，因为 $\\exp (\\mathrm{i}2kn\\pi) = 1$ ，所以由(2.15)式，得 ... 是一个单值函数."
+    },
+    {
+      "name": "根式函数的多值性",
+      "type": "property",
+      "formal": "当 $\\alpha = 1 / n$ （ $n$ 为正整数）时，由(2.15)式得 $$z ^ {1 / n} = | z | ^ {1 / n} \\exp \\left(\\mathrm{i} \\frac {\\arg z + 2 k \\pi}{u}\\right), \\quad k = 0, 1, 2, \\dots , n - 1,$$ 与根式函数 $\\sqrt[3]{z}$ 一致，是一 $n$ 值函数.",
+      "source_quote": "当 $\\alpha = 1 / n$ （ $n$ 为正整数）时，由(2.15)式得 ... 与根式函数 $\\sqrt[3]{z}$ 一致，是一 $n$ 值函数."
+    },
+    {
+      "name": "有理数幂函数的多值性",
+      "type": "property",
+      "formal": "类似地，当 $\\alpha$ 是有理数时，设 $\\alpha$ 为既约分数 $m / n, n \\geqslant 1$. $z^{*}$ 是 $n$ 值函数，且 $$z ^ {m / n} = \\sqrt [ n ]{z ^ {m}}.$$",
+      "source_quote": "类似地，当 $\\alpha$ 是有理数时，设 $\\alpha$ 为既约分数 $m / n, n \\geqslant 1$. $z^{*}$ 是 $n$ 值函数，且 $$z ^ {m / n} = \\sqrt [ n ]{z ^ {m}}.$$"
+    },
+    {
+      "name": "无理数或一般复数幂函数的无穷多值性",
+      "type": "property",
+      "formal": "当 $\\alpha$ 是无理数或一般复数 $(\\mathrm{Im}\\alpha \\neq 0)$ 时，由(2.15)式可知，$z^n$ 是无穷多值的。",
+      "source_quote": "当 $\\alpha$ 是无理数或一般复数 $(\\mathrm{Im}\\alpha \\neq 0)$ 时，由(2.15)式可知，$z^n$ 是无穷多值的。"
+    },
+    {
+      "name": "指数函数",
+      "type": "definition",
+      "formal": "在复变函数里约定 $e^2$ 是指数函数.",
+      "source_quote": "在复变函数里约定 $e^2$ 是指数函数."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 7,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "一般幂函数",
+    "一般幂函数的多值性",
+    "正整数次幂函数的单值性",
+    "根式函数的多值性",
+    "有理数幂函数的多值性",
+    "无理数或一般复数幂函数的无穷多值性",
+    "指数函数"
+  ]
+}

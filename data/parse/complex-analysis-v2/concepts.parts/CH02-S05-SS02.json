@@ -1,0 +1,95 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH02-S05-SS02",
+    "text_sha256": "44dfd88ba66c18aeae84adc84737d426c83bd3a6ecc16582b78f4eae06ba7071",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "44dfd88ba66c18aeae84adc84737d426c83bd3a6ecc16582b78f4eae06ba7071",
+    "source": "original_text",
+    "source_path": "original_text/ch02_s05_ss02.md"
+  },
+  "unit": {
+    "unit_id": "CH02-S05-SS02",
+    "level": "subsection",
+    "chapter": "CH02",
+    "section": "CH02-S05",
+    "title": "根式函数",
+    "anchor": "2.5.2"
+  },
+  "concepts": [
+    {
+      "name": "根式函数",
+      "type": "definition",
+      "formal": "下面一般地研究幂函数 $w = z^n$ 的反函数 $w = \\sqrt[n]{z}$ ，n 是大于 1 的自然数.",
+      "source_quote": "下面一般地研究幂函数 $w = z^n$ 的反函数 $w = \\sqrt[n]{z}$ ，n 是大于 1 的自然数."
+    },
+    {
+      "name": "辐角变化",
+      "type": "definition",
+      "formal": "并称 a = argb - arga 为 z 沿曲线 l 的辐角变化，记为 $\\Delta_{z}$ argb。显然， $\\Delta_{z}$ argz 与 arga 的选定值无关。",
+      "source_quote": "并称 a = argb - arga 为 z 沿曲线 l 的辐角变化，记为 $\\Delta_{z}$ argb。"
+    },
+    {
+      "name": "支点",
+      "type": "definition",
+      "formal": "定义8 对于某个多值函数 $w = f(z)$，若点 $z = a$ 具有这样一个特性：在 $z = a$ 点的充分小的邻域内，作一条包围该点的闭曲线 $C$，当 $z$ 从 $C$ 上某点出发，绕 $C$ 连续变动一周回到出发点时，$f(z)$ 将从它的一个值变到另一个值，就称 $a$ 是 $f(z)$ 的支点.",
+      "source_quote": "定义8 对于某个多值函数 $w = f(z)$，若点 $z = a$ 具有这样一个特性：在 $z = a$ 点的充分小的邻域内，作一条包围该点的闭曲线 $C$，当 $z$ 从 $C$ 上某点出发，绕 $C$ 连续变动一周回到出发点时，$f(z)$ 将从它的一个值变到另一个值，就称 $a$ 是 $f(z)$ 的支点."
+    },
+    {
+      "name": "支割线",
+      "type": "definition",
+      "formal": "通常在 $z$ 平面上从原点 $0$ 到 $\\infty$ 任意引一条射线或一条简单曲线，将 $z$ 平面割开。这条线称为支割线。",
+      "source_quote": "通常在 $z$ 平面上从原点 $0$ 到 $\\infty$ 任意引一条射线或一条简单曲线，将 $z$ 平面割开。这条线称为支割线。"
+    },
+    {
+      "name": "单值连续分支",
+      "type": "definition",
+      "formal": "这样确定的单值函数，叫做 $z_e^*$ 在 $G$ 内的一个单位连续分支。显然，在 $G$ 内有 $n$ 个单值连续分支。",
+      "source_quote": "这样确定的单值函数，叫做 $z_e^*$ 在 $G$ 内的一个单位连续分支。显然，在 $G$ 内有 $n$ 个单值连续分支。"
+    },
+    {
+      "name": "单值解析分支",
+      "type": "definition",
+      "formal": "定义9 设 $F(z)$ 是区域 $D$ 内的多值函数，$f(z)$ 是 $D$ 内的单值解析函数。如果 $f(z)$ 在 $D$ 内每一点的值，都等于 $F(z)$ 在该点的一个值，则 $f(z)$ 称为 $F(z)$ 在 $D$ 内的一个单值解析分支。",
+      "source_quote": "定义9 设 $F(z)$ 是区域 $D$ 内的多值函数，$f(z)$ 是 $D$ 内的单值解析函数。如果 $f(z)$ 在 $D$ 内每一点的值，都等于 $F(z)$ 在该点的一个值，则 $f(z)$ 称为 $F(z)$ 在 $D$ 内的一个单值解析分支。"
+    },
+    {
+      "name": "反函数的求导法则",
+      "type": "law",
+      "formal": "由反函数的求导法则，有 $$\\frac{\\mathrm{d} w_k}{\\mathrm{d} z} = \\frac{1}{\\frac{\\mathrm{d} z}{\\mathrm{d} w_k}} = \\frac{1}{n w_k^{n-1}} = \\frac{w_k}{n z}.$$",
+      "source_quote": "由反函数的求导法则，有 $$\\frac{\\mathrm{d} w_k}{\\mathrm{d} z} = \\frac{1}{\\frac{\\mathrm{d} z}{\\mathrm{d} w_k}} = \\frac{1}{n w_k^{n-1}} = \\frac{w_k}{n z}.$$"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 7,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "根式函数",
+    "辐角变化",
+    "支点",
+    "支割线",
+    "单值连续分支",
+    "单值解析分支",
+    "反函数的求导法则"
+  ]
+}

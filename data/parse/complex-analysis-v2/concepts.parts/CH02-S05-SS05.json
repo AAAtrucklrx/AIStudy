@@ -1,0 +1,204 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH02-S05-SS05",
+    "text_sha256": "0385a9981ee708237256cdeea6082311681c38adb2474bf68377d5d400592b64",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "0385a9981ee708237256cdeea6082311681c38adb2474bf68377d5d400592b64",
+    "source": "original_text",
+    "source_path": "original_text/ch02_s05_ss05.md"
+  },
+  "unit": {
+    "unit_id": "CH02-S05-SS05",
+    "level": "subsection",
+    "chapter": "CH02",
+    "section": "CH02-S05",
+    "title": "三角函数",
+    "anchor": "2.5.5"
+  },
+  "concepts": [
+    {
+      "name": "指数函数的定义",
+      "type": "definition",
+      "formal": "由指数函数的定义，对任何实数 $x$ 有 $$\\mathrm{e} ^ {\\mathrm{i} x} = \\cos x + \\mathrm{i} \\sin x, \\quad \\mathrm{e} ^ {- \\mathrm{i} x} = \\cos x - \\mathrm{i} \\sin x.$$",
+      "source_quote": "由指数函数的定义，对任何实数 $x$ 有 $$\\mathrm{e} ^ {\\mathrm{i} x} = \\cos x + \\mathrm{i} \\sin x, \\quad \\mathrm{e} ^ {- \\mathrm{i} x} = \\cos x - \\mathrm{i} \\sin x.$$"
+    },
+    {
+      "name": "指数函数的解析性",
+      "type": "property",
+      "formal": "指数函数的解析性",
+      "source_quote": "由指数函数的解析性及导数运算法则"
+    },
+    {
+      "name": "导数运算法则",
+      "type": "law",
+      "formal": "导数运算法则",
+      "source_quote": "由指数函数的解析性及导数运算法则"
+    },
+    {
+      "name": "复变数正弦函数",
+      "type": "definition",
+      "formal": "$$\\sin z = \\frac {1}{2 \\mathrm{i}} \\left(\\mathrm{e} ^ {\\mathrm{i} z} - \\mathrm{e} ^ {- \\mathrm{i} z}\\right).$$",
+      "source_quote": "因此我们定义复变数正弦函数及余弦函数为 $$\\cos z = \\frac {1}{2} \\left(\\mathrm{e} ^ {\\mathrm{i} z} + \\mathrm{e} ^ {- \\mathrm{i} z}\\right), \\quad \\sin z = \\frac {1}{2 \\mathrm{i}} \\left(\\mathrm{e} ^ {\\mathrm{i} z} - \\mathrm{e} ^ {- \\mathrm{i} z}\\right).$$"
+    },
+    {
+      "name": "复变数余弦函数",
+      "type": "definition",
+      "formal": "$$\\cos z = \\frac {1}{2} \\left(\\mathrm{e} ^ {\\mathrm{i} z} + \\mathrm{e} ^ {- \\mathrm{i} z}\\right).$$",
+      "source_quote": "因此我们定义复变数正弦函数及余弦函数为 $$\\cos z = \\frac {1}{2} \\left(\\mathrm{e} ^ {\\mathrm{i} z} + \\mathrm{e} ^ {- \\mathrm{i} z}\\right), \\quad \\sin z = \\frac {1}{2 \\mathrm{i}} \\left(\\mathrm{e} ^ {\\mathrm{i} z} - \\mathrm{e} ^ {- \\mathrm{i} z}\\right).$$"
+    },
+    {
+      "name": "复正弦函数及复余弦函数的解析性",
+      "type": "property",
+      "formal": "复正弦函数及复余弦函数都是全平面的解析函数.",
+      "source_quote": "由指数函数的解析性及导数运算法则，复正弦函数及复余弦函数都是全平面的解析函数."
+    },
+    {
+      "name": "复余弦函数的导数公式",
+      "type": "formula",
+      "formal": "$$(\\cos z)^\\prime = -\\sin z.$$",
+      "source_quote": "$$\\begin{array}{r l} \\left(\\cos z\\right) ^ {\\prime} & = \\frac {1}{2} \\left(e ^ {i z} + e ^ {- i z}\\right) ^ {\\prime} = \\frac {i}{2} \\left(e ^ {i z} - e ^ {- i z}\\right) \\\\ & = - \\frac {e ^ {i z} - e ^ {- i z}}{2 i} = - \\sin z. \\end{array}$$"
+    },
+    {
+      "name": "复正弦函数的导数公式",
+      "type": "formula",
+      "formal": "$$(\\sin z)^\\prime = \\cos z.$$",
+      "source_quote": "类似地 $(\\sin z)' = \\cos z$ ."
+    },
+    {
+      "name": "复正弦函数及复余弦函数的周期性",
+      "type": "property",
+      "formal": "它们都是以 $2\\pi$ 为周期的函数.",
+      "source_quote": "1) 它们都是以 $2\\pi$ 为周期的函数."
+    },
+    {
+      "name": "复正弦函数的零点",
+      "type": "property",
+      "formal": "$\\sin z = 0$ 必须而且只需 $z = n\\pi, n = 0, \\pm 1, \\pm 2, \\cdots$",
+      "source_quote": "2)  $\\sin z = 0$  必须而且只需  $z = n\\pi, n = 0, \\pm 1, \\pm 2, \\cdots;$"
+    },
+    {
+      "name": "复余弦函数的零点",
+      "type": "property",
+      "formal": "$\\cos z = 0$ 必须而且只需 $z = \\left(n + \\frac{1}{2}\\right)\\pi, n = 0, \\pm 1, \\pm 2, \\cdots.$",
+      "source_quote": "$\\cos z = 0$  必须而且只需  $z = \\left(n + \\frac{1}{2}\\right)\\pi, n = 0, \\pm 1, \\pm 2, \\cdots.$"
+    },
+    {
+      "name": "复正切函数",
+      "type": "definition",
+      "formal": "$$\\tan z = \\frac {\\sin z}{\\cos z}.$$",
+      "source_quote": "其他的三角函数，仿照实变数的情形定义，例如 $$\\tan z = \\frac {\\sin z}{\\cos z}, \\quad \\cot z = \\frac {\\cos z}{\\sin z}.$$"
+    },
+    {
+      "name": "复余切函数",
+      "type": "definition",
+      "formal": "$$\\cot z = \\frac {\\cos z}{\\sin z}.$$",
+      "source_quote": "其他的三角函数，仿照实变数的情形定义，例如 $$\\tan z = \\frac {\\sin z}{\\cos z}, \\quad \\cot z = \\frac {\\cos z}{\\sin z}.$$"
+    },
+    {
+      "name": "复正切函数的解析性",
+      "type": "property",
+      "formal": "复正切函数除了 $z = (n + 1/2)\\pi$ 外，在全平面处处解析",
+      "source_quote": "由导数的运算法则，复正切函数除了  $z = (n + 1/2)\\pi$  外，在全平面处处解析，而复杂切函数则是在除去  $z = n\\pi, n = 0, \\pm 1, \\pm 2, \\cdots$  以外的全平面上的解析函数"
+    },
+    {
+      "name": "复余切函数的解析性",
+      "type": "property",
+      "formal": "复杂切函数则是在除去 $z = n\\pi, n = 0, \\pm 1, \\pm 2, \\cdots$ 以外的全平面上的解析函数",
+      "source_quote": "由导数的运算法则，复正切函数除了  $z = (n + 1/2)\\pi$  外，在全平面处处解析，而复杂切函数则是在除去  $z = n\\pi, n = 0, \\pm 1, \\pm 2, \\cdots$  以外的全平面上的解析函数"
+    },
+    {
+      "name": "复正切函数的导数公式",
+      "type": "formula",
+      "formal": "$$(\\tan z)^\\prime = \\frac {1}{\\cos^2 z}.$$",
+      "source_quote": "$$\\left(\\tan z\\right) ^ {\\prime} = \\frac {1}{\\cos^ {2} z}, \\quad \\left(\\cot z\\right) ^ {\\prime} = - \\frac {1}{\\sin^ {2} z}.$$"
+    },
+    {
+      "name": "复余切函数的导数公式",
+      "type": "formula",
+      "formal": "$$(\\cot z)^\\prime = -\\frac {1}{\\sin^2 z}.$$",
+      "source_quote": "$$\\left(\\tan z\\right) ^ {\\prime} = \\frac {1}{\\cos^ {2} z}, \\quad \\left(\\cot z\\right) ^ {\\prime} = - \\frac {1}{\\sin^ {2} z}.$$"
+    },
+    {
+      "name": "复正切函数及复余切函数的周期性",
+      "type": "property",
+      "formal": "$\\tan z$ 和 $\\cot z$ 都是以 $\\pi$ 为周期的函数.",
+      "source_quote": "$\\tan z$ 和 $\\cot z$ 都是以 $\\pi$ 为周期的函数."
+    },
+    {
+      "name": "实三角函数公式在复情形的普遍性",
+      "type": "theorem",
+      "formal": "所有实三角函数公式在复的情形仍成立.",
+      "source_quote": "在第7章中我们将统一地证明:所有实三角函数公式在复的情形仍成立."
+    },
+    {
+      "name": "正弦函数的奇性公式",
+      "type": "formula",
+      "formal": "$$\\sin(-z) = -\\sin z.$$",
+      "source_quote": "这里只从定义出发证明下面两个公式: $$\\sin (- z) = - \\sin z, \\quad \\cos^ {2} z + \\sin^ {2} z = 1.$$"
+    },
+    {
+      "name": "三角恒等式",
+      "type": "formula",
+      "formal": "$$\\cos^2 z + \\sin^2 z = 1.$$",
+      "source_quote": "这里只从定义出发证明下面两个公式: $$\\sin (- z) = - \\sin z, \\quad \\cos^ {2} z + \\sin^ {2} z = 1.$$"
+    },
+    {
+      "name": "复正弦函数及复余弦函数的无界性",
+      "type": "property",
+      "formal": "在复变数的情形,不等式 $|\\sin z|\\leqslant1,\\left|\\cos z\\right|\\leqslant1$ 已不再成立.而且 $|\\sin z|$ 及 $|\\cos z|$ 是无界的.",
+      "source_quote": "实变数三角函数与复变数三角函数有没有区别呢?有的.在复变数的情形,不等式 $|\\sin z|\\leqslant1,\\left|\\cos z\\right|\\leqslant1$ 已不再成立.而且 $|\\sin z|$ 及 $|\\cos z|$ 是无界的."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 22,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "数及实余弦函数的一些重要性质",
+      "导数的运算法则",
+      "只从定义出发证明下面两个公式"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "指数函数的定义",
+    "指数函数的解析性",
+    "导数运算法则",
+    "复变数正弦函数",
+    "复变数余弦函数",
+    "复正弦函数及复余弦函数的解析性",
+    "复余弦函数的导数公式",
+    "复正弦函数的导数公式",
+    "复正弦函数及复余弦函数的周期性",
+    "复正弦函数的零点",
+    "复余弦函数的零点",
+    "复正切函数",
+    "复余切函数",
+    "复正切函数的解析性",
+    "复余切函数的解析性",
+    "复正切函数的导数公式",
+    "复余切函数的导数公式",
+    "复正切函数及复余切函数的周期性",
+    "实三角函数公式在复情形的普遍性",
+    "正弦函数的奇性公式",
+    "三角恒等式",
+    "复正弦函数及复余弦函数的无界性"
+  ]
+}

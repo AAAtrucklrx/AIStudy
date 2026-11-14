@@ -1,0 +1,109 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH02-S05-SS06",
+    "text_sha256": "69ccb59d220cd773b42dfd1a42002ad16eb8122aec73ec35005aa9d6c0d0e156",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "69ccb59d220cd773b42dfd1a42002ad16eb8122aec73ec35005aa9d6c0d0e156",
+    "source": "original_text",
+    "source_path": "original_text/ch02_s05_ss06.md"
+  },
+  "unit": {
+    "unit_id": "CH02-S05-SS06",
+    "level": "subsection",
+    "chapter": "CH02",
+    "section": "CH02-S05",
+    "title": "双曲函数",
+    "anchor": "2.5.6"
+  },
+  "concepts": [
+    {
+      "name": "双曲余弦函数",
+      "type": "definition",
+      "formal": "$$\\cosh z = \\frac {\\mathrm{e} ^ {z} + \\mathrm{e} ^ {- z}}{2}$$",
+      "source_quote": "复双曲函数亦如实双曲函数类似定义 $$\\begin{array}{l l} \\cosh z = \\frac {\\mathrm{e} ^ {z} + \\mathrm{e} ^ {- z}}{2}, & \\sinh z = \\frac {\\mathrm{e} ^ {z} - \\mathrm{e} ^ {- z}}{2}, \\\\ \\tanh z = \\frac {\\sinh z}{\\cosh z}, & \\coth z = \\frac {\\cosh z}{\\sinh z}. \\end{array}$$"
+    },
+    {
+      "name": "双曲正弦函数",
+      "type": "definition",
+      "formal": "$$\\sinh z = \\frac {\\mathrm{e} ^ {z} - \\mathrm{e} ^ {- z}}{2}$$",
+      "source_quote": "$$\\begin{array}{l l} \\cosh z = \\frac {\\mathrm{e} ^ {z} + \\mathrm{e} ^ {- z}}{2}, & \\sinh z = \\frac {\\mathrm{e} ^ {z} - \\mathrm{e} ^ {- z}}{2}, \\end{array}$$"
+    },
+    {
+      "name": "双曲正切函数",
+      "type": "definition",
+      "formal": "$$\\tanh z = \\frac {\\sinh z}{\\cosh z}$$",
+      "source_quote": "\\tanh z = \\frac {\\sinh z}{\\cosh z}, & \\coth z = \\frac {\\cosh z}{\\sinh z}."
+    },
+    {
+      "name": "双曲余切函数",
+      "type": "definition",
+      "formal": "$$\\coth z = \\frac {\\cosh z}{\\sinh z}$$",
+      "source_quote": "\\tanh z = \\frac {\\sinh z}{\\cosh z}, & \\coth z = \\frac {\\cosh z}{\\sinh z}."
+    },
+    {
+      "name": "双曲函数与三角函数的关系",
+      "type": "formula",
+      "formal": "$$\\begin{array}{l l} \\sinh z = - \\text { isiniz }, & \\cosh z = \\cos i z, \\\\ \\tanh z = - \\text { itaniz }, & \\coth z = \\text { icotiz }, \\end{array}$$",
+      "source_quote": "双曲函数与三角函数有下列关系： $$\\begin{array}{l l} \\sinh z = - \\text { isiniz }, & \\cosh z = \\cos i z, \\\\ \\tanh z = - \\text { itaniz }, & \\coth z = \\text { icotiz }, \\end{array}$$"
+    },
+    {
+      "name": "双曲函数的解析性",
+      "type": "property",
+      "formal": "双曲正弦函数和双曲余弦函数都是全平面的解析函数，而双曲正切函数及双曲余切函数，则是分别除去 $z = n\\pi \\mathrm{i}$ 及 $z = (n + 1 / 2)\\pi \\mathrm{i}, n = 0, \\pm 1, \\pm 2, \\dots$ 的全平面上的解析函数",
+      "source_quote": "从这些等式可以看出，双曲正弦函数和双曲余弦函数都是全平面的解析函数，而双曲正切函数及双曲余切函数，则是分别除去 $z = n\\pi \\mathrm{i}$ 及 $z = (n + 1 / 2)\\pi \\mathrm{i}, n = 0, \\pm 1, \\pm 2, \\dots$ 的全平面上的解析函数"
+    },
+    {
+      "name": "双曲函数的导数公式",
+      "type": "formula",
+      "formal": "$$\\begin{array}{l l} (\\sinh z) ^ {\\prime} = \\cosh z, & (\\cosh z) ^ {\\prime} = \\sinh z; \\\\ (\\tanh z) ^ {\\prime} = \\frac {1}{\\cosh^ {2} z}, & (\\coth z) ^ {\\prime} = - \\frac {1}{\\sinh^ {2} z}. \\end{array}$$",
+      "source_quote": "而且 $$\\begin{array}{l l} (\\sinh z) ^ {\\prime} = \\cosh z, & (\\cosh z) ^ {\\prime} = \\sinh z; \\\\ (\\tanh z) ^ {\\prime} = \\frac {1}{\\cosh^ {2} z}, & (\\coth z) ^ {\\prime} = - \\frac {1}{\\sinh^ {2} z}. \\end{array}$$"
+    },
+    {
+      "name": "双曲函数的周期性",
+      "type": "property",
+      "formal": "复双曲函数也是周期函数，$\\sinh z$ 及 $\\cosh z$ 的周期为 $2\\pi i$，而 $\\tanh z$ 及 $\\coth z$ 的周期为 $\\pi i$。",
+      "source_quote": "此外，复双曲函数也是周期函数，$\\sinh z$ 及 $\\cosh z$ 的周期为 $2\\pi i$，而 $\\tanh z$ 及 $\\coth z$ 的周期为 $\\pi i$。"
+    },
+    {
+      "name": "双曲函数恒等式",
+      "type": "property",
+      "formal": "如同三角函数一样，实双曲函数的恒等式在复的情形仍然成立。例如 $$\\cosh^ {2} z - \\sinh^ {2} z = 1,$$ $$\\sinh \\left(z _ {1} \\pm z _ {2}\\right) = \\sinh z _ {1} \\cosh z _ {2} \\pm \\cosh z _ {1} \\sinh z _ {2},$$",
+      "source_quote": "如同三角函数一样，实双曲函数的恒等式在复的情形仍然成立。例如 $$\\cosh^ {2} z - \\sinh^ {2} z = 1,$$ $$\\sinh \\left(z _ {1} \\pm z _ {2}\\right) = \\sinh z _ {1} \\cosh z _ {2} \\pm \\cosh z _ {1} \\sinh z _ {2},$$"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 9,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "双曲余弦函数",
+    "双曲正弦函数",
+    "双曲正切函数",
+    "双曲余切函数",
+    "双曲函数与三角函数的关系",
+    "双曲函数的解析性",
+    "双曲函数的导数公式",
+    "双曲函数的周期性",
+    "双曲函数恒等式"
+  ]
+}

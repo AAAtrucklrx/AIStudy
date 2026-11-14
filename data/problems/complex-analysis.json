@@ -1,0 +1,454 @@
+{
+  "_meta": {
+    "file_type": "problems",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.problems",
+    "field_notes": {
+      "problems[]": "硬问题：会挡住「通过」的。来源块、单元、原句、状态、证据",
+      "notes[]": "记录但不挡的（范围外的插图、自动合并的重复概念名……）",
+      "dropped[]": "被丢掉的节（决策 4：无进展/冻结）→ 不进交付包，只在内部包里列出原因与烧掉的 token",
+      "metrics{}": "交付声明用的数字；每一项都要能从产物再算一遍",
+      "claims[]": "由 metrics 生成的声明句子（交付包直接渲染，不许手写）"
+    }
+  },
+  "problems": [],
+  "notes": [
+    {
+      "unit": "CH02-S01",
+      "source": "独立复核工单",
+      "ticket": "T-cec746",
+      "severity": "P1",
+      "message": "[T-cec746]「第一列消元要求 $a_{11}\\neq 0$，如果它是 0，先做一次第一种变换，把第一列不为零的方程换到第一行。」→ 先定义 $a_{ij}$ 是第 $i$ 个方程第 $j$ 个未知数的系数，$a_{11}$ 是首行首列元素；并定义“主元”为当前用来消元的非零数。",
+      "status": "closed",
+      "evidence": "CH02-S01.tickets.json#tickets[T-cec746]"
+    },
+    {
+      "unit": "CH02-S01",
+      "source": "独立复核工单",
+      "ticket": "T-ffaae6",
+      "severity": "P1",
+      "message": "[T-ffaae6]「$t_1$ 每取一个数、$t_2$ 每取一个数，就得到原方程组的一组解。它们能取遍 $F$ 里任何值，所以原方程组有无穷多组解。」→ 说明 $F$ 是数域（通常实数域），或直接写 $t_1,t_2$ 可取任意实数。",
+      "status": "closed",
+      "evidence": "CH02-S01.tickets.json#tickets[T-ffaae6]"
+    },
+    {
+      "unit": "CH02-S01",
+      "source": "独立复核工单",
+      "ticket": "T-58686e",
+      "severity": "P1",
+      "message": "[T-58686e]「一个等式管一个条件，三个条件一起卡住三个数，直接从中间挑数试是不行的。」→ 补上：这个例子恰好唯一；一般要消元成阶梯形后，看主元和矛盾行才能判断解的个数。",
+      "status": "closed",
+      "evidence": "CH02-S01.tickets.json#tickets[T-58686e]"
+    },
+    {
+      "unit": "CH02-S01",
+      "source": "独立复核工单",
+      "ticket": "T-e82a8b",
+      "severity": "P1",
+      "message": "[T-e82a8b]「第二列照做一遍，同样要求那时第二行的主元不为零。」→ 先定义主元；补充“若当前列全为零，则跳过该列，继续向右寻找主元”。",
+      "status": "closed",
+      "evidence": "CH02-S01.tickets.json#tickets[T-e82a8b]"
+    },
+    {
+      "unit": "CH02-S01",
+      "source": "独立复核工单",
+      "ticket": "T-e858fb",
+      "severity": "P1",
+      "message": "[T-e858fb]「减多少倍不是随便定的：被消那一行第一列写的是几，就减几倍，刚好抵消成 $0$。」→ 补上：这只在主元为1时成立；一般地，倍数 = 被消位置元素 ÷ 主元。",
+      "status": "closed",
+      "evidence": "CH02-S01.tickets.json#tickets[T-e858fb]"
+    },
+    {
+      "unit": "CH02-S03-SS01",
+      "source": "独立复核工单",
+      "ticket": "T-87de69",
+      "severity": "P1",
+      "message": "[T-87de69]「$c_{ij}$ 与 $d_i$ 是继续消元后得到的最终值，只是换了记号；$r$ 是非零行的行数，$d_{r+1}$ 是第 $r+1$ 行的常数项。」→ 应说明 $r$ 是主元行数，即满足 $c_{11},c_{2j_2},\\ldots,c_{rj_r}$ 均非零的行数；并补一句：第 $r+1$ 行系数全零而常数项 $d_{r+1}$ 可能非零，此时最后那个行不是零行，$r$ 不等于非零行的行数。",
+      "status": "closed",
+      "evidence": "CH02-S03-SS01.tickets.json#tickets[T-87de69]"
+    },
+    {
+      "unit": "CH02-S03-SS01",
+      "source": "独立复核工单",
+      "ticket": "T-99648b",
+      "severity": "P1",
+      "message": "[T-99648b]「$j_2$ 是列标，$2$ 是行标，别写反。括号里的 $(2)$ 就表示第二轮之后的新值。」→ 把批注里的上标改成与被解释的符号一致：$(1)$ 才是本轮（第二轮）消元前、上一轮（第一轮）之后的值；若要举例说明 $(k)$ 的一般含义，应换用另一个符号如 $a_{3j_3}^{(2)}$ 作为例子，不要和 $a_{2j_2}^{(1)}$ 混在一条批注里。",
+      "status": "closed",
+      "evidence": "CH02-S03-SS01.tickets.json#tickets[T-99648b]"
+    },
+    {
+      "unit": "CH02-S03-SS01",
+      "source": "独立复核工单",
+      "ticket": "T-bdc2a3",
+      "severity": "P1",
+      "message": "[T-bdc2a3]「把 $j_2$ 列上那个非零元所在的行换到第 2 行，就有 $a_{2j_2}^{(1)}\\neq0$。」→ 必须写明该非零元取自第 2 行到第 $m$ 行之间：在第 $2,3,\\ldots,m$ 行中取一个 $j_2$ 列非零元，与第 2 行互换，使 $a_{2j_2}^{(1)}\\neq0$；第 1 行不参与换行。",
+      "status": "closed",
+      "evidence": "CH02-S03-SS01.tickets.json#tickets[T-bdc2a3]"
+    },
+    {
+      "unit": "CH02-S03-SS01",
+      "source": "独立复核工单",
+      "ticket": "T-e9417b",
+      "severity": "P0",
+      "message": "[T-e9417b]「台阶形指的是：每一行从左边数起第一个不为零的数，都比上一行的那个更靠右。这个数叫这一行的主元，它正下方的元素全是零。」→ 把这一处补对（这是会教错学生的硬伤）",
+      "status": "closed",
+      "evidence": "CH02-S03-SS01.tickets.json#tickets[T-e9417b]"
+    },
+    {
+      "unit": "CH02-S03-SS02",
+      "source": "独立复核工单",
+      "ticket": "T-887105",
+      "severity": "P1",
+      "message": "[T-887105]「要得到无穷多组解，还要求数域是无限域——本书默认的实数域 $\\mathbb{R}$ 就是无限域，参数才有无限多种取法」→ 在正文首次出现处（或补进点击清单）用一句人话先定义：数域＝能自由做加、减、乘、除（除数不为0）并含0、1的数集，如实数域 $\\mathbb{R}$、复数域 $\\mathbb{C}$；「无限域」＝元素个数无限的数域。再说明为什么只有在无限域上「参数任意取值」才给出无穷多组解。数域的人话解释目前在例2.3.1第7步才出现，位置晚于正文使用。",
+      "status": "closed",
+      "evidence": "CH02-S03-SS02.tickets.json#tickets[T-887105]"
+    },
+    {
+      "unit": "CH02-S03",
+      "source": "独立复核工单",
+      "ticket": "T-61ccf7",
+      "severity": "P1",
+      "message": "[T-61ccf7]「化简到什么程度算够？够到能一眼看出有没有解、有几个解为止。」→ 补出消元的终点形态（如化成阶梯形或行简化阶梯形），并给出由此判断解属性的判据（例如出现 0=非零 的行则无解、非零行数等于未知数个数则唯一解等），使「一眼看出」有可操作依据。",
+      "status": "closed",
+      "evidence": "CH02-S03.tickets.json#tickets[T-61ccf7]"
+    },
+    {
+      "unit": "CH02-S03",
+      "source": "独立复核工单",
+      "ticket": "T-bcf5c3",
+      "severity": "P1",
+      "message": "[T-bcf5c3]「每做一次，方程组的样子变简单初等变换保持同解，解一个不多一个不少。初等行变换保持同解」→ 把这句拆成两句并说清两件事：本次变换做了什么（换行／倍乘／倍加），以及变换后的方程组与原方程组同解；同时说明「变简单」的具体含义（例如消去一个未知数、使某列出现更多零）。",
+      "status": "closed",
+      "evidence": "CH02-S03.tickets.json#tickets[T-bcf5c3]"
+    },
+    {
+      "unit": "CH02",
+      "source": "独立复核工单",
+      "ticket": "T-1e2a15",
+      "severity": "P1",
+      "message": "[T-1e2a15]「行列式是另一个工具。本节只是预告它们会被引进，真正的内容在后面几章。」→ 补一句人话说明它是什么（例如：行列式是由方程组的系数按方形数表算出来的一个数，常用来判定方程组有没有解、有几个解），并说明本节只是预告、具体内容在后面的章节。",
+      "status": "closed",
+      "evidence": "CH02.tickets.json#tickets[T-1e2a15]"
+    },
+    {
+      "unit": "CH02",
+      "source": "独立复核工单",
+      "ticket": "T-R85ae3",
+      "severity": "P1",
+      "message": "[T-R85ae3]「CH02: 批注 N-01 的标题里写了「F」，但批注正文里没出现它（标题与正文对不上）」→ CH02: 批注 N-01 的标题里写了「F」，但批注正文里没出现它（标题与正文对不上）",
+      "status": "closed",
+      "evidence": "CH02.tickets.json#tickets[T-R85ae3]"
+    },
+    {
+      "unit": "CH03-S01",
+      "source": "独立复核工单",
+      "ticket": "T-081647",
+      "severity": "P1",
+      "message": "[T-081647]「用『某方程乘非零常数加到另一方程』这种可逆初等变换消去一个未知数，再回代，即得唯一解；这种变换不改变解集」→ 把两条路线分开说清：（1）当 $a_{11}a_{22}-a_{12}a_{21}\\neq0$ 时，原方程组的任一解必须满足 $\\det\\cdot x_1=b_1a_{22}-b_2a_{12}$，由此得唯一性；（2）存在性必须靠把求得的 $x_1,x_2$ 代回原方程组检验（或改写成真正的初等变换并说明 $a_{22}\\neq0$ 时的做法）。不要用『这种变换不改变解集』来推出『解存在』。",
+      "status": "closed",
+      "evidence": "CH03-S01.tickets.json#tickets[T-081647]"
+    },
+    {
+      "unit": "CH03-S01",
+      "source": "独立复核工单",
+      "ticket": "T-G57008",
+      "severity": "P1",
+      "message": "[T-G57008]「CH03-S01: 正文是原文的 3.73 倍，超过上限 3.5（注水了，删掉重复和铺陈）」→ CH03-S01: 正文是原文的 3.73 倍，超过上限 3.5（注水了，删掉重复和铺陈）　→ 已失效：篇幅上限已于 2026-09-25 取消（用户定案：只判地板、不判上限）（该规则作废于 2026-09-25）",
+      "status": "retired",
+      "evidence": "CH03-S01.tickets.json#tickets[T-G57008]"
+    },
+    {
+      "unit": "CH03-S01",
+      "source": "独立复核工单",
+      "ticket": "T-G1c98b",
+      "severity": "P1",
+      "message": "[T-G1c98b]「CH03-S01: 正文是原文的 3.92 倍，超过上限 3.5（注水了，删掉重复和铺陈）」→ CH03-S01: 正文是原文的 3.92 倍，超过上限 3.5（注水了，删掉重复和铺陈）　→ 已失效：篇幅上限已于 2026-09-25 取消（用户定案：只判地板、不判上限）（该规则作废于 2026-09-25）",
+      "status": "retired",
+      "evidence": "CH03-S01.tickets.json#tickets[T-G1c98b]"
+    },
+    {
+      "unit": "CH03-S01",
+      "source": "独立复核工单",
+      "ticket": "T-G06e09",
+      "severity": "P1",
+      "message": "[T-G06e09]「CH03-S01: 正文是原文的 3.87 倍，超过上限 3.5（注水了，删掉重复和铺陈）」→ CH03-S01: 正文是原文的 3.87 倍，超过上限 3.5（注水了，删掉重复和铺陈）　→ 已失效：篇幅上限已于 2026-09-25 取消（用户定案：只判地板、不判上限）（该规则作废于 2026-09-25）",
+      "status": "retired",
+      "evidence": "CH03-S01.tickets.json#tickets[T-G06e09]"
+    },
+    {
+      "unit": "CH05-S05-SS01",
+      "source": "独立复核工单",
+      "ticket": "T-ed643f",
+      "severity": "P0",
+      "message": "[T-ed643f]「$A^*$ 是 $A$ 的伴随矩阵，它的 $(i,j)$ 元是 $A$ 的代数余子式。」→ 改为“伴随矩阵的 (i,j) 元是 $A_{ji}$，即代数余子式按转置排列”，或给出正确矩阵示例。",
+      "status": "closed",
+      "evidence": "CH05-S05-SS01.tickets.json#tickets[T-ed643f]"
+    },
+    {
+      "unit": "CH05-S05-SS01",
+      "source": "独立复核工单",
+      "ticket": "T-2807d7",
+      "severity": "P1",
+      "message": "[T-2807d7]「行最简形中主元列构成列向量组的一个极大线性无关组，所以主元列数等于非零行数，也等于列秩。」→ 补上证明，或说明这是前节已讲定理并给出引用；至少解释行变换保持列线性关系，所以主元列对应原矩阵的列也构成极大线性无关组。",
+      "status": "closed",
+      "evidence": "CH05-S05-SS01.tickets.json#tickets[T-2807d7]"
+    },
+    {
+      "unit": "CH05-S05-SS01",
+      "source": "独立复核工单",
+      "ticket": "T-a8f0c8",
+      "severity": "P1",
+      "message": "[T-a8f0c8]「所以若两者维数（即秩）相等，则两者相等，于是 $\\mathbf{b}$ 属于左边，方程组有解。」→ 先证明列秩=行秩，或在此处写“维数（即列秩，稍后证明等于秩）”，并调整顺序。",
+      "status": "closed",
+      "evidence": "CH05-S05-SS01.tickets.json#tickets[T-a8f0c8]"
+    },
+    {
+      "unit": "CH05-S05-SS01",
+      "source": "独立复核工单",
+      "ticket": "T-ffc658",
+      "severity": "P1",
+      "message": "[T-ffc658]「反之 $A$ 可逆时 $A\\mathbf{x}=\\mathbf{0}$ 只有零解。由推论 5.5.1 得 $\\operatorname{rank}(A)=n$，两者等价。」→ 应先用定理 5.5.1 推出一般结论，或直接说明齐次方程组总有解，所以只有零解等价于 $\\operatorname{rank}(A)=n$。",
+      "status": "closed",
+      "evidence": "CH05-S05-SS01.tickets.json#tickets[T-ffc658]"
+    },
+    {
+      "unit": "CH05-S05-SS01",
+      "source": "独立复核工单",
+      "ticket": "T-9bf65b",
+      "severity": "P0",
+      "message": "[T-9bf65b]「线性方程组有没有解、有解时唯不唯一，判据都是存在与唯一性定理：只看两个矩阵的秩（秩 = 化成阶梯形后非零行的行数）。」→ 唯一性的完整判据应补上“并且两个秩都等于未知量个数 n”。",
+      "status": "closed",
+      "evidence": "CH05-S05-SS01.tickets.json#tickets[T-9bf65b]"
+    },
+    {
+      "unit": "CH05-S05-SS01",
+      "source": "独立复核工单",
+      "ticket": "T-5f5c06",
+      "severity": "P0",
+      "message": "[T-5f5c06]「$A$ 的代数余子式 $A_{ij}$ 是去掉第 $i$ 行第 $j$ 列后的行列式乘以符号 $(-1)^{i+j}$，即去掉第 $j$ 行第 $i$ 列后的行列式乘以符号 $(-1)^{i+j}$。」→ 删除“即去掉第 $j$ 行第 $i$ 列后的行列式乘以符号”这一错误重复，或改为“即去掉第 $i$ 行第 $j$ 列后的行列式乘以符号”。",
+      "status": "closed",
+      "evidence": "CH05-S05-SS01.tickets.json#tickets[T-5f5c06]"
+    },
+    {
+      "unit": "CH05-S05-SS02",
+      "source": "独立复核工单",
+      "ticket": "T-6169e9",
+      "severity": "P1",
+      "message": "[T-6169e9]「几张过原点的平面摆在一起，公共部分只可能是三种样子：一个点（就是原点）、一条过原点的直线、一张过原点的平面。」→ 补充 r(A)=0 时解集是 F^3（维数 3），或说明这里假设至少有一个独立方程。",
+      "status": "closed",
+      "evidence": "CH05-S05-SS02.tickets.json#tickets[T-6169e9]"
+    },
+    {
+      "unit": "CH05-S05-SS02",
+      "source": "独立复核工单",
+      "ticket": "T-b21fb7",
+      "severity": "P1",
+      "message": "[T-b21fb7]「其中 $J$ 是行最简形矩阵（即前文链接的“最简形式”）」→ 统一术语：要么把 J 说明为行最简形并单独解释，要么按原文用行阶梯形并说明回代。",
+      "status": "closed",
+      "evidence": "CH05-S05-SS02.tickets.json#tickets[T-b21fb7]"
+    },
+    {
+      "unit": "CH05-S05-SS02",
+      "source": "独立复核工单",
+      "ticket": "T-ba7430",
+      "severity": "P1",
+      "message": "[T-ba7430]「秩一确定，解空间维数就是 $1$，接下来只要证明 $\\alpha$ 是非零解。」→ 把原文的求证句补回题干（“证明：$\\alpha=(A_{i1},A_{i2},\\ldots,A_{in})^T$ 是齐次线性方程组 $A\\mathbf{x}=\\mathbf{0}$ 的基础解系”），或把 $\\alpha$ 的定义放到“思路”之前。",
+      "status": "closed",
+      "evidence": "CH05-S05-SS02.tickets.json#tickets[T-ba7430]"
+    },
+    {
+      "unit": "CH06-S02-SS01",
+      "source": "独立复核工单",
+      "ticket": "T-07c0f4",
+      "severity": "P1",
+      "message": "[T-07c0f4]「求出的伸缩倍数就是几何答案：单位圆沿两个互相垂直的特征方向被按 $\\lambda_1,\\lambda_2$ 伸缩，所以变成椭圆，长、短半轴长分别为两个 $\\lambda$ 的绝对值。」→ 要补上适用范围：只有特征向量互相正交时（例如 $A$ 为对称矩阵，本题第 14 步已验证内积为 0），才能说单位圆被按 $|\\lambda_i|$ 沿特征方向拉伸成椭圆、半轴长为 $|\\lambda_i|$；一般情形不能这样读。",
+      "status": "closed",
+      "evidence": "CH06-S02-SS01.tickets.json#tickets[T-07c0f4]"
+    },
+    {
+      "unit": "CH06-S02-SS01",
+      "source": "独立复核工单",
+      "ticket": "T-6cb458",
+      "severity": "P1",
+      "message": "[T-6cb458]「可 $\\lambda$ 是数、$\\mathbf{x}$ 是向量，不能直接相减，得先把数写成矩阵：$\\lambda\\mathbf{x}=(\\lambda I)\\mathbf{x}$。」→ 应改为：$A\\mathbf{x}$ 与 $\\lambda\\mathbf{x}$ 都是向量，可以直接相减；困难在于把两项合成\"一个矩阵乘 $\\mathbf{x}$\"的形式，所以要把数 $\\lambda$ 写成矩阵 $\\lambda I$，才有 $A\\mathbf{x}-\\lambda\\mathbf{x}=(A-\\lambda I)\\mathbf{x}$。",
+      "status": "closed",
+      "evidence": "CH06-S02-SS01.tickets.json#tickets[T-6cb458]"
+    },
+    {
+      "unit": "CH06-S02-SS02",
+      "source": "独立复核工单",
+      "ticket": "T-78090e",
+      "severity": "P0",
+      "message": "[T-78090e]「要点：三阶行列式按一行展开时符号是 $+,-,+$；展开后一定要合并同类项、分解成因式相乘，这样才看得清根的个数和重数。」→ 把这一处补对（这是会教错学生的硬伤）",
+      "status": "closed",
+      "evidence": "CH06-S02-SS02.tickets.json#tickets[T-78090e]"
+    },
+    {
+      "unit": "CH06-S03-SS01",
+      "source": "独立复核工单",
+      "ticket": "T-4aaccc",
+      "severity": "P1",
+      "message": "[T-4aaccc]「如果结果是 $A \\mathbf{x} = \\lambda \\mathbf{x}$，就说 $\\lambda$ 是 $A$ 的一个特征值，$\\mathbf{x}$ 是对应的特征向量」→ 补上“特征向量必须是非零向量，即 $\\mathbf{x}\\neq 0$”，否则 $A0=\\lambda 0$ 对任意 $\\lambda$ 成立。",
+      "status": "closed",
+      "evidence": "CH06-S03-SS01.tickets.json#tickets[T-4aaccc]"
+    },
+    {
+      "unit": "CH06-S03-SS01",
+      "source": "独立复核工单",
+      "ticket": "T-4f8548",
+      "severity": "P1",
+      "message": "[T-4f8548]「特征多项式相同，它们的根作为特征值也相同。迹等于特征值之和，所以迹也相同。」→ 补上：特征多项式展开的 $\\lambda^{n-1}$ 项系数为 $-\\operatorname{tr}(A)$，而根之和等于该系数相反数，所以迹等于所有特征值之和。",
+      "status": "closed",
+      "evidence": "CH06-S03-SS01.tickets.json#tickets[T-4f8548]"
+    },
+    {
+      "unit": "CH06-S03-SS01",
+      "source": "独立复核工单",
+      "ticket": "T-ad101a",
+      "severity": "P1",
+      "message": "[T-ad101a]「两者的特征多项式都是 $(\\lambda - 1)^{2}(\\lambda + 1)$，行列式都是 $-1$，迹都是 $1$，与相似应有的结论完全吻合。」→ 明确这些量相同只是相似的必要条件，不是充分条件；本题是题目已给 $A$ 与 $B$ 相似，才能用它们列方程。",
+      "status": "closed",
+      "evidence": "CH06-S03-SS01.tickets.json#tickets[T-ad101a]"
+    },
+    {
+      "unit": "CH06-S03-SS01",
+      "source": "独立复核工单",
+      "ticket": "T-c5ee99",
+      "severity": "P1",
+      "message": "[T-c5ee99]「定义 6.3.1. 设 $A, B \\in F^{n \\times n}$. 若存在可逆方阵 $T \\in F^{n \\times n}$ 满足 $B = T^{-1}AT$, 则称方阵 $A$ 与 $B$ (在数域 $F$ 上) 相似.」→ 把数域和 $F^{n\\times n}$ 的说明移到定义之前，并解释数域是包含 0、1 且对加减乘除封闭的数集。",
+      "status": "closed",
+      "evidence": "CH06-S03-SS01.tickets.json#tickets[T-c5ee99]"
+    },
+    {
+      "unit": "CH06-S03-SS02",
+      "source": "独立复核工单",
+      "ticket": "T-Rfe728",
+      "severity": "P1",
+      "message": "[T-Rfe728]「CH06-S03-SS02: 记号「秩」第一次出现时没有最小定义 —— 读者会卡在这里。第一次用到它的那句是：「$$\\operatorname{rank}(A+I)+\\operatorname{rank}(A-I)=n,$$」。该怎么补：要」→ CH06-S03-SS02: 记号「秩」第一次出现时没有最小定义 —— 读者会卡在这里。第一次用到它的那句是：「$$\\operatorname{rank}(A+I)+\\operatorname{rank}(A-I)=n,$$」。该怎么补：要说明「秩 = 化成阶梯形后非零行的行数」",
+      "status": "closed",
+      "evidence": "CH06-S03-SS02.tickets.json#tickets[T-Rfe728]"
+    },
+    {
+      "unit": "CH06-S03-SS02",
+      "source": "独立复核工单",
+      "ticket": "T-d5c9af",
+      "severity": "P1",
+      "message": "[T-d5c9af]「定理 6.3.2 数域 $F$ 上的 $n$ 阶方阵 $A$ 相似于对角阵的充分必要条件是，$A$ 有 $n$ 个线性无关的特征向量。」→ 在首次出现处补一句解释：数域是至少含 0、1 且对加减乘除封闭的集合，如实数域、复数域；并说明本节默认在某个数域上讨论。",
+      "status": "closed",
+      "evidence": "CH06-S03-SS02.tickets.json#tickets[T-d5c9af]"
+    },
+    {
+      "unit": "CH06-S03-SS02",
+      "source": "独立复核工单",
+      "ticket": "T-4bf1e1",
+      "severity": "P0",
+      "message": "[T-4bf1e1]「若把数域限定为实数域，则只有 $x\\ge0$ 时 $\\pm\\sqrt{x}$ 才是实数，此时 $A$ 才可能在实数域中相似于实对角阵，结论要相应限制为 $x\\ge0$；本节下面按数域 $F$（复数域）讨论，所以 $x\\neq0,1$ 即可，」→ 把这一处补对（这是会教错学生的硬伤）",
+      "status": "closed",
+      "evidence": "CH06-S03-SS02.tickets.json#tickets[T-4bf1e1]"
+    },
+    {
+      "unit": "CH06-S03-SS03",
+      "source": "独立复核工单",
+      "ticket": "T-0cced6",
+      "severity": "P1",
+      "message": "[T-0cced6]「令 $P_1=(\\boldsymbol{x}_1,\\boldsymbol{x}_2,\\dots,\\boldsymbol{x}_n)$，即把它们按列排成方阵，由线性无关知 $P_1$ 可逆。」→ 补充依据：方阵可逆当且仅当它的列向量线性无关，或给出简证。",
+      "status": "closed",
+      "evidence": "CH06-S03-SS03.tickets.json#tickets[T-0cced6]"
+    },
+    {
+      "unit": "CH06-S03-SS03",
+      "source": "独立复核工单",
+      "ticket": "T-9c80e1",
+      "severity": "P1",
+      "message": "[T-9c80e1]「$\\operatorname{Tr}(A)$ 叫迹，就是主对角线上的两个数相加。$\\det(A)$ 叫行列式。」→ 补二阶行列式的定义（$ad-bc$）及基本性质，或说明这是前面已学内容。",
+      "status": "closed",
+      "evidence": "CH06-S03-SS03.tickets.json#tickets[T-9c80e1]"
+    },
+    {
+      "unit": "CH06-S03-SS03",
+      "source": "独立复核工单",
+      "ticket": "T-R03efb",
+      "severity": "P1",
+      "message": "[T-R03efb]「CH06-S03-SS03: 记号「行列式」第一次出现时没有最小定义 —— 读者会卡在这里。第一次用到它的那句是：「复方阵一定有特征值：特征值是特征多项式 $\\det(\\lambda I-A)$ 的根 [[CONCEPT:C-0032|特征」→ CH06-S03-SS03: 记号「行列式」第一次出现时没有最小定义 —— 读者会卡在这里。第一次用到它的那句是：「复方阵一定有特征值：特征值是特征多项式 $\\det(\\lambda I-A)$ 的根 [[CONCEPT:C-0032|特征多项式]]，而复系数多项式在复数范围内总有根。」。该怎么补：二阶行列式要给出算法：$\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix}=a",
+      "status": "closed",
+      "evidence": "CH06-S03-SS03.tickets.json#tickets[T-R03efb]"
+    },
+    {
+      "unit": "CH06-S03-SS03",
+      "source": "独立复核工单",
+      "ticket": "T-be7e94",
+      "severity": "P1",
+      "message": "[T-be7e94]「并且这个上三角阵对角线上的 $n$ 个数，正好是 $A$ 的全部特征值，重数也算在内 这条定理讲了什么。」→ 补一句：重数指特征值作为特征多项式根出现的次数（代数重数）。",
+      "status": "closed",
+      "evidence": "CH06-S03-SS03.tickets.json#tickets[T-be7e94]"
+    },
+    {
+      "unit": "CH06-S03-SS03",
+      "source": "独立复核工单",
+      "ticket": "T-de3272",
+      "severity": "P1",
+      "message": "[T-de3272]「把 $\\boldsymbol{x}_1$ 扩充为 $\\mathbb{C}^n$ 的一组基 $\\boldsymbol{x}_1,\\boldsymbol{x}_2,\\dots,\\boldsymbol{x}_n$ （见批注）。」→ 补一句：$\\mathbb{C}^n$ 是所有 $n$ 维复列向量组成的空间。",
+      "status": "closed",
+      "evidence": "CH06-S03-SS03.tickets.json#tickets[T-de3272]"
+    }
+  ],
+  "dropped": [],
+  "未解决的节": [],
+  "metrics": {
+    "节数": 14,
+    "未进包的节": 0,
+    "套话": 0,
+    "篇幅": {
+      "最短": 0,
+      "最长": 0,
+      "全部达地板": true
+    },
+    "详解": {
+      "条数": 0,
+      "被引用": 0
+    },
+    "例题": {
+      "步数": 0,
+      "有依据步数": 0
+    },
+    "模型": 0,
+    "token": {
+      "总计": 0,
+      "逐章": {}
+    },
+    "网页": {}
+  },
+  "claims": [
+    {
+      "说": "本包共 14 节；套话（综上所述/值得注意的是…）0 处",
+      "evidence": [
+        "lessons/*/lessons/*.json#checks.stats.套话"
+      ]
+    },
+    {
+      "说": "正文篇幅 0~0 字，全部达到地板（max(250 字, 原文×0.6)）：是；**没有上限**（长不算问题）",
+      "evidence": [
+        "lessons/*/lessons/*.json#checks.stats.正文地板"
+      ]
+    },
+    {
+      "说": "公式/定理详解 0 条，被正文引用 0 处",
+      "evidence": [
+        "lessons/*/lessons/*.json#explainables",
+        "lessons/*/lessons/*.json#checks.stats.详解引用"
+      ]
+    },
+    {
+      "说": "例题 0 步，其中 0 步带「这一步的依据」",
+      "evidence": [
+        "lessons/*/lessons/*.json#examples[].steps[].basis"
+      ]
+    },
+    {
+      "说": "交互模型 0 个（按需要出：前面没讲过的概念不配）",
+      "evidence": [
+        "lessons/*/lessons/*.json#models"
+      ]
+    }
+  ]
+}

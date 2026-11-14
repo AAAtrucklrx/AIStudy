@@ -1,0 +1,101 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH09-S02-SS10",
+    "text_sha256": "0f3ea7449a612ee23114e714dde2ad66e11f2fb25938f59b54ccccd08bf2ccd4",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "0f3ea7449a612ee23114e714dde2ad66e11f2fb25938f59b54ccccd08bf2ccd4",
+    "source": "original_text",
+    "source_path": "original_text/ch09_s02_ss10.md"
+  },
+  "unit": {
+    "unit_id": "CH09-S02-SS10",
+    "level": "subsection",
+    "chapter": "CH09",
+    "section": "CH09-S02",
+    "title": "卷积定理",
+    "anchor": "9.2.10"
+  },
+  "concepts": [
+    {
+      "name": "卷积",
+      "type": "definition",
+      "formal": "如果已知函数 $f(x)$ 及 $g(x)$，则含参变量的积分\n$$\\int_ {- \\infty} ^ {+ \\infty} f (x - \\xi) g (\\xi) d \\xi$$\n称为函数 $f(x)$ 和 $g(x)$ 的卷积，记为 $f*g$",
+      "source_quote": "定义2 如果已知函数 $f(x)$ 及 $g(x)$，则含参变量的积分 $$\\int_ {- \\infty} ^ {+ \\infty} f (x - \\xi) g (\\xi) d \\xi$$ 称为函数 $f(x)$ 和 $g(x)$ 的卷积，记为 $f*g$"
+    },
+    {
+      "name": "卷积的交换律",
+      "type": "law",
+      "formal": "$f * g = g * f$",
+      "source_quote": "容易证明卷积满足下列运算法则：\n1)  $f * g = g * f$  （交换律）；"
+    },
+    {
+      "name": "卷积的结合律",
+      "type": "law",
+      "formal": "$f*(g_1*g_2) = (f*g_1)*g_2$",
+      "source_quote": "2) $f*(g_1*g_2) = (f*g_1)*g_2$ （结合律）；"
+    },
+    {
+      "name": "卷积的分配律",
+      "type": "law",
+      "formal": "$f*(g_1 + g_2) = f*g_1 + f*g_2$",
+      "source_quote": "3) $f*(g_1 + g_2) = f*g_1 + f*g_2$ （分配律）."
+    },
+    {
+      "name": "卷积定理",
+      "type": "theorem",
+      "formal": "设 $f_{1}(t)$ 及 $f_{2}(t)$ 都满足条件1）与2)，则\n$$\\mathrm{L} \\left[ f _ {1} * f _ {2} \\right] = \\mathrm{L} \\left[ f _ {1} \\right] \\cdot \\mathrm{L} \\left[ f _ {2} \\right].$$",
+      "source_quote": "卷积定理 设 $f_{1}(t)$ 及 $f_{2}(t)$ 都满足条件1）与2)，则\n$$\\mathrm{L} \\left[ f _ {1} * f _ {2} \\right] = \\mathrm{L} \\left[ f _ {1} \\right] \\cdot \\mathrm{L} \\left[ f _ {2} \\right].$$"
+    },
+    {
+      "name": "傅氏变换的卷积公式",
+      "type": "formula",
+      "formal": "$F[f*g] = F[f] \\cdot F[g]$",
+      "source_quote": "由傅氏变换与拉氏变换的关系及傅氏变换的卷积公式：$F[f*g] = F[f] \\cdot F[g]$"
+    },
+    {
+      "name": "定理1",
+      "type": "theorem",
+      "formal": "由不等式(9.9)中$\\varepsilon$ 的任意性及定理1， $\\mathrm{L}[f_1 * f_2]$ 在半平面 $\\mathrm{Re}p > c$ 内解析.",
+      "source_quote": "由不等式(9.9)中$\\varepsilon$ 的任意性及定理1， $\\mathrm{L}[f_1 * f_2]$ 在半平面 $\\mathrm{Re}p > c$ 内解析."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 7,
+    "漏掉的具名结论": [
+      "定理1"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "下面定理",
+      "任意性及定理",
+      "氏变换的几个最常用的运算法则"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "卷积",
+    "卷积的交换律",
+    "卷积的结合律",
+    "卷积的分配律",
+    "卷积定理",
+    "傅氏变换的卷积公式",
+    "定理1"
+  ]
+}

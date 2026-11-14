@@ -1,0 +1,348 @@
+{
+  "schema_version": "TextbookMediaStepTitlesV1",
+  "source": "由既有分段字幕、旁白与独立审查建议提炼；不改音轨、时码或数学结论。",
+  "titles": [
+    {
+      "uid": "CH01-S01-SS01",
+      "rid": "MR-b19aff26440d9887378a",
+      "step": "S1",
+      "title": "同乘分母共轭"
+    },
+    {
+      "uid": "CH01-S01-SS01",
+      "rid": "MR-b19aff26440d9887378a",
+      "step": "S2",
+      "title": "交叉项相消"
+    },
+    {
+      "uid": "CH01-S01-SS01",
+      "rid": "MR-b19aff26440d9887378a",
+      "step": "S3",
+      "title": "分开实虚部"
+    },
+    {
+      "uid": "CH01-S01-SS01",
+      "rid": "MR-b19aff26440d9887378a",
+      "step": "S4",
+      "title": "合成复数商"
+    },
+    {
+      "uid": "CH01-S02-SS01",
+      "rid": "MR-8fa564b1c0febd422797",
+      "step": "S1",
+      "title": "寻找内点邻域"
+    },
+    {
+      "uid": "CH01-S02-SS01",
+      "rid": "MR-8fa564b1c0febd422797",
+      "step": "S2",
+      "title": "寻找外点邻域"
+    },
+    {
+      "uid": "CH01-S02-SS01",
+      "rid": "MR-8fa564b1c0febd422797",
+      "step": "S3",
+      "title": "标出内外两点"
+    },
+    {
+      "uid": "CH01-S02-SS01",
+      "rid": "MR-8fa564b1c0febd422797",
+      "step": "S4",
+      "title": "缩小边界邻域"
+    },
+    {
+      "uid": "CH01-S02-SS01",
+      "rid": "MR-8fa564b1c0febd422797",
+      "step": "S5",
+      "title": "比较三类邻域"
+    },
+    {
+      "uid": "CH02-S05-SS07",
+      "rid": "MR-90744e16dbe5f48e0d03",
+      "step": "S1",
+      "title": "整指数落点重合"
+    },
+    {
+      "uid": "CH02-S05-SS07",
+      "rid": "MR-90744e16dbe5f48e0d03",
+      "step": "S2",
+      "title": "分数指数三点循环"
+    },
+    {
+      "uid": "CH02-S05-SS07",
+      "rid": "MR-90744e16dbe5f48e0d03",
+      "step": "S3",
+      "title": "无理指数落点新增"
+    },
+    {
+      "uid": "CH02-S05-SS07",
+      "rid": "MR-90744e16dbe5f48e0d03",
+      "step": "S4",
+      "title": "比较三类幂值"
+    },
+    {
+      "uid": "CH03-S01",
+      "rid": "MR-8112b74d909264a7a39f",
+      "step": "S1",
+      "title": "沿参数方向前进"
+    },
+    {
+      "uid": "CH03-S01",
+      "rid": "MR-8112b74d909264a7a39f",
+      "step": "S2",
+      "title": "观察切向增量"
+    },
+    {
+      "uid": "CH03-S01",
+      "rid": "MR-8112b74d909264a7a39f",
+      "step": "S3",
+      "title": "替换函数与微分"
+    },
+    {
+      "uid": "CH03-S01",
+      "rid": "MR-8112b74d909264a7a39f",
+      "step": "S4",
+      "title": "比较方向与长度"
+    },
+    {
+      "uid": "CH03-S02",
+      "rid": "MR-e2e593c75fa748b16adc",
+      "step": "S1",
+      "title": "核对内外边界方向"
+    },
+    {
+      "uid": "CH03-S02",
+      "rid": "MR-e2e593c75fa748b16adc",
+      "step": "S2",
+      "title": "依次连接边界割线"
+    },
+    {
+      "uid": "CH03-S02",
+      "rid": "MR-e2e593c75fa748b16adc",
+      "step": "S3",
+      "title": "观察割线分区"
+    },
+    {
+      "uid": "CH03-S02",
+      "rid": "MR-e2e593c75fa748b16adc",
+      "step": "S4",
+      "title": "观察首条割线反向"
+    },
+    {
+      "uid": "CH03-S02",
+      "rid": "MR-e2e593c75fa748b16adc",
+      "step": "S5",
+      "title": "比较三组成对方向"
+    },
+    {
+      "uid": "CH03-S02",
+      "rid": "MR-e2e593c75fa748b16adc",
+      "step": "S6",
+      "title": "展开两域边界积分"
+    },
+    {
+      "uid": "CH03-S02",
+      "rid": "MR-e2e593c75fa748b16adc",
+      "step": "S7",
+      "title": "消去割线往返积分"
+    },
+    {
+      "uid": "CH03-S02",
+      "rid": "MR-e2e593c75fa748b16adc",
+      "step": "S8",
+      "title": "保留原有边界积分"
+    },
+    {
+      "uid": "CH03-S02",
+      "rid": "MR-e2e593c75fa748b16adc",
+      "step": "S9",
+      "title": "统一内圈逆时针方向"
+    },
+    {
+      "uid": "CH03-S03",
+      "rid": "MR-c5c7fdbb5e099f70ce37",
+      "step": "S1",
+      "title": "路径多绕原点一周"
+    },
+    {
+      "uid": "CH03-S03",
+      "rid": "MR-c5c7fdbb5e099f70ce37",
+      "step": "S2",
+      "title": "接回原路形成闭路"
+    },
+    {
+      "uid": "CH03-S03",
+      "rid": "MR-c5c7fdbb5e099f70ce37",
+      "step": "S3",
+      "title": "转到单位圆计算"
+    },
+    {
+      "uid": "CH03-S03",
+      "rid": "MR-c5c7fdbb5e099f70ce37",
+      "step": "S4",
+      "title": "加入绕行积分增量"
+    },
+    {
+      "uid": "CH03-S03",
+      "rid": "MR-c5c7fdbb5e099f70ce37",
+      "step": "S5",
+      "title": "再绕一周累加增量"
+    },
+    {
+      "uid": "CH03-S03",
+      "rid": "MR-c5c7fdbb5e099f70ce37",
+      "step": "S6",
+      "title": "反向绕行改变符号"
+    },
+    {
+      "uid": "CH03-S03",
+      "rid": "MR-c5c7fdbb5e099f70ce37",
+      "step": "S7",
+      "title": "推广到净绕圈数"
+    },
+    {
+      "uid": "CH05-S01-SS02",
+      "rid": "MR-2fc4ad49b6be9910049e",
+      "step": "S1",
+      "title": "增加项数观察误差"
+    },
+    {
+      "uid": "CH05-S01-SS02",
+      "rid": "MR-2fc4ad49b6be9910049e",
+      "step": "S2",
+      "title": "固定八项构造坏点"
+    },
+    {
+      "uid": "CH05-S01-SS02",
+      "rid": "MR-2fc4ad49b6be9910049e",
+      "step": "S3",
+      "title": "叠加统一误差带"
+    },
+    {
+      "uid": "CH08-S04-SS01",
+      "rid": "MR-bcd5babe0b3a31c17182",
+      "step": "S1",
+      "title": "追踪半圆两条边界"
+    },
+    {
+      "uid": "CH08-S04-SS01",
+      "rid": "MR-bcd5babe0b3a31c17182",
+      "step": "S2",
+      "title": "用内点确定象限"
+    },
+    {
+      "uid": "CH08-S04-SS01",
+      "rid": "MR-bcd5babe0b3a31c17182",
+      "step": "S3",
+      "title": "平方加倍扇形角度"
+    },
+    {
+      "uid": "CH08-S04-SS01",
+      "rid": "MR-bcd5babe0b3a31c17182",
+      "step": "S4",
+      "title": "拼成上半平面映射"
+    },
+    {
+      "uid": "CH08-S04-SS02",
+      "rid": "MR-6f09376275a8f573a25f",
+      "step": "S1",
+      "title": "圆弧变成角域边界"
+    },
+    {
+      "uid": "CH08-S04-SS02",
+      "rid": "MR-6f09376275a8f573a25f",
+      "step": "S2",
+      "title": "对数展开水平条带"
+    },
+    {
+      "uid": "CH08-S04-SS02",
+      "rid": "MR-6f09376275a8f573a25f",
+      "step": "S3",
+      "title": "平移缩放条带高度"
+    },
+    {
+      "uid": "CH08-S04-SS03",
+      "rid": "MR-f0719891edd7a809fc37",
+      "step": "S1",
+      "title": "标认焦点与两半轴"
+    },
+    {
+      "uid": "CH08-S04-SS03",
+      "rid": "MR-f0719891edd7a809fc37",
+      "step": "S2",
+      "title": "增大原圆观察收缩"
+    },
+    {
+      "uid": "CH08-S04-SS03",
+      "rid": "MR-f0719891edd7a809fc37",
+      "step": "S3",
+      "title": "半径一半核对半轴"
+    },
+    {
+      "uid": "CH08-S04-SS03",
+      "rid": "MR-f0719891edd7a809fc37",
+      "step": "S4",
+      "title": "继续增径观察变扁"
+    },
+    {
+      "uid": "CH08-S04-SS03",
+      "rid": "MR-f0719891edd7a809fc37",
+      "step": "S5",
+      "title": "接近一时保留短轴"
+    },
+    {
+      "uid": "CH08-S04-SS03",
+      "rid": "MR-f0719891edd7a809fc37",
+      "step": "S6",
+      "title": "继续逼近焦点线段"
+    },
+    {
+      "uid": "CH08-S04-SS03",
+      "rid": "MR-f0719891edd7a809fc37",
+      "step": "S7",
+      "title": "对照椭圆极限线段"
+    },
+    {
+      "uid": "CH08-S05",
+      "rid": "MR-73a64bc0be3983f907f0",
+      "step": "S1",
+      "title": "沿上半圆绕过边界点"
+    },
+    {
+      "uid": "CH08-S05",
+      "rid": "MR-73a64bc0be3983f907f0",
+      "step": "S2",
+      "title": "观察顶点外角转向"
+    },
+    {
+      "uid": "CH08-S05",
+      "rid": "MR-73a64bc0be3983f907f0",
+      "step": "S3",
+      "title": "核对局部幂次关系"
+    },
+    {
+      "uid": "CH09-S02-SS07",
+      "rid": "MR-aa1fa6defefb8c736618",
+      "step": "S1",
+      "title": "向右平移因果曲线"
+    },
+    {
+      "uid": "CH09-S02-SS07",
+      "rid": "MR-aa1fa6defefb8c736618",
+      "step": "S2",
+      "title": "去掉启动前零区间"
+    },
+    {
+      "uid": "CH09-S02-SS07",
+      "rid": "MR-aa1fa6defefb8c736618",
+      "step": "S3",
+      "title": "换元并拆开指数核"
+    },
+    {
+      "uid": "CH09-S02-SS07",
+      "rid": "MR-aa1fa6defefb8c736618",
+      "step": "S4",
+      "title": "提出时间延迟因子"
+    }
+  ]
+}

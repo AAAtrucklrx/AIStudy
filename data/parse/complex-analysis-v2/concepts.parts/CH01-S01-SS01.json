@@ -1,0 +1,186 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH01-S01-SS01",
+    "text_sha256": "1a282e5d8f6c0a238b2d69efc68ca6e84876392165d1193c4cd36aae8fc2fdf6",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "1a282e5d8f6c0a238b2d69efc68ca6e84876392165d1193c4cd36aae8fc2fdf6",
+    "source": "original_text",
+    "source_path": "original_text/ch01_s01_ss01.md"
+  },
+  "unit": {
+    "unit_id": "CH01-S01-SS01",
+    "level": "subsection",
+    "chapter": "CH01",
+    "section": "CH01-S01",
+    "title": "复数的四则运算",
+    "anchor": "1.1.1"
+  },
+  "concepts": [
+    {
+      "name": "虚单位",
+      "type": "definition",
+      "formal": "引进了虚单位 $i = \\sqrt {- 1},$ 要求它能和普通的实数一道进行运算，服从实数范围内原来成立的那些基本运算法则，并满足条件 $\\mathrm{i} ^ {2} = - 1.$",
+      "source_quote": "为了使这个方程有解，就把数的概念扩大，引进了虚单位"
+    },
+    {
+      "name": "复数",
+      "type": "definition",
+      "formal": "我们把形如 $z = x + \\mathrm{i} y$ 的数称为复数，其中， $x$ 和 $y$ 是任意实数",
+      "source_quote": "我们把形如 $z = x + \\mathrm{i} y$ 的数称为复数，其中， $x$ 和 $y$ 是任意实数，分别称为 $z$ 复数的实部和虚部."
+    },
+    {
+      "name": "实部",
+      "type": "definition",
+      "formal": "$x$ 和 $y$ 是任意实数，分别称为 $z$ 复数的实部和虚部.记为 $x = \\operatorname{Re} z, \\quad y = \\operatorname{Im} z.$",
+      "source_quote": "分别称为 $z$ 复数的实部和虚部.记为 $$x = \\operatorname{Re} z, \\quad y = \\operatorname{Im} z.$$"
+    },
+    {
+      "name": "虚部",
+      "type": "definition",
+      "formal": "$x$ 和 $y$ 是任意实数，分别称为 $z$ 复数的实部和虚部.记为 $x = \\operatorname{Re} z, \\quad y = \\operatorname{Im} z.$",
+      "source_quote": "分别称为 $z$ 复数的实部和虚部.记为 $$x = \\operatorname{Re} z, \\quad y = \\operatorname{Im} z.$$"
+    },
+    {
+      "name": "纯虚数",
+      "type": "definition",
+      "formal": "当 $\\mathrm{Re}z = 0$ 且 $\\mathrm{Im}z \\neq 0$ 时，$z = \\mathrm{i}lmz = \\mathrm{i}y$ 称为纯虚数",
+      "source_quote": "当 $\\mathrm{Re}z = 0$ 且 $\\mathrm{Im}z \\neq 0$ 时，$z = \\mathrm{i}lmz = \\mathrm{i}y$ 称为纯虚数."
+    },
+    {
+      "name": "复数相等",
+      "type": "definition",
+      "formal": "两个复数 $z_{1} = x_{1} + \\mathrm{i}y_{1}, z_{2} = x_{2} + \\mathrm{i}y_{2}$ 相等，是指它们的实部和虚部分别相等，即 $x _ {1} = x _ {2}, \\quad y _ {1} = y _ {2}.$",
+      "source_quote": "两个复数 $z_{1} = x_{1} + \\mathrm{i}y_{1}, z_{2} = x_{2} + \\mathrm{i}y_{2}$ 相等，是指它们的实部和虚部分别相等，即"
+    },
+    {
+      "name": "复数等于零",
+      "type": "definition",
+      "formal": "如果一个复数的实部和虚部都等于零，就称这个复数等于零，即 $0 + \\mathrm{i}0 = 0$",
+      "source_quote": "如果一个复数的实部和虚部都等于零，就称这个复数等于零，即 $0 + \\mathrm{i}0 = 0$"
+    },
+    {
+      "name": "共轭复数",
+      "type": "definition",
+      "formal": "两复数 $x + \\mathrm{i}y$ 和 $x - \\mathrm{i}y$ 称为相互共轭的，如果其中之一用 $z$ 表示，则另一个用 $\\bar{z}$ 表示.显然实数的共轭仍为该实数",
+      "source_quote": "两复数 $x + \\mathrm{i}y$ 和 $x - \\mathrm{i}y$ 称为相互共轭的，如果其中之一用 $z$ 表示，则另一个用 $\\bar{z}$ 表示."
+    },
+    {
+      "name": "复数的加法",
+      "type": "definition",
+      "formal": "$z _ {1} + z _ {2} = (x _ {1} + x _ {2}) + \\mathrm{i} (y _ {1} + y _ {2})$",
+      "source_quote": "加法和减法： $z_{1}$ 及 $z_{2}$ 的和与差分别为 $$z _ {1} + z _ {2} = (x _ {1} + x _ {2}) + \\mathrm{i} (y _ {1} + y _ {2})$$"
+    },
+    {
+      "name": "复数的减法",
+      "type": "definition",
+      "formal": "$z _ {1} - z _ {2} = \\left(x _ {1} - x _ {2}\\right) + \\mathrm{i} \\left(y _ {1} - y _ {2}\\right).$",
+      "source_quote": "$$z _ {1} - z _ {2} = \\left(x _ {1} - x _ {2}\\right) + \\mathrm{i} \\left(y _ {1} - y _ {2}\\right).$$"
+    },
+    {
+      "name": "复数的乘法",
+      "type": "definition",
+      "formal": "$z_{1}$ 和 $z_{2}$ 相乘，可以按多项式的乘法法则来进行，只需将结果中的 $\\mathfrak{I}^2$ 代之以-1，即 $z _ {1} \\cdot z _ {2} = (x _ {1} x _ {2} - y _ {1} y _ {2}) + i (x _ {1} y _ {2} + x _ {2} y _ {1}).$",
+      "source_quote": "乘法： $z_{1}$ 和 $z_{2}$ 相乘，可以按多项式的乘法法则来进行，只需将结果中的 $\\mathfrak{I}^2$ 代之以-1，即"
+    },
+    {
+      "name": "复数的除法",
+      "type": "definition",
+      "formal": "$z_{1}$ 除以 $z_{2} \\neq 0$ 的商定义为 $$\\begin{array}{r l} \\frac {z _ {1}}{z _ {2}} = \\frac {z _ {1} \\bar {z} _ {2}}{z _ {2} z _ {2}} = & \\frac {(x _ {1} + \\mathrm{i} y _ {1}) (x _ {2} - \\mathrm{i} y _ {2})}{| z _ {2} | ^ {2}} \\\\ = & \\frac {(x _ {1} x _ {2} + y _ {1} y _ {2}) + \\mathrm{i} (x _ {2} y _ {1} - x _ {1} y _ {2})}{x _ {2} ^ {2} + y _ {2} ^ {2}}. \\end{array}$$",
+      "source_quote": "除法： $z_{1}$ 除以 $z_{2} \\neq 0$ 的商定义为"
+    },
+    {
+      "name": "复数的模",
+      "type": "definition",
+      "formal": "通常称非负实数 $\\sqrt{x^2 + y^2}$ 为复数 $z$ 的模，记为 $|z|$.",
+      "source_quote": "通常称非负实数 $\\sqrt{x^2 + y^2}$ 为复数 $z$ 的模，记为 $|z|$."
+    },
+    {
+      "name": "除法是乘法的逆运算",
+      "type": "property",
+      "formal": "这样定义的除法运算是乘法运算的逆运算，即有 $z _ {2} \\cdot \\frac {z _ {1}}{z _ {2}} = z _ {1}.$",
+      "source_quote": "读者很容易利用乘法运算规则直接验证，这样定义的除法运算是乘法运算的逆运算，即有 $$z _ {2} \\cdot \\frac {z _ {1}}{z _ {2}} = z _ {1}.$$"
+    },
+    {
+      "name": "交换律",
+      "type": "law",
+      "formal": "$z_{1} + z_{2} = z_{2} + z_{1}, z_{1} \\cdot z_{2} = z_{2} \\cdot z_{1}$",
+      "source_quote": "则 $z_{1} + z_{2} = z_{2} + z_{1}, z_{1} \\cdot z_{2} = z_{2} \\cdot z_{1}$ （交换律）"
+    },
+    {
+      "name": "结合律",
+      "type": "law",
+      "formal": "$(z_{1}+z_{2})+z_{3}=z_{1}+(z_{2}+z_{3}),(z_{1}\\cdot z_{2})z_{3}=z_{1}(z_{2}\\cdot z_{3})$",
+      "source_quote": "$(z_{1}+z_{2})+z_{3}=z_{1}+(z_{2}+z_{3}),(z_{1}\\cdot z_{2})z_{3}=z_{1}(z_{2}\\cdot z_{3})$ （结合律）"
+    },
+    {
+      "name": "分配律",
+      "type": "law",
+      "formal": "$z_{1}(z_{2} + z_{3}) = z_{1}z_{2} + z_{1}z_{3}$",
+      "source_quote": "$z_{1}(z_{2} + z_{3}) = z_{1}z_{2} + z_{1}z_{3}$ (分配律)."
+    },
+    {
+      "name": "复数域",
+      "type": "definition",
+      "formal": "全体复数引进了上述相等关系及算术运算后称为复数域.",
+      "source_quote": "全体复数引进了上述相等关系及算术运算后称为复数域."
+    },
+    {
+      "name": "复数不能比较大小",
+      "type": "property",
+      "formal": "在复数域中, 两个复数是不能比较大小的, 这是复数与实数的一个不同之处.",
+      "source_quote": "在复数域中, 两个复数是不能比较大小的, 这是复数与实数的一个不同之处."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 19,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "内原来成立的那些基本运算法则",
+      "多项式的乘法法则",
+      "具有下列性质",
+      "乘法法则",
+      "学中所研究的对象都有这一性质",
+      "矩阵的乘法就不具备这个性质"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "虚单位",
+    "复数",
+    "实部",
+    "虚部",
+    "纯虚数",
+    "复数相等",
+    "复数等于零",
+    "共轭复数",
+    "复数的加法",
+    "复数的减法",
+    "复数的乘法",
+    "复数的除法",
+    "复数的模",
+    "除法是乘法的逆运算",
+    "交换律",
+    "结合律",
+    "分配律",
+    "复数域",
+    "复数不能比较大小"
+  ]
+}

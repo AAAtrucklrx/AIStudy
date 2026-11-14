@@ -1,0 +1,62 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH02-S05",
+    "text_sha256": "d74508ec00306dfdb49a46e8ff8d19c06d5e7f90c9be19899dbbf61d35cc4b7b",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "d74508ec00306dfdb49a46e8ff8d19c06d5e7f90c9be19899dbbf61d35cc4b7b",
+    "source": "original_text",
+    "source_path": "original_text/ch02_s05.md"
+  },
+  "unit": {
+    "unit_id": "CH02-S05",
+    "level": "section_intro",
+    "chapter": "CH02",
+    "section": "CH02-S05",
+    "title": "初等函数",
+    "anchor": "2.5"
+  },
+  "concepts": [
+    {
+      "name": "单叶函数",
+      "type": "definition",
+      "formal": "如果 $w = f(z)$ 是区域 $D$ 内的一一解析映照，则称 $f(z)$ 是 $D$ 内的单叶函数.",
+      "source_quote": "定义7 如果 $w = f(z)$ 是区域 $D$ 内的一一解析映照，则称 $f(z)$ 是 $D$ 内的单叶函数，$D$ 称为 $f(z)$ 的单叶性区域."
+    },
+    {
+      "name": "单叶性区域",
+      "type": "definition",
+      "formal": "$D$ 称为 $f(z)$ 的单叶性区域.",
+      "source_quote": "$D$ 称为 $f(z)$ 的单叶性区域."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 2,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "并研究它们的性质"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "单叶函数",
+    "单叶性区域"
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH05-S01-SS02",
+    "text_sha256": "f581d9133dd9ad9d9b050b4254f481b8ac74bdda396b8ad943829206f9a94ba1",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "f581d9133dd9ad9d9b050b4254f481b8ac74bdda396b8ad943829206f9a94ba1",
+    "source": "original_text",
+    "source_path": "original_text/ch05_s01_ss02.md"
+  },
+  "unit": {
+    "unit_id": "CH05-S01-SS02",
+    "level": "subsection",
+    "chapter": "CH05",
+    "section": "CH05-S01",
+    "title": "复变函数项级数",
+    "anchor": "5.1.2"
+  },
+  "concepts": [
+    {
+      "name": "复变函数项级数",
+      "type": "definition",
+      "formal": "设 $\\{f_n(z)\\}$ 是定义在平面点集 $E$ 上的复变函数列，则称 $$\\sum_ {k = 1} ^ {+ \\infty} f _ {k} (z) = f _ {1} (z) + f _ {2} (z) + \\dots + f _ {n} (z) + \\dots\\tag{5.3}$$ 为集 $E$ 上的一个复变函数项级数. 设 $z_0 \\in E$, 如果复数项级数 $$\\sum_ {k = 1} ^ {+ \\infty} f _ {k} (z _ {0}) = f _ {1} (z _ {0}) + f _ {2} (z _ {0}) + \\dots + f _ {n} (z _ {0}) + \\dots$$ 收敛，则称级数(5.3)在 $z_0$ 点收敛.如果级数(5.3)在 $E$ 上的每一点都收敛，则称级数(5.3)在 $E$ 上收敛.这时，级数(5.3)的和是 $E$ 上的一个函数，记作 $f(z)$ ，即 $$\\sum_ {k = 1} ^ {+ \\infty} f _ {k} (z) = f (z).$$",
+      "source_quote": "定义3 设 $\\{f_n(z)\\}$ 是定义在平面点集 $E$ 上的复变函数列，则称 $$\\sum_ {k = 1} ^ {+ \\infty} f _ {k} (z) = f _ {1} (z) + f _ {2} (z) + \\dots + f _ {n} (z) + \\dots\\tag{5.3}$$ 为集 $E$ 上的一个复变函数项级数."
+    },
+    {
+      "name": "一致收敛",
+      "type": "definition",
+      "formal": "设级数(5.3)在集 $E$ 上收敛于 $f(z)$，记它的部分和为 $$S _ {n} (z) = \\sum_ {k = 1} ^ {n} f _ {k} (z).$$ 如果对任给 $\\varepsilon > 0$ ，可以找到一个与 $\\varepsilon$ 有关，与 $z$ 无关的自然数 $N = N(\\varepsilon)$，使当 $n \\geqslant N$ 时，对 $E$ 上的所有点都有 $$\\mid S _ {n} (z) - f (z) \\mid <   \\varepsilon ,$$ 则称级数(5.3)在 $E$ 上一致收敛于函数 $f(z)$",
+      "source_quote": "定义4 设级数(5.3)在集 $E$ 上收敛于 $f(z)$，记它的部分和为 $$S _ {n} (z) = \\sum_ {k = 1} ^ {n} f _ {k} (z).$$ 如果对任给 $\\varepsilon > 0$ ，可以找到一个与 $\\varepsilon$ 有关，与 $z$ 无关的自然数 $N = N(\\varepsilon)$，使当 $n \\geqslant N$ 时，对 $E$ 上的所有点都有 $$\\mid S _ {n} (z) - f (z) \\mid <   \\varepsilon ,$$ 则称级数(5.3)在 $E$ 上一致收敛于函数 $f(z)$"
+    },
+    {
+      "name": "柯西一致收敛准则",
+      "type": "theorem",
+      "formal": "级数(5.3)在集 $E$ 上一致收敛的必要充分条件是：对任给 $\\varepsilon > 0$ ，可以找到自然数 $N(\\varepsilon)$，使当 $n > N$ 时，对所有 $z \\in E$ 及任何自然数 $p$ ，有 $$\\left| f _ {n + 1} (z) + f _ {n + 2} (z) + \\dots + f _ {n + p} (z) \\right| <   \\varepsilon .$$",
+      "source_quote": "定理5 级数(5.3)在集 $E$ 上一致收敛的必要充分条件是：对任给 $\\varepsilon > 0$ ，可以找到自然数 $N(\\varepsilon)$，使当 $n > N$ 时，对所有 $z \\in E$ 及任何自然数 $p$ ，有 $$\\left| f _ {n + 1} (z) + f _ {n + 2} (z) + \\dots + f _ {n + p} (z) \\right| <   \\varepsilon .$$"
+    },
+    {
+      "name": "比较判别法（维尔斯特拉斯判别法）",
+      "type": "theorem",
+      "formal": "如果对集合 $E$ 上所有点 $z$ 都有 $$\\mid f _ {k} (z) \\mid \\leqslant M _ {k}, \\quad k = 1, 2, \\dots ,$$ 而正数项级数 $\\sum_{k=1}^{+\\infty} M_k$ 收敛，则级数 $\\sum_{k=1}^{+\\infty} f_k(z)$ 在 $E$ 上绝对一致收敛.",
+      "source_quote": "比较判别法(维尔斯特拉斯(Weierstrass)判别法) 如果对集合 $E$ 上所有点 $z$ 都有 $$\\mid f _ {k} (z) \\mid \\leqslant M _ {k}, \\quad k = 1, 2, \\dots ,$$ 而正数项级数 $\\sum_{k=1}^{+\\infty} M_k$ 收敛，则级数 $\\sum_{k=1}^{+\\infty} f_k(z)$ 在 $E$ 上绝对一致收敛."
+    },
+    {
+      "name": "强级数",
+      "type": "definition",
+      "formal": "级数 $\\sum_{k=1}^{+\\infty} M_k$ 称为 $\\sum_{k=1}^{+\\infty} f_k(z)$ 的强级数.",
+      "source_quote": "级数 $\\sum_{k=1}^{+\\infty} M_k$ 称为 $\\sum_{k=1}^{+\\infty} f_k(z)$ 的强级数."
+    },
+    {
+      "name": "绝对一致收敛",
+      "type": "definition",
+      "formal": "则级数 $\\sum_{k=1}^{+\\infty} f_k(z)$ 在 $E$ 上绝对一致收敛.",
+      "source_quote": "则级数 $\\sum_{k=1}^{+\\infty} f_k(z)$ 在 $E$ 上绝对一致收敛."
+    },
+    {
+      "name": "和函数的连续性定理（定理6）",
+      "type": "theorem",
+      "formal": "如果 $f_{k}(z), k = 1,2,\\dots$ 都是域 $D$ 内的连续函数，级数 $\\sum_{k=1}^{+\\infty} f_{k}(z)$ 在 $D$ 内一致收敛于 $f(z)$，则和函数 $f(z)$ 也是 $D$ 内的连续函数.",
+      "source_quote": "定理6 如果 $f_{k}(z), k = 1,2,\\dots$ 都是域 $D$ 内的连续函数，级数 $\\sum_{k=1}^{+\\infty} f_{k}(z)$ 在 $D$ 内一致收敛于 $f(z)$，则和函数 $f(z)$ 也是 $D$ 内的连续函数."
+    },
+    {
+      "name": "逐项积分定理（定理7）",
+      "type": "theorem",
+      "formal": "如果 $f_{k}(z), k = 1,2,\\dots$ 都在曲线段 $C$ 上连续，且 $\\sum_{k=1}^{+\\infty} f(z)$ 在 $C$ 上一致收敛于 $f(z)$，则沿 $C$ 可以逐项积分，即有 $$\\int_ {c} f (z) \\mathrm{d} z = \\sum_ {k = 1} ^ {\\infty} \\int_ {c} f _ {k} (z) \\mathrm{d} z.$$",
+      "source_quote": "定理7 如果 $f_{k}(z), k = 1,2,\\dots$ 都在曲线段 $C$ 上连续，且 $\\sum_{k=1}^{+\\infty} f(z)$ 在 $C$ 上一致收敛于 $f(z)$，则沿 $C$ 可以逐项积分，即有 $$\\int_ {c} f (z) \\mathrm{d} z = \\sum_ {k = 1} ^ {\\infty} \\int_ {c} f _ {k} (z) \\mathrm{d} z.$$"
+    },
+    {
+      "name": "维尔斯特拉斯定理（定理8）",
+      "type": "theorem",
+      "formal": "设 $f_{n}(z), n = 1,2,3,\\dots$ 在域 $D$ 内解析，且级数 $\\sum_{n = 1}^{+\\infty}f_n(z)$ 在 $D$ 内一致收敛，则 $f(z)$ 在 $D$ 内解析，并且可以逐项求导至任意多阶，即有 $$f ^ {(k)} (z) = \\sum_ {n = 1} ^ {+ \\infty} f _ {n} ^ {(k)} (z), \\quad k = 1, 2, 3, \\dots .$$",
+      "source_quote": "定理8（维尔斯特拉斯定理）设 $f_{n}(z), n = 1,2,3,\\dots$ 在域 $D$ 内解析，且级数 $\\sum_{n = 1}^{+\\infty}f_n(z)$ 在 $D$ 内一致收敛，则 $f(z)$ 在 $D$ 内解析，并且可以逐项求导至任意多阶，即有 $$f ^ {(k)} (z) = \\sum_ {n = 1} ^ {+ \\infty} f _ {n} ^ {(k)} (z), \\quad k = 1, 2, 3, \\dots .$$"
+    },
+    {
+      "name": "柯西定理",
+      "type": "theorem",
+      "formal": "在 $G$ 内任取一闭路 $C$，由定理7及柯西定理，得 $$\\int_ {C} f (z) \\mathrm{d} z = \\sum_ {n = 1} ^ {\\infty} \\int_ {C} f _ {n} (z) \\mathrm{d} z = 0.$$",
+      "source_quote": "在 $G$ 内任取一闭路 $C$，由定理7及柯西定理，得 $$\\int_ {C} f (z) \\mathrm{d} z = \\sum_ {n = 1} ^ {\\infty} \\int_ {C} f _ {n} (z) \\mathrm{d} z = 0.$$"
+    },
+    {
+      "name": "莫雷拉定理",
+      "type": "theorem",
+      "formal": "又由定理6, $f(z)$ 在D内连续.再根据莫雷拉定理, $f(z)$ 在G内解析.",
+      "source_quote": "又由定理6, $f(z)$ 在D内连续.再根据莫雷拉定理, $f(z)$ 在G内解析."
+    },
+    {
+      "name": "柯西积分公式",
+      "type": "formula",
+      "formal": "再利用柯西积分公式，即得 $$f ^ {(k)} (z _ {0}) = \\sum_ {n = 1} ^ {+ \\infty} f _ {n} ^ {(k)} (z _ {0}), \\quad k = 1, 2, 3, \\dots .$$",
+      "source_quote": "再利用柯西积分公式，即得 $$f ^ {(k)} (z _ {0}) = \\sum_ {n = 1} ^ {+ \\infty} f _ {n} ^ {(k)} (z _ {0}), \\quad k = 1, 2, 3, \\dots .$$"
+    },
+    {
+      "name": "长大不等式",
+      "type": "formula",
+      "formal": "对(5.4)式用长大不等式，得 $$\\left| \\int_ {C} f (z) \\mathrm{d} z - \\sum_ {k = 1} ^ {n} \\int_ {C} f _ {k} (z) \\mathrm{d} z \\right| \\leqslant e L,$$ 这里， $L$ 是曲线 $C$ 的长",
+      "source_quote": "对(5.4)式用长大不等式，得 $$\\left| \\int_ {C} f (z) \\mathrm{d} z - \\sum_ {k = 1} ^ {n} \\int_ {C} f _ {k} (z) \\mathrm{d} z \\right| \\leqslant e L,$$ 这里， $L$ 是曲线 $C$ 的长"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 13,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "现只证明定理",
+      "上面两个定理",
+      "并不能得出逐项微商的定理",
+      "于是由定理"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "复变函数项级数",
+    "一致收敛",
+    "柯西一致收敛准则",
+    "比较判别法（维尔斯特拉斯判别法）",
+    "强级数",
+    "绝对一致收敛",
+    "和函数的连续性定理（定理6）",
+    "逐项积分定理（定理7）",
+    "维尔斯特拉斯定理（定理8）",
+    "柯西定理",
+    "莫雷拉定理",
+    "柯西积分公式",
+    "长大不等式"
+  ]
+}

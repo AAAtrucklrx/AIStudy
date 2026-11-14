@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "file_type": "toc_review",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.blocks.parse.review",
+    "field_notes": {
+      "inputs_digest": "这份复核是对哪一份输入（目录来源 bundle + 截图）做的；对不上就拒绝应用",
+      "decisions[].reason": "每条裁决必须写理由",
+      "decisions_digest": "决策指纹：内容变了但条数没变也能发现"
+    }
+  },
+  "inputs_digest": "sha256:c6b5bc9dbd60bf2ccabdb2a5c0baeaf8efc5b3cda8d8a866ea84a81f191fcb84",
+  "decisions_digest": "sha256:f9340647649f3025b70b12c106982fa673d071a5e7686994c287ceddbc118526",
+  "produced_by": "run-20261006-103359-tocreview2#toc.review.suggested.json",
+  "decisions": [
+    {
+      "subject": "T-0020",
+      "verdict": "manual-title",
+      "title": "调和函数的性质和狄利克雷问题",
+      "reason": "目录页截图上印的是「狄」，printed-toc 的「狭」是形近字 OCR 误认，应以正文写法「狄利克雷」为准。",
+      "arbiter": "model",
+      "evidence": "第 1 张截图（目录前半，章4 调和函数）里 4.2 那一行清楚印着「4.2 调和函数的性质和狄利克雷问题 …… (72)」，第二字为「狄」不是「狭」。"
+    },
+    {
+      "subject": "T-0023",
+      "verdict": "manual-title",
+      "title": "幂级数",
+      "reason": "目录页截图上印的是「幂」，printed-toc 的「基」是形近字 OCR 误认，应以正文写法「幂级数」为准。",
+      "arbiter": "model",
+      "evidence": "第 2 张截图（目录后半，页 V I）5.2 那一行印着「5.2 幂级数 …… (82)」，首字是「幂」不是「基」。"
+    }
+  ]
+}

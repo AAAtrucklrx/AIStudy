@@ -1,0 +1,58 @@
+{
+  "provenance": [
+    {
+      "path": "data/books/linear-algebra-full/runs/run-20261008-161505-7b269a/work/prepared-parse/toc.v2.json",
+      "sha256": "6b30eb61d0b7cd3b847968adf86c896038477a9c169999c51b6bffa1aad0ed35"
+    },
+    {
+      "path": "data/books/linear-algebra-full/runs/run-20261008-161505-7b269a/work/prepared-parse/headings.json",
+      "sha256": "6ddfff255b76ce84cad2f542c6261391444341be565eeaf0f62d7e71b0afdba7"
+    },
+    {
+      "path": "data/books/linear-algebra-full/runs/run-20261008-161505-7b269a/work/prepared-parse/document.md",
+      "sha256": "78f54a30d46059a8c004192cf1faf4c58025154944a99ee43cd45920548e2789"
+    },
+    {
+      "path": "data/books/linear-algebra-full/runs/run-20261008-161505-7b269a/work/prepared-parse/toc.alignment.json",
+      "sha256": "9898a9788b7182ba719349eba6f84bba6450ed62b9f90c12fade7b9eb781a583"
+    }
+  ],
+  "authority": {
+    "toc_id": "T-0091",
+    "level": 2,
+    "number": "7.3",
+    "title": "ℝⁿ上的线性变换",
+    "parent": "T-0088",
+    "page": {
+      "printed": "231",
+      "pdf": null
+    },
+    "kind": "section",
+    "confirmed": true,
+    "evidence": {
+      "from": [
+        "pdf-visual-toc"
+      ],
+      "agree": false
+    },
+    "order": 91
+  },
+  "candidate": {
+    "page": 231,
+    "line": 3650,
+    "text": "§7.3 \\mathbb{R}^n 上的线性变换",
+    "level": 2,
+    "region": "body"
+  },
+  "body_span": {
+    "line": 3650,
+    "text": "§7.3 $\\mathbb{R}^n$ 上的线性变换"
+  },
+  "prior_unmatched": {
+    "toc_id": "T-0091",
+    "number": "7.3",
+    "level": 2,
+    "title": "ℝⁿ上的线性变换",
+    "why": "目录里有、正文候选里找不到（正文可能没这一节，或 MinerU 没标成 title）"
+  }
+}

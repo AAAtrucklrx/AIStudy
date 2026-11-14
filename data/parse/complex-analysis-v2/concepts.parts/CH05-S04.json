@@ -1,0 +1,123 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH05-S04",
+    "text_sha256": "c9634ebf267b21de7f51e929d3ae8f8505a78cf4cb69d704b26536f833095325",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "c9634ebf267b21de7f51e929d3ae8f8505a78cf4cb69d704b26536f833095325",
+    "source": "original_text",
+    "source_path": "original_text/ch05_s04.md"
+  },
+  "unit": {
+    "unit_id": "CH05-S04",
+    "level": "section",
+    "chapter": "CH05",
+    "section": "CH05-S04",
+    "title": "罗朗(Laurent)级数",
+    "anchor": "5.4"
+  },
+  "concepts": [
+    {
+      "name": "罗朗级数",
+      "type": "definition",
+      "formal": "形如 $\\sum_ {n = - \\infty} ^ {+ \\infty} a _ {n} (z - a) ^ {n} = \\sum_ {n = - \\infty} ^ {- 1} a _ {n} (z - a) ^ {n} + \\sum_ {n = 0} ^ {+ \\infty} a _ {n} (z - a) ^ {n}$ 的级数，称为罗朗级数，其中，a 及 $a_{n}, n = 0, \\pm 1, \\pm 2, \\cdots$ 是复常数。",
+      "source_quote": "的级数，称为罗朗级数，其中，a 及 $a_{n}, n = 0, \\pm 1, \\pm 2, \\cdots$ 是复常数。"
+    },
+    {
+      "name": "罗朗级数收敛",
+      "type": "definition",
+      "formal": "当这两个级数都收敛时，则称罗朗级数(5.11)收敛。",
+      "source_quote": "都收敛时，则称罗朗级数(5.11)收敛."
+    },
+    {
+      "name": "定理17",
+      "type": "theorem",
+      "formal": "设 $f(z)$ 在圆环域 $D: r < |z - a| < R$ 中解析，则 $f(z)$ 一定能在这个圆环中展开成罗朗级数，即 $$f (z) = \\sum_ {n = - \\infty} ^ {+ \\infty} a _ {n} (z - a) ^ {n},$$ $$a _ {n} = \\frac {1}{2 \\pi i} \\int_ {C} \\frac {f (\\zeta)}{(\\zeta - a) ^ {n + 1}} d \\zeta , \\quad n = 0, \\pm 1, \\pm 2, \\dots .$$ 而 C 是 D 内围绕 a 点的任意闭路.",
+      "source_quote": "定理17 设 $f(z)$ 在圆环域 $D: r < |z - a| < R$ 中解析，则 $f(z)$ 一定能在这个圆环中展开成罗朗级数，即"
+    },
+    {
+      "name": "罗朗展开式唯一性",
+      "type": "property",
+      "formal": "$f(z)$ 在圆环域 $D$ 内的罗朗展开式是唯一的。",
+      "source_quote": "下面证明 $f(z)$ 在圆环域 $D$ 内的罗朗展开式是唯一的。"
+    },
+    {
+      "name": "柯西积分公式",
+      "type": "theorem",
+      "formal": "由复闭路的柯西积分公式，得 $$f (z) = \\frac {1}{2 \\pi \\mathrm{i}} \\int_ {c ^ {\\prime}} \\frac {f (\\zeta) \\mathrm{d} \\zeta}{\\zeta - z} - \\frac {1}{2 \\pi \\mathrm{i}} \\int_ {c ^ {\\prime}} \\frac {f (\\zeta)}{\\zeta - z} \\mathrm{d} \\zeta .$$",
+      "source_quote": "由复闭路的柯西积分公式，得"
+    },
+    {
+      "name": "多连通域的柯西定理",
+      "type": "theorem",
+      "formal": "由多连通域的柯西定理知 $$\\int_ {C ^ {\\prime}} \\frac {f (\\zeta)}{(\\zeta - a) ^ {n + 1}} d \\zeta = \\int_ {C} \\frac {f (\\zeta)}{(\\zeta - a) ^ {n + 1}} d \\zeta ,$$ $$\\int_ {c ^ {\\prime}} \\frac {f (\\zeta)}{(\\zeta - a) ^ {n + 1}} d \\zeta = \\int_ {c} \\frac {f (\\zeta)}{(\\zeta - a) ^ {n + 1}} d \\zeta .$$",
+      "source_quote": "由多连通域的柯西定理知"
+    },
+    {
+      "name": "柯西定理",
+      "type": "theorem",
+      "formal": "由柯西定理得 $$a _ {n} = \\frac {1}{2 \\pi i} \\int_ {c} (\\zeta - 1) ^ {n + 1} \\frac {1}{\\zeta - 2} d \\zeta = 0.$$",
+      "source_quote": "由柯西定理得"
+    },
+    {
+      "name": "达朗贝尔公式",
+      "type": "formula",
+      "formal": "利用达朗贝尔公式，不难求得表示 $J_{n}(t)$ 的幂级数的收敛半径为 $+\\infty$。",
+      "source_quote": "利用达朗贝尔公式，不难求得表示 $J_{n}(t)$ 的幂级数的收敛半径为 $+\\infty$"
+    },
+    {
+      "name": "贝塞尔函数",
+      "type": "definition",
+      "formal": "$J_{n}(t)$ 及 $J_{-n}(t)$ 分别称为 ±n 阶贝塞尔(Bessel)函数，这是一类在应用上很重要的特殊函数。",
+      "source_quote": "$J_{n}(t)$ 及 $J_{-n}(t)$ 分别称为 ±n 阶贝塞尔(Bessel)函数，这是一类在应用上很重要的特殊函数。"
+    },
+    {
+      "name": "贝塞尔函数的积分表示",
+      "type": "formula",
+      "formal": "$$J _ {n} (t) = \\frac {1}{2 \\pi} \\int_ {0} ^ {2 \\pi} \\cos (t \\sin \\theta - n \\theta) d \\theta , \\quad n = 0, \\pm 1, \\pm 2, \\dots .$$",
+      "source_quote": "还可得到贝塞尔函数的积分表示："
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 10,
+    "漏掉的具名结论": [
+      "定理17"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "奇点附近的性质",
+      "研究函数在奇点附近性质",
+      "式表示的系数公式",
+      "上述定理"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "罗朗级数",
+    "罗朗级数收敛",
+    "定理17",
+    "罗朗展开式唯一性",
+    "柯西积分公式",
+    "多连通域的柯西定理",
+    "柯西定理",
+    "达朗贝尔公式",
+    "贝塞尔函数",
+    "贝塞尔函数的积分表示"
+  ]
+}

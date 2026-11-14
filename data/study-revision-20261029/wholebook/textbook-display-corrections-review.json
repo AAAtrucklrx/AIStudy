@@ -1,0 +1,396 @@
+{
+  "schema_version": "TextbookDisplayCorrectionReviewV2",
+  "input_audit": "/Users/huang/Documents/ChatGPT/ai for study项目的改进/discussion-audit-20261029/wholebook/math-current.json",
+  "input_audit_generated_at": "2026-10-29T02:22:57.895Z",
+  "counts": {
+    "input_bare_candidates": 8,
+    "input_katex_errors": 1,
+    "classified_candidates": 8,
+    "canonical_source_replacements": 8,
+    "title_code_internal_marker_false_positives": 0,
+    "unresolved_semantic_source_locations": 0,
+    "support_field_replacements": 4,
+    "catalog_rule_count": 1,
+    "printed_source_cautions": 2
+  },
+  "boundary": "canonical显示恢复实际纸面符号；诊断引文显示仅排版保留旧a。所有old在其具体目标字段唯一，source_map必须从独立显示投影重建；原raw_text、PDF和OCR快照始终保留。",
+  "classification": [
+    {
+      "candidate_index": 1,
+      "unit_id": "CH01-S02-SS02",
+      "kind": "textbook",
+      "candidate_index_in_row": 0,
+      "candidate_text": "也可表为0<argz<n)等等都是单连通区域;而圆环:",
+      "classification": "actual_math_missing_delimiters_with_unresolved_source_semantics",
+      "is_title_code_or_internal_marker": false,
+      "source_unit": "CH01-S02-SS02",
+      "source_line": 13,
+      "action": "canonical CH01-S02-SS02 correction 0",
+      "rationale": "两版印刷16页确认pi；整个段落按纸面恢复数学排版与明确OCR残损。"
+    },
+    {
+      "candidate_index": 2,
+      "unit_id": "CH02-S05-SS02",
+      "kind": "support",
+      "candidate_index_in_row": 0,
+      "candidate_text": "点的辐角的一个确定的值 argb = arga + a（图 2.7）。并称 a = argb - arga 为",
+      "classification": "actual_math_in_original_quote_or_quote_discussion",
+      "is_title_code_or_internal_marker": false,
+      "source_unit": "CH02-S05-SS02",
+      "source_line": 9,
+      "action": "Use exact support_replacements owner/pointer, canonical units paragraph, or catalog rule as appropriate",
+      "rationale": "印刷33页是alpha。诊断original/reason保留旧a仅排版，正确教学引用与canonical原文恢复alpha，已明确分流。"
+    },
+    {
+      "candidate_index": 3,
+      "unit_id": "CH02-S05-SS02",
+      "kind": "support",
+      "candidate_index_in_row": 1,
+      "candidate_text": "，出现 “argb = arga + a” 又把同一符号用于 “a = argb - arga”，导致符号混淆；同时把辐角变化写成",
+      "classification": "actual_math_in_original_quote_or_quote_discussion",
+      "is_title_code_or_internal_marker": false,
+      "source_unit": "CH02-S05-SS02",
+      "source_line": 9,
+      "action": "Use exact support_replacements owner/pointer, canonical units paragraph, or catalog rule as appropriate",
+      "rationale": "印刷33页是alpha。诊断original/reason保留旧a仅排版，正确教学引用与canonical原文恢复alpha，已明确分流。"
+    },
+    {
+      "candidate_index": 4,
+      "unit_id": "CH02-S05-SS02",
+      "kind": "support",
+      "candidate_index_in_row": 2,
+      "candidate_text": "点的辐角的一个确定的值 argb = arga + a（图 2.7）。并称 a = argb - arga 为",
+      "classification": "actual_math_in_original_quote_or_quote_discussion",
+      "is_title_code_or_internal_marker": false,
+      "source_unit": "CH02-S05-SS02",
+      "source_line": 9,
+      "action": "Use exact support_replacements owner/pointer, canonical units paragraph, or catalog rule as appropriate",
+      "rationale": "印刷33页是alpha。诊断original/reason保留旧a仅排版，正确教学引用与canonical原文恢复alpha，已明确分流。"
+    },
+    {
+      "candidate_index": 5,
+      "unit_id": "CH02-S05-SS02",
+      "kind": "textbook",
+      "candidate_index_in_row": 0,
+      "candidate_text": "点的辐角的一个确定的值 argb = arga + a（图 2.7）。并称 a = argb - arga 为",
+      "classification": "actual_math_in_original_quote_or_quote_discussion",
+      "is_title_code_or_internal_marker": false,
+      "source_unit": "CH02-S05-SS02",
+      "source_line": 9,
+      "action": "Use exact support_replacements owner/pointer, canonical units paragraph, or catalog rule as appropriate",
+      "rationale": "印刷33页是alpha。诊断original/reason保留旧a仅排版，正确教学引用与canonical原文恢复alpha，已明确分流。"
+    },
+    {
+      "candidate_index": 6,
+      "unit_id": "CH06-S03",
+      "kind": "support",
+      "candidate_index_in_row": 0,
+      "candidate_text": "点的辐角的一个确定的值 argb = arga + a（图 2.7）。并称 a = argb - arga 为",
+      "classification": "actual_math_in_original_quote_or_quote_discussion",
+      "is_title_code_or_internal_marker": false,
+      "source_unit": "CH02-S05-SS02",
+      "source_line": 9,
+      "action": "Use exact support_replacements owner/pointer, canonical units paragraph, or catalog rule as appropriate",
+      "rationale": "印刷33页是alpha。诊断original/reason保留旧a仅排版，正确教学引用与canonical原文恢复alpha，已明确分流。"
+    },
+    {
+      "candidate_index": 7,
+      "unit_id": "CH09-S03-SS03",
+      "kind": "textbook",
+      "candidate_index_in_row": 0,
+      "candidate_text": "Resinz = sinxcoshy, Imsinz = cosxsinh y,\n| sinz | =",
+      "classification": "actual_concatenated_function_names_and_missing_delimiters",
+      "is_title_code_or_internal_marker": false,
+      "source_unit": "CH09-S03-SS03",
+      "source_line": 138,
+      "action": "canonical CH09-S03-SS03 corrections 0 or 1",
+      "rationale": "印刷220页已实际核对：Re/Im函数排版、整条第23题及两组左大括号由纸面恢复。"
+    },
+    {
+      "candidate_index": 8,
+      "unit_id": "CH09-S03-SS03",
+      "kind": "textbook",
+      "candidate_index_in_row": 1,
+      "candidate_text": "\\left[2k\\pi - \\mathrm{i}\\ln(\\sqrt{2} - 1) - 2k\\pi - \\mathrm{i}\\ln(2 \\pm \\sqrt{3}), (2k + 1)\\pi - \\mathrm{i}\\ln(\\sqrt{2} + 1), (k + \\frac{1}{2})\\pi - \\frac{1}{2}\\arctan\\frac{1}{2} + \\frac{1}{4}\\ln 5,\\left[\\ln(\\sqrt{5} + 2) + \\mathrm{i}(2k + \\frac{1}{2})\\pi\\right], \\ln(\\sqrt{5} - 2) + \\mathrm{i}(2k - \\frac{1}{2})\\pi.",
+      "classification": "same_real_katex_failure_also_counted_as_bare_candidate",
+      "is_title_code_or_internal_marker": false,
+      "source_unit": "CH09-S03-SS03",
+      "source_line": 141,
+      "action": "canonical CH09-S03-SS03 corrections 0 or 1",
+      "rationale": "印刷220页已实际核对：Re/Im函数排版、整条第23题及两组左大括号由纸面恢复。"
+    }
+  ],
+  "canonical_replacement_verification": [
+    {
+      "unit_id": "CH01-S02-SS02",
+      "correction_index": 0,
+      "match_count_in_original": 1,
+      "source_line": 13,
+      "printed_page": 16
+    },
+    {
+      "unit_id": "CH02-S05-SS02",
+      "correction_index": 0,
+      "match_count_in_original": 1,
+      "source_line": 9,
+      "printed_page": 33
+    },
+    {
+      "unit_id": "CH02-S05-SS02",
+      "correction_index": 1,
+      "match_count_in_original": 1,
+      "source_line": 10,
+      "printed_page": 33
+    },
+    {
+      "unit_id": "CH02-S05-SS02",
+      "correction_index": 2,
+      "match_count_in_original": 1,
+      "source_line": 16,
+      "printed_page": 33
+    },
+    {
+      "unit_id": "CH09-S03-SS03",
+      "correction_index": 0,
+      "match_count_in_original": 1,
+      "source_line": 138,
+      "printed_page": 220
+    },
+    {
+      "unit_id": "CH09-S03-SS03",
+      "correction_index": 1,
+      "match_count_in_original": 1,
+      "source_line": 141,
+      "printed_page": 220
+    },
+    {
+      "unit_id": "CH08-S04-SS03",
+      "correction_index": 0,
+      "match_count_in_original": 1,
+      "source_line": 21,
+      "printed_page": 161
+    },
+    {
+      "unit_id": "CH08-S04-SS03",
+      "correction_index": 1,
+      "match_count_in_original": 1,
+      "source_line": 22,
+      "printed_page": 161
+    }
+  ],
+  "source_sha256_before_after_equal": {
+    "CH01-S02-SS02": "7fd08b955b349933c05872a4ef32c52bd3794b8b38624db9b5e0c39fb90d0037",
+    "CH02-S05-SS02": "44dfd88ba66c18aeae84adc84737d426c83bd3a6ecc16582b78f4eae06ba7071",
+    "CH09-S03-SS03": "2095dc8c8c37acab26382dc4a7d806e10f7824a270f2094109fb366458894158"
+  },
+  "support_projection_targets": [
+    {
+      "unit_id": "CH02-S05-SS02",
+      "owner_id": "C-0124",
+      "json_pointer": "/corrections/0/original",
+      "projection_role": "diagnostic_quoted_ocr",
+      "old_match_count_in_target": 1
+    },
+    {
+      "unit_id": "CH02-S05-SS02",
+      "owner_id": "C-0124",
+      "json_pointer": "/corrections/0/reason",
+      "projection_role": "diagnostic_quoted_ocr",
+      "old_match_count_in_target": 1
+    },
+    {
+      "unit_id": "CH02-S05-SS02",
+      "owner_id": "C-0124",
+      "json_pointer": "/reference_catalog/entries/63/markdown",
+      "projection_role": "teaching_reference",
+      "old_match_count_in_target": 1
+    },
+    {
+      "unit_id": "CH06-S03",
+      "owner_id": "C-0124",
+      "json_pointer": "/reference_catalog/entries/63/markdown",
+      "projection_role": "teaching_reference",
+      "old_match_count_in_target": 1
+    }
+  ],
+  "semantic_items_left_unchanged": [],
+  "verification_required_after_integration": "将这些canonical修复投射到textbook显示及列出的支持markdown显示副本后，重跑同一audit；目标既检查KaTeX错误，也检查裸数学候选。语义待核不能因KaTeX成功就宣称已正确。",
+  "correction_data_schema": "units for canonical textbook display; support_replacements for exact owner/pointer displays; reference_catalog_replacements by reference ID",
+  "pdf_verification": {
+    "method": "PyMuPDF/fitz rendered both image-only PDFs; extracted body text was absent, so actual full-page PNGs were read. Source rendered at scale8. User pages18/35/222 rotated -90 degrees; user page163 rotated +90 degrees. No PDF or OCR snapshot edited.",
+    "source_pdf": "/Users/huang/Documents/ChatGPT/ai for study项目的改进/AIforStudy-完整程序-20261021/data/raw/复变函数.pdf",
+    "user_pdf": "/Users/huang/Library/Containers/com.tencent.xinWeChat/Data/Documents/xwechat_files/wxid_ikxhqlq1c35k12_7d9f/msg/file/2026-08/复变函数.pdf",
+    "evidence": [
+      {
+        "edition": "source",
+        "pdf_page_1based": 25,
+        "printed_page": 16,
+        "image": "data/study-revision-20261029/wholebook/display-evidence/source-pdf-025-print-016.png",
+        "sha256": "bb03c60868a84e00c72a61d5e030b69579a64b3cea07bd9f9d199541f23c95b0",
+        "visually_read": true
+      },
+      {
+        "edition": "user",
+        "pdf_page_1based": 18,
+        "printed_page": 16,
+        "image": "data/study-revision-20261029/wholebook/display-evidence/user-pdf-018-print-016-upright.png",
+        "sha256": "3387c273ff869bdca07327ec2bcc434ef863e800197bfde5a9f45132c70ccf22",
+        "visually_read": true
+      },
+      {
+        "edition": "source",
+        "pdf_page_1based": 42,
+        "printed_page": 33,
+        "image": "data/study-revision-20261029/wholebook/display-evidence/source-pdf-042-print-033.png",
+        "sha256": "a2b473f3ee19ee85f90501a83da22af654491adf4d5eb33cef6bc2a2d0fd1789",
+        "visually_read": true
+      },
+      {
+        "edition": "user",
+        "pdf_page_1based": 35,
+        "printed_page": 33,
+        "image": "data/study-revision-20261029/wholebook/display-evidence/user-pdf-035-print-033-upright.png",
+        "sha256": "19b473376a35f05583d864543cc723964c3787bb51624e3f284e43818248f798",
+        "visually_read": true
+      },
+      {
+        "edition": "source",
+        "pdf_page_1based": 229,
+        "printed_page": 220,
+        "image": "data/study-revision-20261029/wholebook/display-evidence/source-pdf-229-print-220.png",
+        "sha256": "1498c5b1d14bda8ca1d0d86dac6755c831a275aa09ef327b4acedcd612a68a6b",
+        "visually_read": true
+      },
+      {
+        "edition": "user",
+        "pdf_page_1based": 222,
+        "printed_page": 220,
+        "image": "data/study-revision-20261029/wholebook/display-evidence/user-pdf-222-print-220-upright.png",
+        "sha256": "9cb897762ef5d157582006000a30c12c7cbdd95e504026078b463d006f8a5b22",
+        "visually_read": true
+      },
+      {
+        "edition": "source",
+        "pdf_page_1based": 170,
+        "printed_page": 161,
+        "image": "data/study-revision-20261029/wholebook/display-evidence/source-pdf-170-print-161.png",
+        "sha256": "ed04a69dbd353f049ab84ffff99eb5a8f58359ba6e56f017c9b555618d5b301f",
+        "visually_read": true
+      },
+      {
+        "edition": "user",
+        "pdf_page_1based": 163,
+        "printed_page": 161,
+        "image": "data/study-revision-20261029/wholebook/display-evidence/user-pdf-163-print-161-upright.png",
+        "sha256": "bd5ef8a840908ff122aaf94417cc9b0827585a7b454b34c698d05b8e5742e3c2",
+        "visually_read": true
+      }
+    ],
+    "confirmed_symbols": [
+      "印刷16页上界pi，非n",
+      "印刷33页辐角增量alpha，非起点a",
+      "印刷33页Delta下标l，非z/i",
+      "印刷220页两组左大括号分行，末尾句点而无右闭括号"
+    ]
+  },
+  "printed_source_cautions": [
+    {
+      "printed_page": 16,
+      "source_pdf_page": 25,
+      "user_pdf_page": 18,
+      "item": "纸面上半圆先写|z|<1,Imz>0，括号简写“也可表为0<argz<pi”。",
+      "handling": "原书括号只在上下文中替换辐角条件；显示投影保持原书，不猜补一个不同原句。默认正文已完整定义区域。"
+    },
+    {
+      "printed_page": 220,
+      "source_pdf_page": 229,
+      "user_pdf_page": 222,
+      "item": "纸面第23题指数段连续印了两个相同的exp{sqrt2[ln2+i(2k+1)pi]}，两版相同。",
+      "handling": "按纸面保留重复，不凭数学推测删项或重排。这是已确认印刷内容而非未核OCR。"
+    }
+  ],
+  "joukowski_addendum": {
+    "unit_id": "CH08-S04-SS03",
+    "source_lines": [
+      21,
+      22
+    ],
+    "source_before_after_sha256_equal": "a44801ee6579db2c203e7fd106e283678c38baaa1a36a90a0503d5a82192770a",
+    "confirmed_four_angles": [
+      "\\varphi",
+      "\\pi-\\varphi",
+      "\\varphi-\\pi",
+      "-\\varphi"
+    ],
+    "corrected_hyperbola_label": "H_{\\varphi}",
+    "corrected_vertical_coordinate": "v",
+    "raw_snapshot_untouched": true,
+    "scope": "只追加两条唯一原文显示投影及两张扫描页证据；不改脚注①或题号Ⅲ，不修改默认正文。",
+    "paper_endpoint_note": "纸面写0<=r<1；默认重讲正文已区分有限去心域与0映无穷远，原文显示投影不擅改纸面端点。"
+  },
+  "previous_fullbook_projection_verification_before_joukowski_addendum": {
+    "mode": "Synthetic deep-cloned display projection; original source snapshot and files preserved",
+    "units": 76,
+    "canonical_replacements": 6,
+    "support_fields": 4,
+    "catalog_entries": 76,
+    "new_math_spans_strict_katex_pass": 99,
+    "diagnostic_quoted_a_preserved": true,
+    "rendered_math": 42720,
+    "katex_errors": 0,
+    "bare_candidates": 0,
+    "remaining_rows": []
+  },
+  "targeted_joukowski_verification": {
+    "status": "pass",
+    "scope": "Only newly added Joukowski display corrections",
+    "unique_old_matches": [
+      1,
+      1
+    ],
+    "new_math_spans_strict_katex": 17,
+    "actual_render_errors": 0,
+    "female_symbol_removed": true,
+    "four_printed_rays_rendered": true,
+    "four_angle_numeric_check": {
+      "r": 0.5,
+      "phi": 0.5235987755982988,
+      "values": [
+        {
+          "angle": 0.5235987755982988,
+          "image": [
+            1.0825317547305484,
+            -0.37499999999999994
+          ],
+          "hyperbola_value": 1
+        },
+        {
+          "angle": 2.6179938779914944,
+          "image": [
+            -1.0825317547305484,
+            -0.37499999999999994
+          ],
+          "hyperbola_value": 1
+        },
+        {
+          "angle": -2.6179938779914944,
+          "image": [
+            -1.0825317547305484,
+            0.37499999999999994
+          ],
+          "hyperbola_value": 1
+        },
+        {
+          "angle": -0.5235987755982988,
+          "image": [
+            1.0825317547305484,
+            0.37499999999999994
+          ],
+          "hyperbola_value": 1
+        }
+      ]
+    },
+    "raw_snapshot_unchanged": true,
+    "idempotent": true
+  }
+}

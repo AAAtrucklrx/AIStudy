@@ -1,0 +1,21 @@
+—— CH09 回路开始（run 2026-10-03 08:42:57）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 0, '教案问题明细': [], '教案提醒': 1, 'audit_error': ''}
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [4] 条 → 并集 2 条工单
+    T-9cb250 [P1] hits=1 「解完以后再换回原来的变量，就得到原问题的答案。」
+    T-a46bca [P1] hits=1 「拿一个函数去乘另一个固定的函数，再做积分，得到一个新函数。」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH09.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH09.feedback.json --temperature 0.0 --seed 42
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 2 / 仍开着 0；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 0 条
+  ✓ 验收：重新独立发现没有 P0
+── 卡在哪（这一趟）──────────────────────────────
+   · 没有卡住：工单全部关闭、验收无 P0
+
+结论：通过（工单全部关闭，且没有新的 P0）
+记录写到 data/audit/complex-analysis-v2/CH09.loop.json

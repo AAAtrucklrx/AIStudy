@@ -1,0 +1,1221 @@
+{
+  "schema_version": "WholeBookAuthorReviewV1",
+  "scope": "CH01-CH03",
+  "units": {
+    "CH01": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch01.md",
+      "source_sha256": "46a81a9284a0ab919f250db02707a71bec0db89e95823d752bb36f6fa1c5e46d",
+      "source_read": "已逐节通读对应教材原文及原lesson，定义、定理、例题结果与习题可复用知识交叉核对。",
+      "main_ids": [],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [],
+      "understanding_bridges": [
+        "数、点、向量三种表示的对应；单点运算到点列和区域的过渡。"
+      ],
+      "media_review": [],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 0,
+        "supplement_count": 0
+      }
+    },
+    "CH01-S01-SS01": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch01_s01_ss01.md",
+      "source_sha256": "1a282e5d8f6c0a238b2d69efc68ca6e84876392165d1193c4cd36aae8fc2fdf6",
+      "source_read": "已逐节通读对应教材原文及原lesson，定义、定理、例题结果与习题可复用知识交叉核对。",
+      "main_ids": [
+        "CH01-S01-SS01-C001",
+        "CH01-S01-SS01-C002",
+        "CH01-S01-SS01-C003",
+        "CH01-S01-SS01-C004",
+        "CH01-S01-SS01-C005",
+        "CH01-S01-SS01-C006",
+        "CH01-S01-SS01-C007",
+        "CH01-S01-SS01-C008"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH01-S01-SS01-C001",
+        "CH01-S01-SS01-C002",
+        "CH01-S01-SS01-C003",
+        "CH01-S01-SS01-C004",
+        "CH01-S01-SS01-C005",
+        "CH01-S01-SS01-C006",
+        "CH01-S01-SS01-C007",
+        "CH01-S01-SS01-C008"
+      ],
+      "understanding_bridges": [
+        "虚部是实数而非虚数项；平方和使非零分母有正实模；零乘积性质与约分条件。"
+      ],
+      "media_review": [
+        {
+          "id": "CH01-division",
+          "assessment": "复用现有request_id与四步叙述；正文只要求核对同乘共轭及交叉项相消。",
+          "limits": "当前只静态核对配置和现有媒体登记，未逐帧播放视频。"
+        }
+      ],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 8,
+        "supplement_count": 0
+      }
+    },
+    "CH01-S01-SS02": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch01_s01_ss02.md",
+      "source_sha256": "1ffc933c252c38eaa6f1a94a36c8fcc121df135e7f97433fbf076f99f4b9dae3",
+      "source_read": "已读对应原文及指定有效draft；以draft正文和知识绑定为基础精修。",
+      "main_ids": [
+        "CH01-S01-SS02-C001",
+        "CH01-S01-SS02-C002",
+        "CH01-S01-SS02-C003",
+        "CH01-S01-SS02-C004",
+        "CH01-S01-SS02-C005",
+        "CH01-S01-SS02-C006"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH01-S01-SS02-C001",
+        "CH01-S01-SS02-C002",
+        "CH01-S01-SS02-C003",
+        "CH01-S01-SS02-C004",
+        "CH01-S01-SS02-C005",
+        "CH01-S01-SS02-C006"
+      ],
+      "understanding_bridges": [
+        "共轭镜像到代数提取、分式实数判别的定义域与非零虚部条件、实系数保证共轭根。"
+      ],
+      "media_review": [
+        {
+          "id": "conjugate-mirror",
+          "kind": "conjugate",
+          "assessment": "已核对study-text-led-figures.js支持此kind及参数；复用指定现有图，正文限定在坐标、长度、角度与终点关系。",
+          "limits": "图为具体有限参数示意，不能充当任意复数的证明；乘法动画中间帧只用于展开变化。"
+        }
+      ],
+      "pending_checks": [
+        "未在浏览器逐个操作；窄列布局、所有参数极值时的文字/坐标遮挡须由主线程集成后检查。"
+      ],
+      "source_corrections": [
+        "数学知识完整性审核与独立可理解性审核分开完成；六个现有结论ID均由默认可见的完整正文段落覆盖。公式只在讲解处出现，不另复制为结论卡。",
+        "数学知识完整性：C001的和差关系通过等价的实虚部提取公式及紧邻的抵消解释覆盖；与C002共享同一正文段落，避免重复列式。",
+        "独立可理解性：开头复述x+iy、实部与虚部的含义并定义共轭；图前给出读图任务，图后返回代数解释；模在使用处以平方和与距离再次解释，未借用辐角等后续术语。",
+        "图只呈现实轴镜像中的静态对象关系，参数可变用于比较坐标和距离，不要求动画或三维旋转。前台仅使用title、caption及正文；purpose等字段供后台校验。",
+        "原文第4行的第一次共轭被漏排，已使用二次共轭还原性质；第7行商式左侧转写错误，已恢复整个商的共轭并补分母非零。",
+        "原文第11行y≠±i与y为实数不符，按原分母非零订正为z≠±i，同时保留y≠0。",
+        "原文第24行例3虚部分母错排，依第22行统一为(1-x)^2+y^2；例4、例5原证明中的共轭错排不带入新正文。",
+        "保留例2—5的现有reader锚点；定义、性质、适用条件和可复用结果不依赖展开，完整证明及演算留在对应reader内容中。"
+      ],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 6,
+        "supplement_count": 0
+      }
+    },
+    "CH01-S01-SS03": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch01_s01_ss03.md",
+      "source_sha256": "7160b974330e5af9643a4b88582f4bd1cdef3ff6aa6a69fc75fd7694842a2bcc",
+      "source_read": "已读对应原文及指定有效draft；以draft正文和知识绑定为基础精修。",
+      "main_ids": [
+        "CH01-S01-SS03-C001",
+        "CH01-S01-SS03-C002",
+        "CH01-S01-SS03-C003",
+        "CH01-S01-SS03-C004",
+        "CH01-S01-SS03-C005",
+        "CH01-S01-SS03-C006",
+        "CH01-S01-SS03-C007",
+        "CH01-S01-SS03-C008",
+        "CH01-S01-SS03-C009",
+        "CH01-S01-SS03-C010",
+        "CH01-S01-SS03-C011",
+        "CH01-S01-SS03-C012"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH01-S01-SS03-C001",
+        "CH01-S01-SS03-C002",
+        "CH01-S01-SS03-C003",
+        "CH01-S01-SS03-C004",
+        "CH01-S01-SS03-C005",
+        "CH01-S01-SS03-C006",
+        "CH01-S01-SS03-C007",
+        "CH01-S01-SS03-C008",
+        "CH01-S01-SS03-C009",
+        "CH01-S01-SS03-C010",
+        "CH01-S01-SS03-C011",
+        "CH01-S01-SS03-C012"
+      ],
+      "understanding_bridges": [
+        "投影到模与辐角、三角式到乘法旋转伸缩、差向量到距离、一般圆方程的三类退化结果。"
+      ],
+      "media_review": [
+        {
+          "id": "geometry-polar",
+          "kind": "polar",
+          "assessment": "已核对study-text-led-figures.js支持此kind及参数；复用指定现有图，正文限定在坐标、长度、角度与终点关系。",
+          "limits": "图为具体有限参数示意，不能充当任意复数的证明；乘法动画中间帧只用于展开变化。"
+        },
+        {
+          "id": "geometry-vectors",
+          "kind": "vectors",
+          "assessment": "已核对study-text-led-figures.js支持此kind及参数；复用指定现有图，正文限定在坐标、长度、角度与终点关系。",
+          "limits": "图为具体有限参数示意，不能充当任意复数的证明；乘法动画中间帧只用于展开变化。"
+        },
+        {
+          "id": "geometry-distance",
+          "kind": "distance",
+          "assessment": "已核对study-text-led-figures.js支持此kind及参数；复用指定现有图，正文限定在坐标、长度、角度与终点关系。",
+          "limits": "图为具体有限参数示意，不能充当任意复数的证明；乘法动画中间帧只用于展开变化。"
+        },
+        {
+          "id": "geometry-multiply",
+          "kind": "multiplication",
+          "assessment": "已核对study-text-led-figures.js支持此kind及参数；复用指定现有图，正文限定在坐标、长度、角度与终点关系。",
+          "limits": "图为具体有限参数示意，不能充当任意复数的证明；乘法动画中间帧只用于展开变化。 当前包装层未暴露一般模/角控件，正文已改为预设对比；若后续需要连续调参，须增加setPolar对应控件。"
+        }
+      ],
+      "pending_checks": [
+        "未在浏览器逐个操作；窄列布局、所有参数极值时的文字/坐标遮挡须由主线程集成后检查。"
+      ],
+      "source_corrections": [
+        "计划以presentation:text-led-figure呈现。四图均嵌在推导所需位置，作者purpose/action/observation/conclusion仅作校验元数据。",
+        "正文不重写正式证明；原文三角不等式代数证与例6—8完整推演继续由现有折叠教材/reader保留，三个reader锚点未改。",
+        "按数学含义订正OCR：欧拉例中的m/n→π，旋转因子e^θ→e^{iθ}、i=e^{iπ/2}，配方首项应为z共轭z，模不等式中乱码幂号删除。",
+        "主值边界、零复数以及第三/第四组等号条件均显式说明；一般圆半径分母写|A|。",
+        "乘法图须复用examples/text-led-multiplication/multiplication.js；动画输入为1+i，i/2/2i对照用于解释一般规则，没有替代本节其他知识。"
+      ],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 12,
+        "supplement_count": 0
+      }
+    },
+    "CH01-S01-SS04": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch01_s01_ss04.md",
+      "source_sha256": "a57b94415de32cb565999efc0d1a6ea2856fe49eff870677371de9207ebde999",
+      "source_read": "已逐节通读对应教材原文及原lesson，定义、定理、例题结果与习题可复用知识交叉核对。",
+      "main_ids": [
+        "CH01-S01-SS04-C001",
+        "CH01-S01-SS04-C002",
+        "CH01-S01-SS04-C003",
+        "CH01-S01-SS04-C004"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH01-S01-SS04-C001",
+        "CH01-S01-SS04-C002",
+        "CH01-S01-SS04-C003",
+        "CH01-S01-SS04-C004"
+      ],
+      "understanding_bridges": [
+        "保留整圈后除角避免漏根；根的个数与周期、正多边形和共同幂值相互检查。"
+      ],
+      "media_review": [
+        {
+          "id": "CH01-roots",
+          "assessment": "已核对foundation-roots实现包含2至12次根、模与角控制、共同幂像。",
+          "limits": "仅演示非零被开方数，零的退化情况由正文讲清。"
+        }
+      ],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 4,
+        "supplement_count": 0
+      }
+    },
+    "CH01-S01-SS05": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch01_s01_ss05.md",
+      "source_sha256": "774df9ed570df6bee9baf4675c3c990511d829342b5c7ac84ef43ab2bc64d3a2",
+      "source_read": "已逐节通读对应教材原文及原lesson，定义、定理、例题结果与习题可复用知识交叉核对。",
+      "main_ids": [
+        "CH01-S01-SS05-C001",
+        "CH01-S01-SS05-C002",
+        "CH01-S01-SS05-C003",
+        "CH01-S01-SS05-C004",
+        "CH01-S01-SS05-C005",
+        "CH01-S01-SS05-C006",
+        "CH01-S01-SS05-C007",
+        "CH01-S01-SS05-C008"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH01-S01-SS05-C001",
+        "CH01-S01-SS05-C002",
+        "CH01-S01-SS05-C003",
+        "CH01-S01-SS05-C004",
+        "CH01-S01-SS05-C005",
+        "CH01-S01-SS05-C006",
+        "CH01-S01-SS05-C007",
+        "CH01-S01-SS05-C008"
+      ],
+      "understanding_bridges": [
+        "每个精度对应一个尾部序号；主值跳跃不等于平面点不收敛；投影纬圆半径2对应赤道而非半径1。"
+      ],
+      "media_review": [
+        {
+          "id": "CH01-sequence",
+          "assessment": "foundation-sequence确实显示前80项、可选序号、精度圆盘和尾部阈值。",
+          "limits": "有限显示只检验示例，全部尾项由明确距离公式保证；现有图不显示黎曼球面。"
+        }
+      ],
+      "pending_checks": [
+        "球极投影目前仅以公式与文字解释，现有序列图不提供球面联动，不能声称已由该图演示。"
+      ],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 8,
+        "supplement_count": 0
+      }
+    },
+    "CH01-S02-SS01": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch01_s02_ss01.md",
+      "source_sha256": "ef46c1cc04f1ece3c212fe9301a28847d782fd365069992a98014474a4944f0b",
+      "source_read": "已逐节通读对应教材原文及原lesson，定义、定理、例题结果与习题可复用知识交叉核对。",
+      "main_ids": [
+        "CH01-S02-SS01-C001",
+        "CH01-S02-SS01-C002",
+        "CH01-S02-SS01-C003"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH01-S02-SS01-C001",
+        "CH01-S02-SS01-C002",
+        "CH01-S02-SS01-C003"
+      ],
+      "understanding_bridges": [
+        "存在邻域与任意邻域的量词差别；边界归属与开闭区分；有界性是全局统一界。"
+      ],
+      "media_review": [
+        {
+          "id": "CH01-neighborhood-types",
+          "assessment": "复用现有request_id；正文与内外边界三类邻域判别一致。",
+          "limits": "未逐帧验证；视频若只演示某固定半径，不能单独支持任意小邻域的判别。"
+        }
+      ],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 3,
+        "supplement_count": 0
+      }
+    },
+    "CH01-S02-SS02": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch01_s02_ss02.md",
+      "source_sha256": "7fd08b955b349933c05872a4ef32c52bd3794b8b38624db9b5e0c39fb90d0037",
+      "source_read": "已逐节通读对应教材原文及原lesson，定义、定理、例题结果与习题可复用知识交叉核对。",
+      "main_ids": [
+        "CH01-S02-SS02-C001",
+        "CH01-S02-SS02-C002",
+        "CH01-S02-SS02-C003",
+        "CH01-S02-SS02-C004"
+      ],
+      "supplement_ids": [
+        "CH01-S02-SS02-C005",
+        "CH01-S02-SS02-C006",
+        "CH01-S02-SS02-C007",
+        "CH01-S02-SS02-C008",
+        "CH01-S02-SS02-C009",
+        "CH01-S02-SS02-C010",
+        "CH01-S02-SS02-C011",
+        "CH01-S02-SS02-C012",
+        "CH01-S02-SS02-C013"
+      ],
+      "knowledge_coverage_ids": [
+        "CH01-S02-SS02-C001",
+        "CH01-S02-SS02-C002",
+        "CH01-S02-SS02-C003",
+        "CH01-S02-SS02-C004",
+        "CH01-S02-SS02-C005",
+        "CH01-S02-SS02-C006",
+        "CH01-S02-SS02-C007",
+        "CH01-S02-SS02-C008",
+        "CH01-S02-SS02-C009",
+        "CH01-S02-SS02-C010",
+        "CH01-S02-SS02-C011",
+        "CH01-S02-SS02-C012",
+        "CH01-S02-SS02-C013"
+      ],
+      "understanding_bridges": [
+        "区域的两条件分别承担局部活动与整体连通；简单闭曲线使内部有确定含义；补充习题把模、共轭、差角变成可复用判别。"
+      ],
+      "media_review": [
+        {
+          "id": "CH01-curves",
+          "assessment": "现有curve模型含圆与八字形模式；只用于连续、闭合及自交判别。",
+          "limits": "不把一条八字曲线的显示当作任意曲线内外分解定理的证明；补充代数结论暂无专属图。"
+        }
+      ],
+      "pending_checks": [
+        "习题7原OCR漏共轭；按已核PDF订正分母为1-共轭a乘z，源元数据原样保留。"
+      ],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 4,
+        "supplement_count": 9
+      },
+      "additional_knowledge_audit": [
+        {
+          "id": "CH01-EX04-ROOT-COMPONENTS",
+          "title": "章末习题的可复用知识",
+          "source_path": "original_text/ch01_s02_ss02.md",
+          "source_line_range": [
+            25,
+            25
+          ],
+          "excerpts": [
+            "章末习题还提供不靠辐角求平方根的办法。若 $a,b\\in\\mathbb R$、$x+iy$ 的平方等于 $a+bi$，记 $r=\\sqrt{a^2+b^2}$，则\n$$x^2=\\frac{r+a}{2},\\qquad y^2=\\frac{r-a}{2},\\qquad xy=\\frac b2.$$\n先从前两式求分量的绝对值，再用第三式配对符号；非零被开方数得到互为相反数的两个根，零只给零。$b=0$ 时仍须保留符号配对：$a>0$ 的根在实轴，$a<0$ 的根在虚轴，不能因虚部为零就遗漏负实数的平方根。"
+          ]
+        }
+      ]
+    },
+    "CH02": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch02.md",
+      "source_sha256": "b59d752e0faf26e7b8dbbb124c6788cef3094fe5c1f661e0a9d5793dcfb3c167",
+      "source_read": "已逐节通读教材原文与原lesson，交叉核对全部结论。",
+      "main_ids": [],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [],
+      "understanding_bridges": [
+        "从位置对应到局部变化，再到多值反解的连续选择。"
+      ],
+      "media_review": [],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 0,
+        "supplement_count": 0
+      }
+    },
+    "CH02-S01": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch02_s01.md",
+      "source_sha256": "7230a836ff70984c8ed91007708b8d165fa25ff5987d01ab1a9dde6d74509a75",
+      "source_read": "已逐节通读教材原文与原lesson，交叉核对全部结论。",
+      "main_ids": [
+        "CH02-S01-C001",
+        "CH02-S01-C002",
+        "CH02-S01-C003",
+        "CH02-S01-C004",
+        "CH02-S01-C005",
+        "CH02-S01-C006"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH02-S01-C001",
+        "CH02-S01-C002",
+        "CH02-S01-C003",
+        "CH02-S01-C004",
+        "CH02-S01-C005",
+        "CH02-S01-C006"
+      ],
+      "understanding_bridges": [
+        "两个实坐标共同决定像点；单值与一一按不同方向提问；曲线消参后仍须保留范围。"
+      ],
+      "media_review": [
+        {
+          "id": "CH02-injective",
+          "assessment": "foundation-injective实现确含全平面/右半平面开关和相反原像的共同平方值。",
+          "limits": "不声称此图绘制两族抛物线与全部双曲线；这些像集由正文公式讲解。"
+        }
+      ],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 6,
+        "supplement_count": 0
+      }
+    },
+    "CH02-S02": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch02_s02.md",
+      "source_sha256": "a909d3e7524f8fb02941d102d08396f78e51135f1fabe654a971030d3da3c3b4",
+      "source_read": "已逐节通读教材原文与原lesson，交叉核对全部结论。",
+      "main_ids": [
+        "CH02-S02-C001",
+        "CH02-S02-C002",
+        "CH02-S02-C003",
+        "CH02-S02-C004"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH02-S02-C001",
+        "CH02-S02-C002",
+        "CH02-S02-C003",
+        "CH02-S02-C004"
+      ],
+      "understanding_bridges": [
+        "一个输入圆盘统一控制所有趋近方式；极限与补值分离；切口跳跃的来源。"
+      ],
+      "media_review": [
+        {
+          "id": "CH02-limits",
+          "assessment": "现有模型可切换两个明确函数、距离和方向；配合正文的统一模估计与两路反例。",
+          "limits": "有限射线图像不作为充分证明。"
+        }
+      ],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 4,
+        "supplement_count": 0
+      }
+    },
+    "CH02-S03": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch02_s03.md",
+      "source_sha256": "a0b527429bc2c75a2957de6162f3e8dea1bcdb4cb75663d3f8d4bd7aedb46a71",
+      "source_read": "已逐节通读教材原文与原lesson，交叉核对全部结论。",
+      "main_ids": [
+        "CH02-S03-C001",
+        "CH02-S03-C002",
+        "CH02-S03-C003",
+        "CH02-S03-C004",
+        "CH02-S03-C005",
+        "CH02-S03-C006",
+        "CH02-S03-C007"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH02-S03-C001",
+        "CH02-S03-C002",
+        "CH02-S03-C003",
+        "CH02-S03-C004",
+        "CH02-S03-C005",
+        "CH02-S03-C006",
+        "CH02-S03-C007"
+      ],
+      "understanding_bridges": [
+        "误差相对输入趋零解释一阶近似；点可微与邻域解析分清；反函数局部反支条件。"
+      ],
+      "media_review": [
+        {
+          "id": "CH02-derivative",
+          "assessment": "derivative场景是平方函数真实像和一阶像的比较，可调邻域大小。",
+          "limits": "只显示此函数，不能用图替所有方向的极限要求。"
+        }
+      ],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 7,
+        "supplement_count": 0
+      }
+    },
+    "CH02-S04": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch02_s04.md",
+      "source_sha256": "c5d7db7725769ab4b225d1f2f3b963a02326c08b91aed9568761b9bc8dbdbe70",
+      "source_read": "已逐节通读教材原文与原lesson，交叉核对全部结论。",
+      "main_ids": [
+        "CH02-S04-C001",
+        "CH02-S04-C002",
+        "CH02-S04-C003",
+        "CH02-S04-C004",
+        "CH02-S04-C005",
+        "CH02-S04-C006"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH02-S04-C001",
+        "CH02-S04-C002",
+        "CH02-S04-C003",
+        "CH02-S04-C004",
+        "CH02-S04-C005",
+        "CH02-S04-C006"
+      ],
+      "understanding_bridges": [
+        "两方向候选导数到统一乘法；偏导连续只是实可微的保证；原点偶然可微不等于解析。"
+      ],
+      "media_review": [
+        {
+          "id": "CH02-cr",
+          "assessment": "foundation-cr控制系数和正的非零检验坐标，确实展示两方向候选导数。",
+          "limits": "图的检验坐标不取原点；原点特例由正文另讲，不宣称模型能完整遍历全部点。"
+        }
+      ],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 6,
+        "supplement_count": 0
+      }
+    },
+    "CH02-S05": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch02_s05.md",
+      "source_sha256": "d74508ec00306dfdb49a46e8ff8d19c06d5e7f90c9be19899dbbf61d35cc4b7b",
+      "source_read": "已逐节通读教材原文与原lesson，交叉核对全部结论。",
+      "main_ids": [
+        "CH02-S05-C001"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH02-S05-C001"
+      ],
+      "understanding_bridges": [
+        "解析与一一各有独立条件；限制原定义域使逆关系成为连贯单值函数。"
+      ],
+      "media_review": [],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 1,
+        "supplement_count": 0
+      }
+    },
+    "CH02-S05-SS01": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch02_s05_ss01.md",
+      "source_sha256": "1e7fecfe8062e84bde556cb70dcf6112c256a59021b60436748e2f9f5d3aa70b",
+      "source_read": "已逐节通读教材原文与原lesson，交叉核对全部结论。",
+      "main_ids": [
+        "CH02-S05-SS01-C001",
+        "CH02-S05-SS01-C002",
+        "CH02-S05-SS01-C003",
+        "CH02-S05-SS01-C004",
+        "CH02-S05-SS01-C005"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH02-S05-SS01-C001",
+        "CH02-S05-SS01-C002",
+        "CH02-S05-SS01-C003",
+        "CH02-S05-SS01-C004",
+        "CH02-S05-SS01-C005"
+      ],
+      "understanding_bridges": [
+        "同像充要条件到角域限制；两岸分别来自不同边界；标准角域选择与根的分支对应。"
+      ],
+      "media_review": [
+        {
+          "id": "CH02-power",
+          "assessment": "power映照模型支持次数、网格范围与标记点角度。",
+          "limits": "模型显示有限网格，单叶角域的充要条件由正文同像判别支撑，不能靠网格数覆盖次数。"
+        }
+      ],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 5,
+        "supplement_count": 0
+      }
+    },
+    "CH02-S05-SS02": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch02_s05_ss02.md",
+      "source_sha256": "44dfd88ba66c18aeae84adc84737d426c83bd3a6ecc16582b78f4eae06ba7071",
+      "source_read": "已逐节通读教材原文与原lesson，交叉核对全部结论。",
+      "main_ids": [
+        "CH02-S05-SS02-C001",
+        "CH02-S05-SS02-C002",
+        "CH02-S05-SS02-C003",
+        "CH02-S05-SS02-C004",
+        "CH02-S05-SS02-C005",
+        "CH02-S05-SS02-C006",
+        "CH02-S05-SS02-C007"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH02-S05-SS02-C001",
+        "CH02-S05-SS02-C002",
+        "CH02-S05-SS02-C003",
+        "CH02-S05-SS02-C004",
+        "CH02-S05-SS02-C005",
+        "CH02-S05-SS02-C006",
+        "CH02-S05-SS02-C007"
+      ],
+      "understanding_bridges": [
+        "连续追角与主值区间分开；支点由绕行后的值判断；同一分支贯穿求值与求导；两个有限支点的总换值抵消。"
+      ],
+      "media_review": [
+        {
+          "id": "CH02-root-branch",
+          "assessment": "sqrt场景为负实轴切口的主值平方根，网格按切口分开。",
+          "limits": "仅用于平方根两岸；不声称图演示立方根绕三周、任意切口或sqrt(z²-a²)的两支。"
+        }
+      ],
+      "pending_checks": [
+        "原教材在复合根式二阶导数数值处存在转写混乱；正文按同一分支的f二阶=-a²/f³给出可核数值，源原文保留。"
+      ],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 7,
+        "supplement_count": 0
+      },
+      "example_result_audit": [
+        {
+          "source_lines": [
+            53,
+            60
+          ],
+          "example": "例9：正实轴切口与w(i)=-i的立方根分支",
+          "default_visible_results": [
+            "w(-i)=(√3-i)/2",
+            "w′(-i)=(1+i√3)/6"
+          ],
+          "covered_by": "CH02-S05-SS02-C005"
+        },
+        {
+          "source_lines": [
+            75,
+            87
+          ],
+          "example": "sqrt(z²-a²)上岸负虚值分支",
+          "default_visible_results": [
+            "f(2a)=-√3a",
+            "f′(2a)=-2/√3",
+            "f″(2a)=1/(3√3a)"
+          ],
+          "covered_by": "CH02-S05-SS02-C007",
+          "condition": "a>0，线段[-a,a]为切口，该支在切口上岸取负虚值。"
+        }
+      ]
+    },
+    "CH02-S05-SS03": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch02_s05_ss03.md",
+      "source_sha256": "9366e89d316344f45e317c1c490d8d2cc1bd65f7b380fc8388a6ecce311520fd",
+      "source_read": "已逐节通读教材原文与原lesson，交叉核对全部结论。",
+      "main_ids": [
+        "CH02-S05-SS03-C001",
+        "CH02-S05-SS03-C002",
+        "CH02-S05-SS03-C003",
+        "CH02-S05-SS03-C004"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH02-S05-SS03-C001",
+        "CH02-S05-SS03-C002",
+        "CH02-S05-SS03-C003",
+        "CH02-S05-SS03-C004"
+      ],
+      "understanding_bridges": [
+        "实部控制模、虚部控制方向；周期造成同像；水平带限制让逆关系可单值。"
+      ],
+      "media_review": [
+        {
+          "id": "CH02-exp",
+          "assessment": "exp几何模型已修正：phase控件直接作为输入虚部，输入点与指数像同步；extent控制输入实部范围。",
+          "limits": "有限网格展示射线与圆弧，周期仍由任意输入成立的指数等式支撑；滑块步进不用于证明精确2π周期。"
+        }
+      ],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 4,
+        "supplement_count": 0
+      }
+    },
+    "CH02-S05-SS04": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch02_s05_ss04.md",
+      "source_sha256": "1762f979ebb53ef98f6923c5de330b88f3405908e8079ef195724ae945ac6a5d",
+      "source_read": "已逐节通读教材原文与原lesson，交叉核对全部结论。",
+      "main_ids": [
+        "CH02-S05-SS04-C001",
+        "CH02-S05-SS04-C002",
+        "CH02-S05-SS04-C003",
+        "CH02-S05-SS04-C004",
+        "CH02-S05-SS04-C005"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH02-S05-SS04-C001",
+        "CH02-S05-SS04-C002",
+        "CH02-S05-SS04-C003",
+        "CH02-S05-SS04-C004",
+        "CH02-S05-SS04-C005"
+      ],
+      "understanding_bridges": [
+        "反解指数的模和角分别恢复输入；全部值法则与主值法则分清；切口、角区间、像带成套变化。"
+      ],
+      "media_review": [
+        {
+          "id": "CH02-log-branch",
+          "assessment": "foundation-branch确有支割射线角、两岸采样角距和模控制，像的虚部跳跃可核。",
+          "limits": "只示一支并随切口调整；无穷多个支通过整数常数解释。"
+        }
+      ],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 5,
+        "supplement_count": 0
+      }
+    },
+    "CH02-S05-SS05": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch02_s05_ss05.md",
+      "source_sha256": "0385a9981ee708237256cdeea6082311681c38adb2474bf68377d5d400592b64",
+      "source_read": "已逐节通读教材原文与原lesson，交叉核对全部结论。",
+      "main_ids": [
+        "CH02-S05-SS05-C001",
+        "CH02-S05-SS05-C002",
+        "CH02-S05-SS05-C003",
+        "CH02-S05-SS05-C004",
+        "CH02-S05-SS05-C005"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH02-S05-SS05-C001",
+        "CH02-S05-SS05-C002",
+        "CH02-S05-SS05-C003",
+        "CH02-S05-SS05-C004",
+        "CH02-S05-SS05-C005"
+      ],
+      "understanding_bridges": [
+        "指数定义把解析性与求导法则带入；恒等式是复数相消而非长度平方；一条无界截面即可否定全域有界。"
+      ],
+      "media_review": [
+        {
+          "id": "CH02-trig-identity",
+          "assessment": "trig-identity确绘制cos²和sin²的首尾向量及固定和。",
+          "limits": "可调输入范围有限，不能展示趋无穷的全部过程；无界性由正文指数公式建立。"
+        }
+      ],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 5,
+        "supplement_count": 0
+      },
+      "additional_knowledge_audit": [
+        {
+          "id": "CH02-EX21-22-TRIG-COMPONENTS",
+          "title": "章末习题的可复用知识",
+          "source_path": "original_text/ch02_s05_ss08.md",
+          "source_line_range": [
+            62,
+            63
+          ],
+          "excerpts": [
+            "分离输出坐标时，指数定义给出\n$$\\begin{aligned}\n\\sin(x+iy)&=\\sin x\\cosh y+i\\cos x\\sinh y,\\\\\n|\\sin(x+iy)|&=\\sqrt{\\sin^2x+\\sinh^2y},\\\\\n\\cos(x+iy)&=\\cos x\\cosh y-i\\sin x\\sinh y.\n\\end{aligned}$$\n这里 $x,y$ 都为实数，$\\cosh y=(e^y+e^{-y})/2$、$\\sinh y=(e^y-e^{-y})/2$，名称会在下一节统一研究。因而余弦取实值当且仅当 $\\sin x\\sinh y=0$，即 $y=0$ 或 $x=k\\pi$（$k\\in\\mathbb Z$）。输入有虚部并不阻止输出为实数；这些式子能直接处理章末的实虚部分离与实值轨迹习题。"
+          ]
+        }
+      ]
+    },
+    "CH02-S05-SS06": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch02_s05_ss06.md",
+      "source_sha256": "69ccb59d220cd773b42dfd1a42002ad16eb8122aec73ec35005aa9d6c0d0e156",
+      "source_read": "已逐节通读教材原文与原lesson，交叉核对全部结论。",
+      "main_ids": [
+        "CH02-S05-SS06-C001",
+        "CH02-S05-SS06-C002",
+        "CH02-S05-SS06-C003",
+        "CH02-S05-SS06-C004"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH02-S05-SS06-C001",
+        "CH02-S05-SS06-C002",
+        "CH02-S05-SS06-C003",
+        "CH02-S05-SS06-C004"
+      ],
+      "understanding_bridges": [
+        "两类指数和差的输入旋转关系；分母零点逐一对应商的排除点；实方向增长与虚方向周期共存。"
+      ],
+      "media_review": [
+        {
+          "id": "CH02-hyperbolic",
+          "assessment": "hyperbolic实现含四种模式、对应导数读数、网格和商的极点标记。",
+          "limits": "默认有限范围并不覆盖完整2πi平移，周期应由公式理解；未要求不存在的周期平移控件。"
+        }
+      ],
+      "pending_checks": [
+        "原文将tanh/coth排除点对调，正文按各自分母零点订正并保留源元数据。"
+      ],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 4,
+        "supplement_count": 0
+      }
+    },
+    "CH02-S05-SS07": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch02_s05_ss07.md",
+      "source_sha256": "5e70fd27b5eff38d27fd7eb937054326232067580652492b7927697f46821a00",
+      "source_read": "已逐节通读教材原文与原lesson，交叉核对全部结论。",
+      "main_ids": [
+        "CH02-S05-SS07-C001",
+        "CH02-S05-SS07-C002",
+        "CH02-S05-SS07-C003",
+        "CH02-S05-SS07-C004"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH02-S05-SS07-C001",
+        "CH02-S05-SS07-C002",
+        "CH02-S05-SS07-C003",
+        "CH02-S05-SS07-C004"
+      ],
+      "understanding_bridges": [
+        "额外因子统一判断单值/有限/无限值；有理指数先约分；指数记号与一般幂定义区分。"
+      ],
+      "media_review": [
+        {
+          "id": "CH02-general-power-values",
+          "assessment": "复用现有三类指数值数比较视频request_id；正文限定有限展示的含义。",
+          "limits": "未逐帧播放；非实指数改变模的情形由正文公式说明，不声称已有视频涵盖。"
+        }
+      ],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 4,
+        "supplement_count": 0
+      }
+    },
+    "CH02-S05-SS08": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch02_s05_ss08.md",
+      "source_sha256": "1cabff3340633e6a3bbec55b2d59b7289dcdeb5f34c9cda0867cffeec2e9fc01",
+      "source_read": "已逐节通读教材原文与原lesson，交叉核对全部结论。",
+      "main_ids": [
+        "CH02-S05-SS08-C001",
+        "CH02-S05-SS08-C002",
+        "CH02-S05-SS08-C003",
+        "CH02-S05-SS08-C004"
+      ],
+      "supplement_ids": [
+        "CH02-S05-SS08-C005",
+        "CH02-S05-SS08-C006",
+        "CH02-S05-SS08-C007",
+        "CH02-S05-SS08-C008",
+        "CH02-S05-SS08-C009",
+        "CH02-S05-SS08-C010"
+      ],
+      "knowledge_coverage_ids": [
+        "CH02-S05-SS08-C001",
+        "CH02-S05-SS08-C002",
+        "CH02-S05-SS08-C003",
+        "CH02-S05-SS08-C004",
+        "CH02-S05-SS08-C005",
+        "CH02-S05-SS08-C006",
+        "CH02-S05-SS08-C007",
+        "CH02-S05-SS08-C008",
+        "CH02-S05-SS08-C009",
+        "CH02-S05-SS08-C010"
+      ],
+      "understanding_bridges": [
+        "反解指数的二次方程解释根与对数两层多值；补充增长、局部比值、刚性、坐标变换分别通向积分与调和理论。"
+      ],
+      "media_review": [
+        {
+          "id": "CH02-arctan",
+          "assessment": "arctan实现使用主辐角对数表达式，非有限值和切口作断开；只是一支。",
+          "limits": "不存在其他七类反函数的联动图，正文没有声称此模型涵盖它们；极点附近有限采样未作浏览器极值检查。"
+        }
+      ],
+      "pending_checks": [
+        "章末若干纯OCR习题如“1/z处处不可导”明显缺共轭横线，但不将未核原页题目改写为结论；已提炼的通用结论不依赖此错题。"
+      ],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 4,
+        "supplement_count": 6
+      }
+    },
+    "CH03": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch03.md",
+      "source_sha256": "0eb2b9b65d4af6b0c41d7cd33cb10bdc950b0b0d37ba3ccf495984481136d724",
+      "source_read": "已逐节通读教材原文与原lesson（含章末习题），交叉核对全部结论。",
+      "main_ids": [],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [],
+      "understanding_bridges": [
+        "局部变化到全路径累积；边界读值再产生全局刚性。"
+      ],
+      "media_review": [],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 0,
+        "supplement_count": 0
+      }
+    },
+    "CH03-S01": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch03_s01.md",
+      "source_sha256": "09395897184f50999d8b46ee147845bd5165785fe29ddbe0b9816dc9f2aa11bd",
+      "source_read": "已逐节通读教材原文与原lesson（含章末习题），交叉核对全部结论。",
+      "main_ids": [
+        "CH03-S01-C001",
+        "CH03-S01-C002",
+        "CH03-S01-C003",
+        "CH03-S01-C004",
+        "CH03-S01-C005",
+        "CH03-S01-C006",
+        "CH03-S01-C007",
+        "CH03-S01-C008"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH03-S01-C001",
+        "CH03-S01-C002",
+        "CH03-S01-C003",
+        "CH03-S01-C004",
+        "CH03-S01-C005",
+        "CH03-S01-C006",
+        "CH03-S01-C007",
+        "CH03-S01-C008"
+      ],
+      "understanding_bridges": [
+        "方向进入增量积；连续即可积分但不保证路径无关；长度与奇异增长需要同时估计。"
+      ],
+      "media_review": [
+        {
+          "id": "CH03-parametrization",
+          "assessment": "沿用现有request_id与参数化解说，正文将输入替换和切向因子分别讲清。",
+          "limits": "未逐帧播放；上半圆指数估计和小圆弧极限没有独立现有视频，不宣称该视频覆盖。"
+        }
+      ],
+      "pending_checks": [
+        "原文用最大弦长表述细分可能无法排除绕回弧段，正文改用小弧段自身趋小的标准定义以避免歧义，保留源元数据。"
+      ],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 8,
+        "supplement_count": 0
+      }
+    },
+    "CH03-S02": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch03_s02.md",
+      "source_sha256": "837bafb9234bd08f1f8060cd591ab31f62288648370124e3734fddb872fa0899",
+      "source_read": "已逐节通读教材原文与原lesson（含章末习题），交叉核对全部结论。",
+      "main_ids": [
+        "CH03-S02-C001",
+        "CH03-S02-C002",
+        "CH03-S02-C003",
+        "CH03-S02-C004",
+        "CH03-S02-C005",
+        "CH03-S02-C006"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH03-S02-C001",
+        "CH03-S02-C002",
+        "CH03-S02-C003",
+        "CH03-S02-C004",
+        "CH03-S02-C005",
+        "CH03-S02-C006"
+      ],
+      "understanding_bridges": [
+        "闭路零积分如何比较两路；孔边界方向由区域在左统一决定；换路只在中间区域解析时成立。"
+      ],
+      "media_review": [
+        {
+          "id": "CH03-multiply-connected",
+          "assessment": "复用两洞切开并合边界的视频request_id，正文只指认方向与辅助线抵消。",
+          "limits": "未逐帧播放，不能把一幅分割示例替代任意多连通域的正式论证。"
+        }
+      ],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 6,
+        "supplement_count": 0
+      }
+    },
+    "CH03-S03": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch03_s03.md",
+      "source_sha256": "68e1f95c0b29bb2fb9b74230aef072fa1aa8a9fb38f28a9979c311e15f97f56a",
+      "source_read": "已逐节通读教材原文与原lesson（含章末习题），交叉核对全部结论。",
+      "main_ids": [
+        "CH03-S03-C001",
+        "CH03-S03-C002",
+        "CH03-S03-C003",
+        "CH03-S03-C004",
+        "CH03-S03-C005",
+        "CH03-S03-C006",
+        "CH03-S03-C007",
+        "CH03-S03-C008"
+      ],
+      "supplement_ids": [],
+      "knowledge_coverage_ids": [
+        "CH03-S03-C001",
+        "CH03-S03-C002",
+        "CH03-S03-C003",
+        "CH03-S03-C004",
+        "CH03-S03-C005",
+        "CH03-S03-C006",
+        "CH03-S03-C007",
+        "CH03-S03-C008"
+      ],
+      "understanding_bridges": [
+        "构造所需实质条件与单连通充分条件分开；原函数常数由初值确定；对数绕行增量解释全局障碍。"
+      ],
+      "media_review": [
+        {
+          "id": "CH03-log-primitive",
+          "assessment": "复用比较不同绕行类别与2πi贡献的视频request_id。",
+          "limits": "未逐帧播放；正文明确路径比较不允许穿过原点，不把绕行类型跳变当连续允许变形。"
+        }
+      ],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 8,
+        "supplement_count": 0
+      }
+    },
+    "CH03-S04": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch03_s04.md",
+      "source_sha256": "7cd186910ad54bdee1ce281445e9d30f3f250e012d7a57efa1897e38041b350a",
+      "source_read": "已逐节通读教材原文与原lesson（含章末习题），交叉核对全部结论。",
+      "main_ids": [
+        "CH03-S04-C001",
+        "CH03-S04-C002",
+        "CH03-S04-C003",
+        "CH03-S04-C004"
+      ],
+      "supplement_ids": [
+        "CH03-S04-EX6-RESULT",
+        "CH03-S04-EX7-RESULT"
+      ],
+      "knowledge_coverage_ids": [
+        "CH03-S04-C001",
+        "CH03-S04-C002",
+        "CH03-S04-C003",
+        "CH03-S04-C004",
+        "CH03-S04-EX6-RESULT",
+        "CH03-S04-EX7-RESULT"
+      ],
+      "understanding_bridges": [
+        "取值点与积分变量分工；核奇异读值而非直接判零；核幂次对应导数阶；原题例6与修正路径严格分开。"
+      ],
+      "media_review": [
+        {
+          "id": "CH03-cauchy",
+          "assessment": "已局部修正cauchy几何积分模型：按几何混叠尾界选择中点采样数，补偿求和，读数报告离散尾界和浮点误差估计。路径上直接判普通积分无定义，未达到精度时明确提示。",
+          "limits": "误差估计中离散尾界有解析依据，浮点项为保守估计而非严格区间证明；该图仍仅演示平方函数。极近边界达到采样上限时不承诺精度。",
+          "repair_status": "模型与语义测试已完成；浏览器交互视觉核验仍由主线程完成。"
+        }
+      ],
+      "pending_checks": [
+        "例6原题半径已核为2，普通积分不存在；修正为0<r<2的结果保留。",
+        "自适应求积已补；集成后仍须验证窄图列中误差读数可见、过路径状态无旧数值残留。"
+      ],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 4,
+        "supplement_count": 2
+      }
+    },
+    "CH03-S05": {
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch03_s05.md",
+      "source_sha256": "a1f37bfe38a5f85b30eef156478f856ac17f6ab9595060b68a7877316ed11631",
+      "source_read": "已逐节通读教材原文与原lesson（含章末习题），交叉核对全部结论。",
+      "main_ids": [
+        "CH03-S05-C001",
+        "CH03-S05-C002",
+        "CH03-S05-C003",
+        "CH03-S05-C004",
+        "CH03-S05-C005",
+        "CH03-S05-C006",
+        "CH03-S05-C007"
+      ],
+      "supplement_ids": [
+        "CH03-S05-C008",
+        "CH03-S05-C009",
+        "CH03-S05-C010",
+        "CH03-S05-C011",
+        "CH03-S05-C012",
+        "CH03-S05-C013"
+      ],
+      "knowledge_coverage_ids": [
+        "CH03-S05-C001",
+        "CH03-S05-C002",
+        "CH03-S05-C003",
+        "CH03-S05-C004",
+        "CH03-S05-C005",
+        "CH03-S05-C006",
+        "CH03-S05-C007",
+        "CH03-S05-C008",
+        "CH03-S05-C009",
+        "CH03-S05-C010",
+        "CH03-S05-C011",
+        "CH03-S05-C012",
+        "CH03-S05-C013"
+      ],
+      "understanding_bridges": [
+        "平均复值与平均模分开；最大模到倒数最小模；统一全局界控制导数；远处衰减需与弧长同步估计。"
+      ],
+      "media_review": [
+        {
+          "id": "CH03-maximum",
+          "assessment": "maximum场景是z^n加实常数的圆盘模曲面，支持半径、1至5次幂和常数控制，并读出边界最大值。",
+          "limits": "模型不含常数函数模式、任意区域或一般函数；只核对这一族非恒定整函数，不能作为定理证明。"
+        }
+      ],
+      "pending_checks": [],
+      "coverage_validation": {
+        "all_ids_present": true,
+        "every_id_has_substantive_paragraph": true,
+        "every_excerpt_is_unique_complete_paragraph": true,
+        "main_count": 7,
+        "supplement_count": 6
+      }
+    }
+  },
+  "summary": {
+    "units": 28,
+    "main_ids": 140,
+    "supplement_ids": 23,
+    "source_metadata_policy": "完整保留原inventory（含原source_quote及定位）供审核；知识在body中单次讲解，knowledge_coverage引用正文段落而非另造公式卡。",
+    "limitations": [
+      "未操作浏览器或修改共享渲染器；窄屏2/3正文与1/3图列视觉核验由主线程集成后执行。",
+      "现有request_id视频未逐帧播放；各单元已按能力记录具体边界。"
+    ],
+    "verification": {
+      "strict_katex_expressions": 1208,
+      "knowledge_ids": 163,
+      "coverage_unique_complete_paragraphs": true,
+      "original_reader_anchor_targets_retained": true,
+      "visual_and_media_markers_match": true,
+      "scene_semantics_tests": "新增5项先失败后通过，包含近边界积分内外两侧、路径过极点、输入坐标与像一致、调和双族与非临界条件。"
+    }
+  }
+}

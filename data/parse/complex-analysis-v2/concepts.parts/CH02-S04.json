@@ -1,0 +1,83 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH02-S04",
+    "text_sha256": "c5d7db7725769ab4b225d1f2f3b963a02326c08b91aed9568761b9bc8dbdbe70",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "c5d7db7725769ab4b225d1f2f3b963a02326c08b91aed9568761b9bc8dbdbe70",
+    "source": "original_text",
+    "source_path": "original_text/ch02_s04.md"
+  },
+  "unit": {
+    "unit_id": "CH02-S04",
+    "level": "section",
+    "chapter": "CH02",
+    "section": "CH02-S04",
+    "title": "柯西－黎曼方程",
+    "anchor": "2.4"
+  },
+  "concepts": [
+    {
+      "name": "柯西－黎曼方程",
+      "type": "formula",
+      "formal": "$$\\frac {\\partial u}{\\partial x} = \\frac {\\partial v}{\\partial y}, \\quad \\frac {\\partial u}{\\partial y} = - \\frac {\\partial v}{\\partial x}.$$",
+      "source_quote": "$u(x,y)$ 及 $\\nu (x,y)$ 在点 $(x,y)$ 满足柯西－黎曼方程（简称C-R方程）$$\\frac {\\partial u}{\\partial x} = \\frac {\\partial v}{\\partial y}, \\quad \\frac {\\partial u}{\\partial y} = - \\frac {\\partial v}{\\partial x}.$$"
+    },
+    {
+      "name": "定理2",
+      "type": "theorem",
+      "formal": "函数 $f(z) = u(x, y) + \\mathrm{i}v(x, y)$ 在点 $z = x + \\mathrm{i}y$ 可微的充要条件是：1) 二元函数 $u(x, y), v(x, y)$ 在点 $(x, y)$ 可微. 2) $u(x,y)$ 及 $v(x,y)$ 在点 $(x,y)$ 满足柯西－黎曼方程（简称C-R方程）$$\\frac {\\partial u}{\\partial x} = \\frac {\\partial v}{\\partial y}, \\quad \\frac {\\partial u}{\\partial y} = - \\frac {\\partial v}{\\partial x}.$$",
+      "source_quote": "定理2 函数 $f(z) = u(x, y) + \\mathrm{i}v(x, y)$ 在点 $z = x + \\mathrm{i}y$ 可微的充要条件是：1) 二元函数 $u(x, y), v(x, y)$ 在点 $(x, y)$ 可微. 2) $u(x,y)$ 及 $\\nu (x,y)$ 在点 $(x,y)$ 满足柯西－黎曼方程（简称C-R方程）$$\\frac {\\partial u}{\\partial x} = \\frac {\\partial v}{\\partial y}, \\quad \\frac {\\partial u}{\\partial y} = - \\frac {\\partial v}{\\partial x}.$$"
+    },
+    {
+      "name": "定理3",
+      "type": "theorem",
+      "formal": "函数 $f(z) = u(x, y) + \\mathrm{i}v(x, y)$ 在区域 $D$ 内可微（即在 $D$ 内解析）的充要条件是：1) 二元函数 $u(x, y)$ 及 $v(x, y)$ 在 $D$ 内可微. 2) $u(x,y)$ 及 $v(x,y)$ 在 $D$ 内处处满足C-R方程.",
+      "source_quote": "定理3 函数 $f(z) = u(x, y) + \\mathrm{i}v(x, y)$ 在区域 $D$ 内可微（即在 $D$ 内解析）的充要条件是：1) 二元函数 $u(x, y)$ 及 $\\nu(x, y)$ 在 $D$ 内可微. 2) $u(x,y)$ 及 $\\nu (x,y)$ 在 $D$ 内处处满足C-R方程."
+    },
+    {
+      "name": "实指数函数的特征性质",
+      "type": "property",
+      "formal": "$f'(x) = f(x)$",
+      "source_quote": "实指数函数 $f(x) = \\mathrm{e}^{x}$ 的一个特征性质就是它的变化率等于函数自身，即 $f'(x) = f(x)$."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 4,
+    "漏掉的具名结论": [
+      "定理2",
+      "定理3"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "下面的定理",
+      "下列公式",
+      "一个特征性质",
+      "中所讨论的函数也有这一性质",
+      "导数的运算法则"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "柯西－黎曼方程",
+    "定理2",
+    "定理3",
+    "实指数函数的特征性质"
+  ]
+}

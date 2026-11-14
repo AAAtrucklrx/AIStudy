@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "backend": "edge-tts",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "rate": "-5%",
+  "pitch": "+0Hz",
+  "language": "zh-CN",
+  "note": "微软 Edge 在线 Neural 中文语音，经 edge-tts 客户端调用。无需用户 API key；联网生成，交付后可离线播放。网络失败须报错，不切换机械系统语音。可将 voice 改为 zh-CN-YunxiNeural 试听男声。"
+}

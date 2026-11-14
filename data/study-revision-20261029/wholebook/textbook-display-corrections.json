@@ -1,0 +1,217 @@
+{
+  "schema_version": "TextbookDisplayCorrectionsV2",
+  "units": {
+    "CH01-S02-SS02": [
+      {
+        "old": "复平面上的区域,常是由复数的实部、虚部、模及辐角的不等式所确定的点集.例如,上半平面:Imz>0;左半平面:Rez<0.1水平带域:y1<Imz<y2,y1,y2是实常数;上半圆:|z|<1,Imz>0(也可表为0<argz<n)等等都是单连通区域;而圆环:|z|-a<R(r及R是正实常数)及去掉常数轴上的线段-1≤Rez≤1的竖直带域-2<Rez<2(图1.6)是多连通区域.如果把一个单连通域挖去若干个点,所得的区域也是多连通域.例如,a点的去心邻域",
+        "new": "复平面上的区域，常是由复数的实部、虚部、模及辐角的不等式所确定的点集。例如，上半平面：$\\operatorname{Im}z>0$；左半平面：$\\operatorname{Re}z<0$；水平带域：$y_1<\\operatorname{Im}z<y_2$，$y_1,y_2$ 是实常数；上半圆：$|z|<1,\\operatorname{Im}z>0$（也可表为 $0<\\arg z<\\pi$）等等都是单连通区域；而圆环：$r<|z-a|<R$（$r$ 及 $R$ 是正实常数）及去掉实数轴上的线段 $-1\\le\\operatorname{Re}z\\le1$ 的竖直带域 $-2<\\operatorname{Re}z<2$（图1.6）是多连通区域。如果把一个单连通域挖去若干个点，所得的区域也是多连通域。例如，$a$ 点的去心邻域",
+        "reason": "按扫描页恢复该段数学排版及明确OCR字符：辐角上界为pi，左半平面为Re z<0，圆环为r<|z-a|<R；不再保留已被PDF排除的n/0.1/|z|-a残损式。半圆括号依纸面保留，不另猜补纸面未写的条件。",
+        "source_note": "已逐图核读两版印刷第16页；用户PDF第18页（旋转后正向）、源PDF第25页。",
+        "source_printed_page": 16,
+        "source_line": 13
+      }
+    ],
+    "CH02-S05-SS02": [
+      {
+        "old": "设在 z 平面上有一条起点为 a 终点为 b 的曲线 l，如果选定点 a 的辐角 arga，当 z 沿 l 从 a 向 b 运动时，辐角也将从 arga 开始连续变化，而得到 b 点的辐角的一个确定的值 argb = arga + a（图 2.7）。并称 a = argb - arga 为 z 沿曲线 l 的辐角变化，记为  $\\Delta_{z}$  argb。显然， $\\Delta_{z}$  argz 与 arga 的选定值无关。例如，l 是 |z| = 1 的上半圆周（图 2.8），当 z 沿 l 从 1 变到 -1 时，辐角增加了  $\\pi$ ，因而",
+        "new": "设在 $z$ 平面上有一条起点为 $a$、终点为 $b$ 的曲线 $l$，如果选定点 $a$ 的辐角 $\\arg a$，当 $z$ 沿 $l$ 从 $a$ 向 $b$ 运动时，辐角也将从 $\\arg a$ 开始连续变化，而得到 $b$ 点的辐角的一个确定的值 $\\arg b=\\arg a+\\alpha$（图2.7）。并称 $\\alpha=\\arg b-\\arg a$ 为 $z$ 沿曲线 $l$ 的辐角变化，记为 $\\Delta_l\\arg z$。显然，$\\Delta_l\\arg z$ 与 $\\arg a$ 的选定值无关。例如，$l$ 是 $|z|=1$ 的上半圆周（图2.8），当 $z$ 沿 $l$ 从 $1$ 变到 $-1$ 时，辐角增加了 $\\pi$，因而",
+        "reason": "纸面明确把辐角增量印作alpha，起点仍为a；Delta下标为曲线l，函数为arg z。按实际纸面恢复符号并补数学定界符，不把OCR误识a保留为正确教学定义。",
+        "source_note": "已逐图核读两版印刷第33页；用户PDF第35页（旋转后正向）、源PDF第42页。",
+        "source_printed_page": 33,
+        "source_line": 9
+      },
+      {
+        "old": "$$\\Delta_ {i} \\arg z = \\arg (- 1) - \\arg 1 = \\pi .$$",
+        "new": "$$\\Delta_l\\arg z=\\arg(-1)-\\arg1=\\pi.$$",
+        "reason": "同一印刷页的显示公式下标是曲线l，OCR误成i；按纸面排版恢复。",
+        "source_note": "已逐图核读两版印刷第33页；用户PDF第35页（旋转后正向）、源PDF第42页。",
+        "source_printed_page": 33,
+        "source_line": 10
+      },
+      {
+        "old": "$$\\Delta_ {i} \\arg z = 2 k \\pi .$$",
+        "new": "$$\\Delta_l\\arg z=2k\\pi.$$",
+        "reason": "同一印刷页的绕k圈公式下标是曲线l，OCR误成i；按纸面排版恢复。",
+        "source_note": "已逐图核读两版印刷第33页；用户PDF第35页（旋转后正向）、源PDF第42页。",
+        "source_printed_page": 33,
+        "source_line": 16
+      }
+    ],
+    "CH09-S03-SS03": [
+      {
+        "old": "Resinz = sinxcoshy, Imsinz = cosxsinh y,\n| sinz | =  $\\sqrt{\\sin^{2}x + \\sinh^{2}y}$ .",
+        "new": "$\\operatorname{Re}(\\sin z)=\\sin x\\cosh y$, $\\operatorname{Im}(\\sin z)=\\cos x\\sinh y$,\n$|\\sin z|=\\sqrt{\\sin^{2}x+\\sinh^{2}y}$ .",
+        "reason": "纸面第21题写的是Re sin z、Im sin z及对应三角/双曲函数乘积；拆开连写函数名、补数学定界符，模长平方项照纸面保留。",
+        "source_note": "已逐图核读两版印刷第220页；用户PDF第222页（旋转后正向）、源PDF第229页。",
+        "source_printed_page": 220,
+        "source_line": 138
+      },
+      {
+        "old": "23. 本题各答案中 $k = 0, \\pm 1, \\pm 2, \\cdots$ $\\mathrm{i}(2k + 1)\\pi, \\mathrm{i}\\pi, \\mathrm{i}(2k + \\frac{1}{2})\\pi, \\mathrm{i}\\frac{1}{2}$, $\\int_{\\ln}\\sqrt{13} + \\mathrm{i}\\left[\\arctan\\left(-\\frac{2}{3}\\right) + 2k\\pi\\right], \\ln\\sqrt{13} + \\mathrm{i}\\left[\\pi + \\arctan\\left(-\\frac{3}{2}\\right)\\right]$, $\\exp(\\mathrm{i}/\\sqrt{2} 2k\\pi), \\exp(\\sqrt{2}\\ln 2 + \\mathrm{i}(2k + 1)\\pi)] \\exp(\\sqrt{2}\\ln 2 + \\mathrm{i}(2k + 1)\\pi)], \\exp(-2k\\pi + \\mathrm{i}\\ln 2), \\exp\\left[\\ln 5 - \\arctan\\left(-\\frac{4}{3}\\right) - 2k\\pi\\right] + \\mathrm{i}\\left[\\ln 5 + \\arctan\\left(-\\frac{4}{3}\\right) + 2k\\pi\\right]$, $\\cosh 1\\cos 2 - \\mathrm{i}\\sinh 1\\sin 2, \\mathrm{i}\\sinh 2, \\frac{8 + \\mathrm{i}15}{17}, \\frac{\\sinh 4 - \\mathrm{i}\\sin 2}{2(\\sinh 4^2 + \\sin 1)}$, $\\left[2k\\pi - \\mathrm{i}\\ln(\\sqrt{2} - 1) - 2k\\pi - \\mathrm{i}\\ln(2 \\pm \\sqrt{3}), (2k + 1)\\pi - \\mathrm{i}\\ln(\\sqrt{2} + 1), (k + \\frac{1}{2})\\pi - \\frac{1}{2}\\arctan\\frac{1}{2} + \\frac{1}{4}\\ln 5,\\left[\\ln(\\sqrt{5} + 2) + \\mathrm{i}(2k + \\frac{1}{2})\\pi\\right], \\ln(\\sqrt{5} - 2) + \\mathrm{i}(2k - \\frac{1}{2})\\pi.$",
+        "new": "23. 本题各答案中 $k=0,\\pm1,\\pm2,\\ldots$。\n$$\\mathrm i(2k+1)\\pi,\\ \\mathrm i\\pi;\\qquad\\mathrm i\\left(2k+\\frac12\\right)\\pi,\\ \\mathrm i\\frac\\pi2;$$\n$$\\begin{gathered}\\ln\\sqrt{13}+\\mathrm i\\left[\\arctan\\left(-\\frac23\\right)+2k\\pi\\right],\\\\\\ln\\sqrt{13}+\\mathrm i\\left[\\pi+\\arctan\\left(-\\frac32\\right)\\right];\\end{gathered}$$\n$$\\begin{gathered}\\exp(\\mathrm i\\sqrt2\\,2k\\pi),\\\\\\exp\\!\\left\\{\\sqrt2\\left[\\ln2+\\mathrm i(2k+1)\\pi\\right]\\right\\}\\ \\exp\\!\\left\\{\\sqrt2\\left[\\ln2+\\mathrm i(2k+1)\\pi\\right]\\right\\},\\end{gathered}$$\n$$\\begin{gathered}\\exp(-2k\\pi+\\mathrm i\\ln2),\\\\\\exp\\!\\left\\{\\begin{aligned}&\\left[\\ln5-\\arctan\\left(-\\frac43\\right)-2k\\pi\\right]\\\\&+\\mathrm i\\left[\\ln5+\\arctan\\left(-\\frac43\\right)+2k\\pi\\right]\\end{aligned}\\right\\};\\end{gathered}$$\n$$\\begin{gathered}\\cosh1\\cos2-\\mathrm i\\sinh1\\sin2,\\quad\\mathrm i\\sinh2,\\\\\\frac{8+15\\mathrm i}{17},\\qquad\\frac{\\sinh4-\\mathrm i\\sin2}{2(\\sinh^22+\\sin^21)};\\end{gathered}$$\n$$\\begin{gathered}\\left\\{\\begin{aligned}&2k\\pi-\\mathrm i\\ln(\\sqrt2-1)\\\\&(2k+1)\\pi-\\mathrm i\\ln(\\sqrt2+1)\\end{aligned}\\right.,\\\\2k\\pi-\\mathrm i\\ln(2\\pm\\sqrt3),\\\\\\left(k+\\frac12\\right)\\pi-\\frac12\\arctan\\frac12+\\frac14\\ln5,\\\\\\left\\{\\begin{aligned}&\\ln(\\sqrt5+2)+\\mathrm i\\left(2k+\\frac12\\right)\\pi\\\\&\\ln(\\sqrt5-2)+\\mathrm i\\left(2k-\\frac12\\right)\\pi\\end{aligned}\\right..\\end{gathered}$$",
+        "reason": "逐图恢复整条第23题答案行：纸面是两组左大括号分列，非未配对left方括号；另恢复ln（非int_ln）、i*pi/2、i*sqrt(2)、指数内分组及sinh²2+sin²1。所有项目按纸面保留，不求解、不新增答案。纸面连续重复的两个相同exp式也如实保留，未猜测删重。为窄列仅将行分开，不改变分组内容。",
+        "source_note": "已逐图核读两版印刷第220页；用户PDF第222页（旋转后正向）、源PDF第229页。",
+        "source_printed_page": 220,
+        "source_line": 141
+      }
+    ],
+    "CH08-S04-SS03": [
+      {
+        "old": "$$H _ {s}: \\frac {u ^ {2}}{\\cos^ {2} \\varphi} - \\frac {\\nu^ {2}}{\\sin^ {2} \\varphi} = 1.$$",
+        "new": "$$H_{\\varphi}:\\frac{u^2}{\\cos^2\\varphi}-\\frac{v^2}{\\sin^2\\varphi}=1.$$",
+        "reason": "按实际印刷恢复双曲线族下标varphi及像平面的纵坐标v；OCR误作H_s与希腊nu平方。此式与下一段同一H_varphi对应。",
+        "source_note": "已逐图核读两版印刷第161页（图8.8之后）；用户PDF第163页（本页需顺时针90度后正向），源PDF第170页。",
+        "source_printed_page": 161,
+        "source_line": 21
+      },
+      {
+        "old": "于是 z 平面上位于单位圆内一段射线 z = rc$^{w}$, 0 ≤ r < 1 被变成 w 平面上的双曲线 H$_{♀}$ 的四分之一支, H$_{♀}$ 也以 ± 1 为焦点。特别地, 当上述射线段位于第一象限 (0 < φ < π/2) 时, 它对应于 H$_{♀}$ 在第四象限的四分之一支。整个双曲线 H$_{♀}$ (不包括它与线段 [-1.1] 的两个交点) 则是由四条射线段 z = rc$^{w}$; z = rc$^{(e-w)}$, z = rc$^{(e-e)}$, z = rc$^{(e-e)}$, z = rc$^{(e-e)}$, 0 ≤ r < 1, 0 < φ < π/2 变来 (图 8.8). 由保形性可知椭圆族 E, 和双曲线族 H$_{♀}$ 构成正交曲线网。",
+        "new": "于是 $z$ 平面上位于单位圆内一段射线 $z=re^{\\mathrm i\\varphi}$，$0\\le r<1$ 被变成 $w$ 平面上的双曲线 $H_{\\varphi}$ 的四分之一支，$H_{\\varphi}$ 也以 $\\pm1$ 为焦点。特别地，当上述射线段位于第一象限（$0<\\varphi<\\pi/2$）时，它对应于 $H_{\\varphi}$ 在第四象限的四分之一支。整个双曲线 $H_{\\varphi}$（不包括它与线段 $[-1,1]$ 的两个交点）则是由四条射线段\n$$\\begin{aligned}z&=re^{\\mathrm i\\varphi},&z&=re^{\\mathrm i(\\pi-\\varphi)},\\\\z&=re^{\\mathrm i(\\varphi-\\pi)},&z&=re^{-\\mathrm i\\varphi},\\end{aligned}$$\n$0\\le r<1$，$0<\\varphi<\\pi/2$ 变来（图8.8）。由保形性可知椭圆族 $E_r$ 和双曲线族 $H_{\\varphi}$ 构成正交曲线网。",
+        "reason": "逐图按纸面恢复整段：H下标是varphi而非女性符号；第一射线是r*exp(i*varphi)，四条射线的辐角依次为varphi、pi-varphi、varphi-pi、-varphi，纸面仅四条（OCR误生第五条并吞掉虚单位）；线段为[-1,1]，末尾椭圆族为E_r。所有数学补定界符并将四射线分行。保留纸面0<=r<1，不凭猜测改写端点。",
+        "source_note": "已逐图核读两版印刷第161页（图8.8之后）；用户PDF第163页（本页需顺时针90度后正向），源PDF第170页。",
+        "source_printed_page": 161,
+        "source_line": 22
+      }
+    ]
+  },
+  "support_replacements": [
+    {
+      "unit_id": "CH02-S05-SS02",
+      "owner_id": "C-0124",
+      "json_pointer": "/corrections/0/original",
+      "block_id": "sha256:9eab1c1b8dc72d1b0b0bef0b52704dae6eae69d6d7a9b636a25ab34bbe9dc8f3",
+      "old": "设在 z 平面上有一条起点为 a 终点为 b 的曲线 l，如果选定点 a 的辐角 arga，当 z 沿 l 从 a 向 b 运动时，辐角也将从 arga 开始连续变化，而得到 b 点的辐角的一个确定的值 argb = arga + a（图 2.7）。并称 a = argb - arga 为 z 沿曲线 l 的辐角变化，记为  $\\Delta_{z}$  argb。显然， $\\Delta_{z}$  argz 与 arga 的选定值无关。",
+      "new": "设在 z 平面上有一条起点为 a 终点为 b 的曲线 l，如果选定点 a 的辐角 arga，当 z 沿 l 从 a 向 b 运动时，辐角也将从 arga 开始连续变化，而得到 b 点的辐角的一个确定的值 $\\arg b=\\arg a+a$（图 2.7）。并称 $a=\\arg b-\\arg a$ 为 z 沿曲线 l 的辐角变化，记为  $\\Delta_{z}$  argb。显然， $\\Delta_{z}$  argz 与 arga 的选定值无关。",
+      "reason": "这是批评旧OCR的原始错误示例/诊断引文；只补数学排版，必须保留旧a与原错误Delta记号，使对照原因仍成立。不可套用canonical的alpha修复。",
+      "projection_role": "diagnostic_quoted_ocr",
+      "source_note": "已逐图核读两版印刷第33页；用户PDF第35页（旋转后正向）、源PDF第42页。",
+      "old_match_count_in_target": 1
+    },
+    {
+      "unit_id": "CH02-S05-SS02",
+      "owner_id": "C-0124",
+      "json_pointer": "/corrections/0/reason",
+      "block_id": "sha256:4929e22af2e264e8f80d65fe12b37a829260506a6c33a34de44f2e821d1c20c7",
+      "old": "C-0124 的 formal 把起点 $a$ 与辐角增量同记为 $a$，出现 “argb = arga + a” 又把同一符号用于 “a = argb - arga”，导致符号混淆；同时把辐角变化写成 $\\Delta_z\\arg b$，应为 $\\Delta_l\\arg z$。修正后明确 $l$ 以 $a$ 为起点、$b$ 为终点，终点辐角由沿 $l$ 连续变化得到，并统一记为 $\\Delta_l\\arg z=\\arg b-\\arg a$。",
+      "new": "C-0124 的 formal 把起点 $a$ 与辐角增量同记为 $a$，出现 “$\\arg b=\\arg a+a$” 又把同一符号用于 “$a=\\arg b-\\arg a$”，导致符号混淆；同时把辐角变化写成 $\\Delta_z\\arg b$，应为 $\\Delta_l\\arg z$。修正后明确 $l$ 以 $a$ 为起点、$b$ 为终点，终点辐角由沿 $l$ 连续变化得到，并统一记为 $\\Delta_l\\arg z=\\arg b-\\arg a$。",
+      "reason": "这是批评旧OCR的原始错误示例/诊断引文；只补数学排版，必须保留旧a与原错误Delta记号，使对照原因仍成立。不可套用canonical的alpha修复。",
+      "projection_role": "diagnostic_quoted_ocr",
+      "source_note": "已逐图核读两版印刷第33页；用户PDF第35页（旋转后正向）、源PDF第42页。",
+      "old_match_count_in_target": 1
+    },
+    {
+      "unit_id": "CH02-S05-SS02",
+      "owner_id": "C-0124",
+      "json_pointer": "/reference_catalog/entries/63/markdown",
+      "block_id": "sha256:9fd5156ffa72810ca591d76a74f98fe82f0e3dd178ddb5179a4e61fc75e34f1e",
+      "old": "设在 z 平面上有一条起点为 a 终点为 b 的曲线 l，如果选定点 a 的辐角 arga，当 z 沿 l 从 a 向 b 运动时，辐角也将从 arga 开始连续变化，而得到 b 点的辐角的一个确定的值 argb = arga + a（图 2.7）。并称 a = argb - arga 为 z 沿曲线 l 的辐角变化，记为  $\\Delta_{z}$  argb。",
+      "new": "设在 $z$ 平面上有一条起点为 $a$、终点为 $b$ 的曲线 $l$，如果选定点 $a$ 的辐角 $\\arg a$，当 $z$ 沿 $l$ 从 $a$ 向 $b$ 运动时，辐角也将从 $\\arg a$ 开始连续变化，而得到 $b$ 点的辐角的一个确定的值 $\\arg b=\\arg a+\\alpha$（图2.7）。并称 $\\alpha=\\arg b-\\arg a$ 为 $z$ 沿曲线 $l$ 的辐角变化，记为 $\\Delta_l\\arg z$。",
+      "reason": "正确教学引用，按印刷第33页恢复alpha及Delta_l arg z，与原文显示投影一致。",
+      "projection_role": "teaching_reference",
+      "source_note": "已逐图核读两版印刷第33页；用户PDF第35页（旋转后正向）、源PDF第42页。",
+      "old_match_count_in_target": 1
+    },
+    {
+      "unit_id": "CH06-S03",
+      "owner_id": "C-0124",
+      "json_pointer": "/reference_catalog/entries/63/markdown",
+      "block_id": "sha256:449a30b6b146a62f5fee6c86b3fa9161aa233091266caee76732d48d01c6c7f6",
+      "old": "设在 z 平面上有一条起点为 a 终点为 b 的曲线 l，如果选定点 a 的辐角 arga，当 z 沿 l 从 a 向 b 运动时，辐角也将从 arga 开始连续变化，而得到 b 点的辐角的一个确定的值 argb = arga + a（图 2.7）。并称 a = argb - arga 为 z 沿曲线 l 的辐角变化，记为  $\\Delta_{z}$  argb。",
+      "new": "设在 $z$ 平面上有一条起点为 $a$、终点为 $b$ 的曲线 $l$，如果选定点 $a$ 的辐角 $\\arg a$，当 $z$ 沿 $l$ 从 $a$ 向 $b$ 运动时，辐角也将从 $\\arg a$ 开始连续变化，而得到 $b$ 点的辐角的一个确定的值 $\\arg b=\\arg a+\\alpha$（图2.7）。并称 $\\alpha=\\arg b-\\arg a$ 为 $z$ 沿曲线 $l$ 的辐角变化，记为 $\\Delta_l\\arg z$。",
+      "reason": "正确教学引用，按印刷第33页恢复alpha及Delta_l arg z，与原文显示投影一致。",
+      "projection_role": "teaching_reference",
+      "source_note": "已逐图核读两版印刷第33页；用户PDF第35页（旋转后正向）、源PDF第42页。",
+      "old_match_count_in_target": 1
+    }
+  ],
+  "reference_catalog_replacements": [
+    {
+      "owner_id": "C-0124",
+      "unit_id": "CH02-S05-SS02",
+      "old": "设在 z 平面上有一条起点为 a 终点为 b 的曲线 l，如果选定点 a 的辐角 arga，当 z 沿 l 从 a 向 b 运动时，辐角也将从 arga 开始连续变化，而得到 b 点的辐角的一个确定的值 argb = arga + a（图 2.7）。并称 a = argb - arga 为 z 沿曲线 l 的辐角变化，记为  $\\Delta_{z}$  argb。",
+      "new": "设在 $z$ 平面上有一条起点为 $a$、终点为 $b$ 的曲线 $l$，如果选定点 $a$ 的辐角 $\\arg a$，当 $z$ 沿 $l$ 从 $a$ 向 $b$ 运动时，辐角也将从 $\\arg a$ 开始连续变化，而得到 $b$ 点的辐角的一个确定的值 $\\arg b=\\arg a+\\alpha$（图2.7）。并称 $\\alpha=\\arg b-\\arg a$ 为 $z$ 沿曲线 $l$ 的辐角变化，记为 $\\Delta_l\\arg z$。",
+      "reason": "引用目录中同概念的教学定义恢复印刷alpha及Delta_l，不属于诊断引文。",
+      "source_note": "已逐图核读两版印刷第33页；用户PDF第35页（旋转后正向）、源PDF第42页。",
+      "match_by": "reference_catalog.entries[].id == C-0124",
+      "affected_unit_ids": [
+        "CH01",
+        "CH01-S01-SS01",
+        "CH01-S01-SS02",
+        "CH01-S01-SS03",
+        "CH01-S01-SS04",
+        "CH01-S01-SS05",
+        "CH01-S02-SS01",
+        "CH01-S02-SS02",
+        "CH02",
+        "CH02-S01",
+        "CH02-S02",
+        "CH02-S03",
+        "CH02-S04",
+        "CH02-S05",
+        "CH02-S05-SS01",
+        "CH02-S05-SS02",
+        "CH02-S05-SS03",
+        "CH02-S05-SS04",
+        "CH02-S05-SS05",
+        "CH02-S05-SS06",
+        "CH02-S05-SS07",
+        "CH02-S05-SS08",
+        "CH03",
+        "CH03-S01",
+        "CH03-S02",
+        "CH03-S03",
+        "CH03-S04",
+        "CH03-S05",
+        "CH04",
+        "CH04-S01",
+        "CH04-S02",
+        "CH05",
+        "CH05-S01-SS01",
+        "CH05-S01-SS02",
+        "CH05-S02",
+        "CH05-S03",
+        "CH05-S04",
+        "CH05-S05",
+        "CH06",
+        "CH06-S01",
+        "CH06-S02",
+        "CH06-S02-SS01",
+        "CH06-S02-SS02",
+        "CH06-S02-SS03",
+        "CH06-S02-SS04",
+        "CH06-S02-SS05",
+        "CH06-S03",
+        "CH07",
+        "CH07-S01",
+        "CH07-S02",
+        "CH08",
+        "CH08-S01",
+        "CH08-S02",
+        "CH08-S03",
+        "CH08-S04",
+        "CH08-S04-SS01",
+        "CH08-S04-SS02",
+        "CH08-S04-SS03",
+        "CH08-S05",
+        "CH08-S06",
+        "CH09",
+        "CH09-S01",
+        "CH09-S02-SS01",
+        "CH09-S02-SS02",
+        "CH09-S02-SS03",
+        "CH09-S02-SS04",
+        "CH09-S02-SS05",
+        "CH09-S02-SS06",
+        "CH09-S02-SS07",
+        "CH09-S02-SS08",
+        "CH09-S02-SS09",
+        "CH09-S02-SS10",
+        "CH09-S03",
+        "CH09-S03-SS01",
+        "CH09-S03-SS02",
+        "CH09-S03-SS03"
+      ],
+      "old_match_count_per_entry": 1
+    }
+  ]
+}

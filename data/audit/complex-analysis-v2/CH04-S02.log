@@ -1,0 +1,37 @@
+—— CH04-S02 回路开始（run 2026-10-03 08:37:11）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 2, '教案问题明细': ['CH04-S02: 《狄利克雷问题》的解释**只引了编号**（如 (1.1)–(1.8)）却没展开 —— 读者在侧栏里看不到那个编号。要么逐条写出来，要么改用统一称呼（例如「线性空间的八条运算公理：加法交换律、结合律、零元、负元、数乘结合律、单位元、两条分配律」）', "CH04-S02: F-04 第 4 步的 `basis` 指不回任何东西（'第 1、2、3 步合起来'）—— 必须指回定义/定理/上一步/某个详解"], '教案提醒': 4, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 2 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH04-S02: 《狄利克雷问题》的解释**只引了编号**（如 (1.1)–(1.8)）却没展开 —— 读者在侧栏里看不到那个编号。要么逐条写出来，要么改用统一称呼（例如「线性空间的八条运算公理：加法交换律、结合律、零元、负元、数乘结合律、单位元、两条分配律」）', "CH04-S02: F-04 第 4 步的 `basis` 指不回任何东西（'第 1、2、3 步合起来'）—— 必须指回定义/定理/上一步/某个详解"]
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [5] 条 → 并集 3 条工单
+    T-R3fdb7 [P1] hits=2 「CH04-S02: 《狄利克雷问题》的解释**只引了编号**（如 (1.」
+    T-4982d4 [P1] hits=1 「要求出一个在区域 $D$ 内调和、并且在 $D$ 上连续的函数 $u(z」
+    T-67c9f3 [P1] hits=1 「定理6 设 $u(z)$ 是闭圆 $\bar{D}:|z-z_0|\le」
+[轮 1] 按 3 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH04-S02 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH04-S02.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH04-S02 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH04-S02.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 4 条：['CH04-S02: 《狄利克雷问题》的解释**只引了编号**（如 (1.1)–(1.8)）却没展开 —— 读者在侧栏里看不到那个编号。要么逐条写出来，要么改用统一称呼（例如「线性空间的八条运算公理：加法交换律、结合律、零元、负元、数乘结合律、单位元、两条分配律」）', "CH04-S02: F-04 第 2 步的 `basis` 指不回任何东西（'边界条件 $u(z)\\\\big|_C=u(\\\\zet'）—— 必须指回定义/定理/上一步/某个详解"] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 2 / 仍开着 5；新 P0 1 条
+  ⚠ 这一轮工单没有净减少（3 → 5）
+  ↻ 补一轮：1 条 P0 从没被交回改写（最后一轮才报出来）→ 再改一次：['T-5a69a8']
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH04-S02 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH04-S02.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 0 条（丢了 3 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R3fdb7 [P1]：重跑规则：这一条已经不再报（代码判的，不需要模型引用）
+   · 工单没关掉 T-R874b4 [P1]：（这一轮没给出判定）
+   · 工单没关掉 T-R9fc09 [P1]：（这一轮没给出判定）
+   · 工单没关掉 T-R029ca [P1]：（这一轮没给出判定）
+   · 工单没关掉 T-5a69a8 [P0]：（这一轮没给出判定）
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（5 条）：
+  [P0] T-5a69a8 「记 $A=R\mathrm{e}^{\mathrm{i}\theta}$，$B=」
+  [P1] T-R029ca 「CH04-S02: F-05 第 3 步的 `basis` 指不回任何东西（'广」
+  [P1] T-R3fdb7 「CH04-S02: 《狄利克雷问题》的解释**只引了编号**（如 (1.1)–(」
+  [P1] T-R874b4 「CH04-S02: F-04 第 2 步的 `basis` 指不回任何东西（'边」
+  [P1] T-R9fc09 「CH04-S02: F-05 第 1 步的 `basis` 指不回任何东西（'广」
+记录写到 data/audit/complex-analysis-v2/CH04-S02.loop.json

@@ -1,0 +1,279 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH08-S06",
+    "text_sha256": "73daef94005127b902edfedb2266290390905fb24b6594f9e132d3da82afed96",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "73daef94005127b902edfedb2266290390905fb24b6594f9e132d3da82afed96",
+    "source": "original_text",
+    "source_path": "original_text/ch08_s06.md"
+  },
+  "unit": {
+    "unit_id": "CH08-S06",
+    "level": "section",
+    "chapter": "CH08",
+    "section": "CH08-S06",
+    "title": "平面场",
+    "anchor": "8.6"
+  },
+  "concepts": [
+    {
+      "name": "稳定场",
+      "type": "definition",
+      "formal": "我们称某个物理场是稳定的，其意思是说，这个场中所有的量都只是空间坐标的函数，而不依赖于时间变量。",
+      "source_quote": "我们称某个物理场是稳定的，其意思是说，这个场中所有的量都只是空间坐标的函数，而不依赖于时间变量。"
+    },
+    {
+      "name": "平面向量场",
+      "type": "definition",
+      "formal": "而平面向量场 $E$ 则是指一种特殊的空间向量场，在这个场中的所有向量都平行于某一个固定的平面 $S$ ，且在任一垂直于 $S$ 的直线 $l$ 上的所有点处，场向量都相等",
+      "source_quote": "而平面向量场 $E$ 则是指一种特殊的空间向量场，在这个场中的所有向量都平行于某一个固定的平面 $S$ ，且在任一垂直于 $S$ 的直线 $l$ 上的所有点处，场向量都相等"
+    },
+    {
+      "name": "平面点电荷",
+      "type": "definition",
+      "formal": "讲到平面点电荷 $q$ （放置在原点）的电场时，指的就是上述密度为 $q$ 的均匀荷电的无限长直线的电场。",
+      "source_quote": "讲到平面点电荷 $q$ （放置在原点）的电场时，指的就是上述密度为 $q$ 的均匀荷电的无限长直线的电场。"
+    },
+    {
+      "name": "平面场中的点、曲线和区域",
+      "type": "definition",
+      "formal": "在讨论平面场问题时，讲到平面场中的一点时，应理解为讲的是在该点垂直于坐标面的一条无限长直线。在讲到平面场中一条曲线 $C$ 时，应知道这是意味着一个以 $C$ 为准线，其母线垂直于 $S$ 的一个柱面。而平面场中的一个区域则是指一个相应的柱体。",
+      "source_quote": "在讨论平面场问题时，讲到平面场中的一点时，应理解为讲的是在该点垂直于坐标面的一条无限长直线。在讲到平面场中一条曲线 $C$ 时，应知道这是意味着一个以 $C$ 为准线，其母线垂直于 $S$ 的一个柱面。而平面场中的一个区域则是指一个相应的柱体。"
+    },
+    {
+      "name": "稳定平面流场",
+      "type": "definition",
+      "formal": "先讨论无源无旋的稳定平面流场, 这时 $\\boldsymbol {w} (z) = \\boldsymbol {V} = u + i v$ 表示场的速度向量.",
+      "source_quote": "先讨论无源无旋的稳定平面流场, 这时 $\\boldsymbol {w} (z) = \\boldsymbol {V} = u + i v$ 表示场的速度向量."
+    },
+    {
+      "name": "稳定平面静电场",
+      "type": "definition",
+      "formal": "对于稳定平面静电场，情况略有不同，这时 $w(z) = E = u + \\mathrm{i}v$ 表示场强向量",
+      "source_quote": "对于稳定平面静电场，情况略有不同，这时 $w(z) = E = u + \\mathrm{i}v$ 表示场强向量"
+    },
+    {
+      "name": "环量",
+      "type": "definition",
+      "formal": "$\\Gamma$ 是场 $\\pmb {w}(z)$ 沿 $C$ 的环量",
+      "source_quote": "$\\Gamma$ 是场 $\\pmb {w}(z)$ 沿 $C$ 的环量"
+    },
+    {
+      "name": "通量",
+      "type": "definition",
+      "formal": "$Q$ 是场 $\\pmb {w}(z)$ 通过 $C$ 的通量",
+      "source_quote": "$Q$ 是场 $\\pmb {w}(z)$ 通过 $C$ 的通量"
+    },
+    {
+      "name": "无源无旋场",
+      "type": "definition",
+      "formal": "若 $w(z)$ 是无源无旋场，即有 $$\\operatorname{div} w (z) = \\frac {\\partial u}{\\partial x} + \\frac {\\partial v}{\\partial y} = 0$$ $$\\operatorname{rot} w (z) = \\left(\\frac {\\partial v}{\\partial x} - \\frac {\\partial u}{\\partial y}\\right) k = 0.$$",
+      "source_quote": "若 $w(z)$ 是无源无旋场，即有 div w(z)=0, rot w(z)=0."
+    },
+    {
+      "name": "共轭调和函数",
+      "type": "property",
+      "formal": "这是 $G$ 内的一对共轭调和函数.",
+      "source_quote": "这是 $G$ 内的一对共轭调和函数."
+    },
+    {
+      "name": "正交曲线网",
+      "type": "definition",
+      "formal": "两族等值线 $\\varphi (x,y) = C_1^{\\prime}$ 及 $\\psi (x,y) = C_2^{\\prime}$ 构成正交曲线网.",
+      "source_quote": "两族等值线 $\\varphi (x,y) = C_1^{\\prime}$ 及 $\\psi (x,y) = C_2^{\\prime}$ 构成正交曲线网."
+    },
+    {
+      "name": "复势(或复位)",
+      "type": "definition",
+      "formal": "$f(z)$ 称为场的复势(或复位)，$\\varphi$ 称为势函数或速度位，$\\psi$ 称为流函数.",
+      "source_quote": "$f(z)$ 称为场的复势(或复位)，$\\varphi$ 称为势函数或速度位，$\\psi$ 称为流函数."
+    },
+    {
+      "name": "势函数或速度位",
+      "type": "definition",
+      "formal": "$\\varphi$ 称为势函数或速度位",
+      "source_quote": "$\\varphi$ 称为势函数或速度位"
+    },
+    {
+      "name": "流函数",
+      "type": "definition",
+      "formal": "$\\psi$ 称为流函数",
+      "source_quote": "$\\psi$ 称为流函数"
+    },
+    {
+      "name": "等位线",
+      "type": "definition",
+      "formal": "等值线 $\\varphi (x,y) = C_1'$ 及 $\\psi (x,y) = C_2'$ 分别称为等位线及流线.",
+      "source_quote": "等值线 $\\varphi (x,y) = C_1'$ 及 $\\psi (x,y) = C_2'$ 分别称为等位线及流线."
+    },
+    {
+      "name": "流线",
+      "type": "definition",
+      "formal": "等值线 $\\varphi (x,y) = C_1'$ 及 $\\psi (x,y) = C_2'$ 分别称为等位线及流线.",
+      "source_quote": "等值线 $\\varphi (x,y) = C_1'$ 及 $\\psi (x,y) = C_2'$ 分别称为等位线及流线."
+    },
+    {
+      "name": "高斯定理",
+      "type": "theorem",
+      "formal": "由静电学中的高斯(Gauss)定理可知 $$\\nabla \\cdot \\boldsymbol {E} = \\frac {\\partial u}{\\partial x} + \\frac {\\partial v}{\\partial y} = 4 \\pi \\rho .$$",
+      "source_quote": "由静电学中的高斯(Gauss)定理可知"
+    },
+    {
+      "name": "静电场作功恒为零",
+      "type": "property",
+      "formal": "由于在静电场中，单位电荷沿任何闭路 $C$ 绕行一周时，电场强度 $\\pmb{E}$ 所作的功恒为零，即 $$\\oint_ {c} \\boldsymbol {E} \\cdot \\mathrm{d} \\boldsymbol {l} = \\oint_ {c} u \\mathrm{d} x + v \\mathrm{d} y = 0$$ $$\\nabla \\times \\boldsymbol {E} = \\left(\\frac {\\partial v}{\\partial x} - \\frac {\\partial u}{\\partial y}\\right) \\boldsymbol {k} = 0.$$",
+      "source_quote": "由于在静电场中，单位电荷沿任何闭路 $C$ 绕行一周时，电场强度 $\\pmb{E}$ 所作的功恒为零"
+    },
+    {
+      "name": "位函数",
+      "type": "definition",
+      "formal": "依习惯把 $\\varphi_{1} = -\\varphi$ 称为静电场的位函数，等值线 $\\varphi_{1} = C_{1}^{\\prime}$ 称为等位线",
+      "source_quote": "依习惯把 $\\varphi_{1} = -\\varphi$ 称为静电场的位函数，等值线 $\\varphi_{1} = C_{1}^{\\prime}$ 称为等位线"
+    },
+    {
+      "name": "力函数",
+      "type": "definition",
+      "formal": "$\\psi$ 称为静电场的力函数,等值线 $\\psi = C_{2}$ 称为电力线",
+      "source_quote": "$\\psi$ 称为静电场的力函数,等值线 $\\psi = C_{2}$ 称为电力线"
+    },
+    {
+      "name": "电力线",
+      "type": "definition",
+      "formal": "等值线 $\\psi = C_{2}$ 称为电力线",
+      "source_quote": "等值线 $\\psi = C_{2}$ 称为电力线"
+    },
+    {
+      "name": "静电场的复势(位)",
+      "type": "definition",
+      "formal": "函数 $$\\Phi (z) = - \\mathrm{i} f (z) = \\psi + \\mathrm{i} (- \\varphi) = \\psi + \\mathrm{i} \\varphi_ {1}$$ 称为静电场的复势(位).",
+      "source_quote": "函数 $$\\Phi (z) = - \\mathrm{i} f (z) = \\psi + \\mathrm{i} (- \\varphi) = \\psi + \\mathrm{i} \\varphi_ {1}$$ 称为静电场的复势(位)."
+    },
+    {
+      "name": "电位与电场强度的关系",
+      "type": "property",
+      "formal": "$$\\nabla \\varphi_ {1} = - E.$$",
+      "source_quote": "这是熟知的电位与电场强度的关系"
+    },
+    {
+      "name": "莫雷拉定理",
+      "type": "theorem",
+      "formal": "再由莫雷拉定理, $\\overline{w}(z) = u - iv$ 是 $G$ 内的解析函数.",
+      "source_quote": "再由莫雷拉定理, $\\overline{w}(z) = u - iv$ 是 $G$ 内的解析函数."
+    },
+    {
+      "name": "叠加原理",
+      "type": "law",
+      "formal": "由叠加原理可知，这个电场的复位是 $$w = - 2 \\mathrm{i} \\sum_ {k = 1} ^ {n} q _ {k} \\mathrm{Ln} (z - z _ {k}).$$",
+      "source_quote": "由叠加原理可知，这个电场的复位是"
+    },
+    {
+      "name": "稳定平面场的基本问题",
+      "type": "definition",
+      "formal": "稳定平面场的基本问题是：已知区域 $D$ 的边界 $C$ 上的场的分布情况，要确定区域 $D$ 内的场的分布情况。",
+      "source_quote": "稳定平面场的基本问题是：已知区域 $D$ 的边界 $C$ 上的场的分布情况，要确定区域 $D$ 内的场的分布情况。"
+    },
+    {
+      "name": "拉普拉斯方程",
+      "type": "formula",
+      "formal": "$$\\Delta u = u _ {x x} + u _ {y y} = 0$$",
+      "source_quote": "即求解拉普拉斯方程的边值问题"
+    },
+    {
+      "name": "狄氏问题",
+      "type": "definition",
+      "formal": "原来区域 $D$ 内的狄氏问题 I 就化成单位圆 $G$ 内的狄氏问题 II",
+      "source_quote": "原来区域 $D$ 内的狄氏问题 I 就化成单位圆 $G$ 内的狄氏问题 II"
+    },
+    {
+      "name": "黎曼定理",
+      "type": "theorem",
+      "formal": "当区域 $D$ 满足黎曼定理的条件时，这是可能的",
+      "source_quote": "当区域 $D$ 满足黎曼定理的条件时，这是可能的"
+    },
+    {
+      "name": "泊松公式",
+      "type": "formula",
+      "formal": "在第4章中已经讲过问题Ⅱ的解可用泊松公式表示.",
+      "source_quote": "在第4章中已经讲过问题Ⅱ的解可用泊松公式表示."
+    },
+    {
+      "name": "调和函数的中值公式",
+      "type": "formula",
+      "formal": "由调和函数的中值公式，有 $$U (0) = \\frac {1}{2 \\pi} \\int_ {0} ^ {2 \\pi} g (\\varphi) d \\varphi ,$$",
+      "source_quote": "由调和函数的中值公式，有"
+    },
+    {
+      "name": "儒可夫斯基变换",
+      "type": "formula",
+      "formal": "$$w _ {2} = \\frac {1}{2} \\left(w _ {1} + \\frac {1}{w _ {1}}\\right)$$",
+      "source_quote": "再作儒可夫斯基变换"
+    },
+    {
+      "name": "格林公式",
+      "type": "formula",
+      "formal": "由格林公式，有 $$\\int_ {c} \\overline {{w}} d z = \\Gamma + \\mathrm{i} Q,$$",
+      "source_quote": "由格林公式，有"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 33,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "前面所得公式"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "稳定场",
+    "平面向量场",
+    "平面点电荷",
+    "平面场中的点、曲线和区域",
+    "稳定平面流场",
+    "稳定平面静电场",
+    "环量",
+    "通量",
+    "无源无旋场",
+    "共轭调和函数",
+    "正交曲线网",
+    "复势(或复位)",
+    "势函数或速度位",
+    "流函数",
+    "等位线",
+    "流线",
+    "高斯定理",
+    "静电场作功恒为零",
+    "位函数",
+    "力函数",
+    "电力线",
+    "静电场的复势(位)",
+    "电位与电场强度的关系",
+    "莫雷拉定理",
+    "叠加原理",
+    "稳定平面场的基本问题",
+    "拉普拉斯方程",
+    "狄氏问题",
+    "黎曼定理",
+    "泊松公式",
+    "调和函数的中值公式",
+    "儒可夫斯基变换",
+    "格林公式"
+  ]
+}

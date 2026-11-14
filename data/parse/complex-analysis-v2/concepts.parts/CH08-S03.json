@@ -1,0 +1,168 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH08-S03",
+    "text_sha256": "7d944e1214e82b3f3b6b54c0c6adef627e5a8258a340011fd375afef5bb9860f",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "7d944e1214e82b3f3b6b54c0c6adef627e5a8258a340011fd375afef5bb9860f",
+    "source": "original_text",
+    "source_path": "original_text/ch08_s03.md"
+  },
+  "unit": {
+    "unit_id": "CH08-S03",
+    "level": "section",
+    "chapter": "CH08",
+    "section": "CH08-S03",
+    "title": "分式线性变换",
+    "anchor": "8.3"
+  },
+  "concepts": [
+    {
+      "name": "分式线性变换",
+      "type": "definition",
+      "formal": "由函数 $$w = \\frac {a z + b}{c z + d}\\tag{8.1}$$ 所确定的变换称为分式线性变换 M，这里，a, b, c, d 是复常数，且  $ad - bc \\neq 0$ 。",
+      "source_quote": "由函数 $$w = \\frac {a z + b}{c z + d}\\tag{8.1}$$ 所确定的变换称为分式线性变换 M，这里，a, b, c, d 是复常数，且  $ad - bc \\neq 0$ 。"
+    },
+    {
+      "name": "整线性变换",
+      "type": "definition",
+      "formal": "当 c = 0 时，M 成为变换 L:  $w = \\alpha z + \\beta, \\alpha = a / d \\neq 0, \\beta = b / d$ ，它称为整线性变换。",
+      "source_quote": "当 c = 0 时，M 成为变换 L:  $w = \\alpha z + \\beta, \\alpha = a / d \\neq 0, \\beta = b / d$ ，它称为整线性变换。"
+    },
+    {
+      "name": "定义2",
+      "type": "definition",
+      "formal": "如果 $t = \\frac{1}{f(z)}$ 或 $t = \\frac{1}{f(1 / \\zeta)}$ 把 $z = z_0$ 或 $\\zeta = 0$ 的一个邻域保形映照成 $t = 0$ 的一个邻域，则称 $w = f(z)$ 把 $z = z_0$ 或 $z = \\infty$ 的一个邻域保形映照成 $w = \\infty$ 的一个邻域.",
+      "source_quote": "定义2 如果 $t = \\frac{1}{f(z)}$ 或 $t = \\frac{1}{f(1 / \\zeta)}$ 把 $z = z_0$ 或 $\\zeta = 0$ 的一个邻域保形映照成 $t = 0$ 的一个邻域，则称 $w = f(z)$ 把 $z = z_0$ 或 $z = \\infty$ 的一个邻域保形映照成 $w = \\infty$ 的一个邻域."
+    },
+    {
+      "name": "定理2",
+      "type": "theorem",
+      "formal": "任意一个分式线性函数 $$w = \\frac {a z + b}{c z + d}, \\quad a d - b c \\neq 0,$$ 给出一个由闭 $z$ 平面到闭 $w$ 平面的双方单值的保形变换.",
+      "source_quote": "定理2 任意一个分式线性函数 $$w = \\frac {a z + b}{c z + d}, \\quad a d - b c \\neq 0,$$ 给出一个由闭 $z$ 平面到闭 $w$ 平面的双方单值的保形变换."
+    },
+    {
+      "name": "平移变换",
+      "type": "definition",
+      "formal": "平移变换 $$T: w = z + b.$$ 这是整个平面的一个平移，每个点移动同一个向量 $b$",
+      "source_quote": "1）平移变换 $$T: w = z + b.$$ 这是整个平面的一个平移，每个点移动同一个向量 $b$"
+    },
+    {
+      "name": "旋转变换",
+      "type": "definition",
+      "formal": "旋转变换 $$R _ {1} w = \\mathrm{e} ^ {\\mathrm{i} \\theta} z, \\quad \\theta \\text {为实数.}$$ 这是以原点为中心的一个旋转，转动角为  $\\theta$ .",
+      "source_quote": "2）旋转变换 $$R _ {1} w = \\mathrm{e} ^ {\\mathrm{i} \\theta} z, \\quad \\theta \\text {为实数.}$$ 这是以原点为中心的一个旋转，转动角为  $\\theta$ ."
+    },
+    {
+      "name": "相似变换",
+      "type": "definition",
+      "formal": "相似变换 $$S: w = r z, \\quad r > 0.$$ 这是一个以原点为相似中心，而伸张系数为 r 的相似变换.",
+      "source_quote": "3）相似变换 $$S: w = r z, \\quad r > 0.$$ 这是一个以原点为相似中心，而伸张系数为 r 的相似变换."
+    },
+    {
+      "name": "倒数变换",
+      "type": "definition",
+      "formal": "倒数变换 $$I _ {1} w = \\frac {1}{z}.$$ 这个变换把单位圆周 $|z| = 1$ 变成单位圆周 $|w| = 1$. 把单位圆内（或外）部变成单位圆外（或内）部.",
+      "source_quote": "4）倒数变换 $$I _ {1} w = \\frac {1}{z}.$$ 这个变换把单位圆周 $|z| = 1$ 变成单位圆周 $|w| = 1$. 把单位圆内（或外）部变成单位圆外（或内）部."
+    },
+    {
+      "name": "定理3（保圆性）",
+      "type": "theorem",
+      "formal": "分式线性变换把圆周变为圆周.",
+      "source_quote": "定理 3（保圆性） 分式线性变换把圆周变为圆周."
+    },
+    {
+      "name": "定义3",
+      "type": "definition",
+      "formal": "设已给圆周 $C: |z - z_0| = R, 0 < R < +\\infty$，如果两个有限点 $z_1$ 及 $z_2$ 在自 $z_0$ 点出发的同一条射线上，且 $$\\left| z _ {1} - z _ {0} \\right| \\cdot \\left| z _ {2} - z _ {0} \\right| = R ^ {2}.$$ 则称 $z_{1}$ 及 $z_{2}$ 关于圆周 $C$ 对称.",
+      "source_quote": "定义3 设已给圆周 $C: |z - z_0| = R, 0 < R < +\\infty$，如果两个有限点 $z_1$ 及 $z_2$ 在自 $z_0$ 点出发的同一条射线上，且 $$\\left| z _ {1} - z _ {0} \\right| \\cdot \\left| z _ {2} - z _ {0} \\right| = R ^ {2}.$$ 则称 $z_{1}$ 及 $z_{2}$ 关于圆周 $C$ 对称."
+    },
+    {
+      "name": "引理",
+      "type": "proposition",
+      "formal": "两点 $z_{1}$ 及 $z_{2}$ 关于圆周 $C$ 对称的充分必要条件是：过 $z_{1}$ 及 $z_{2}$ 的任何圆与 $C$ 直交.",
+      "source_quote": "引理 两点 $z_{1}$ 及 $z_{2}$ 关于圆周 $C$ 对称的充分必要条件是：过 $z_{1}$ 及 $z_{2}$ 的任何圆与 $C$ 直交."
+    },
+    {
+      "name": "切割线定理",
+      "type": "theorem",
+      "formal": "由平面几何中的切割线定理，得 $$\\left| z ^ {\\prime} - z _ {0} \\right| ^ {2} = \\left| z _ {1} - z _ {0} \\right| \\cdot \\left| z _ {2} - z _ {0} \\right| = R ^ {2}.$$",
+      "source_quote": "由平面几何中的切割线定理，得 $$\\left| z ^ {\\prime} - z _ {0} \\right| ^ {2} = \\left| z _ {1} - z _ {0} \\right| \\cdot \\left| z _ {2} - z _ {0} \\right| = R ^ {2}.$$"
+    },
+    {
+      "name": "定理4",
+      "type": "theorem",
+      "formal": "分式线性变换把对某一圆周为对称的点变为对这个圆周的像圆周对称的点.",
+      "source_quote": "定理4 分式线性变换把对某一圆周为对称的点变为对这个圆周的像圆周对称的点."
+    },
+    {
+      "name": "定理5",
+      "type": "theorem",
+      "formal": "任给 $z$ 平面上三个不同点 $z_{1}, z_{2}, z_{3}$ 和 $w$ 平面上三个不同点 $w_{1}, w_{2}, w_{3}$，存在一个唯一的分式线性变换，把 $z_{1}, z_{2}, z_{3}$ 分别变成 $w_{1}, w_{2}, w_{3}$.",
+      "source_quote": ""
+    },
+    {
+      "name": "推论",
+      "type": "corollary",
+      "formal": "设 $w = w(z)$ 是一分式线性变换，且 $w(z_{1}) = w_{1}, w(z_{2}) = w_{2}$，则此分式线性变换可表为 $$\\frac {w - w _ {1}}{w - w _ {2}} = k \\frac {z - z _ {1}}{z - z _ {2}}, \\quad k \\text {为任意复常数}.$$ 特别地，若 $w(z_{1}) = 0, w(z_{2}) = \\infty$ ，则有 $$w = k \\frac {z - z _ {1}}{z - z _ {2}}.$$",
+      "source_quote": "推论 设 $w = w(z)$ 是一分式线性变换，且 $w(z_{1}) = w_{1}, w(z_{2}) = w_{2}$，则此分式线性变换可表为 $$\\frac {w - w _ {1}}{w - w _ {2}} = k \\frac {z - z _ {1}}{z - z _ {2}}, \\quad k \\text {为任意复常数}.$$ 特别地，若 $w(z_{1}) = 0, w(z_{2}) = \\infty$ ，则有 $$w = k \\frac {z - z _ {1}}{z - z _ {2}}.$$"
+    },
+    {
+      "name": "分式线性变换的逆变换",
+      "type": "definition",
+      "formal": "M 的逆变换也是分式线性变换  $M^{-1}$ : $$z = \\frac {d w - b}{- c w + a}.$$ 且由定义有 $z(a / c) = \\infty, z(\\infty) = -d / c.$",
+      "source_quote": "M 的逆变换也是分式线性变换  $M^{-1}$ : $$z = \\frac {d w - b}{- c w + a}.$$ 且由定义有 $z(a / c) = \\infty, z(\\infty) = -d / c.$"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 16,
+    "漏掉的具名结论": [
+      "定义2",
+      "定理2",
+      "定义3",
+      "引理",
+      "定理4",
+      "定理5",
+      "推论"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "上述引理即得本定理"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "分式线性变换",
+    "整线性变换",
+    "定义2",
+    "定理2",
+    "平移变换",
+    "旋转变换",
+    "相似变换",
+    "倒数变换",
+    "定理3（保圆性）",
+    "定义3",
+    "引理",
+    "切割线定理",
+    "定理4",
+    "定理5",
+    "推论",
+    "分式线性变换的逆变换"
+  ]
+}

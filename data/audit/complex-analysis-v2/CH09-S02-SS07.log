@@ -1,0 +1,45 @@
+—— CH09-S02-SS07 回路开始（run 2026-10-03 09:49:36）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 1, '确定性已知误报': 0, '教案硬问题': 5, '教案问题明细': ['CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'], '教案提醒': 4, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 5 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [2] 条 → 并集 1 条工单
+    T-R5b891 [P1] hits=5 「CH09-S02-SS07: 有一张图没声明**服务什么** （缺 co」
+  · 这一轮的 1 条工单**都没有成品原句**（规则消息本身不是教案里的句子）→ 补丁模式改不了，**改用整篇重写**
+  · 补丁改不了 → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S02-SS07 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH09-S02-SS07.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 5 条：['CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 0 / 仍开着 1；新 P0 0 条
+  ⚠ 这一轮工单没有净减少（1 → 1）
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 0 条
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R5b891 [P1]：当前成品仍只写“（插图）”，没有声明该图服务什么，也没有 concept_id/serves 标注。
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（1 条）：
+  [P1] T-R5b891 「CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concep」
+记录写到 data/audit/complex-analysis-v2/CH09-S02-SS07.loop.json
+—— CH09-S02-SS07 回路开始（run 2026-10-03 11:06:17）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 1, '确定性已知误报': 0, '教案硬问题': 5, '教案问题明细': ['CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'], '教案提醒': 4, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 5 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  上一趟的 ['T-R5b891', 'T-R5b891'] 原句已不在成品里 → 视为已改，不再背
+  每次 [2] 条 → 并集 1 条工单
+    T-R5b891 [P1] hits=5 「CH09-S02-SS07: 有一张图没声明**服务什么** （缺 co」
+  · 这一轮的 1 条工单**都没有成品原句**（规则消息本身不是教案里的句子）→ 补丁模式改不了，**改用整篇重写**
+  · 补丁改不了 → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S02-SS07 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH09-S02-SS07.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 5 条：['CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 0 / 仍开着 1；新 P0 0 条
+  ⚠ 这一轮工单没有净减少（1 → 1）
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 0 条
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R5b891 [P1]：当前成品仍只写“（插图）”，没有声明该图服务什么，也没有 concept_id/serves 标注。
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（1 条）：
+  [P1] T-R5b891 「CH09-S02-SS07: 有一张图没声明**服务什么** （缺 concep」
+记录写到 data/audit/complex-analysis-v2/CH09-S02-SS07.loop.json

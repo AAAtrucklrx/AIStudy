@@ -1,0 +1,2437 @@
+{
+  "schema_version": "WholebookAuthorReviewV1",
+  "chapter_range": [
+    "CH07",
+    "CH08",
+    "CH09"
+  ],
+  "unit_count": 29,
+  "main_conclusion_count": 128,
+  "supplementary_conclusion_count": 4,
+  "coverage_method": "正文空行分段后的唯一完整段落精确绑定；允许同段支持多个ID，不用空标签。",
+  "tables_read": {
+    "path": "data/study-revision-20261029/transform-tables.json",
+    "rows": 78,
+    "policy": "78表项沿用已核数学订正与统一分支约定，由root自动接入；不在正文机械复制全部表项。"
+  },
+  "units": {
+    "CH07": {
+      "unit_id": "CH07",
+      "source_path": "original_text/ch07.md",
+      "source_lines": 3,
+      "source_sha256": "beb123da3f5c6963038fbe08598b8c0ddff18c76859be471f98e3a785ee0d6d4",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "零点孤立性决定恒等；恒等保证新旧表达式可拼接；参数积分与递推式把Gamma推广到更大域。",
+      "media_correspondence": [],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [],
+        "supplementary": [],
+        "bound": [],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [],
+      "reader_anchors_preserved": [],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH07-S01": {
+      "unit_id": "CH07-S01",
+      "source_path": "original_text/ch07_s01.md",
+      "source_lines": 66,
+      "source_sha256": "7d42135767213da5dfb1f6fec8ce208066d1e71b67979ffd235b3a7d7efb4292",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "由相减变成零点问题，再由实幂级数推广、区域拼接和几何级数圆链区分唯一性与存在性。",
+      "media_correspondence": [
+        {
+          "id": "CH07-C",
+          "kind": "continuation",
+          "marker": "[[TEACHING_VISUAL:CH07-C]]",
+          "source_evidence": "study-visuals.js continuation 模型实中心范围[-.8,.75]；正文明确a=-.5越旧圆、正中心圆包含于旧圆，未声称可移动复中心。",
+          "verification_scope": "源码、模型参数与数学对象核对；本分工未使用浏览器，最终2/3正文+1/3图的集成显示由root统一核验。"
+        }
+      ],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH07-S01-C001",
+          "CH07-S01-C002",
+          "CH07-S01-C003",
+          "CH07-S01-C004",
+          "CH07-S01-C005",
+          "CH07-S01-C006"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH07-S01-C001",
+          "CH07-S01-C002",
+          "CH07-S01-C003",
+          "CH07-S01-C004",
+          "CH07-S01-C005",
+          "CH07-S01-C006"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH07-S01-C001",
+          "start_line": 4,
+          "end_line": 7,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S01-C002",
+          "start_line": 20,
+          "end_line": 28,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S01-C003",
+          "start_line": 31,
+          "end_line": 32,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S01-C004",
+          "start_line": 33,
+          "end_line": 37,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S01-C005",
+          "start_line": 40,
+          "end_line": 46,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S01-C006",
+          "start_line": 46,
+          "end_line": 65,
+          "paragraph_count": 2
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-2a93581bb8f6c952ec99",
+        "#reader-3fd1347ac23d891e4a9f",
+        "#reader-9b9fbe669229112bfec6"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH07-S02": {
+      "unit_id": "CH07-S02",
+      "source_path": "original_text/ch07_s02.md",
+      "source_lines": 127,
+      "source_sha256": "56d213b69d1be93bd78fadfe2d8ca7e66a6fe7debf5ff11cf4f7ad3d828f8f72",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "有限参数积分可以求导；无穷端点需统一可积控制；Gamma零端和无穷端分开，递推与Beta关系向后连到拉氏变换和SC系数。",
+      "media_correspondence": [],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH07-S02-C001",
+          "CH07-S02-C002",
+          "CH07-S02-C003",
+          "CH07-S02-C004",
+          "CH07-S02-C005",
+          "CH07-S02-C006",
+          "CH07-S02-C007",
+          "CH07-S02-C008",
+          "CH07-S02-C009",
+          "CH07-S02-C010",
+          "CH07-S02-C011",
+          "CH07-S02-C012",
+          "CH07-S02-C013",
+          "CH07-S02-C014"
+        ],
+        "supplementary": [
+          "CH07-S02-S001"
+        ],
+        "bound": [
+          "CH07-S02-C001",
+          "CH07-S02-C002",
+          "CH07-S02-C003",
+          "CH07-S02-C004",
+          "CH07-S02-C005",
+          "CH07-S02-C006",
+          "CH07-S02-C007",
+          "CH07-S02-C008",
+          "CH07-S02-C009",
+          "CH07-S02-C012",
+          "CH07-S02-C010",
+          "CH07-S02-C011",
+          "CH07-S02-C013",
+          "CH07-S02-C014",
+          "CH07-S02-S001"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH07-S02-C001",
+          "start_line": 4,
+          "end_line": 9,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S02-C002",
+          "start_line": 10,
+          "end_line": 13,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S02-C003",
+          "start_line": 23,
+          "end_line": 27,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S02-C004",
+          "start_line": 28,
+          "end_line": 29,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S02-C005",
+          "start_line": 30,
+          "end_line": 42,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S02-C006",
+          "start_line": 43,
+          "end_line": 52,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S02-C007",
+          "start_line": 53,
+          "end_line": 57,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S02-C008",
+          "start_line": 58,
+          "end_line": 68,
+          "paragraph_count": 2
+        },
+        {
+          "id": "CH07-S02-C009",
+          "start_line": 69,
+          "end_line": 69,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S02-C010",
+          "start_line": 71,
+          "end_line": 80,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S02-C011",
+          "start_line": 72,
+          "end_line": 89,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S02-C012",
+          "start_line": 74,
+          "end_line": 84,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S02-C013",
+          "start_line": 90,
+          "end_line": 93,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S02-C014",
+          "start_line": 94,
+          "end_line": 99,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH07-S02-S001",
+          "start_line": 124,
+          "end_line": 127,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-bd86abf06eedd8ae925f",
+        "#reader-c3f823a39e985ca2de22"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。",
+      "cross_chapter_links": "Gamma的参数积分解析性接CH09收敛理论，Gamma幂积分接CH09-S01，Beta比值接CH08-S05三角形尺度。"
+    },
+    "CH08": {
+      "unit_id": "CH08",
+      "source_path": "original_text/ch08.md",
+      "source_lines": 3,
+      "source_sha256": "9822cc20523166cfa14799447ab4f131d444a0f5cb7387fe23c0befbcda1d7c4",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "用非零导数解释局部旋转伸缩，单叶性保证全域可逆，再以边界和内部测试点组织各类映照及场的应用。",
+      "media_correspondence": [],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [],
+        "supplementary": [],
+        "bound": [],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [],
+      "reader_anchors_preserved": [],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH08-S01": {
+      "unit_id": "CH08-S01",
+      "source_path": "original_text/ch08_s01.md",
+      "source_lines": 23,
+      "source_sha256": "a7ed403d5f9e509fc4ad916896847e8d98d5822938cc9b004046a6371e03ea72",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "同一个非零复乘数同时解释切线旋转、交角不变和各向相同的局部长度比。",
+      "media_correspondence": [
+        {
+          "id": "CH08-D",
+          "kind": "derivative",
+          "marker": "[[TEACHING_VISUAL:CH08-D]]",
+          "source_evidence": "study-visuals.js derivative 模型确为z²；真实像绿色、一阶近似金色；非零预设z0=(.7,.4)，正文明确导数零点限制。",
+          "verification_scope": "源码、模型参数与数学对象核对；本分工未使用浏览器，最终2/3正文+1/3图的集成显示由root统一核验。"
+        }
+      ],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH08-S01-C001",
+          "CH08-S01-C002",
+          "CH08-S01-C003"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH08-S01-C001",
+          "CH08-S01-C002",
+          "CH08-S01-C003"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH08-S01-C001",
+          "start_line": 3,
+          "end_line": 12,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S01-C002",
+          "start_line": 13,
+          "end_line": 17,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S01-C003",
+          "start_line": 19,
+          "end_line": 23,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-1bd89972c89d96298652",
+        "#reader-5d27e85204112b8013ea"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH08-S02": {
+      "unit_id": "CH08-S02",
+      "source_path": "original_text/ch08_s02.md",
+      "source_lines": 23,
+      "source_sha256": "1af329d710a1db3610fac2b06fbb0b6af7fffc4ce64b7cc6a709c05cdedfe5b8",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "单叶性排除高阶局部折叠；复合和逆映照引出单位圆盘中转；黎曼定理的存在性与构造区分。",
+      "media_correspondence": [],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH08-S02-C001",
+          "CH08-S02-C002",
+          "CH08-S02-C003",
+          "CH08-S02-C004"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH08-S02-C001",
+          "CH08-S02-C002",
+          "CH08-S02-C003",
+          "CH08-S02-C004"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH08-S02-C001",
+          "start_line": 4,
+          "end_line": 8,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S02-C002",
+          "start_line": 9,
+          "end_line": 13,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S02-C003",
+          "start_line": 14,
+          "end_line": 14,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S02-C004",
+          "start_line": 15,
+          "end_line": 22,
+          "paragraph_count": 2
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-bb2d6838ba2521a41bed",
+        "#reader-de9fe6c575cf2f88931f",
+        "#reader-e255810c70f0e6477d52"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH08-S03": {
+      "unit_id": "CH08-S03",
+      "source_path": "original_text/ch08_s03.md",
+      "source_lines": 126,
+      "source_sha256": "7d944e1214e82b3f3b6b54c0c6adef627e5a8258a340011fd375afef5bb9860f",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "从可逆分式与广义圆方程推出保圆，再用对称点、交比、内点定侧构造圆域与环域映照。",
+      "media_correspondence": [
+        {
+          "id": "CH08-M",
+          "kind": "mobius",
+          "marker": "[[TEACHING_VISUAL:CH08-M]]",
+          "source_evidence": "study-visuals.js mobius 模型仅实参数a，正文明确是通式的实切片并区分保圆和等距。",
+          "verification_scope": "源码、模型参数与数学对象核对；本分工未使用浏览器，最终2/3正文+1/3图的集成显示由root统一核验。"
+        }
+      ],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH08-S03-C001",
+          "CH08-S03-C002",
+          "CH08-S03-C003",
+          "CH08-S03-C004",
+          "CH08-S03-C005",
+          "CH08-S03-C006",
+          "CH08-S03-C007",
+          "CH08-S03-C008",
+          "CH08-S03-C009",
+          "CH08-S03-C010",
+          "CH08-S03-C011",
+          "CH08-S03-C012",
+          "CH08-S03-C013"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH08-S03-C001",
+          "CH08-S03-C002",
+          "CH08-S03-C003",
+          "CH08-S03-C004",
+          "CH08-S03-C005",
+          "CH08-S03-C006",
+          "CH08-S03-C007",
+          "CH08-S03-C008",
+          "CH08-S03-C009",
+          "CH08-S03-C010",
+          "CH08-S03-C011",
+          "CH08-S03-C012",
+          "CH08-S03-C013"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH08-S03-C001",
+          "start_line": 3,
+          "end_line": 8,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S03-C002",
+          "start_line": 9,
+          "end_line": 16,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S03-C003",
+          "start_line": 17,
+          "end_line": 36,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S03-C004",
+          "start_line": 37,
+          "end_line": 46,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S03-C005",
+          "start_line": 41,
+          "end_line": 45,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S03-C006",
+          "start_line": 48,
+          "end_line": 52,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S03-C007",
+          "start_line": 62,
+          "end_line": 63,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S03-C008",
+          "start_line": 64,
+          "end_line": 73,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S03-C009",
+          "start_line": 84,
+          "end_line": 88,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S03-C010",
+          "start_line": 89,
+          "end_line": 91,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S03-C011",
+          "start_line": 92,
+          "end_line": 99,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S03-C012",
+          "start_line": 100,
+          "end_line": 115,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S03-C013",
+          "start_line": 116,
+          "end_line": 126,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-7185e2efa9e559a3876c",
+        "#reader-9a954f5286d1b897333f"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。",
+      "retained_math_corrections": "半径R圆盘映单位圆的分子保留R；共轭分母与环域内半径2/3均保留。"
+    },
+    "CH08-S04": {
+      "unit_id": "CH08-S04",
+      "source_path": "original_text/ch08_s04.md",
+      "source_lines": 3,
+      "source_sha256": "6e859ad1e463cc76c16a6a1984da2a92884d723f0296175a59e2e14b175bda09",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "先用分式线性整理边界，再选择有合适单叶范围的幂、根、指数或对数完成标准域。",
+      "media_correspondence": [],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH08-S04-C001"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH08-S04-C001"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH08-S04-C001",
+          "start_line": 3,
+          "end_line": 3,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH08-S04-SS01": {
+      "unit_id": "CH08-S04-SS01",
+      "source_path": "original_text/ch08_s04_ss01.md",
+      "source_lines": 52,
+      "source_sha256": "2bff2f9371dafb74f631a50d9415c4567fd0d6aabeb3de8ca35212b5a2d36e7d",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "极坐标把幂变换变成辐角倍乘；沿中间域选根式分支，以内点定侧完成半圆、透镜和双割线三例。",
+      "media_correspondence": [
+        {
+          "id": "CH08-PATH",
+          "request_id": "MR-bcd5babe0b3a31c17182",
+          "marker": "[[TEACHING_MEDIA:CH08-PATH]]",
+          "source_video": "/Users/huang/Documents/ChatGPT/ai for study项目的改进/delivery/复变函数-教材连贯版-20261029/book/assets/narrated/CH08-S04-SS01/MR-bcd5babe0b3a31c17182/narrated.mp4",
+          "step_text_and_timing": [
+            {
+              "step_id": "S1",
+              "start": 0,
+              "end": 13,
+              "display_markdown": "先追踪原半圆域的两条边界。直径变成负实轴，半圆弧变成负虚轴。两条射线虽然已确定，像域在哪一侧还需要检查。\n$t=(z+1)/(z-1)$"
+            },
+            {
+              "step_id": "S2",
+              "start": 13,
+              "end": 23.333333,
+              "display_markdown": "取原域内部的点，二分之一乘虚单位。它的像实部和虚部都为负，所以整个像域位于第三象限。\n$z=\\mathrm i/2\\mapsto t=(-3-4\\mathrm i)/5$"
+            },
+            {
+              "step_id": "S3",
+              "start": 23.333333,
+              "end": 33.633333,
+              "display_markdown": "现在平方把每个点的辐角加倍。原来四分之一圈的角域，张开成半圈，同时模也取平方。\n$w=t^2;\\quad \\Delta\\arg w=2\\Delta\\arg t$"
+            },
+            {
+              "step_id": "S4",
+              "start": 33.633333,
+              "end": 44.233333,
+              "display_markdown": "两条边界落到实轴两侧，内部落在上方。因此这两步合起来，将上半单位圆一一映到上半平面。\n$w=\\left(\\frac{z+1}{z-1}\\right)^2$"
+            }
+          ],
+          "verification_scope": "实视频文件存在；逐步display_markdown与时码已核对正文，未在本分工声称完成逐帧或播放器审查。"
+        }
+      ],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH08-S04-SS01-C001",
+          "CH08-S04-SS01-C002",
+          "CH08-S04-SS01-C003",
+          "CH08-S04-SS01-C004",
+          "CH08-S04-SS01-C005",
+          "CH08-S04-SS01-C006"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH08-S04-SS01-C001",
+          "CH08-S04-SS01-C002",
+          "CH08-S04-SS01-C003",
+          "CH08-S04-SS01-C004",
+          "CH08-S04-SS01-C005",
+          "CH08-S04-SS01-C006"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH08-S04-SS01-C001",
+          "start_line": 3,
+          "end_line": 7,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S04-SS01-C002",
+          "start_line": 8,
+          "end_line": 16,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S04-SS01-C003",
+          "start_line": 17,
+          "end_line": 21,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S04-SS01-C004",
+          "start_line": 22,
+          "end_line": 30,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S04-SS01-C005",
+          "start_line": 31,
+          "end_line": 41,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S04-SS01-C006",
+          "start_line": 43,
+          "end_line": 52,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-1264d611226dc7a6d423",
+        "#reader-5976c37b4d29d101bce8",
+        "#reader-5c37e6eb2f98329dcfa5"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH08-S04-SS02": {
+      "unit_id": "CH08-S04-SS02",
+      "source_path": "original_text/ch08_s04_ss02.md",
+      "source_lines": 23,
+      "source_sha256": "7c99c3adaa4174065cc78aaa638150466e88cedc6a1957fc49860fc3197fb25a",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "指数把实部与虚部分别变成对数模和辐角；对数固定一支后反向展开；月牙域先定角域位置再校正条带高度。",
+      "media_correspondence": [
+        {
+          "id": "CH08-LOGPATH",
+          "request_id": "MR-6f09376275a8f573a25f",
+          "marker": "[[TEACHING_MEDIA:CH08-LOGPATH]]",
+          "source_video": "/Users/huang/Documents/ChatGPT/ai for study项目的改进/delivery/复变函数-教材连贯版-20261029/book/assets/narrated/CH08-S04-SS02/MR-6f09376275a8f573a25f/narrated.mp4",
+          "step_text_and_timing": [
+            {
+              "step_id": "S1",
+              "start": 0,
+              "end": 15.266667,
+              "display_markdown": "先把两圆的交点送到零和无穷远。圆弧因此拉成射线，但我们还必须检查角域的实际位置。这里两条边界的辐角分别是$\\pi$加$\\alpha$与$\\pi$加$\\beta$。\n$t=(z+a)/(z-a)$"
+            },
+            {
+              "step_id": "S2",
+              "start": 15.266667,
+              "end": 26,
+              "display_markdown": "角域避开正实轴的割线，因而可以连续取这一支对数。辐角成为虚部，两条射线对应两条水平边界。\n$u=\\log t;\\quad \\pi+\\alpha<\\operatorname{Im}u<\\pi+\\beta$"
+            },
+            {
+              "step_id": "S3",
+              "start": 26,
+              "end": 38.7,
+              "display_markdown": "最后先把下边界平移到零，再把宽度缩放为$h$。蓝色和橙色边界准确落在虚部为零与$h$的位置。\n$w=\\frac h{\\beta-\\alpha}[u-\\mathrm i(\\pi+\\alpha)]$"
+            }
+          ],
+          "verification_scope": "实视频文件存在；逐步display_markdown与时码已核对正文，未在本分工声称完成逐帧或播放器审查。"
+        }
+      ],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH08-S04-SS02-C001",
+          "CH08-S04-SS02-C002",
+          "CH08-S04-SS02-C003"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH08-S04-SS02-C001",
+          "CH08-S04-SS02-C002",
+          "CH08-S04-SS02-C003"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH08-S04-SS02-C001",
+          "start_line": 3,
+          "end_line": 3,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S04-SS02-C002",
+          "start_line": 4,
+          "end_line": 7,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S04-SS02-C003",
+          "start_line": 8,
+          "end_line": 23,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-da596b71c510a0b429e5"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH08-S04-SS03": {
+      "unit_id": "CH08-S04-SS03",
+      "source_path": "original_text/ch08_s04_ss03.md",
+      "source_lines": 52,
+      "source_sha256": "a44801ee6579db2c203e7fd106e283678c38baaa1a36a90a0503d5a82192770a",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "倒数点对判单叶；圆和射线分别变椭圆与双曲线；通过测试点固定逆根式，再将长链复合的分支带到最终式。",
+      "media_correspondence": [
+        {
+          "id": "CH08-ELLIPSE",
+          "request_id": "MR-f0719891edd7a809fc37",
+          "marker": "[[TEACHING_MEDIA:CH08-ELLIPSE]]",
+          "source_video": "/Users/huang/Documents/ChatGPT/ai for study项目的改进/delivery/复变函数-教材连贯版-20261029/book/assets/narrated/CH08-S04-SS03/MR-f0719891edd7a809fc37/narrated.mp4",
+          "step_text_and_timing": [
+            {
+              "step_id": "S1",
+              "start": 0,
+              "end": 12.1,
+              "display_markdown": "先认清两个平面。左边是原圆，右边是像椭圆。像椭圆的两个焦点固定在一和负一，两条半轴随半径变化。\n$a_r=(r+r^{-1})/2;\\quad b_r=(r^{-1}-r)/2$"
+            },
+            {
+              "step_id": "S2",
+              "start": 12.1,
+              "end": 22.433333,
+              "display_markdown": "半径从零点一增到零点五。原圆变大，但像椭圆反而向内收缩，因为倒数项的影响正在减弱。\n$0.1\\le r\\le0.5$"
+            },
+            {
+              "step_id": "S3",
+              "start": 22.433333,
+              "end": 33.633333,
+              "display_markdown": "当半径为二分之一时，长半轴是一点二五，短半轴是零点七五。两者仍为正，所以这时还是真正的椭圆。\n$r=1/2;\\quad a_r=5/4,\\ b_r=3/4$"
+            },
+            {
+              "step_id": "S4",
+              "start": 33.633333,
+              "end": 42.366666,
+              "display_markdown": "半径继续接近一。像的宽度变化已经很小，高度却继续减小，椭圆逐渐变扁。\n$r\\to1^-$"
+            },
+            {
+              "step_id": "S5",
+              "start": 42.366666,
+              "end": 52.433333,
+              "display_markdown": "半径零点九时，长半轴已很接近一，短半轴还没有消失。不要把近似线段当成已经到达极限。\n$a_{0.9}\\approx1.006;\\quad b_{0.9}>0$"
+            },
+            {
+              "step_id": "S6",
+              "start": 52.433333,
+              "end": 60.466666,
+              "display_markdown": "半径增到零点九九，短半轴进一步趋零，像曲线越来越靠近固定的焦点线段。\n$b_r=(r^{-1}-r)/2\\to0$"
+            },
+            {
+              "step_id": "S7",
+              "start": 60.466666,
+              "end": 71.199999,
+              "display_markdown": "最终极限中，长半轴趋于一，短半轴趋于零，椭圆退成负一到一的线段。这就是像域中割线的来源。\n$a_r\\to1;\\quad b_r\\to0;\\quad J(|z|=1)=[-1,1]$"
+            }
+          ],
+          "verification_scope": "实视频文件存在；逐步display_markdown与时码已核对正文，未在本分工声称完成逐帧或播放器审查。",
+          "poster_preservation": {
+            "step_id": "S3",
+            "fraction": 0.6,
+            "actual_frame_seconds": 29.166667,
+            "poster": "/Users/huang/Documents/ChatGPT/ai for study项目的改进/delivery/复变函数-教材连贯版-20261029/book/assets/narrated/CH08-S04-SS03/MR-f0719891edd7a809fc37/poster.png",
+            "required_objects": [
+              "z平面原圆及单位圆参照",
+              "w平面橙色椭圆",
+              "固定焦点±1",
+              "半轴a_r与b_r及非零读数"
+            ],
+            "reason": "r=0.50的停顿帧中，左侧原圆与单位圆参照、右侧完整橙色椭圆、固定焦点±1、两条半轴及a=1.250和b=0.750数值仍可分辨。r=0.90候选图短轴已太薄，封面难以认清椭圆和两条半轴；末态线段会遮蔽本动画追踪的对象。"
+          }
+        }
+      ],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH08-S04-SS03-C001",
+          "CH08-S04-SS03-C002",
+          "CH08-S04-SS03-C003",
+          "CH08-S04-SS03-C004",
+          "CH08-S04-SS03-C005",
+          "CH08-S04-SS03-C006",
+          "CH08-S04-SS03-C007"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH08-S04-SS03-C001",
+          "CH08-S04-SS03-C002",
+          "CH08-S04-SS03-C003",
+          "CH08-S04-SS03-C004",
+          "CH08-S04-SS03-C005",
+          "CH08-S04-SS03-C006",
+          "CH08-S04-SS03-C007"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH08-S04-SS03-C001",
+          "start_line": 3,
+          "end_line": 10,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S04-SS03-C002",
+          "start_line": 11,
+          "end_line": 19,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S04-SS03-C003",
+          "start_line": 19,
+          "end_line": 31,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S04-SS03-C004",
+          "start_line": 20,
+          "end_line": 22,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S04-SS03-C005",
+          "start_line": 23,
+          "end_line": 31,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S04-SS03-C006",
+          "start_line": 33,
+          "end_line": 45,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S04-SS03-C007",
+          "start_line": 46,
+          "end_line": 52,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-9829042aa45203a81879"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。",
+      "poster_review": "保持S3内部r=1/2帧，a=5/4和b=3/4都非零；不退回t=0、不用r=.9近线段帧代表整椭圆。"
+    },
+    "CH08-S05": {
+      "unit_id": "CH08-S05",
+      "source_path": "original_text/ch08_s05.md",
+      "source_lines": 105,
+      "source_sha256": "48a106f52abad2fae0f4894393d77c13d2ae5a7a0bc79f1ed4352a045dccd369",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "局部内角决定导数指数，积分把各直边接起；预顶点位置需由边长解出，三例分别接Beta、对数割痕与椭圆积分。",
+      "media_correspondence": [
+        {
+          "id": "CH08-SCANGLE",
+          "request_id": "MR-73a64bc0be3983f907f0",
+          "marker": "[[TEACHING_MEDIA:CH08-SCANGLE]]",
+          "source_video": "/Users/huang/Documents/ChatGPT/ai for study项目的改进/delivery/复变函数-教材连贯版-20261029/book/assets/narrated/CH08-S05/MR-73a64bc0be3983f907f0/narrated.mp4",
+          "step_text_and_timing": [
+            {
+              "step_id": "S1",
+              "start": 0,
+              "end": 10.6,
+              "display_markdown": "在原平面中，边界点附近是上半圆盘。沿小半圆从左到右绕过该点，连续辐角从$\\pi$减到零。\n$\\Delta\\arg(z-a_k)=-\\pi$"
+            },
+            {
+              "step_id": "S2",
+              "start": 10.6,
+              "end": 21.833333,
+              "display_markdown": "在像平面中，这段绕行连接顶点两侧的直边。边的方向改变对应外角，像域内部保留的角则是$\\beta$乘$\\pi$。\n$\\alpha_k+\\beta_k=1$"
+            },
+            {
+              "step_id": "S3",
+              "start": 21.833333,
+              "end": 34.566666,
+              "display_markdown": "为了把$\\pi$角映成$\\beta$乘$\\pi$角，函数在顶点附近应像$\\beta$次幂。求导后指数减一，这就解释$SC$公式中每个因子的来源。\n$f(z)-A_k\\sim C_k(z-a_k)^{\\beta_k};\\quad f'(z)\\sim C_k\\beta_k(z-a_k)^{\\beta_k-1}$"
+            }
+          ],
+          "verification_scope": "实视频文件存在；逐步display_markdown与时码已核对正文，未在本分工声称完成逐帧或播放器审查。"
+        }
+      ],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH08-S05-C001",
+          "CH08-S05-C002",
+          "CH08-S05-C003",
+          "CH08-S05-C004",
+          "CH08-S05-C005",
+          "CH08-S05-C006",
+          "CH08-S05-C007"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH08-S05-C001",
+          "CH08-S05-C002",
+          "CH08-S05-C003",
+          "CH08-S05-C004",
+          "CH08-S05-C005",
+          "CH08-S05-C006",
+          "CH08-S05-C007"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH08-S05-C001",
+          "start_line": 5,
+          "end_line": 21,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S05-C002",
+          "start_line": 22,
+          "end_line": 38,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S05-C003",
+          "start_line": 38,
+          "end_line": 48,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S05-C004",
+          "start_line": 49,
+          "end_line": 58,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S05-C005",
+          "start_line": 59,
+          "end_line": 68,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S05-C006",
+          "start_line": 69,
+          "end_line": 86,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S05-C007",
+          "start_line": 87,
+          "end_line": 104,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-6e4d2e5c86266ace6c39",
+        "#reader-8e23f43597377da8c944",
+        "#reader-ca191f52a9a86ef8df0b"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH08-S06": {
+      "unit_id": "CH08-S06",
+      "source_path": "original_text/ch08_s06.md",
+      "source_lines": 242,
+      "source_sha256": "73daef94005127b902edfedb2266290390905fb24b6594f9e132d3da82afed96",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "场的环量通量先合成共轭场积分，再分清流势与电势约定；边界值随保形映照搬运，各物理例保留完整可用结论。",
+      "media_correspondence": [],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH08-S06-C001",
+          "CH08-S06-C002",
+          "CH08-S06-C003",
+          "CH08-S06-C004",
+          "CH08-S06-C005",
+          "CH08-S06-C006",
+          "CH08-S06-C007",
+          "CH08-S06-C008",
+          "CH08-S06-C009",
+          "CH08-S06-C010",
+          "CH08-S06-C011",
+          "CH08-S06-C012",
+          "CH08-S06-C013",
+          "CH08-S06-C014",
+          "CH08-S06-C015"
+        ],
+        "supplementary": [
+          "CH08-S06-S001"
+        ],
+        "bound": [
+          "CH08-S06-C001",
+          "CH08-S06-C002",
+          "CH08-S06-C003",
+          "CH08-S06-C004",
+          "CH08-S06-C007",
+          "CH08-S06-C005",
+          "CH08-S06-C006",
+          "CH08-S06-C008",
+          "CH08-S06-C009",
+          "CH08-S06-C010",
+          "CH08-S06-C011",
+          "CH08-S06-C012",
+          "CH08-S06-C013",
+          "CH08-S06-C014",
+          "CH08-S06-C015",
+          "CH08-S06-S001"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH08-S06-C001",
+          "start_line": 4,
+          "end_line": 8,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S06-C002",
+          "start_line": 12,
+          "end_line": 17,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S06-C003",
+          "start_line": 18,
+          "end_line": 30,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S06-C004",
+          "start_line": 31,
+          "end_line": 36,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S06-C005",
+          "start_line": 37,
+          "end_line": 58,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S06-C006",
+          "start_line": 59,
+          "end_line": 61,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S06-C007",
+          "start_line": 62,
+          "end_line": 74,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S06-C008",
+          "start_line": 75,
+          "end_line": 87,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S06-C009",
+          "start_line": 88,
+          "end_line": 101,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S06-C010",
+          "start_line": 102,
+          "end_line": 118,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S06-C011",
+          "start_line": 120,
+          "end_line": 137,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S06-C012",
+          "start_line": 138,
+          "end_line": 144,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S06-C013",
+          "start_line": 146,
+          "end_line": 162,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S06-C014",
+          "start_line": 163,
+          "end_line": 183,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S06-C015",
+          "start_line": 184,
+          "end_line": 195,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH08-S06-S001",
+          "start_line": 202,
+          "end_line": 206,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-24f739ed206f77be42ac",
+        "#reader-268839109ddd65ee2bd3",
+        "#reader-4a37e1f57580f5e52d77",
+        "#reader-604ba782390f22906682",
+        "#reader-69cd31e11fd3b53cdde4",
+        "#reader-906937b7cb3ea1bfb10c",
+        "#reader-e65bf7628c44f3b2da63"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。",
+      "inventory_corrections": [
+        {
+          "id": "CH08-S06-C010",
+          "correction": "原库存跳跃点取平均须限沿法线趋近/边界对称平均；任意非切向路径也不保证平均。",
+          "evidence": "半平面边界正轴0负轴1的V=Arg(z)/pi，跳点0沿法线为1/2，沿固定其他角度取对应角度/pi。正文与coverage已加方向条件。",
+          "required_shared_update": "root将同一限制同步到共享conclusions库存；本分工不改共享源。"
+        }
+      ]
+    },
+    "CH09": {
+      "unit_id": "CH09",
+      "source_path": "original_text/ch09.md",
+      "source_lines": 3,
+      "source_sha256": "2d01b3d51543c7c606ca05235b902bece5f03d95d7a6c8f344fcfbad8f489830",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "因果时间函数经指数加权变成解析像；运算性质把微积分移为代数，再按结构反演以解初值与积分方程。",
+      "media_correspondence": [],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [],
+        "supplementary": [],
+        "bound": [],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [],
+      "reader_anchors_preserved": [],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH09-S01": {
+      "unit_id": "CH09-S01",
+      "source_path": "original_text/ch09_s01.md",
+      "source_lines": 60,
+      "source_sha256": "105234143f059c4261bbb1093ab5897b79bfeeded6c9a173ac653ec9608f4631",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "由傅里叶权重解释像变量，利用第7章统一收敛证明解析性，Gamma积分把时间幂与像负幂连接。",
+      "media_correspondence": [
+        {
+          "id": "CH09-ROC",
+          "kind": "special-roc",
+          "marker": "[[TEACHING_VISUAL:CH09-ROC]]",
+          "source_evidence": "study-special-scenes.js roc 只在sigma>c画网线并给像值/上界；正文不将代数延伸当积分。",
+          "verification_scope": "源码、模型参数与数学对象核对；本分工未使用浏览器，最终2/3正文+1/3图的集成显示由root统一核验。"
+        }
+      ],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH09-S01-C001",
+          "CH09-S01-C002",
+          "CH09-S01-C003",
+          "CH09-S01-C004",
+          "CH09-S01-C005",
+          "CH09-S01-C006"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH09-S01-C001",
+          "CH09-S01-C002",
+          "CH09-S01-C003",
+          "CH09-S01-C004",
+          "CH09-S01-C005",
+          "CH09-S01-C006"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH09-S01-C001",
+          "start_line": 3,
+          "end_line": 6,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S01-C002",
+          "start_line": 7,
+          "end_line": 23,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S01-C003",
+          "start_line": 24,
+          "end_line": 35,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S01-C004",
+          "start_line": 36,
+          "end_line": 38,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S01-C005",
+          "start_line": 40,
+          "end_line": 45,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S01-C006",
+          "start_line": 46,
+          "end_line": 60,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-9a68fee3ce3897fae06a",
+        "#reader-a5684a59312f84347ec2"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH09-S02-SS01": {
+      "unit_id": "CH09-S02-SS01",
+      "source_path": "original_text/ch09_s02_ss01.md",
+      "source_lines": 12,
+      "source_sha256": "64d0e4b536686900d9040d7bdb192fcde01a029366eb1c9d5e9520815bea56ed",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "线性从积分定义直接传到反变换，指数的和差产生正弦余弦及双曲函数。",
+      "media_correspondence": [],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH09-S02-SS01-C001",
+          "CH09-S02-SS01-C002"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH09-S02-SS01-C001",
+          "CH09-S02-SS01-C002"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH09-S02-SS01-C001",
+          "start_line": 3,
+          "end_line": 7,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S02-SS01-C002",
+          "start_line": 8,
+          "end_line": 12,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-56d3223dd50062b84119"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH09-S02-SS02": {
+      "unit_id": "CH09-S02-SS02",
+      "source_path": "original_text/ch09_s02_ss02.md",
+      "source_lines": 6,
+      "source_sha256": "30d18a6246266cea8f9d1de1f58ba287f73ea9197bdf6fe6358cd0e15ba3a14f",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "时间换元同时改变指数核和微分元，确定参数缩放、倒数系数及新收敛域。",
+      "media_correspondence": [
+        {
+          "id": "CH09-SCALE",
+          "kind": "special-laplace-scale",
+          "marker": "[[TEACHING_VISUAL:CH09-SCALE]]",
+          "source_evidence": "study-special-scenes.js laplace-scale 时间曲线与正实s解析读数对应；正文未夸大为复p全平面可视化。",
+          "verification_scope": "源码、模型参数与数学对象核对；本分工未使用浏览器，最终2/3正文+1/3图的集成显示由root统一核验。"
+        }
+      ],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH09-S02-SS02-C001"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH09-S02-SS02-C001"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH09-S02-SS02-C001",
+          "start_line": 3,
+          "end_line": 4,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-c7f7f64492027850752d"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH09-S02-SS03": {
+      "unit_id": "CH09-S02-SS03",
+      "source_path": "original_text/ch09_s02_ss03.md",
+      "source_lines": 31,
+      "source_sha256": "52fcee1d38e7d7b1133ad8426fb55adbe729e6443841f298e37421b9a0b0da68",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "分部积分留下初始右极限，重复后形成高阶公式，两个初值例展示代数解与原方程核验。",
+      "media_correspondence": [],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH09-S02-SS03-C001",
+          "CH09-S02-SS03-C002",
+          "CH09-S02-SS03-C003"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH09-S02-SS03-C001",
+          "CH09-S02-SS03-C002",
+          "CH09-S02-SS03-C003"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH09-S02-SS03-C001",
+          "start_line": 3,
+          "end_line": 10,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S02-SS03-C002",
+          "start_line": 11,
+          "end_line": 13,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S02-SS03-C003",
+          "start_line": 15,
+          "end_line": 28,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-61b93af76a60d7db75a1",
+        "#reader-da596b71c510a0b429e5"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH09-S02-SS04": {
+      "unit_id": "CH09-S02-SS04",
+      "source_path": "original_text/ch09_s02_ss04.md",
+      "source_lines": 18,
+      "source_sha256": "31f8aa5b72eddf2015b0a5b9c19467bd778de6528546aa4c62aa996a673578ee",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "累计量的零初值使像域除以p，电流累计成电荷与电容电压将同一运算具体化。",
+      "media_correspondence": [
+        {
+          "id": "CH09-RC",
+          "kind": "special-rc",
+          "marker": "[[TEACHING_VISUAL:CH09-RC]]",
+          "source_evidence": "study-special-scenes.js rc 的蓝i/绿uR/金uC、三读数及RC均与正文对应。",
+          "verification_scope": "源码、模型参数与数学对象核对；本分工未使用浏览器，最终2/3正文+1/3图的集成显示由root统一核验。"
+        }
+      ],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH09-S02-SS04-C001",
+          "CH09-S02-SS04-C002"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH09-S02-SS04-C001",
+          "CH09-S02-SS04-C002"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH09-S02-SS04-C001",
+          "start_line": 3,
+          "end_line": 8,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S02-SS04-C002",
+          "start_line": 10,
+          "end_line": 18,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-e62b2ac3f2f2cadfc28c"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH09-S02-SS05": {
+      "unit_id": "CH09-S02-SS05",
+      "source_path": "original_text/ch09_s02_ss05.md",
+      "source_lines": 17,
+      "source_sha256": "33f81d3425384646b78a9ee5ea9998cd38b88af541bb4ea8d41dd856f26ee05d",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "对像变量求导只改变核的时间权重，连接一次时间因子与二次三角乘子，明确阶数和负号。",
+      "media_correspondence": [],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH09-S02-SS05-C001",
+          "CH09-S02-SS05-C002",
+          "CH09-S02-SS05-C003"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH09-S02-SS05-C001",
+          "CH09-S02-SS05-C002",
+          "CH09-S02-SS05-C003"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH09-S02-SS05-C001",
+          "start_line": 3,
+          "end_line": 13,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S02-SS05-C002",
+          "start_line": 14,
+          "end_line": 15,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S02-SS05-C003",
+          "start_line": 16,
+          "end_line": 17,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-bb843b53d817f6b2f8dc"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH09-S02-SS06": {
+      "unit_id": "CH09-S02-SS06",
+      "source_path": "original_text/ch09_s02_ss06.md",
+      "source_lines": 25,
+      "source_sha256": "1c1b1254f062ac8ff04846c7b7ba83a34dfd02e5bc5370f34afa351bd7bc859f",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "像的定积分对应时间除t，先检查零端相消，再由复对数与Abel极限连接具体实积分。",
+      "media_correspondence": [],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH09-S02-SS06-C001",
+          "CH09-S02-SS06-C002",
+          "CH09-S02-SS06-C003",
+          "CH09-S02-SS06-C004",
+          "CH09-S02-SS06-C005"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH09-S02-SS06-C001",
+          "CH09-S02-SS06-C002",
+          "CH09-S02-SS06-C003",
+          "CH09-S02-SS06-C004",
+          "CH09-S02-SS06-C005"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH09-S02-SS06-C001",
+          "start_line": 3,
+          "end_line": 6,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S02-SS06-C002",
+          "start_line": 7,
+          "end_line": 9,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S02-SS06-C003",
+          "start_line": 10,
+          "end_line": 14,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S02-SS06-C004",
+          "start_line": 15,
+          "end_line": 19,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S02-SS06-C005",
+          "start_line": 20,
+          "end_line": 25,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-c59a38b771f790ef27e4",
+        "#reader-c682b8ac0a49bcd9b44f"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH09-S02-SS07": {
+      "unit_id": "CH09-S02-SS07",
+      "source_path": "original_text/ch09_s02_ss07.md",
+      "source_lines": 44,
+      "source_sha256": "203d70a4eda0885f943b667667ab7edc5258ba9f593641a1408c3b8b1d9b65b7",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "整条信号向右延迟与截去前段不同，换元解释固定指数因子，阶跃分解统一处理斜坡、三角脉冲和阶梯。",
+      "media_correspondence": [
+        {
+          "id": "CH09-DELAY",
+          "request_id": "MR-aa1fa6defefb8c736618",
+          "marker": "[[TEACHING_MEDIA:CH09-DELAY]]",
+          "source_video": "/Users/huang/Documents/ChatGPT/ai for study项目的改进/delivery/复变函数-教材连贯版-20261029/book/assets/narrated/CH09-S02-SS07/MR-aa1fa6defefb8c736618/narrated.mp4",
+          "step_text_and_timing": [
+            {
+              "step_id": "S1",
+              "start": 0,
+              "end": 10.366667,
+              "display_markdown": "同一条因果曲线整体向右推迟$τ$。新曲线在$τ$之前为零，$τ$之后才按照原来的时间过程变化。\n$g_\\tau(t)=f(t-\\tau)h(t-\\tau)$"
+            },
+            {
+              "step_id": "S2",
+              "start": 10.366667,
+              "end": 19.833334,
+              "display_markdown": "由于启动前整段为零，变换积分的有效下限从零变成$τ$。这个改变由信号本身决定。\n$\\mathcal L[g_\\tau]=\\int_\\tau^\\infty f(t-\\tau)e^{-pt}\\,dt$"
+            },
+            {
+              "step_id": "S3",
+              "start": 19.833334,
+              "end": 30.233334,
+              "display_markdown": "令新时间等于原时间减$τ$。曲线回到原来的位置，积分下限返回零，指数核则分成两个因子。\n$u=t-\\tau;\\quad e^{-pt}=e^{-pu}e^{-p\\tau}$"
+            },
+            {
+              "step_id": "S4",
+              "start": 30.233334,
+              "end": 42.566667,
+              "display_markdown": "延迟因子与新时间无关，可以提出积分。剩下的就是原函数的拉普拉斯变换，所以整体晚开始对应像域乘一个指数。\n$\\mathcal L[g_\\tau](p)=e^{-p\\tau}F(p)$"
+            }
+          ],
+          "verification_scope": "实视频文件存在；逐步display_markdown与时码已核对正文，未在本分工声称完成逐帧或播放器审查。",
+          "poster_preservation": {
+            "step_id": "S2",
+            "fraction": 0.8,
+            "actual_frame_seconds": 17.966667,
+            "poster": "/Users/huang/Documents/ChatGPT/ai for study项目的改进/delivery/复变函数-教材连贯版-20261029/book/assets/narrated/CH09-S02-SS07/MR-aa1fa6defefb8c736618/poster.png",
+            "required_objects": [
+              "蓝色原曲线与橙色延迟曲线",
+              "τ前零段和τ标记",
+              "积分下限由0变为τ"
+            ],
+            "reason": "S2后段同时显示蓝色原曲线、橙色右移曲线、τ标记与启动前零段，并用两行积分把下限0改为τ的原因接到图形。S4虽有最终指数因子，但曲线已换元滑回并重合，作为封面反而看不出延迟；因此保留最能识别延迟条件及其积分后果的S2帧。"
+          }
+        }
+      ],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH09-S02-SS07-C001",
+          "CH09-S02-SS07-C002"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH09-S02-SS07-C001",
+          "CH09-S02-SS07-C002"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH09-S02-SS07-C001",
+          "start_line": 3,
+          "end_line": 13,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S02-SS07-C002",
+          "start_line": 15,
+          "end_line": 44,
+          "paragraph_count": 2
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-c814b49db336a6f6ca62",
+        "#reader-cf62b5831ba3e0daa8c1",
+        "#reader-f5d95c28d33cd2154cd0"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。",
+      "poster_review": "保持S2后段帧，使原曲线、右移曲线、tau前零段与积分下限同时可见；不改用S4重合曲线的终式帧。"
+    },
+    "CH09-S02-SS08": {
+      "unit_id": "CH09-S02-SS08",
+      "source_path": "original_text/ch09_s02_ss08.md",
+      "source_lines": 14,
+      "source_sha256": "5e90442dfa831a8e02ae33674648c22c890d96bb15a136f6e3cf9db1bee7eb2c",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "指数包络与核合并改变像自变量，收敛边界同移，分子和分母必须一起替换。",
+      "media_correspondence": [
+        {
+          "id": "CH09-SHIFT",
+          "kind": "special-laplace-shift",
+          "marker": "[[TEACHING_VISUAL:CH09-SHIFT]]",
+          "source_evidence": "study-special-scenes.js laplace-shift 在s+a-c<=0返回无定义；正文明确新收敛条件。",
+          "verification_scope": "源码、模型参数与数学对象核对；本分工未使用浏览器，最终2/3正文+1/3图的集成显示由root统一核验。"
+        }
+      ],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH09-S02-SS08-C001",
+          "CH09-S02-SS08-C002"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH09-S02-SS08-C001",
+          "CH09-S02-SS08-C002"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH09-S02-SS08-C001",
+          "start_line": 3,
+          "end_line": 6,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S02-SS08-C002",
+          "start_line": 7,
+          "end_line": 14,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-118dcbcac9214b51db33",
+        "#reader-43b05bbdd54bb95dcd1a"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH09-S02-SS09": {
+      "unit_id": "CH09-S02-SS09",
+      "source_path": "original_text/ch09_s02_ss09.md",
+      "source_lines": 16,
+      "source_sha256": "046b3504a8e12834941f91782b4101322171361db969878fbfbbdcfeae8a517f",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "一个周期的贡献经延迟组成几何级数，正确周期长度决定全波整流的重复因子。",
+      "media_correspondence": [],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH09-S02-SS09-C001",
+          "CH09-S02-SS09-C002"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH09-S02-SS09-C001",
+          "CH09-S02-SS09-C002"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH09-S02-SS09-C001",
+          "start_line": 3,
+          "end_line": 13,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S02-SS09-C002",
+          "start_line": 14,
+          "end_line": 16,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-4e157ee3889ffeeb4cd1"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH09-S02-SS10": {
+      "unit_id": "CH09-S02-SS10",
+      "source_path": "original_text/ch09_s02_ss10.md",
+      "source_lines": 33,
+      "source_sha256": "0f3ea7449a612ee23114e714dde2ad66e11f2fb25938f59b54ccccd08bf2ccd4",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "把过去时刻与响应剩余时间相乘后累计，因果支撑缩小积分区间，像乘法与积分方程由同一双积分结构解释。",
+      "media_correspondence": [
+        {
+          "id": "CH09-CONV",
+          "kind": "special-convolution",
+          "marker": "[[TEACHING_VISUAL:CH09-CONV]]",
+          "source_evidence": "study-special-scenes.js convolution 左蓝f、金g、绿乘积与右积分，正文公式含a=b极限。",
+          "verification_scope": "源码、模型参数与数学对象核对；本分工未使用浏览器，最终2/3正文+1/3图的集成显示由root统一核验。"
+        }
+      ],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH09-S02-SS10-C001",
+          "CH09-S02-SS10-C002",
+          "CH09-S02-SS10-C003",
+          "CH09-S02-SS10-C004"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH09-S02-SS10-C001",
+          "CH09-S02-SS10-C002",
+          "CH09-S02-SS10-C003",
+          "CH09-S02-SS10-C004"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH09-S02-SS10-C001",
+          "start_line": 3,
+          "end_line": 9,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S02-SS10-C002",
+          "start_line": 10,
+          "end_line": 20,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S02-SS10-C003",
+          "start_line": 21,
+          "end_line": 25,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S02-SS10-C004",
+          "start_line": 26,
+          "end_line": 32,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-2663a43cb62c799fba50",
+        "#reader-e1684a7db8864a9fd442"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH09-S03": {
+      "unit_id": "CH09-S03",
+      "source_path": "original_text/ch09_s03.md",
+      "source_lines": 4,
+      "source_sha256": "3455e5426afb023e2af58195f33b6c573bc76587ac2d90c6d0cf40f77a416403",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "按像的结构选择已知配对、部分分式、留数、级数或卷积，并将延迟开关和初值带回时间解。",
+      "media_correspondence": [],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [],
+        "supplementary": [],
+        "bound": [],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [],
+      "reader_anchors_preserved": [],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH09-S03-SS01": {
+      "unit_id": "CH09-S03-SS01",
+      "source_path": "original_text/ch09_s03_ss01.md",
+      "source_lines": 31,
+      "source_sha256": "5ef27e09395ffe6c3210aa5deacf910662ac734ae35e2a368d4b2b5f2ac7aaff",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "约分与极点阶数确定完整基本块，实二次配方整理分子，三个例题说明异频、共轭对与重因子的选法。",
+      "media_correspondence": [],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH09-S03-SS01-C001",
+          "CH09-S03-SS01-C002",
+          "CH09-S03-SS01-C003",
+          "CH09-S03-SS01-C004"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH09-S03-SS01-C001",
+          "CH09-S03-SS01-C002",
+          "CH09-S03-SS01-C003",
+          "CH09-S03-SS01-C004"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH09-S03-SS01-C001",
+          "start_line": 3,
+          "end_line": 11,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S03-SS01-C002",
+          "start_line": 12,
+          "end_line": 15,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S03-SS01-C003",
+          "start_line": 16,
+          "end_line": 24,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S03-SS01-C004",
+          "start_line": 25,
+          "end_line": 31,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-3c7ec0196512737c673c",
+        "#reader-89fc02b7f0f4ab1b5a71",
+        "#reader-bf6ace727b99ce038ad8"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH09-S03-SS02": {
+      "unit_id": "CH09-S03-SS02",
+      "source_path": "original_text/ch09_s03_ss02.md",
+      "source_lines": 66,
+      "source_sha256": "b6a65b51ea15e331c2d6704908386e600e57ecc104e2f696c2b950d06e8cbe48",
+      "source_read_scope": "完整本节原文及随附例题习题",
+      "understanding_bridge": "由加权傅里叶反演推出竖线方向与i因子，补弧消失后取整个带核乘积的留数，连接重极点、方程组与延迟。",
+      "media_correspondence": [
+        {
+          "id": "CH09-INV",
+          "kind": "special-bromwich",
+          "marker": "[[TEACHING_VISUAL:CH09-INV]]",
+          "source_evidence": "study-special-scenes.js bromwich 左竖线/切向与右截断核，正文明确有限截断误差，未声称右图是整条重建曲线。",
+          "verification_scope": "源码、模型参数与数学对象核对；本分工未使用浏览器，最终2/3正文+1/3图的集成显示由root统一核验。"
+        }
+      ],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH09-S03-SS02-C001",
+          "CH09-S03-SS02-C002",
+          "CH09-S03-SS02-C003",
+          "CH09-S03-SS02-C004",
+          "CH09-S03-SS02-C005"
+        ],
+        "supplementary": [],
+        "bound": [
+          "CH09-S03-SS02-C001",
+          "CH09-S03-SS02-C002",
+          "CH09-S03-SS02-C003",
+          "CH09-S03-SS02-C004",
+          "CH09-S03-SS02-C005"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH09-S03-SS02-C001",
+          "start_line": 3,
+          "end_line": 13,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S03-SS02-C002",
+          "start_line": 14,
+          "end_line": 34,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S03-SS02-C003",
+          "start_line": 35,
+          "end_line": 40,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S03-SS02-C004",
+          "start_line": 41,
+          "end_line": 57,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S03-SS02-C005",
+          "start_line": 58,
+          "end_line": 66,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-26b2cee8111a7de265fd",
+        "#reader-6e55d00e57a242057e91",
+        "#reader-cafada0c840d852c2fda",
+        "#reader-e522900defd23227e936"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。"
+    },
+    "CH09-S03-SS03": {
+      "unit_id": "CH09-S03-SS03",
+      "source_path": "original_text/ch09_s03_ss03.md",
+      "source_lines": 308,
+      "source_sha256": "2095dc8c8c37acab26382dc4a7d806e10f7824a270f2094109fb366458894158",
+      "source_read_scope": "完整本节原文及本节习题；全书答案仅作定位核对，不并入理论正文",
+      "understanding_bridge": "收敛的无穷远负幂级数逐项还原，卷积处理根式像，冲激采样转入单边或双边Z级数，并提炼末尾习题可复用方法。",
+      "media_correspondence": [],
+      "pending_items": [
+        {
+          "type": "integration_check",
+          "item": "在全书合并后的实际页面核验正文与媒体就近、2/3与1/3窄列分配、浅色对比和数学换行。",
+          "owner": "root统一集成验收",
+          "content_blocker": false
+        }
+      ],
+      "id_coverage": {
+        "main": [
+          "CH09-S03-SS03-C001",
+          "CH09-S03-SS03-C002",
+          "CH09-S03-SS03-C003",
+          "CH09-S03-SS03-C004",
+          "CH09-S03-SS03-C005",
+          "CH09-S03-SS03-C006",
+          "CH09-S03-SS03-C007",
+          "CH09-S03-SS03-C008"
+        ],
+        "supplementary": [
+          "CH09-S03-SS03-S001",
+          "CH09-S03-SS03-S002"
+        ],
+        "bound": [
+          "CH09-S03-SS03-C001",
+          "CH09-S03-SS03-C002",
+          "CH09-S03-SS03-C003",
+          "CH09-S03-SS03-C004",
+          "CH09-S03-SS03-C005",
+          "CH09-S03-SS03-C006",
+          "CH09-S03-SS03-C007",
+          "CH09-S03-SS03-C008",
+          "CH09-S03-SS03-S001",
+          "CH09-S03-SS03-S002"
+        ],
+        "missing": [],
+        "empty_or_nonunique_excerpt": []
+      },
+      "source_bindings": [
+        {
+          "id": "CH09-S03-SS03-C001",
+          "start_line": 4,
+          "end_line": 8,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S03-SS03-C002",
+          "start_line": 9,
+          "end_line": 10,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S03-SS03-C003",
+          "start_line": 11,
+          "end_line": 21,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S03-SS03-C004",
+          "start_line": 22,
+          "end_line": 23,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S03-SS03-C005",
+          "start_line": 24,
+          "end_line": 31,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S03-SS03-C006",
+          "start_line": 32,
+          "end_line": 32,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S03-SS03-C007",
+          "start_line": 33,
+          "end_line": 34,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S03-SS03-C008",
+          "start_line": 35,
+          "end_line": 37,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S03-SS03-S001",
+          "start_line": 58,
+          "end_line": 59,
+          "paragraph_count": 1
+        },
+        {
+          "id": "CH09-S03-SS03-S002",
+          "start_line": 92,
+          "end_line": 93,
+          "paragraph_count": 1
+        }
+      ],
+      "reader_anchors_preserved": [
+        "#reader-84a918c889b9ef7d09b9",
+        "#reader-9d8f94b53ca9ec99e87b",
+        "#reader-b5e1be918be0bcfa58bf"
+      ],
+      "default_visible_review": "定义、定理、性质、公式、参数条件与例题最终可复用结论均在正文；详细证明与完整演算沿reader锚点留原资料折叠。",
+      "formula_review": "所有新正文行内与独立公式均使用$或$$；长推导按aligned分行。",
+      "answer_boundary": "源文件第96行习题参考答案之后是全书答案；未把这些答案段落纳入理论，仅提炼本节真实习题的调制与受迫振动两条知识。"
+    }
+  },
+  "scope_limits": [
+    "本分工只产出独立lesson和author-review manifest，不改共享源、布局、视频、音频或poster文件。",
+    "播放器与逐帧核查由root统一验收；manifest仅记录源码/步骤文本/文件存在和已保存的poster选择证据。"
+  ],
+  "verification": {
+    "status": "pass",
+    "units": 29,
+    "coverage_ids": 132,
+    "unique_full_paragraph_excerpt_check": true,
+    "reader_anchors_preserved": 55,
+    "katex_expressions": 1028,
+    "unmatched_math_delimiters": 0,
+    "registered_visuals": 9,
+    "media_plans_preserved": 5,
+    "geometry_checks": [
+      {
+        "id": "CH07-C",
+        "kind": "continuation",
+        "lines": 23,
+        "points": 3
+      },
+      {
+        "id": "CH08-D",
+        "kind": "derivative",
+        "lines": 82,
+        "points": 0
+      },
+      {
+        "id": "CH08-M",
+        "kind": "mobius",
+        "lines": 70,
+        "points": 2
+      },
+      {
+        "id": "CH09-ROC",
+        "kind": "special-roc",
+        "lines": 21,
+        "points": 2,
+        "facts": {
+          "converges": true,
+          "value": [
+            0.44117647058823534,
+            -0.7352941176470589
+          ],
+          "bound": 1.6666666666666667
+        }
+      },
+      {
+        "id": "CH09-SCALE",
+        "kind": "special-laplace-scale",
+        "lines": 4,
+        "points": 0,
+        "facts": {
+          "transform": 0.48780487804878053,
+          "initialValue": 1,
+          "converges": true
+        }
+      },
+      {
+        "id": "CH09-RC",
+        "kind": "special-rc",
+        "lines": 9,
+        "points": 1,
+        "facts": {
+          "current": 0.20300292485491905,
+          "vr": 0.20300292485491905,
+          "vc": 1.296997075145081
+        }
+      },
+      {
+        "id": "CH09-SHIFT",
+        "kind": "special-laplace-shift",
+        "lines": 4,
+        "points": 0,
+        "facts": {
+          "transform": 0.769230769230769,
+          "initialValue": 1,
+          "converges": true
+        }
+      },
+      {
+        "id": "CH09-CONV",
+        "kind": "special-convolution",
+        "lines": 8,
+        "points": 1,
+        "facts": {
+          "value": 0.28720564287878764,
+          "integral": 0.287205642878917,
+          "overlap": [
+            0,
+            2
+          ]
+        }
+      },
+      {
+        "id": "CH09-INV",
+        "kind": "special-bromwich",
+        "lines": 8,
+        "points": 0,
+        "facts": {
+          "reconstructed": 0.36362223649187186,
+          "exact": 0.36787944117144233,
+          "wrongImaginary": -0.36362223649187186
+        }
+      }
+    ]
+  }
+}

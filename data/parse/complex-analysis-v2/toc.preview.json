@@ -1,0 +1,248 @@
+{
+  "_meta": {
+    "file_type": "toc_preview",
+    "schema_version": "2.0",
+    "generator": "aiforstudy.parse.toc.preview",
+    "toc_sha256": "1ea19e3a227e35b2e1bde3a0f22fbf4b946dadc0bdb556e563115e7751c8dcc3",
+    "toc_confidence": "medium",
+    "slug": "complex-analysis-v2"
+  },
+  "verdict": "有几处要你看",
+  "shape": {
+    "chapters": 9,
+    "sections": 33,
+    "non_teaching": 5,
+    "levels": [
+      1,
+      2
+    ],
+    "nodes": 47
+  },
+  "samples": [
+    {
+      "toc_id": "T-0001",
+      "line": "  总序  [非正文]  ⚠️未确认",
+      "page": "1",
+      "confirmed": false,
+      "sources": [
+        "printed-toc"
+      ]
+    },
+    {
+      "toc_id": "T-0002",
+      "line": "  前言  [非正文]  ⚠️未确认",
+      "page": "2",
+      "confirmed": false,
+      "sources": [
+        "printed-toc"
+      ]
+    },
+    {
+      "toc_id": "T-0003",
+      "line": "第1章 复数和平面点集",
+      "page": "1",
+      "confirmed": true,
+      "sources": [
+        "body-heading-shapes",
+        "printed-toc"
+      ]
+    },
+    {
+      "toc_id": "T-0004",
+      "line": "  1.1 复数",
+      "page": "1",
+      "confirmed": true,
+      "sources": [
+        "body-heading-shapes",
+        "printed-toc"
+      ]
+    },
+    {
+      "toc_id": "T-0005",
+      "line": "  1.2 平面点集",
+      "page": "5",
+      "confirmed": true,
+      "sources": [
+        "body-heading-shapes",
+        "printed-toc"
+      ]
+    },
+    {
+      "toc_id": "T-0006",
+      "line": "第2章 复变数函数",
+      "page": "20",
+      "confirmed": true,
+      "sources": [
+        "body-heading-shapes",
+        "printed-toc"
+      ]
+    },
+    {
+      "toc_id": "T-0007",
+      "line": "  2.1 复变数函数的概念",
+      "page": "20",
+      "confirmed": true,
+      "sources": [
+        "body-heading-shapes",
+        "printed-toc"
+      ]
+    },
+    {
+      "toc_id": "T-0008",
+      "line": "  2.2 函数极限和连续性",
+      "page": "23",
+      "confirmed": true,
+      "sources": [
+        "body-heading-shapes",
+        "printed-toc"
+      ]
+    },
+    {
+      "toc_id": "T-0009",
+      "line": "  2.3 导数和解析函数的概念",
+      "page": "25",
+      "confirmed": true,
+      "sources": [
+        "body-heading-shapes",
+        "printed-toc"
+      ]
+    },
+    {
+      "toc_id": "T-0010",
+      "line": "  2.4 柯西－黎曼方程",
+      "page": "27",
+      "confirmed": true,
+      "sources": [
+        "body-heading-shapes",
+        "printed-toc"
+      ]
+    },
+    {
+      "toc_id": "T-0011",
+      "line": "  2.5 初等函数",
+      "page": "30",
+      "confirmed": true,
+      "sources": [
+        "body-heading-shapes",
+        "printed-toc"
+      ]
+    },
+    {
+      "toc_id": "T-0012",
+      "line": "第3章 解析函数的积分表示",
+      "page": "50",
+      "confirmed": true,
+      "sources": [
+        "body-heading-shapes",
+        "printed-toc"
+      ]
+    }
+  ],
+  "uncertain": [
+    {
+      "toc_id": "T-0001",
+      "title": "总序",
+      "why": "这一条没被确认（只有一个源、或落不了页）",
+      "model_says": null,
+      "confidence": "low"
+    },
+    {
+      "toc_id": "T-0002",
+      "title": "前言",
+      "why": "这一条没被确认（只有一个源、或落不了页）",
+      "model_says": null,
+      "confidence": "low"
+    },
+    {
+      "toc_id": "T-0020",
+      "title": "调和函数的性质和狭利克雷问题",
+      "why": "这一条没被确认（只有一个源、或落不了页）",
+      "model_says": null,
+      "confidence": "low"
+    },
+    {
+      "toc_id": "T-0023",
+      "title": "基级数",
+      "why": "这一条没被确认（只有一个源、或落不了页）",
+      "model_says": null,
+      "confidence": "low"
+    },
+    {
+      "toc_id": "T-0045",
+      "title": "附表1 基本法则表",
+      "why": "这一条没被确认（只有一个源、或落不了页）",
+      "model_says": null,
+      "confidence": "low"
+    },
+    {
+      "toc_id": "T-0046",
+      "title": "附表2 拉普拉斯变换表",
+      "why": "这一条没被确认（只有一个源、或落不了页）",
+      "model_says": null,
+      "confidence": "low"
+    },
+    {
+      "toc_id": "T-0047",
+      "title": "习题参考答案",
+      "why": "这一条没被确认（只有一个源、或落不了页）",
+      "model_says": null,
+      "confidence": "low"
+    },
+    {
+      "toc_id": "T-0020",
+      "title": "调和函数的性质和狭利克雷问题",
+      "why": "正文里写的是「调和函数的性质和狄利克雷问题」，目录里写的是「调和函数的性质和狭利克雷问题」—— 其中一个多半是 OCR 错字",
+      "model_says": null,
+      "confidence": "low"
+    },
+    {
+      "toc_id": "T-0023",
+      "title": "基级数",
+      "why": "正文里写的是「幂级数」，目录里写的是「基级数」—— 其中一个多半是 OCR 错字",
+      "model_says": null,
+      "confidence": "low"
+    }
+  ],
+  "ledger": {
+    "我吃了什么": {
+      "pdf_sha256": "2028b7f926b9",
+      "document_sha256": "a260ae5d98e0",
+      "sources_used": [
+        "printed-toc",
+        "body-heading-shapes"
+      ]
+    },
+    "我产出了什么": {
+      "nodes": 47,
+      "chapters": 9,
+      "sections": 33,
+      "non_teaching": 5,
+      "disagreements": 2,
+      "unresolved": 0,
+      "suspicious": 0,
+      "unconfirmed": 7
+    },
+    "我丢了什么/没配上什么": {
+      "disagreements": 2,
+      "unresolved": 0,
+      "suspicious": 0,
+      "unconfirmed": 7
+    },
+    "我什么时候能信": {
+      "confidence": "medium",
+      "重跑条件": "pdf_sha256 或 document_sha256 变了就必须重跑这一层"
+    }
+  },
+  "cost": {
+    "model_calls": 0,
+    "images": 0,
+    "chunks": 0,
+    "tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "total": 0
+    },
+    "downgraded": false
+  },
+  "next": "确认这些条目能接受 → 跑正文解析（body）；不能接受 → 停在这里"
+}

@@ -1,0 +1,11 @@
+{
+  "_meta": {
+    "file_type": "toc_pdf",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.toc.cli",
+    "field_notes": {
+      "pdf": "这个解析产物目录对应哪份 PDF（相对仓库根）；预检/复核/default 都读它，避免每次重猜"
+    }
+  },
+  "pdf": "data/raw/复变函数.pdf"
+}

@@ -1,0 +1,69 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH09-S02-SS04",
+    "text_sha256": "31f8aa5b72eddf2015b0a5b9c19467bd778de6528546aa4c62aa996a673578ee",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "31f8aa5b72eddf2015b0a5b9c19467bd778de6528546aa4c62aa996a673578ee",
+    "source": "original_text",
+    "source_path": "original_text/ch09_s02_ss04.md"
+  },
+  "unit": {
+    "unit_id": "CH09-S02-SS04",
+    "level": "subsection",
+    "chapter": "CH09",
+    "section": "CH09-S02",
+    "title": "本函数的积分法",
+    "anchor": "9.2.4"
+  },
+  "concepts": [
+    {
+      "name": "本函数的积分法（积分性质）",
+      "type": "property",
+      "formal": "设 $\\mathrm{L}[f(t)] = F(p)$，则 $$\\mathrm{L} \\left[ \\int_ {0} ^ {t} f (t) \\mathrm{d} t \\right] = \\frac {F (p)}{p}.$$",
+      "source_quote": "设 $\\mathrm{L}[f(t)] = F(p)$，则 $$\\mathrm{L} \\left[ \\int_ {0} ^ {t} f (t) \\mathrm{d} t \\right] = \\frac {F (p)}{p}.$$"
+    },
+    {
+      "name": "本函数的微分法",
+      "type": "property",
+      "formal": "$$\\mathrm{L} \\left[ \\varphi^ {\\prime} (t) \\right] = p \\mathrm{L} [ \\varphi (t) ] - \\varphi (0)$$",
+      "source_quote": "由本函数的微分法，有 $$\\mathrm{L} \\left[ \\varphi^ {\\prime} (t) \\right] = p \\mathrm{L} [ \\varphi (t) ] - \\varphi (0) = p \\mathrm{L} [ \\varphi (t) ].$$"
+    },
+    {
+      "name": "回路电压定律",
+      "type": "law",
+      "formal": "由回路电压定律, 得电路方程 $$R i (t) + \\frac {1}{C} \\int_ {0} ^ {t} i (t) d t = E.$$",
+      "source_quote": "由回路电压定律, 得电路方程"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 3,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "并利用上述积分性质"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "本函数的积分法（积分性质）",
+    "本函数的微分法",
+    "回路电压定律"
+  ]
+}

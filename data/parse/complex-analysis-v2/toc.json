@@ -1,0 +1,705 @@
+{
+  "_meta": {
+    "file_type": "toc",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.mineru",
+    "source_sha256": "10dd4ed7be8cf428ef57f5c7dfd53063ca62ad0a155171634ac387d8b6efd7f1",
+    "field_notes": {
+      "source": "这份目录从哪来：pdf-bookmarks=PDF 内嵌书签（最权威）；printed-toc=从目录页文字解析",
+      "entries": "目录条目（书**自己声明的结构**）",
+      "entries[].level": "**已按标题形状归一化**的层级；1 级就是章（0 = 比章还高，如书签根节点 `目录`）",
+      "outline_level_shift": "书签原始层级减掉了几层才归一化（PDF 书签常有 `目录` 这类包装层）",
+      "printed_entries": "另外记一份「从目录页解析出来的」，用于交叉核对",
+      "chapters": "1 级条目（已去掉前言/序/目录这类），**校验「解析出来的章」对不对就看它**",
+      "chapters_numbered": "其中带 `第N章` 编号的那些 —— 对账时严格比；`绪论`/`附录` 这类无编号的只提示"
+    }
+  },
+  "book_title": "复变函数",
+  "source": "printed-toc",
+  "outline_count": 0,
+  "outline_level_shift": 0,
+  "entries": [
+    {
+      "text": "总序",
+      "toc_page": 1,
+      "toc_page_label": "Ⅰ",
+      "level": 3,
+      "from_page": 8
+    },
+    {
+      "text": "前言",
+      "toc_page": 2,
+      "toc_page_label": "Ⅱ",
+      "level": 3,
+      "from_page": 8
+    },
+    {
+      "text": "第1章 复数和平面点集",
+      "toc_page": 1,
+      "toc_page_label": "Ⅰ",
+      "level": 1,
+      "from_page": 8
+    },
+    {
+      "text": "1.1 复数",
+      "toc_page": 1,
+      "toc_page_label": "Ⅰ",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "1.2 平面点集",
+      "toc_page": 5,
+      "toc_page_label": "Ⅴ",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "第2章 复变数函数",
+      "toc_page": 20,
+      "toc_page_label": "20",
+      "level": 1,
+      "from_page": 8
+    },
+    {
+      "text": "2.1 复变数函数的概念",
+      "toc_page": 20,
+      "toc_page_label": "20",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "2.2 函数极限和连续性",
+      "toc_page": 23,
+      "toc_page_label": "23",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "2.3 导数和解析函数的概念",
+      "toc_page": 25,
+      "toc_page_label": "25",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "2.4 柯西－黎曼方程",
+      "toc_page": 27,
+      "toc_page_label": "27",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "2.5 初等函数",
+      "toc_page": 30,
+      "toc_page_label": "30",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "第3章 解析函数的积分表示",
+      "toc_page": 50,
+      "toc_page_label": "50",
+      "level": 1,
+      "from_page": 8
+    },
+    {
+      "text": "3.1 复变函数的积分",
+      "toc_page": 50,
+      "toc_page_label": "50",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "3.2 柯西积分定理",
+      "toc_page": 54,
+      "toc_page_label": "54",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "3.3 原函数",
+      "toc_page": 56,
+      "toc_page_label": "56",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "3.4 柯西积分公式",
+      "toc_page": 59,
+      "toc_page_label": "59",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "3.5 解析函数的性质",
+      "toc_page": 63,
+      "toc_page_label": "63",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "第4章 调和函数",
+      "toc_page": 69,
+      "toc_page_label": "69",
+      "level": 1,
+      "from_page": 8
+    },
+    {
+      "text": "4.1 解析函数与调和函数的关系",
+      "toc_page": 69,
+      "toc_page_label": "69",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "4.2 调和函数的性质和狭利克雷问题",
+      "toc_page": 72,
+      "toc_page_label": "72",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "第5章 解析函数的级数展开",
+      "toc_page": 77,
+      "toc_page_label": "77",
+      "level": 1,
+      "from_page": 8
+    },
+    {
+      "text": "5.1 复级数的基本性质",
+      "toc_page": 77,
+      "toc_page_label": "77",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "5.2 基级数",
+      "toc_page": 82,
+      "toc_page_label": "82",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "5.3 解析函数的泰勒(Taylor)展开",
+      "toc_page": 85,
+      "toc_page_label": "85",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "5.4 罗朗(Laurent)级数",
+      "toc_page": 91,
+      "toc_page_label": "91",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "5.5 解析函数的孤立奇点",
+      "toc_page": 98,
+      "toc_page_label": "98",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "第6章 留数及其应用",
+      "toc_page": 107,
+      "toc_page_label": "107",
+      "level": 1,
+      "from_page": 9
+    },
+    {
+      "text": "6.1 留数定理",
+      "toc_page": 107,
+      "toc_page_label": "107",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "6.2 积分计算",
+      "toc_page": 111,
+      "toc_page_label": "111",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "6.3 辐角原理",
+      "toc_page": 126,
+      "toc_page_label": "126",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "第7章 解析开拓",
+      "toc_page": 134,
+      "toc_page_label": "134",
+      "level": 1,
+      "from_page": 9
+    },
+    {
+      "text": "7.1 唯一性定理和解析开拓的概念",
+      "toc_page": 134,
+      "toc_page_label": "134",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "7.2 含复参变量积分及Γ函数",
+      "toc_page": 138,
+      "toc_page_label": "138",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "第8章 保形变换及其应用",
+      "toc_page": 145,
+      "toc_page_label": "145",
+      "level": 1,
+      "from_page": 9
+    },
+    {
+      "text": "8.1 导数的几何意义",
+      "toc_page": 145,
+      "toc_page_label": "145",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "8.2 保形变换的概念",
+      "toc_page": 147,
+      "toc_page_label": "147",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "8.3 分式线性变换",
+      "toc_page": 149,
+      "toc_page_label": "149",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "8.4 初等函数的映照",
+      "toc_page": 156,
+      "toc_page_label": "156",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "*8.5 许瓦兹-克利斯托菲变换",
+      "toc_page": 163,
+      "toc_page_label": "163",
+      "level": 3,
+      "from_page": 9
+    },
+    {
+      "text": "8.6 平面场",
+      "toc_page": 171,
+      "toc_page_label": "171",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "第9章 拉氏变换",
+      "toc_page": 186,
+      "toc_page_label": "186",
+      "level": 1,
+      "from_page": 9
+    },
+    {
+      "text": "9.1 拉氏变换的定义",
+      "toc_page": 186,
+      "toc_page_label": "186",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "9.2 拉氏变换的基本性质",
+      "toc_page": 189,
+      "toc_page_label": "189",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "9.3 由像函数求本函数",
+      "toc_page": 200,
+      "toc_page_label": "200",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "附表1 基本法则表",
+      "toc_page": 209,
+      "toc_page_label": "209",
+      "level": 3,
+      "from_page": 9
+    },
+    {
+      "text": "附表2 拉普拉斯变换表",
+      "toc_page": 210,
+      "toc_page_label": "210",
+      "level": 3,
+      "from_page": 9
+    },
+    {
+      "text": "习题参考答案",
+      "toc_page": 218,
+      "toc_page_label": "218",
+      "level": 3,
+      "from_page": 9
+    }
+  ],
+  "printed_entries": [
+    {
+      "text": "总序",
+      "toc_page": 1,
+      "toc_page_label": "Ⅰ",
+      "level": 3,
+      "from_page": 8
+    },
+    {
+      "text": "前言",
+      "toc_page": 2,
+      "toc_page_label": "Ⅱ",
+      "level": 3,
+      "from_page": 8
+    },
+    {
+      "text": "第1章 复数和平面点集",
+      "toc_page": 1,
+      "toc_page_label": "Ⅰ",
+      "level": 1,
+      "from_page": 8
+    },
+    {
+      "text": "1.1 复数",
+      "toc_page": 1,
+      "toc_page_label": "Ⅰ",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "1.2 平面点集",
+      "toc_page": 5,
+      "toc_page_label": "Ⅴ",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "第2章 复变数函数",
+      "toc_page": 20,
+      "toc_page_label": "20",
+      "level": 1,
+      "from_page": 8
+    },
+    {
+      "text": "2.1 复变数函数的概念",
+      "toc_page": 20,
+      "toc_page_label": "20",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "2.2 函数极限和连续性",
+      "toc_page": 23,
+      "toc_page_label": "23",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "2.3 导数和解析函数的概念",
+      "toc_page": 25,
+      "toc_page_label": "25",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "2.4 柯西－黎曼方程",
+      "toc_page": 27,
+      "toc_page_label": "27",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "2.5 初等函数",
+      "toc_page": 30,
+      "toc_page_label": "30",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "第3章 解析函数的积分表示",
+      "toc_page": 50,
+      "toc_page_label": "50",
+      "level": 1,
+      "from_page": 8
+    },
+    {
+      "text": "3.1 复变函数的积分",
+      "toc_page": 50,
+      "toc_page_label": "50",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "3.2 柯西积分定理",
+      "toc_page": 54,
+      "toc_page_label": "54",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "3.3 原函数",
+      "toc_page": 56,
+      "toc_page_label": "56",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "3.4 柯西积分公式",
+      "toc_page": 59,
+      "toc_page_label": "59",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "3.5 解析函数的性质",
+      "toc_page": 63,
+      "toc_page_label": "63",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "第4章 调和函数",
+      "toc_page": 69,
+      "toc_page_label": "69",
+      "level": 1,
+      "from_page": 8
+    },
+    {
+      "text": "4.1 解析函数与调和函数的关系",
+      "toc_page": 69,
+      "toc_page_label": "69",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "4.2 调和函数的性质和狭利克雷问题",
+      "toc_page": 72,
+      "toc_page_label": "72",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "第5章 解析函数的级数展开",
+      "toc_page": 77,
+      "toc_page_label": "77",
+      "level": 1,
+      "from_page": 8
+    },
+    {
+      "text": "5.1 复级数的基本性质",
+      "toc_page": 77,
+      "toc_page_label": "77",
+      "level": 2,
+      "from_page": 8
+    },
+    {
+      "text": "5.2 基级数",
+      "toc_page": 82,
+      "toc_page_label": "82",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "5.3 解析函数的泰勒(Taylor)展开",
+      "toc_page": 85,
+      "toc_page_label": "85",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "5.4 罗朗(Laurent)级数",
+      "toc_page": 91,
+      "toc_page_label": "91",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "5.5 解析函数的孤立奇点",
+      "toc_page": 98,
+      "toc_page_label": "98",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "第6章 留数及其应用",
+      "toc_page": 107,
+      "toc_page_label": "107",
+      "level": 1,
+      "from_page": 9
+    },
+    {
+      "text": "6.1 留数定理",
+      "toc_page": 107,
+      "toc_page_label": "107",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "6.2 积分计算",
+      "toc_page": 111,
+      "toc_page_label": "111",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "6.3 辐角原理",
+      "toc_page": 126,
+      "toc_page_label": "126",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "第7章 解析开拓",
+      "toc_page": 134,
+      "toc_page_label": "134",
+      "level": 1,
+      "from_page": 9
+    },
+    {
+      "text": "7.1 唯一性定理和解析开拓的概念",
+      "toc_page": 134,
+      "toc_page_label": "134",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "7.2 含复参变量积分及Γ函数",
+      "toc_page": 138,
+      "toc_page_label": "138",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "第8章 保形变换及其应用",
+      "toc_page": 145,
+      "toc_page_label": "145",
+      "level": 1,
+      "from_page": 9
+    },
+    {
+      "text": "8.1 导数的几何意义",
+      "toc_page": 145,
+      "toc_page_label": "145",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "8.2 保形变换的概念",
+      "toc_page": 147,
+      "toc_page_label": "147",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "8.3 分式线性变换",
+      "toc_page": 149,
+      "toc_page_label": "149",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "8.4 初等函数的映照",
+      "toc_page": 156,
+      "toc_page_label": "156",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "*8.5 许瓦兹-克利斯托菲变换",
+      "toc_page": 163,
+      "toc_page_label": "163",
+      "level": 3,
+      "from_page": 9
+    },
+    {
+      "text": "8.6 平面场",
+      "toc_page": 171,
+      "toc_page_label": "171",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "第9章 拉氏变换",
+      "toc_page": 186,
+      "toc_page_label": "186",
+      "level": 1,
+      "from_page": 9
+    },
+    {
+      "text": "9.1 拉氏变换的定义",
+      "toc_page": 186,
+      "toc_page_label": "186",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "9.2 拉氏变换的基本性质",
+      "toc_page": 189,
+      "toc_page_label": "189",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "9.3 由像函数求本函数",
+      "toc_page": 200,
+      "toc_page_label": "200",
+      "level": 2,
+      "from_page": 9
+    },
+    {
+      "text": "附表1 基本法则表",
+      "toc_page": 209,
+      "toc_page_label": "209",
+      "level": 3,
+      "from_page": 9
+    },
+    {
+      "text": "附表2 拉普拉斯变换表",
+      "toc_page": 210,
+      "toc_page_label": "210",
+      "level": 3,
+      "from_page": 9
+    },
+    {
+      "text": "习题参考答案",
+      "toc_page": 218,
+      "toc_page_label": "218",
+      "level": 3,
+      "from_page": 9
+    }
+  ],
+  "chapters": [
+    "第1章 复数和平面点集",
+    "第2章 复变数函数",
+    "第3章 解析函数的积分表示",
+    "第4章 调和函数",
+    "第5章 解析函数的级数展开",
+    "第6章 留数及其应用",
+    "第7章 解析开拓",
+    "第8章 保形变换及其应用",
+    "第9章 拉氏变换"
+  ],
+  "chapters_numbered": [
+    "第1章 复数和平面点集",
+    "第2章 复变数函数",
+    "第3章 解析函数的积分表示",
+    "第4章 调和函数",
+    "第5章 解析函数的级数展开",
+    "第6章 留数及其应用",
+    "第7章 解析开拓",
+    "第8章 保形变换及其应用",
+    "第9章 拉氏变换"
+  ]
+}

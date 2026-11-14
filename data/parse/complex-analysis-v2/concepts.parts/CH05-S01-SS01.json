@@ -1,0 +1,104 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH05-S01-SS01",
+    "text_sha256": "f6ed392fc4e02c9c7bfc169128184c76b36cad62d2628a11d5bab3605577d1a1",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "f6ed392fc4e02c9c7bfc169128184c76b36cad62d2628a11d5bab3605577d1a1",
+    "source": "original_text",
+    "source_path": "original_text/ch05_s01_ss01.md"
+  },
+  "unit": {
+    "unit_id": "CH05-S01-SS01",
+    "level": "subsection",
+    "chapter": "CH05",
+    "section": "CH05-S01",
+    "title": "复数项级数",
+    "anchor": "5.1.1"
+  },
+  "concepts": [
+    {
+      "name": "复数项无穷级数",
+      "type": "definition",
+      "formal": "设 $\\{z_{n}\\}$ 是一复数列，表达式 $$\\sum_ {k = 1} ^ {+ \\infty} z _ {k} = z _ {1} + z _ {2} + \\dots + z _ {n} + \\dots\\tag{5.1}$$ 称为复数项无穷级数.如果它的部分和数列 $$S _ {n} = z _ {1} + z _ {2} + \\dots + z _ {n}, \\quad n = 1, 2, 3, \\dots$$ 有极限 $\\lim_{n\\to \\infty}S_n = S$ （有限复数），则称此级数是收敛的， $S$ 称为级数的和，记作 $$\\sum_ {k = 1} ^ {+ \\infty} z _ {k} = S.$$ 反之，如果 $\\{S_{n}\\}$ 没有极限，就称级数(5.1)发散.",
+      "source_quote": "定义1 设 $\\{z_{n}\\}$ 是一复数列，表达式 $$\\sum_ {k = 1} ^ {+ \\infty} z _ {k} = z _ {1} + z _ {2} + \\dots + z _ {n} + \\dots\\tag{5.1}$$ 称为复数项无穷级数."
+    },
+    {
+      "name": "复数项级数收敛的充要条件",
+      "type": "theorem",
+      "formal": "级数(5.1)收敛(于 $S$ )的必要充分条件是：级数 $\\sum_{k = 1}^{\\infty}a_k$ 收敛(于 $a$ )和级数 $\\sum_{k = 1}^{\\infty}b_k$ 收敛(于 $b$ ).",
+      "source_quote": "定理1 级数(5.1)收敛(于 $S$ )的必要充分条件是：级数 $\\sum_{k = 1}^{\\infty}a_k$ 收敛(于 $a$ )和级数 $\\sum_{k = 1}^{\\infty}b_k$ 收敛(于 $b$ )."
+    },
+    {
+      "name": "柯西收敛准则",
+      "type": "theorem",
+      "formal": "级数(5.1)收敛的必要充分条件是：对任给 $\\varepsilon>0$ ，可以找到正整数 $N(\\varepsilon)$ ，使当 $n>N,p=1,2,3,\\cdots$ 时，有 $$\\left| z _ {n + 1} + z _ {n + 2} + \\dots + z _ {n + p} \\right| <   \\varepsilon .$$",
+      "source_quote": "定理2（柯西收敛准则）级数(5.1)收敛的必要充分条件是：对任给 $\\varepsilon>0$ ，可以找到正整数 $N(\\varepsilon)$ ，使当 $n>N,p=1,2,3,\\cdots$ 时，有 $$\\left| z _ {n + 1} + z _ {n + 2} + \\dots + z _ {n + p} \\right| <   \\varepsilon .$$"
+    },
+    {
+      "name": "级数收敛的必要条件 $\\lim_{n\\to\\infty}z_n=0$",
+      "type": "corollary",
+      "formal": "级数(5.1) 收敛的必要条件是:  $\\lim_{n\\to\\infty}z_n=0$ .",
+      "source_quote": "推论 级数(5.1) 收敛的必要条件是:  $\\lim_{n\\to\\infty}z_n=0$ ."
+    },
+    {
+      "name": "绝对收敛",
+      "type": "definition",
+      "formal": "如果级数 $$\\sum_ {k = 1} ^ {+ \\infty} | z _ {k} | = | z _ {1} | + | z _ {2} | + \\dots + | z _ {n} | + \\dots\\tag{5.2}$$ 收敛，则称级数(5.1)绝对收敛.",
+      "source_quote": "定义2 如果级数 $$\\sum_ {k = 1} ^ {+ \\infty} | z _ {k} | = | z _ {1} | + | z _ {2} | + \\dots + | z _ {n} | + \\dots\\tag{5.2}$$ 收敛，则称级数(5.1)绝对收敛."
+    },
+    {
+      "name": "复数项级数绝对收敛的充要条件",
+      "type": "theorem",
+      "formal": "级数(5.1)绝对收敛的必要充分条件是:级数 $\\sum_{k=1}^{+\\infty} a_k$ 和级数 $\\sum_{k=1}^{+\\infty} b_k$ 都绝对收敛.",
+      "source_quote": "定理3 级数(5.1)绝对收敛的必要充分条件是:级数 $\\sum_{k=1}^{+\\infty} a_k$ 和级数 $\\sum_{k=1}^{+\\infty} b_k$ 都绝对收敛."
+    },
+    {
+      "name": "绝对收敛蕴含收敛",
+      "type": "corollary",
+      "formal": "如果级数(5.1)绝对收敛,则它一定收敛.",
+      "source_quote": "推论 如果级数(5.1)绝对收敛,则它一定收敛."
+    },
+    {
+      "name": "级数相乘法则",
+      "type": "theorem",
+      "formal": "$1^{\\circ}$ 一个绝对收敛的复数项级数的各项可任意重排次序，仍绝对收敛，其和不变；$2^{*}$ 若两个绝对收敛的复数项级数 $\\sum_{k=1}^{+\\infty} z_k' = A$ 与 $\\sum_{k=1}^{+\\infty} z_k'' = B$. 令 $$z _ {k} = z _ {1} ^ {\\prime} z _ {k} ^ {\\prime \\prime} + z _ {2} ^ {\\prime} z _ {k - 1} ^ {\\prime \\prime} + \\dots + z _ {k} ^ {\\prime} z _ {1} ^ {\\prime \\prime}, \\quad k = 1, 2, \\dots .$$ 则级数 $\\sum_{k=1}^{+\\infty} z_k$ 也绝对收敛，且其和为 $AB$，即 $$\\left(\\sum_ {k = 1} ^ {+ \\infty} z _ {k} ^ {\\prime}\\right) \\left(\\sum_ {k = 1} ^ {+ \\infty} z _ {k} ^ {\\prime \\prime}\\right) = \\sum_ {k = 1} ^ {+ \\infty} z _ {k}.$$",
+      "source_quote": "定理4 $1^{\\circ}$ 一个绝对收敛的复数项级数的各项可任意重排次序，仍绝对收敛，其和不变；$2^{*}$ 若两个绝对收敛的复数项级数 $\\sum_{k=1}^{+\\infty} z_k' = A$ 与 $\\sum_{k=1}^{+\\infty} z_k'' = B$."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 8,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "故由定理"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "复数项无穷级数",
+    "复数项级数收敛的充要条件",
+    "柯西收敛准则",
+    "级数收敛的必要条件 $\\lim_{n\\to\\infty}z_n=0$",
+    "绝对收敛",
+    "复数项级数绝对收敛的充要条件",
+    "绝对收敛蕴含收敛",
+    "级数相乘法则"
+  ]
+}

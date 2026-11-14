@@ -1,0 +1,52 @@
+—— CH01-S01-SS02 回路开始（run 2026-10-03 08:42:24）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 4, '教案问题明细': ['CH01-S01-SS02: 《共轭的共轭》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，最好再给一个边界/反例），并点出两种情况差在哪', 'CH01-S01-SS02: 《乘除与共轭换序》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，最好再给一个边界/反例），并点出两种情况差在哪', 'CH01-S01-SS02: 《判断实数的共轭判别法》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，最好再给一个边界/反例），并点出两种情况差在哪', 'CH01-S01-SS02: 《判断纯虚数的共轭判别法》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，最好再给一个边界/反例），并点出两种情况差在哪'], '教案提醒': 8, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 4 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH01-S01-SS02: 《共轭的共轭》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，最好再给一个边界/反例），并点出两种情况差在哪', 'CH01-S01-SS02: 《乘除与共轭换序》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，最好再给一个边界/反例），并点出两种情况差在哪']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [4] 条 → 并集 2 条工单
+    T-Ra61dc [P1] hits=4 「CH01-S01-SS02: 《判断纯虚数的共轭判别法》只给了 1 个例」
+    T-86b974 [P1] hits=1 「例2 要判断 $\dfrac{z}{1+z^{2}}$ 是不是实数，走的」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH01-S01-SS02 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH01-S01-SS02.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH01-S01-SS02 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH01-S01-SS02.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 2 条：['CH01-S01-SS02: 《乘除与共轭换序》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，最好再给一个边界/反例），并点出两种情况差在哪', 'CH01-S01-SS02: 《判断实数的共轭判别法》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，最好再给一个边界/反例），并点出两种情况差在哪'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 2 / 仍开着 2；新 P0 0 条
+  ⚠ 这一轮工单没有净减少（2 → 2）
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 0 条（丢了 6 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R355e1 [P1]：（这一轮没给出判定）
+   · 工单没关掉 T-R309eb [P1]：（这一轮没给出判定）
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（2 条）：
+  [P1] T-R309eb 「CH01-S01-SS02: 《判断实数的共轭判别法》只给了 1 个例子 —— 」
+  [P1] T-R355e1 「CH01-S01-SS02: 《乘除与共轭换序》只给了 1 个例子 —— 至少 」
+记录写到 data/audit/complex-analysis-v2/CH01-S01-SS02.loop.json
+—— CH01-S01-SS02 回路开始（run 2026-10-03 10:46:17）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 0, '教案问题明细': [], '教案提醒': 8, 'audit_error': ''}
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  上一趟的 ['T-R309eb', 'T-R355e1', 'T-R355e1', 'T-R309eb'] 原句已不在成品里 → 视为已改，不再背
+  每次 [6] 条 → 并集 2 条工单
+    T-692b11 [P1] hits=1 「由结论 4)，$\overline{\left(\dfrac{z}{1+」
+    T-fc5bf2 [P1] hits=1 「题目给了两个前提。$y\neq0$ 说明 $z$ 不是实数。$1+z^{」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH01-S01-SS02 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH01-S01-SS02.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH01-S01-SS02 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH01-S01-SS02.feedback.json --temperature 0.0 --seed 42
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 1 / 仍开着 1；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 6 条
+  📌 发现 6 处**原文疑似有错** → 记进勘误清单（不改成品）
+  📌 原文疑似有错：这一节 6 条 → 原文疑似有错.json（共 37 条）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-fc5bf2 [P1]：已逐字保留原题两个条件并说明 $y\neq\pm\mathrm{i}$ 按字面失效，再经 $1+z^2=0\Leftrightarrow z
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（1 条）：
+  [P1] T-fc5bf2 「题目给了两个前提。$y\neq0$ 说明 $z$ 不是实数。$1+z^{2}\n」
+记录写到 data/audit/complex-analysis-v2/CH01-S01-SS02.loop.json

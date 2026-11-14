@@ -1,0 +1,72 @@
+{
+  "_meta": {
+    "file_type": "extract",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.mineru",
+    "source_sha256": "dc9b35284043bab4f95073b4ace0532428b79aa9bf865b17f7dac35c0a8b3aa2",
+    "field_notes": {
+      "engine": "抽取引擎；mineru-cloud-<版本> 表示这一份来自 MinerU 而不是本地 OCR",
+      "inputs": "这次适配读了哪些 MinerU 产物（含 sha256）",
+      "counts": "页数/块数/公式数/图片数"
+    }
+  },
+  "engine": "mineru-cloud-3.4.4",
+  "format": {
+    "family": "legacy-layout",
+    "version": "3.4.4",
+    "backend": "hybrid",
+    "effort": "medium",
+    "ocr_enable": true
+  },
+  "inputs": [
+    {
+      "path": "layout.json",
+      "role": "layout",
+      "bytes": 13607581,
+      "sha256": "dc9b35284043bab4f95073b4ace0532428b79aa9bf865b17f7dac35c0a8b3aa2"
+    },
+    {
+      "path": "content_list.json",
+      "role": "content_list",
+      "bytes": 1333332,
+      "sha256": "e2ff63111c168c20b87376e90d8ba456bcf37c4a2ab2b62052ba83d45903e773"
+    },
+    {
+      "path": "full.md",
+      "role": "full",
+      "bytes": 624626,
+      "sha256": "ef9c5867993c0602a2dd1f0f3a9f22f3625313a12b07d9a990da8a683f679822"
+    }
+  ],
+  "counts": {
+    "pages": 289,
+    "blocks": 4465,
+    "by_type": {
+      "text": 3046,
+      "title": 155,
+      "interline_equation": 1216,
+      "image": 28,
+      "table": 2,
+      "chart": 1,
+      "ref_text": 17
+    },
+    "discarded": 531,
+    "discarded_by_type": {
+      "page_number": 287,
+      "toc": 8,
+      "header": 215,
+      "title-repeat": 21
+    },
+    "dropped_toc_blocks": 8,
+    "dropped_repeat_titles": 21,
+    "formulas": {
+      "inline": 5386,
+      "interline": 1216
+    },
+    "figures": 29,
+    "text_chars": 460147,
+    "cjk_chars": 70887,
+    "document_lines": 4754
+  },
+  "warnings": []
+}

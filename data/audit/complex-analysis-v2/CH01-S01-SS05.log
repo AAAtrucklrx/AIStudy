@@ -1,0 +1,57 @@
+—— CH01-S01-SS05 回路开始（run 2026-10-03 09:05:40）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 4, '教案问题明细': ['CH01-S01-SS05: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH01-S01-SS05: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH01-S01-SS05: 《收敛于无穷远点》(F-05) 四样都没有 —— 图 / 某步的图 / 图请求 / 正当的不配图理由，至少要有一样', 'CH01-S01-SS05: 《复数球面与球极投影》(F-06) 四样都没有 —— 图 / 某步的图 / 图请求 / 正当的不配图理由，至少要有一样'], '教案提醒': 4, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 4 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH01-S01-SS05: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH01-S01-SS05: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [4] 条 → 并集 2 条工单
+    T-R57b75 [P1] hits=4 「CH01-S01-SS05: 《复数球面与球极投影》(F-06) 四样都」
+    T-d1c6e6 [P1] hits=1 「得到的球面点全部落在同一个水平面 $\zeta=\frac{2R^2}{」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH01-S01-SS05 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH01-S01-SS05.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH01-S01-SS05 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH01-S01-SS05.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 3 条：['CH01-S01-SS05: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH01-S01-SS05: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 1 / 仍开着 2；新 P0 0 条
+  ⚠ 这一轮工单没有净减少（2 → 2）
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 1 条
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R57b75 [P1]：重跑规则：这一条已经不再报（代码判的，不需要模型引用）
+   · 工单没关掉 T-R4c267 [P1]：（这一轮没给出判定）
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（2 条）：
+  [P1] T-R4c267 「CH01-S01-SS05: 《模与辐角判据》(F-04) 四样都没有 —— 图」
+  [P1] T-R57b75 「CH01-S01-SS05: 《复数球面与球极投影》(F-06) 四样都没有 —」
+记录写到 data/audit/complex-analysis-v2/CH01-S01-SS05.loop.json
+—— CH01-S01-SS05 回路开始（run 2026-10-03 11:09:44）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 2, '教案问题明细': ['CH01-S01-SS05: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH01-S01-SS05: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'], '教案提醒': 6, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 2 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH01-S01-SS05: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH01-S01-SS05: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  上一趟的 ['T-R4c267', 'T-R57b75', 'T-R57b75', 'T-R4c267'] 原句已不在成品里 → 视为已改，不再背
+  每次 [5] 条 → 并集 3 条工单
+    T-R57b75 [P1] hits=2 「CH01-S01-SS05: 有一张图没声明**服务什么** （缺 co」
+    T-27bef6 [P1] hits=1 「从原点引此圆的两条切线，则此两条切线的夹角为 $2\varphi (\d」
+    T-b93a5b [P1] hits=1 「若 $\zeta < 1$，即球面上南半球面的点，有 $R^2 < 4$」
+[轮 1] 按 3 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH01-S01-SS05 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH01-S01-SS05.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH01-S01-SS05 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH01-S01-SS05.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 3 条：['CH01-S01-SS05: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH01-S01-SS05: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 2 / 仍开着 2；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 1 条
+  📌 发现 1 处**原文疑似有错** → 记进勘误清单（不改成品）
+  📌 原文疑似有错：这一节 1 条 → 原文疑似有错.json（共 53 条）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R57b75 [P1]：两张图已写明服务对象（「（过程图）定理 1 的证明思路」「（过程图）球极投影坐标推导」），但成品里仍有两处裸的「（插图）」，没有声明服务哪条
+   · 工单没关掉 T-R4c267 [P1]：（这一轮没给出判定）
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（2 条）：
+  [P1] T-R4c267 「CH01-S01-SS05: 《模与辐角判据》(F-04) 四样都没有 —— 图」
+  [P1] T-R57b75 「CH01-S01-SS05: 有一张图没声明**服务什么** （缺 concep」
+记录写到 data/audit/complex-analysis-v2/CH01-S01-SS05.loop.json

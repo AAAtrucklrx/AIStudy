@@ -1,0 +1,21 @@
+—— CH02-S02 回路开始（run 2026-10-03 08:31:01）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 1, '教案问题明细': ['CH02-S02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'], '教案提醒': 4, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 1 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH02-S02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [4] 条 → 并集 2 条工单
+    T-0d4518 [P1] hits=1 「其余的点，作一个以 $z_0$ 为中心、充分小的圆，这个圆可以完全不碰负」
+    T-Re6b5b [P1] hits=1 「CH02-S02: 有一张图没声明**服务什么** （缺 concept」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH02-S02 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH02-S02.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH02-S02 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH02-S02.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 1 条：['CH02-S02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 2 / 仍开着 0；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 0 条
+── 卡在哪（这一趟）──────────────────────────────
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+记录写到 data/audit/complex-analysis-v2/CH02-S02.loop.json

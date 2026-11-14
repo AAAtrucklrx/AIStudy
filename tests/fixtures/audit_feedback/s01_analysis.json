@@ -1,0 +1,43 @@
+{
+  "unit": "CH04-S01",
+  "phenomenon": "verdict 判 closed，quote 用『……』拼接多处正文；逐字 `quote in current_text` 失败",
+  "current_text_source": "data/books/complex-analysis-v2/runs/run-20261006-142529-bad4aa/work/legacy/lesson/lessons/CH04-S01.json",
+  "current_text_sha256": "1e75f084a52afd0301104b3ef48de8a8fbd36e58c852d09e7597a900197a4947",
+  "current_text_len": 7065,
+  "lesson_file_sha256": "3fcf3134170d735d2fe629eb395d1c81c0ef49259a5c95199c5e063c58854a14",
+  "window": {
+    "start": 5153,
+    "end": 7065,
+    "len": 1912
+  },
+  "window_exact_span_coverage": [
+    {
+      "start": 6347,
+      "end": 6409
+    },
+    {
+      "start": 6449,
+      "end": 6862
+    },
+    {
+      "start": 6775,
+      "end": 6958
+    },
+    {
+      "start": 5332,
+      "end": 5577
+    },
+    {
+      "start": 6347,
+      "end": 6409
+    },
+    {
+      "start": 6449,
+      "end": 6862
+    },
+    {
+      "start": 6775,
+      "end": 6958
+    }
+  ]
+}

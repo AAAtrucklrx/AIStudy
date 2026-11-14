@@ -1,0 +1,109 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH01-S02-SS01",
+    "text_sha256": "ef46c1cc04f1ece3c212fe9301a28847d782fd365069992a98014474a4944f0b",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "ef46c1cc04f1ece3c212fe9301a28847d782fd365069992a98014474a4944f0b",
+    "source": "original_text",
+    "source_path": "original_text/ch01_s02_ss01.md"
+  },
+  "unit": {
+    "unit_id": "CH01-S02-SS01",
+    "level": "subsection",
+    "chapter": "CH01",
+    "section": "CH01-S02",
+    "title": "基本概念",
+    "anchor": "1.2.1"
+  },
+  "concepts": [
+    {
+      "name": "ρ邻域",
+      "type": "definition",
+      "formal": "设 $z_0$ 是复平面上一点，$\\rho$ 是任一正数，点集 $$\\{z \\mid | z - z _ {0} | <   p \\}$$ 称为 $z_0$ 的 $\\rho$ 邻域.",
+      "source_quote": "设 $z_0$ 是复平面上一点，$\\rho$ 是任一正数，点集 $$\\{z \\mid | z - z _ {0} | <   p \\}$$ 称为 $z_0$ 的 $\\rho$ 邻域."
+    },
+    {
+      "name": "内点",
+      "type": "definition",
+      "formal": "如果$M$ 有一个 $\\rho$ 邻域完全属于 $E,M$ 称为 $E$ 的内点；",
+      "source_quote": "如果$M$ 有一个 $\\rho$ 邻域完全属于 $E,M$ 称为 $E$ 的内点；"
+    },
+    {
+      "name": "边界点",
+      "type": "definition",
+      "formal": "$M$ 的任一 $\\rho$ 邻域内既有集 $E$ 的点，也有非 $E$ 的点， $M$ 称为 $E$ 的边界点.",
+      "source_quote": "$M$ 的任一 $\\rho$ 邻域内既有集 $E$ 的点，也有非 $E$ 的点， $M$ 称为 $E$ 的边界点."
+    },
+    {
+      "name": "外点",
+      "type": "definition",
+      "formal": "$M$ 有一个 $\\rho$ 邻域完全不属于集 $E,M$ 称为集 $E$ 的外点.",
+      "source_quote": "$M$ 有一个 $\\rho$ 邻域完全不属于集 $E,M$ 称为集 $E$ 的外点."
+    },
+    {
+      "name": "开集",
+      "type": "definition",
+      "formal": "如果集 E 的点全部是内点，E 称为开集。",
+      "source_quote": "如果集 E 的点全部是内点，E 称为开集。"
+    },
+    {
+      "name": "边界",
+      "type": "definition",
+      "formal": "E 的全部边界点的集合，称为 E 的边界。",
+      "source_quote": "E 的全部边界点的集合，称为 E 的边界。"
+    },
+    {
+      "name": "闭集",
+      "type": "definition",
+      "formal": "如果 E 的边界全属于 E，E 称为闭集。",
+      "source_quote": "如果 E 的边界全属于 E，E 称为闭集。"
+    },
+    {
+      "name": "有界集",
+      "type": "definition",
+      "formal": "如果集 E 可以包含在原点的某个邻域内，E 称为有界集；",
+      "source_quote": "如果集 E 可以包含在原点的某个邻域内，E 称为有界集；"
+    },
+    {
+      "name": "无界集",
+      "type": "definition",
+      "formal": "否则集 E 称为无界集。",
+      "source_quote": "否则集 E 称为无界集。"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 9,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "ρ邻域",
+    "内点",
+    "边界点",
+    "外点",
+    "开集",
+    "边界",
+    "闭集",
+    "有界集",
+    "无界集"
+  ]
+}

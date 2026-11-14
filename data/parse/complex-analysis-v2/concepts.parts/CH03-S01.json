@@ -1,0 +1,108 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH03-S01",
+    "text_sha256": "09395897184f50999d8b46ee147845bd5165785fe29ddbe0b9816dc9f2aa11bd",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "09395897184f50999d8b46ee147845bd5165785fe29ddbe0b9816dc9f2aa11bd",
+    "source": "original_text",
+    "source_path": "original_text/ch03_s01.md"
+  },
+  "unit": {
+    "unit_id": "CH03-S01",
+    "level": "section",
+    "chapter": "CH03",
+    "section": "CH03-S01",
+    "title": "复变函数的积分",
+    "anchor": "3.1"
+  },
+  "concepts": [
+    {
+      "name": "复变函数的积分",
+      "type": "definition",
+      "formal": "设 $C$ 是平面上的一条逐段光滑的曲线，其起点是 $z_0$ ，终点是 $Z, w = f(z)$ 是定义在曲线 $C$ 上的一个单值连续函数，任意用一系列分点 $$z_{k} = x_{k} + \\mathrm{i} y_{k}, \\quad k = 0, 1, 2, \\dots , n,$$ 把曲线 $C$ 分成许多小段(图 3.1)，在每一小段 $\\overline{z_{k-1}z_k}$ 中任取一点 $\\zeta_k$ ，作和 $$\\sum_{k = 1}^{n} f \\left(\\zeta_{k}\\right) \\Delta z_{k}, \\quad \\Delta z_{k} = z_{k} - z_{k - 1}.$$ 命 $\\lambda = \\max_k |\\Delta z_k|$，如果当 $\\lambda \\to 0$ 时，上述和式的极限存在，而且其值与弧段的分法和各个 $\\zeta_k$ 的选取无关，就称这个极限为 $f(z)$ 沿曲线 $C$ 自 $z_0$ 到 $Z$ 的积分.记作 $$\\int_{c} f (z) \\mathrm{d} z.$$",
+      "source_quote": "定义1 设 $C$ 是平面上的一条逐段光滑的曲线，其起点是 $z_0$ ，终点是 $Z, w = f(z)$ 是定义在曲线 $C$ 上的一个单值连续函数"
+    },
+    {
+      "name": "定理1",
+      "type": "theorem",
+      "formal": "设 $f(z) = u(x, y) + \\mathrm{i}v(x, y)$ 在曲线 $C$ 上连续，则复积分 $\\int_{C} f(z) \\, \\mathrm{d}z$ 存在，而且可以表示为两个线积分的和，即 $$\\int_{C} f (z) \\mathrm{d} z = \\int_{C} u (x, y) \\mathrm{d} x - v (x, y) \\mathrm{d} y + \\mathrm{i} \\int_{C} v (x, y) \\mathrm{d} x + u (x, y) \\mathrm{d} y\\tag{3.1}$$",
+      "source_quote": "定理1 设 $f(z) = u(x, y) + \\mathrm{i}v(x, y)$ 在曲线 $C$ 上连续，则复积分 $\\int_{C} f(z) \\, \\mathrm{d}z$ 存在，而且可以表示为两个线积分的和，即"
+    },
+    {
+      "name": "复积分的性质1)",
+      "type": "property",
+      "formal": "如果 $k$ 是复常数，则 $$\\int_{c} k f (z) \\mathrm{d} z = k \\int_{c} f (z) \\mathrm{d} z;$$",
+      "source_quote": "1) 如果 $k$ 是复常数，则 $$\\int_{c} k f (z) \\mathrm{d} z = k \\int_{c} f (z) \\mathrm{d} z;$$"
+    },
+    {
+      "name": "复积分的性质2)",
+      "type": "property",
+      "formal": "$$\\int_{c} [ f (z) \\pm g (z) ] \\mathrm{d} z = \\int_{c} f (z) \\mathrm{d} z \\pm \\int_{c} g (z) \\mathrm{d} z;$$",
+      "source_quote": "$$\\int_{c} [ f (z) \\pm g (z) ] \\mathrm{d} z = \\int_{c} f (z) \\mathrm{d} z \\pm \\int_{c} g (z) \\mathrm{d} z;$$"
+    },
+    {
+      "name": "复积分的性质3)",
+      "type": "property",
+      "formal": "$$\\int_{C} f(z) \\mathrm{d}z = -\\int_{C^+} f(z) \\mathrm{d}z;$$ 这里， $C^{-}$ 表示与 C 相同但方向相反的曲线。",
+      "source_quote": "3) $\\int_{C} f(z) \\mathrm{d}z = -\\int_{C^+} f(z) \\mathrm{d}z;$ 这里， $C^{-}$ 表示与 C 相同但方向相反的曲线。"
+    },
+    {
+      "name": "复积分的性质4)",
+      "type": "property",
+      "formal": "如果曲线 $C$ 由 $C_1$ 和 $C_2$ 组成，则 $$\\int_{C} f (z) \\mathrm{d} z = \\int_{\\mathrm{c}_{1}} f (z) \\mathrm{d} z + \\int_{\\mathrm{c}_{2}} f (z) \\mathrm{d} z;$$",
+      "source_quote": "4) 如果曲线 $C$ 由 $C_1$ 和 $C_2$ 组成，则 $$\\int_{C} f (z) \\mathrm{d} z = \\int_{\\mathrm{c}_{1}} f (z) \\mathrm{d} z + \\int_{\\mathrm{c}_{2}} f (z) \\mathrm{d} z;$$"
+    },
+    {
+      "name": "复积分的性质5)",
+      "type": "property",
+      "formal": "$$\\left| \\int_{c} f (z) \\mathrm{d} z \\right| \\leqslant \\int_{c} | f (z) | \\mathrm{d} s.\\tag{3.3}$$ 上式右端是实连续函数 $|f(z)|$ 沿曲线 $C$ 的第一型曲线积分.",
+      "source_quote": "5) $$\\left| \\int_{c} f (z) \\mathrm{d} z \\right| \\leqslant \\int_{c} | f (z) | \\mathrm{d} s.\\tag{3.3}$$"
+    },
+    {
+      "name": "长大不等式",
+      "type": "formula",
+      "formal": "若在曲线 $C$ 上有 $\\mid f(z)\\mid \\leqslant M$ ，曲线 $C$ 的长为 $l$ ，则(3.3)式成为 $$\\left| \\int_{c} f (z) d z \\right| \\leqslant M l.\\tag{3.4}$$",
+      "source_quote": "特别地，若在曲线 $C$ 上有 $\\mid f(z)\\mid \\leqslant M$ ，曲线 $C$ 的长为 $l$ ，则(3.3)式成为 $$\\left| \\int_{c} f (z) d z \\right| \\leqslant M l.\\tag{3.4}$$ (3.4) 式叫做长大不等式"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 8,
+    "漏掉的具名结论": [
+      "定理1"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "曲线积分的一些基本性质",
+      "定义或者把曲线积分的有关性质",
+      "下面证明性质"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "复变函数的积分",
+    "定理1",
+    "复积分的性质1)",
+    "复积分的性质2)",
+    "复积分的性质3)",
+    "复积分的性质4)",
+    "复积分的性质5)",
+    "长大不等式"
+  ]
+}

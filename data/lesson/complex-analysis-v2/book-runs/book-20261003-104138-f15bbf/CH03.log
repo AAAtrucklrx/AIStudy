@@ -1,0 +1,94 @@
+=== CH03：6 个单元 ===
+    CH03
+    CH03-S01
+    CH03-S02
+    CH03-S03
+    CH03-S04
+    CH03-S05
+
+计划：
+    CH03               概念有    教案有      模型有      回路最多 1 轮
+    CH03-S01           概念有    教案有      模型有      回路最多 1 轮
+    CH03-S02           概念有    教案有      模型有      回路最多 1 轮
+    CH03-S03           概念有    教案有      模型有      回路最多 1 轮
+    CH03-S04           概念有    教案有      模型有      回路最多 1 轮
+    CH03-S05           概念有    教案要生成    模型要生成    回路最多 1 轮
+
+估价（按实测单价，粗算）：概念 ~10k/节、教案 ~25~70k/节（看原文长度）、模型 ~10~20k/节、回路 ~80~120k/节（K=2）
+run_id：book-20261003-104138-f15bbf/CH03（本趟账目只算这一趟，并行下不会串账）
+
+===== CH03 解析函数的积分表示 =====
+    模型：CH03: 模型用 revision 1 生成，教案现在是 3 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH03 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH03 --fix-anchors
+    回路：上次已通过、教案没变（revision 3）→ 跳过付费复核
+    → 字数 963｜倍数 9.74｜套话 0｜详解 1｜硬问题 0｜本步 0 token
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH03 --only CH03,CH03-S01,CH03-S02,CH03-S03,CH03-S04,CH03-S05
+
+===== CH03-S01 复变函数的积分 =====
+    模型：CH03-S01: 模型用 revision 1 生成，教案现在是 6 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH03-S01 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH03-S01 --fix-anchors
+    · 教案有 3 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH03-S01: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH03-S01 --max-rounds 1 --discover-runs 1
+    · 还有 3 条**非篇幅**硬问题 → 不动它，交给回路的补丁模式（下次跑会带上）：CH03-S01: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内…
+    → 字数 4260｜倍数 3.81｜套话 0｜详解 9｜硬问题 3｜本步 221,805 token
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH03 --only CH03,CH03-S01,CH03-S02,CH03-S03,CH03-S04,CH03-S05
+
+===== CH03-S02 柯西积分定理 =====
+    模型：CH03-S02: 模型用 revision 1 生成，教案现在是 4 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH03-S02 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH03-S02 --fix-anchors
+    · 教案有 2 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH03-S02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH03-S02 --max-rounds 1 --discover-runs 1
+    · 还有 2 条**非篇幅**硬问题 → 不动它，交给回路的补丁模式（下次跑会带上）：CH03-S02: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内…
+    → 字数 3309｜倍数 3.29｜套话 0｜详解 10｜硬问题 2｜本步 218,531 token
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH03 --only CH03,CH03-S01,CH03-S02,CH03-S03,CH03-S04,CH03-S05
+
+===== CH03-S03 原函数 =====
+    模型：CH03-S03: 模型用 revision 1 生成，教案现在是 3 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH03-S03 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH03-S03 --fix-anchors
+    · 教案有 2 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH03-S03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH03-S03 --max-rounds 1 --discover-runs 1
+    · 还有 2 条**非篇幅**硬问题 → 不动它，交给回路的补丁模式（下次跑会带上）：CH03-S03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内…
+    → 字数 3157｜倍数 2.79｜套话 0｜详解 5｜硬问题 2｜本步 174,148 token
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH03 --only CH03,CH03-S01,CH03-S02,CH03-S03,CH03-S04,CH03-S05
+
+===== CH03-S04 柯西积分公式 =====
+    模型：CH03-S04: 模型用 revision 1 生成，教案现在是 4 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH03-S04 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH03-S04 --fix-anchors
+    · 教案有 2 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH03-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH03-S04 --max-rounds 1 --discover-runs 1
+    · 还有 2 条**非篇幅**硬问题 → 不动它，交给回路的补丁模式（下次跑会带上）：CH03-S04: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内…
+    → 字数 2841｜倍数 2.66｜套话 0｜详解 6｜硬问题 2｜本步 186,284 token
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH03 --only CH03,CH03-S01,CH03-S02,CH03-S03,CH03-S04,CH03-S05
+
+===== CH03-S05 解析函数的性质 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH03-S05 --quiet --temperature 0 --seed 42
+    模型：CH03-S05: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH03-S05 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH03-S05 --fix-anchors
+    · 教案有 3 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH03-S05: F-05 第 2 步的 `basis` 指不回任何东西（'反证假设（$f$ 无零点）与商的求导法则（…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH03-S05 --max-rounds 1 --discover-runs 1
+    · 还有 2 条**非篇幅**硬问题 → 不动它，交给回路的补丁模式（下次跑会带上）：CH03-S05: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内…
+    → 字数 4404｜倍数 1.77｜套话 0｜详解 9｜硬问题 2｜本步 309,141 token
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH03 --only CH03,CH03-S01,CH03-S02,CH03-S03,CH03-S04,CH03-S05
+
+===== 建页：CH03 全章 =====
+  · 这一页已经是最新的（6 节、教案版本都对得上）→ 跳过重建
+    $ node /home/aaatrucklrx/桌面/AI教学/AIforStudy/blocks/render/check_render.js /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH03
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/quality_report.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2
+  章记录对齐：['CH03-S01', 'CH03-S03', 'CH03-S05'] 的指标/结论按最新产物改写了
+
+=== CH03 跑完 ===
+  ✓ CH03               字数 963   倍数 9.74  硬问题 0 回路 通过（工单全部关闭，且没有新
+  ⚠ CH03-S01           字数 4260  倍数 3.81  硬问题 3 回路 冻结（跑满轮数上限，剩余工单
+  ⚠ CH03-S02           字数 3309  倍数 3.29  硬问题 2 回路 冻结（跑满轮数上限，剩余工单
+  ⚠ CH03-S03           字数 3157  倍数 2.79  硬问题 2 回路 冻结（跑满轮数上限，剩余工单
+  ⚠ CH03-S04           字数 2841  倍数 2.66  硬问题 2 回路 冻结（跑满轮数上限，剩余工单
+  ⚠ CH03-S05           字数 4404  倍数 1.77  硬问题 2 回路 冻结（跑满轮数上限，剩余工单
+  网页自检：['自检输出读不出来']
+  本次总花费：1,109,909 token
+  报告：data/lesson/complex-analysis-v2/chapter-runs/CH03.json

@@ -1,0 +1,62 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH09-S02-SS09",
+    "text_sha256": "046b3504a8e12834941f91782b4101322171361db969878fbfbbdcfeae8a517f",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "046b3504a8e12834941f91782b4101322171361db969878fbfbbdcfeae8a517f",
+    "source": "original_text",
+    "source_path": "original_text/ch09_s02_ss09.md"
+  },
+  "unit": {
+    "unit_id": "CH09-S02-SS09",
+    "level": "subsection",
+    "chapter": "CH09",
+    "section": "CH09-S02",
+    "title": "周期函数的像函数",
+    "anchor": "9.2.9"
+  },
+  "concepts": [
+    {
+      "name": "周期函数的像函数",
+      "type": "theorem",
+      "formal": "设 $f(t)$ 是 $[0, +\\infty)$ 内以 $T$ 为周期的函数，且 $f(t)$ 在一周期内逐段光滑，则 $$\\mathrm{L} [ f (t) ] = \\frac {1}{1 - \\mathrm{e} ^ {- p t}} \\int_ {0} ^ {T} f (t) \\mathrm{e} ^ {- p t} \\mathrm{d} t.$$",
+      "source_quote": "设 $f(t)$ 是 $[0, +\\infty)$ 内以 $T$ 为周期的函数，且 $f(t)$ 在一周期内逐段光滑，则 $$\\mathrm{L} [ f (t) ] = \\frac {1}{1 - \\mathrm{e} ^ {- p t}} \\int_ {0} ^ {T} f (t) \\mathrm{e} ^ {- p t} \\mathrm{d} t.$$"
+    },
+    {
+      "name": "定理 1",
+      "type": "theorem",
+      "formal": "据定理 $1, F(p) = \\mathrm{L}[f(t)]$ 在半平面 $\\operatorname{Re} p > 0$ 内解析.",
+      "source_quote": "据定理 $1, F(p) = \\mathrm{L}[f(t)]$ 在半平面 $\\operatorname{Re} p > 0$ 内解析."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 2,
+    "漏掉的具名结论": [
+      "定理 1"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "周期函数的像函数",
+    "定理 1"
+  ]
+}

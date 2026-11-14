@@ -1,0 +1,1467 @@
+{
+  "_meta": {
+    "file_type": "structure",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.structure",
+    "source_sha256": "a260ae5d98e05331e83a6546544e4d897ebea55780bf6c96d06a66a3b32d38ab",
+    "max_level": 4,
+    "field_notes": {
+      "headings[].scheme": "命中的编号体系：chapter/cn/num/paren",
+      "headings[].numeric": "数字路径，(4,1) 即 4.1；用于前缀嵌套判定",
+      "headings[].level": "推断出的层级（1=章 2=节 3=小节 4=知识点块）",
+      "headings[].canonical": "按文档顺序重新编号后的锚点",
+      "headings[].source_line": "在输入 document.md 里的 1-based 行号"
+    }
+  },
+  "warnings": [
+    "删掉 154 行跨页重复的页眉/页脚",
+    "合并了 2771 处被 PDF 折断的换行"
+  ],
+  "stats": {
+    "dropped_page_numbers": 0,
+    "dropped_page_furniture": 154,
+    "dropped_toc_lines": 0,
+    "excluded_region_lines": 342,
+    "excluded_region_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      26,
+      27,
+      28,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239
+    ],
+    "code_lines_skipped": 0,
+    "pages": 239,
+    "heading_source": "authority",
+    "headings_total": 80,
+    "exercise_items_marked": 0,
+    "exercise_items": [],
+    "authority": {
+      "matched": 80,
+      "unmatched": [],
+      "synthesized_anchors": 0,
+      "near_window_hits": 0
+    },
+    "toc_check": {},
+    "skeleton": {},
+    "plain_number_dropped": 0,
+    "bare_number_seen": 0,
+    "level_1": 9,
+    "level_2": 33,
+    "level_3": 38,
+    "level_4": 0,
+    "body_lines_after_unwrap": 677,
+    "source_sha256": "a260ae5d98e05331e83a6546544e4d897ebea55780bf6c96d06a66a3b32d38ab",
+    "regions_used": true
+  },
+  "headings": [
+    {
+      "scheme": "toc",
+      "raw_number": "第1章",
+      "title": "复数和平面点集",
+      "source_line": 58,
+      "page": 10,
+      "numeric": [
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 1,
+      "canonical_level": 1,
+      "canonical": "1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.1",
+      "title": "复数",
+      "source_line": 60,
+      "page": 10,
+      "numeric": [
+        1,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "1.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.1.1",
+      "title": "复数的四则运算",
+      "source_line": 61,
+      "page": 10,
+      "numeric": [
+        1,
+        1,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.1.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.1.2",
+      "title": "共轭复数",
+      "source_line": 109,
+      "page": 12,
+      "numeric": [
+        1,
+        1,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.1.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.1.3",
+      "title": "复数的几何表示、模与辐角",
+      "source_line": 156,
+      "page": 14,
+      "numeric": [
+        1,
+        1,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.1.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.1.4",
+      "title": "复数的乘方和开方",
+      "source_line": 255,
+      "page": 19,
+      "numeric": [
+        1,
+        1,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.1.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.1.5",
+      "title": "复数序列的极限、无穷远点",
+      "source_line": 289,
+      "page": 20,
+      "numeric": [
+        1,
+        1,
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.1.5"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.2",
+      "title": "平面点集",
+      "source_line": 351,
+      "page": 24,
+      "numeric": [
+        1,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "1.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.2.1",
+      "title": "基本概念",
+      "source_line": 352,
+      "page": 24,
+      "numeric": [
+        1,
+        2,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.2.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "1.2.2",
+      "title": "区域与曲线",
+      "source_line": 359,
+      "page": 24,
+      "numeric": [
+        1,
+        2,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "1.2.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "第2章",
+      "title": "复变数函数",
+      "source_line": 440,
+      "page": 29,
+      "numeric": [
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 1,
+      "canonical_level": 1,
+      "canonical": "2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.1",
+      "title": "复变数函数的概念",
+      "source_line": 442,
+      "page": 29,
+      "numeric": [
+        2,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "2.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.2",
+      "title": "函数极限和连续性",
+      "source_line": 492,
+      "page": 32,
+      "numeric": [
+        2,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "2.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.3",
+      "title": "导数和解析函数的概念",
+      "source_line": 531,
+      "page": 34,
+      "numeric": [
+        2,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "2.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.4",
+      "title": "柯西－黎曼方程",
+      "source_line": 578,
+      "page": 36,
+      "numeric": [
+        2,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "2.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.5",
+      "title": "初等函数",
+      "source_line": 623,
+      "page": 39,
+      "numeric": [
+        2,
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "2.5"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.5.1",
+      "title": "幂函数",
+      "source_line": 626,
+      "page": 39,
+      "numeric": [
+        2,
+        5,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "2.5.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.5.2",
+      "title": "根式函数",
+      "source_line": 659,
+      "page": 41,
+      "numeric": [
+        2,
+        5,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "2.5.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.5.3",
+      "title": "指数函数",
+      "source_line": 752,
+      "page": 48,
+      "numeric": [
+        2,
+        5,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "2.5.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.5.4",
+      "title": "对数函数",
+      "source_line": 783,
+      "page": 50,
+      "numeric": [
+        2,
+        5,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "2.5.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.5.5",
+      "title": "三角函数",
+      "source_line": 814,
+      "page": 51,
+      "numeric": [
+        2,
+        5,
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "2.5.5"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.5.6",
+      "title": "双曲函数",
+      "source_line": 848,
+      "page": 53,
+      "numeric": [
+        2,
+        5,
+        6
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "2.5.6"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.5.7",
+      "title": "一般幂函数",
+      "source_line": 860,
+      "page": 54,
+      "numeric": [
+        2,
+        5,
+        7
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "2.5.7"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "2.5.8",
+      "title": "反三角函数",
+      "source_line": 879,
+      "page": 55,
+      "numeric": [
+        2,
+        5,
+        8
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "2.5.8"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "第3章",
+      "title": "解析函数的积分表示",
+      "source_line": 958,
+      "page": 59,
+      "numeric": [
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 1,
+      "canonical_level": 1,
+      "canonical": "3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "3.1",
+      "title": "复变函数的积分",
+      "source_line": 960,
+      "page": 59,
+      "numeric": [
+        3,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "3.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "3.2",
+      "title": "柯西积分定理",
+      "source_line": 1032,
+      "page": 63,
+      "numeric": [
+        3,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "3.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "3.3",
+      "title": "原函数",
+      "source_line": 1073,
+      "page": 65,
+      "numeric": [
+        3,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "3.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "3.4",
+      "title": "柯西积分公式",
+      "source_line": 1126,
+      "page": 68,
+      "numeric": [
+        3,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "3.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "3.5",
+      "title": "解析函数的性质",
+      "source_line": 1192,
+      "page": 72,
+      "numeric": [
+        3,
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "3.5"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "第4章",
+      "title": "调和函数",
+      "source_line": 1308,
+      "page": 78,
+      "numeric": [
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 1,
+      "canonical_level": 1,
+      "canonical": "4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "4.1",
+      "title": "解析函数与调和函数的关系",
+      "source_line": 1310,
+      "page": 78,
+      "numeric": [
+        4,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "4.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "4.2",
+      "title": "调和函数的性质和狭利克雷问题",
+      "source_line": 1373,
+      "page": 81,
+      "numeric": [
+        4,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "4.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "第5章",
+      "title": "解析函数的级数展开",
+      "source_line": 1442,
+      "page": 86,
+      "numeric": [
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 1,
+      "canonical_level": 1,
+      "canonical": "5"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.1",
+      "title": "复级数的基本性质",
+      "source_line": 1444,
+      "page": 86,
+      "numeric": [
+        5,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "5.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.1.1",
+      "title": "复数项级数",
+      "source_line": 1445,
+      "page": 86,
+      "numeric": [
+        5,
+        1,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "5.1.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.1.2",
+      "title": "复变函数项级数",
+      "source_line": 1492,
+      "page": 88,
+      "numeric": [
+        5,
+        1,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "5.1.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.2",
+      "title": "基级数",
+      "source_line": 1555,
+      "page": 91,
+      "numeric": [
+        5,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "5.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.3",
+      "title": "解析函数的泰勒(Taylor)展开",
+      "source_line": 1610,
+      "page": 94,
+      "numeric": [
+        5,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "5.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.4",
+      "title": "罗朗(Laurent)级数",
+      "source_line": 1719,
+      "page": 100,
+      "numeric": [
+        5,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "5.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "5.5",
+      "title": "解析函数的孤立奇点",
+      "source_line": 1831,
+      "page": 107,
+      "numeric": [
+        5,
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "5.5"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "第6章",
+      "title": "留数及其应用",
+      "source_line": 1998,
+      "page": 116,
+      "numeric": [
+        6
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 1,
+      "canonical_level": 1,
+      "canonical": "6"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.1",
+      "title": "留数定理",
+      "source_line": 2000,
+      "page": 116,
+      "numeric": [
+        6,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "6.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.2",
+      "title": "积分计算",
+      "source_line": 2074,
+      "page": 120,
+      "numeric": [
+        6,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "6.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.2.1",
+      "title": "$\\int_0^{2\\pi}R(\\cos \\theta ,\\sin \\theta)\\mathrm{d}\\theta$ 型积分",
+      "source_line": 2076,
+      "page": 120,
+      "numeric": [
+        6,
+        2,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "6.2.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.2.2",
+      "title": "有理函数的积分 $\\int_{-\\infty}^{+\\infty} R(x) \\mathrm{d}x$",
+      "source_line": 2126,
+      "page": 122,
+      "numeric": [
+        6,
+        2,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "6.2.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.2.3",
+      "title": "$I_{1} = \\int_{-\\infty}^{+\\infty}R(x)\\cos mx\\mathrm{d}x$ 及 $I_{2} = \\int_{-\\infty}^{+\\infty}R(x)\\sin mx\\mathrm{d}x,m > 0$ 型的积分",
+      "source_line": 2217,
+      "page": 127,
+      "numeric": [
+        6,
+        2,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "6.2.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.2.4",
+      "title": "杂例",
+      "source_line": 2251,
+      "page": 129,
+      "numeric": [
+        6,
+        2,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "6.2.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.2.5",
+      "title": "多值函数的积分",
+      "source_line": 2301,
+      "page": 132,
+      "numeric": [
+        6,
+        2,
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "6.2.5"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "6.3",
+      "title": "辐角原理",
+      "source_line": 2373,
+      "page": 135,
+      "numeric": [
+        6,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "6.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "第7章",
+      "title": "解析开拓",
+      "source_line": 2525,
+      "page": 143,
+      "numeric": [
+        7
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 1,
+      "canonical_level": 1,
+      "canonical": "7"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "7.1",
+      "title": "唯一性定理和解析开拓的概念",
+      "source_line": 2527,
+      "page": 143,
+      "numeric": [
+        7,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "7.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "7.2",
+      "title": "含复参变量积分及Γ函数",
+      "source_line": 2596,
+      "page": 147,
+      "numeric": [
+        7,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "7.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "第8章",
+      "title": "保形变换及其应用",
+      "source_line": 2730,
+      "page": 154,
+      "numeric": [
+        8
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 1,
+      "canonical_level": 1,
+      "canonical": "8"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "8.1",
+      "title": "导数的几何意义",
+      "source_line": 2732,
+      "page": 154,
+      "numeric": [
+        8,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "8.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "8.2",
+      "title": "保形变换的概念",
+      "source_line": 2757,
+      "page": 156,
+      "numeric": [
+        8,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "8.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "8.3",
+      "title": "分式线性变换",
+      "source_line": 2781,
+      "page": 158,
+      "numeric": [
+        8,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "8.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "8.4",
+      "title": "初等函数的映照",
+      "source_line": 2916,
+      "page": 165,
+      "numeric": [
+        8,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "8.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "8.4.1",
+      "title": "变换 w = z^n 和 w = \\sqrt{z}, n \\geqslant 2 是自然数",
+      "source_line": 2918,
+      "page": 165,
+      "numeric": [
+        8,
+        4,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "8.4.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "8.4.2",
+      "title": "变换 w = e^{z} 和 w = \\mathrm{Ln}z",
+      "source_line": 2972,
+      "page": 168,
+      "numeric": [
+        8,
+        4,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "8.4.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "8.4.3",
+      "title": "儒可夫斯基变换",
+      "source_line": 2995,
+      "page": 169,
+      "numeric": [
+        8,
+        4,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "8.4.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "*8.5",
+      "title": "许瓦兹-克利斯托菲变换",
+      "source_line": 3051,
+      "page": 172,
+      "numeric": [
+        8,
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "8.5"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "8.6",
+      "title": "平面场",
+      "source_line": 3168,
+      "page": 180,
+      "numeric": [
+        8,
+        6
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "8.6"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "第9章",
+      "title": "拉氏变换",
+      "source_line": 3436,
+      "page": 195,
+      "numeric": [
+        9
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 1,
+      "canonical_level": 1,
+      "canonical": "9"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "9.1",
+      "title": "拉氏变换的定义",
+      "source_line": 3438,
+      "page": 195,
+      "numeric": [
+        9,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "9.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "9.2",
+      "title": "拉氏变换的基本性质",
+      "source_line": 3500,
+      "page": 198,
+      "numeric": [
+        9,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "9.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "9.2.1",
+      "title": "线性关系",
+      "source_line": 3501,
+      "page": 198,
+      "numeric": [
+        9,
+        2,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "9.2.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "9.2.2",
+      "title": "相似定理",
+      "source_line": 3514,
+      "page": 199,
+      "numeric": [
+        9,
+        2,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "9.2.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "9.2.3",
+      "title": "本函数的微分法",
+      "source_line": 3519,
+      "page": 199,
+      "numeric": [
+        9,
+        2,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "9.2.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "9.2.4",
+      "title": "本函数的积分法",
+      "source_line": 3555,
+      "page": 201,
+      "numeric": [
+        9,
+        2,
+        4
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "9.2.4"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "9.2.5",
+      "title": "像函数的微分法",
+      "source_line": 3576,
+      "page": 202,
+      "numeric": [
+        9,
+        2,
+        5
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "9.2.5"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "9.2.6",
+      "title": "像函数的积分法",
+      "source_line": 3593,
+      "page": 203,
+      "numeric": [
+        9,
+        2,
+        6
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "9.2.6"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "9.2.7",
+      "title": "延迟定理",
+      "source_line": 3618,
+      "page": 204,
+      "numeric": [
+        9,
+        2,
+        7
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "9.2.7"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "9.2.8",
+      "title": "位移定理",
+      "source_line": 3668,
+      "page": 206,
+      "numeric": [
+        9,
+        2,
+        8
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "9.2.8"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "9.2.9",
+      "title": "周期函数的像函数",
+      "source_line": 3684,
+      "page": 207,
+      "numeric": [
+        9,
+        2,
+        9
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "9.2.9"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "9.2.10",
+      "title": "卷积定理",
+      "source_line": 3701,
+      "page": 208,
+      "numeric": [
+        9,
+        2,
+        10
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "9.2.10"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "9.3",
+      "title": "由像函数求本函数",
+      "source_line": 3735,
+      "page": 209,
+      "numeric": [
+        9,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 2,
+      "canonical_level": 2,
+      "canonical": "9.3"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "9.3.1",
+      "title": "部分分式法",
+      "source_line": 3739,
+      "page": 210,
+      "numeric": [
+        9,
+        3,
+        1
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "9.3.1"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "9.3.2",
+      "title": "拉氏变换的反演公式",
+      "source_line": 3773,
+      "page": 212,
+      "numeric": [
+        9,
+        3,
+        2
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "9.3.2"
+    },
+    {
+      "scheme": "toc",
+      "raw_number": "9.3.3",
+      "title": "其他方法",
+      "source_line": 3846,
+      "page": 216,
+      "numeric": [
+        9,
+        3,
+        3
+      ],
+      "is_exercise_item": false,
+      "bare_number": false,
+      "toc_confirmed": true,
+      "level": 3,
+      "canonical_level": 3,
+      "canonical": "9.3.3"
+    }
+  ]
+}

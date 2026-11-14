@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH09-S03-SS02",
+    "text_sha256": "b6a65b51ea15e331c2d6704908386e600e57ecc104e2f696c2b950d06e8cbe48",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "b6a65b51ea15e331c2d6704908386e600e57ecc104e2f696c2b950d06e8cbe48",
+    "source": "original_text",
+    "source_path": "original_text/ch09_s03_ss02.md"
+  },
+  "unit": {
+    "unit_id": "CH09-S03-SS02",
+    "level": "subsection",
+    "chapter": "CH09",
+    "section": "CH09-S03",
+    "title": "拉氏变换的反演公式",
+    "anchor": "9.3.2"
+  },
+  "concepts": [
+    {
+      "name": "定理3",
+      "type": "theorem",
+      "formal": "定理3 设 $f(t)$ 满足条件1)与2)，$L[f(t)] = F(p)$. 则对任意取定的 $\\sigma > c$，在 $f(t)$ 的连续点处，有 $$f (t) = \\frac {1} {2 \\pi \\mathrm{i}} \\int_ {\\sigma - \\mathrm{i} m} ^ {\\sigma + \\mathrm{i} m} F (p) \\mathrm{e} ^ {p t} \\mathrm{d} p.\\tag{9.10}$$ 上式右端的积分是沿自下而上的直线 $\\mathrm{Re}p = \\sigma$ 进行的.",
+      "source_quote": "定理3 设 $f(t)$ 满足条件1)与2)，$L[f(t)] = F(p)$. 则对任意取定的 $\\sigma > c$，在 $f(t)$ 的连续点处，有 $$f (t) = \\frac {1} {2 \\pi \\mathrm{i}} \\int_ {\\sigma - \\mathrm{i} m} ^ {\\sigma + \\mathrm{i} m} F (p) \\mathrm{e} ^ {p t} \\mathrm{d} p.\\tag{9.10}$$"
+    },
+    {
+      "name": "拉氏变换的反演公式",
+      "type": "formula",
+      "formal": "$$f (t) = \\frac {1} {2 \\pi \\mathrm{i}} \\int_ {\\sigma - \\mathrm{i} m} ^ {\\sigma + \\mathrm{i} m} F (p) \\mathrm{e} ^ {p t} \\mathrm{d} p.\\tag{9.10}$$",
+      "source_quote": "上式右端的积分是沿自下而上的直线 $\\mathrm{Re}p = \\sigma$ 进行的."
+    },
+    {
+      "name": "傅立叶-梅林公式",
+      "type": "formula",
+      "formal": "这条定理所给出的拉氏变换的反演公式，称为傅立叶-梅林(Fourier-Mellin)公式.",
+      "source_quote": "这条定理所给出的拉氏变换的反演公式，称为傅立叶-梅林(Fourier-Mellin)公式."
+    },
+    {
+      "name": "定理4",
+      "type": "theorem",
+      "formal": "定理 4 设 $F(p)$ 除在半平面 $Re p \\leqslant \\sigma$ 内有奇点 $p_{1}, p_{2}, \\cdots, p_{n}$ 外，在 p 平面内处处解析，当 $p \\to \\infty$ 时，$F(p) \\to 0$，且积分 $$\\int_ {\\sigma - i m} ^ {\\sigma + i m} F (p) \\mathrm{d} p, \\quad \\sigma > c$$ 绝对收敛.则 1) $F(p)$ 是函数 $$f (t) = \\frac {1} {2 \\pi \\mathrm{i}} \\int_ {s - \\mathrm{i} *} ^ {s + \\mathrm{i} *} F (p) \\mathrm{e} ^ {\\mathrm{i} p} \\mathrm{d} p$$ 2) $$\\frac {1} {2 \\pi \\mathrm{i}} \\int_ {s - \\mathrm{i} = 0} ^ {s + \\mathrm{i} = 0} F (p) \\mathrm{e} ^ {\\mu t} \\mathrm{d} p = \\sum_ {k = 1} ^ {n} \\mathbf {R e s} [ F (p) \\mathrm{e} ^ {\\mu t}, p _ {k} ], \\text {即} \\quad f (t) = \\sum_ {k = 1} ^ {n} \\operatorname{Res} [ F (p) \\mathrm{e} ^ {\\mu}, p _ {k} ], \\quad t > 0.\\tag{9.11}$$",
+      "source_quote": "定理 4 设 $F(p)$ 除在半平面 $Re p \\leqslant \\sigma$ 内有奇点 $p_{1}, p_{2}, \\cdots, p_{n}$ 外，在 p 平面内处处解析，当 $p \\to \\infty$ 时，$F(p) \\to 0$，且积分 $$\\int_ {\\sigma - i m} ^ {\\sigma + i m} F (p) \\mathrm{d} p, \\quad \\sigma > c$$ 绝对收敛.则"
+    },
+    {
+      "name": "用留数求本函数的公式",
+      "type": "formula",
+      "formal": "$$f (t) = \\sum_ {k = 1} ^ {n} \\operatorname{Res} [ F (p) \\mathrm{e} ^ {\\mu}, p _ {k} ], \\quad t > 0.\\tag{9.11}$$",
+      "source_quote": "$$f (t) = \\sum_ {k = 1} ^ {n} \\operatorname{Res} [ F (p) \\mathrm{e} ^ {\\mu}, p _ {k} ], \\quad t > 0.\\tag{9.11}$$"
+    },
+    {
+      "name": "约当引理",
+      "type": "proposition",
+      "formal": "由约当引理(令 p = iz 就化成已知的形式)，有 $$\\lim _ {R \\rightarrow \\infty} \\int_ {C _ {R}} F (p) \\mathrm{e} ^ {\\mu} \\mathrm{d} p = 0.$$",
+      "source_quote": "由约当引理(令 p = iz 就化成已知的形式)，有 $$\\lim _ {R \\rightarrow \\infty} \\int_ {C _ {R}} F (p) \\mathrm{e} ^ {\\mu} \\mathrm{d} p = 0.$$"
+    },
+    {
+      "name": "留数定理",
+      "type": "theorem",
+      "formal": "由留数定理，得 $$\\begin{array}{l} 2 \\pi \\mathrm{i} \\sum_ {k = 1} ^ {n} \\operatorname{Res} [ F (p) \\mathrm{e} ^ {p t}, p _ {k} ] = \\int_ {C} F (p) \\mathrm{e} ^ {p t} \\mathrm{d} p \\\\ = \\int_ {C _ {\\mathrm{R}}} F (p) \\mathrm{e} ^ {p t} \\mathrm{d} p + \\int_ {\\mathrm{L}} F (p) \\mathrm{e} ^ {p t} \\mathrm{d} p. \\end{array}\\tag{9.12}$$",
+      "source_quote": "因 $p_{k}$ 即是 $F(p)e^{\\mu t}$ 的所有有限奇点，由留数定理，得"
+    },
+    {
+      "name": "傅氏反变换公式",
+      "type": "formula",
+      "formal": "于是，由傅氏反变换公式，在 $f(t)$ 的连续点处，有 $$f (t) h (t) \\mathrm{e} ^ {- s t} = \\frac {1} {2 \\pi} \\int_ {- \\infty} ^ {+ \\infty} F (p) \\mathrm{e} ^ {\\mathrm{i} s t} \\mathrm{d} s$$",
+      "source_quote": "于是，由傅氏反变换公式，在 $f(t)$ 的连续点处，有 $$f (t) h (t) \\mathrm{e} ^ {- s t} = \\frac {1} {2 \\pi} \\int_ {- \\infty} ^ {+ \\infty} F (p) \\mathrm{e} ^ {\\mathrm{i} s t} \\mathrm{d} s$$"
+    },
+    {
+      "name": "延迟定理",
+      "type": "theorem",
+      "formal": "若 $L[f(t)]=F(p)$ ,则 $$\\mathrm{L} ^ {- 1} [ F (p) \\mathrm{e} ^ {- \\tau p} ] = f (t - \\tau) h (t - \\tau),\\tag{9.17}$$",
+      "source_quote": "的像函数的本函数,它可以利用延迟定理来求.事实上,若 $L[f(t)]=F(p)$ ,则 $$\\mathrm{L} ^ {- 1} [ F (p) \\mathrm{e} ^ {- \\tau p} ] = f (t - \\tau) h (t - \\tau),\\tag{9.17}$$"
+    },
+    {
+      "name": "柯西主值",
+      "type": "definition",
+      "formal": "1) 这里所给的积分应取柯西主值，有",
+      "source_quote": "1) 这里所给的积分应取柯西主值，有"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 10,
+    "漏掉的具名结论": [
+      "定理3",
+      "定理4"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "下面的定理"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "定理3",
+    "拉氏变换的反演公式",
+    "傅立叶-梅林公式",
+    "定理4",
+    "用留数求本函数的公式",
+    "约当引理",
+    "留数定理",
+    "傅氏反变换公式",
+    "延迟定理",
+    "柯西主值"
+  ]
+}

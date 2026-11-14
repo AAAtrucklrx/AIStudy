@@ -1,0 +1,200 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH07-S02",
+    "text_sha256": "56d213b69d1be93bd78fadfe2d8ca7e66a6fe7debf5ff11cf4f7ad3d828f8f72",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "56d213b69d1be93bd78fadfe2d8ca7e66a6fe7debf5ff11cf4f7ad3d828f8f72",
+    "source": "original_text",
+    "source_path": "original_text/ch07_s02.md"
+  },
+  "unit": {
+    "unit_id": "CH07-S02",
+    "level": "section",
+    "chapter": "CH07",
+    "section": "CH07-S02",
+    "title": "含复参变量积分及Γ函数",
+    "anchor": "7.2"
+  },
+  "concepts": [
+    {
+      "name": "定理2",
+      "type": "theorem",
+      "formal": "设 $C$ 是平面上一条逐段光滑的有限长（封闭或不封闭）曲线，$f(\\zeta)$ 是沿 $C$ 确定的一个连续函数，则当 $z$ 不在曲线 $C$ 上时，含复参变量 $z$ 的积分 $$F (z) = \\frac {1} {2 \\pi \\mathrm{i}} \\int_ {c} \\frac {f (\\zeta)}{\\zeta - z} \\mathrm{d} \\zeta$$ 是解析函数，且 $$F ^ {(n)} (z) = \\frac {n !}{2 \\pi \\mathrm{i}} \\int_ {C} \\frac {f (\\zeta)}{(\\zeta - z) ^ {n + 1}} \\mathrm{d} \\zeta .$$",
+      "source_quote": "定理2 设 $C$ 是平面上一条逐段光滑的有限长（封闭或不封闭）曲线，$f(\\zeta)$ 是沿 $C$ 确定的一个连续函数，则当 $z$ 不在曲线 $C$ 上时，含复参变量 $z$ 的积分"
+    },
+    {
+      "name": "柯西型积分",
+      "type": "definition",
+      "formal": "(7.1) 式右端的积分称为柯西型积分.",
+      "source_quote": "(7.1) 式右端的积分称为柯西型积分."
+    },
+    {
+      "name": "定理3",
+      "type": "theorem",
+      "formal": "设1) $f(t,z)$ 是 $t$ 和 $z$ 的连续函数，这里，$a \\leqslant t \\leqslant b, z$ 在区域 $D$ 内. 2) 对于任意 $t \\in [a,b], f(t,z)$ 在 $D$ 内解析，则 $$F (z) = \\int_ {a} ^ {b} f (t, z) d t$$ 是 $D$ 内的解析函数，且 $$F ^ {\\prime} (z) = \\int_ {a} ^ {b} \\frac {\\partial f (t , z)}{\\partial z} d t.$$",
+      "source_quote": "定理3 设1) $f(t,z)$ 是 $t$ 和 $z$ 的连续函数，这里，$a \\leqslant t \\leqslant b, z$ 在区域 $D$ 内. 2) 对于任意 $t \\in [a,b], f(t,z)$ 在 $D$ 内解析，则"
+    },
+    {
+      "name": "定义3",
+      "type": "definition",
+      "formal": "设1) $f(t,z)$ 对于 $t\\geqslant a$ 及区域 $D$ 内的所有 $z$ 有定义，对每一点 $z\\in D$ ，广义积分 $$\\int_ {a} ^ {+ \\infty} f (t, z) d t$$ 收敛.2) 对任意 $\\varepsilon > 0$，总存在常数 $T(\\varepsilon)$，当 $T_{2} > T_{1} > T(\\varepsilon)$ 时，不等式 $$\\left| \\int_ {T _ {1}} ^ {T _ {2}} f (t, z) d t \\right| <   \\epsilon$$ 对所有 $z \\in D$ 都成立. 则称广义积分(7.3)在 $D$ 内一致收敛.",
+      "source_quote": "定义3 设1) $f(t,z)$ 对于 $t\\geqslant a$ 及区域 $D$ 内的所有 $z$ 有定义，对每一点 $z\\in D$ ，广义积分"
+    },
+    {
+      "name": "定理4",
+      "type": "theorem",
+      "formal": "如果存在实函数 $\\varphi(t)$, 使对所有 $z \\in D$ 有 $|f(t,z)| \\leqslant \\varphi(t)$, 而且 $\\int_{a}^{+ \\infty} \\varphi(t) \\mathrm{d}t$ 收敛, 则 $\\int_{a}^{+ \\infty} f(t,z) \\mathrm{d}t$ 在 $D$ 内绝对一致收敛.",
+      "source_quote": "定理4 如果存在实函数 $\\varphi(t)$, 使对所有 $z \\in D$ 有 $|f(t,z)| \\leqslant \\varphi(t)$, 而且 $\\int_{a}^{+ \\infty} \\varphi(t) \\mathrm{d}t$ 收敛, 则 $\\int_{a}^{+ \\infty} f(t,z) \\mathrm{d}t$ 在 $D$ 内绝对一致收敛."
+    },
+    {
+      "name": "维尔斯特拉斯判别法",
+      "type": "theorem",
+      "formal": "复函数级数一致收敛的维尔斯特拉斯判别法",
+      "source_quote": "其证明与复函数级数一致收敛的维尔斯特拉斯判别法完全相同."
+    },
+    {
+      "name": "定理5",
+      "type": "theorem",
+      "formal": "设1) $f(t,z)$ 是 $t$ 和 $z$ 的连续函数，这里 $t \\geqslant a, z$ 在区域 $D$ 内；2) 对任何 $t \\geqslant a, f(t,z)$ 在 $D$ 内解析；3) 积分 $\\int_{a}^{+\\infty} f(t,z) \\, dt$ 在 $D$ 内一致收敛，则函数 $$F (z) = \\int_ {a} ^ {+ \\infty} f (t, z) d t$$ 在 $D$ 内解析，且 $$F ^ {\\prime} (z) = \\int_ {a} ^ {+ \\infty} \\frac {\\partial f (t , z)}{\\partial z} d t.$$",
+      "source_quote": "定理5 设1) $f(t,z)$ 是 $t$ 和 $z$ 的连续函数，这里 $t \\geqslant a, z$ 在区域 $D$ 内；2) 对任何 $t \\geqslant a, f(t,z)$ 在 $D$ 内解析；3) 积分 $\\int_{a}^{+\\infty} f(t,z) \\, dt$ 在 $D$ 内一致收敛，则函数"
+    },
+    {
+      "name": "维尔斯特拉斯定理",
+      "type": "theorem",
+      "formal": "复函数级数的维尔斯特拉斯定理",
+      "source_quote": "从而由复函数级数的维尔斯特拉斯定理，得"
+    },
+    {
+      "name": "解析开拓原理",
+      "type": "law",
+      "formal": "解析开拓原理",
+      "source_quote": "根据解析开拓原理，这个关系在右半平面上仍成立"
+    },
+    {
+      "name": "实Γ函数",
+      "type": "definition",
+      "formal": "$$\\Gamma (x) = \\int_ {0} ^ {+ \\infty} e ^ {- t} t ^ {x - 1} d t, \\quad x > 0.$$",
+      "source_quote": "实 $\\Gamma$ 函数定义为 $$\\Gamma (x) = \\int_ {0} ^ {+ \\infty} e ^ {- t} t ^ {x - 1} d t, \\quad x > 0.$$"
+    },
+    {
+      "name": "复Γ函数",
+      "type": "definition",
+      "formal": "$$\\Gamma (z) = \\int_ {0} ^ {+ \\infty} \\mathrm{e} ^ {- t} t ^ {z - 1} \\mathrm{d} t,$$ 式中，t 是实的积分变量， $t^{z-1}$  取主值。",
+      "source_quote": "用含复参变量 $z$ 的积分定义复 $\\Gamma$ 函数 $$\\Gamma (z) = \\int_ {0} ^ {+ \\infty} \\mathrm{e} ^ {- t} t ^ {z - 1} \\mathrm{d} t,$$ 式中，t 是实的积分变量， $t^{z-1}$  取主值。"
+    },
+    {
+      "name": "Γ(z)在右半平面的解析性",
+      "type": "property",
+      "formal": "$\\Gamma(z)$ 是右半平面 Rez > 0 内的解析函数.",
+      "source_quote": "综合例1及例2的结果，得知  $\\Gamma(z)$  是右半平面 Rez > 0 内的解析函数。"
+    },
+    {
+      "name": "递推关系",
+      "type": "formula",
+      "formal": "$$\\Gamma (z + 1) = z \\Gamma (z), \\quad \\operatorname{Re} z > 0,$$ $$\\Gamma (z) = \\frac {\\Gamma (z + 1)}{z}$$ (7.4)",
+      "source_quote": "因为 $\\Gamma(z)$ 在正实轴上有递推关系 $$\\Gamma (x + 1) = x \\Gamma (x), \\quad x > 0.$$"
+    },
+    {
+      "name": "Γ函数的极点与留数",
+      "type": "property",
+      "formal": "在全平面上除了 $z = 0, -1, -2, \\cdots, -n, \\cdots$ 是一级极点外，$\\Gamma(z)$ 处处解析. 且 $$\\operatorname{Res} [ \\Gamma (z), - n ] = (- 1) ^ {n} \\frac {1}{n !}.$$",
+      "source_quote": "在全平面上除了  $z = 0, -1, -2, \\cdots, -n, \\cdots$  是一级极点外， $\\Gamma(z)$  处处解析. 且"
+    },
+    {
+      "name": "亚纯函数",
+      "type": "definition",
+      "formal": "在有限平面除极点外别无其他奇点的函数称为亚纯函数.",
+      "source_quote": "在有限平面除极点外别无其他奇点的函数称为亚纯函数."
+    },
+    {
+      "name": "余元公式",
+      "type": "formula",
+      "formal": "$\\Gamma(z)\\Gamma(1-z)=\\frac{\\pi}{\\sin\\pi z}$.",
+      "source_quote": "余元公式 $\\Gamma(z)\\Gamma(1-z)=\\frac{\\pi}{\\sin\\pi z}$."
+    },
+    {
+      "name": "加倍公式",
+      "type": "formula",
+      "formal": "$\\Gamma(2z)=\\frac{2^{2z-1}}{\\sqrt{\\pi}}\\Gamma(z)\\Gamma\\left(z+\\frac{1}{2}\\right),z\\neq0,-\\frac{1}{2},-1,-\\frac{3}{2},\\cdots.$",
+      "source_quote": "加倍公式  $\\Gamma(2z)=\\frac{2^{2z-1}}{\\sqrt{\\pi}}\\Gamma(z)\\Gamma\\left(z+\\frac{1}{2}\\right),z\\neq0,-\\frac{1}{2},-1,-\\frac{3}{2},\\cdots.$"
+    },
+    {
+      "name": "Γ(z)无零点",
+      "type": "property",
+      "formal": "$\\Gamma(z)$ 无零点.",
+      "source_quote": "3) $\\Gamma(z)$ 无零点."
+    },
+    {
+      "name": "1/Γ(z)是整函数",
+      "type": "property",
+      "formal": "$\\frac{1}{\\Gamma(z)}$ 是整函数.",
+      "source_quote": "4) $\\frac{1}{\\Gamma(z)}$ 是整函数."
+    },
+    {
+      "name": "B函数与Γ函数的关系",
+      "type": "formula",
+      "formal": "$$\\mathrm{B} (p, q) = \\frac {\\Gamma (p) \\Gamma (q)}{\\Gamma (p + q)} = \\int_ {0} ^ {+ \\infty} \\frac {\\xi^ {p - 1}}{(1 + \\xi) ^ {p + q}} \\mathrm{d} \\xi , \\quad p > 0, q > 0.$$",
+      "source_quote": "利用 B 函数与  $\\Gamma$  函数的关系 $$\\mathrm{B} (p, q) = \\frac {\\Gamma (p) \\Gamma (q)}{\\Gamma (p + q)} = \\int_ {0} ^ {+ \\infty} \\frac {\\xi^ {p - 1}}{(1 + \\xi) ^ {p + q}} \\mathrm{d} \\xi , \\quad p > 0, q > 0.$$"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 20,
+    "漏掉的具名结论": [
+      "定理2",
+      "定理3",
+      "定义3",
+      "定理4",
+      "定理5"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "论这种积分所表示的函数的性质",
+      "节中定理",
+      "一致收敛的概念及定理",
+      "还有下面几个重要性质",
+      "解析开拓的原理",
+      "唯一性定理",
+      "留数定理"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "定理2",
+    "柯西型积分",
+    "定理3",
+    "定义3",
+    "定理4",
+    "维尔斯特拉斯判别法",
+    "定理5",
+    "维尔斯特拉斯定理",
+    "解析开拓原理",
+    "实Γ函数",
+    "复Γ函数",
+    "Γ(z)在右半平面的解析性",
+    "递推关系",
+    "Γ函数的极点与留数",
+    "亚纯函数",
+    "余元公式",
+    "加倍公式",
+    "Γ(z)无零点",
+    "1/Γ(z)是整函数",
+    "B函数与Γ函数的关系"
+  ]
+}

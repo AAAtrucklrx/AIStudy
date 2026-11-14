@@ -1,0 +1,19 @@
+{
+  "boundary": {
+    "duplicate": false,
+    "missing": false
+  },
+  "input_fingerprint": "f717e565206cc9576f4659c26e337f82bc5c7ab682b6cc90fb649faf9f5e28da",
+  "logical_book_id": "logical-book-f717e565206cc957",
+  "normalized_source_sha256": "a843174fedfad1cc527432196799e775e48f4cb1fe750b6d2848784e103524e6",
+  "normalizer_version": "logical-markdown-v6-images",
+  "parts": [
+    {
+      "file": "/home/aaatrucklrx/桌面/AI教学/AIforStudy/data/parse/complex-analysis-v2/structured.anchor3.md",
+      "first_anchor": "1",
+      "last_anchor": "9.3.3",
+      "order": 1,
+      "sha256": "8d4be6f3223e593ec7abaa2cd8e33a2c7273d94ac38f30789c573716976df8ff"
+    }
+  ]
+}

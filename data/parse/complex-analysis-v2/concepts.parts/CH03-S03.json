@@ -1,0 +1,74 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH03-S03",
+    "text_sha256": "68e1f95c0b29bb2fb9b74230aef072fa1aa8a9fb38f28a9979c311e15f97f56a",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "68e1f95c0b29bb2fb9b74230aef072fa1aa8a9fb38f28a9979c311e15f97f56a",
+    "source": "original_text",
+    "source_path": "original_text/ch03_s03.md"
+  },
+  "unit": {
+    "unit_id": "CH03-S03",
+    "level": "section",
+    "chapter": "CH03",
+    "section": "CH03-S03",
+    "title": "原函数",
+    "anchor": "3.3"
+  },
+  "concepts": [
+    {
+      "name": "原函数",
+      "type": "definition",
+      "formal": "如果在区域 $D$ 内有 $F^{\\prime}(z) = f(z)$，则 $F(z)$ 称为 $f(z)$ 在区域 $D$ 内的一个原函数.",
+      "source_quote": "定义2 如果在区域 $D$ 内有 $F^{\\prime}(z) = f(z)$，则 $F(z)$ 称为 $f(z)$ 在区域 $D$ 内的一个原函数."
+    },
+    {
+      "name": "定理4",
+      "type": "theorem",
+      "formal": "如果 $f(z)$ 是单连通区域 $D$ 内的解析函数，那么，由变上限的积分所确定的函数 $$F (z) = \\int_ {z _ {0}} ^ {z} f (z) d z$$ 也是 D 内的解析函数. 而且  $F'(z) = f(z)$ .",
+      "source_quote": "定理4 如果 $f(z)$ 是单连通区域 $D$ 内的解析函数，那么，由变上限的积分所确定的函数"
+    },
+    {
+      "name": "牛顿－莱布尼兹公式",
+      "type": "formula",
+      "formal": "$$\\int_ {z _ {0}} ^ {z} f (z) \\mathrm{d} z = H (z) - H (z _ {0}).$$",
+      "source_quote": "这就是牛顿－莱布尼兹公式.这里 $H(z)$ 是 $f(z)$ 的任一原函数"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 3,
+    "漏掉的具名结论": [
+      "定理4"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "证明一个类似于积分学基本定理",
+      "下面定理",
+      "时柯西定理",
+      "时不能应用柯西定理"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "原函数",
+    "定理4",
+    "牛顿－莱布尼兹公式"
+  ]
+}

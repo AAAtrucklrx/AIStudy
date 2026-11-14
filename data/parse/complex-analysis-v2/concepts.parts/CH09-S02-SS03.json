@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH09-S02-SS03",
+    "text_sha256": "52fcee1d38e7d7b1133ad8426fb55adbe729e6443841f298e37421b9a0b0da68",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "52fcee1d38e7d7b1133ad8426fb55adbe729e6443841f298e37421b9a0b0da68",
+    "source": "original_text",
+    "source_path": "original_text/ch09_s02_ss03.md"
+  },
+  "unit": {
+    "unit_id": "CH09-S02-SS03",
+    "level": "subsection",
+    "chapter": "CH09",
+    "section": "CH09-S02",
+    "title": "本函数的微分法",
+    "anchor": "9.2.3"
+  },
+  "concepts": [
+    {
+      "name": "本函数的微分性质",
+      "type": "property",
+      "formal": "如果 $f(t)$ 及 $f^{\\prime}(t)$ 都满足条件1）与2)，且设 $\\mathbf{L}[f(t)] = F(p)$，则\n$$\\mathrm{L} \\left[ f ^ {\\prime} (t) \\right] = p F (p) - f (+ 0).$$",
+      "source_quote": "上述性质把本函数的微分运算化为代数运算,利用拉氏变换解微分方程正是基于这个性质,下面举例说明."
+    },
+    {
+      "name": "高阶导数的微分性质推论",
+      "type": "corollary",
+      "formal": "若  $f(t), f'(t), \\cdots, f^{(n)}(t)$  都满足条件 1) 与 2)，则\n$$\\begin{array}{r l} \\mathrm{L} [ f ^ {(n)} (t) ] = & p ^ {n} \\mathrm{L} [ f (t) ] - p ^ {n - 1} f (+ 0) - p ^ {n - 2} f ^ {\\prime} (+ 0) \\\\ & - \\dots - p f ^ {(n - 2)} (+ 0) - f ^ {(n - 1)} (+ 0). \\end{array}$$",
+      "source_quote": "推论 若  $f(t), f'(t), \\cdots, f^{(n)}(t)$  都满足条件 1) 与 2)，则"
+    },
+    {
+      "name": "线性性质",
+      "type": "property",
+      "formal": "再由逆变换的线性性及 $\\mathrm{L}^{-1}\\left[\\frac{1}{p - a}\\right] = \\mathrm{e}^{a t}$",
+      "source_quote": "对原方程两边作拉氏变换，并利用9.2.1及9.2.2小节的两个性质，可得"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 3,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "上述性质",
+      "换解微分方程正是基于这个性质",
+      "小节的两个性质"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "本函数的微分性质",
+    "高阶导数的微分性质推论",
+    "线性性质"
+  ]
+}

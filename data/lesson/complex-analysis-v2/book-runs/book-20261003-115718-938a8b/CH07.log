@@ -1,0 +1,56 @@
+=== CH07：3 个单元 ===
+    CH07
+    CH07-S01
+    CH07-S02
+
+计划：
+    CH07               概念有    教案有      模型有      回路最多 1 轮
+    CH07-S01           概念有    教案有      模型有      回路最多 1 轮
+    CH07-S02           概念有    教案要生成    模型要生成    回路最多 1 轮
+
+估价（按实测单价，粗算）：概念 ~10k/节、教案 ~25~70k/节（看原文长度）、模型 ~10~20k/节、回路 ~80~120k/节（K=2）
+run_id：book-20261003-115718-938a8b/CH07（本趟账目只算这一趟，并行下不会串账）
+
+===== CH07 解析开拓 =====
+    模型：CH07: 模型用 revision 1 生成，教案现在是 4 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH07 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH07 --fix-anchors
+    回路：上次已通过、教案没变（revision 4）→ 跳过付费复核
+    → 字数 1616｜倍数 13.89｜套话 0｜详解 3｜硬问题 0｜本步 0 token
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH07 --only CH07,CH07-S01,CH07-S02
+
+===== CH07-S01 唯一性定理和解析开拓的概念 =====
+    模型：CH07-S01: 模型用 revision 1 生成，教案现在是 8 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH07-S01 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH07-S01 --fix-anchors
+    · 教案有 1 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH07-S01: 《曲线上取值相同就够了》(F-05) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH07-S01 --max-rounds 1 --discover-runs 1
+    · 还有 2 条**非篇幅**硬问题 → 不动它，交给回路的补丁模式（下次跑会带上）：CH07-S01: 占位符 IMG-0063 出现了 2 次（每个只能出现一次）…
+    → 字数 4398｜倍数 1.88｜套话 0｜详解 7｜硬问题 2｜本步 236,857 token
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH07 --only CH07,CH07-S01,CH07-S02
+
+===== CH07-S02 含复参变量积分及Γ函数 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH07-S02 --quiet --temperature 0 --seed 42
+    模型：CH07-S02: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH07-S02 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH07-S02 --fix-anchors
+    · 教案有 6 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH07-S02: 《柯西型积分表示解析函数》(F-01) 四样都没有 —— 图 / 某步的图 / 图请求 / 正当的不…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH07-S02 --max-rounds 1 --discover-runs 1
+    · 还有 6 条**非篇幅**硬问题 → 不动它，交给回路的补丁模式（下次跑会带上）：CH07-S02: 《柯西型积分表示解析函数》(F-01) 四样都没有 —— 图 / 某步的图 / 图请求 / …
+    → 字数 4282｜倍数 1.85｜套话 0｜详解 8｜硬问题 6｜本步 331,478 token
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH07 --only CH07,CH07-S01,CH07-S02
+
+===== 建页：CH07 全章 =====
+  · 这一页已经是最新的（3 节、教案版本都对得上）→ 跳过重建
+    $ node /home/aaatrucklrx/桌面/AI教学/AIforStudy/blocks/render/check_render.js /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH07
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/quality_report.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/quality_report.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2
+  章记录对齐：['CH07-S01', 'CH07-S02'] 的指标/结论按最新产物改写了
+
+=== CH07 跑完 ===
+  ✓ CH07               字数 1616  倍数 13.89 硬问题 0 回路 通过（发现阶段就没抓到 P0
+  ⚠ CH07-S01           字数 4398  倍数 1.88  硬问题 2 回路 冻结（跑满轮数上限，剩余工单
+  ⚠ CH07-S02           字数 4282  倍数 1.85  硬问题 6 回路 冻结（跑满轮数上限，剩余工单
+  网页自检：[]
+  本次总花费：568,335 token
+  报告：data/lesson/complex-analysis-v2/chapter-runs/CH07.json

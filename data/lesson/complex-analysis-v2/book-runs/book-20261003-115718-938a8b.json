@@ -1,0 +1,68 @@
+{
+  "_meta": {
+    "file_type": "book_run",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.run_book",
+    "run_id": "book-20261003-115718-938a8b",
+    "field_notes": {
+      "章[]": "逐章：退出码、花费（token）、墙钟、worker 日志路径、结论",
+      "并行度": "同时跑了几个 worker（规格 D3：默认 2，上限 8）",
+      "预算": "token / 墙钟上限；一超就停新 worker 并收尾（规格 A8）",
+      "reconcile": "所有 worker 停之后的单线程重建（幂等，可重复跑）",
+      "doctor违规": "收尾时的不变量违规；空数组才算整本成功"
+    }
+  },
+  "run_id": "book-20261003-115718-938a8b",
+  "书": "data/parse/complex-analysis-v2",
+  "章": [
+    {
+      "chapter": "CH05",
+      "code": 0,
+      "tokens": 582599,
+      "seconds": 1938.3,
+      "log": "data/lesson/complex-analysis-v2/book-runs/book-20261003-115718-938a8b/CH05.log",
+      "status": "ok"
+    },
+    {
+      "chapter": "CH07",
+      "code": 1,
+      "tokens": 568335,
+      "seconds": 1270.2,
+      "log": "data/lesson/complex-analysis-v2/book-runs/book-20261003-115718-938a8b/CH07.log",
+      "status": "failed"
+    },
+    {
+      "chapter": "CH08",
+      "code": 1,
+      "tokens": 1506303,
+      "seconds": 3942.4,
+      "log": "data/lesson/complex-analysis-v2/book-runs/book-20261003-115718-938a8b/CH08.log",
+      "status": "failed"
+    }
+  ],
+  "并行度": 8,
+  "预算": {
+    "token": 22000000,
+    "分钟": 400,
+    "触发": ""
+  },
+  "总花费": 2657237,
+  "墙钟分钟": 65.8,
+  "reconcile": {
+    "索引": [
+      "76 行（原 76 行）"
+    ],
+    "快照": [
+      "差异字段：notation"
+    ]
+  },
+  "doctor违规": [
+    {
+      "不变量": "整本快照不过期",
+      "说明": "有教案产物但没有 snapshot.json",
+      "证据": "/home/aaatrucklrx/桌面/AI教学/AIforStudy/data/lesson/linear-algebra-full/snapshot.json",
+      "后果": "下一节的提示词里没有全局状态"
+    }
+  ],
+  "结论": "失败"
+}

@@ -1,0 +1,38 @@
+—— CH08-S06 回路开始（run 2026-10-03 12:53:05）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 3, '教案问题明细': ["CH08-S06: 出现跳过推理的话 ['显然'] —— 把中间的步骤补出来（这几个词是「链条断了」的标记）", 'CH08-S06: 《正交曲线网》(F-25) 属于**必须配图**的内容，却四样都没有 —— 图 / 某步的图 / 图请求 / 正当的不配图理由，至少要有一样', 'CH08-S06: 《正交曲线网》(F-25) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃'], '教案提醒': 15, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 3 条 → **也建成工单**，由回路一起改（不再只是提醒）：["CH08-S06: 出现跳过推理的话 ['显然'] —— 把中间的步骤补出来（这几个词是「链条断了」的标记）", 'CH08-S06: 《正交曲线网》(F-25) 属于**必须配图**的内容，却四样都没有 —— 图 / 某步的图 / 图请求 / 正当的不配图理由，至少要有一样']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [9] 条 → 并集 6 条工单
+    T-R7f957 [P1] hits=3 「CH08-S06: 《正交曲线网》(F-25) 属于**必须配图**的内」
+    T-203695 [P1] hits=1 「其中 $f(x)$ 是给定在实轴上的、有有限多个第一类间断点的连续函数」
+    T-2c1ee8 [P1] hits=1 「由于这个函数的虚部 $v = \operatorname{Im}w = 」
+    T-7c4649 [P1] hits=1 「现在求一个 $G$ 内的解析函数 $f(z_{1})$，使调和函数 $u」
+    T-b89f8b [P1] hits=1 「用保形变换方法解平面场问题的另一途径是直接求出场的复位。以静电场为例，复」
+    T-e6a11b [P1] hits=1 「而在原点处绝缘。此电场的位函数 $u$ 满足狄氏问题」
+[轮 1] 按 6 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH08-S06 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH08-S06.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH08-S06 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH08-S06.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 2 条：['CH08-S06: 《正交曲线网》(F-25) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃', 'CH08-S06: 《平面场中的点、曲线和区域》(F-27) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 5 / 仍开着 3；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 3 条（丢了 3 条没引到原句的）
+  ⛔ 验收发现 P0：「与两板等距离的线 $A_{3}A_{1}$（即 $x$ 轴）上的电位 $V=0$」→ 若两板电位不是等值异号（如 v₀ 与 -v₀）或中线未接地，中线电位一般不为零。读者会将其误认为一般结论，导致边界条件错
+  ↻ 验收 P0 当趟补一次最小改动改写（1 条）…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH08-S06 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH08-S06.acceptance.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-7c4649 [P1]：已补共轭调和函数存在性依据，并显式说明 $f$ 与 $F$ 的变量及复合关系。（引用的句子在当前成品里找不到 → 按 partly 处理）
+   · 工单没关掉 T-R3ac40 [P1]：（这一轮没给出判定）
+   · 工单没关掉 T-R83212 [P1]：（这一轮没给出判定）
+   · 工单没关掉 T-1c7d76 [P0]：（这一轮没给出判定）
+
+结论：未通过（验收发现：回路说通过，但重新独立复核又抓到 P0）
+backlog（4 条）：
+  [P0] T-1c7d76 「与两板等距离的线 $A_{3}A_{1}$（即 $x$ 轴）上的电位 $V=0$」
+  [P1] T-7c4649 「现在求一个 $G$ 内的解析函数 $f(z_{1})$，使调和函数 $u(z) 」
+  [P1] T-R3ac40 「CH08-S06: 《正交曲线网》(F-25) 属于**必须配图**的内容（涉及」
+  [P1] T-R83212 「CH08-S06: 《平面场中的点、曲线和区域》(F-27) 属于**必须配图*」
+记录写到 data/audit/complex-analysis-v2/CH08-S06.loop.json

@@ -1,0 +1,1198 @@
+{
+  "scope": "read-only historical media/delivery inventory",
+  "counts": {
+    "drawing_fulfilled": 112,
+    "drawing_needs_review": 5,
+    "drawing_failed": 1,
+    "animation_fulfilled": 116,
+    "animation_needs_review": 14,
+    "review_known_error": 3,
+    "review_unverified": 16,
+    "no_review": 1
+  },
+  "cases": [
+    {
+      "unit": "CH02-S05-SS04",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH02-S05-SS04/MR-ff7e9e8c13b2232e6197/result.json",
+      "id": "MR-ff7e9e8c13b2232e6197",
+      "kind": "animation",
+      "state": "needs_review",
+      "title": "模相乘、辐角相加，对应 Ln 的实部与虚部分别相加。",
+      "reason": "frame:2（S2 步骤结束前 22.766s）和 frame:3（S3 步骤结束前 32.566s）右图红点标注为 ln|z2| + iθ2，但它的水平位置落在蓝段 ln|z1| 之后红段 ln|z2| 的末端，横坐标实际读作 ln|z1|+ln|z2|，而不是 ln|z2|。这与 frame:1 中 ln|z2| 点应在 x=ln|z2| 的位置以及“逐项对照”的公式关系不一致，容易让读者把 Ln z2 的实部误解为乘积的实部。右侧对数值平面中的红点应放回横坐标 ln|z2|、纵坐标 θ2；若为展示向量加法需要平移副本，应另绘平移后的临时向量或明确标注其端点不是 Ln z2 本身。",
+      "review_outcome": {
+        "status": "known_error",
+        "reasons": [
+          "frame:2（S2 步骤结束前 22.766s）和 frame:3（S3 步骤结束前 32.566s）右图红点标注为 ln|z2| + iθ2，但它的水平位置落在蓝段 ln|z1| 之后红段 ln|z2| 的末端，横坐标实际读作 ln|z1|+ln|z2|，而不是 ln|z2|。这与 frame:1 中 ln|z2| 点应在 x=ln|z2| 的位置以及“逐项对照”的公式关系不一致，容易让读者把 Ln z2 的实部误解为乘积的实部。右侧对数值平面中的红点应放回横坐标 ln|z2|、纵坐标 θ2；若为展示向量加法需要平移副本，应另绘平移后的临时向量或明确标注其端点不是 Ln z2 本身。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "failed",
+          "reason": "ContractError: TypeError: Mobject.__init__() got an unexpected keyword argument 'tips'"
+        },
+        {
+          "index": 2,
+          "state": "failed",
+          "reason": "ContractError: TypeError: Only values of type VMobject can be added as submobjects of VGroup, but the value Mobject (at index 0 of parameter 25) is of type Mobject. You can try adding this value into a Group instead."
+        },
+        {
+          "index": 3,
+          "state": "needs_review",
+          "reason": "frame:2（S2 步骤结束前 22.766s）和 frame:3（S3 步骤结束前 32.566s）右图红点标注为 ln|z2| + iθ2，但它的水平位置落在蓝段 ln|z1| 之后红段 ln|z2| 的末端，横坐标实际读作 ln|z1|+ln|z2|，而不是 ln|z2|。这与 frame:1 中 ln|z2| 点应在 x=ln|z2| 的位置以及“逐项对照”的公式关系不一致，容易让读者把 Ln z2 的实部误解为乘积的实部。右侧对数值平面中的红点应放回横坐标 ln|z2|、纵坐标 θ2；若为展示向量加法需要平移副本，应另绘平移后的临时向量或明确标注其端点不是 Ln z2 本身。"
+        }
+      ],
+      "verdicts": [
+        {
+          "status": "fail",
+          "reason": "frame:2（S2 步骤结束前 22.766s）和 frame:3（S3 步骤结束前 32.566s）右图红点标注为 ln|z2| + iθ2，但它的水平位置落在蓝段 ln|z1| 之后红段 ln|z2| 的末端，横坐标实际读作 ln|z1|+ln|z2|，而不是 ln|z2|。这与 frame:1 中 ln|z2| 点应在 x=ln|z2| 的位置以及“逐项对照”的公式关系不一致，容易让读者把 Ln z2 的实部误解为乘积的实部。右侧对数值平面中的红点应放回横坐标 ln|z2|、纵坐标 θ2；若为展示向量加法需要平移副本，应另绘平移后的临时向量或明确标注其端点不是 Ln z2 本身。"
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "frame:2（S2 步骤结束前 22.766s）和 frame:3（S3 步骤结束前 32.566s）右图红点标注为 ln|z2| + iθ2，但它的水平位置落在蓝段 ln|z1| 之后红段 ln|z2| 的末端，横坐标实际读作 ln|z1|+ln|z2|，而不是 ln|z2|。这与 frame:1 中 ln|z2| 点应在 x=ln|z2| 的位置以及“逐项对照”的公式关系不一致，容易让读者把 Ln z2 的实部误解为乘积的实部。右侧对数值平面中的红点应放回横坐标 ln|z2|、纵坐标 θ2；若为展示向量加法需要平移副本，应另绘平移后的临时向量或明确标注其端点不是 Ln z2 本身。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "模型明确失败",
+      "issue_summary": "Ln z2 红点被移到 ln|z1|+ln|z2|，仍标成 ln|z2|+iθ2，坐标与标签不符。",
+      "candidate_count": 3,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    },
+    {
+      "unit": "CH02-S05-SS08",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH02-S05-SS08/MR-2721718120819235cf4c/result.json",
+      "id": "MR-2721718120819235cf4c",
+      "kind": "animation",
+      "state": "needs_review",
+      "title": "从换元到两根，再到两族解：为什么根式不写 ± 也不丢解。",
+      "reason": "S4 结束态左侧文字内容与正文一致：X²−2izX−1=0、X=iz±√(1−z²)、w=−iLn X，“一般 z 的公式 Arcsin z=−iLn(iz+√(1−z²))”，合并式 w=kπ+(−1)^k it，并有 t 的定义行 ln(1+√2)≈0.88（以 z=i 为例，数值示意）；t=ln(1+√2)=0.881… 数值正确，右侧解点与 S3 一致。疑点仅在排布：最下面这一行明显比左侧其它各行更靠左，行首几乎贴在媒体左边缘，本行开头的“t”疑似被边界切掉一部分；在 450 px 的正文宽度下无法确认该符号是否完整可辨。",
+      "review_outcome": {
+        "status": "unverified",
+        "reasons": [
+          "S4 结束态左侧文字内容与正文一致：X²−2izX−1=0、X=iz±√(1−z²)、w=−iLn X，“一般 z 的公式 Arcsin z=−iLn(iz+√(1−z²))”，合并式 w=kπ+(−1)^k it，并有 t 的定义行 ln(1+√2)≈0.88（以 z=i 为例，数值示意）；t=ln(1+√2)=0.881… 数值正确，右侧解点与 S3 一致。疑点仅在排布：最下面这一行明显比左侧其它各行更靠左，行首几乎贴在媒体左边缘，本行开头的“t”疑似被边界切掉一部分；在 450 px 的正文宽度下无法确认该符号是否完整可辨。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "needs_review",
+          "reason": "最终画面把一般公式 Arcsin z=−iLn(iz+√(1−z²))（正确）与合并式 w=kπ+(−1)^k it 并置，但画面和字幕都没有说明“以 z=i 为例，数值示意”，也没有给出 t 是什么（应为 t=ln(1+√2)≈0.88，正是观察区解点的虚部数值）。该合并式只对图示这一取值的两族解成立，对一般 z 并不成立；在 450 px 实际显示下读者无法判断 t 的来源，容易把 w=kπ+(−1)^k it 误读成对任意 z 成立的统一式，这与作者“以 z=i 为例，数值示意标为示意而非证明”的要求也未对应上。"
+        },
+        {
+          "index": 2,
+          "state": "needs_review",
+          "reason": "该行仍是未渲染的 LaTeX 源码，可看到反斜杠与花括号（形如 t=\\ln(1+\\sqrt{2})\\approx 0.88（数值示意）），字号又是整幅最小的一行。它是读者据以读懂上方 w=kπ+(−1)^k i t 的关键定义，在 450 px 电脑双栏显示下既不是排版公式、也难以辨读，属于关键标注不可辨。左列其余内容（X²−2izX−1=0、X=iz±√(1−z²)、“两值互为相反数”、w=−iLn X、加“一般 z 的公式”标注的 Arcsin z=−iLn(iz+√(1−z²)) 与单独的合并式）与讲解、正文 ARCSIN-I 结论一致，不因该行的问题改变。；两帧中该说明行与“Im w”轴标签几乎落在同一像素带、彼此紧贴，疑似有部分叠压（“Im w”像是被说明行压住），但在 450 px 实际显示尺寸下无法确认是否真的相交，故不作确定错误判定。数学内容本身无误。"
+        },
+        {
+          "index": 3,
+          "state": "needs_review",
+          "reason": "S4 结束态左侧文字内容与正文一致：X²−2izX−1=0、X=iz±√(1−z²)、w=−iLn X，“一般 z 的公式 Arcsin z=−iLn(iz+√(1−z²))”，合并式 w=kπ+(−1)^k it，并有 t 的定义行 ln(1+√2)≈0.88（以 z=i 为例，数值示意）；t=ln(1+√2)=0.881… 数值正确，右侧解点与 S3 一致。疑点仅在排布：最下面这一行明显比左侧其它各行更靠左，行首几乎贴在媒体左边缘，本行开头的“t”疑似被边界切掉一部分；在 450 px 的正文宽度下无法确认该符号是否完整可辨。"
+        }
+      ],
+      "verdicts": [
+        {
+          "target": "frame:4",
+          "step": "S4",
+          "status": "needs_review",
+          "reason": "S4 结束态左侧文字内容与正文一致：X²−2izX−1=0、X=iz±√(1−z²)、w=−iLn X，“一般 z 的公式 Arcsin z=−iLn(iz+√(1−z²))”，合并式 w=kπ+(−1)^k it，并有 t 的定义行 ln(1+√2)≈0.88（以 z=i 为例，数值示意）；t=ln(1+√2)=0.881… 数值正确，右侧解点与 S3 一致。疑点仅在排布：最下面这一行明显比左侧其它各行更靠左，行首几乎贴在媒体左边缘，本行开头的“t”疑似被边界切掉一部分；在 450 px 的正文宽度下无法确认该符号是否完整可辨。",
+          "problem": "",
+          "action": "核对源码中该行的锚点/字号，把“t = ln(1+√2) ≈ 0.88（以 z=i 为例，数值示意）”整行右移或适当缩小，使行首的“t”与媒体左边界留出空隙、完整显示（文字内容与公式不变）。",
+          "expected": "该行完整落在画面内，“t”清晰可辨且不与左边缘相贴。"
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "S4 结束态左侧文字内容与正文一致：X²−2izX−1=0、X=iz±√(1−z²)、w=−iLn X，“一般 z 的公式 Arcsin z=−iLn(iz+√(1−z²))”，合并式 w=kπ+(−1)^k it，并有 t 的定义行 ln(1+√2)≈0.88（以 z=i 为例，数值示意）；t=ln(1+√2)=0.881… 数值正确，右侧解点与 S3 一致。疑点仅在排布：最下面这一行明显比左侧其它各行更靠左，行首几乎贴在媒体左边缘，本行开头的“t”疑似被边界切掉一部分；在 450 px 的正文宽度下无法确认该符号是否完整可辨。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "显示疑虑",
+      "issue_summary": "反正弦示例最终 t 定义行贴左边，t 是否裁切无法确认；数学内容判为一致。",
+      "candidate_count": 3,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    },
+    {
+      "unit": "CH03",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH03/MR-818da904b9ffe3592363/result.json",
+      "id": "MR-818da904b9ffe3592363",
+      "kind": "animation",
+      "state": "needs_review",
+      "title": "从分割、取点到求和、取极限：复积分是怎样得到的。",
+      "reason": "在规定的 450px 双栏媒体宽度下，右侧文字栏与左侧图形约各占一半，其中和式的上下标（Σ 的 k=1…n，以及 ζ_k、z_{k−1}、S_32、Δz_k）和 S3/S5 的数值行（f(ζ_k)=−0.16−0.99i、Δz_k=0.71+0.29i、n=8 时 |ΔS|=0.107 等）属于全帧最小的字，而它们正是理解“每一项的来源”和“取样点取法不影响极限”的关键。就所附画面看这些内容尚可区分，但不能确认所给画面是否按实际 450px 大小呈现，故无法确认它们在真实阅读尺寸下仍清楚可辨；这只是尺寸下可辨性的存疑，不改变数学内容，也不作返修要求。",
+      "review_outcome": {
+        "status": "unverified",
+        "reasons": [
+          "在规定的 450px 双栏媒体宽度下，右侧文字栏与左侧图形约各占一半，其中和式的上下标（Σ 的 k=1…n，以及 ζ_k、z_{k−1}、S_32、Δz_k）和 S3/S5 的数值行（f(ζ_k)=−0.16−0.99i、Δz_k=0.71+0.29i、n=8 时 |ΔS|=0.107 等）属于全帧最小的字，而它们正是理解“每一项的来源”和“取样点取法不影响极限”的关键。就所附画面看这些内容尚可区分，但不能确认所给画面是否按实际 450px 大小呈现，故无法确认它们在真实阅读尺寸下仍清楚可辨；这只是尺寸下可辨性的存疑，不改变数学内容，也不作返修要求。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "needs_review",
+          "reason": "画面与 S1 字幕都把曲线终点标为 Z（图中实轴右端也是 Z），而正文的记号体系是分点 z_0,z_1,…,z_n，同一画面里的和式也用 z_k−z_{k−1} 而未出现 z_n；所有帧均未见 Z 与 z_n 的对应说明，读者可能把 Z 当成另一个对象。这属于可定位的记号不一致，不改变数学内容，但无法从现有画面确认二者是否被声明为同一对象。"
+        },
+        {
+          "index": 2,
+          "state": "needs_review",
+          "reason": "在规定的 450px 双栏媒体宽度下，右侧文字栏与左侧图形约各占一半，其中和式的上下标（Σ 的 k=1…n，以及 ζ_k、z_{k−1}、S_32、Δz_k）和 S3/S5 的数值行（f(ζ_k)=−0.16−0.99i、Δz_k=0.71+0.29i、n=8 时 |ΔS|=0.107 等）属于全帧最小的字，而它们正是理解“每一项的来源”和“取样点取法不影响极限”的关键。就所附画面看这些内容尚可区分，但不能确认所给画面是否按实际 450px 大小呈现，故无法确认它们在真实阅读尺寸下仍清楚可辨；这只是尺寸下可辨性的存疑，不改变数学内容，也不作返修要求。"
+        }
+      ],
+      "verdicts": [
+        {
+          "status": "needs_review",
+          "reason": "在规定的 450px 双栏媒体宽度下，右侧文字栏与左侧图形约各占一半，其中和式的上下标（Σ 的 k=1…n，以及 ζ_k、z_{k−1}、S_32、Δz_k）和 S3/S5 的数值行（f(ζ_k)=−0.16−0.99i、Δz_k=0.71+0.29i、n=8 时 |ΔS|=0.107 等）属于全帧最小的字，而它们正是理解“每一项的来源”和“取样点取法不影响极限”的关键。就所附画面看这些内容尚可区分，但不能确认所给画面是否按实际 450px 大小呈现，故无法确认它们在真实阅读尺寸下仍清楚可辨；这只是尺寸下可辨性的存疑，不改变数学内容，也不作返修要求。"
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "在规定的 450px 双栏媒体宽度下，右侧文字栏与左侧图形约各占一半，其中和式的上下标（Σ 的 k=1…n，以及 ζ_k、z_{k−1}、S_32、Δz_k）和 S3/S5 的数值行（f(ζ_k)=−0.16−0.99i、Δz_k=0.71+0.29i、n=8 时 |ΔS|=0.107 等）属于全帧最小的字，而它们正是理解“每一项的来源”和“取样点取法不影响极限”的关键。就所附画面看这些内容尚可区分，但不能确认所给画面是否按实际 450px 大小呈现，故无法确认它们在真实阅读尺寸下仍清楚可辨；这只是尺寸下可辨性的存疑，不改变数学内容，也不作返修要求。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "证据尺度不确定",
+      "issue_summary": "复积分和式下标与数值行偏小；模型不确认截图是否按450px呈现，明确不要求返修。",
+      "candidate_count": 2,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    },
+    {
+      "unit": "CH03-S02",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH03-S02/MR-e2e593c75fa748b16adc/result.json",
+      "id": "MR-e2e593c75fa748b16adc",
+      "kind": "animation",
+      "state": "needs_review",
+      "title": "割线剪开、方向相消，得到 $\\int_{C_0}=\\int_{C_1}+\\int_{C_2}$。",
+      "reason": "初始状态大体与 S1 字幕相符：外边界 C0 顶部箭头向右、底部箭头向左（逆时针），内边界 C1 顶部箭头向右（顺时针），C0、C1、C2 三个标签在实际 450 CSS px 显示宽度下可辨，无割线、无越界裁切。存疑的是 C2：其箭头画得很小且紧贴“C2”标签，画面中我读到的切向是沿圆底部近似向右，而按“区域在左”的复闭路约定内边界应取顺时针（底部应指向左）。仅凭该帧不能确定，故记为待核，不据此判错。；割线标签的遮挡：三条割线上画出橙/红色方向箭头后，γ1（frame:4 起）、γ2 与 γ3（frame:5 起，直到 frame:9）的标签被箭头横穿或紧贴压住，画面中“γ2”“γ3”的字形被箭杆穿过，只剩断续笔画。这组标签恰恰是观众把 frame:6–frame:7 展开式第二行 (∫_{γ1}+∫_{γ1^-})、(∫_{γ2}+∫_{γ2^-})、(∫_{γ3}+∫_{γ3^-}) 与图上三条割线对应起来的唯一依据，在 450 CSS px 的实际显示宽度下已难以读清，属于关键标签遮挡。；末帧同时给出最终等式 ∫_{C0}f dz=∫_{C1}f dz+∫_{C2}f dz、画面底部注记“右端积分沿 C1、C2 逆时针（正向）方向取”，而 S9 字幕说“图中 C1、C2 的箭头由顺时针改为逆时针”。但末帧图形里 C1 顶部、C2 上的小箭头看上去仍与 frame:1 的初始方向相同（C1 顶部箭头仍朝右），看不出已经翻转，画面与注记、字幕之间存在可见疑点；由于箭头很小，我不能确认是源码未翻转还是取样显示不清，故记为待核。",
+      "review_outcome": {
+        "status": "known_error",
+        "reasons": [
+          "初始状态大体与 S1 字幕相符：外边界 C0 顶部箭头向右、底部箭头向左（逆时针），内边界 C1 顶部箭头向右（顺时针），C0、C1、C2 三个标签在实际 450 CSS px 显示宽度下可辨，无割线、无越界裁切。存疑的是 C2：其箭头画得很小且紧贴“C2”标签，画面中我读到的切向是沿圆底部近似向右，而按“区域在左”的复闭路约定内边界应取顺时针（底部应指向左）。仅凭该帧不能确定，故记为待核，不据此判错。",
+          "割线标签的遮挡：三条割线上画出橙/红色方向箭头后，γ1（frame:4 起）、γ2 与 γ3（frame:5 起，直到 frame:9）的标签被箭头横穿或紧贴压住，画面中“γ2”“γ3”的字形被箭杆穿过，只剩断续笔画。这组标签恰恰是观众把 frame:6–frame:7 展开式第二行 (∫_{γ1}+∫_{γ1^-})、(∫_{γ2}+∫_{γ2^-})、(∫_{γ3}+∫_{γ3^-}) 与图上三条割线对应起来的唯一依据，在 450 CSS px 的实际显示宽度下已难以读清，属于关键标签遮挡。",
+          "末帧同时给出最终等式 ∫_{C0}f dz=∫_{C1}f dz+∫_{C2}f dz、画面底部注记“右端积分沿 C1、C2 逆时针（正向）方向取”，而 S9 字幕说“图中 C1、C2 的箭头由顺时针改为逆时针”。但末帧图形里 C1 顶部、C2 上的小箭头看上去仍与 frame:1 的初始方向相同（C1 顶部箭头仍朝右），看不出已经翻转，画面与注记、字幕之间存在可见疑点；由于箭头很小，我不能确认是源码未翻转还是取样显示不清，故记为待核。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "needs_review",
+          "reason": "frame:9 的最终等式右端为 ∫_{C1}f dz+∫_{C2}f dz，下方文字写“右端两条内边界均按逆时针（正向）取”，但同一画面中内边界 C1、C2 上的箭头仍保持顺时针方向，且没有注解说明二者关系。这样同一符号 C1、C2 在图中是顺时针，在公式右端却被要求按逆时针读取，读者按图读会得到相反符号，与多连通柯西定理的移项结果不一致。修改要求：在最终等式出现时把 C1、C2 的箭头改成逆时针，或在图上清楚区分“复闭路内边界的顺时针方向”与“右端积分按逆时针方向”。"
+        },
+        {
+          "index": 2,
+          "state": "needs_review",
+          "reason": "所见疑点：frame:6、frame:7（S6、S7 末帧）的主等式文字相同，均为 ∫_{l1}f dz+∫_{l2}f dz=∫_{C0}f dz−∫_{C1}f dz−∫_{C2}f dz，γk 与 γk⁻ 三项只作为等式下方带下括号的括注出现（未进入等式本身）；划去动作只作用于这组括注。若源码意图是“把 ∫_{l1}+∫_{l2} 展开后先出现割线项、再划去”，则当前排版下展开在等式上不可见，读者只能看到同一等式配合被划掉的旁注，扣掉旁注前后等式没有任何变化。这是可定位到具体画面对象、且不改变数学内容的排版对应问题，故作 needs_review 提请核对源码。"
+        },
+        {
+          "index": 3,
+          "state": "needs_review",
+          "reason": "初始状态大体与 S1 字幕相符：外边界 C0 顶部箭头向右、底部箭头向左（逆时针），内边界 C1 顶部箭头向右（顺时针），C0、C1、C2 三个标签在实际 450 CSS px 显示宽度下可辨，无割线、无越界裁切。存疑的是 C2：其箭头画得很小且紧贴“C2”标签，画面中我读到的切向是沿圆底部近似向右，而按“区域在左”的复闭路约定内边界应取顺时针（底部应指向左）。仅凭该帧不能确定，故记为待核，不据此判错。；割线标签的遮挡：三条割线上画出橙/红色方向箭头后，γ1（frame:4 起）、γ2 与 γ3（frame:5 起，直到 frame:9）的标签被箭头横穿或紧贴压住，画面中“γ2”“γ3”的字形被箭杆穿过，只剩断续笔画。这组标签恰恰是观众把 frame:6–frame:7 展开式第二行 (∫_{γ1}+∫_{γ1^-})、(∫_{γ2}+∫_{γ2^-})、(∫_{γ3}+∫_{γ3^-}) 与图上三条割线对应起来的唯一依据，在 450 CSS px 的实际显示宽度下已难以读清，属于关键标签遮挡。；末帧同时给出最终等式 ∫_{C0}f dz=∫_{C1}f dz+∫_{C2}f dz、画面底部注记“右端积分沿 C1、C2 逆时针（正向）方向取”，而 S9 字幕说“图中 C1、C2 的箭头由顺时针改为逆时针”。但末帧图形里 C1 顶部、C2 上的小箭头看上去仍与 frame:1 的初始方向相同（C1 顶部箭头仍朝右），看不出已经翻转，画面与注记、字幕之间存在可见疑点；由于箭头很小，我不能确认是源码未翻转还是取样显示不清，故记为待核。"
+        }
+      ],
+      "verdicts": [
+        {
+          "target": "frame:1（S1 末态）",
+          "status": "needs_review",
+          "reason": "初始状态大体与 S1 字幕相符：外边界 C0 顶部箭头向右、底部箭头向左（逆时针），内边界 C1 顶部箭头向右（顺时针），C0、C1、C2 三个标签在实际 450 CSS px 显示宽度下可辨，无割线、无越界裁切。存疑的是 C2：其箭头画得很小且紧贴“C2”标签，画面中我读到的切向是沿圆底部近似向右，而按“区域在左”的复闭路约定内边界应取顺时针（底部应指向左）。仅凭该帧不能确定，故记为待核，不据此判错。",
+          "action": "核对源码中 C2 圆上小箭头的切向：若确实画成逆时针（底部向右），请改为顺时针，使三条边界的箭头都满足“阴影区域在左侧”，其余图形、角度、公式不动。",
+          "expected": "初始帧内边界 C1、C2 的箭头都按顺时针给出，与 S1 字幕及后续各步中 C1、C2 弧段被顺时针走过（因而出现负号）的推理一致。"
+        },
+        {
+          "targets": [
+            "frame:4",
+            "frame:5",
+            "frame:6",
+            "frame:7",
+            "frame:8",
+            "frame:9"
+          ],
+          "status": "fail",
+          "reason": "割线标签的遮挡：三条割线上画出橙/红色方向箭头后，γ1（frame:4 起）、γ2 与 γ3（frame:5 起，直到 frame:9）的标签被箭头横穿或紧贴压住，画面中“γ2”“γ3”的字形被箭杆穿过，只剩断续笔画。这组标签恰恰是观众把 frame:6–frame:7 展开式第二行 (∫_{γ1}+∫_{γ1^-})、(∫_{γ2}+∫_{γ2^-})、(∫_{γ3}+∫_{γ3^-}) 与图上三条割线对应起来的唯一依据，在 450 CSS px 的实际显示宽度下已难以读清，属于关键标签遮挡。",
+          "action": "把 γ1、γ2、γ3 三个标签移到各自割线的上方（离开箭杆与箭头位置），或把双向箭头缩短到标签之外，使标签字形完整可见；只调整标签与箭头的绘制位置，不改动任何数学内容、方向或配色含义。",
+          "expected": "三条割线各有一个完整、不被箭头覆盖的 γk 标签，展开式中的 γk 项能在图上找到清楚对应。"
+        },
+        {
+          "target": "frame:9（S9 末态）",
+          "status": "needs_review",
+          "reason": "末帧同时给出最终等式 ∫_{C0}f dz=∫_{C1}f dz+∫_{C2}f dz、画面底部注记“右端积分沿 C1、C2 逆时针（正向）方向取”，而 S9 字幕说“图中 C1、C2 的箭头由顺时针改为逆时针”。但末帧图形里 C1 顶部、C2 上的小箭头看上去仍与 frame:1 的初始方向相同（C1 顶部箭头仍朝右），看不出已经翻转，画面与注记、字幕之间存在可见疑点；由于箭头很小，我不能确认是源码未翻转还是取样显示不清，故记为待核。",
+          "action": "核对末帧 C1、C2 两处小箭头是否已按逆时针重绘：若未重绘，请把这两处箭头方向改为逆时针，使之与画面注记“右端积分沿 C1、C2 逆时针（正向）方向取”及最终等式右端的取法一致；公式、文字与其余图形不动。",
+          "expected": "末帧 C1、C2 的箭头方向与注记、字幕及最终等式右端的逆时针取法一致，读者不会把右端两项误解为顺时针积分。"
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "初始状态大体与 S1 字幕相符：外边界 C0 顶部箭头向右、底部箭头向左（逆时针），内边界 C1 顶部箭头向右（顺时针），C0、C1、C2 三个标签在实际 450 CSS px 显示宽度下可辨，无割线、无越界裁切。存疑的是 C2：其箭头画得很小且紧贴“C2”标签，画面中我读到的切向是沿圆底部近似向右，而按“区域在左”的复闭路约定内边界应取顺时针（底部应指向左）。仅凭该帧不能确定，故记为待核，不据此判错。"
+        },
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "割线标签的遮挡：三条割线上画出橙/红色方向箭头后，γ1（frame:4 起）、γ2 与 γ3（frame:5 起，直到 frame:9）的标签被箭头横穿或紧贴压住，画面中“γ2”“γ3”的字形被箭杆穿过，只剩断续笔画。这组标签恰恰是观众把 frame:6–frame:7 展开式第二行 (∫_{γ1}+∫_{γ1^-})、(∫_{γ2}+∫_{γ2^-})、(∫_{γ3}+∫_{γ3^-}) 与图上三条割线对应起来的唯一依据，在 450 CSS px 的实际显示宽度下已难以读清，属于关键标签遮挡。"
+        },
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "末帧同时给出最终等式 ∫_{C0}f dz=∫_{C1}f dz+∫_{C2}f dz、画面底部注记“右端积分沿 C1、C2 逆时针（正向）方向取”，而 S9 字幕说“图中 C1、C2 的箭头由顺时针改为逆时针”。但末帧图形里 C1 顶部、C2 上的小箭头看上去仍与 frame:1 的初始方向相同（C1 顶部箭头仍朝右），看不出已经翻转，画面与注记、字幕之间存在可见疑点；由于箭头很小，我不能确认是源码未翻转还是取样显示不清，故记为待核。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "明确显示错误＋方向疑虑",
+      "issue_summary": "γ1/γ2/γ3被箭杆遮挡为fail；C2及末帧小圆箭头方向另属不能确认。",
+      "candidate_count": 3,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    },
+    {
+      "unit": "CH04-S01",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH04-S01/MR-edb094cb921d320b4e71/result.json",
+      "id": "MR-edb094cb921d320b4e71",
+      "kind": "drawing",
+      "state": "needs_review",
+      "title": "$f(z)=z^{2}$ 的等值曲线网：除原点外处处正交。",
+      "reason": "画面右侧图例中第 2 行与第 4 行说明（形如“$C_1=0$: $y=\\pm x$”“坐标轴即 $C_2=0$”）一直排到画布最右缘，末字符在 450 CSS px 成品尺寸下看不出是否完整，疑似被画布右边界裁切；这两行正是说明“$u=0$ 是 $y=\\pm x$、$v=0$ 是坐标轴”的文字，若真缺字会影响原点处不正交这一读图环节，因此尚不能确认为无问题。",
+      "review_outcome": {
+        "status": "unverified",
+        "reasons": [
+          "画面右侧图例中第 2 行与第 4 行说明（形如“$C_1=0$: $y=\\pm x$”“坐标轴即 $C_2=0$”）一直排到画布最右缘，末字符在 450 CSS px 成品尺寸下看不出是否完整，疑似被画布右边界裁切；这两行正是说明“$u=0$ 是 $y=\\pm x$、$v=0$ 是坐标轴”的文字，若真缺字会影响原点处不正交这一读图环节，因此尚不能确认为无问题。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "needs_review",
+          "reason": "底部文字“示意：$C_1=\\pm1, C_2=\\pm1$”与图中实际内容不一致：为展示原点处正交性失效，图中画出了过原点的蓝色直线（$u=0$，即 $y=\\pm x$），但该等值线未在示意文字中列出；同时坐标轴作为 $v=0$ 的等值线也未在图例或临近标注中说明为 $v=C_2$ 中 $C_2=0$ 的情形，可能让读者对原点处两条直线来源和颜色对应产生困惑。"
+        },
+        {
+          "index": 2,
+          "state": "needs_review",
+          "reason": "画面右侧图例中第 2 行与第 4 行说明（形如“$C_1=0$: $y=\\pm x$”“坐标轴即 $C_2=0$”）一直排到画布最右缘，末字符在 450 CSS px 成品尺寸下看不出是否完整，疑似被画布右边界裁切；这两行正是说明“$u=0$ 是 $y=\\pm x$、$v=0$ 是坐标轴”的文字，若真缺字会影响原点处不正交这一读图环节，因此尚不能确认为无问题。"
+        }
+      ],
+      "verdicts": [
+        {
+          "status": "needs_review",
+          "reason": "画面右侧图例中第 2 行与第 4 行说明（形如“$C_1=0$: $y=\\pm x$”“坐标轴即 $C_2=0$”）一直排到画布最右缘，末字符在 450 CSS px 成品尺寸下看不出是否完整，疑似被画布右边界裁切；这两行正是说明“$u=0$ 是 $y=\\pm x$、$v=0$ 是坐标轴”的文字，若真缺字会影响原点处不正交这一读图环节，因此尚不能确认为无问题。",
+          "why": "",
+          "problem": "右侧图例末两行等式横向排到画布边缘，末尾字符（如 $y=\\pm x$ 的 $x$、$C_2=0$ 的 $0$）疑似出画布被裁切，无法确认完整。",
+          "action": "把右侧图例文字整体左移（或略缩小字号/行距、给图例留出右边距），保证两行说明的等式末尾完整落在画布内，不改变任何数学内容。",
+          "expected": "图例两行说明（$C_1=0$: $y=\\pm x$、坐标轴即 $C_2=0$）完整显示、不被画布右缘截断。"
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "画面右侧图例中第 2 行与第 4 行说明（形如“$C_1=0$: $y=\\pm x$”“坐标轴即 $C_2=0$”）一直排到画布最右缘，末字符在 450 CSS px 成品尺寸下看不出是否完整，疑似被画布右边界裁切；这两行正是说明“$u=0$ 是 $y=\\pm x$、$v=0$ 是坐标轴”的文字，若真缺字会影响原点处不正交这一读图环节，因此尚不能确认为无问题。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "裁切疑虑",
+      "issue_summary": "z²等值曲线图右侧C1=0、C2=0图例贴右边，末字符是否完整无法确认。",
+      "candidate_count": 2,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    },
+    {
+      "unit": "CH05-S04",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH05-S04/MR-56c0b238f6eca2e1a3d4/result.json",
+      "id": "MR-56c0b238f6eca2e1a3d4",
+      "kind": "animation",
+      "state": "needs_review",
+      "title": "从内外圆周上的展开到罗朗级数的正、负幂部分。",
+      "reason": "步骤 S3 末态样本（33.466 s）。比值条件 |ζ-a|/|z-a|=q₂<1 与 1/(ζ-z)=-1/(z-a)·1/(1-(ζ-a)/(z-a))=-Σ_{n=0}^{∞}(ζ-a)^n/(z-a)^{n+1} 正确；但最后一步改写为负幂形式的等号右侧，画面与随附步骤文字都显示为 Σ_{n=-∞}^{-1}(z-a)^n/(ζ-a)^{n+1}，看不到应有的负号。正确恒等式应为 -Σ_{n=0}^{∞}(ζ-a)^n/(z-a)^{n+1}=-Σ_{n=-∞}^{-1}(z-a)^n/(ζ-a)^{n+1}（取 a=0、z=2、ζ=1 验算：1/(ζ-z)=-1，而无负号的 Σ_{n=-∞}^{-1}(z-a)^n/(ζ-a)^{n+1}=+1），若确缺负号，则与本步骤随后（frame:4）给出的 -(1/2πi)∫_{C'} f(ζ)/(ζ-z)dζ=Σ_{n=-∞}^{-1}a_n(z-a)^n 自相矛盾。受 450px 显示尺寸所限，该处符号是否为漏写尚不能完全确认，故按疑点记录。另请一并核对左侧图：若本步骤上仍保留 S1 中标记在 C'' 上的 ζ 与 z 到该点的虚线，会与 |ζ-a|/|z-a|<1 的几何位置矛盾。；步骤 S4 末态样本（41.566 s）。中间 -(1/2πi)∫_{C'}f(ζ)/(ζ-z)dζ=Σ_{n=-∞}^{-1}a_n(z-a)^n 与系数式 a_n=(1/2πi)∫_{C'}f(ζ)/(ζ-a)^{n+1}dζ (n≤-1) 本身正确，积分路径为内圆周 C'、条件 n≤-1 均无误。但该结论只在顶部保留的 C' 展开式带负号时成立；顶部仍显示 -Σ_{n=0}^{∞}(ζ-a)^n/(z-a)^{n+1}=Σ_{n=-∞}^{-1}(z-a)^n/(ζ-a)^{n+1}，与 frame:3 同一处符号疑点相关：若负幂和式前漏写负号，则代入本帧积分式会得到 -Σ_{n=-∞}^{-1}a_n(z-a)^n，与本帧自身写出的正号结果不一致。当前显示尺寸下无法确认符号是否缺失，故按疑点记录，与 frame:3 一并核对即可。",
+      "review_outcome": {
+        "status": "unverified",
+        "reasons": [
+          "步骤 S3 末态样本（33.466 s）。比值条件 |ζ-a|/|z-a|=q₂<1 与 1/(ζ-z)=-1/(z-a)·1/(1-(ζ-a)/(z-a))=-Σ_{n=0}^{∞}(ζ-a)^n/(z-a)^{n+1} 正确；但最后一步改写为负幂形式的等号右侧，画面与随附步骤文字都显示为 Σ_{n=-∞}^{-1}(z-a)^n/(ζ-a)^{n+1}，看不到应有的负号。正确恒等式应为 -Σ_{n=0}^{∞}(ζ-a)^n/(z-a)^{n+1}=-Σ_{n=-∞}^{-1}(z-a)^n/(ζ-a)^{n+1}（取 a=0、z=2、ζ=1 验算：1/(ζ-z)=-1，而无负号的 Σ_{n=-∞}^{-1}(z-a)^n/(ζ-a)^{n+1}=+1），若确缺负号，则与本步骤随后（frame:4）给出的 -(1/2πi)∫_{C'} f(ζ)/(ζ-z)dζ=Σ_{n=-∞}^{-1}a_n(z-a)^n 自相矛盾。受 450px 显示尺寸所限，该处符号是否为漏写尚不能完全确认，故按疑点记录。另请一并核对左侧图：若本步骤上仍保留 S1 中标记在 C'' 上的 ζ 与 z 到该点的虚线，会与 |ζ-a|/|z-a|<1 的几何位置矛盾。",
+          "步骤 S4 末态样本（41.566 s）。中间 -(1/2πi)∫_{C'}f(ζ)/(ζ-z)dζ=Σ_{n=-∞}^{-1}a_n(z-a)^n 与系数式 a_n=(1/2πi)∫_{C'}f(ζ)/(ζ-a)^{n+1}dζ (n≤-1) 本身正确，积分路径为内圆周 C'、条件 n≤-1 均无误。但该结论只在顶部保留的 C' 展开式带负号时成立；顶部仍显示 -Σ_{n=0}^{∞}(ζ-a)^n/(z-a)^{n+1}=Σ_{n=-∞}^{-1}(z-a)^n/(ζ-a)^{n+1}，与 frame:3 同一处符号疑点相关：若负幂和式前漏写负号，则代入本帧积分式会得到 -Σ_{n=-∞}^{-1}a_n(z-a)^n，与本帧自身写出的正号结果不一致。当前显示尺寸下无法确认符号是否缺失，故按疑点记录，与 frame:3 一并核对即可。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "needs_review",
+          "reason": "CapabilityError: target-size media browser failed: ts,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-dev-shm-usage --user-data-dir=/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/recovery-scratch/playwright_chromiumdev_profile-bZkFmB --remote-debugging-pipe --no-startup-window',\n    '  - <launched> pid=286410',\n    '  - [pid=286410] <gracefully close start>',\n    '  - [pid=286410] <kill>',\n    '  - [pid=286410] <will force kill>',\n    '  - [pid=286410] <process did exit: exitCode=null, signal=SIGTRAP>',\n    '  - [pid=286410] starting temporary directories cleanup',\n    '  - [pid=286410] finished temporary directories cleanup',\n    '  - [pid=286410] <gracefully close end>'\n  ]\n}\n"
+        }
+      ],
+      "verdicts": [
+        {
+          "evidence_id": "frame:3",
+          "status": "needs_review",
+          "reason": "步骤 S3 末态样本（33.466 s）。比值条件 |ζ-a|/|z-a|=q₂<1 与 1/(ζ-z)=-1/(z-a)·1/(1-(ζ-a)/(z-a))=-Σ_{n=0}^{∞}(ζ-a)^n/(z-a)^{n+1} 正确；但最后一步改写为负幂形式的等号右侧，画面与随附步骤文字都显示为 Σ_{n=-∞}^{-1}(z-a)^n/(ζ-a)^{n+1}，看不到应有的负号。正确恒等式应为 -Σ_{n=0}^{∞}(ζ-a)^n/(z-a)^{n+1}=-Σ_{n=-∞}^{-1}(z-a)^n/(ζ-a)^{n+1}（取 a=0、z=2、ζ=1 验算：1/(ζ-z)=-1，而无负号的 Σ_{n=-∞}^{-1}(z-a)^n/(ζ-a)^{n+1}=+1），若确缺负号，则与本步骤随后（frame:4）给出的 -(1/2πi)∫_{C'} f(ζ)/(ζ-z)dζ=Σ_{n=-∞}^{-1}a_n(z-a)^n 自相矛盾。受 450px 显示尺寸所限，该处符号是否为漏写尚不能完全确认，故按疑点记录。另请一并核对左侧图：若本步骤上仍保留 S1 中标记在 C'' 上的 ζ 与 z 到该点的虚线，会与 |ζ-a|/|z-a|<1 的几何位置矛盾。",
+          "action": "核对源码：若负幂形式的和式前确实漏了负号，请在该步最后一项写成 -Σ_{n=-∞}^{-1}(z-a)^n/(ζ-a)^{n+1}，与正文 LAURENT-PROOF-3 及本动画 frame:4 的积分式保持一致；同时核对左侧图中 ζ 是否只标在 C' 上、C'' 上不再保留同名的 ζ。",
+          "expected": "内圆周展开的负幂改写保留与前一步一致的负号，图中 ζ 位于 C' 上且与 |ζ-a|/|z-a|<1 相符。"
+        },
+        {
+          "evidence_id": "frame:4",
+          "status": "needs_review",
+          "reason": "步骤 S4 末态样本（41.566 s）。中间 -(1/2πi)∫_{C'}f(ζ)/(ζ-z)dζ=Σ_{n=-∞}^{-1}a_n(z-a)^n 与系数式 a_n=(1/2πi)∫_{C'}f(ζ)/(ζ-a)^{n+1}dζ (n≤-1) 本身正确，积分路径为内圆周 C'、条件 n≤-1 均无误。但该结论只在顶部保留的 C' 展开式带负号时成立；顶部仍显示 -Σ_{n=0}^{∞}(ζ-a)^n/(z-a)^{n+1}=Σ_{n=-∞}^{-1}(z-a)^n/(ζ-a)^{n+1}，与 frame:3 同一处符号疑点相关：若负幂和式前漏写负号，则代入本帧积分式会得到 -Σ_{n=-∞}^{-1}a_n(z-a)^n，与本帧自身写出的正号结果不一致。当前显示尺寸下无法确认符号是否缺失，故按疑点记录，与 frame:3 一并核对即可。",
+          "action": "核对源码：确保顶部保留的 C' 展开式与中间的积分式符号自洽（负幂和式前保留负号），使两行的推导关系与正文一致。",
+          "expected": "顶部展开式、积分式与系数式三者符号自洽，n≤-1 的负幂部分与内圆周积分对应清楚。"
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "步骤 S3 末态样本（33.466 s）。比值条件 |ζ-a|/|z-a|=q₂<1 与 1/(ζ-z)=-1/(z-a)·1/(1-(ζ-a)/(z-a))=-Σ_{n=0}^{∞}(ζ-a)^n/(z-a)^{n+1} 正确；但最后一步改写为负幂形式的等号右侧，画面与随附步骤文字都显示为 Σ_{n=-∞}^{-1}(z-a)^n/(ζ-a)^{n+1}，看不到应有的负号。正确恒等式应为 -Σ_{n=0}^{∞}(ζ-a)^n/(z-a)^{n+1}=-Σ_{n=-∞}^{-1}(z-a)^n/(ζ-a)^{n+1}（取 a=0、z=2、ζ=1 验算：1/(ζ-z)=-1，而无负号的 Σ_{n=-∞}^{-1}(z-a)^n/(ζ-a)^{n+1}=+1），若确缺负号，则与本步骤随后（frame:4）给出的 -(1/2πi)∫_{C'} f(ζ)/(ζ-z)dζ=Σ_{n=-∞}^{-1}a_n(z-a)^n 自相矛盾。受 450px 显示尺寸所限，该处符号是否为漏写尚不能完全确认，故按疑点记录。另请一并核对左侧图：若本步骤上仍保留 S1 中标记在 C'' 上的 ζ 与 z 到该点的虚线，会与 |ζ-a|/|z-a|<1 的几何位置矛盾。"
+        },
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "步骤 S4 末态样本（41.566 s）。中间 -(1/2πi)∫_{C'}f(ζ)/(ζ-z)dζ=Σ_{n=-∞}^{-1}a_n(z-a)^n 与系数式 a_n=(1/2πi)∫_{C'}f(ζ)/(ζ-a)^{n+1}dζ (n≤-1) 本身正确，积分路径为内圆周 C'、条件 n≤-1 均无误。但该结论只在顶部保留的 C' 展开式带负号时成立；顶部仍显示 -Σ_{n=0}^{∞}(ζ-a)^n/(z-a)^{n+1}=Σ_{n=-∞}^{-1}(z-a)^n/(ζ-a)^{n+1}，与 frame:3 同一处符号疑点相关：若负幂和式前漏写负号，则代入本帧积分式会得到 -Σ_{n=-∞}^{-1}a_n(z-a)^n，与本帧自身写出的正号结果不一致。当前显示尺寸下无法确认符号是否缺失，故按疑点记录，与 frame:3 一并核对即可。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "数学符号疑虑",
+      "issue_summary": "罗朗负幂改写可能漏负号，且ζ点是否仍留在外圆待查；模型受450px限制未确认。",
+      "candidate_count": 1,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    },
+    {
+      "unit": "CH05-S04",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH05-S04/MR-e5db23c00d8b9e8a8cd7/result.json",
+      "id": "MR-e5db23c00d8b9e8a8cd7",
+      "kind": "animation",
+      "state": "needs_review",
+      "title": "区域条件决定用 $(z-1)$ 还是 $1/z$ 展开。",
+      "reason": "帧5（S4-compare，53.766 s 步骤结束前画面）并列给出的两式本身正确：D1:0<|z-1|<1 时 f(z)=-Σ_{n=-1}^{∞}(z-1)^n，D2:2<|z|<∞ 时 f(z)=Σ_{n=2}^{∞}(2^{n-1}-1)/z^n，与正文和前几步一致。但在 450 px 显示宽度下，右下结论句贴着画面右缘结束于“同一个函数，区域不同，展开中心与形式”，句尾看不出是否有“不同”二字，我无法确认该句是被裁切还是本身未写完整；同类贴边风险也见于帧1第三行 Σ_{n=0}^{∞}(z-1)^n 的末尾指数。",
+      "review_outcome": {
+        "status": "unverified",
+        "reasons": [
+          "帧5（S4-compare，53.766 s 步骤结束前画面）并列给出的两式本身正确：D1:0<|z-1|<1 时 f(z)=-Σ_{n=-1}^{∞}(z-1)^n，D2:2<|z|<∞ 时 f(z)=Σ_{n=2}^{∞}(2^{n-1}-1)/z^n，与正文和前几步一致。但在 450 px 显示宽度下，右下结论句贴着画面右缘结束于“同一个函数，区域不同，展开中心与形式”，句尾看不出是否有“不同”二字，我无法确认该句是被裁切还是本身未写完整；同类贴边风险也见于帧1第三行 Σ_{n=0}^{∞}(z-1)^n 的末尾指数。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "needs_review",
+          "reason": "CapabilityError: target-size media browser failed: ts,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-dev-shm-usage --user-data-dir=/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/recovery-scratch/playwright_chromiumdev_profile-enenXZ --remote-debugging-pipe --no-startup-window',\n    '  - <launched> pid=283826',\n    '  - [pid=283826] <gracefully close start>',\n    '  - [pid=283826] <kill>',\n    '  - [pid=283826] <will force kill>',\n    '  - [pid=283826] <process did exit: exitCode=null, signal=SIGTRAP>',\n    '  - [pid=283826] starting temporary directories cleanup',\n    '  - [pid=283826] finished temporary directories cleanup',\n    '  - [pid=283826] <gracefully close end>'\n  ]\n}\n"
+        }
+      ],
+      "verdicts": [
+        {
+          "status": "needs_review",
+          "frame_key": "frame:5",
+          "step_id": "S4-compare",
+          "problem": "帧5（S4-compare，53.766 s 步骤结束前画面）并列给出的两式本身正确：D1:0<|z-1|<1 时 f(z)=-Σ_{n=-1}^{∞}(z-1)^n，D2:2<|z|<∞ 时 f(z)=Σ_{n=2}^{∞}(2^{n-1}-1)/z^n，与正文和前几步一致。但在 450 px 显示宽度下，右下结论句贴着画面右缘结束于“同一个函数，区域不同，展开中心与形式”，句尾看不出是否有“不同”二字，我无法确认该句是被裁切还是本身未写完整；同类贴边风险也见于帧1第三行 Σ_{n=0}^{∞}(z-1)^n 的末尾指数。",
+          "action": "核对该结论句原文，并通过换行或适当缩小字号让“区域不同，展开中心与展开形式不同”整句完整落在 450 px 画面内（不改动公式、下标与数学内容）。"
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "帧5（S4-compare，53.766 s 步骤结束前画面）并列给出的两式本身正确：D1:0<|z-1|<1 时 f(z)=-Σ_{n=-1}^{∞}(z-1)^n，D2:2<|z|<∞ 时 f(z)=Σ_{n=2}^{∞}(2^{n-1}-1)/z^n，与正文和前几步一致。但在 450 px 显示宽度下，右下结论句贴着画面右缘结束于“同一个函数，区域不同，展开中心与形式”，句尾看不出是否有“不同”二字，我无法确认该句是被裁切还是本身未写完整；同类贴边风险也见于帧1第三行 Σ_{n=0}^{∞}(z-1)^n 的末尾指数。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "裁切疑虑",
+      "issue_summary": "罗朗不同区域展开比较的结论句“展开中心与形式…”疑似缺末尾；公式判为正确。",
+      "candidate_count": 1,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    },
+    {
+      "unit": "CH05-S05",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH05-S05/MR-e17b9a92b2163c67e246/result.json",
+      "id": "MR-e17b9a92b2163c67e246",
+      "kind": "drawing",
+      "state": "needs_review",
+      "title": "用 $z=1/\\zeta$ 把无穷远点翻到原点。",
+      "reason": "右栏面板标题写作拉丁字母“zeta 平面”，而同一图中其余位置均用符号 ζ（ζ=1/z、|ζ|=1/R、ζ=0），左栏标题则用符号写作“z 平面”；标题与图内变量记号不统一，是否为有意写法需核对源码。",
+      "review_outcome": {
+        "status": "unverified",
+        "reasons": [
+          "右栏面板标题写作拉丁字母“zeta 平面”，而同一图中其余位置均用符号 ζ（ζ=1/z、|ζ|=1/R、ζ=0），左栏标题则用符号写作“z 平面”；标题与图内变量记号不统一，是否为有意写法需核对源码。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "needs_review",
+          "reason": "CapabilityError: target-size media browser failed: ts,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-dev-shm-usage --user-data-dir=/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/recovery-scratch/playwright_chromiumdev_profile-6tPDlp --remote-debugging-pipe --no-startup-window',\n    '  - <launched> pid=312413',\n    '  - [pid=312413] <gracefully close start>',\n    '  - [pid=312413] <kill>',\n    '  - [pid=312413] <will force kill>',\n    '  - [pid=312413] <process did exit: exitCode=null, signal=SIGTRAP>',\n    '  - [pid=312413] starting temporary directories cleanup',\n    '  - [pid=312413] finished temporary directories cleanup',\n    '  - [pid=312413] <gracefully close end>'\n  ]\n}\n"
+        }
+      ],
+      "verdicts": [
+        {
+          "status": "needs_review",
+          "reason": "右栏面板标题写作拉丁字母“zeta 平面”，而同一图中其余位置均用符号 ζ（ζ=1/z、|ζ|=1/R、ζ=0），左栏标题则用符号写作“z 平面”；标题与图内变量记号不统一，是否为有意写法需核对源码。",
+          "action": "把右栏标题由“zeta 平面”改为“ζ 平面”，与左栏“z 平面”及图中 ζ 记号保持一致（不改变任何数学内容）。",
+          "expected": "两栏标题分别为“z 平面”“ζ 平面”，与图内所用变量符号统一。"
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "右栏面板标题写作拉丁字母“zeta 平面”，而同一图中其余位置均用符号 ζ（ζ=1/z、|ζ|=1/R、ζ=0），左栏标题则用符号写作“z 平面”；标题与图内变量记号不统一，是否为有意写法需核对源码。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "记号一致性疑虑",
+      "issue_summary": "倒数变换右面板写zeta平面，其余用ζ；需决定是否把音译拼写也列为必须修。",
+      "candidate_count": 1,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    },
+    {
+      "unit": "CH06",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH06/MR-0bd91a097d6ab1929b9e/result.json",
+      "id": "MR-0bd91a097d6ab1929b9e",
+      "kind": "drawing",
+      "state": "needs_review",
+      "title": "沿闭路的积分等于沿各奇点周围小圆周积分之和。",
+      "reason": "外圈 C 的箭头方向不一致：顶部箭头逆时针，右侧箭头顺时针，与图注“外圈逆时针”及“正向闭路 C”矛盾，会误导对正向边界的理解。；图中小圆周 C1、C2、C3 的箭头均为顺时针，但下方公式 ∮_C f dz = Σ ∮_{C_k} f dz 中的 ∮_{C_k} 按通常约定表示逆时针正向积分；图中标签 C_k 与公式中的 C_k 方向相反，容易造成符号错误。尽管文字解释提到“移项后为各小圆周的正向积分”，但标签相同且方向相反，仍属图文不一致。",
+      "review_outcome": {
+        "status": "known_error",
+        "reasons": [
+          "外圈 C 的箭头方向不一致：顶部箭头逆时针，右侧箭头顺时针，与图注“外圈逆时针”及“正向闭路 C”矛盾，会误导对正向边界的理解。",
+          "图中小圆周 C1、C2、C3 的箭头均为顺时针，但下方公式 ∮_C f dz = Σ ∮_{C_k} f dz 中的 ∮_{C_k} 按通常约定表示逆时针正向积分；图中标签 C_k 与公式中的 C_k 方向相反，容易造成符号错误。尽管文字解释提到“移项后为各小圆周的正向积分”，但标签相同且方向相反，仍属图文不一致。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "needs_review",
+          "reason": "CapabilityError: target-size media browser failed: ts,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-dev-shm-usage --user-data-dir=/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/recovery-scratch/playwright_chromiumdev_profile-w4PaNp --remote-debugging-pipe --no-startup-window',\n    '  - <launched> pid=327935',\n    '  - [pid=327935] <gracefully close start>',\n    '  - [pid=327935] <kill>',\n    '  - [pid=327935] <will force kill>',\n    '  - [pid=327935] <process did exit: exitCode=null, signal=SIGTRAP>',\n    '  - [pid=327935] starting temporary directories cleanup',\n    '  - [pid=327935] finished temporary directories cleanup',\n    '  - [pid=327935] <gracefully close end>'\n  ]\n}\n"
+        },
+        {
+          "index": 2,
+          "state": "needs_review",
+          "reason": "画面中小圆周 C₁、C₂、C₃ 上的红色箭头与 C 同向（逆时针），这正是公式中 ∮_{C_k} 所采用的方向，与图注第一行“小圆周取逆时针，与 C 同向”一致；但请求所附替代文字写的是“内边界箭头取顺时针”，而画面里并没有单独画出表示 D′ 内边界正向（顺时针）的箭头，只有图注第二行“作为 D′ 的内边界则取顺时针”用文字交代了这一方向约定。因此画面所画箭头与替代文字对“箭头方向”的描述可能对不上（替代文字读起来像是小圆周箭头本身就是顺时针）。此处只发现图文/替代文字之间的方向表述疑点，未发现数学内容错误，故不定为 fail。"
+        },
+        {
+          "index": 3,
+          "state": "needs_review",
+          "reason": "外圈 C 的箭头方向不一致：顶部箭头逆时针，右侧箭头顺时针，与图注“外圈逆时针”及“正向闭路 C”矛盾，会误导对正向边界的理解。；图中小圆周 C1、C2、C3 的箭头均为顺时针，但下方公式 ∮_C f dz = Σ ∮_{C_k} f dz 中的 ∮_{C_k} 按通常约定表示逆时针正向积分；图中标签 C_k 与公式中的 C_k 方向相反，容易造成符号错误。尽管文字解释提到“移项后为各小圆周的正向积分”，但标签相同且方向相反，仍属图文不一致。"
+        }
+      ],
+      "verdicts": [
+        {
+          "status": "fail",
+          "reason": "外圈 C 的箭头方向不一致：顶部箭头逆时针，右侧箭头顺时针，与图注“外圈逆时针”及“正向闭路 C”矛盾，会误导对正向边界的理解。",
+          "problem": "外圈 C 上同时出现逆时针（顶部）和顺时针（右侧）箭头。",
+          "action": "将外圈 C 上的所有箭头统一为逆时针方向。",
+          "expected": "外圈 C 全部箭头逆时针，符合正向闭路。"
+        },
+        {
+          "status": "fail",
+          "reason": "图中小圆周 C1、C2、C3 的箭头均为顺时针，但下方公式 ∮_C f dz = Σ ∮_{C_k} f dz 中的 ∮_{C_k} 按通常约定表示逆时针正向积分；图中标签 C_k 与公式中的 C_k 方向相反，容易造成符号错误。尽管文字解释提到“移项后为各小圆周的正向积分”，但标签相同且方向相反，仍属图文不一致。",
+          "problem": "小圆周箭头顺时针，公式中 C_k 为逆时针正向积分，标签相同方向相反。",
+          "action": "将小圆周 C1、C2、C3 的箭头改为逆时针以匹配公式中的正向积分；或保留顺时针箭头但将标签改为 C_k^- 并在公式旁注明 C_k 为逆时针方向。",
+          "expected": "图中箭头方向与公式中 ∮_{C_k} 的约定方向一致，不会产生符号混淆。"
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "外圈 C 的箭头方向不一致：顶部箭头逆时针，右侧箭头顺时针，与图注“外圈逆时针”及“正向闭路 C”矛盾，会误导对正向边界的理解。"
+        },
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "图中小圆周 C1、C2、C3 的箭头均为顺时针，但下方公式 ∮_C f dz = Σ ∮_{C_k} f dz 中的 ∮_{C_k} 按通常约定表示逆时针正向积分；图中标签 C_k 与公式中的 C_k 方向相反，容易造成符号错误。尽管文字解释提到“移项后为各小圆周的正向积分”，但标签相同且方向相反，仍属图文不一致。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "模型明确失败",
+      "issue_summary": "留数示意外圈箭头互相矛盾；小圆顺时针标签与正向积分公式混用。",
+      "candidate_count": 3,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    },
+    {
+      "unit": "CH06-S01",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH06-S01/MR-d35ec44e8c75f5df86d5/result.json",
+      "id": "MR-d35ec44e8c75f5df86d5",
+      "kind": "animation",
+      "state": "needs_review",
+      "title": "整理成 $-\\frac1z\\varphi(z)$ 的形状后直接读出留数。",
+      "reason": "在 450 px 双栏实际显示下，S1 末帧的分子行显示为 z sin z = [z²]（提出公因子）（z²/6）：橙色注记「提出公因子」正好落在括号内本应写「1 −」的位置，画面中看不到因子 1 与末尾的「+ ⋯」，而同一动画 frame:4 的同一行清楚显示为 z²(1 − z²/6 + ⋯)。因此本帧呈现的括号内容与字幕 S1、替代文字「分子提出 z^2」所述的关键变形不符，该步的核心式子在所给尺寸下不可辨（究竟是被注记遮住还是漏写，仅凭该帧无法确定）。",
+      "review_outcome": {
+        "status": "unverified",
+        "reasons": [
+          "在 450 px 双栏实际显示下，S1 末帧的分子行显示为 z sin z = [z²]（提出公因子）（z²/6）：橙色注记「提出公因子」正好落在括号内本应写「1 −」的位置，画面中看不到因子 1 与末尾的「+ ⋯」，而同一动画 frame:4 的同一行清楚显示为 z²(1 − z²/6 + ⋯)。因此本帧呈现的括号内容与字幕 S1、替代文字「分子提出 z^2」所述的关键变形不符，该步的核心式子在所给尺寸下不可辨（究竟是被注记遮住还是漏写，仅凭该帧无法确定）。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "needs_review",
+          "reason": "CapabilityError: target-size media browser failed: ts,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-dev-shm-usage --user-data-dir=/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/recovery-scratch/playwright_chromiumdev_profile-WQ0gHd --remote-debugging-pipe --no-startup-window',\n    '  - <launched> pid=399612',\n    '  - [pid=399612] <gracefully close start>',\n    '  - [pid=399612] <kill>',\n    '  - [pid=399612] <will force kill>',\n    '  - [pid=399612] <process did exit: exitCode=null, signal=SIGTRAP>',\n    '  - [pid=399612] starting temporary directories cleanup',\n    '  - [pid=399612] finished temporary directories cleanup',\n    '  - [pid=399612] <gracefully close end>'\n  ]\n}\n"
+        }
+      ],
+      "verdicts": [
+        {
+          "frame": "frame:1",
+          "step_id": "S1",
+          "status": "needs_review",
+          "reason": "在 450 px 双栏实际显示下，S1 末帧的分子行显示为 z sin z = [z²]（提出公因子）（z²/6）：橙色注记「提出公因子」正好落在括号内本应写「1 −」的位置，画面中看不到因子 1 与末尾的「+ ⋯」，而同一动画 frame:4 的同一行清楚显示为 z²(1 − z²/6 + ⋯)。因此本帧呈现的括号内容与字幕 S1、替代文字「分子提出 z^2」所述的关键变形不符，该步的核心式子在所给尺寸下不可辨（究竟是被注记遮住还是漏写，仅凭该帧无法确定）。",
+          "problem": "分子行括号内缺少/被遮挡「1 −」，只看到注记与 z²/6，z sin z 的展开在画面中不完整。",
+          "action": "核对该行源码：若括号内本就有 1 − z²/6 + ⋯，请把「提出公因子」注记移到该行上方或右侧、不要用不透明底色压住公式；若确实漏写，请在括号内补回 1 − z²/6 + ⋯，并保留 z² 的方框高亮。",
+          "expected": "z² 后括号内完整显示 1 − z²/6 + ⋯，注记不遮挡任何符号。"
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "在 450 px 双栏实际显示下，S1 末帧的分子行显示为 z sin z = [z²]（提出公因子）（z²/6）：橙色注记「提出公因子」正好落在括号内本应写「1 −」的位置，画面中看不到因子 1 与末尾的「+ ⋯」，而同一动画 frame:4 的同一行清楚显示为 z²(1 − z²/6 + ⋯)。因此本帧呈现的括号内容与字幕 S1、替代文字「分子提出 z^2」所述的关键变形不符，该步的核心式子在所给尺寸下不可辨（究竟是被注记遮住还是漏写，仅凭该帧无法确定）。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "遮挡或漏式疑虑",
+      "issue_summary": "留数计算S1“提出公因子”注记处看不见1−和+⋯，不能区分遮挡与漏写。",
+      "candidate_count": 1,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    },
+    {
+      "unit": "CH06-S03",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH06-S03/MR-1fda9406bb902afb68ef/result.json",
+      "id": "MR-1fda9406bb902afb68ef",
+      "kind": "animation",
+      "state": "needs_review",
+      "title": "曲线 $1+\\varphi/f$ 落在不含原点的圆内。",
+      "reason": "右侧 w 平面上、正实轴方向靠近开圆右端另有一个孤立的蓝色圆点：它既不落在蓝色曲线 1+φ(z)/f(z) 上，也不与 S2 中“圆心到曲线点”的蓝色虚线端点重合，且没有文字说明其身份。若它代表当前描点 w，则该位置看似已在 |w−1|=1 的圆边界附近，与图中要强调的严格不等式“轨迹始终落在开圆内”相冲突；若它只是坐标轴上的示例点/装饰标记，则无数学问题。仅凭三张步骤末态样本无法确定该点的绑定对象，故按疑点保留。",
+      "review_outcome": {
+        "status": "unverified",
+        "reasons": [
+          "右侧 w 平面上、正实轴方向靠近开圆右端另有一个孤立的蓝色圆点：它既不落在蓝色曲线 1+φ(z)/f(z) 上，也不与 S2 中“圆心到曲线点”的蓝色虚线端点重合，且没有文字说明其身份。若它代表当前描点 w，则该位置看似已在 |w−1|=1 的圆边界附近，与图中要强调的严格不等式“轨迹始终落在开圆内”相冲突；若它只是坐标轴上的示例点/装饰标记，则无数学问题。仅凭三张步骤末态样本无法确定该点的绑定对象，故按疑点保留。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "needs_review",
+          "reason": "画面中该圆以 1 为圆心、半径 1，其左端恰过原点，动画并明确标注“原点恰在圆周上”（|0−1|=1）。但本图的替代文字写作“原点在圆外”。若“圆”指开圆 |w−1|<1，则原点确实不在其中，二者可并存；若“圆”指圆周或闭圆，则“圆外”与画面标注“恰在圆周上”相冲突。该措辞关系到“曲线为何不绕原点”的关键（曲线严格落在开圆内、原点只是边界点），希望与画面口径统一，故保留为待核。"
+        },
+        {
+          "index": 2,
+          "state": "needs_review",
+          "reason": "右侧 w 平面上、正实轴方向靠近开圆右端另有一个孤立的蓝色圆点：它既不落在蓝色曲线 1+φ(z)/f(z) 上，也不与 S2 中“圆心到曲线点”的蓝色虚线端点重合，且没有文字说明其身份。若它代表当前描点 w，则该位置看似已在 |w−1|=1 的圆边界附近，与图中要强调的严格不等式“轨迹始终落在开圆内”相冲突；若它只是坐标轴上的示例点/装饰标记，则无数学问题。仅凭三张步骤末态样本无法确定该点的绑定对象，故按疑点保留。"
+        }
+      ],
+      "verdicts": [
+        {
+          "status": "needs_review",
+          "reason": "右侧 w 平面上、正实轴方向靠近开圆右端另有一个孤立的蓝色圆点：它既不落在蓝色曲线 1+φ(z)/f(z) 上，也不与 S2 中“圆心到曲线点”的蓝色虚线端点重合，且没有文字说明其身份。若它代表当前描点 w，则该位置看似已在 |w−1|=1 的圆边界附近，与图中要强调的严格不等式“轨迹始终落在开圆内”相冲突；若它只是坐标轴上的示例点/装饰标记，则无数学问题。仅凭三张步骤末态样本无法确定该点的绑定对象，故按疑点保留。",
+          "problem": "w 平面右端存在一个身份不明的蓝色圆点，可能与“曲线（当前点）始终严格位于 |w−1|<1 内”的图意不符。",
+          "action": "核对源码中该蓝点的绑定对象与坐标：若它表示曲线上的当前点 w，应把它放到蓝色曲线 1+φ/f 上并严格位于开圆内部（不要落在 |w−1|=1 上）；若它只是坐标轴或示例点的装饰标记，删除或加一句说明以免被读成曲线上的点。",
+          "expected": "w 平面上每个蓝色点都能对应到曲线上的 w 值或明确的标注对象，且都在 |w−1|<1 内部。"
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "右侧 w 平面上、正实轴方向靠近开圆右端另有一个孤立的蓝色圆点：它既不落在蓝色曲线 1+φ(z)/f(z) 上，也不与 S2 中“圆心到曲线点”的蓝色虚线端点重合，且没有文字说明其身份。若它代表当前描点 w，则该位置看似已在 |w−1|=1 的圆边界附近，与图中要强调的严格不等式“轨迹始终落在开圆内”相冲突；若它只是坐标轴上的示例点/装饰标记，则无数学问题。仅凭三张步骤末态样本无法确定该点的绑定对象，故按疑点保留。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "对象绑定疑虑",
+      "issue_summary": "儒歇定理右图孤立蓝点身份未说明，可能贴开圆边界；是否代表曲线当前点不确定。",
+      "candidate_count": 2,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    },
+    {
+      "unit": "CH07",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH07/MR-d18a6b3f789817bbc35a/result.json",
+      "id": "MR-d18a6b3f789817bbc35a",
+      "kind": "animation",
+      "state": "needs_review",
+      "title": "先排除 $a$ 附近的零点，再沿区域内的折线把“处处为零”传遍整个区域。",
+      "reason": "步骤 S2（20.466 s 末帧）中，a 外的红色去心圆盘、右侧 0<|z-a|<ρ 与 f(z)≠0、z_n→a、“n 充分大时必落入圆盘”以及红色“矛盾”与正文第 2、3 步一致，圆盘内原有的零点标记确已淡出，圆盘外只剩一个紫色零点标记。疑点：该标记的 z_n 标签在本画面上不可辨（同一动画 S1 末帧上 z_n 标签清楚可见），因此无法确认圆盘外这个标记是否就是与右侧“z_n→a”对应的那个点；若标签属实随圆盘内标记一并淡出，会把“z_n 迟早落入圆盘”这一矛盾的关键对象变得难以追踪，若只是过小/过淡，同属关键标签在 450 px 下不可辨。",
+      "review_outcome": {
+        "status": "unverified",
+        "reasons": [
+          "步骤 S2（20.466 s 末帧）中，a 外的红色去心圆盘、右侧 0<|z-a|<ρ 与 f(z)≠0、z_n→a、“n 充分大时必落入圆盘”以及红色“矛盾”与正文第 2、3 步一致，圆盘内原有的零点标记确已淡出，圆盘外只剩一个紫色零点标记。疑点：该标记的 z_n 标签在本画面上不可辨（同一动画 S1 末帧上 z_n 标签清楚可见），因此无法确认圆盘外这个标记是否就是与右侧“z_n→a”对应的那个点；若标签属实随圆盘内标记一并淡出，会把“z_n 迟早落入圆盘”这一矛盾的关键对象变得难以追踪，若只是过小/过淡，同属关键标签在 450 px 下不可辨。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "failed",
+          "reason": "ContractError: AttributeError: 'GeneratedScene' object has no attribute 'add_fixed_in_frame_mobjects'"
+        },
+        {
+          "index": 2,
+          "state": "needs_review",
+          "reason": "6.866 s 步骤 S1 末帧：蓝色区域 D、橙色点、紫色零点聚集、“f(z_n)=0”，以及右侧 f(z)=(z-a)^{m}\\varphi(z) 与 \\varphi(a)\\neq0 均与讲解一致，公式与上下标在该尺寸下可辨，未发现数学错误。疑点只在标签归属：橙色点 a 上并没有直接贴着“a”的标签，而“a∈D”这段文字紧挨在一个紫色零点标记的右侧，单看这一帧容易把某个 z_n 读成 a；同一残留标签在 S3、S4 画面中也贴着紫色标记出现。仅依据该步骤末态样本，不认证零点收拢的连续过程。"
+        },
+        {
+          "index": 3,
+          "state": "needs_review",
+          "reason": "步骤 S2（20.466 s 末帧）中，a 外的红色去心圆盘、右侧 0<|z-a|<ρ 与 f(z)≠0、z_n→a、“n 充分大时必落入圆盘”以及红色“矛盾”与正文第 2、3 步一致，圆盘内原有的零点标记确已淡出，圆盘外只剩一个紫色零点标记。疑点：该标记的 z_n 标签在本画面上不可辨（同一动画 S1 末帧上 z_n 标签清楚可见），因此无法确认圆盘外这个标记是否就是与右侧“z_n→a”对应的那个点；若标签属实随圆盘内标记一并淡出，会把“z_n 迟早落入圆盘”这一矛盾的关键对象变得难以追踪，若只是过小/过淡，同属关键标签在 450 px 下不可辨。"
+        }
+      ],
+      "verdicts": [
+        {
+          "status": "needs_review",
+          "reason": "步骤 S2（20.466 s 末帧）中，a 外的红色去心圆盘、右侧 0<|z-a|<ρ 与 f(z)≠0、z_n→a、“n 充分大时必落入圆盘”以及红色“矛盾”与正文第 2、3 步一致，圆盘内原有的零点标记确已淡出，圆盘外只剩一个紫色零点标记。疑点：该标记的 z_n 标签在本画面上不可辨（同一动画 S1 末帧上 z_n 标签清楚可见），因此无法确认圆盘外这个标记是否就是与右侧“z_n→a”对应的那个点；若标签属实随圆盘内标记一并淡出，会把“z_n 迟早落入圆盘”这一矛盾的关键对象变得难以追踪，若只是过小/过淡，同属关键标签在 450 px 下不可辨。",
+          "action": "请核对源码：在第 2 步末帧保留（或在过小时放大/加深）圆盘外那个零点标记的 “z_n” 标签，并让该标记明确落在圆盘之外，使它与右侧 z_n→a、“n 充分大时必落入圆盘”的说明一一对应；这一改动不涉及任何数学内容。"
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "步骤 S2（20.466 s 末帧）中，a 外的红色去心圆盘、右侧 0<|z-a|<ρ 与 f(z)≠0、z_n→a、“n 充分大时必落入圆盘”以及红色“矛盾”与正文第 2、3 步一致，圆盘内原有的零点标记确已淡出，圆盘外只剩一个紫色零点标记。疑点：该标记的 z_n 标签在本画面上不可辨（同一动画 S1 末帧上 z_n 标签清楚可见），因此无法确认圆盘外这个标记是否就是与右侧“z_n→a”对应的那个点；若标签属实随圆盘内标记一并淡出，会把“z_n 迟早落入圆盘”这一矛盾的关键对象变得难以追踪，若只是过小/过淡，同属关键标签在 450 px 下不可辨。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "关键标签疑虑",
+      "issue_summary": "恒等定理S2圆盘外零点z_n标签不可辨，无法跟踪与z_n→a的对应。",
+      "candidate_count": 3,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    },
+    {
+      "unit": "CH08-S01",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH08-S01/MR-c398e4b7afc852f93af7/result.json",
+      "id": "MR-c398e4b7afc852f93af7",
+      "kind": "animation",
+      "state": "needs_review",
+      "title": "切线经变换后绕 $z_0$ 转动 $\\arg f'(z_0)$，换曲线结果不变。",
+      "reason": "S4 末态中绿色与淡绿色弧线同时出现，但 450px 下较显眼的绿色弧线似乎落在上一组切线（π/4 与 3π/4）之间，而 S3 新引入的 C'、C1' 切线夹角在红点下方；这与解说“绿色圆弧标出当前两条切线的夹角，淡绿色圆弧标出前一组切线同样大小的夹角”可能相反。若属实，属于颜色/归属绑定错误，但静态样本不足以完全确认。",
+      "review_outcome": {
+        "status": "unverified",
+        "reasons": [
+          "S4 末态中绿色与淡绿色弧线同时出现，但 450px 下较显眼的绿色弧线似乎落在上一组切线（π/4 与 3π/4）之间，而 S3 新引入的 C'、C1' 切线夹角在红点下方；这与解说“绿色圆弧标出当前两条切线的夹角，淡绿色圆弧标出前一组切线同样大小的夹角”可能相反。若属实，属于颜色/归属绑定错误，但静态样本不足以完全确认。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "failed",
+          "reason": "ContractError: TypeError: Mobject.__init__() got an unexpected keyword argument 'tips'"
+        },
+        {
+          "index": 2,
+          "state": "needs_review",
+          "reason": "在第 2 帧（S2 末帧，约 10.27 s）和第 3 帧（S3 末帧，约 16.97 s）中，原曲线 C 与像曲线 C1 缺少文字标签，只能靠蓝、橙颜色区分；第 2 帧可见橙色曲线与两条切线箭头，但原曲线 C 未以明确的蓝色曲线形式显示，读者难以对照“曲线 C 的切线”与“像曲线 C1 的切线”。第 1 帧也只标注了“z 平面”，叠放后的 w 平面/坐标系未标注。颜色不能替代标签，这会影响对“换曲线后方向差不变”的图文对应。"
+        },
+        {
+          "index": 3,
+          "state": "needs_review",
+          "reason": "S4 末态中绿色与淡绿色弧线同时出现，但 450px 下较显眼的绿色弧线似乎落在上一组切线（π/4 与 3π/4）之间，而 S3 新引入的 C'、C1' 切线夹角在红点下方；这与解说“绿色圆弧标出当前两条切线的夹角，淡绿色圆弧标出前一组切线同样大小的夹角”可能相反。若属实，属于颜色/归属绑定错误，但静态样本不足以完全确认。"
+        }
+      ],
+      "verdicts": [
+        {
+          "status": "needs_review",
+          "reason": "S4 末态中绿色与淡绿色弧线同时出现，但 450px 下较显眼的绿色弧线似乎落在上一组切线（π/4 与 3π/4）之间，而 S3 新引入的 C'、C1' 切线夹角在红点下方；这与解说“绿色圆弧标出当前两条切线的夹角，淡绿色圆弧标出前一组切线同样大小的夹角”可能相反。若属实，属于颜色/归属绑定错误，但静态样本不足以完全确认。",
+          "problem": "绿色/淡绿色弧线的归属与解说可能相反。",
+          "action": "核对源码中 S4 弧线的绑定：若绿色弧线当前绑定到上一组切线，应交换两弧颜色或重新绑定，使绿色弧线对应 S3 的当前 C'、C1' 夹角，淡绿色弧线对应上一组；这仅改变颜色/归属，不改变 π/2 的数学内容。",
+          "evidence": [
+            "frame:4"
+          ]
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "S4 末态中绿色与淡绿色弧线同时出现，但 450px 下较显眼的绿色弧线似乎落在上一组切线（π/4 与 3π/4）之间，而 S3 新引入的 C'、C1' 切线夹角在红点下方；这与解说“绿色圆弧标出当前两条切线的夹角，淡绿色圆弧标出前一组切线同样大小的夹角”可能相反。若属实，属于颜色/归属绑定错误，但静态样本不足以完全确认。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "颜色归属疑虑",
+      "issue_summary": "保角动画S4当前/上一组夹角的深浅绿色弧线可能反绑，静态样本不足。",
+      "candidate_count": 3,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    },
+    {
+      "unit": "CH08-S04",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH08-S04/MR-c07b5b25f150e97b6808/result.json",
+      "id": "MR-c07b5b25f150e97b6808",
+      "kind": "animation",
+      "state": "needs_review",
+      "title": "$w=z^2$ 把张角为 $\\pi/2$ 的角域张开成上半平面：辐角被加倍，两条边界射线拼成实轴。",
+      "reason": "疑点定位在 frame:4 右图的填充区域。左图角域已张到约 3π/2（蓝色射线 arg z=π/4 与紫色射线 arg z=5π/4 都落在阴影内），其像的辐角范围为 (0,3π)，作为点集应覆盖整个半径 R² 的圆盘；而右图看起来仍只填出实轴以上的半圆盘，实轴以下既没有像区域，也没有出现指向下方（由 arg z∈(π/2,3π/2) 的射线，例如 arg z=3π/4 映到 arg w=3π/2）的像射线，右图像区域与左图当前张角不相称。仅凭单帧无法确定这是有意保留参照像区还是作画遗漏，故记 needs_review，请制作方核对源码。",
+      "review_outcome": {
+        "status": "unverified",
+        "reasons": [
+          "疑点定位在 frame:4 右图的填充区域。左图角域已张到约 3π/2（蓝色射线 arg z=π/4 与紫色射线 arg z=5π/4 都落在阴影内），其像的辐角范围为 (0,3π)，作为点集应覆盖整个半径 R² 的圆盘；而右图看起来仍只填出实轴以上的半圆盘，实轴以下既没有像区域，也没有出现指向下方（由 arg z∈(π/2,3π/2) 的射线，例如 arg z=3π/4 映到 arg w=3π/2）的像射线，右图像区域与左图当前张角不相称。仅凭单帧无法确定这是有意保留参照像区还是作画遗漏，故记 needs_review，请制作方核对源码。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "needs_review",
+          "reason": "疑点定位在 frame:4 右图的填充区域。左图角域已张到约 3π/2（蓝色射线 arg z=π/4 与紫色射线 arg z=5π/4 都落在阴影内），其像的辐角范围为 (0,3π)，作为点集应覆盖整个半径 R² 的圆盘；而右图看起来仍只填出实轴以上的半圆盘，实轴以下既没有像区域，也没有出现指向下方（由 arg z∈(π/2,3π/2) 的射线，例如 arg z=3π/4 映到 arg w=3π/2）的像射线，右图像区域与左图当前张角不相称。仅凭单帧无法确定这是有意保留参照像区还是作画遗漏，故记 needs_review，请制作方核对源码。"
+        }
+      ],
+      "verdicts": [
+        {
+          "target": "frame:4（S4，步骤结束前 29.866 s 样本）右图像区域",
+          "status": "needs_review",
+          "reason": "疑点定位在 frame:4 右图的填充区域。左图角域已张到约 3π/2（蓝色射线 arg z=π/4 与紫色射线 arg z=5π/4 都落在阴影内），其像的辐角范围为 (0,3π)，作为点集应覆盖整个半径 R² 的圆盘；而右图看起来仍只填出实轴以上的半圆盘，实轴以下既没有像区域，也没有出现指向下方（由 arg z∈(π/2,3π/2) 的射线，例如 arg z=3π/4 映到 arg w=3π/2）的像射线，右图像区域与左图当前张角不相称。仅凭单帧无法确定这是有意保留参照像区还是作画遗漏，故记 needs_review，请制作方核对源码。"
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "疑点定位在 frame:4 右图的填充区域。左图角域已张到约 3π/2（蓝色射线 arg z=π/4 与紫色射线 arg z=5π/4 都落在阴影内），其像的辐角范围为 (0,3π)，作为点集应覆盖整个半径 R² 的圆盘；而右图看起来仍只填出实轴以上的半圆盘，实轴以下既没有像区域，也没有出现指向下方（由 arg z∈(π/2,3π/2) 的射线，例如 arg z=3π/4 映到 arg w=3π/2）的像射线，右图像区域与左图当前张角不相称。仅凭单帧无法确定这是有意保留参照像区还是作画遗漏，故记 needs_review，请制作方核对源码。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "图形范围疑虑（无action字段）",
+      "issue_summary": "幂映射S4左角域约3π/2，右图似仍为上半圆，可能是参照或遗漏，待核。",
+      "candidate_count": 1,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    },
+    {
+      "unit": "CH08-S05",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH08-S05/MR-87ddc8b8267cc66dbba1/result.json",
+      "id": "MR-87ddc8b8267cc66dbba1",
+      "kind": "animation",
+      "state": "needs_review",
+      "title": "截断点滑向无穷远，三角形角的和给出 $\\beta_k'+\\beta_k''+(-\\beta_k)=1$，两个因子合并为 $(z-a_k)^{\\beta_k-1}$。",
+      "reason": "步骤 S2 结束前样本（11.766 s）：三角形 A_k^*A_k′A_k″ 的三处角弧与角度标签已淡入，公式区同时给出 β_k′π+β_k″π+(-β_k)π=π，与字幕 S2、正文一致。但图内 A_k′、A_k″ 两处的角标签字号明显小于公式区，且紧贴角弧与射线，在 450 CSS px 的双栏显示尺寸下，其首字母无法可靠辨认究竟是 β 还是 α（上下标 β_k′、β_k″ 也偏小），而公式区同一关系用的是 β；S3–S5 样本中这两个图内标签仍然存在。此处只是本人对该尺寸下小号图内标签的识读限制、不能据此断定标错，故不写 action；若制作者自查发现图内确为 α，则应改为 β 以与字幕和公式区统一。",
+      "review_outcome": {
+        "status": "unverified",
+        "reasons": [
+          "步骤 S2 结束前样本（11.766 s）：三角形 A_k^*A_k′A_k″ 的三处角弧与角度标签已淡入，公式区同时给出 β_k′π+β_k″π+(-β_k)π=π，与字幕 S2、正文一致。但图内 A_k′、A_k″ 两处的角标签字号明显小于公式区，且紧贴角弧与射线，在 450 CSS px 的双栏显示尺寸下，其首字母无法可靠辨认究竟是 β 还是 α（上下标 β_k′、β_k″ 也偏小），而公式区同一关系用的是 β；S3–S5 样本中这两个图内标签仍然存在。此处只是本人对该尺寸下小号图内标签的识读限制、不能据此断定标错，故不写 action；若制作者自查发现图内确为 α，则应改为 β 以与字幕和公式区统一。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "needs_review",
+          "reason": "CapabilityError: target-size media browser failed: ts,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-dev-shm-usage --user-data-dir=/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/recovery-scratch/playwright_chromiumdev_profile-YOwRL9 --remote-debugging-pipe --no-startup-window',\n    '  - <launched> pid=133708',\n    '  - [pid=133708] <gracefully close start>',\n    '  - [pid=133708] <kill>',\n    '  - [pid=133708] <will force kill>',\n    '  - [pid=133708] <process did exit: exitCode=null, signal=SIGTRAP>',\n    '  - [pid=133708] starting temporary directories cleanup',\n    '  - [pid=133708] finished temporary directories cleanup',\n    '  - [pid=133708] <gracefully close end>'\n  ]\n}\n"
+        }
+      ],
+      "verdicts": [
+        {
+          "status": "needs_review",
+          "reason": "步骤 S2 结束前样本（11.766 s）：三角形 A_k^*A_k′A_k″ 的三处角弧与角度标签已淡入，公式区同时给出 β_k′π+β_k″π+(-β_k)π=π，与字幕 S2、正文一致。但图内 A_k′、A_k″ 两处的角标签字号明显小于公式区，且紧贴角弧与射线，在 450 CSS px 的双栏显示尺寸下，其首字母无法可靠辨认究竟是 β 还是 α（上下标 β_k′、β_k″ 也偏小），而公式区同一关系用的是 β；S3–S5 样本中这两个图内标签仍然存在。此处只是本人对该尺寸下小号图内标签的识读限制、不能据此断定标错，故不写 action；若制作者自查发现图内确为 α，则应改为 β 以与字幕和公式区统一。"
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "步骤 S2 结束前样本（11.766 s）：三角形 A_k^*A_k′A_k″ 的三处角弧与角度标签已淡入，公式区同时给出 β_k′π+β_k″π+(-β_k)π=π，与字幕 S2、正文一致。但图内 A_k′、A_k″ 两处的角标签字号明显小于公式区，且紧贴角弧与射线，在 450 CSS px 的双栏显示尺寸下，其首字母无法可靠辨认究竟是 β 还是 α（上下标 β_k′、β_k″ 也偏小），而公式区同一关系用的是 β；S3–S5 样本中这两个图内标签仍然存在。此处只是本人对该尺寸下小号图内标签的识读限制、不能据此断定标错，故不写 action；若制作者自查发现图内确为 α，则应改为 β 以与字幕和公式区统一。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "纯识读不确定（无action）",
+      "issue_summary": "Schwarz–Christoffel角标签β/α在450px下难辨；明确不能断言标错。",
+      "candidate_count": 1,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    },
+    {
+      "unit": "CH08-S06",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH08-S06/MR-a42e02fe98d6f638beb8/result.json",
+      "id": "MR-a42e02fe98d6f638beb8",
+      "kind": "drawing",
+      "state": "needs_review",
+      "title": "平行板电容器边缘场的等位线与电力线。",
+      "reason": "同一画面里，橙色虚线电力线只出现在板端附近及其右侧，板间远离板端的左侧均匀区在可见范围内看不到任何虚线电力线；图中也只有板距 $d$ 一处注记，没有按需求文字“标出……远离边缘的均匀区域”标出该区域。于是“远离边缘处电力线接近直的不变方向”这一点只能由左端实线水平平行间接推断，无法从图上直接核对（等位线部分没有问题）。",
+      "review_outcome": {
+        "status": "unverified",
+        "reasons": [
+          "同一画面里，橙色虚线电力线只出现在板端附近及其右侧，板间远离板端的左侧均匀区在可见范围内看不到任何虚线电力线；图中也只有板距 $d$ 一处注记，没有按需求文字“标出……远离边缘的均匀区域”标出该区域。于是“远离边缘处电力线接近直的不变方向”这一点只能由左端实线水平平行间接推断，无法从图上直接核对（等位线部分没有问题）。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "needs_review",
+          "reason": "同一画面里，橙色虚线电力线只出现在板端附近及其右侧，板间远离板端的左侧均匀区在可见范围内看不到任何虚线电力线；图中也只有板距 $d$ 一处注记，没有按需求文字“标出……远离边缘的均匀区域”标出该区域。于是“远离边缘处电力线接近直的不变方向”这一点只能由左端实线水平平行间接推断，无法从图上直接核对（等位线部分没有问题）。"
+        }
+      ],
+      "verdicts": [
+        {
+          "status": "needs_review",
+          "reason": "同一画面里，橙色虚线电力线只出现在板端附近及其右侧，板间远离板端的左侧均匀区在可见范围内看不到任何虚线电力线；图中也只有板距 $d$ 一处注记，没有按需求文字“标出……远离边缘的均匀区域”标出该区域。于是“远离边缘处电力线接近直的不变方向”这一点只能由左端实线水平平行间接推断，无法从图上直接核对（等位线部分没有问题）。",
+          "action": "若核对源码确认板间左侧确实没有画电力线，可补画 $r$ 很小（如 $r=0.05,0.1,0.2$）的虚线电力线，它们在板间左端应接近竖直，属同一参数方程的另一些取样，不改变数学内容；如需照需求标注均匀区，加一处短注记即可。"
+        }
+      ],
+      "review_problems": [
+        {
+          "target_artifact_kind": "content",
+          "status": "fail",
+          "problem": "正文写“设两板距离为 $2d$”，但紧随其后的变换 $z=\\frac{d}{\\pi}(w+\\ln w)$ 与参数方程 $x=\\frac{d}{\\pi}(r\\cos\\theta+\\ln r),\\ y=\\frac{d}{\\pi}(r\\sin\\theta+\\theta)$ 在 $\\theta=0$ 与 $\\theta=\\pi$ 处分别给出 $y=0$ 与 $y=d$，即两板所在直线相距 $d$。",
+          "reason": "把边界 $\\theta=0,\\pi$ 代入 $y$ 的表达式立刻得到板距为 $d$，与句中的 $2d$ 相差因子 2；图中标注的板距也是 $d$，与公式一致，因此句中的“$2d$”与同一段落的公式、插图三者不自洽（图中标注本身与所给变换相符，不是图的问题）。",
+          "action": "统一这一处记号：若沿用所给变换与参数方程，把“两板距离为 $2d$”改为“两板距离为 $d$”；若确实要求板距为 $2d$，则须把变换及参数方程中的系数 $d/\\pi$ 一并改为 $2d/\\pi$，并把图中板距标签同步改为 $2d$，不可只改其中一处。"
+        }
+      ],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "同一画面里，橙色虚线电力线只出现在板端附近及其右侧，板间远离板端的左侧均匀区在可见范围内看不到任何虚线电力线；图中也只有板距 $d$ 一处注记，没有按需求文字“标出……远离边缘的均匀区域”标出该区域。于是“远离边缘处电力线接近直的不变方向”这一点只能由左端实线水平平行间接推断，无法从图上直接核对（等位线部分没有问题）。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "需求覆盖疑虑",
+      "issue_summary": "平行板图左侧均匀区看不到虚线电力线且未标均匀区；可按原参数补样本/短注。",
+      "candidate_count": 1,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    },
+    {
+      "unit": "CH09-S01",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH09-S01/MR-fbc686f9341cb0564ea2/result.json",
+      "id": "MR-fbc686f9341cb0564ea2",
+      "kind": "animation",
+      "state": "needs_review",
+      "title": "换元 $x=\\sigma t$ 的两处因子合并为 $\\sigma^{-(\\alpha+1)}$。",
+      "reason": "在 S2（frame:2）步骤结束前画面中，t 轴上的蓝色 dt 双向标位于 t1–t2 之间，而 x 轴上的橙色 dx 双向标位于 x2–x3 之间；画面已有的 t1↔x1、t2↔x2 连线表明与 dt 对应的微分间隔应是 x1–x2，因此当前 dx 标注位置与 dt 不处于同一对应区间，可能影响“对应短标长度比较”的理解。该疑点可定位到具体画面对象，改法明确且不改变数学内容。",
+      "review_outcome": {
+        "status": "unverified",
+        "reasons": [
+          "在 S2（frame:2）步骤结束前画面中，t 轴上的蓝色 dt 双向标位于 t1–t2 之间，而 x 轴上的橙色 dx 双向标位于 x2–x3 之间；画面已有的 t1↔x1、t2↔x2 连线表明与 dt 对应的微分间隔应是 x1–x2，因此当前 dx 标注位置与 dt 不处于同一对应区间，可能影响“对应短标长度比较”的理解。该疑点可定位到具体画面对象，改法明确且不改变数学内容。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "needs_review",
+          "reason": "第2步结束前画面左下角显示的关系式与换元 $x=\\sigma t$ 不符：可见左侧为 $\\sigma\\,\\mathrm{d}t$，右侧为 $\\mathrm{d}x/\\sigma$（或带有对应符号），若按等式读，相当于得到 $\\mathrm{d}x=\\sigma^2\\mathrm{d}t$。但由 $x=\\sigma t$ 应得 $\\mathrm{d}x=\\sigma\\,\\mathrm{d}t$，即 $\\mathrm{d}t=\\mathrm{d}x/\\sigma$ 或 $\\sigma\\,\\mathrm{d}t=\\mathrm{d}x$；画面公式与 S2 两个双箭头长度（$\\sigma=2$ 时 $\\mathrm{d}x$ 短标约为 $\\mathrm{d}t$ 的2倍）及字幕 S2 的 $\\mathrm{d}t=\\mathrm{d}x/\\sigma$ 均矛盾。该式在 S3–S7 中继续保留，会持续展示错误微分关系。"
+        },
+        {
+          "index": 2,
+          "state": "needs_review",
+          "reason": "CapabilityError: target-size media browser failed: ts,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-dev-shm-usage --user-data-dir=/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/recovery-scratch/playwright_chromiumdev_profile-W4FG32 --remote-debugging-pipe --no-startup-window',\n    '  - <launched> pid=138801',\n    '  - [pid=138801] <gracefully close start>',\n    '  - [pid=138801] <kill>',\n    '  - [pid=138801] <will force kill>',\n    '  - [pid=138801] <process did exit: exitCode=null, signal=SIGTRAP>',\n    '  - [pid=138801] starting temporary directories cleanup',\n    '  - [pid=138801] finished temporary directories cleanup',\n    '  - [pid=138801] <gracefully close end>'\n  ]\n}\n"
+        }
+      ],
+      "verdicts": [
+        {
+          "status": "needs_review",
+          "reason": "在 S2（frame:2）步骤结束前画面中，t 轴上的蓝色 dt 双向标位于 t1–t2 之间，而 x 轴上的橙色 dx 双向标位于 x2–x3 之间；画面已有的 t1↔x1、t2↔x2 连线表明与 dt 对应的微分间隔应是 x1–x2，因此当前 dx 标注位置与 dt 不处于同一对应区间，可能影响“对应短标长度比较”的理解。该疑点可定位到具体画面对象，改法明确且不改变数学内容。",
+          "action": "将 S2 中 x 轴上的红色 dx 双向标及其标签从 x2–x3 间隔上方移到 x1–x2 间隔上方，使其与 t 轴上的 dt 标注相对应，便于直接比较 σ 倍长度关系。"
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "在 S2（frame:2）步骤结束前画面中，t 轴上的蓝色 dt 双向标位于 t1–t2 之间，而 x 轴上的橙色 dx 双向标位于 x2–x3 之间；画面已有的 t1↔x1、t2↔x2 连线表明与 dt 对应的微分间隔应是 x1–x2，因此当前 dx 标注位置与 dt 不处于同一对应区间，可能影响“对应短标长度比较”的理解。该疑点可定位到具体画面对象，改法明确且不改变数学内容。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "具体可定位，后经人工修正",
+      "issue_summary": "换元S2 dt在t1–t2而dx在x2–x3；应对应x1–x2，剩1候选未自动路由。",
+      "candidate_count": 2,
+      "manual_fix_scope": "独立人工产物和交付副本，原run不变；未模型复审"
+    },
+    {
+      "unit": "CH09-S02-SS03",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH09-S02-SS03/MR-526479f92fdf2aadb031/result.json",
+      "id": "MR-526479f92fdf2aadb031",
+      "kind": "drawing",
+      "state": "failed",
+      "title": "拉氏变换解初值问题的流程：变换—解代数方程—逆变换。",
+      "reason": "MediaCodeGenerationError: ModelCallFailed: 模型请求没拿到可用响应（bad-json: Expecting value: line 1 column 1 (char 0); response_record=/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/model-responses/98ac00194392402c8a441da5dc65df6f.json；尝试 1 次，执行次数已持久化）。数据侧不许把这类情况当成'没问题'。",
+      "review_outcome": null,
+      "attempts": [
+        {
+          "index": 1,
+          "state": "failed",
+          "reason": "MediaCodeGenerationError: ModelCallFailed: 模型请求没拿到可用响应（bad-json: Expecting value: line 1 column 1 (char 0); response_record=/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/model-responses/98ac00194392402c8a441da5dc65df6f.json；尝试 1 次，执行次数已持久化）。数据侧不许把这类情况当成'没问题'。"
+        }
+      ],
+      "verdicts": [],
+      "review_problems": null,
+      "issues": null,
+      "repair_tickets": [],
+      "inventory_classification": "生成/协议失败，无数学判词",
+      "issue_summary": "拉氏初值流程图响应可见text为空，仅reasoning，未生成PNG；不是length或已证实网络失败。",
+      "candidate_count": 1,
+      "manual_fix_scope": "独立人工产物和交付副本，原run不变；未模型复审"
+    },
+    {
+      "unit": "CH09-S02-SS10",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH09-S02-SS10/MR-a16d1a60e6fb6bf9328c/result.json",
+      "id": "MR-a16d1a60e6fb6bf9328c",
+      "kind": "animation",
+      "state": "needs_review",
+      "title": "卷积：翻转、平移、乘积、积分；在拉氏变换中积分区间收缩为 $[0,t]$。",
+      "reason": "步骤 S5 结束前画面：上方保留一般定义式 (f*g)(t)=∫_{-∞}^{+∞}f(t−ξ)g(ξ)dξ，下方给出 ∫_0^t f(t−τ)g(τ)dτ 并注明“积分变量 τ 与图中 ξ 同义”，橙色阴影限制在 0≤ξ≤t，这些均正确且可辨。疑点在左侧 ξ<0 的灰底区域标注“此处两函数均为零”：按本节的设定，f、g 只是各自自变量为负时为零，故在 ξ<0 上能断定的只是 g(ξ)=0（被积函数为零）；f(t−ξ) 只在 ξ>t 时为零，在 ξ<0 处是否为零取决于所取例子，一般不为零。该标注把只对 g 成立的条件写成“两函数”都为零，会让人误以为 f 的因果性也蕴含 ξ<0 处 f(t−ξ)=0，与同帧字幕“f(t−ξ) 只在 ξ≤t 非零”的表述不吻合。这是可定位到具体画面对象的文字与条件表述疑点，故记为 needs_review。",
+      "review_outcome": {
+        "status": "unverified",
+        "reasons": [
+          "步骤 S5 结束前画面：上方保留一般定义式 (f*g)(t)=∫_{-∞}^{+∞}f(t−ξ)g(ξ)dξ，下方给出 ∫_0^t f(t−τ)g(τ)dτ 并注明“积分变量 τ 与图中 ξ 同义”，橙色阴影限制在 0≤ξ≤t，这些均正确且可辨。疑点在左侧 ξ<0 的灰底区域标注“此处两函数均为零”：按本节的设定，f、g 只是各自自变量为负时为零，故在 ξ<0 上能断定的只是 g(ξ)=0（被积函数为零）；f(t−ξ) 只在 ξ>t 时为零，在 ξ<0 处是否为零取决于所取例子，一般不为零。该标注把只对 g 成立的条件写成“两函数”都为零，会让人误以为 f 的因果性也蕴含 ξ<0 处 f(t−ξ)=0，与同帧字幕“f(t−ξ) 只在 ξ≤t 非零”的表述不吻合。这是可定位到具体画面对象的文字与条件表述疑点，故记为 needs_review。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "needs_review",
+          "reason": "所见疑点（同一 t 下“上方阴影面积”与“下方 (f*g)(t) 曲线读数”的对应）：S3 末帧上方橙色乘积鼓包还有一定宽度，而本帧（t≈1.6，24.266 s）上方橙色阴影几乎缩成贴轴的细条，同时下方面板绿色 (f*g)(t) 在 t=1.6 处的描点仍接近其峰值；按卷积含义，同一 t 下被涂出的乘积面积就是该 t 处下方曲线的纵值，图中两者的量级落差偏大，疑为乘积曲线/阴影未随当时 f(t−ξ) 与 g(ξ) 的实际重叠区间重画，或上下两面板不同步。因静态末帧无法量出准确面积比，尚不能确认为数学错误，故保留为待核。"
+        },
+        {
+          "index": 2,
+          "state": "needs_review",
+          "reason": "步骤 S5 结束前画面：上方保留一般定义式 (f*g)(t)=∫_{-∞}^{+∞}f(t−ξ)g(ξ)dξ，下方给出 ∫_0^t f(t−τ)g(τ)dτ 并注明“积分变量 τ 与图中 ξ 同义”，橙色阴影限制在 0≤ξ≤t，这些均正确且可辨。疑点在左侧 ξ<0 的灰底区域标注“此处两函数均为零”：按本节的设定，f、g 只是各自自变量为负时为零，故在 ξ<0 上能断定的只是 g(ξ)=0（被积函数为零）；f(t−ξ) 只在 ξ>t 时为零，在 ξ<0 处是否为零取决于所取例子，一般不为零。该标注把只对 g 成立的条件写成“两函数”都为零，会让人误以为 f 的因果性也蕴含 ξ<0 处 f(t−ξ)=0，与同帧字幕“f(t−ξ) 只在 ξ≤t 非零”的表述不吻合。这是可定位到具体画面对象的文字与条件表述疑点，故记为 needs_review。"
+        }
+      ],
+      "verdicts": [
+        {
+          "frame": "frame:5",
+          "step": "S5",
+          "status": "needs_review",
+          "reason": "步骤 S5 结束前画面：上方保留一般定义式 (f*g)(t)=∫_{-∞}^{+∞}f(t−ξ)g(ξ)dξ，下方给出 ∫_0^t f(t−τ)g(τ)dτ 并注明“积分变量 τ 与图中 ξ 同义”，橙色阴影限制在 0≤ξ≤t，这些均正确且可辨。疑点在左侧 ξ<0 的灰底区域标注“此处两函数均为零”：按本节的设定，f、g 只是各自自变量为负时为零，故在 ξ<0 上能断定的只是 g(ξ)=0（被积函数为零）；f(t−ξ) 只在 ξ>t 时为零，在 ξ<0 处是否为零取决于所取例子，一般不为零。该标注把只对 g 成立的条件写成“两函数”都为零，会让人误以为 f 的因果性也蕴含 ξ<0 处 f(t−ξ)=0，与同帧字幕“f(t−ξ) 只在 ξ≤t 非零”的表述不吻合。这是可定位到具体画面对象的文字与条件表述疑点，故记为 needs_review。",
+          "problem": "ξ<0 灰底区域文字“此处两函数均为零”把 g(ξ)=0 与 f(t−ξ)=0 混为一谈，后者不是该条件的推论。",
+          "action": "把该灰底区域文字改为“此处 g(ξ)=0，被积函数为零”（或等价说法）；同时核对本帧例题中 f(t−ξ) 在 ξ<0 是否确为零，若不为零则让蓝色 f(t−ξ) 曲线按实际支撑延伸进入 ξ<0 区域，橙色阴影仍只保留在 0≤ξ≤t。",
+          "expected": "标注只说明 g(ξ)=0（故被积函数为零），蓝色曲线按其真实非零范围绘制，与“乘积只在 0≤ξ≤t 非零、积分收缩为 ∫_0^t”这一结论一致。"
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "步骤 S5 结束前画面：上方保留一般定义式 (f*g)(t)=∫_{-∞}^{+∞}f(t−ξ)g(ξ)dξ，下方给出 ∫_0^t f(t−τ)g(τ)dτ 并注明“积分变量 τ 与图中 ξ 同义”，橙色阴影限制在 0≤ξ≤t，这些均正确且可辨。疑点在左侧 ξ<0 的灰底区域标注“此处两函数均为零”：按本节的设定，f、g 只是各自自变量为负时为零，故在 ξ<0 上能断定的只是 g(ξ)=0（被积函数为零）；f(t−ξ) 只在 ξ>t 时为零，在 ξ<0 处是否为零取决于所取例子，一般不为零。该标注把只对 g 成立的条件写成“两函数”都为零，会让人误以为 f 的因果性也蕴含 ξ<0 处 f(t−ξ)=0，与同帧字幕“f(t−ξ) 只在 ξ≤t 非零”的表述不吻合。这是可定位到具体画面对象的文字与条件表述疑点，故记为 needs_review。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "条件表述疑虑",
+      "issue_summary": "卷积S5将ξ<0写成“两函数均为零”，只能由因果性推出g(ξ)=0，需分函数自变量。",
+      "candidate_count": 2,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    },
+    {
+      "unit": "CH09-S03-SS01",
+      "path": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/media/CH09-S03-SS01/MR-4bb16a66d5aebf7cb48d/result.json",
+      "id": "MR-4bb16a66d5aebf7cb48d",
+      "kind": "drawing",
+      "state": "needs_review",
+      "title": "部分分式法：分解的两种写法与逆变换公式的对应。",
+      "reason": "橙框第二行的分母写成一般指数 $(p^2+bp+c)^s$，右侧却只列出 $\\mathrm{e}^{\\alpha t}\\cos\\beta t$ 与 $\\mathrm{e}^{\\alpha t}\\sin\\beta t$ 两条本函数；当 $s\\ge2$ 时该项的逆变换还应含 $t$ 的幂次因子（同一小节的例17 给出 $\\mathrm{L}^{-1}[1/(p^2+a^2)^2]=(\\sin at-at\\cos at)/(2a^3)$，其中出现 $t\\cos at$），所以这行的“项—公式”对应在 $s\\ge2$ 时不精确；上方行①对一次因式显式给出了 $t^{s-1}/(s-1)!$ 因子，两行并排更显出这一处省略。所见疑点可定位到该分式与其右侧两条公式，具体对应关系尚需对照源码确认。",
+      "review_outcome": {
+        "status": "unverified",
+        "reasons": [
+          "橙框第二行的分母写成一般指数 $(p^2+bp+c)^s$，右侧却只列出 $\\mathrm{e}^{\\alpha t}\\cos\\beta t$ 与 $\\mathrm{e}^{\\alpha t}\\sin\\beta t$ 两条本函数；当 $s\\ge2$ 时该项的逆变换还应含 $t$ 的幂次因子（同一小节的例17 给出 $\\mathrm{L}^{-1}[1/(p^2+a^2)^2]=(\\sin at-at\\cos at)/(2a^3)$，其中出现 $t\\cos at$），所以这行的“项—公式”对应在 $s\\ge2$ 时不精确；上方行①对一次因式显式给出了 $t^{s-1}/(s-1)!$ 因子，两行并排更显出这一处省略。所见疑点可定位到该分式与其右侧两条公式，具体对应关系尚需对照源码确认。"
+        ],
+        "review_mode": "balanced",
+        "review_status": "completed"
+      },
+      "attempts": [
+        {
+          "index": 1,
+          "state": "needs_review",
+          "reason": "①行上方说明文字中的“$s=1,\\dots,m_k$”与“$a_k$”疑似以原始 LaTeX 源码形式显示（可见反斜杠与下划线），而非排版后的下标 $a_k$ 与省略号；该行是标注重零点需写足项数的关键标签，若真如此则关键记号显示不规范。"
+        },
+        {
+          "index": 2,
+          "state": "failed",
+          "reason": "KeyError: 'code'"
+        },
+        {
+          "index": 3,
+          "state": "needs_review",
+          "reason": "橙框第二行的分母写成一般指数 $(p^2+bp+c)^s$，右侧却只列出 $\\mathrm{e}^{\\alpha t}\\cos\\beta t$ 与 $\\mathrm{e}^{\\alpha t}\\sin\\beta t$ 两条本函数；当 $s\\ge2$ 时该项的逆变换还应含 $t$ 的幂次因子（同一小节的例17 给出 $\\mathrm{L}^{-1}[1/(p^2+a^2)^2]=(\\sin at-at\\cos at)/(2a^3)$，其中出现 $t\\cos at$），所以这行的“项—公式”对应在 $s\\ge2$ 时不精确；上方行①对一次因式显式给出了 $t^{s-1}/(s-1)!$ 因子，两行并排更显出这一处省略。所见疑点可定位到该分式与其右侧两条公式，具体对应关系尚需对照源码确认。"
+        }
+      ],
+      "verdicts": [
+        {
+          "frame": "frame:1",
+          "status": "needs_review",
+          "reason": "橙框第二行的分母写成一般指数 $(p^2+bp+c)^s$，右侧却只列出 $\\mathrm{e}^{\\alpha t}\\cos\\beta t$ 与 $\\mathrm{e}^{\\alpha t}\\sin\\beta t$ 两条本函数；当 $s\\ge2$ 时该项的逆变换还应含 $t$ 的幂次因子（同一小节的例17 给出 $\\mathrm{L}^{-1}[1/(p^2+a^2)^2]=(\\sin at-at\\cos at)/(2a^3)$，其中出现 $t\\cos at$），所以这行的“项—公式”对应在 $s\\ge2$ 时不精确；上方行①对一次因式显式给出了 $t^{s-1}/(s-1)!$ 因子，两行并排更显出这一处省略。所见疑点可定位到该分式与其右侧两条公式，具体对应关系尚需对照源码确认。",
+          "action": "若该行本意是说明 $s=1$ 时的配方—位移定理对应，把分母指数改成 $(p^2+bp+c)$；若要保持一般指数 $s$，在右侧补注“$s\\ge2$ 时还含 $t$ 的多项式因子”，二者都不改变已有数学内容。"
+        }
+      ],
+      "review_problems": [],
+      "issues": [
+        {
+          "code": "MEDIA_CRITERION_UNRESOLVED",
+          "stage": "figures",
+          "owner": "visual_planner",
+          "message": "橙框第二行的分母写成一般指数 $(p^2+bp+c)^s$，右侧却只列出 $\\mathrm{e}^{\\alpha t}\\cos\\beta t$ 与 $\\mathrm{e}^{\\alpha t}\\sin\\beta t$ 两条本函数；当 $s\\ge2$ 时该项的逆变换还应含 $t$ 的幂次因子（同一小节的例17 给出 $\\mathrm{L}^{-1}[1/(p^2+a^2)^2]=(\\sin at-at\\cos at)/(2a^3)$，其中出现 $t\\cos at$），所以这行的“项—公式”对应在 $s\\ge2$ 时不精确；上方行①对一次因式显式给出了 $t^{s-1}/(s-1)!$ 因子，两行并排更显出这一处省略。所见疑点可定位到该分式与其右侧两条公式，具体对应关系尚需对照源码确认。"
+        }
+      ],
+      "repair_tickets": [],
+      "inventory_classification": "公式适用范围疑虑",
+      "issue_summary": "部分分式二次因子一般幂s只对应e^{αt}cosβt/sinβt，s≥2的t多项式因子未说明。",
+      "candidate_count": 3,
+      "manual_fix_scope": "未发现本次人工交付对该媒体的内容修订"
+    }
+  ],
+  "problem_blocks": [
+    {
+      "id": "M01",
+      "problem": "长TMPDIR触发截图Chromium SIGTRAP。单变量对照150字节失败、25字节成功；底层断言/确切socket原因没有日志证明。最初18项都停在截图而非数学审核。",
+      "existing_fix_layer": "操作层：恢复进程换短/tmp路径后补审；没有重画已有成品。生产未改。",
+      "rules_to_decide": "是否规定媒体运行临时目录短路径、开跑前本地截图预检；截图失败只补证据、不得当数学错重制。",
+      "evidence": "concurrency-handoff/browser-tmpdir-diagnostic/result.json；运行报告20:51/22:55/23:31"
+    },
+    {
+      "id": "M02",
+      "problem": "截图stderr只保留末尾1500字符，导致当时FATAL根因行不在记录；现有证据只支持触发条件。",
+      "existing_fix_layer": "源码层未修；现有历史日志无法补造。",
+      "rules_to_decide": "是否保存完整stderr附件及简明末尾摘要；环境失败独立错误码。",
+      "evidence": "/home/aaatrucklrx/桌面/AI教学/AIforStudy-纯净版/src/aiforstudy/blocks/media/validation.py:339"
+    },
+    {
+      "id": "M03",
+      "problem": "1张流程图空输出：10334 completion tokens全为reasoning、text空、finish_reason=stop；一次调用后空串没进语法纠错，ModelCallFailed→generation_stopped。不能称运输/JSON额度耗尽。",
+      "existing_fix_layer": "产物层：本地Manim人工补图，标unverified/not_run；自动run仍failed，生产未修。",
+      "rules_to_decide": "空输出归哪类协议错误、使用哪类预算、是否允许有界恢复；不得据通用transport_failed认定网络原因。",
+      "evidence": "运行报告23:05/23:08；缺图记录；MR-526479f92fdf2aadb031/result.json"
+    },
+    {
+      "id": "M04",
+      "problem": "有明确action的needs_review没走补审返修：dx还有1候选；一次性入口_actionable_failures默认不纳入needs_review，生产恢复又有提前返回。相同状态在制作循环与恢复入口含义不同。",
+      "existing_fix_layer": "操作入口与生产恢复逻辑未修；dx仅人工副本修正且未模型复审。",
+      "rules_to_decide": "needs_review分“纯不确定”“可定位且action明确”；明确action是否消费剩余候选，所有入口遵守同一规则，保留原代际和计数。",
+      "evidence": "recovery-plan/concurrency_capture_review.py:198（在BATCH父目录）；code_execution.py:203,215,373；运行报告23:08"
+    },
+    {
+      "id": "M05",
+      "problem": "248项媒体最终228 fulfilled、19 needs_review、1 failed；19项为3 known_error＋16 unverified。存在纯识读限制、明确显示错误、数学疑虑、记号问题；状态不能一律解释成数学错。",
+      "existing_fix_layer": "原模型判词保留；19中dx已人工改副本。其余仍保留待核或错误。",
+      "rules_to_decide": "确定错误、可执行疑虑、无action不确定、需求缺项分别如何处理；450px可辨标准、源码交叉核对、是否允许记号风格问题触发返修。",
+      "evidence": "下文20例；各ROOT/work/media/<unit>/<id>/result.json"
+    },
+    {
+      "id": "M06",
+      "problem": "候选额度被技术失败占用：如Ln动画前2次为Manim tips和VGroup类型异常，最后才暴露坐标错；CH07/CH08含API属性/参数错误，部分分式第2次KeyError:code。",
+      "existing_fix_layer": "原历史/3候选上限保留；未额外发请求。",
+      "rules_to_decide": "区分代码执行/结构错误与实质质量返修的账本；若维持合并3候选则明确预算口径，不能事后清零伪称重试。",
+      "evidence": "20例候选历史；MR-ff7e…、MR-d18a…、MR-c398…、MR-4bb…"
+    },
+    {
+      "id": "D01",
+      "problem": "148项文件在副本存在，却保留父run绝对source_dir；安全投影拒绝path escapes run。74图＋74动画、48单元、370资源，已核hash。",
+      "existing_fix_layer": "产物层：独立交付恢复296处挂载；生产保护未放宽，自动run未改。",
+      "rules_to_decide": "克隆/恢复时用受信前缀＋相对路径＋SHA256重定位；挂载失败不重生成；不要放宽越界检查；重建figure/animation/layout绑定。",
+      "evidence": "manual-artifact-fixes-20261016/delivery-media-path-gaps-20261017.json；diagnostics.py:78–90"
+    },
+    {
+      "id": "D02",
+      "problem": "补回媒体数据后，CH01–CH04独立交付目录缺animations.js。2026-10-20只读确认源目录false、ZIP true；CH05–09均有。",
+      "existing_fix_layer": "仅ZIP层：4个同版本播放器文件已加包，source_modified=false；独立目录未同步。",
+      "rules_to_decide": "交付修改媒体数据后是否必须重算运行依赖闭包；明确目录版与ZIP哪一个权威入口，并逐入口验收，不以ZIP补齐替代源码修复。",
+      "evidence": "交付/复变函数全书-完整HTML-20261017-打包校验.json.packaging_dependency_additions；build.py:96–101"
+    },
+    {
+      "id": "D03",
+      "problem": "全书浏览器检查失败：页面仍加载、0单元、0交互/实播记录。当前探针navigate后固定350ms读单元列表、再300ms后读状态，未等数据/单元就绪。",
+      "existing_fix_layer": "源码层未修；原失败报告保存在source-evidence。人工交付browser_check/video_playback=not_run。",
+      "rules_to_decide": "等待明确ready及预期单元数、设置有界超时；0单元必须失败；不能用无runtime_errors/无missing_images替代已检查内容。",
+      "evidence": "manual-delivery-20261017/book/source-evidence/browser-report.json；browser_acceptance.cjs:385–425"
+    },
+    {
+      "id": "D04",
+      "problem": "全书data.js现46,666,653字节（约44.5MiB），ZIP284,868,621字节。大包是可验证事实；本轮未跑性能测量，不能断言仅由文件大导致加载失败。",
+      "existing_fix_layer": "产物体积事实；没有性能修复或新版验收。",
+      "rules_to_decide": "是否按章/单元懒加载、去除不必要证据字段、设首屏就绪/内存/文件体积预算；与D03验收时机分别定规则。",
+      "evidence": "manual-delivery-20261017/book/data/data.js stat；打包校验json.zip_bytes"
+    },
+    {
+      "id": "D05",
+      "problem": "文件生成、挂载、模型审核、依赖失效、人工修订、ZIP校验、浏览器/实播多个状态混杂。final partial/release_ready=false；人工入口完成不代表生产accepted或全面质量通过。",
+      "existing_fix_layer": "40份旧报告移source-evidence；人工改动保持unverified/not_run，原自动判词不覆盖。",
+      "rules_to_decide": "报告统一拆维度：文件存在/哈希/挂载/可播放/质量/审核时效/人工来源/发布层；每个通过声明绑定确切字节及入口。",
+      "evidence": "manual-delivery-manifest.json；parent-final-delivery-check-20261017.json；final-status-before-manual.json"
+    },
+    {
+      "id": "D06",
+      "problem": "动画审核仅步骤末态帧，原判词多次明确不认证连续运动、停顿和字幕全程同步；文件可解码也不是教学过程已全审。",
+      "existing_fix_layer": "当前人工交付没有新增浏览器和全部实播。",
+      "rules_to_decide": "末帧审核能批准什么；是否另做关键运动/步骤切换/字幕时序和播放验收，避免verified扩张为全程正确。",
+      "evidence": "各media validation.verdicts；缺图核对记录；parent-final-delivery-check video_playback=not_run"
+    }
+  ],
+  "resolved_examples": [
+    {
+      "id": "MR-73a64bc0be3983f907f0",
+      "issue": "theta=0但角弧固定约90度",
+      "state": "fulfilled",
+      "review": "verified",
+      "candidate_count": 2
+    },
+    {
+      "id": "MR-c30fd3fa860430971a32",
+      "issue": "sigma=c但界曲线不是y=K",
+      "state": "fulfilled",
+      "review": "verified",
+      "candidate_count": 2
+    },
+    {
+      "id": "MR-a32966cc90c1b7137efb",
+      "issue": "审核JSON的LaTeX反斜线未转义，预算内已恢复",
+      "state": "fulfilled",
+      "review": "verified",
+      "candidate_count": 1
+    }
+  ]
+}

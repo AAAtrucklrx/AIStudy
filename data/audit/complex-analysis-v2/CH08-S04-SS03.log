@@ -1,0 +1,83 @@
+—— CH08-S04-SS03 回路开始（run 2026-10-03 09:11:10）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 5, '教案问题明细': ['CH08-S04-SS03: 《支点是什么》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，最好再给一个边界/反例），并点出两种情况差在哪', 'CH08-S04-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH08-S04-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH08-S04-SS03: 《双曲线 H_φ》(F-07) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃', 'CH08-S04-SS03: 《椭圆族与双曲线族正交》(F-08) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃'], '教案提醒': 9, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 5 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH08-S04-SS03: 《支点是什么》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，最好再给一个边界/反例），并点出两种情况差在哪', 'CH08-S04-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [5] 条 → 并集 3 条工单
+    T-Re8008 [P1] hits=5 「CH08-S04-SS03: 《椭圆族与双曲线族正交》(F-08) 属于」
+    T-adb97e [P0] hits=1 「下面例 8 走的正是这条路：把上半平面挖掉一个半圆和一条射线后剩下的区域」
+    T-003d64 [P1] hits=1 「它把 $z$ 平面上的半条形域 $0<\mathrm{Re}\,z<2\」
+[轮 1] 按 3 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH08-S04-SS03 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH08-S04-SS03.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      "error": "ModelError: 模型返回的不是合法 JSON（tag=rewrite:CH08-S04-SS03, finish_reason=length）：{\"replacements\": [{\"issue\": 1, \"old\": \"下面例 8 走的正是这条路：把上半平面挖掉一个半圆和一条射线后剩下的区域，用几个基本变换一步步搬回上半平面。\", \"new\": \"下面例 8 走的正是这条路。\\n\\n例 8 设 $D$ 是上半平面 $\\\\mathrm{Im}\\\\,z>0$ 挖去一个半圆（上半单位圆盘）和正实轴上从 $1$ 到 $+\\\\infty$ 的射线后剩下的区域，求把 $D$ 保形地映成上半平面的变换。\\n\\n解 分四步搬，每一步只办一件事。\\n\\n第一步：$w_1=\\\\frac12\\\\left(z+\\\\frac1z\\\\right)$。儒可夫斯基变换把单位圆周拉成线段 $[-1,1]$，$D$ 的边界（半圆的弧与那条射线）因此都落到实轴上，$D$ 变成 $w_1$ 平面的上半平面。选它是因为「圆弧变线段」正是儒可夫斯基变换的看家本领。\\n\\n" /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH08-S04-SS03 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH08-S04-SS03.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 4 条：['CH08-S04-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH08-S04-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 3 / 仍开着 3；新 P0 0 条
+  ⚠ 这一轮工单没有净减少（3 → 3）
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 1 条（丢了 2 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R7ef7b [P1]：（这一轮没给出判定）
+   · 工单没关掉 T-R995dc [P1]：（这一轮没给出判定）
+   · 工单没关掉 T-R6721d [P1]：（这一轮没给出判定）
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（3 条）：
+  [P1] T-R6721d 「CH08-S04-SS03: 《椭圆族与双曲线族正交》(F-08) 属于**必须」
+  [P1] T-R7ef7b 「CH08-S04-SS03: 有一张图没声明**服务什么** （缺 concep」
+  [P1] T-R995dc 「CH08-S04-SS03: 《双曲线 H_φ》(F-07) 属于**必须配图*」
+记录写到 data/audit/complex-analysis-v2/CH08-S04-SS03.loop.json
+—— CH08-S04-SS03 回路开始（run 2026-10-03 11:35:35）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 4, '教案问题明细': ['CH08-S04-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH08-S04-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH08-S04-SS03: 《双曲线 H_φ》(F-07) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃', 'CH08-S04-SS03: 《椭圆族与双曲线族正交》(F-08) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃'], '教案提醒': 9, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 4 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH08-S04-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH08-S04-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  上一趟的 ['T-R6721d', 'T-R7ef7b', 'T-R995dc', 'T-R7ef7b', 'T-R995dc', 'T-R6721d'] 原句已不在成品里 → 视为已改，不再背
+  每次 [4] 条 → 并集 2 条工单
+    T-R7ef7b [P1] hits=4 「CH08-S04-SS03: 《椭圆族与双曲线族正交》(F-08) 属于」
+    T-bba6ff [P1] hits=1 「变换 $w_2=w_1^2$ 将 $D_1$ 变为割去两条射线的平面 $」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH08-S04-SS03 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH08-S04-SS03.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH08-S04-SS03 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH08-S04-SS03.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 4 条：['CH08-S04-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH08-S04-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 2 / 仍开着 2；新 P0 0 条
+  ⚠ 这一轮工单没有净减少（2 → 2）
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 0 条（丢了 3 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R995dc [P1]：（这一轮没给出判定）
+   · 工单没关掉 T-R6721d [P1]：（这一轮没给出判定）
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（2 条）：
+  [P1] T-R6721d 「CH08-S04-SS03: 《椭圆族与双曲线族正交》(F-08) 属于**必须」
+  [P1] T-R995dc 「CH08-S04-SS03: 《双曲线 H_φ》(F-07) 属于**必须配图*」
+记录写到 data/audit/complex-analysis-v2/CH08-S04-SS03.loop.json
+—— CH08-S04-SS03 回路开始（run 2026-10-03 12:34:49）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 2, '教案问题明细': ['CH08-S04-SS03: 《双曲线 H_φ》(F-07) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃', 'CH08-S04-SS03: 《椭圆族与双曲线族正交》(F-08) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃'], '教案提醒': 9, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 2 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH08-S04-SS03: 《双曲线 H_φ》(F-07) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃', 'CH08-S04-SS03: 《椭圆族与双曲线族正交》(F-08) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  上一趟的 ['T-R6721d', 'T-R995dc', 'T-R995dc', 'T-R6721d'] 原句已不在成品里 → 视为已改，不再背
+  每次 [4] 条 → 并集 2 条工单
+    T-R995dc [P1] hits=2 「CH08-S04-SS03: 《椭圆族与双曲线族正交》(F-08) 属于」
+    T-49f542 [P1] hits=1 「令 $z=re^{i\varphi}$，其中 $r=|z|$ 是模 复数」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH08-S04-SS03 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH08-S04-SS03.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH08-S04-SS03 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH08-S04-SS03.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 2 条：['CH08-S04-SS03: 《双曲线 H_φ》(F-07) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃', 'CH08-S04-SS03: 《椭圆族与双曲线族正交》(F-08) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 2 / 仍开着 1；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 0 条（丢了 2 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R6721d [P1]：（这一轮没给出判定）
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（1 条）：
+  [P1] T-R6721d 「CH08-S04-SS03: 《椭圆族与双曲线族正交》(F-08) 属于**必须」
+记录写到 data/audit/complex-analysis-v2/CH08-S04-SS03.loop.json

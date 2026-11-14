@@ -1,0 +1,5592 @@
+{
+  "schema_version": "MathSemanticRepairsV1",
+  "manifest": "data/study-revision-20261029/wholebook/lessons-CH07-09.json",
+  "source_before_sha256": "6cafe5aa16e611d7a111be16b4ee899ef3e89cff0dd58fa4a581f5c0fb0d3016",
+  "source_after_sha256": "149946f587ce5fa8c919640057d776c3a371b6d5f734489bc2589528f181be8c",
+  "scope": "只局部修复正文中确证的TeX丢反斜线/控制字符，并同步对应coverage原段落；不重生manifest，不改其余27单元和其他字段。",
+  "repairs": [
+    {
+      "unit_id": "CH07",
+      "occurrence": 1,
+      "before": "Gamma",
+      "after": "\\Gamma",
+      "before_math": "$Gamma$",
+      "after_math": "$\\Gamma$",
+      "reason": "复Gamma函数是希腊大写Gamma，不是G*a*m*m*a字母连乘。",
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch07.md",
+      "source_start_line": 3,
+      "source_end_line": 3,
+      "source_quote": "在第2章中，已经把一些实变数初等函数如 $e^{x}, \\sin x, \\cos x$ 等，推广成复平面上的解析函数。在本章中，要讨论把已知区域内的解析函数推广到更大区域的问题，引进解析开拓的概念。然后介绍一个非常重要的特殊函数——复 $\\Gamma$ 函数。我们先从解析函数的唯一性定理讲起。",
+      "coverage_excerpt_occurrences_updated_for_this_rule": 0,
+      "control_codepoints_before": []
+    },
+    {
+      "unit_id": "CH07",
+      "occurrence": 2,
+      "before": "Gamma",
+      "after": "\\Gamma",
+      "before_math": "$Gamma$",
+      "after_math": "$\\Gamma$",
+      "reason": "复Gamma函数是希腊大写Gamma，不是G*a*m*m*a字母连乘。",
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch07.md",
+      "source_start_line": 3,
+      "source_end_line": 3,
+      "source_quote": "在第2章中，已经把一些实变数初等函数如 $e^{x}, \\sin x, \\cos x$ 等，推广成复平面上的解析函数。在本章中，要讨论把已知区域内的解析函数推广到更大区域的问题，引进解析开拓的概念。然后介绍一个非常重要的特殊函数——复 $\\Gamma$ 函数。我们先从解析函数的唯一性定理讲起。",
+      "coverage_excerpt_occurrences_updated_for_this_rule": 0,
+      "control_codepoints_before": []
+    },
+    {
+      "unit_id": "CH07-S01",
+      "occurrence": 1,
+      "before": "alpha_kin D",
+      "after": "\\alpha_k\\in D",
+      "before_math": "$alpha_kin D$",
+      "after_math": "$\\alpha_k\\in D$",
+      "reason": "点列记alpha_k且属于D；in应为集合关系，不是拉丁字母连乘。",
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch07_s01.md",
+      "source_start_line": 4,
+      "source_end_line": 10,
+      "source_quote": "定理1（唯一性定理）如果区域 $D$ 内的两个解析函数 $f(z)$ 及 $g(z)$ 在一串互不相同的点列\n$$\\alpha_ {1}, \\alpha_ {2}, \\dots , \\alpha_ {k}, \\dots$$\n上的值相等，并且这个点列以 $D$ 内某点 $a$ 为极限，那么这两个函数在 $D$ 内恒等，即\n$$f (z) \\equiv g (z), \\quad z \\in D.$$\n证 令 $F(z) = f(z) - g(z)$，它在 $D$ 内解析，且 $F(\\alpha_k) = 0, k = 1, 2, \\cdots$. 于是由连续性\n$$F (a) = \\lim _ {k \\rightarrow \\infty} F (a _ {k}) = 0.$$\n即 $a$ 也是 $F(z)$ 的零点. 因 $\\alpha_{k} \\rightarrow a$, 故在 $a$ 点的任何邻域内, $F(z)$ 有异于 $a$ 点的零点. 再由零点的孤立性, $F(z)$ 在 $a$ 点的某邻域 $K_{01} | z - a | < \\delta_{1}$ 内恒等于零.",
+      "coverage_excerpt_occurrences_updated_for_this_rule": 1,
+      "control_codepoints_before": []
+    },
+    {
+      "unit_id": "CH07-S01",
+      "occurrence": 1,
+      "before": "f(alpha_k)=g(alpha_k)",
+      "after": "f(\\alpha_k)=g(\\alpha_k)",
+      "before_math": "$f(alpha_k)=g(alpha_k)$",
+      "after_math": "$f(\\alpha_k)=g(\\alpha_k)$",
+      "reason": "两解析函数在同一alpha_k点列上相等，不是以字母alpha的乘积作自变量。",
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch07_s01.md",
+      "source_start_line": 4,
+      "source_end_line": 10,
+      "source_quote": "定理1（唯一性定理）如果区域 $D$ 内的两个解析函数 $f(z)$ 及 $g(z)$ 在一串互不相同的点列\n$$\\alpha_ {1}, \\alpha_ {2}, \\dots , \\alpha_ {k}, \\dots$$\n上的值相等，并且这个点列以 $D$ 内某点 $a$ 为极限，那么这两个函数在 $D$ 内恒等，即\n$$f (z) \\equiv g (z), \\quad z \\in D.$$\n证 令 $F(z) = f(z) - g(z)$，它在 $D$ 内解析，且 $F(\\alpha_k) = 0, k = 1, 2, \\cdots$. 于是由连续性\n$$F (a) = \\lim _ {k \\rightarrow \\infty} F (a _ {k}) = 0.$$\n即 $a$ 也是 $F(z)$ 的零点. 因 $\\alpha_{k} \\rightarrow a$, 故在 $a$ 点的任何邻域内, $F(z)$ 有异于 $a$ 点的零点. 再由零点的孤立性, $F(z)$ 在 $a$ 点的某邻域 $K_{01} | z - a | < \\delta_{1}$ 内恒等于零.",
+      "coverage_excerpt_occurrences_updated_for_this_rule": 1,
+      "control_codepoints_before": []
+    },
+    {
+      "unit_id": "CH07-S01",
+      "occurrence": 1,
+      "before": "alpha_k\to ain D",
+      "after": "\\alpha_k\\to a\\in D",
+      "before_math": "$alpha_k\to ain D$",
+      "after_math": "$\\alpha_k\\to a\\in D$",
+      "reason": "互异点列趋向内部聚点a；原串的tab是丢失的to控制转义，ain应为a属于D。",
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch07_s01.md",
+      "source_start_line": 4,
+      "source_end_line": 10,
+      "source_quote": "定理1（唯一性定理）如果区域 $D$ 内的两个解析函数 $f(z)$ 及 $g(z)$ 在一串互不相同的点列\n$$\\alpha_ {1}, \\alpha_ {2}, \\dots , \\alpha_ {k}, \\dots$$\n上的值相等，并且这个点列以 $D$ 内某点 $a$ 为极限，那么这两个函数在 $D$ 内恒等，即\n$$f (z) \\equiv g (z), \\quad z \\in D.$$\n证 令 $F(z) = f(z) - g(z)$，它在 $D$ 内解析，且 $F(\\alpha_k) = 0, k = 1, 2, \\cdots$. 于是由连续性\n$$F (a) = \\lim _ {k \\rightarrow \\infty} F (a _ {k}) = 0.$$\n即 $a$ 也是 $F(z)$ 的零点. 因 $\\alpha_{k} \\rightarrow a$, 故在 $a$ 点的任何邻域内, $F(z)$ 有异于 $a$ 点的零点. 再由零点的孤立性, $F(z)$ 在 $a$ 点的某邻域 $K_{01} | z - a | < \\delta_{1}$ 内恒等于零.",
+      "coverage_excerpt_occurrences_updated_for_this_rule": 1,
+      "control_codepoints_before": [
+        9
+      ]
+    },
+    {
+      "unit_id": "CH07-S01",
+      "occurrence": 1,
+      "before": "fequiv g",
+      "after": "f\\equiv g",
+      "before_math": "$fequiv g$",
+      "after_math": "$f\\equiv g$",
+      "reason": "唯一性结论是f与g恒等，equiv必须是关系命令。",
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch07_s01.md",
+      "source_start_line": 6,
+      "source_end_line": 7,
+      "source_quote": "上的值相等，并且这个点列以 $D$ 内某点 $a$ 为极限，那么这两个函数在 $D$ 内恒等，即\n$$f (z) \\equiv g (z), \\quad z \\in D.$$",
+      "coverage_excerpt_occurrences_updated_for_this_rule": 1,
+      "control_codepoints_before": []
+    },
+    {
+      "unit_id": "CH07-S01",
+      "occurrence": 1,
+      "before": "sin(1/(1-z))",
+      "after": "\\sin(1/(1-z))",
+      "before_math": "$sin(1/(1-z))$",
+      "after_math": "$\\sin(1/(1-z))$",
+      "reason": "边界聚点反例是正弦复合函数，sin应排作正弦函数而非s*i*n。",
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch07_s02.md",
+      "source_start_line": 100,
+      "source_end_line": 100,
+      "source_quote": "1.  $\\sin\\frac{1}{1-z}$  在  $|z|<1$  内解析，又在  $|z|<1$  内有无穷多个零点  $1-\\frac{1}{k\\pi}$ ， $k=1,2,3,\\cdots$ ，但  $\\sin\\frac{1}{1-z}\\neq0$ ，这与唯一性定理矛盾吗？",
+      "coverage_excerpt_occurrences_updated_for_this_rule": 1,
+      "control_codepoints_before": []
+    },
+    {
+      "unit_id": "CH07-S01",
+      "occurrence": 1,
+      "before": "sin2z=2sin zcos z",
+      "after": "\\sin 2z=2\\sin z\\cos z",
+      "before_math": "$sin2z=2sin zcos z$",
+      "after_math": "$\\sin 2z=2\\sin z\\cos z$",
+      "reason": "实三角恒等式解析推广为复正弦二倍角公式；正弦与余弦均为函数命令。",
+      "source_path": "data/parse/complex-analysis-v2/original_text/ch07_s01.md",
+      "source_start_line": 25,
+      "source_end_line": 28,
+      "source_quote": "由推论2得知，所有实三角函数及实双曲函数的恒等式，在复的情形下都成立.例如 $\\sin 2z$ 及 $2\\sin z\\cos z$ 都在全平面内解析，且在实数轴上有恒等式\n$$\\sin 2 x = 2 \\sin x \\cos x,$$\n从而由推论2得知，对一切复数 $z$ ，有恒等式\n$$\\sin 2 z = 2 \\sin z \\cos z.$$",
+      "coverage_excerpt_occurrences_updated_for_this_rule": 1,
+      "control_codepoints_before": []
+    }
+  ],
+  "repaired_math_occurrences": 8,
+  "modified_units": [
+    "CH07",
+    "CH07-S01"
+  ],
+  "unit_count": 29,
+  "body_math_strings_reviewed": 1034,
+  "coverage_ids_checked": 132,
+  "remaining_bare_command_or_control_findings": [],
+  "all_other_fields_preserved": true,
+  "all_reader_anchors_preserved": true,
+  "all_coverage_excerpts_unique_complete_paragraphs": true,
+  "root_protected_units_unchanged": [
+    "CH08-S04-SS02",
+    "CH09-S02-SS07",
+    "CH09-S03-SS03"
+  ],
+  "semantic_review": [
+    {
+      "unit_id": "CH07",
+      "source_path": "original_text/ch07.md",
+      "formula_count": 4,
+      "semantic_objects_reviewed": "Gamma特殊函数；几何级数1/(1-z)与极点z=1。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "1/(1-z)",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "z=1",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "\\Gamma",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "\\Gamma",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH07-S01",
+      "source_path": "original_text/ch07_s01.md",
+      "formula_count": 53,
+      "semantic_objects_reviewed": "内部聚点的互异点列alpha_k、f恒等g、正弦边界反例和二倍角式；直接开拓拼接与几何级数泰勒圆。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "f,g",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "D",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "\\alpha_k\\in D",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "f(\\alpha_k)=g(\\alpha_k)",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "\\alpha_k\\to a\\in D",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "f\\equiv g",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "D",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "F=f-g",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "F",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "a",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "a",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "\\sin(1/(1-z))",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "|z|<1",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "1",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "D",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "D",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "e^z",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "\\sin 2z=2\\sin z\\cos z",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "f",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "E",
+          "display": false
+        },
+        {
+          "index": 20,
+          "tex": "D\\supset E",
+          "display": false
+        },
+        {
+          "index": 21,
+          "tex": "F",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "F|_E=f",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "F",
+          "display": false
+        },
+        {
+          "index": 24,
+          "tex": "D",
+          "display": false
+        },
+        {
+          "index": 25,
+          "tex": "E",
+          "display": false
+        },
+        {
+          "index": 26,
+          "tex": "D",
+          "display": false
+        },
+        {
+          "index": 27,
+          "tex": "f(x)=\\sum_{n=0}^{\\infty}a_nx^n",
+          "display": false
+        },
+        {
+          "index": 28,
+          "tex": "R>0",
+          "display": false
+        },
+        {
+          "index": 29,
+          "tex": "F(z)=\\sum_{n=0}^{\\infty}a_nz^n",
+          "display": false
+        },
+        {
+          "index": 30,
+          "tex": "|z|<R",
+          "display": false
+        },
+        {
+          "index": 31,
+          "tex": "(-R,R)",
+          "display": false
+        },
+        {
+          "index": 32,
+          "tex": "f_1,f_2",
+          "display": false
+        },
+        {
+          "index": 33,
+          "tex": "D_1,D_2",
+          "display": false
+        },
+        {
+          "index": 34,
+          "tex": "D_1\\cap D_2",
+          "display": false
+        },
+        {
+          "index": 35,
+          "tex": "f_1=f_2",
+          "display": false
+        },
+        {
+          "index": 36,
+          "tex": "F|_{D_j}=f_j",
+          "display": false
+        },
+        {
+          "index": 37,
+          "tex": "D_1\\cup D_2",
+          "display": false
+        },
+        {
+          "index": 38,
+          "tex": "|z|<1",
+          "display": false
+        },
+        {
+          "index": 39,
+          "tex": "f(z)=\\sum_{n=0}^{\\infty}z^n=1/(1-z)",
+          "display": false
+        },
+        {
+          "index": 40,
+          "tex": "a\\ne1",
+          "display": false
+        },
+        {
+          "index": 41,
+          "tex": "f(z)=\\sum_{n=0}^{\\infty}\\frac{(z-a)^n}{(1-a)^{n+1}},\\qquad |z-a|<|1-a|.",
+          "display": true
+        },
+        {
+          "index": 42,
+          "tex": "a=\\mathrm i/2",
+          "display": false
+        },
+        {
+          "index": 43,
+          "tex": "\\sqrt5/2",
+          "display": false
+        },
+        {
+          "index": 44,
+          "tex": "1/(1-z)",
+          "display": false
+        },
+        {
+          "index": 45,
+          "tex": "a=-1/2",
+          "display": false
+        },
+        {
+          "index": 46,
+          "tex": "3/2",
+          "display": false
+        },
+        {
+          "index": 47,
+          "tex": "0<a<1",
+          "display": false
+        },
+        {
+          "index": 48,
+          "tex": "z=1",
+          "display": false
+        },
+        {
+          "index": 49,
+          "tex": "1",
+          "display": false
+        },
+        {
+          "index": 50,
+          "tex": "\\mathbb C\\setminus\\{1\\}",
+          "display": false
+        },
+        {
+          "index": 51,
+          "tex": "F(z)=1/(1-z)",
+          "display": false
+        },
+        {
+          "index": 52,
+          "tex": "z=1",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH07-S02",
+      "source_path": "original_text/ch07_s02.md",
+      "formula_count": 106,
+      "semantic_objects_reviewed": "参数积分核与各阶导数、统一尾积分控制、Gamma/Beta定义递推留数及两恒等式、振荡积分和唯一性习题。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "C",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "f(\\zeta)",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "F(z)=\\frac1{2\\pi\\mathrm i}\\int_C\\frac{f(\\zeta)}{\\zeta-z}\\,\\mathrm d\\zeta",
+          "display": true
+        },
+        {
+          "index": 3,
+          "tex": "\\mathbb C\\setminus C",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "z",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "F^{(n)}(z)=\\frac{n!}{2\\pi\\mathrm i}\\int_C\\frac{f(\\zeta)}{(\\zeta-z)^{n+1}}\\,\\mathrm d\\zeta,\\qquad n\\ge0.",
+          "display": true
+        },
+        {
+          "index": 6,
+          "tex": "f(t,z)",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "[a,b]\\times D",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "t",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "z",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "D",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "F(z)=\\int_a^b f(t,z)\\,\\mathrm dt,\\qquad F'(z)=\\int_a^b\\frac{\\partial f(t,z)}{\\partial z}\\,\\mathrm dt.",
+          "display": true
+        },
+        {
+          "index": 12,
+          "tex": "t",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "z",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "z\\in D",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "\\varepsilon>0",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "z",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "T",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "T_2>T_1>T",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "\\left|\\int_{T_1}^{T_2}f(t,z)\\,\\mathrm dt\\right|<\\varepsilon\\quad(z\\in D),",
+          "display": true
+        },
+        {
+          "index": 20,
+          "tex": "D",
+          "display": false
+        },
+        {
+          "index": 21,
+          "tex": "z",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "\\varphi(t)",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "|f(t,z)|\\le\\varphi(t)",
+          "display": false
+        },
+        {
+          "index": 24,
+          "tex": "\\int_a^\\infty\\varphi(t)\\,\\mathrm dt<\\infty",
+          "display": false
+        },
+        {
+          "index": 25,
+          "tex": "f",
+          "display": false
+        },
+        {
+          "index": 26,
+          "tex": "[a,\\infty)\\times D",
+          "display": false
+        },
+        {
+          "index": 27,
+          "tex": "t",
+          "display": false
+        },
+        {
+          "index": 28,
+          "tex": "z",
+          "display": false
+        },
+        {
+          "index": 29,
+          "tex": "D",
+          "display": false
+        },
+        {
+          "index": 30,
+          "tex": "F'(z)=\\int_a^\\infty\\partial_zf(t,z)\\,\\mathrm dt",
+          "display": false
+        },
+        {
+          "index": 31,
+          "tex": "e^{-t}t^{z-1}",
+          "display": false
+        },
+        {
+          "index": 32,
+          "tex": "t>0",
+          "display": false
+        },
+        {
+          "index": 33,
+          "tex": "t^{z-1}=e^{(z-1)\\ln t}",
+          "display": false
+        },
+        {
+          "index": 34,
+          "tex": "m\\le\\operatorname{Re}z\\le M",
+          "display": false
+        },
+        {
+          "index": 35,
+          "tex": "t\\ge1",
+          "display": false
+        },
+        {
+          "index": 36,
+          "tex": "e^{-t}t^{M-1}",
+          "display": false
+        },
+        {
+          "index": 37,
+          "tex": "\\int_1^\\infty e^{-t}t^{z-1}\\,\\mathrm dt",
+          "display": false
+        },
+        {
+          "index": 38,
+          "tex": "0<t\\le1",
+          "display": false
+        },
+        {
+          "index": 39,
+          "tex": "t^{m-1}",
+          "display": false
+        },
+        {
+          "index": 40,
+          "tex": "m>0",
+          "display": false
+        },
+        {
+          "index": 41,
+          "tex": "\\int_0^1e^{-t}t^{z-1}\\,\\mathrm dt",
+          "display": false
+        },
+        {
+          "index": 42,
+          "tex": "\\operatorname{Re}z>0",
+          "display": false
+        },
+        {
+          "index": 43,
+          "tex": "\\Gamma(z)=\\int_0^\\infty e^{-t}t^{z-1}\\,\\mathrm dt,\\qquad\\operatorname{Re}z>0.",
+          "display": true
+        },
+        {
+          "index": 44,
+          "tex": "z",
+          "display": false
+        },
+        {
+          "index": 45,
+          "tex": "t=0",
+          "display": false
+        },
+        {
+          "index": 46,
+          "tex": "\\mathcal L[t^\\alpha]",
+          "display": false
+        },
+        {
+          "index": 47,
+          "tex": "\\Gamma(z+1)=z\\Gamma(z)",
+          "display": false
+        },
+        {
+          "index": 48,
+          "tex": "\\Gamma(1)=1",
+          "display": false
+        },
+        {
+          "index": 49,
+          "tex": "\\Gamma(n)=(n-1)!",
+          "display": false
+        },
+        {
+          "index": 50,
+          "tex": "n\\ge1",
+          "display": false
+        },
+        {
+          "index": 51,
+          "tex": "\\Gamma(z)=\\Gamma(z+1)/z",
+          "display": false
+        },
+        {
+          "index": 52,
+          "tex": "\\operatorname{Re}z>-1",
+          "display": false
+        },
+        {
+          "index": 53,
+          "tex": "z\\ne0",
+          "display": false
+        },
+        {
+          "index": 54,
+          "tex": "\\Gamma(z)=\\frac{\\Gamma(z+n+1)}{z(z+1)\\cdots(z+n)},\\qquad\\operatorname{Re}z>-n-1.",
+          "display": true
+        },
+        {
+          "index": 55,
+          "tex": "0,-1,-2,\\ldots",
+          "display": false
+        },
+        {
+          "index": 56,
+          "tex": "\\operatorname{Res}(\\Gamma,-n)=\\frac{(-1)^n}{n!}\\quad(n=0,1,\\ldots).",
+          "display": true
+        },
+        {
+          "index": 57,
+          "tex": "0",
+          "display": false
+        },
+        {
+          "index": 58,
+          "tex": "1",
+          "display": false
+        },
+        {
+          "index": 59,
+          "tex": "-1",
+          "display": false
+        },
+        {
+          "index": 60,
+          "tex": "-1",
+          "display": false
+        },
+        {
+          "index": 61,
+          "tex": "\\Gamma,\\tan z,\\cot z",
+          "display": false
+        },
+        {
+          "index": 62,
+          "tex": "\\Gamma",
+          "display": false
+        },
+        {
+          "index": 63,
+          "tex": "p,q>0",
+          "display": false
+        },
+        {
+          "index": 64,
+          "tex": "\\begin{aligned}\\mathrm B(p,q)&=\\int_0^1t^{p-1}(1-t)^{q-1}\\,\\mathrm dt\\\\&=\\int_0^\\infty\\frac{\\xi^{p-1}}{(1+\\xi)^{p+q}}\\,\\mathrm d\\xi\\\\&=\\frac{\\Gamma(p)\\Gamma(q)}{\\Gamma(p+q)}.\\end{aligned}",
+          "display": true
+        },
+        {
+          "index": 65,
+          "tex": "t=\\xi/(1+\\xi)",
+          "display": false
+        },
+        {
+          "index": 66,
+          "tex": "p,q>0",
+          "display": false
+        },
+        {
+          "index": 67,
+          "tex": "\\operatorname{Re}p,\\operatorname{Re}q>0",
+          "display": false
+        },
+        {
+          "index": 68,
+          "tex": "\\mathrm B(1/3,1/3)",
+          "display": false
+        },
+        {
+          "index": 69,
+          "tex": "q=1-p",
+          "display": false
+        },
+        {
+          "index": 70,
+          "tex": "0<p<1",
+          "display": false
+        },
+        {
+          "index": 71,
+          "tex": "\\int_0^\\infty\\xi^{p-1}/(1+\\xi)\\,\\mathrm d\\xi=\\pi/\\sin\\pi p",
+          "display": false
+        },
+        {
+          "index": 72,
+          "tex": "\\Gamma(z)\\Gamma(1-z)=\\frac\\pi{\\sin\\pi z},\\qquad z\\notin\\mathbb Z.",
+          "display": true
+        },
+        {
+          "index": 73,
+          "tex": "z",
+          "display": false
+        },
+        {
+          "index": 74,
+          "tex": "1-z",
+          "display": false
+        },
+        {
+          "index": 75,
+          "tex": "\\mathrm B(x,x)",
+          "display": false
+        },
+        {
+          "index": 76,
+          "tex": "1/2",
+          "display": false
+        },
+        {
+          "index": 77,
+          "tex": "2^{1-2x}\\mathrm B(x,1/2)",
+          "display": false
+        },
+        {
+          "index": 78,
+          "tex": "\\Gamma(1/2)=\\sqrt\\pi",
+          "display": false
+        },
+        {
+          "index": 79,
+          "tex": "\\Gamma(2z)=\\frac{2^{2z-1}}{\\sqrt\\pi}\\Gamma(z)\\Gamma\\!\\left(z+\\frac12\\right).",
+          "display": true
+        },
+        {
+          "index": 80,
+          "tex": "z=0,-1/2,-1,-3/2,\\ldots",
+          "display": false
+        },
+        {
+          "index": 81,
+          "tex": "\\Gamma(3/2)=\\sqrt\\pi/2",
+          "display": false
+        },
+        {
+          "index": 82,
+          "tex": "\\Gamma(5/2)=3\\sqrt\\pi/4",
+          "display": false
+        },
+        {
+          "index": 83,
+          "tex": "\\Gamma",
+          "display": false
+        },
+        {
+          "index": 84,
+          "tex": "\\Gamma",
+          "display": false
+        },
+        {
+          "index": 85,
+          "tex": "1/\\Gamma",
+          "display": false
+        },
+        {
+          "index": 86,
+          "tex": "0,-1,-2,\\ldots",
+          "display": false
+        },
+        {
+          "index": 87,
+          "tex": "0",
+          "display": false
+        },
+        {
+          "index": 88,
+          "tex": "a>0,a+b>0",
+          "display": false
+        },
+        {
+          "index": 89,
+          "tex": "\\operatorname{Re}\\xi>0,\\operatorname{Re}\\eta>0",
+          "display": false
+        },
+        {
+          "index": 90,
+          "tex": "\\int_0^1\\frac{t^{\\xi-1}(1-t)^{\\eta-1}}{(a+bt)^{\\xi+\\eta}}\\,\\mathrm dt=\\frac{\\mathrm B(\\xi,\\eta)}{(a+b)^\\xi a^\\eta}.",
+          "display": true
+        },
+        {
+          "index": 91,
+          "tex": "u=(a+b)t/(a+bt)",
+          "display": false
+        },
+        {
+          "index": 92,
+          "tex": "0,1",
+          "display": false
+        },
+        {
+          "index": 93,
+          "tex": "0<\\operatorname{Re}s<1",
+          "display": false
+        },
+        {
+          "index": 94,
+          "tex": "\\int_0^\\infty x^{s-1}e^{-\\mathrm ix}\\,\\mathrm dx=e^{-\\mathrm i\\pi s/2}\\Gamma(s).",
+          "display": true
+        },
+        {
+          "index": 95,
+          "tex": "n>1",
+          "display": false
+        },
+        {
+          "index": 96,
+          "tex": "s=1/n",
+          "display": false
+        },
+        {
+          "index": 97,
+          "tex": "u=x^n",
+          "display": false
+        },
+        {
+          "index": 98,
+          "tex": "\\begin{aligned}\\int_0^\\infty\\cos(x^n)\\,\\mathrm dx&=\\frac{\\Gamma(1/n)}n\\cos\\frac\\pi{2n},\\\\\\int_0^\\infty\\sin(x^n)\\,\\mathrm dx&=\\frac{\\Gamma(1/n)}n\\sin\\frac\\pi{2n},\\\\\\int_0^\\infty\\frac{\\sin(x^n)}{x^n}\\,\\mathrm dx&=\\frac{\\Gamma(1/n)}{n-1}\\cos\\frac\\pi{2n}.\\end{aligned}",
+          "display": true
+        },
+        {
+          "index": 99,
+          "tex": "1/n\\to0",
+          "display": false
+        },
+        {
+          "index": 100,
+          "tex": "0,1",
+          "display": false
+        },
+        {
+          "index": 101,
+          "tex": "0,1/(2k)",
+          "display": false
+        },
+        {
+          "index": 102,
+          "tex": "1/(2k)",
+          "display": false
+        },
+        {
+          "index": 103,
+          "tex": "f(z)=z",
+          "display": false
+        },
+        {
+          "index": 104,
+          "tex": "n/(n+1)",
+          "display": false
+        },
+        {
+          "index": 105,
+          "tex": "f(z)=1/(1+z)",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH08",
+      "source_path": "original_text/ch08.md",
+      "formula_count": 5,
+      "semantic_objects_reviewed": "w=f(z)区域映照与指数周期2pi*i。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "w=f(z)",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "z",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "w",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "e^z",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "2\\pi\\mathrm i",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH08-S01",
+      "source_path": "original_text/ch08_s01.md",
+      "formula_count": 28,
+      "semantic_objects_reviewed": "非零导数局部旋转伸缩，平方函数的一次主项与二次误差。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "z_0",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "w_0=f(z_0)",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "f",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "f'(z_0)\\ne0",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "f(z_0+\\Delta z)-w_0=f'(z_0)\\Delta z+o(|\\Delta z|).",
+          "display": true
+        },
+        {
+          "index": 5,
+          "tex": "z=z(t)",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "t_0",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "z_0",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "z'(t_0)\\ne0",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "w'(t_0)=f'(z_0)z'(t_0)",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "\\arg w'(t_0)=\\arg z'(t_0)+\\arg f'(z_0)\\pmod{2\\pi}.",
+          "display": true
+        },
+        {
+          "index": 11,
+          "tex": "\\arg f'(z_0)",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "\\lim_{z\\to z_0}\\frac{|f(z)-f(z_0)|}{|z-z_0|}=|f'(z_0)|.",
+          "display": true
+        },
+        {
+          "index": 13,
+          "tex": "1",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "1",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "|z-z_0|=\\rho",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "w_0",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "|f'(z_0)|\\rho",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "f(z)=z^2",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "z_0",
+          "display": false
+        },
+        {
+          "index": 20,
+          "tex": "(\\Delta z)^2",
+          "display": false
+        },
+        {
+          "index": 21,
+          "tex": "z_0=\\mathrm i",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "f'(z_0)=2\\mathrm i",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "\\pi/2",
+          "display": false
+        },
+        {
+          "index": 24,
+          "tex": "z_0=0",
+          "display": false
+        },
+        {
+          "index": 25,
+          "tex": "(\\Delta z)^2",
+          "display": false
+        },
+        {
+          "index": 26,
+          "tex": "z",
+          "display": false
+        },
+        {
+          "index": 27,
+          "tex": "-z",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH08-S02",
+      "source_path": "original_text/ch08_s02.md",
+      "formula_count": 29,
+      "semantic_objects_reviewed": "单叶与非零导数、复合逆映照、圆盘中转、规范化点和方向。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "f",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "D",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "f'(z)\\ne0",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "c(z-z_0)^n",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "n\\ge2",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "e^z",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "2\\pi\\mathrm i",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "f:D\\to G=f(D)",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "T_1:z\\mapsto v=f(z)",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "T_2:v\\mapsto w=g(v)",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "T_1",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "T_2",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "T_2T_1",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "w=g(f(z))",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "f^{-1}",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "1/f'(z)",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "z_1^2=z_2^2",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "z_1=z_2",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "z_1=-z_2",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "\\mathbb D=\\{|\\zeta|<1\\}",
+          "display": false
+        },
+        {
+          "index": 20,
+          "tex": "T:D\\to\\mathbb D",
+          "display": false
+        },
+        {
+          "index": 21,
+          "tex": "S:G\\to\\mathbb D",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "S^{-1}\\circ T",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "D",
+          "display": false
+        },
+        {
+          "index": 24,
+          "tex": "G",
+          "display": false
+        },
+        {
+          "index": 25,
+          "tex": "D",
+          "display": false
+        },
+        {
+          "index": 26,
+          "tex": "f(z_0)=w_0",
+          "display": false
+        },
+        {
+          "index": 27,
+          "tex": "|w_0|<1",
+          "display": false
+        },
+        {
+          "index": 28,
+          "tex": "\\arg f'(z_0)=\\alpha_0\\pmod{2\\pi}",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH08-S03",
+      "source_path": "original_text/ch08_s03.md",
+      "formula_count": 67,
+      "semantic_objects_reviewed": "可逆Mobius、广义圆共轭系数、交比、半平面/圆盘/环域边界及R分子。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "M(z)=\\frac{az+b}{cz+d},\\qquad ad-bc\\ne0.",
+          "display": true
+        },
+        {
+          "index": 1,
+          "tex": "z=(dw-b)/(-cw+a)",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "c\\ne0",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "-d/c\\mapsto\\infty",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "\\infty\\mapsto a/c",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "c=0",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "M(z)=\\alpha z+\\beta",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "\\alpha\\ne0",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "M'(z)=(ad-bc)/(cz+d)^2\\ne0",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "1/M",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "\\zeta=1/z",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "z+b",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "e^{\\mathrm i\\theta}z",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "\\theta\\in\\mathbb R",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "rz",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "r>0",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "1/z",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "c=0",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "(a/d)(z+b/a)",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "c\\ne0",
+          "display": false
+        },
+        {
+          "index": 20,
+          "tex": "\\frac{az+b}{cz+d}=\\frac ac+\\frac{bc-ad}{c^2(z+d/c)}.",
+          "display": true
+        },
+        {
+          "index": 21,
+          "tex": "Az\\bar z+Bz+\\bar B\\bar z+C=0,\\qquad A,C\\in\\mathbb R,\\quad |B|^2>AC.",
+          "display": true
+        },
+        {
+          "index": 22,
+          "tex": "A=0",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "A\\ne0",
+          "display": false
+        },
+        {
+          "index": 24,
+          "tex": "w=1/z",
+          "display": false
+        },
+        {
+          "index": 25,
+          "tex": "Cw\\bar w+\\bar B w+B\\bar w+A=0",
+          "display": false
+        },
+        {
+          "index": 26,
+          "tex": "|z-z_c|=R",
+          "display": false
+        },
+        {
+          "index": 27,
+          "tex": "|z_1-z_c||z_2-z_c|=R^2",
+          "display": false
+        },
+        {
+          "index": 28,
+          "tex": "z_j\\mapsto w_j",
+          "display": false
+        },
+        {
+          "index": 29,
+          "tex": "\\frac{w-w_1}{w-w_2}\\frac{w_3-w_2}{w_3-w_1}=\\frac{z-z_1}{z-z_2}\\frac{z_3-z_2}{z_3-z_1}.",
+          "display": true
+        },
+        {
+          "index": 30,
+          "tex": "\\frac{w-w_1}{w-w_2}=k\\frac{z-z_1}{z-z_2}",
+          "display": false
+        },
+        {
+          "index": 31,
+          "tex": "k\\ne0",
+          "display": false
+        },
+        {
+          "index": 32,
+          "tex": "z_1\\mapsto0,z_2\\mapsto\\infty",
+          "display": false
+        },
+        {
+          "index": 33,
+          "tex": "w=k(z-z_1)/(z-z_2)",
+          "display": false
+        },
+        {
+          "index": 34,
+          "tex": "k",
+          "display": false
+        },
+        {
+          "index": 35,
+          "tex": "\\operatorname{Im}z_0>0",
+          "display": false
+        },
+        {
+          "index": 36,
+          "tex": "z_0\\mapsto0",
+          "display": false
+        },
+        {
+          "index": 37,
+          "tex": "\\bar z_0",
+          "display": false
+        },
+        {
+          "index": 38,
+          "tex": "\\infty",
+          "display": false
+        },
+        {
+          "index": 39,
+          "tex": "1",
+          "display": false
+        },
+        {
+          "index": 40,
+          "tex": "w=e^{\\mathrm i\\theta}\\frac{z-z_0}{z-\\bar z_0},\\qquad\\theta\\in\\mathbb R.",
+          "display": true
+        },
+        {
+          "index": 41,
+          "tex": "z_0",
+          "display": false
+        },
+        {
+          "index": 42,
+          "tex": "0",
+          "display": false
+        },
+        {
+          "index": 43,
+          "tex": "\\theta",
+          "display": false
+        },
+        {
+          "index": 44,
+          "tex": "|z_0|<1",
+          "display": false
+        },
+        {
+          "index": 45,
+          "tex": "1/\\bar z_0",
+          "display": false
+        },
+        {
+          "index": 46,
+          "tex": "w=e^{\\mathrm i\\theta}\\frac{z-z_0}{1-\\bar z_0z},\\qquad w'(z_0)=\\frac{e^{\\mathrm i\\theta}}{1-|z_0|^2}.",
+          "display": true
+        },
+        {
+          "index": 47,
+          "tex": "\\theta\\pmod{2\\pi}",
+          "display": false
+        },
+        {
+          "index": 48,
+          "tex": "R>0",
+          "display": false
+        },
+        {
+          "index": 49,
+          "tex": "|z_0|<R",
+          "display": false
+        },
+        {
+          "index": 50,
+          "tex": "w=e^{\\mathrm i\\theta}\\frac{R(z-z_0)}{R^2-\\bar z_0z}",
+          "display": true
+        },
+        {
+          "index": 51,
+          "tex": "|z|<R",
+          "display": false
+        },
+        {
+          "index": 52,
+          "tex": "|w|<1",
+          "display": false
+        },
+        {
+          "index": 53,
+          "tex": "R",
+          "display": false
+        },
+        {
+          "index": 54,
+          "tex": "z_0=a\\in(-1,1)",
+          "display": false
+        },
+        {
+          "index": 55,
+          "tex": "\\theta=0",
+          "display": false
+        },
+        {
+          "index": 56,
+          "tex": "a",
+          "display": false
+        },
+        {
+          "index": 57,
+          "tex": "z_0",
+          "display": false
+        },
+        {
+          "index": 58,
+          "tex": "|z-3|=9",
+          "display": false
+        },
+        {
+          "index": 59,
+          "tex": "|z-8|=16",
+          "display": false
+        },
+        {
+          "index": 60,
+          "tex": "0,-24",
+          "display": false
+        },
+        {
+          "index": 61,
+          "tex": "(x_1-3)(x_2-3)=81",
+          "display": false
+        },
+        {
+          "index": 62,
+          "tex": "(x_1-8)(x_2-8)=256",
+          "display": false
+        },
+        {
+          "index": 63,
+          "tex": "0,\\infty",
+          "display": false
+        },
+        {
+          "index": 64,
+          "tex": "1",
+          "display": false
+        },
+        {
+          "index": 65,
+          "tex": "w=e^{\\mathrm i\\theta}\\frac{z+24}{3z},\\qquad w=e^{\\mathrm i\\theta}\\frac{2z}{z+24}.",
+          "display": true
+        },
+        {
+          "index": 66,
+          "tex": "2/3<|w|<1",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH08-S04",
+      "source_path": "original_text/ch08_s04.md",
+      "formula_count": 1,
+      "semantic_objects_reviewed": "初等函数单叶域及分支；零和无穷远边界对应。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "0,\\infty",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH08-S04-SS01",
+      "source_path": "original_text/ch08_s04_ss01.md",
+      "formula_count": 54,
+      "semantic_objects_reviewed": "整数幂的i*n*varphi指数、n根与分数幂支、三象限平方、透镜3/2幂及双割线根式。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "z=re^{\\mathrm i\\varphi}",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "z^n=r^ne^{\\mathrm in\\varphi}",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "n",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "n",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "n\\ge2",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "\\alpha<\\beta",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "\\beta-\\alpha\\le2\\pi/n",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "\\alpha<\\arg z<\\beta",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "n\\alpha<\\arg w<n\\beta",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "\\pi/n",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "2\\pi/n",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "0<\\varphi<2\\pi",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "n",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "n",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "w_k=r^{1/n}\\exp\\!\\left(\\mathrm i\\frac{\\varphi+2k\\pi}n\\right),\\qquad k=0,\\ldots,n-1.",
+          "display": true
+        },
+        {
+          "index": 15,
+          "tex": "k",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "\\alpha<\\arg z<\\beta",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "(\\alpha+2k\\pi)/n<\\arg w_k<(\\beta+2k\\pi)/n",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "w(1)=1",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "0",
+          "display": false
+        },
+        {
+          "index": 20,
+          "tex": "1",
+          "display": false
+        },
+        {
+          "index": 21,
+          "tex": "n/m",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "m",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "z^{n/m}",
+          "display": false
+        },
+        {
+          "index": 24,
+          "tex": "0<\\varphi<\\omega\\le2\\pi",
+          "display": false
+        },
+        {
+          "index": 25,
+          "tex": "w=r^{n/m}e^{\\mathrm i(n/m)\\varphi}",
+          "display": false
+        },
+        {
+          "index": 26,
+          "tex": "(n/m)\\omega<2\\pi",
+          "display": false
+        },
+        {
+          "index": 27,
+          "tex": "0<\\arg w<(n/m)\\omega",
+          "display": false
+        },
+        {
+          "index": 28,
+          "tex": "w(1)=1",
+          "display": false
+        },
+        {
+          "index": 29,
+          "tex": "|z|<1,\\operatorname{Im}z>0",
+          "display": false
+        },
+        {
+          "index": 30,
+          "tex": "t=(z+1)/(z-1)",
+          "display": false
+        },
+        {
+          "index": 31,
+          "tex": "-1,1",
+          "display": false
+        },
+        {
+          "index": 32,
+          "tex": "0,\\infty",
+          "display": false
+        },
+        {
+          "index": 33,
+          "tex": "z=\\mathrm i/2",
+          "display": false
+        },
+        {
+          "index": 34,
+          "tex": "(-3-4\\mathrm i)/5",
+          "display": false
+        },
+        {
+          "index": 35,
+          "tex": "\\pi<\\arg t<3\\pi/2",
+          "display": false
+        },
+        {
+          "index": 36,
+          "tex": "0<\\arg w<\\pi",
+          "display": false
+        },
+        {
+          "index": 37,
+          "tex": "w=\\left(\\frac{z+1}{z-1}\\right)^2",
+          "display": true
+        },
+        {
+          "index": 38,
+          "tex": "|z|<1,|z-1|<1",
+          "display": false
+        },
+        {
+          "index": 39,
+          "tex": "(1\\pm\\mathrm i\\sqrt3)/2",
+          "display": false
+        },
+        {
+          "index": 40,
+          "tex": "t=\\frac{2z-1+\\mathrm i\\sqrt3}{2z-1-\\mathrm i\\sqrt3},\\qquad \\frac{2\\pi}3<\\arg t<\\frac{4\\pi}3.",
+          "display": true
+        },
+        {
+          "index": 41,
+          "tex": "z=1/2",
+          "display": false
+        },
+        {
+          "index": 42,
+          "tex": "t=-1",
+          "display": false
+        },
+        {
+          "index": 43,
+          "tex": "2\\pi/3",
+          "display": false
+        },
+        {
+          "index": 44,
+          "tex": "T=e^{-2\\pi\\mathrm i/3}t",
+          "display": false
+        },
+        {
+          "index": 45,
+          "tex": "T^{3/2}",
+          "display": false
+        },
+        {
+          "index": 46,
+          "tex": "w=-t^{3/2}",
+          "display": false
+        },
+        {
+          "index": 47,
+          "tex": "t",
+          "display": false
+        },
+        {
+          "index": 48,
+          "tex": "\\mathbb C\\setminus(( -\\infty,-1]\\cup[1,\\infty))",
+          "display": false
+        },
+        {
+          "index": 49,
+          "tex": "t=(z+1)/(z-1)",
+          "display": false
+        },
+        {
+          "index": 50,
+          "tex": "0<\\arg t<2\\pi",
+          "display": false
+        },
+        {
+          "index": 51,
+          "tex": "w=\\sqrt{\\frac{z+1}{z-1}}.",
+          "display": true
+        },
+        {
+          "index": 52,
+          "tex": "t=-1",
+          "display": false
+        },
+        {
+          "index": 53,
+          "tex": "\\mathrm i",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH08-S04-SS02",
+      "source_path": "original_text/ch08_s04_ss02.md",
+      "formula_count": 36,
+      "semantic_objects_reviewed": "指数周期、对数连续支、root新增月牙原域D和连续Arg，条带宽度与平移。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "z=x+\\mathrm iy",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "e^z=e^xe^{\\mathrm iy}",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "x",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "y",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "0<b-a\\le2\\pi",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "a<\\operatorname{Im}z<b",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "a<\\arg w<b",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "2\\pi",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "2\\pi\\mathrm i",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "2\\pi",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "0<\\operatorname{Im}z<\\pi",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "z=re^{\\mathrm i\\theta}",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "0<\\theta<2\\pi",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "w_n=\\ln r+\\mathrm i(\\theta+2n\\pi),\\qquad n\\in\\mathbb Z.",
+          "display": true
+        },
+        {
+          "index": 14,
+          "tex": "n",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "a<\\arg z<b",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "0\\le a<b\\le2\\pi",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "2n\\pi+a<\\operatorname{Im}w_n<2n\\pi+b",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "a>0",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "-a,a",
+          "display": false
+        },
+        {
+          "index": 20,
+          "tex": "t=(z+a)/(z-a)",
+          "display": false
+        },
+        {
+          "index": 21,
+          "tex": "0,\\infty",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "\\alpha,\\beta",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "0\\le\\alpha<\\beta\\le\\pi",
+          "display": false
+        },
+        {
+          "index": 24,
+          "tex": "D=\\left\\{z:\\pi+\\alpha<\\operatorname{Arg}\\frac{z+a}{z-a}<\\pi+\\beta\\right\\},",
+          "display": true
+        },
+        {
+          "index": 25,
+          "tex": "(-\\pi,\\pi]",
+          "display": false
+        },
+        {
+          "index": 26,
+          "tex": "\\pi+\\alpha<\\arg t<\\pi+\\beta",
+          "display": false
+        },
+        {
+          "index": 27,
+          "tex": "0<\\arg t<2\\pi",
+          "display": false
+        },
+        {
+          "index": 28,
+          "tex": "u=\\log t",
+          "display": false
+        },
+        {
+          "index": 29,
+          "tex": "\\pi+\\alpha<\\operatorname{Im}u<\\pi+\\beta",
+          "display": false
+        },
+        {
+          "index": 30,
+          "tex": "\\begin{aligned}w&=\\frac h{\\beta-\\alpha}\\bigl[u-\\mathrm i(\\pi+\\alpha)\\bigr]\\\\&=\\frac h{\\beta-\\alpha}\\left[\\log\\frac{z+a}{z-a}-\\mathrm i(\\pi+\\alpha)\\right],\\quad h>0,\\end{aligned}",
+          "display": true
+        },
+        {
+          "index": 31,
+          "tex": "0",
+          "display": false
+        },
+        {
+          "index": 32,
+          "tex": "h",
+          "display": false
+        },
+        {
+          "index": 33,
+          "tex": "\\beta-\\alpha",
+          "display": false
+        },
+        {
+          "index": 34,
+          "tex": "h",
+          "display": false
+        },
+        {
+          "index": 35,
+          "tex": "\\mathrm i(\\pi+\\alpha)",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH08-S04-SS03",
+      "source_path": "original_text/ch08_s04_ss03.md",
+      "formula_count": 62,
+      "semantic_objects_reviewed": "Joukowski互倒点对、椭圆半轴与双曲线、逆根式支、半圆障碍复合及余弦半条带。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "J(z)=\\tfrac12(z+z^{-1})",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "z\\ne0",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "J(z_1)=J(z_2)",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "(z_1-z_2)(1-1/(z_1z_2))=0",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "z_1z_2=1",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "0",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "z=re^{\\mathrm i\\varphi}",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "w=u+\\mathrm iv",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "u=\\frac{r+r^{-1}}2\\cos\\varphi,\\qquad v=\\frac{r-r^{-1}}2\\sin\\varphi.",
+          "display": true
+        },
+        {
+          "index": 9,
+          "tex": "r>0,r\\ne1",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "\\frac{u^2}{(r+r^{-1})^2/4}+\\frac{v^2}{(r-r^{-1})^2/4}=1.",
+          "display": true
+        },
+        {
+          "index": 11,
+          "tex": "a_r=(r+r^{-1})/2",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "b_r=|r-r^{-1}|/2",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "a_r^2-b_r^2=1",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "\\pm1",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "r<1",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "r\\to0",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "r\\to1",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "[-1,1]",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "0<r<1",
+          "display": false
+        },
+        {
+          "index": 20,
+          "tex": "r=1/2",
+          "display": false
+        },
+        {
+          "index": 21,
+          "tex": "a_r=5/4,b_r=3/4",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "1",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "r=1",
+          "display": false
+        },
+        {
+          "index": 24,
+          "tex": "0<|z|<1",
+          "display": false
+        },
+        {
+          "index": 25,
+          "tex": "\\mathbb C\\setminus[-1,1]",
+          "display": false
+        },
+        {
+          "index": 26,
+          "tex": "0\\mapsto\\infty",
+          "display": false
+        },
+        {
+          "index": 27,
+          "tex": "|z|>1",
+          "display": false
+        },
+        {
+          "index": 28,
+          "tex": "r-r^{-1}<0",
+          "display": false
+        },
+        {
+          "index": 29,
+          "tex": "\\varphi",
+          "display": false
+        },
+        {
+          "index": 30,
+          "tex": "\\sin\\varphi\\cos\\varphi\\ne0",
+          "display": false
+        },
+        {
+          "index": 31,
+          "tex": "0<r<1",
+          "display": false
+        },
+        {
+          "index": 32,
+          "tex": "r",
+          "display": false
+        },
+        {
+          "index": 33,
+          "tex": "\\frac{u^2}{\\cos^2\\varphi}-\\frac{v^2}{\\sin^2\\varphi}=1.",
+          "display": true
+        },
+        {
+          "index": 34,
+          "tex": "z=w\\pm\\sqrt{w^2-1}",
+          "display": false
+        },
+        {
+          "index": 35,
+          "tex": "\\pm1",
+          "display": false
+        },
+        {
+          "index": 36,
+          "tex": "[-1,1]",
+          "display": false
+        },
+        {
+          "index": 37,
+          "tex": "w>1",
+          "display": false
+        },
+        {
+          "index": 38,
+          "tex": "\\sqrt{w^2-1}>0",
+          "display": false
+        },
+        {
+          "index": 39,
+          "tex": "\\begin{aligned}z_-(w)&=w-\\sqrt{w^2-1},&z_-(\\sqrt2)&=\\sqrt2-1,\\\\z_+(w)&=w+\\sqrt{w^2-1},&z_+(\\sqrt2)&=\\sqrt2+1.\\end{aligned}",
+          "display": true
+        },
+        {
+          "index": 40,
+          "tex": "0<|z|<1",
+          "display": false
+        },
+        {
+          "index": 41,
+          "tex": "z_-(\\infty)=0",
+          "display": false
+        },
+        {
+          "index": 42,
+          "tex": "|z|>1",
+          "display": false
+        },
+        {
+          "index": 43,
+          "tex": "D=\\{\\operatorname{Im}z>0,|z|>1\\}\\setminus\\{\\mathrm iy:y\\ge2\\}",
+          "display": false
+        },
+        {
+          "index": 44,
+          "tex": "w_1=J(z)",
+          "display": false
+        },
+        {
+          "index": 45,
+          "tex": "2\\mathrm i",
+          "display": false
+        },
+        {
+          "index": 46,
+          "tex": "3\\mathrm i/4",
+          "display": false
+        },
+        {
+          "index": 47,
+          "tex": "w_2=w_1^2",
+          "display": false
+        },
+        {
+          "index": 48,
+          "tex": "[0,\\infty)",
+          "display": false
+        },
+        {
+          "index": 49,
+          "tex": "(-\\infty,-9/16]",
+          "display": false
+        },
+        {
+          "index": 50,
+          "tex": "q=(w_2+9/16)/w_2",
+          "display": false
+        },
+        {
+          "index": 51,
+          "tex": "0<\\arg q<2\\pi",
+          "display": false
+        },
+        {
+          "index": 52,
+          "tex": "q=1+\\frac9{4(z+z^{-1})^2},\\qquad w=\\sqrt q.",
+          "display": true
+        },
+        {
+          "index": 53,
+          "tex": "D",
+          "display": false
+        },
+        {
+          "index": 54,
+          "tex": "w=\\sqrt{4z^4+17z^2+4}/[2(z^2+1)]",
+          "display": false
+        },
+        {
+          "index": 55,
+          "tex": "\\cos z=\\tfrac12(e^{\\mathrm iz}+e^{-\\mathrm iz})",
+          "display": false
+        },
+        {
+          "index": 56,
+          "tex": "t=\\mathrm iz",
+          "display": false
+        },
+        {
+          "index": 57,
+          "tex": "T=e^t",
+          "display": false
+        },
+        {
+          "index": 58,
+          "tex": "w=J(T)",
+          "display": false
+        },
+        {
+          "index": 59,
+          "tex": "0<\\operatorname{Re}z<2\\pi,\\operatorname{Im}z>0",
+          "display": false
+        },
+        {
+          "index": 60,
+          "tex": "\\mathbb C\\setminus[-1,\\infty)",
+          "display": false
+        },
+        {
+          "index": 61,
+          "tex": "J",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH08-S05",
+      "source_path": "original_text/ch08_s05.md",
+      "formula_count": 64,
+      "semantic_objects_reviewed": "内外角、SC导数指数和积分、三角形Beta尺度、对数割痕端点、矩形椭圆积分。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "n",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "A_k",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "\\beta_k\\pi",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "\\alpha_k\\pi",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "0<\\beta_k<2",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "\\alpha_k+\\beta_k=1,\\qquad\\sum_k\\alpha_k=2,\\qquad\\sum_k\\beta_k=n-2.",
+          "display": true
+        },
+        {
+          "index": 6,
+          "tex": "a_k",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "\\pi",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "\\beta_k\\pi",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "f(z)-A_k\\sim C_k(z-a_k)^{\\beta_k}",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "(z-a_k)^{\\beta_k-1}=(z-a_k)^{-\\alpha_k}",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "a_k",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "-\\pi",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "\\beta_k",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "a_1<\\cdots<a_n",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "f(z)=B+C\\int_{z_0}^z\\prod_{k=1}^n(\\zeta-a_k)^{\\beta_k-1}\\,\\mathrm d\\zeta,\\qquad C\\ne0.",
+          "display": true
+        },
+        {
+          "index": 16,
+          "tex": "z_0",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "B",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "C",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "a_k",
+          "display": false
+        },
+        {
+          "index": 20,
+          "tex": "(1-\\beta_k)\\pi",
+          "display": false
+        },
+        {
+          "index": 21,
+          "tex": "A_k",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "a_k",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "B,C",
+          "display": false
+        },
+        {
+          "index": 24,
+          "tex": "a_n",
+          "display": false
+        },
+        {
+          "index": 25,
+          "tex": "n-1",
+          "display": false
+        },
+        {
+          "index": 26,
+          "tex": "\\pi",
+          "display": false
+        },
+        {
+          "index": 27,
+          "tex": "\\beta_k",
+          "display": false
+        },
+        {
+          "index": 28,
+          "tex": "(\\zeta-a_k)^{\\beta_k-1}",
+          "display": false
+        },
+        {
+          "index": 29,
+          "tex": "0,1,\\infty",
+          "display": false
+        },
+        {
+          "index": 30,
+          "tex": "2a",
+          "display": false
+        },
+        {
+          "index": 31,
+          "tex": "a>0",
+          "display": false
+        },
+        {
+          "index": 32,
+          "tex": "1/3",
+          "display": false
+        },
+        {
+          "index": 33,
+          "tex": "-2/3",
+          "display": false
+        },
+        {
+          "index": 34,
+          "tex": "f(0)=-a,f(1)=a",
+          "display": false
+        },
+        {
+          "index": 35,
+          "tex": "f(z)=-a+\\frac{2a\\Gamma(2/3)}{\\Gamma(1/3)^2}\\int_0^z\\zeta^{-2/3}(1-\\zeta)^{-2/3}\\,\\mathrm d\\zeta.",
+          "display": true
+        },
+        {
+          "index": 36,
+          "tex": "(0,1)",
+          "display": false
+        },
+        {
+          "index": 37,
+          "tex": "\\mathrm i\\sqrt3a",
+          "display": false
+        },
+        {
+          "index": 38,
+          "tex": "\\mathrm B(1/3,1/3)=\\Gamma(1/3)^2/\\Gamma(2/3)",
+          "display": false
+        },
+        {
+          "index": 39,
+          "tex": "0<\\arg z<\\pi",
+          "display": false
+        },
+        {
+          "index": 40,
+          "tex": "w=z+\\log z",
+          "display": false
+        },
+        {
+          "index": 41,
+          "tex": "\\operatorname{Im}w=\\pi",
+          "display": false
+        },
+        {
+          "index": 42,
+          "tex": "x+\\ln(-x)",
+          "display": false
+        },
+        {
+          "index": 43,
+          "tex": "x=-1",
+          "display": false
+        },
+        {
+          "index": 44,
+          "tex": "-1",
+          "display": false
+        },
+        {
+          "index": 45,
+          "tex": "\\{\\operatorname{Im}w>0\\}\\setminus\\{u+\\pi\\mathrm i:u\\le-1\\}.",
+          "display": true
+        },
+        {
+          "index": 46,
+          "tex": "w(-1)=-1+\\pi\\mathrm i",
+          "display": false
+        },
+        {
+          "index": 47,
+          "tex": "+1",
+          "display": false
+        },
+        {
+          "index": 48,
+          "tex": "-1",
+          "display": false
+        },
+        {
+          "index": 49,
+          "tex": "\\pm\\omega_1,\\pm\\omega_1+\\mathrm i\\omega_2",
+          "display": false
+        },
+        {
+          "index": 50,
+          "tex": "\\omega_1,\\omega_2>0",
+          "display": false
+        },
+        {
+          "index": 51,
+          "tex": "0<k<1",
+          "display": false
+        },
+        {
+          "index": 52,
+          "tex": "\\pm1,\\pm1/k",
+          "display": false
+        },
+        {
+          "index": 53,
+          "tex": "-1/2",
+          "display": false
+        },
+        {
+          "index": 54,
+          "tex": "w=A\\int_0^z\\frac{\\mathrm d\\zeta}{\\sqrt{(1-\\zeta^2)(1-k^2\\zeta^2)}},\\qquad A>0.",
+          "display": true
+        },
+        {
+          "index": 55,
+          "tex": "z=0",
+          "display": false
+        },
+        {
+          "index": 56,
+          "tex": "1",
+          "display": false
+        },
+        {
+          "index": 57,
+          "tex": "\\begin{aligned}\\omega_1&=A\\int_0^1\\frac{\\mathrm dt}{\\sqrt{(1-t^2)(1-k^2t^2)}},\\\\\\omega_2&=A\\int_1^{1/k}\\frac{\\mathrm dt}{\\sqrt{(t^2-1)(1-k^2t^2)}}.\\end{aligned}",
+          "display": true
+        },
+        {
+          "index": 58,
+          "tex": "k",
+          "display": false
+        },
+        {
+          "index": 59,
+          "tex": "A",
+          "display": false
+        },
+        {
+          "index": 60,
+          "tex": "A=1",
+          "display": false
+        },
+        {
+          "index": 61,
+          "tex": "z=\\operatorname{sn}w",
+          "display": false
+        },
+        {
+          "index": 62,
+          "tex": "z=\\operatorname{sn}(w/A)",
+          "display": false
+        },
+        {
+          "index": 63,
+          "tex": "k",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH08-S06",
+      "source_path": "original_text/ch08_s06.md",
+      "formula_count": 106,
+      "semantic_objects_reviewed": "共轭场积分、流势与电势符号、Poisson核和法线跳跃限制、共轭分母径向场、流线与弧长面积。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "W(z)=u(x,y)+\\mathrm iv(x,y)",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "u,v",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "C",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "\\oint_C\\overline W\\,\\mathrm dz=\\Gamma+\\mathrm iQ,",
+          "display": true
+        },
+        {
+          "index": 4,
+          "tex": "\\begin{aligned}\\Gamma&=\\oint_C(u\\,\\mathrm dx+v\\,\\mathrm dy)=\\iint_{\\operatorname{int}C}(v_x-u_y)\\,\\mathrm dx\\,\\mathrm dy,\\\\Q&=\\oint_C(-v\\,\\mathrm dx+u\\,\\mathrm dy)=\\iint_{\\operatorname{int}C}(u_x+v_y)\\,\\mathrm dx\\,\\mathrm dy.\\end{aligned}",
+          "display": true
+        },
+        {
+          "index": 5,
+          "tex": "\\overline W",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "W",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "u_x+v_y=0",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "v_x-u_y=0",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "\\overline W=u-\\mathrm iv",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "G",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "f(z)=\\int_{z_0}^z\\overline{W(\\zeta)}\\,\\mathrm d\\zeta+C=\\varphi+\\mathrm i\\psi,\\qquad W=\\overline{f'(z)}.",
+          "display": true
+        },
+        {
+          "index": 12,
+          "tex": "\\mathrm d\\varphi=u\\,\\mathrm dx+v\\,\\mathrm dy",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "\\mathrm d\\psi=-v\\,\\mathrm dx+u\\,\\mathrm dy",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "f'\\ne0",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "f",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "W=\\mathbf V",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "f=\\varphi+\\mathrm i\\psi",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "\\varphi",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "\\psi",
+          "display": false
+        },
+        {
+          "index": 20,
+          "tex": "\\psi=\\text{常数}",
+          "display": false
+        },
+        {
+          "index": 21,
+          "tex": "-v\\,\\mathrm dx+u\\,\\mathrm dy=0",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "f(z)=az",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "a=v_0e^{-\\mathrm i\\theta}",
+          "display": false
+        },
+        {
+          "index": 24,
+          "tex": "\\mathbf V=\\bar a=v_0e^{\\mathrm i\\theta}",
+          "display": false
+        },
+        {
+          "index": 25,
+          "tex": "\\varphi=v_0(x\\cos\\theta+y\\sin\\theta),\\qquad\\psi=v_0(y\\cos\\theta-x\\sin\\theta).",
+          "display": true
+        },
+        {
+          "index": 26,
+          "tex": "\\tan\\theta",
+          "display": false
+        },
+        {
+          "index": 27,
+          "tex": "\\operatorname{div}E=4\\pi\\rho",
+          "display": false
+        },
+        {
+          "index": 28,
+          "tex": "\\operatorname{rot}E=0",
+          "display": false
+        },
+        {
+          "index": 29,
+          "tex": "V=-\\varphi",
+          "display": false
+        },
+        {
+          "index": 30,
+          "tex": "E=-\\nabla V",
+          "display": false
+        },
+        {
+          "index": 31,
+          "tex": "\\Phi=\\psi+\\mathrm iV=-\\mathrm if",
+          "display": false
+        },
+        {
+          "index": 32,
+          "tex": "E=\\overline{\\mathrm i\\Phi'(z)}=-\\mathrm i\\,\\overline{\\Phi'(z)},\\qquad |E|=|\\Phi'(z)|.",
+          "display": true
+        },
+        {
+          "index": 33,
+          "tex": "V",
+          "display": false
+        },
+        {
+          "index": 34,
+          "tex": "\\psi",
+          "display": false
+        },
+        {
+          "index": 35,
+          "tex": "V=-\\int E\\cdot\\mathrm d\\mathbf l",
+          "display": false
+        },
+        {
+          "index": 36,
+          "tex": "q",
+          "display": false
+        },
+        {
+          "index": 37,
+          "tex": "z_0",
+          "display": false
+        },
+        {
+          "index": 38,
+          "tex": "\\begin{aligned}E(z)&=\\frac{2q}{\\overline{z-z_0}},\\qquad\\Phi(z)=-2q\\mathrm i\\operatorname{Log}(z-z_0)+C,\\\\V(z)&=-2q\\ln|z-z_0|+\\operatorname{Im}C,\\\\\\psi(z)&=2q\\operatorname{Arg}(z-z_0)+\\operatorname{Re}C.\\end{aligned}",
+          "display": true
+        },
+        {
+          "index": 39,
+          "tex": "\\Phi=-2\\mathrm i\\sum_kq_k\\operatorname{Log}(z-z_k)+C",
+          "display": false
+        },
+        {
+          "index": 40,
+          "tex": "T:D\\to G",
+          "display": false
+        },
+        {
+          "index": 41,
+          "tex": "u",
+          "display": false
+        },
+        {
+          "index": 42,
+          "tex": "D",
+          "display": false
+        },
+        {
+          "index": 43,
+          "tex": "U=u\\circ T^{-1}",
+          "display": false
+        },
+        {
+          "index": 44,
+          "tex": "G",
+          "display": false
+        },
+        {
+          "index": 45,
+          "tex": "U(T(\\xi))=u(\\xi)",
+          "display": false
+        },
+        {
+          "index": 46,
+          "tex": "u=U\\circ T",
+          "display": false
+        },
+        {
+          "index": 47,
+          "tex": "b(t)",
+          "display": false
+        },
+        {
+          "index": 48,
+          "tex": "b(\\pm\\infty)",
+          "display": false
+        },
+        {
+          "index": 49,
+          "tex": "u(x,y)=\\frac1\\pi\\int_{-\\infty}^{\\infty}\\frac{yb(t)}{(t-x)^2+y^2}\\,\\mathrm dt,\\qquad y>0.",
+          "display": true
+        },
+        {
+          "index": 50,
+          "tex": "v_1",
+          "display": false
+        },
+        {
+          "index": 51,
+          "tex": "v_2",
+          "display": false
+        },
+        {
+          "index": 52,
+          "tex": "0<\\arg z<\\pi",
+          "display": false
+        },
+        {
+          "index": 53,
+          "tex": "V=v_1+\\frac{v_2-v_1}{\\pi}\\arg z,\\qquad\\Phi=\\frac{v_2-v_1}{\\pi}\\log z+\\mathrm iv_1.",
+          "display": true
+        },
+        {
+          "index": 54,
+          "tex": "0",
+          "display": false
+        },
+        {
+          "index": 55,
+          "tex": "\\pi",
+          "display": false
+        },
+        {
+          "index": 56,
+          "tex": "0",
+          "display": false
+        },
+        {
+          "index": 57,
+          "tex": "1",
+          "display": false
+        },
+        {
+          "index": 58,
+          "tex": "t=\\mathrm i(1-z)/(1+z)",
+          "display": false
+        },
+        {
+          "index": 59,
+          "tex": "\\Phi(z)=\\frac1\\pi\\log\\!\\left(\\mathrm i\\frac{1-z}{1+z}\\right),\\qquad V=\\frac1\\pi\\arg\\!\\left(\\mathrm i\\frac{1-z}{1+z}\\right),",
+          "display": true
+        },
+        {
+          "index": 60,
+          "tex": "0<\\arg t<\\pi",
+          "display": false
+        },
+        {
+          "index": 61,
+          "tex": "0<V<1",
+          "display": false
+        },
+        {
+          "index": 62,
+          "tex": "A=1-x^2-y^2>0",
+          "display": false
+        },
+        {
+          "index": 63,
+          "tex": "y>0",
+          "display": false
+        },
+        {
+          "index": 64,
+          "tex": "V=\\pi^{-1}\\arctan(A/(2y))",
+          "display": false
+        },
+        {
+          "index": 65,
+          "tex": "y=0",
+          "display": false
+        },
+        {
+          "index": 66,
+          "tex": "V=1/2",
+          "display": false
+        },
+        {
+          "index": 67,
+          "tex": "y<0",
+          "display": false
+        },
+        {
+          "index": 68,
+          "tex": "\\pi",
+          "display": false
+        },
+        {
+          "index": 69,
+          "tex": "1",
+          "display": false
+        },
+        {
+          "index": 70,
+          "tex": "0<R_1<R_2",
+          "display": false
+        },
+        {
+          "index": 71,
+          "tex": "v_1,v_2",
+          "display": false
+        },
+        {
+          "index": 72,
+          "tex": "k=\\frac{v_2-v_1}{\\ln(R_2/R_1)},\\qquad C_2=v_1-k\\ln R_1.",
+          "display": true
+        },
+        {
+          "index": 73,
+          "tex": "\\Phi=\\mathrm ik\\operatorname{Log}z+C_1+\\mathrm iC_2,\\qquad V=k\\ln|z|+C_2,\\qquad E=-\\frac k{\\bar z}.",
+          "display": true
+        },
+        {
+          "index": 74,
+          "tex": "\\bar z",
+          "display": false
+        },
+        {
+          "index": 75,
+          "tex": "z",
+          "display": false
+        },
+        {
+          "index": 76,
+          "tex": "G=\\{\\operatorname{Im}z>0,|z|>R\\}",
+          "display": false
+        },
+        {
+          "index": 77,
+          "tex": "v_\\infty",
+          "display": false
+        },
+        {
+          "index": 78,
+          "tex": "f(z)=v_\\infty\\left(z+\\frac{R^2}z\\right),\\qquad\\mathbf V=v_\\infty\\left(1-\\frac{R^2}{\\bar z^2}\\right).",
+          "display": true
+        },
+        {
+          "index": 79,
+          "tex": "\\psi=v_\\infty y(1-R^2/(x^2+y^2))",
+          "display": false
+        },
+        {
+          "index": 80,
+          "tex": "y(x^2+y^2-R^2)=c(x^2+y^2)",
+          "display": false
+        },
+        {
+          "index": 81,
+          "tex": "z=\\pm R",
+          "display": false
+        },
+        {
+          "index": 82,
+          "tex": "d>0",
+          "display": false
+        },
+        {
+          "index": 83,
+          "tex": "z=\\frac d\\pi(w+\\log w),\\qquad\\operatorname{Im}w>0,\\quad0<\\arg w<\\pi,",
+          "display": true
+        },
+        {
+          "index": 84,
+          "tex": "w",
+          "display": false
+        },
+        {
+          "index": 85,
+          "tex": "z",
+          "display": false
+        },
+        {
+          "index": 86,
+          "tex": "\\operatorname{Im}z=d,\\operatorname{Re}z\\le-d/\\pi",
+          "display": false
+        },
+        {
+          "index": 87,
+          "tex": "w=re^{\\mathrm i\\theta}",
+          "display": false
+        },
+        {
+          "index": 88,
+          "tex": "x=\\frac d\\pi(r\\cos\\theta+\\ln r),\\qquad y=\\frac d\\pi(r\\sin\\theta+\\theta).",
+          "display": true
+        },
+        {
+          "index": 89,
+          "tex": "r",
+          "display": false
+        },
+        {
+          "index": 90,
+          "tex": "\\theta",
+          "display": false
+        },
+        {
+          "index": 91,
+          "tex": "\\theta",
+          "display": false
+        },
+        {
+          "index": 92,
+          "tex": "r",
+          "display": false
+        },
+        {
+          "index": 93,
+          "tex": "0",
+          "display": false
+        },
+        {
+          "index": 94,
+          "tex": "v_0",
+          "display": false
+        },
+        {
+          "index": 95,
+          "tex": "V=v_0\\theta/\\pi",
+          "display": false
+        },
+        {
+          "index": 96,
+          "tex": "z=z(t)",
+          "display": false
+        },
+        {
+          "index": 97,
+          "tex": "\\alpha\\le t\\le\\beta",
+          "display": false
+        },
+        {
+          "index": 98,
+          "tex": "\\ell(L)=\\int_\\alpha^\\beta|z'(t)|\\,\\mathrm dt,\\qquad\\ell(f(L))=\\int_\\alpha^\\beta|f'(z(t))z'(t)|\\,\\mathrm dt.",
+          "display": true
+        },
+        {
+          "index": 99,
+          "tex": "f:D\\to G",
+          "display": false
+        },
+        {
+          "index": 100,
+          "tex": "|f'|",
+          "display": false
+        },
+        {
+          "index": 101,
+          "tex": "|f'|^2",
+          "display": false
+        },
+        {
+          "index": 102,
+          "tex": "\\operatorname{Area}(G)=\\iint_D|f'(z)|^2\\,\\mathrm dx\\,\\mathrm dy.",
+          "display": true
+        },
+        {
+          "index": 103,
+          "tex": "z^2",
+          "display": false
+        },
+        {
+          "index": 104,
+          "tex": "4(x^2+y^2)",
+          "display": false
+        },
+        {
+          "index": 105,
+          "tex": "8/3",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH09",
+      "source_path": "original_text/ch09.md",
+      "formula_count": 5,
+      "semantic_objects_reviewed": "因果衰减信号e^(-at)h(t)与像1/(p+a)。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "t=0",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "p",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "g_a(t)=e^{-at}h(t)",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "a>0",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "1/(p+a)",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH09-S01",
+      "source_path": "original_text/ch09_s01.md",
+      "formula_count": 53,
+      "semantic_objects_reviewed": "傅里叶正反核、p=sigma+i*s、指数收敛半平面、Gamma复幂变换与端点条件。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "f",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "\\widehat f(s)=\\int_{-\\infty}^{\\infty}f(\\xi)e^{-\\mathrm is\\xi}\\,\\mathrm d\\xi.",
+          "display": true
+        },
+        {
+          "index": 2,
+          "tex": "f(x)=(2\\pi)^{-1}\\lim_{R\\to\\infty}\\int_{-R}^R\\widehat f(s)e^{\\mathrm isx}\\,\\mathrm ds",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "1/(2\\pi)",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "h(t)=0",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "t<0",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "h(t)=1",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "t\\ge0",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "F(p)=\\mathcal L[f](p)=\\int_0^\\infty f(t)e^{-pt}\\,\\mathrm dt.",
+          "display": true
+        },
+        {
+          "index": 9,
+          "tex": "f",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "F",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "f=\\mathcal L^{-1}[F]",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "p=\\sigma+\\mathrm is",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "F(\\sigma+\\mathrm is)",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "f(t)h(t)e^{-\\sigma t}",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "\\sigma",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "s",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "t",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "f",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "K>0,c\\ge0",
+          "display": false
+        },
+        {
+          "index": 20,
+          "tex": "|f(t)|\\le Ke^{ct}",
+          "display": false
+        },
+        {
+          "index": 21,
+          "tex": "c",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "\\operatorname{Re}p=\\sigma>c",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "\\int_0^\\infty|f(t)e^{-pt}|\\,\\mathrm dt\\le\\frac K{\\sigma-c},\\qquad |F(p)|\\le\\frac K{\\sigma-c}.",
+          "display": true
+        },
+        {
+          "index": 24,
+          "tex": "\\sigma\\ge\\sigma_1>c",
+          "display": false
+        },
+        {
+          "index": 25,
+          "tex": "Ke^{-(\\sigma_1-c)t}",
+          "display": false
+        },
+        {
+          "index": 26,
+          "tex": "\\operatorname{Re}p>c",
+          "display": false
+        },
+        {
+          "index": 27,
+          "tex": "\\operatorname{Re}p\\to+\\infty",
+          "display": false
+        },
+        {
+          "index": 28,
+          "tex": "F(p)\\to0",
+          "display": false
+        },
+        {
+          "index": 29,
+          "tex": "|\\arg p|<\\pi/2-\\varepsilon",
+          "display": false
+        },
+        {
+          "index": 30,
+          "tex": "0<\\varepsilon<\\pi/2",
+          "display": false
+        },
+        {
+          "index": 31,
+          "tex": "|p|\\to\\infty",
+          "display": false
+        },
+        {
+          "index": 32,
+          "tex": "a",
+          "display": false
+        },
+        {
+          "index": 33,
+          "tex": "\\mathcal L[e^{at}h(t)](p)=\\frac1{p-a},\\qquad\\operatorname{Re}p>\\operatorname{Re}a.",
+          "display": true
+        },
+        {
+          "index": 34,
+          "tex": "p\\ne a",
+          "display": false
+        },
+        {
+          "index": 35,
+          "tex": "-a_0",
+          "display": false
+        },
+        {
+          "index": 36,
+          "tex": "a_0>0",
+          "display": false
+        },
+        {
+          "index": 37,
+          "tex": "p+a_0",
+          "display": false
+        },
+        {
+          "index": 38,
+          "tex": "\\operatorname{Re}p>-a_0",
+          "display": false
+        },
+        {
+          "index": 39,
+          "tex": "e^{ct}h(t)",
+          "display": false
+        },
+        {
+          "index": 40,
+          "tex": "\\sigma=c",
+          "display": false
+        },
+        {
+          "index": 41,
+          "tex": "\\sigma>c",
+          "display": false
+        },
+        {
+          "index": 42,
+          "tex": "1/(\\sigma-c)",
+          "display": false
+        },
+        {
+          "index": 43,
+          "tex": "\\operatorname{Re}\\alpha>-1",
+          "display": false
+        },
+        {
+          "index": 44,
+          "tex": "t^\\alpha=e^{\\alpha\\ln t}",
+          "display": false
+        },
+        {
+          "index": 45,
+          "tex": "p",
+          "display": false
+        },
+        {
+          "index": 46,
+          "tex": "u=pt",
+          "display": false
+        },
+        {
+          "index": 47,
+          "tex": "\\mathcal L[t^\\alpha](p)=\\frac{\\Gamma(\\alpha+1)}{p^{\\alpha+1}},\\qquad\\operatorname{Re}p>0.",
+          "display": true
+        },
+        {
+          "index": 48,
+          "tex": "p",
+          "display": false
+        },
+        {
+          "index": 49,
+          "tex": "\\mathcal L[h]=1/p",
+          "display": false
+        },
+        {
+          "index": 50,
+          "tex": "\\mathcal L[t^n]=n!/p^{n+1}",
+          "display": false
+        },
+        {
+          "index": 51,
+          "tex": "n\\ge0",
+          "display": false
+        },
+        {
+          "index": 52,
+          "tex": "\\mathcal L[\\sqrt t]=\\frac{\\sqrt\\pi}{2p^{3/2}},\\qquad\\mathcal L[t^{-1/2}]=\\frac{\\sqrt\\pi}{p^{1/2}}.",
+          "display": true
+        }
+      ]
+    },
+    {
+      "unit_id": "CH09-S02-SS01",
+      "source_path": "original_text/ch09_s02_ss01.md",
+      "formula_count": 12,
+      "semantic_objects_reviewed": "线性及三角/双曲像的分母正负与不同收敛域。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "\\mathcal L[f]=F",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "\\mathcal L[g]=G",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "\\alpha,\\beta",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "\\mathcal L[\\alpha f+\\beta g]=\\alpha F+\\beta G,\\qquad\\mathcal L^{-1}[\\alpha F+\\beta G]=\\alpha f+\\beta g.",
+          "display": true
+        },
+        {
+          "index": 4,
+          "tex": "\\cos\\omega t",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "\\sin\\omega t",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "2\\mathrm i",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "\\omega",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "\\mathcal L[\\cos\\omega t]=\\frac p{p^2+\\omega^2},\\qquad\\mathcal L[\\sin\\omega t]=\\frac\\omega{p^2+\\omega^2},\\quad\\operatorname{Re}p>0.",
+          "display": true
+        },
+        {
+          "index": 9,
+          "tex": "e^{\\pm\\omega t}",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "\\mathcal L[\\cosh\\omega t]=\\frac p{p^2-\\omega^2},\\qquad\\mathcal L[\\sinh\\omega t]=\\frac\\omega{p^2-\\omega^2},\\quad\\operatorname{Re}p>|\\omega|.",
+          "display": true
+        },
+        {
+          "index": 11,
+          "tex": "\\mathrm i",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH09-S02-SS02",
+      "source_path": "original_text/ch09_s02_ss02.md",
+      "formula_count": 16,
+      "semantic_objects_reviewed": "正时间尺度alpha、微分元1/alpha、像参数p/alpha与半平面。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "F(p)=\\mathcal L[f](p)",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "\\operatorname{Re}p>c",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "f(\\alpha t)",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "\\alpha>0",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "u=\\alpha t",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "\\mathrm dt=\\mathrm du/\\alpha",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "e^{-(p/\\alpha)u}",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "\\mathcal L[f(\\alpha t)](p)=\\frac1\\alpha F\\!\\left(\\frac p\\alpha\\right),\\qquad\\operatorname{Re}p>\\alpha c.",
+          "display": true
+        },
+        {
+          "index": 8,
+          "tex": "\\alpha>1",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "0<\\alpha<1",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "f(t)=e^{-at}h(t)",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "a>0",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "e^{-a\\alpha t}h(t)",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "1/(p+a\\alpha)",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "a",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "k",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH09-S02-SS03",
+      "source_path": "original_text/ch09_s02_ss03.md",
+      "formula_count": 23,
+      "semantic_objects_reviewed": "时间微分边界初值、高阶求和初值和两个初值解。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "f,f'",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "f",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "f(0^+)",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "\\mathcal L[f']=[f(t)e^{-pt}]_{0^+}^{\\infty}+pF=pF-f(0^+).",
+          "display": true
+        },
+        {
+          "index": 4,
+          "tex": "f,f',\\ldots,f^{(n)}",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "n",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "\\mathcal L[f^{(n)}]=p^nF-\\sum_{j=0}^{n-1}p^{n-1-j}f^{(j)}(0^+).",
+          "display": true
+        },
+        {
+          "index": 7,
+          "tex": "p^2F-pf(0^+)-f'(0^+)",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "e^{-at}",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "-a/(p+a)",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "p/(p+a)-1",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "1",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "y'+2y=e^{-t}",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "y(0)=0",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "Y=\\mathcal L[y]",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "(p+2)Y=1/(p+1)",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "Y=1/(p+1)-1/(p+2)",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "y(t)=e^{-t}-e^{-2t}",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "t\\ge0",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "y''+y=t",
+          "display": false
+        },
+        {
+          "index": 20,
+          "tex": "y(0)=y'(0)=0",
+          "display": false
+        },
+        {
+          "index": 21,
+          "tex": "Y=1/[p^2(p^2+1)]=1/p^2-1/(p^2+1)",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "y=t-\\sin t",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH09-S02-SS04",
+      "source_path": "original_text/ch09_s02_ss04.md",
+      "formula_count": 25,
+      "semantic_objects_reviewed": "时间累计F/p、RC电荷积分及两压降之和；积分简记是已定义累计量。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "q(t)=\\int_0^t f(u)\\,\\mathrm du",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "u",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "t",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "q'=f,q(0)=0",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "F=pQ",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "\\mathcal L\\!\\left[\\int_0^t f(u)\\,\\mathrm du\\right]=\\frac{F(p)}p.",
+          "display": true
+        },
+        {
+          "index": 6,
+          "tex": "c",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "f",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "\\operatorname{Re}p>\\max(c,0)",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "q_0",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "q=q_0+\\int_0^t f",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "q_0/p",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "e^{-at}",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "(1-e^{-at})/a",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "1/[p(p+a)]",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "R,C>0",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "E",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "Ri(t)+\\frac1C\\int_0^t i(u)\\,\\mathrm du=E.",
+          "display": true
+        },
+        {
+          "index": 18,
+          "tex": "RI+I/(Cp)=E/p",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "I(p)=\\frac E{R(p+1/(RC))},\\qquad i(t)=\\frac ER e^{-t/(RC)}.",
+          "display": true
+        },
+        {
+          "index": 20,
+          "tex": "u_C=E(1-e^{-t/(RC)})",
+          "display": false
+        },
+        {
+          "index": 21,
+          "tex": "u_R=E e^{-t/(RC)}",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "E",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "u_R+u_C=E",
+          "display": false
+        },
+        {
+          "index": 24,
+          "tex": "RC",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH09-S02-SS05",
+      "source_path": "original_text/ch09_s02_ss05.md",
+      "formula_count": 18,
+      "semantic_objects_reviewed": "像参数导数的(-t)^n、正余弦一次时间因子及t²cos²t的二阶导数。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "p",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "F=\\mathcal L[f]",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "f",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "|f(t)|\\le Ke^{ct}",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "\\operatorname{Re}p\\ge\\sigma_1>c",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "t^n e^{-(\\sigma_1-c)t}",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "F^{(n)}(p)=\\mathcal L[(-t)^nf(t)](p),\\qquad \\mathcal L[t^nf]=(-1)^nF^{(n)},\\quad\\operatorname{Re}p>c.",
+          "display": true
+        },
+        {
+          "index": 7,
+          "tex": "-pt",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "t",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "\\mathcal L[te^{-at}]=1/(p+a)^2",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "\\mathcal L[t\\sin\\omega t]=\\frac{2p\\omega}{(p^2+\\omega^2)^2},\\qquad\\mathcal L[t\\cos\\omega t]=\\frac{p^2-\\omega^2}{(p^2+\\omega^2)^2},",
+          "display": true
+        },
+        {
+          "index": 11,
+          "tex": "\\omega",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "\\operatorname{Re}p>0",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "p/(p^2+\\omega^2)",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "\\omega",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "\\cos^2t=(1+\\cos2t)/2",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "t^2",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "\\begin{aligned}\\mathcal L[t^2\\cos^2t]&=\\frac12\\frac{\\mathrm d^2}{\\mathrm dp^2}\\left(\\frac1p+\\frac p{p^2+4}\\right)\\\\&=\\frac{2(p^6+24p^2+32)}{p^3(p^2+4)^3},\\qquad\\operatorname{Re}p>0.\\end{aligned}",
+          "display": true
+        }
+      ]
+    },
+    {
+      "unit_id": "CH09-S02-SS06",
+      "source_path": "original_text/ch09_s02_ss06.md",
+      "formula_count": 31,
+      "semantic_objects_reviewed": "除t的零端条件、像积分路径、指数差对数支、Si与两个广义积分。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "t",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "t",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "f",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "F=\\mathcal L[f]",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "f(t)/t",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "t\\to0^+",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "\\mathcal L\\!\\left[\\frac{f(t)}t\\right](p)=\\int_p^\\infty F(q)\\,\\mathrm dq.",
+          "display": true
+        },
+        {
+          "index": 7,
+          "tex": "p",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "\\int_p^\\infty e^{-qt}\\,\\mathrm dq=e^{-pt}/t",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "t",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "f=e^{-at}",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "f/t",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "1/t",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "a,b",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "e^{bt}-e^{at}=(b-a)t+O(t^2)",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "\\operatorname{Re}p>\\max(\\operatorname{Re}a,\\operatorname{Re}b)",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "\\mathcal L\\!\\left[\\frac{e^{bt}-e^{at}}t\\right]=\\int_p^\\infty\\left(\\frac1{q-b}-\\frac1{q-a}\\right)\\mathrm dq=\\log\\frac{p-a}{p-b}.",
+          "display": true
+        },
+        {
+          "index": 17,
+          "tex": "0",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "\\operatorname{Re}p>0",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "\\mathcal L[\\sin t/t]=\\int_p^\\infty\\frac{\\mathrm dq}{1+q^2}.",
+          "display": true
+        },
+        {
+          "index": 20,
+          "tex": "p",
+          "display": false
+        },
+        {
+          "index": 21,
+          "tex": "\\pi/2-\\arctan p",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "\\operatorname{Si}(t)=\\int_0^t\\sin u/u\\,\\mathrm du",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "\\mathcal L[\\operatorname{Si}(t)]=\\frac1p\\int_p^\\infty\\frac{\\mathrm dq}{1+q^2}.",
+          "display": true
+        },
+        {
+          "index": 24,
+          "tex": "1/p",
+          "display": false
+        },
+        {
+          "index": 25,
+          "tex": "\\int_0^\\infty f(t)/t\\,\\mathrm dt",
+          "display": false
+        },
+        {
+          "index": 26,
+          "tex": "p\\downarrow0",
+          "display": false
+        },
+        {
+          "index": 27,
+          "tex": "\\int_0^\\infty\\frac{f(t)}t\\,\\mathrm dt=\\int_0^\\infty F(p)\\,\\mathrm dp.",
+          "display": true
+        },
+        {
+          "index": 28,
+          "tex": "\\int_0^\\infty\\sin t/t\\,\\mathrm dt=\\pi/2",
+          "display": false
+        },
+        {
+          "index": 29,
+          "tex": "a,b>0",
+          "display": false
+        },
+        {
+          "index": 30,
+          "tex": "\\int_0^\\infty\\frac{e^{-at}-e^{-bt}}t\\,\\mathrm dt=\\ln\\frac ba.",
+          "display": true
+        }
+      ]
+    },
+    {
+      "unit_id": "CH09-S02-SS07",
+      "source_path": "original_text/ch09_s02_ss07.md",
+      "formula_count": 35,
+      "semantic_objects_reviewed": "同步延迟f(t-tau)h(t-tau)和指数e^(-p*tau)；root的上升演示与衰减示例区分；阶跃分段。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "\\tau>0",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "f_\\tau(t)=f(t-\\tau)h(t-\\tau)=\\begin{cases}0,&t<\\tau,\\\\f(t-\\tau),&t\\ge\\tau.\\end{cases}",
+          "display": true
+        },
+        {
+          "index": 2,
+          "tex": "\\tau",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "u=t-\\tau",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "e^{-pt}=e^{-pu}e^{-p\\tau}",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "u",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "\\mathcal L[f_\\tau](p)=e^{-p\\tau}F(p)",
+          "display": true
+        },
+        {
+          "index": 7,
+          "tex": "\\tau",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "t",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "f(t)h(t-\\tau)",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "f(t)=(1-e^{-t})h(t)",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "f(t-\\tau)h(t-\\tau)",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "e^{-at}h(t)",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "t=\\tau",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "e^{-a(t-\\tau)}h(t-\\tau)",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "e^{-p\\tau}/(p+a)",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "e^{-at}",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "t=1",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "1",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "f(t)=th(t)-(t-1)h(t-1)",
+          "display": false
+        },
+        {
+          "index": 20,
+          "tex": "(1-e^{-p})/p^2",
+          "display": false
+        },
+        {
+          "index": 21,
+          "tex": "0\\le t\\le1",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "1-t",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "g(t)=(1-t)h(t)+(t-1)h(t-1)",
+          "display": false
+        },
+        {
+          "index": 24,
+          "tex": "G(p)=\\frac1p-\\frac1{p^2}+\\frac{e^{-p}}{p^2}.",
+          "display": true
+        },
+        {
+          "index": 25,
+          "tex": "\\operatorname{Re}p>0",
+          "display": false
+        },
+        {
+          "index": 26,
+          "tex": "\\tau",
+          "display": false
+        },
+        {
+          "index": 27,
+          "tex": "E",
+          "display": false
+        },
+        {
+          "index": 28,
+          "tex": "K(t)=nE",
+          "display": false
+        },
+        {
+          "index": 29,
+          "tex": "(n-1)\\tau\\le t<n\\tau",
+          "display": false
+        },
+        {
+          "index": 30,
+          "tex": "n\\ge1",
+          "display": false
+        },
+        {
+          "index": 31,
+          "tex": "K(t)=E\\sum_{n=0}^\\infty h(t-n\\tau)",
+          "display": false
+        },
+        {
+          "index": 32,
+          "tex": "\\mathcal L[K](p)=\\frac Ep\\sum_{n=0}^\\infty e^{-np\\tau}=\\frac E{p(1-e^{-p\\tau})},\\qquad\\operatorname{Re}p>0.",
+          "display": true
+        },
+        {
+          "index": 33,
+          "tex": "e^{-p\\tau}",
+          "display": false
+        },
+        {
+          "index": 34,
+          "tex": "|e^{-p\\tau}|<1",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH09-S02-SS08",
+      "source_path": "original_text/ch09_s02_ss08.md",
+      "formula_count": 21,
+      "semantic_objects_reviewed": "复lambda指数包络、p-lambda平移及实部收敛边界，幂与振荡像。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "0",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "e^{\\lambda t}",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "e^{\\lambda t}e^{-pt}=e^{-(p-\\lambda)t}",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "\\mathcal L[e^{\\lambda t}f(t)](p)=F(p-\\lambda),\\qquad\\operatorname{Re}p>c+\\operatorname{Re}\\lambda,",
+          "display": true
+        },
+        {
+          "index": 4,
+          "tex": "\\operatorname{Re}p>c",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "\\lambda",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "\\mathcal L^{-1}[F(p-\\lambda)]=e^{\\lambda t}f(t)",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "e^{-at}h(t)",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "e^{ct}",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "e^{-(a-c)t}h(t)",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "1/(p+a-c)",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "c",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "p=s",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "s+a-c>0",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "p",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "\\begin{aligned}\\mathcal L[e^{\\lambda t}t^n]&=\\frac{n!}{(p-\\lambda)^{n+1}},\\quad n\\ge0,\\\\\\mathcal L[e^{\\lambda t}\\sin\\omega t]&=\\frac\\omega{(p-\\lambda)^2+\\omega^2},\\\\\\mathcal L[e^{\\lambda t}\\cos\\omega t]&=\\frac{p-\\lambda}{(p-\\lambda)^2+\\omega^2}.\\end{aligned}",
+          "display": true
+        },
+        {
+          "index": 16,
+          "tex": "\\omega",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "\\operatorname{Re}p>\\operatorname{Re}\\lambda",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "1/(p-3)^4",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "t^3e^{3t}h(t)/6",
+          "display": false
+        },
+        {
+          "index": 20,
+          "tex": "e^{-p\\tau}",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH09-S02-SS09",
+      "source_path": "original_text/ch09_s02_ss09.md",
+      "formula_count": 19,
+      "semantic_objects_reviewed": "单周期积分和几何重复因子，全波正弦实际周期和coth。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "T>0",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "f(t+T)=f(t)",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "t\\ge0",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "A(p)=\\int_0^T f(u)e^{-pu}\\,\\mathrm du",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "n",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "e^{-npT}A(p)",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "\\operatorname{Re}p>0",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "\\mathcal L[f](p)=\\frac1{1-e^{-pT}}\\int_0^T f(u)e^{-pu}\\,\\mathrm du.",
+          "display": true
+        },
+        {
+          "index": 8,
+          "tex": "T",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "u",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "\\omega>0",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "|\\sin\\omega t|",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "T=\\pi/\\omega",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "\\omega(1+e^{-pT})/(p^2+\\omega^2)",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "\\begin{aligned}\\mathcal L[|\\sin\\omega t|]&=\\frac\\omega{p^2+\\omega^2}\\frac{1+e^{-pT}}{1-e^{-pT}}\\\\&=\\frac\\omega{p^2+\\omega^2}\\coth\\frac{\\pi p}{2\\omega},\\qquad\\operatorname{Re}p>0.\\end{aligned}",
+          "display": true
+        },
+        {
+          "index": 15,
+          "tex": "2\\pi/\\omega",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "e^{-au}",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "0\\le u<T",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "[1-e^{-(p+a)T}]/[(p+a)(1-e^{-pT})]",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH09-S02-SS10",
+      "source_path": "original_text/ch09_s02_ss10.md",
+      "formula_count": 33,
+      "semantic_objects_reviewed": "因果卷积限、增长界、指数加权、像乘积及积分方程解。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "(f*g)(t)=\\int_{-\\infty}^{\\infty}f(t-u)g(u)\\,\\mathrm du",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "f*g=g*f",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "f*(g_1*g_2)=(f*g_1)*g_2",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "f*(g_1+g_2)=f*g_1+f*g_2",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "f(t)g(t)",
+          "display": false
+        },
+        {
+          "index": 5,
+          "tex": "u",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "t-u",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "0\\le u\\le t",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "(f_1*f_2)(t)=\\begin{cases}0,&t\\le0,\\\\\\displaystyle\\int_0^t f_1(t-u)f_2(u)\\,\\mathrm du,&t>0.\\end{cases}",
+          "display": true
+        },
+        {
+          "index": 9,
+          "tex": "c_1,c_2",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "c=\\max(c_1,c_2)",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "Mt e^{ct}",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "\\varepsilon>0",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "M_\\varepsilon e^{(c+\\varepsilon)t}",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "e^{-\\alpha t}(f_1*f_2)=(e^{-\\alpha t}f_1)*(e^{-\\alpha t}f_2)",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "\\operatorname{Re}p>\\max(c_1,c_2)",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "e^{-pt}",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "\\mathcal L[f_1*f_2](p)=F_1(p)F_2(p),\\qquad\\mathcal L^{-1}[F_1F_2]=f_1*f_2.",
+          "display": true
+        },
+        {
+          "index": 18,
+          "tex": "f(\\tau)=e^{-a\\tau}",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "g(t-\\tau)=e^{-b(t-\\tau)}",
+          "display": false
+        },
+        {
+          "index": 20,
+          "tex": "a,b>0",
+          "display": false
+        },
+        {
+          "index": 21,
+          "tex": "t",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "0\\le\\tau\\le t",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "t",
+          "display": false
+        },
+        {
+          "index": 24,
+          "tex": "a\\ne b",
+          "display": false
+        },
+        {
+          "index": 25,
+          "tex": "(e^{-at}-e^{-bt})/(b-a)",
+          "display": false
+        },
+        {
+          "index": 26,
+          "tex": "a=b",
+          "display": false
+        },
+        {
+          "index": 27,
+          "tex": "te^{-at}",
+          "display": false
+        },
+        {
+          "index": 28,
+          "tex": "1/[(p+a)(p+b)]",
+          "display": false
+        },
+        {
+          "index": 29,
+          "tex": "y(t)=at+\\int_0^t y(u)\\sin(t-u)\\,\\mathrm du",
+          "display": false
+        },
+        {
+          "index": 30,
+          "tex": "Y=a/p^2+Y/(p^2+1)",
+          "display": false
+        },
+        {
+          "index": 31,
+          "tex": "Y=a(1/p^2+1/p^4)",
+          "display": false
+        },
+        {
+          "index": 32,
+          "tex": "y(t)=a\\left(t+\\frac{t^3}{6}\\right),\\qquad t\\ge0.",
+          "display": true
+        }
+      ]
+    },
+    {
+      "unit_id": "CH09-S03",
+      "source_path": "original_text/ch09_s03.md",
+      "formula_count": 4,
+      "semantic_objects_reviewed": "像结构决定反演选法，延迟与因果零段。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "Y(p)",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "y(t)",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "p",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "e^{-p\\tau}",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH09-S03-SS01",
+      "source_path": "original_text/ch09_s03_ss01.md",
+      "formula_count": 26,
+      "semantic_objects_reviewed": "全部重极点幂和阶乘、二次配方、异频及平方二次因子的连续极限。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "F(p)=A(p)/B(p)",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "\\deg A<\\deg B",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "a_k",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "m_k",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "F(p)=\\sum_{k=1}^m\\sum_{s=1}^{m_k}\\frac{A_{ks}}{(p-a_k)^s}.",
+          "display": true
+        },
+        {
+          "index": 5,
+          "tex": "m_k",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "f(t)=h(t)\\sum_{k=1}^m\\sum_{s=1}^{m_k}A_{ks}\\frac{t^{s-1}}{(s-1)!}e^{a_kt}",
+          "display": true
+        },
+        {
+          "index": 7,
+          "tex": "\\operatorname{Re}p>\\max_k\\operatorname{Re}a_k",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "(p+\\alpha)^2+\\omega^2",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "C(p+\\alpha)+D\\omega",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "e^{-\\alpha t}(C\\cos\\omega t+D\\sin\\omega t)",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "a,b\\ne0",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "a^2\\ne b^2",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "\\mathcal L^{-1}\\!\\left[\\frac1{(p^2+a^2)(p^2+b^2)}\\right]=\\frac{h(t)}{b^2-a^2}\\left(\\frac{\\sin at}a-\\frac{\\sin bt}b\\right).",
+          "display": true
+        },
+        {
+          "index": 14,
+          "tex": "1/a,1/b",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "\\frac{p+7}{(p-1)(p^2+2p+5)}=\\frac1{p-1}-\\frac{(p+1)+1}{(p+1)^2+4}.",
+          "display": true
+        },
+        {
+          "index": 16,
+          "tex": "1",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "2",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "f(t)=\\left[e^t-e^{-t}\\left(\\cos2t+\\frac12\\sin2t\\right)\\right]h(t).",
+          "display": true
+        },
+        {
+          "index": 19,
+          "tex": "1",
+          "display": false
+        },
+        {
+          "index": 20,
+          "tex": "-1\\pm2\\mathrm i",
+          "display": false
+        },
+        {
+          "index": 21,
+          "tex": "-\\mathrm d[a/(p^2+a^2)]/\\mathrm dp=2ap/(p^2+a^2)^2",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "2ap",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "\\mathcal L^{-1}\\!\\left[\\frac1{(p^2+a^2)^2}\\right]=\\frac{\\sin at-at\\cos at}{2a^3}h(t),\\qquad a\\ne0.",
+          "display": true
+        },
+        {
+          "index": 24,
+          "tex": "a=0",
+          "display": false
+        },
+        {
+          "index": 25,
+          "tex": "t^3h(t)/6",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH09-S03-SS02",
+      "source_path": "original_text/ch09_s03_ss02.md",
+      "formula_count": 41,
+      "semantic_objects_reviewed": "竖线方向dp=i*domega、带e^(pt)的留数、重极点时间多项式、方程组和延迟双曲响应。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "f",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "c",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "F=\\mathcal L[f]",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "\\sigma>c",
+          "display": false
+        },
+        {
+          "index": 4,
+          "tex": "f(t)=\\frac1{2\\pi\\mathrm i}\\lim_{R\\to\\infty}\\int_{\\sigma-\\mathrm iR}^{\\sigma+\\mathrm iR}F(p)e^{pt}\\,\\mathrm dp.",
+          "display": true
+        },
+        {
+          "index": 5,
+          "tex": "\\operatorname{Re}p=\\sigma",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "f",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "p=\\sigma+\\mathrm i\\omega",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "\\mathrm dp=\\mathrm i\\,\\mathrm d\\omega",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "\\mathrm i",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "F(p)=1/(p+a)",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "\\mathrm dp",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "\\Omega",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "e^{-at}",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "F",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "p_k",
+          "display": false
+        },
+        {
+          "index": 16,
+          "tex": "F(p)\\to0",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "\\int|F(p)|\\,|\\mathrm dp|<\\infty",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "F",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "t>0",
+          "display": false
+        },
+        {
+          "index": 20,
+          "tex": "f(t)=\\sum_k\\operatorname{Res}\\bigl(F(p)e^{pt},p_k\\bigr).",
+          "display": true
+        },
+        {
+          "index": 21,
+          "tex": "1/(p+a)",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "p_k",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "e^{p_kt}\\operatorname{Res}(F,p_k)",
+          "display": false
+        },
+        {
+          "index": 24,
+          "tex": "F(p)e^{pt}",
+          "display": false
+        },
+        {
+          "index": 25,
+          "tex": "\\begin{aligned}\\mathcal L^{-1}\\!\\left[\\frac{2p^2-4p}{(2p+1)(p^2+1)}\\right]&=(e^{-t/2}-2\\sin t)h(t),\\\\\\mathcal L^{-1}\\!\\left[\\frac{2p^2+3p+3}{(p+1)(p+3)^3}\\right]&=\\left[\\frac14e^{-t}+\\left(-3t^2+\\frac32t-\\frac14\\right)e^{-3t}\\right]h(t).\\end{aligned}",
+          "display": true
+        },
+        {
+          "index": 26,
+          "tex": "-1/2",
+          "display": false
+        },
+        {
+          "index": 27,
+          "tex": "e^{-t/2}",
+          "display": false
+        },
+        {
+          "index": 28,
+          "tex": "x'-x-2y=t",
+          "display": false
+        },
+        {
+          "index": 29,
+          "tex": "y'-2x-y=t",
+          "display": false
+        },
+        {
+          "index": 30,
+          "tex": "x(0)=2,y(0)=4",
+          "display": false
+        },
+        {
+          "index": 31,
+          "tex": "(p-3)(X+Y)=2/p^2+6",
+          "display": false
+        },
+        {
+          "index": 32,
+          "tex": "(p+1)(X-Y)=-2",
+          "display": false
+        },
+        {
+          "index": 33,
+          "tex": "t\\ge0",
+          "display": false
+        },
+        {
+          "index": 34,
+          "tex": "\\begin{aligned}x(t)&=\\frac{28}9e^{3t}-\\frac t3-\\frac19-e^{-t},\\\\y(t)&=\\frac{28}9e^{3t}-\\frac t3-\\frac19+e^{-t}.\\end{aligned}",
+          "display": true
+        },
+        {
+          "index": 35,
+          "tex": "6,-2",
+          "display": false
+        },
+        {
+          "index": 36,
+          "tex": "\\mathcal L^{-1}[e^{-p\\tau}F(p)]=f(t-\\tau)h(t-\\tau)",
+          "display": false
+        },
+        {
+          "index": 37,
+          "tex": "(p^2-2)^{-1}",
+          "display": false
+        },
+        {
+          "index": 38,
+          "tex": "\\sinh(\\sqrt2t)/\\sqrt2",
+          "display": false
+        },
+        {
+          "index": 39,
+          "tex": "\\begin{aligned}\\mathcal L^{-1}\\!\\left[\\frac{1-e^{-4p}}{p^2-2}\\right]=\\frac1{\\sqrt2}\\bigl[&\\sinh(\\sqrt2t)h(t)\\\\-&\\sinh(\\sqrt2(t-4))h(t-4)\\bigr].\\end{aligned}",
+          "display": true
+        },
+        {
+          "index": 40,
+          "tex": "t<4",
+          "display": false
+        }
+      ]
+    },
+    {
+      "unit_id": "CH09-S03-SS03",
+      "source_path": "original_text/ch09_s03_ss03.md",
+      "formula_count": 57,
+      "semantic_objects_reviewed": "收敛的外部罗朗级数、Gamma阶乘系数、Bessel与erf卷积、冲激0^-、单双边Z与振动核；root表约定未改。",
+      "review": "逐串审看命令/变量/关系/上下标/域与周围文字，核对原文和已核知识；未以KaTeX可编译代替语义。",
+      "formulas": [
+        {
+          "index": 0,
+          "tex": "F",
+          "display": false
+        },
+        {
+          "index": 1,
+          "tex": "F(\\infty)=0",
+          "display": false
+        },
+        {
+          "index": 2,
+          "tex": "|p|>R",
+          "display": false
+        },
+        {
+          "index": 3,
+          "tex": "F(p)=\\sum_{k=1}^\\infty\\frac{c_k}{p^k},",
+          "display": true
+        },
+        {
+          "index": 4,
+          "tex": "f(t)=\\sum_{k=1}^\\infty\\frac{c_k}{(k-1)!}t^{k-1}.",
+          "display": true
+        },
+        {
+          "index": 5,
+          "tex": "t\\ge0",
+          "display": false
+        },
+        {
+          "index": 6,
+          "tex": "h(t)f(t)",
+          "display": false
+        },
+        {
+          "index": 7,
+          "tex": "1/(p+a)",
+          "display": false
+        },
+        {
+          "index": 8,
+          "tex": "e^{-at}",
+          "display": false
+        },
+        {
+          "index": 9,
+          "tex": "f",
+          "display": false
+        },
+        {
+          "index": 10,
+          "tex": "|f(z)|\\le Ke^{c|z|}",
+          "display": false
+        },
+        {
+          "index": 11,
+          "tex": "\\mathcal L[hf]=\\sum_{k\\ge1}c_k/p^k",
+          "display": false
+        },
+        {
+          "index": 12,
+          "tex": "|f(t)|\\le Ke^{ct}",
+          "display": false
+        },
+        {
+          "index": 13,
+          "tex": "e^{-1/p}",
+          "display": false
+        },
+        {
+          "index": 14,
+          "tex": "n\\ge0",
+          "display": false
+        },
+        {
+          "index": 15,
+          "tex": "\\mathcal L^{-1}[p^{-n-1}e^{-1/p}]=h(t)\\sum_{k=0}^\\infty\\frac{(-1)^kt^{n+k}}{k!(n+k)!}=h(t)t^{n/2}J_n(2\\sqrt t).",
+          "display": true
+        },
+        {
+          "index": 16,
+          "tex": "J_n",
+          "display": false
+        },
+        {
+          "index": 17,
+          "tex": "n=0",
+          "display": false
+        },
+        {
+          "index": 18,
+          "tex": "h(t)J_0(2\\sqrt t)",
+          "display": false
+        },
+        {
+          "index": 19,
+          "tex": "\\mathcal L^{-1}[FG](t)=\\int_0^t f(t-u)g(u)\\,\\mathrm du",
+          "display": false
+        },
+        {
+          "index": 20,
+          "tex": "a>0",
+          "display": false
+        },
+        {
+          "index": 21,
+          "tex": "\\sqrt a/[p\\sqrt{p+a}]",
+          "display": false
+        },
+        {
+          "index": 22,
+          "tex": "1/p",
+          "display": false
+        },
+        {
+          "index": 23,
+          "tex": "(p+a)^{-1/2}",
+          "display": false
+        },
+        {
+          "index": 24,
+          "tex": "e^{-at}/\\sqrt{\\pi t}",
+          "display": false
+        },
+        {
+          "index": 25,
+          "tex": "t>0",
+          "display": false
+        },
+        {
+          "index": 26,
+          "tex": "\\sqrt{\\frac a\\pi}\\int_0^t\\frac{e^{-au}}{\\sqrt u}\\,\\mathrm du=\\operatorname{erf}(\\sqrt{at}),",
+          "display": true
+        },
+        {
+          "index": 27,
+          "tex": "\\operatorname{erf}(x)=2\\int_0^x e^{-u^2}\\,\\mathrm du/\\sqrt\\pi",
+          "display": false
+        },
+        {
+          "index": 28,
+          "tex": "\\mathcal L^{-1}[\\sqrt a/(p\\sqrt{p+a})]=\\operatorname{erf}(\\sqrt{at})h(t)",
+          "display": false
+        },
+        {
+          "index": 29,
+          "tex": "\\delta(t)",
+          "display": false
+        },
+        {
+          "index": 30,
+          "tex": "0^-",
+          "display": false
+        },
+        {
+          "index": 31,
+          "tex": "\\mathcal L[\\delta](p)=\\int_{0^-}^\\infty\\delta(t)e^{-pt}\\,\\mathrm dt=1.",
+          "display": true
+        },
+        {
+          "index": 32,
+          "tex": "T>0",
+          "display": false
+        },
+        {
+          "index": 33,
+          "tex": "f_T(t)=\\sum_{n=0}^\\infty f(nT)\\delta(t-nT)",
+          "display": false
+        },
+        {
+          "index": 34,
+          "tex": "\\sum_{n=0}^\\infty f(nT)e^{-npT}",
+          "display": false
+        },
+        {
+          "index": 35,
+          "tex": "z=e^{pT}",
+          "display": false
+        },
+        {
+          "index": 36,
+          "tex": "f_n=f(nT)",
+          "display": false
+        },
+        {
+          "index": 37,
+          "tex": "\\sum_{n\\ge0}f_nz^{-n}",
+          "display": false
+        },
+        {
+          "index": 38,
+          "tex": "Z(z)=\\sum_{n=-\\infty}^{\\infty}f_nz^{-n}.",
+          "display": true
+        },
+        {
+          "index": 39,
+          "tex": "f_n=2^{-|n|}",
+          "display": false
+        },
+        {
+          "index": 40,
+          "tex": "\\sum_{m\\ge0}(z/2)^m",
+          "display": false
+        },
+        {
+          "index": 41,
+          "tex": "\\sum_{n\\ge1}(1/(2z))^n",
+          "display": false
+        },
+        {
+          "index": 42,
+          "tex": "|z|<2",
+          "display": false
+        },
+        {
+          "index": 43,
+          "tex": "|z|>1/2",
+          "display": false
+        },
+        {
+          "index": 44,
+          "tex": "Z(z)=-\\frac{3z}{2(z-2)(z-1/2)},\\qquad\\frac12<|z|<2.",
+          "display": true
+        },
+        {
+          "index": 45,
+          "tex": "\\sin\\omega t=(e^{\\mathrm i\\omega t}-e^{-\\mathrm i\\omega t})/(2\\mathrm i)",
+          "display": false
+        },
+        {
+          "index": 46,
+          "tex": "\\mathcal L[f(t)\\sin\\omega t](p)=\\frac{F(p-\\mathrm i\\omega)-F(p+\\mathrm i\\omega)}{2\\mathrm i},\\qquad\\omega\\in\\mathbb R,",
+          "display": true
+        },
+        {
+          "index": 47,
+          "tex": "y''+\\omega^2y=f(t)",
+          "display": false
+        },
+        {
+          "index": 48,
+          "tex": "y(0)=y'(0)=0",
+          "display": false
+        },
+        {
+          "index": 49,
+          "tex": "\\omega\\ne0",
+          "display": false
+        },
+        {
+          "index": 50,
+          "tex": "Y=F/(p^2+\\omega^2)",
+          "display": false
+        },
+        {
+          "index": 51,
+          "tex": "y(t)=\\frac1\\omega\\int_0^t f(u)\\sin\\!\\bigl(\\omega(t-u)\\bigr)\\,\\mathrm du.",
+          "display": true
+        },
+        {
+          "index": 52,
+          "tex": "\\omega=0",
+          "display": false
+        },
+        {
+          "index": 53,
+          "tex": "t-u",
+          "display": false
+        },
+        {
+          "index": 54,
+          "tex": "\\operatorname{erfc}(x)=1-\\operatorname{erf}(x)",
+          "display": false
+        },
+        {
+          "index": 55,
+          "tex": "J_\\nu",
+          "display": false
+        },
+        {
+          "index": 56,
+          "tex": "I_\\nu",
+          "display": false
+        }
+      ]
+    }
+  ],
+  "previous_validation_limitation": "原先1028式KaTeX严格通过只证明可编译，不能发现Gamma/alpha/sin被读成字母乘积；本报告补充语义逐串核查。",
+  "verification": {
+    "status": "pass",
+    "body_math_strings": 1034,
+    "all_math_spans_in_body_coverage_and_media": 2082,
+    "strict_katex_errors": [],
+    "unexpected_control_characters": 0,
+    "coverage_ids": 132,
+    "all_coverage_excerpts_exact_unique_paragraphs": true,
+    "semantic_command_scan": "After admitting legitimate operatorname labels, no naked Gamma/alpha/beta/frac/sin/cos/exp/log/in/equiv command remnants remain; all 1034 body math strings were reviewed against the unit source/context."
+  }
+}

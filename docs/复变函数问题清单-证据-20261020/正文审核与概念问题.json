@@ -1,0 +1,233 @@
+{
+  "root": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run",
+  "audit_count": 76,
+  "verified_count": 60,
+  "known_error_count": 16,
+  "all_known_audit_hashes_match_current": true,
+  "units": [
+    {
+      "unit_id": "CH01-S01-SS04",
+      "title": "复数的乘方和开方",
+      "source_title": "### 1.1.4 复数的乘方和开方",
+      "audit_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/text_audit/CH01-S01-SS04.json",
+      "content_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/content/CH01-S01-SS04/revisions/000003.json",
+      "revision": 3,
+      "audit_hash_matches_current_head": true,
+      "status": "known_error",
+      "reasons": [
+        "在开方部分，正文多处使用 $\\sqrt[n]{r}$ 表示算术根，而教材本节明确用圆括号 $(\\sqrt[n]{r})$ 区分唯一正实根与多值方根，且正文链接到 [[CONCEPT:C-0053|算术根]]，该卡说明“圆括号表示 $\\rho$ 是 $r$ 的唯一正实根”。当前公式应改为 $(\\sqrt[n]{r})$，例如开方推导中的 $\\rho=(\\sqrt[n]{r})$、根公式中的 $w_k=(\\sqrt[n]{r})(...)$，以及例题 EX-CUBE-ROOT-MINUS-8 步骤中的 $\\sqrt[3]{8}$ 应写为 $(\\sqrt[3]{8})$，否则读者打开概念卡会看到圆括号约定与正文不符，且可能把算术根与多值根记号混淆。"
+      ],
+      "body_char_count": 3728
+    },
+    {
+      "unit_id": "CH01-S02-SS02",
+      "title": "区域与曲线",
+      "source_title": "### 1.2.2 区域与曲线",
+      "audit_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/text_audit/CH01-S02-SS02.json",
+      "content_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/content/CH01-S02-SS02/revisions/000003.json",
+      "revision": 3,
+      "audit_hash_matches_current_head": true,
+      "status": "known_error",
+      "reasons": [
+        "单连通区域示例处写“上半圆 |z|<1, Im z>0（也可写成 0<arg z<π）”。后者只表示上半平面，未限制 |z|<1，并不等于上半圆盘。应改为“上半圆盘 |z|<1, Im z>0（也可写成 |z|<1, 0<arg z<π）”，否则会把上半圆盘与上半平面混淆。；在定义约当曲线前写“为了把‘边界’这种不会自交的曲线单独拿出来”。区域边界不一定无重点或为简单曲线；这是把常见简单边界说成一般性质。应加限定，如“为了描述常见区域中由无重点曲线组成的边界”或明确“本课程后续通常考虑简单闭曲线边界，但并非所有区域边界都无重点”。；注释 MULTIPLY-CONNECTED-EXAMPLES 中“把一个单连通区域……去掉一条割痕，连通性可能仍保持，但单连通性被破坏”不成立。反例：单位圆盘 |z|<1 是单连通区域，去掉径向割痕 [0,1] 后所得开集仍连通且仍单连通。应把割痕的情形改为“需具体判断，不一定破坏单连通性”，或举出真正会破坏单连通性的割痕条件。"
+      ],
+      "body_char_count": 2523
+    },
+    {
+      "unit_id": "CH02-S05-SS02",
+      "title": "根式函数",
+      "source_title": "### 2.5.2 根式函数",
+      "audit_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/text_audit/CH02-S05-SS02.json",
+      "content_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/content/CH02-S05-SS02/revisions/000003.json",
+      "revision": 3,
+      "audit_hash_matches_current_head": true,
+      "status": "known_error",
+      "reasons": [
+        "公共概念 C-0127“单值连续分支”的 formal 仍有明确 OCR/排版错误，但当前 content.corrections 未提出修正。正文概念块正确写为“按上述方式在 $G$ 内确定的单值函数，称为 $\\sqrt[n]{z}$ 在 $G$ 内的一个单值连续分支”，并链接 [[CONCEPT:C-0127|单值连续分支]]；读者打开该概念卡片会看到原值“这样确定的单值函数，叫做 $z_e^*$ 在 $G$ 内的一个单位连续分支。显然，在 $G$ 内有 $n$ 个单值连续分支。”其中 $z_e^*$ 是未定义符号，且“单位连续分支”应为“单值连续分支”。应在 content.corrections 中补充 C-0127 修正：original 为该 formal 当前值，corrected 例如“这样确定的单值函数，叫做 $\\sqrt[n]{z}$ 在 $G$ 内的一个单值连续分支。显然，在 $G$ 内有 $n$ 个单值连续分支。”，并保留 source_refs 用 kind=\"concept\"、concept_id=\"C-0127\"、json_pointer=\"/formal\" 定位。"
+      ],
+      "body_char_count": 9532
+    },
+    {
+      "unit_id": "CH02-S05-SS07",
+      "title": "一般幂函数",
+      "source_title": "### 2.5.7 一般幂函数",
+      "audit_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/text_audit/CH02-S05-SS07.json",
+      "content_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/content/CH02-S05-SS07/revisions/000003.json",
+      "revision": 3,
+      "audit_hash_matches_current_head": true,
+      "status": "known_error",
+      "reasons": [
+        "当前冻结公共概念 C-0522 的 formal 仍存在明确公式错误：`/frozen_context/source_context/concept_index/concepts/256/formal` 为“当 $\\alpha$ 为正整数 $n$ 时，$z^n=\\exp[n(\\ln|z|+\\operatorname{iarg}z)]=|z|^n\\exp(\\operatorname{iarg}z)$”，最后一项缺少因子 $n$。按该定义展开应为 $|z|^n\\exp(\\mathrm{i}n\\arg z)$，所以卡片会把单值性公式写错。正文本地公式虽已改正，且正文用 `[[CONCEPT:C-0522|正整数次幂的单值性]]` 链接，但 content.corrections 为空，未按公共概念勘误要求提出修正版。应在 content.corrections 中新增一条：kind=concept、真实 concept_id=C-0522、json_pointer=\"/formal\"，original 为上述当前完整值，corrected 改为“当 $\\alpha$ 为正整数 $n$ 时，$z^{n}=\\exp[n(\\ln|z|+\\mathrm{i}\\arg z)]=|z|^{n}\\exp(\\mathrm{i}n\\arg z)$，与通常幂函数一致，是一个单值函数”，reason 说明展开 $n$ 后指数中必须有 $n\\arg z$。"
+      ],
+      "body_char_count": 7113
+    },
+    {
+      "unit_id": "CH04-S02",
+      "title": "调和函数的性质和狄利克雷问题",
+      "source_title": "## §4.2 调和函数的性质和狄利克雷问题",
+      "audit_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/text_audit/CH04-S02.json",
+      "content_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/content/CH04-S02/revisions/000003.json",
+      "revision": 3,
+      "audit_hash_matches_current_head": true,
+      "status": "known_error",
+      "reasons": [
+        "在 body_markdown 的“广义狄氏问题”部分，紧接“圆内广义狄氏问题的解是泊松积分”的公式左端仍写为 \\(\\nu(z)\\)，即 $$\\nu(z)=\\frac1{2\\pi}\\int_0^{2\\pi}u(R,\\theta)\\frac{R^2-r^2}{R^2-2Rr\\cos(\\theta-\\varphi)+r^2}\\,\\mathrm d\\theta .$$ 但 \\\\(\\nu\\\\) 在本节未定义，所求函数应为 \\\\(u\\\\)；下文又写“这里等号左边的 $u(z)$ 就是……”，与公式直接矛盾。上一张 ticket 已要求改为 \\\\(u(z)\\\\)，当前仍未修复。应将公式左端改为 \\\\(u(z)\\\\)，并让该句符号说明与公式一致。"
+      ],
+      "body_char_count": 3245
+    },
+    {
+      "unit_id": "CH05-S05",
+      "title": "解析函数的孤立奇点",
+      "source_title": "## §5.5 解析函数的孤立奇点",
+      "audit_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/text_audit/CH05-S05.json",
+      "content_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/content/CH05-S05/revisions/000003.json",
+      "revision": 3,
+      "audit_hash_matches_current_head": true,
+      "status": "known_error",
+      "reasons": [
+        "annotations 中 PITFALL-LIMIT-FINITE 的 markdown 有知识错误：原文说当 f(a)≠0 时若 K=g/f 的极限为有限 L，则 g=fK 的极限为 f(a)L≠0，不是 0；但若 L=0，即使 f(a)≠0，该极限也是 0。应改为极限为 f(a)L，只当 L≠0 时非零；无论 L 是否为零，极限有限已足可由可去奇点判别推论推出矛盾，不应断言 f(a)L≠0。；E17 Step S4 在 A=0,B=0 情形未排除 F=fg 在 a 附近恒为零：原文直接设 F 的零点阶 m≥1，但若 F≡0 则零点阶无定义，后续 F=(z-a)^m φ 且 φ(a)≠0 不成立。应补一句：f 有有限阶零点 n，故在某去心邻域内 f≠0；若 F≡0，则 g=0，于是 a 是 g 的可去奇点，与 g 本性矛盾；所以 F 不恒为零，才能设零点阶。"
+      ],
+      "body_char_count": 4493
+    },
+    {
+      "unit_id": "CH06-S02-SS04",
+      "title": "杂例：辅助函数与辅助闭路的选择",
+      "source_title": "### 6.2.4 杂例",
+      "audit_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/text_audit/CH06-S02-SS04.json",
+      "content_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/content/CH06-S02-SS04/revisions/000003.json",
+      "revision": 3,
+      "audit_hash_matches_current_head": true,
+      "status": "known_error",
+      "reasons": [
+        "在 JORDAN-NOTE 的约当引理反向适用说明中，条件表述有误：原文写“相应结论要换成对 $a<0$ 或下半平面的圆弧”，把必须同时成立的两个条件用“或”并列。事实上若只有 $a<0$ 但圆弧仍在上半平面，或只有圆弧在下半平面而 $a>0$，$|\\mathrm{e}^{iaz}|=\\mathrm{e}^{-a\\operatorname{Im}z}$ 仍会指数增长，约当引理不适用。应改为“需同时换成 $a<0$ 且圆弧在下半平面”，或等价地表述为保持 $-a\\operatorname{Im}z\\le0$（即 $a$ 与 $\\operatorname{Im}z$ 同号）才会得到衰减。当前表述会误导读者对约当引理适用条件的判断。"
+      ],
+      "body_char_count": 3088
+    },
+    {
+      "unit_id": "CH07-S01",
+      "title": "唯一性定理和解析开拓的概念",
+      "source_title": "## §7.1 唯一性定理和解析开拓的概念",
+      "audit_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/text_audit/CH07-S01.json",
+      "content_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/content/CH07-S01/revisions/000003.json",
+      "revision": 3,
+      "audit_hash_matches_current_head": true,
+      "status": "known_error",
+      "reasons": [
+        "EX-POWER-SERIES-CONT 第 1 步使用 [[CONCEPT:C-0256|达朗贝尔公式]]，但该冻结条目 C-0256 的 formal 中比值分支写成了 $\\lim_{n\\to+\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r$，并称 $R=1/r$。这一分支有误：按幂级数比式法应为 $\\lim |a_{n+1}/a_n|=r$ 才可推出 $R=1/r$；例如 $a_n=2^{-n}$ 时当前公式会得到 $r=2,R=1/2$，而正确收敛半径为 $2$。当前本节的自身计算虽写成正确的 $\\lim |a_{n+1}/a_n|=1$，但读者点开 C-0256 卡片仍会看到错误公式。当前 content.corrections 为空，应新增公共修正条目，将 C-0256 的 /formal 中 $\\lim \\left|\\frac{a_{n-1}}{a_n}\\right|=r$ 改为 $\\lim \\left|\\frac{a_{n+1}}{a_n}\\right|=r$，并保留根式分支 $\\lim \\sqrt[n]{|a_n|}=r$ 及 $R=1/r$；source_refs 用 kind=concept、concept_id=C-0256、json_pointer=/formal。"
+      ],
+      "body_char_count": 3449
+    },
+    {
+      "unit_id": "CH08-S04-SS02",
+      "title": "8.4.2 变换 $w=e^{z}$ 与 $w=\\mathrm{Ln}\\,z$",
+      "source_title": "### 8.4.2 变换 w = e^{z} 和 w = \\mathrm{Ln}z",
+      "audit_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/text_audit/CH08-S04-SS02.json",
+      "content_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/content/CH08-S04-SS02/revisions/000003.json",
+      "revision": 3,
+      "audit_hash_matches_current_head": true,
+      "status": "known_error",
+      "reasons": [
+        "body_markdown 第 3 段概念块中“不跨过正实轴，即它的辐角范围可（必要时整体加减 $2\\pi$）等价地取为 $0<a<b<2\\pi$”把条件写得过强，且“即”构成错误等价。反例：角域 $0<\\arg z<\\pi$（上半平面）位于沿正实轴割开的 $D$ 内，不跨过正实轴，主支 $(\\mathrm{Ln}\\,z)_0$ 会把它保形映成 $0<\\operatorname{Im} w<\\pi$；但它不能写成 $0<a<b<2\\pi$。应将条件改为“该角域在 $D$ 内且不跨过正实轴”，不要强行翻译成严格 $0<a<b<2\\pi$；同步修正 LOG-IMAGE 中同样过强的表述。；当前 content.corrections 为空，但链接到公共概念 C-0694 的卡片仍采用 source_text 376-471 的原文“其中每一个分支都可用来作保形变换，它们分别把顶点在 $z=0$ 的角域保形地变成条形域…”，缺少“角域位于沿正实轴割开的 $D$ 内且不跨过正实轴”这一必要条件。读者点击正文 [[CONCEPT:C-0694|对数变换分支的映照性质]] 会看到与当前正文/自测修正相矛盾的不完整性质。应在 content.corrections 中提交 C-0694 的公共修正版（original 为该卡当前 formal，corrected 增加正确必要条件，json_pointer=/formal），不能只用本地正文概念块覆盖。"
+      ],
+      "body_char_count": 5751
+    },
+    {
+      "unit_id": "CH08-S05",
+      "title": "许瓦兹－克利斯托菲变换",
+      "source_title": "## §8.5 许瓦兹-克利斯托菲变换",
+      "audit_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/text_audit/CH08-S05.json",
+      "content_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/content/CH08-S05/revisions/000003.json",
+      "revision": 3,
+      "audit_hash_matches_current_head": true,
+      "status": "known_error",
+      "reasons": [
+        "body_markdown 末尾概念“雅可比椭圆函数”中写“椭圆积分的反函数称为椭圆函数”，这是把特例说成一般结论：并不是任意椭圆积分的反函数都是双周期椭圆函数。此处应限定为“本例中第一类椭圆积分的反函数是椭圆正弦 $z=\\operatorname{sn}w$，它是雅可比椭圆函数的一种”，或类似准确表述。；example EX-SC-RECT 第4步对分支符号的说明不一致：它说在 $(1,1/k)$ 上把 $1-\\zeta^2$ 写成 $-(\\zeta^2-1)$ 后“开方后出现因子 $i$”，随后却得到 $\\omega_1+iA\\int_1^{1/k}\\cdots$。若按从 $[0,1]$ 连续的通常主值分支，$\\sqrt{1-\\zeta^2}=i\\sqrt{\\zeta^2-1}$，被积函数为 $-i/\\sqrt{(\\zeta^2-1)(1-k^2\\zeta^2)}$，会得到 $-iA$，与显示的正号相反。应明确这里采用第二章习题14的分支，并且在该分支下 $\\sqrt{1-\\zeta^2}=-i\\sqrt{\\zeta^2-1}$，因而被积函数为 $i/\\sqrt{\\cdots}$；否则读者无法复现虚部符号。"
+      ],
+      "body_char_count": 3977
+    },
+    {
+      "unit_id": "CH08-S06",
+      "title": "平面场",
+      "source_title": "## §8.6 平面场",
+      "audit_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/text_audit/CH08-S06.json",
+      "content_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/content/CH08-S06/revisions/000003.json",
+      "revision": 3,
+      "audit_hash_matches_current_head": true,
+      "status": "known_error",
+      "reasons": [
+        "狄氏问题 I 的题设不完整。当前正文只给出 $\\Delta u=0$ 和 $u|_C=u(\\zeta)$，漏掉了源文紧接着的条件：“$u(\\zeta)$ 是已知的给定在 $C$ 上的除了有有限多个间断点外的连续函数”。这一边界数据的光滑性和可积性条件对后续泊松公式、保形变换化边值问题的适用性以及解在边界除间断点外取给定值是必要的。应在问题 I 显示式后补上该条件。；狄氏问题 III 的题设不完整。当前正文只写 $u_{xx}+u_{yy}=0$ 和 $u|_{y=0}=f(x)$，漏掉了源文对边界函数 $f$ 的条件：$f(x)$ 是实轴上有有限多个第一类间断点的函数，且 $\\lim_{x\\to -\\infty}f(x)$ 与 $\\lim_{x\\to +\\infty}f(x)$ 存在并为有限值。缺少这些条件时，下述泊松积分可能不收敛，边界条件也不能按源节意义理解。应在问题 III 显示式后补上这些条件。；学习自测 LC-STATIC-POTENTIAL 的题干和答案把静电场中的“力函数”误写成“流函数”。题干为“为什么在多连通域中，静电场的位函数仍可能是单值的，而流函数或复势却可能多值？”答案也说“复势或流函数还可能涉及另一条积分式……”。本节中 $\\psi$ 在流场中是流函数，在静电场中已明确称为力函数；多连通静电场中可能多值的是力函数或复势，不是流函数。应把题干和答案中的“流函数”改为“力函数”，使术语与本节正文一致。；习题 13 题干保留了源文 OCR/错别字“给出电位线和等位线”，其中“电位线”不是本节使用的标准术语，且与“等位线”语义重复；结合上下文应修正为“给出电力线和等位线”。否则题目要求会给读者造成“电位线”和“等位线”是两种不同对象的误解。应改为“并给出电力线和等位线”。"
+      ],
+      "body_char_count": 9918
+    },
+    {
+      "unit_id": "CH09-S02-SS02",
+      "title": "相似定理",
+      "source_title": "### 9.2.2 相似定理",
+      "audit_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/text_audit/CH09-S02-SS02.json",
+      "content_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/content/CH09-S02-SS02/revisions/000003.json",
+      "revision": 3,
+      "audit_hash_matches_current_head": true,
+      "status": "known_error",
+      "reasons": [
+        "正文第一段写“当 f 是指数增长型函数，即存在常数 K>0 与 c≥0，使 |f(t)|≤K e^{ct} 对一切 t≥0 成立时，这个积分至少在 Re p>c 内收敛”。仅由这个指数界不能保证反常积分存在，还必须要求 f 在任意有限区间上可积或逐段光滑；本书 C-0408 单独列出逐段光滑，C-0409 只是指数增长界。若只在有限区间上黎曼不可积但有界，积分仍无定义。这里漏掉局部可积/逐段光滑条件，会让读者误以为指数增长界单独就能保证收敛。应在该句补充“并在任意有限区间上可积（或逐段光滑）”，或改成“若 f 满足拉氏变换存在定理通常要求的条件（如逐段光滑且指数增长型），则……”，不要把充分条件组合简化为只由不等式断言收敛。"
+      ],
+      "body_char_count": 2038
+    },
+    {
+      "unit_id": "CH09-S02-SS03",
+      "title": "本函数的微分法",
+      "source_title": "### 9.2.3 本函数的微分法",
+      "audit_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/text_audit/CH09-S02-SS03.json",
+      "content_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/content/CH09-S02-SS03/revisions/000003.json",
+      "revision": 3,
+      "audit_hash_matches_current_head": true,
+      "status": "known_error",
+      "reasons": [
+        "冻结公共概念 C-0419 与 C-0710 的卡片仍保留源文的不充分条件，且 content.corrections 为空。C-0419 formal 仍为“如果 $f(t)$ 及 $f'(t)$ 都满足条件1）与2)…则 $\\mathrm{L}[f']=pF(p)-f(+0)$”；C-0710 formal 仍为“推论 若 $f(t),f'(t),...,f^{(n)}(t)$ 都满足条件 1) 与 2)…”。这些条件允许 f 或低阶导数有跳跃，前次反例 f(t)=1(0<t<1)、f(t)=2(t≥1) 已证明公式不成立。正文/例题步骤中的 [[CONCEPT:C-0419|...]]、[[CONCEPT:C-0710|...]] 点击后仍会看到错误条件卡片；应在 content.corrections 中为这两个 ID 提出完整修正版（改用当前加强的连续/逐段光滑/指数增长条件，或显式加入跳跃项），不能只用本地 EXPLAIN 覆盖。；C-0711 卡片 formal 只是一个名称字符串“逆变换的线性性”，没有给出线性组合公式。正文和例4/例5步骤以 [[CONCEPT:C-0711|逆变换的线性性]] 使用该性质，但主线未写出 $\\mathrm{L}^{-1}[\\alpha F+\\beta G]=\\alpha\\mathrm{L}^{-1}[F]+\\beta\\mathrm{L}^{-1}[G]$ 或等价形式；例中只演示了特定系数 1 与 -1 的分拆，未说明一般规则。应在 C-0711 的 formal 中补上该公式并在首次使用处简短显示，或改为链接已有 C-0611。"
+      ],
+      "body_char_count": 2426
+    },
+    {
+      "unit_id": "CH09-S02-SS06",
+      "title": "9.2.6 像函数的积分法",
+      "source_title": "### 9.2.6 像函数的积分法",
+      "audit_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/text_audit/CH09-S02-SS06.json",
+      "content_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/content/CH09-S02-SS06/revisions/000001.json",
+      "revision": 1,
+      "audit_hash_matches_current_head": true,
+      "status": "known_error",
+      "reasons": [
+        "在 explainable CH09-S02-SS06-COR-9-8 的 what 中只假设 f(t) 满足 (9.7) 的条件且 ∫_0^∞ f(t)/t dt 收敛，未说明增长指数 c=0 或存在到 p=0 的解析延拓；证明步骤 C6 直接“令 p→0^+”得到 ∫_0^∞ F(q)dq=A。但 C1 依据的 (9.7) 仅对 Re p>c 成立；若 c>0，p→0^+ 不在允许半平面内，F(q) 在 0 附近可能无定义或不可积，推论结论不能由该过程推出。应把推论条件明确为 c=0，或在 c>0 时补充解析延拓/边界极限的论证后再取 p→0。"
+      ],
+      "body_char_count": 2680
+    },
+    {
+      "unit_id": "CH09-S03-SS02",
+      "title": "拉氏变换的反演公式",
+      "source_title": "### 9.3.2 拉氏变换的反演公式",
+      "audit_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/text_audit/CH09-S03-SS02.json",
+      "content_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/content/CH09-S03-SS02/revisions/000003.json",
+      "revision": 3,
+      "audit_hash_matches_current_head": true,
+      "status": "known_error",
+      "reasons": [
+        "公共概念 C-0791（拉氏变换的反演公式/定理3）的 formal 仍为源文 OCR 错式：积分上下限写成 \\(\\int_{\\sigma-\\mathrm{i} m}^{\\sigma+\\mathrm{i} m}\\)，应为 \\(\\int_{\\sigma-\\mathrm{i}\\infty}^{\\sigma+\\mathrm{i}\\infty}\\)。本节 THM-INVERSE 以 C-0791 为 concept_id，正文已给出正确公式，但 content.corrections 只有 C-0792 的修正、没有针对 C-0791 的公共修正；读者点开该公共概念仍会看到错误上下限。应新增 CORR-C-0791，original 取当前 formal，corrected 把上下限的 m 改为 ∞，并确保与 source_refs 相符。；公共概念 C-0709（傅氏反变换）的 formal 为 \\(f(x)=\\frac{1}{2\\pi}\\int_{-\\infty}^{+\\infty}F(s)e^{ist}ds\\)，左边变量是 x，被积式指数却是 t，公式左右变量不统一，属于错误公式。本节“用到的条件与工具”处以 [[CONCEPT:C-0709|傅氏反变换]] 链接该条目，并且正文使用的正确公式是 \\(g(t)=\\frac{1}{2\\pi}\\int_{-\\infty}^{+\\infty}G(s)e^{ist}ds\\)，与公共卡矛盾；但 content.corrections 没有 C-0709 的修正。应新增 CORR-C-0709，把 formal 修正为 \\(f(t)=\\frac{1}{2\\pi}\\int_{-\\infty}^{+\\infty}F(s)e^{ist}ds\\)（或统一为 x、指数 \\(e^{isx}\\)），与本节所用记号及傅氏反变换定义一致。；THM-4-RESIDUE.what 只陈述了第 2 条结论（主值积分等于留数之和），漏掉定理 4 的第 1 条结论：源文及 CORR-C-0792.corrected 都先给出 1) \\(F(p)\\) 是由反演积分定义的 \\(f(t)\\) 的像函数（即 \\(L[f(t)]=F(p)\\)），再给 2) 留数和公式。该卡是本节定理 4 的独立 EXPLAIN 卡，按首次定理要求应完整包含条件与结论；现在读者看不到定理同时确认 \\(F(p)\\) 与反演所得 \\(f(t)\\) 的对应关系。应在 THM-4-RESIDUE.what 中补入第 1 条结论，并在 steps 中给出依据（引用定理3/傅氏反演），或者若本卡只取计算推论，应在主线明确说明并完整陈述定理4；不能只保留第 2 条。"
+      ],
+      "body_char_count": 4345
+    },
+    {
+      "unit_id": "CH09-S03",
+      "title": "§9.3 由像函数求本函数",
+      "source_title": "## §9.3 由像函数求本函数",
+      "audit_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/text_audit/CH09-S03.json",
+      "content_file": "/home/aaatrucklrx/桌面/AI教学/tmp/intent-policy-20261016/clean-fullbook-real-20261016-151011/network-recovery-20261016-190500/run/work/products/content/CH09-S03/revisions/000003.json",
+      "revision": 3,
+      "audit_hash_matches_current_head": true,
+      "status": "known_error",
+      "reasons": [
+        "当前正文在“其他方法”处使用 [[CONCEPT:C-0447|Z变换]] 链接，但冻结公共概念 C-0447 的 formal 为“令 $z = e^{tP}, f(nT)=f_n$……”，其中 $z=e^{tP}$ 是错误公式。按本书拉氏变量 $p$ 与采样周期 $T$，由 $\\mathrm{L}[f_T(t)]=\\sum f(nT)e^{-pnT}$ 经 $z=e^{pT}$ 才得到 $\\sum f_n z^{-n}$；应把 $e^{tP}$ 改为 $e^{pT}$（或等价地 $e^{sT}$）。当前候选的 content.corrections 只修正了 C-0437、C-0418，未修正该公共概念，读者点击“Z变换”卡片会看到错误定义。应补充 C-0447 的公共概念勘误：source_refs 指向 concept C-0447 的 /formal，corrected 中将 $e^{tP}$ 改为 $e^{pT}$，并保留本节对 C-0447 的链接。"
+      ],
+      "body_char_count": 2456
+    }
+  ]
+}

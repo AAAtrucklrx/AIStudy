@@ -1,0 +1,24 @@
+—— CH02-S04 回路开始（run 2026-10-03 08:48:51）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 1, '教案问题明细': ['CH02-S04: 《区域上的可微判据》(F-05) 四样都没有 —— 图 / 某步的图 / 图请求 / 正当的不配图理由，至少要有一样'], '教案提醒': 3, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 1 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH02-S04: 《区域上的可微判据》(F-05) 四样都没有 —— 图 / 某步的图 / 图请求 / 正当的不配图理由，至少要有一样']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [3] 条 → 并集 3 条工单
+    T-2d76e0 [P0] hits=1 「剩下只要把偏导数代进 C-R 方程，再用 (2.7) 算导数。」
+    T-3d51f2 [P1] hits=1 「导数的定义还有一种等价写法：$f$ 在 $z$ 可导，当且仅当 $f(z」
+    T-R0b974 [P1] hits=1 「CH02-S04: 《区域上的可微判据》(F-05) 四样都没有 —— 」
+[轮 1] 按 3 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH02-S04 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH02-S04.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH02-S04 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH02-S04.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 1 条：['CH02-S04: 《区域上的可微判据》(F-05) 四样都没有 —— 图 / 某步的图 / 图请求 / 正当的不配图理由，至少要有一样'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 3 / 仍开着 0；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 3 条
+  📌 发现 3 处**原文疑似有错** → 记进勘误清单（不改成品）
+  📌 原文疑似有错：这一节 3 条 → 原文疑似有错.json（共 16 条）
+── 卡在哪（这一趟）──────────────────────────────
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+记录写到 data/audit/complex-analysis-v2/CH02-S04.loop.json

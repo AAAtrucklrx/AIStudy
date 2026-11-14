@@ -1,0 +1,2086 @@
+{
+  "_meta": {
+    "file_type": "chapters",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.export",
+    "source_sha256": "a843174fedfad1cc527432196799e775e48f4cb1fe750b6d2848784e103524e6",
+    "field_notes": {
+      "chapters[].id": "章 id，形如 CH01",
+      "chapters[].sections[].id": "节 id，形如 CH01-S01",
+      "chapters[].sections[].subsections[].id": "小节 id，形如 CH01-S01-SS01",
+      "original_text": "原文文件路径（相对 data/parse/）；为 null 表示这一层没有自己的正文",
+      "content_sha256": "该节点正文的哈希，用于确认原文没被改动",
+      "lesson_units[]": "教案块要逐个处理的单元清单（取有内容的最深一层）"
+    }
+  },
+  "book": {
+    "title": "复变函数",
+    "source_sha256": "a843174fedfad1cc527432196799e775e48f4cb1fe750b6d2848784e103524e6"
+  },
+  "chapters": [
+    {
+      "id": "CH01",
+      "kind": "chapter",
+      "anchor": "1",
+      "title": "复数和平面点集",
+      "order": 1,
+      "original_text": "original_text/ch01.md",
+      "block_ids": [
+        "CH01-S00-SS00-B0002"
+      ],
+      "source_lines": [
+        49,
+        52
+      ],
+      "content_sha256": "38779ddf863cb5fd67013787aabc77732351e349335ebe362bd3d5770b091453",
+      "sections": [
+        {
+          "id": "CH01-S01",
+          "kind": "section",
+          "anchor": "1.1",
+          "title": "复数",
+          "order": 1,
+          "original_text": "original_text/ch01_s01.md",
+          "block_ids": [
+            "CH01-S01-SS00-B0003"
+          ],
+          "source_lines": [
+            53,
+            54
+          ],
+          "content_sha256": "2b4bbb71c813cb27a7ba5254914565e00a81c2ca36e789c38e7a998691f206a3",
+          "subsections": [
+            {
+              "id": "CH01-S01-SS01",
+              "kind": "subsection",
+              "anchor": "1.1.1",
+              "title": "复数的四则运算",
+              "order": 1,
+              "original_text": "original_text/ch01_s01_ss01.md",
+              "block_ids": [
+                "CH01-S01-SS01-B0004"
+              ],
+              "source_lines": [
+                55,
+                101
+              ],
+              "content_sha256": "857e46d85634d5c75adb61c75545f468e4eeb7b23a296b09dad4b199c6a486ff",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S01-SS02",
+              "kind": "subsection",
+              "anchor": "1.1.2",
+              "title": "共轭复数",
+              "order": 2,
+              "original_text": "original_text/ch01_s01_ss02.md",
+              "block_ids": [
+                "CH01-S01-SS02-B0005"
+              ],
+              "source_lines": [
+                102,
+                141
+              ],
+              "content_sha256": "fcf13c2e55c398f08af62514b4f7d0efe473ae8a09a2dbf9a13346dec3bb397d",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S01-SS03",
+              "kind": "subsection",
+              "anchor": "1.1.3",
+              "title": "复数的几何表示、模与辐角",
+              "order": 3,
+              "original_text": "original_text/ch01_s01_ss03.md",
+              "block_ids": [
+                "CH01-S01-SS03-B0006"
+              ],
+              "source_lines": [
+                142,
+                232
+              ],
+              "content_sha256": "7a390f47da44a541be4219baaceb4a5bc6a988124ca2d2696bcb291ce2c4abf0",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S01-SS04",
+              "kind": "subsection",
+              "anchor": "1.1.4",
+              "title": "复数的乘方和开方",
+              "order": 4,
+              "original_text": "original_text/ch01_s01_ss04.md",
+              "block_ids": [
+                "CH01-S01-SS04-B0007"
+              ],
+              "source_lines": [
+                233,
+                265
+              ],
+              "content_sha256": "d59378ab106f9d89ee9f973c22d63bbd51d86287cc1b5d35a2a3d2ad9adf39cb",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S01-SS05",
+              "kind": "subsection",
+              "anchor": "1.1.5",
+              "title": "复数序列的极限、无穷远点",
+              "order": 5,
+              "original_text": "original_text/ch01_s01_ss05.md",
+              "block_ids": [
+                "CH01-S01-SS05-B0008"
+              ],
+              "source_lines": [
+                266,
+                324
+              ],
+              "content_sha256": "49f4b36d659857e8af1847ec3f6928e595e3f83e7510e6812f5f88a001ec187a",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH01-S02",
+          "kind": "section",
+          "anchor": "1.2",
+          "title": "平面点集",
+          "order": 2,
+          "original_text": "original_text/ch01_s02.md",
+          "block_ids": [
+            "CH01-S02-SS00-B0009"
+          ],
+          "source_lines": [
+            325,
+            326
+          ],
+          "content_sha256": "93397dc942179c687618cd469ca7a2e69233d0cbd743e96f911b22bcf8dc680d",
+          "subsections": [
+            {
+              "id": "CH01-S02-SS01",
+              "kind": "subsection",
+              "anchor": "1.2.1",
+              "title": "基本概念",
+              "order": 1,
+              "original_text": "original_text/ch01_s02_ss01.md",
+              "block_ids": [
+                "CH01-S02-SS01-B0010"
+              ],
+              "source_lines": [
+                327,
+                335
+              ],
+              "content_sha256": "f872a2119298204e3305514b8fa9ad07293c09ccdf829321eb6fd2b612dbf033",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S02-SS02",
+              "kind": "subsection",
+              "anchor": "1.2.2",
+              "title": "区域与曲线",
+              "order": 2,
+              "original_text": "original_text/ch01_s02_ss02.md",
+              "block_ids": [
+                "CH01-S02-SS02-B0011"
+              ],
+              "source_lines": [
+                336,
+                413
+              ],
+              "content_sha256": "e3b30f365f59108ff6b95ba2bddb2b188890d7c05feab7db5752bea476a1cade",
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CH02",
+      "kind": "chapter",
+      "anchor": "2",
+      "title": "复变数函数",
+      "order": 2,
+      "original_text": "original_text/ch02.md",
+      "block_ids": [
+        "CH02-S00-SS00-B0012"
+      ],
+      "source_lines": [
+        414,
+        417
+      ],
+      "content_sha256": "12a837ffda29a4f7f387fa9d3d8b00c1e2d8661473c8601b636288e21da777bc",
+      "sections": [
+        {
+          "id": "CH02-S01",
+          "kind": "section",
+          "anchor": "2.1",
+          "title": "复变数函数的概念",
+          "order": 1,
+          "original_text": "original_text/ch02_s01.md",
+          "block_ids": [
+            "CH02-S01-SS00-B0013"
+          ],
+          "source_lines": [
+            418,
+            466
+          ],
+          "content_sha256": "7bd33fed72e5e99c29c1f4a377b823018d3e5207cda41a7965c3f0768ed8009d",
+          "subsections": []
+        },
+        {
+          "id": "CH02-S02",
+          "kind": "section",
+          "anchor": "2.2",
+          "title": "函数极限和连续性",
+          "order": 2,
+          "original_text": "original_text/ch02_s02.md",
+          "block_ids": [
+            "CH02-S02-SS00-B0014"
+          ],
+          "source_lines": [
+            467,
+            505
+          ],
+          "content_sha256": "cbcf6c073108897747bdea6b595374037aabe911c68feba180af21e2b41bc04a",
+          "subsections": []
+        },
+        {
+          "id": "CH02-S03",
+          "kind": "section",
+          "anchor": "2.3",
+          "title": "导数和解析函数的概念",
+          "order": 3,
+          "original_text": "original_text/ch02_s03.md",
+          "block_ids": [
+            "CH02-S03-SS00-B0015"
+          ],
+          "source_lines": [
+            506,
+            549
+          ],
+          "content_sha256": "474b2af7b66e24e3697ff2d73c7d70b8d2cd5e793bbb1eb39a8743fe3d4ae65a",
+          "subsections": []
+        },
+        {
+          "id": "CH02-S04",
+          "kind": "section",
+          "anchor": "2.4",
+          "title": "柯西－黎曼方程",
+          "order": 4,
+          "original_text": "original_text/ch02_s04.md",
+          "block_ids": [
+            "CH02-S04-SS00-B0016"
+          ],
+          "source_lines": [
+            550,
+            592
+          ],
+          "content_sha256": "acc6786a1ef30a8d0e0c25aad92cf305a65b752141d8c839eb8cd3d25ca66e75",
+          "subsections": []
+        },
+        {
+          "id": "CH02-S05",
+          "kind": "section",
+          "anchor": "2.5",
+          "title": "初等函数",
+          "order": 5,
+          "original_text": "original_text/ch02_s05.md",
+          "block_ids": [
+            "CH02-S05-SS00-B0017"
+          ],
+          "source_lines": [
+            593,
+            597
+          ],
+          "content_sha256": "6b30829f91354da623a9ec213c22edb5019f7ffbc552ab52067b163be62eaa94",
+          "subsections": [
+            {
+              "id": "CH02-S05-SS01",
+              "kind": "subsection",
+              "anchor": "2.5.1",
+              "title": "幂函数",
+              "order": 1,
+              "original_text": "original_text/ch02_s05_ss01.md",
+              "block_ids": [
+                "CH02-S05-SS01-B0018"
+              ],
+              "source_lines": [
+                598,
+                628
+              ],
+              "content_sha256": "18860763839ed614006649830d39d16227778c71d706872562e5d91eccbfb5cc",
+              "subsections": []
+            },
+            {
+              "id": "CH02-S05-SS02",
+              "kind": "subsection",
+              "anchor": "2.5.2",
+              "title": "根式函数",
+              "order": 2,
+              "original_text": "original_text/ch02_s05_ss02.md",
+              "block_ids": [
+                "CH02-S05-SS02-B0019"
+              ],
+              "source_lines": [
+                629,
+                716
+              ],
+              "content_sha256": "f5cbdecc323664855fb4d94466c99fb562afc55c28df479b86f0d8968e82387f",
+              "subsections": []
+            },
+            {
+              "id": "CH02-S05-SS03",
+              "kind": "subsection",
+              "anchor": "2.5.3",
+              "title": "指数函数",
+              "order": 3,
+              "original_text": "original_text/ch02_s05_ss03.md",
+              "block_ids": [
+                "CH02-S05-SS03-B0020"
+              ],
+              "source_lines": [
+                717,
+                747
+              ],
+              "content_sha256": "c1c274f20cf91893f393e65063b31324d46124c287cdaf13b12f20ef02c8870b",
+              "subsections": []
+            },
+            {
+              "id": "CH02-S05-SS04",
+              "kind": "subsection",
+              "anchor": "2.5.4",
+              "title": "对数函数",
+              "order": 4,
+              "original_text": "original_text/ch02_s05_ss04.md",
+              "block_ids": [
+                "CH02-S05-SS04-B0021"
+              ],
+              "source_lines": [
+                748,
+                779
+              ],
+              "content_sha256": "83ea14e069f8ec785e26d458ce75e86eff0b26445e25a46be121f0ed20dc12f3",
+              "subsections": []
+            },
+            {
+              "id": "CH02-S05-SS05",
+              "kind": "subsection",
+              "anchor": "2.5.5",
+              "title": "三角函数",
+              "order": 5,
+              "original_text": "original_text/ch02_s05_ss05.md",
+              "block_ids": [
+                "CH02-S05-SS05-B0022"
+              ],
+              "source_lines": [
+                780,
+                812
+              ],
+              "content_sha256": "1eef2d220dee4fd1a8f5b8133d1be05f0e429361be2f712e057c23a2bb53d28b",
+              "subsections": []
+            },
+            {
+              "id": "CH02-S05-SS06",
+              "kind": "subsection",
+              "anchor": "2.5.6",
+              "title": "双曲函数",
+              "order": 6,
+              "original_text": "original_text/ch02_s05_ss06.md",
+              "block_ids": [
+                "CH02-S05-SS06-B0023"
+              ],
+              "source_lines": [
+                813,
+                825
+              ],
+              "content_sha256": "79ded5ea325be4846afe494ef1c97fbdeed94b643fde17fec87aa78225578ea6",
+              "subsections": []
+            },
+            {
+              "id": "CH02-S05-SS07",
+              "kind": "subsection",
+              "anchor": "2.5.7",
+              "title": "一般幂函数",
+              "order": 7,
+              "original_text": "original_text/ch02_s05_ss07.md",
+              "block_ids": [
+                "CH02-S05-SS07-B0024"
+              ],
+              "source_lines": [
+                826,
+                845
+              ],
+              "content_sha256": "595f6b6a2e07bd0b120f5bbdeba74114594150288856fcd03f15fb8f65b953bf",
+              "subsections": []
+            },
+            {
+              "id": "CH02-S05-SS08",
+              "kind": "subsection",
+              "anchor": "2.5.8",
+              "title": "反三角函数",
+              "order": 8,
+              "original_text": "original_text/ch02_s05_ss08.md",
+              "block_ids": [
+                "CH02-S05-SS08-B0025"
+              ],
+              "source_lines": [
+                846,
+                918
+              ],
+              "content_sha256": "0f56569883ea8b908987afc9f87c368e8b0c29afe5e980c7df21db797e797f45",
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CH03",
+      "kind": "chapter",
+      "anchor": "3",
+      "title": "解析函数的积分表示",
+      "order": 3,
+      "original_text": "original_text/ch03.md",
+      "block_ids": [
+        "CH03-S00-SS00-B0026"
+      ],
+      "source_lines": [
+        919,
+        922
+      ],
+      "content_sha256": "20566f65b16eab0eb7f45bae98baed74eafd2b1713820cd2f2cc3710e5875e13",
+      "sections": [
+        {
+          "id": "CH03-S01",
+          "kind": "section",
+          "anchor": "3.1",
+          "title": "复变函数的积分",
+          "order": 1,
+          "original_text": "original_text/ch03_s01.md",
+          "block_ids": [
+            "CH03-S01-SS00-B0027"
+          ],
+          "source_lines": [
+            923,
+            991
+          ],
+          "content_sha256": "b69762a8a59dcf9868f2ba8c2da6c30da3f0c110aefb8a99f167ee495b32cf92",
+          "subsections": []
+        },
+        {
+          "id": "CH03-S02",
+          "kind": "section",
+          "anchor": "3.2",
+          "title": "柯西积分定理",
+          "order": 2,
+          "original_text": "original_text/ch03_s02.md",
+          "block_ids": [
+            "CH03-S02-SS00-B0028"
+          ],
+          "source_lines": [
+            992,
+            1025
+          ],
+          "content_sha256": "b879f6b08cc489763ae7f36e9a08e25f7c28fcbea58cab40f51a12ab1051f445",
+          "subsections": []
+        },
+        {
+          "id": "CH03-S03",
+          "kind": "section",
+          "anchor": "3.3",
+          "title": "原函数",
+          "order": 3,
+          "original_text": "original_text/ch03_s03.md",
+          "block_ids": [
+            "CH03-S03-SS00-B0029"
+          ],
+          "source_lines": [
+            1026,
+            1076
+          ],
+          "content_sha256": "8d72414e1ee0e74f1b20606d04650e7849710cb544418dea1c7e25da3023baef",
+          "subsections": []
+        },
+        {
+          "id": "CH03-S04",
+          "kind": "section",
+          "anchor": "3.4",
+          "title": "柯西积分公式",
+          "order": 4,
+          "original_text": "original_text/ch03_s04.md",
+          "block_ids": [
+            "CH03-S04-SS00-B0030"
+          ],
+          "source_lines": [
+            1077,
+            1139
+          ],
+          "content_sha256": "b0f42b1c5a52977d509f86486ac7aa1c404d4a2418c56431686619b520e741e6",
+          "subsections": []
+        },
+        {
+          "id": "CH03-S05",
+          "kind": "section",
+          "anchor": "3.5",
+          "title": "解析函数的性质",
+          "order": 5,
+          "original_text": "original_text/ch03_s05.md",
+          "block_ids": [
+            "CH03-S05-SS00-B0031"
+          ],
+          "source_lines": [
+            1140,
+            1247
+          ],
+          "content_sha256": "684758d0e5a92bfd6a6f2d1cce458a852652bcdebcd465416f6ac2ac3707abd1",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "id": "CH04",
+      "kind": "chapter",
+      "anchor": "4",
+      "title": "调和函数",
+      "order": 4,
+      "original_text": "original_text/ch04.md",
+      "block_ids": [
+        "CH04-S00-SS00-B0032"
+      ],
+      "source_lines": [
+        1248,
+        1251
+      ],
+      "content_sha256": "c4a3e9a53c1e71422114f729ac06c3efd0e885846187e72a0aaa21d4f53a3a55",
+      "sections": [
+        {
+          "id": "CH04-S01",
+          "kind": "section",
+          "anchor": "4.1",
+          "title": "解析函数与调和函数的关系",
+          "order": 1,
+          "original_text": "original_text/ch04_s01.md",
+          "block_ids": [
+            "CH04-S01-SS00-B0033"
+          ],
+          "source_lines": [
+            1252,
+            1311
+          ],
+          "content_sha256": "857d9590810671aa9d27fc768332146c9a1e0a17a28ac1bcefdd1d1cc2d702b1",
+          "subsections": []
+        },
+        {
+          "id": "CH04-S02",
+          "kind": "section",
+          "anchor": "4.2",
+          "title": "调和函数的性质和狭利克雷问题",
+          "order": 2,
+          "original_text": "original_text/ch04_s02.md",
+          "block_ids": [
+            "CH04-S02-SS00-B0034"
+          ],
+          "source_lines": [
+            1312,
+            1372
+          ],
+          "content_sha256": "e82a4cab816f86f2dafd39b68fb9c7f7062d35ed48bfd9964251a26c2fa9c61e",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "id": "CH05",
+      "kind": "chapter",
+      "anchor": "5",
+      "title": "解析函数的级数展开",
+      "order": 5,
+      "original_text": "original_text/ch05.md",
+      "block_ids": [
+        "CH05-S00-SS00-B0035"
+      ],
+      "source_lines": [
+        1373,
+        1376
+      ],
+      "content_sha256": "9fd01f3072b0f47946113b650964a1635c211683fc4ba81c3fda7effe34a59b0",
+      "sections": [
+        {
+          "id": "CH05-S01",
+          "kind": "section",
+          "anchor": "5.1",
+          "title": "复级数的基本性质",
+          "order": 1,
+          "original_text": "original_text/ch05_s01.md",
+          "block_ids": [
+            "CH05-S01-SS00-B0036"
+          ],
+          "source_lines": [
+            1377,
+            1378
+          ],
+          "content_sha256": "33978dbd008a4bb814ebe5d28b444adcb2ff532ead7abb18615e79f8d2fcc2e8",
+          "subsections": [
+            {
+              "id": "CH05-S01-SS01",
+              "kind": "subsection",
+              "anchor": "5.1.1",
+              "title": "复数项级数",
+              "order": 1,
+              "original_text": "original_text/ch05_s01_ss01.md",
+              "block_ids": [
+                "CH05-S01-SS01-B0037"
+              ],
+              "source_lines": [
+                1379,
+                1424
+              ],
+              "content_sha256": "57a9c3eb855d0ff0f2a1e115731c04899482bc183b3cec5920703cdec60a13f5",
+              "subsections": []
+            },
+            {
+              "id": "CH05-S01-SS02",
+              "kind": "subsection",
+              "anchor": "5.1.2",
+              "title": "复变函数项级数",
+              "order": 2,
+              "original_text": "original_text/ch05_s01_ss02.md",
+              "block_ids": [
+                "CH05-S01-SS02-B0038"
+              ],
+              "source_lines": [
+                1425,
+                1486
+              ],
+              "content_sha256": "2728ed2f604196c90a6420699b1410f65022d63f99c316d48fde3a3468e62a90",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH05-S02",
+          "kind": "section",
+          "anchor": "5.2",
+          "title": "基级数",
+          "order": 2,
+          "original_text": "original_text/ch05_s02.md",
+          "block_ids": [
+            "CH05-S02-SS00-B0039"
+          ],
+          "source_lines": [
+            1487,
+            1539
+          ],
+          "content_sha256": "26ddc2b840e049b1f2d6c8396e02bf9da56dd05eb222279cc70bd121f434cac3",
+          "subsections": []
+        },
+        {
+          "id": "CH05-S03",
+          "kind": "section",
+          "anchor": "5.3",
+          "title": "解析函数的泰勒(Taylor)展开",
+          "order": 3,
+          "original_text": "original_text/ch05_s03.md",
+          "block_ids": [
+            "CH05-S03-SS00-B0040"
+          ],
+          "source_lines": [
+            1540,
+            1638
+          ],
+          "content_sha256": "15e56104735f83f28ce7ff8e2df33d873c13cd39785431521e78f254bd03f379",
+          "subsections": []
+        },
+        {
+          "id": "CH05-S04",
+          "kind": "section",
+          "anchor": "5.4",
+          "title": "罗朗(Laurent)级数",
+          "order": 4,
+          "original_text": "original_text/ch05_s04.md",
+          "block_ids": [
+            "CH05-S04-SS00-B0041"
+          ],
+          "source_lines": [
+            1639,
+            1732
+          ],
+          "content_sha256": "8f397bf87811448f9f46825f8ce37761427e9e0e383d1436f779021c85cdc0f1",
+          "subsections": []
+        },
+        {
+          "id": "CH05-S05",
+          "kind": "section",
+          "anchor": "5.5",
+          "title": "解析函数的孤立奇点",
+          "order": 5,
+          "original_text": "original_text/ch05_s05.md",
+          "block_ids": [
+            "CH05-S05-SS00-B0042"
+          ],
+          "source_lines": [
+            1733,
+            1890
+          ],
+          "content_sha256": "6cbf82d7fda13a2214495d929d093b267c832f7663e26a20c0e8a60d3b460fbe",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "id": "CH06",
+      "kind": "chapter",
+      "anchor": "6",
+      "title": "留数及其应用",
+      "order": 6,
+      "original_text": "original_text/ch06.md",
+      "block_ids": [
+        "CH06-S00-SS00-B0043"
+      ],
+      "source_lines": [
+        1891,
+        1894
+      ],
+      "content_sha256": "41335e0be6c6415e8cb41027c3851fb3a312cecc89ad5d7a34a4499b80f5215b",
+      "sections": [
+        {
+          "id": "CH06-S01",
+          "kind": "section",
+          "anchor": "6.1",
+          "title": "留数定理",
+          "order": 1,
+          "original_text": "original_text/ch06_s01.md",
+          "block_ids": [
+            "CH06-S01-SS00-B0044"
+          ],
+          "source_lines": [
+            1895,
+            1964
+          ],
+          "content_sha256": "560cba3cc07f6fd2d18ce6c56fb70e75e64a4c8eb66e8c9cf928deb43c074363",
+          "subsections": []
+        },
+        {
+          "id": "CH06-S02",
+          "kind": "section",
+          "anchor": "6.2",
+          "title": "积分计算",
+          "order": 2,
+          "original_text": "original_text/ch06_s02.md",
+          "block_ids": [
+            "CH06-S02-SS00-B0045"
+          ],
+          "source_lines": [
+            1965,
+            1968
+          ],
+          "content_sha256": "2ca7d965968dfe961e25f3702987aa0e34d09903debf7970af1b13ffd449b0b2",
+          "subsections": [
+            {
+              "id": "CH06-S02-SS01",
+              "kind": "subsection",
+              "anchor": "6.2.1",
+              "title": "$\\int_0^{2\\pi}R(\\cos \\theta ,\\sin \\theta)\\mathrm{d}\\theta$ 型积分",
+              "order": 1,
+              "original_text": "original_text/ch06_s02_ss01.md",
+              "block_ids": [
+                "CH06-S02-SS01-B0046"
+              ],
+              "source_lines": [
+                1969,
+                2012
+              ],
+              "content_sha256": "bf7d5e33a12056d2af52e19fb25d30cbba8e4c576db045f7694da07e9e617324",
+              "subsections": []
+            },
+            {
+              "id": "CH06-S02-SS02",
+              "kind": "subsection",
+              "anchor": "6.2.2",
+              "title": "有理函数的积分 $\\int_{-\\infty}^{+\\infty} R(x) \\mathrm{d}x$",
+              "order": 2,
+              "original_text": "original_text/ch06_s02_ss02.md",
+              "block_ids": [
+                "CH06-S02-SS02-B0047"
+              ],
+              "source_lines": [
+                2013,
+                2092
+              ],
+              "content_sha256": "324c08a2af51d607f89313d51ceaa363e9edfb27786863563bedb6294bb2dbff",
+              "subsections": []
+            },
+            {
+              "id": "CH06-S02-SS03",
+              "kind": "subsection",
+              "anchor": "6.2.3",
+              "title": "$I_{1} = \\int_{-\\infty}^{+\\infty}R(x)\\cos mx\\mathrm{d}x$ 及 $I_{2} = \\int_{-\\infty}^{+\\infty}R(x)\\sin mx\\mathrm{d}x,m > 0$ 型的积分",
+              "order": 3,
+              "original_text": "original_text/ch06_s02_ss03.md",
+              "block_ids": [
+                "CH06-S02-SS03-B0048"
+              ],
+              "source_lines": [
+                2093,
+                2125
+              ],
+              "content_sha256": "5ea9098824e4e36c2ff0bb4b53784dfd0ada2b117d64a4b11b0593b5aa4544bd",
+              "subsections": []
+            },
+            {
+              "id": "CH06-S02-SS04",
+              "kind": "subsection",
+              "anchor": "6.2.4",
+              "title": "杂例",
+              "order": 4,
+              "original_text": "original_text/ch06_s02_ss04.md",
+              "block_ids": [
+                "CH06-S02-SS04-B0049"
+              ],
+              "source_lines": [
+                2126,
+                2169
+              ],
+              "content_sha256": "aa5f7984398cb7c220572c9015a992838adeb54fc3b941f2e7ec9708b16749f6",
+              "subsections": []
+            },
+            {
+              "id": "CH06-S02-SS05",
+              "kind": "subsection",
+              "anchor": "6.2.5",
+              "title": "多值函数的积分",
+              "order": 5,
+              "original_text": "original_text/ch06_s02_ss05.md",
+              "block_ids": [
+                "CH06-S02-SS05-B0050"
+              ],
+              "source_lines": [
+                2170,
+                2233
+              ],
+              "content_sha256": "d1541cb2b67ea5f925f7baec9a9d482b1bafec82b5c6a9adc01090067d836534",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH06-S03",
+          "kind": "section",
+          "anchor": "6.3",
+          "title": "辐角原理",
+          "order": 3,
+          "original_text": "original_text/ch06_s03.md",
+          "block_ids": [
+            "CH06-S03-SS00-B0051"
+          ],
+          "source_lines": [
+            2234,
+            2372
+          ],
+          "content_sha256": "4ab863fe00c6f3d8f11af211605e6c872fdefac5e6294e5fd24c9a92ef8e8008",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "id": "CH07",
+      "kind": "chapter",
+      "anchor": "7",
+      "title": "解析开拓",
+      "order": 7,
+      "original_text": "original_text/ch07.md",
+      "block_ids": [
+        "CH07-S00-SS00-B0052"
+      ],
+      "source_lines": [
+        2373,
+        2376
+      ],
+      "content_sha256": "5a96813253c8e6785b2283a9e6d7db62274ca5e175658c0f9f2fbab498c0880c",
+      "sections": [
+        {
+          "id": "CH07-S01",
+          "kind": "section",
+          "anchor": "7.1",
+          "title": "唯一性定理和解析开拓的概念",
+          "order": 1,
+          "original_text": "original_text/ch07_s01.md",
+          "block_ids": [
+            "CH07-S01-SS00-B0053"
+          ],
+          "source_lines": [
+            2377,
+            2443
+          ],
+          "content_sha256": "f27ef819f2df12a1e78d83b4ea2f3485698911567b5aa00260afb68a5e1a6e29",
+          "subsections": []
+        },
+        {
+          "id": "CH07-S02",
+          "kind": "section",
+          "anchor": "7.2",
+          "title": "含复参变量积分及Γ函数",
+          "order": 2,
+          "original_text": "original_text/ch07_s02.md",
+          "block_ids": [
+            "CH07-S02-SS00-B0054"
+          ],
+          "source_lines": [
+            2444,
+            2571
+          ],
+          "content_sha256": "0de745ede9e82e2ee548ac58b95f74304b6b3b041a67b2fe056aed038e66b743",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "id": "CH08",
+      "kind": "chapter",
+      "anchor": "8",
+      "title": "保形变换及其应用",
+      "order": 8,
+      "original_text": "original_text/ch08.md",
+      "block_ids": [
+        "CH08-S00-SS00-B0055"
+      ],
+      "source_lines": [
+        2572,
+        2575
+      ],
+      "content_sha256": "d1134254747051f7e2c44f6b6dd22d1da3cee279b7a194f5afcea05e6068e4ea",
+      "sections": [
+        {
+          "id": "CH08-S01",
+          "kind": "section",
+          "anchor": "8.1",
+          "title": "导数的几何意义",
+          "order": 1,
+          "original_text": "original_text/ch08_s01.md",
+          "block_ids": [
+            "CH08-S01-SS00-B0056"
+          ],
+          "source_lines": [
+            2576,
+            2599
+          ],
+          "content_sha256": "3da7265aafda98dc08eeeabc95dd77177df8ac2ef6f41854279fb9ea220f34f2",
+          "subsections": []
+        },
+        {
+          "id": "CH08-S02",
+          "kind": "section",
+          "anchor": "8.2",
+          "title": "保形变换的概念",
+          "order": 2,
+          "original_text": "original_text/ch08_s02.md",
+          "block_ids": [
+            "CH08-S02-SS00-B0057"
+          ],
+          "source_lines": [
+            2600,
+            2623
+          ],
+          "content_sha256": "0aae296728ad1b3f8cc200a38eee4ac37fbd7ffa1f6b7651abb6cfad78ba8619",
+          "subsections": []
+        },
+        {
+          "id": "CH08-S03",
+          "kind": "section",
+          "anchor": "8.3",
+          "title": "分式线性变换",
+          "order": 3,
+          "original_text": "original_text/ch08_s03.md",
+          "block_ids": [
+            "CH08-S03-SS00-B0058"
+          ],
+          "source_lines": [
+            2624,
+            2750
+          ],
+          "content_sha256": "be1fc9f7a6f46d3bfc9b04b013ddd696cdfa6306846c795e3516c2c59a12a935",
+          "subsections": []
+        },
+        {
+          "id": "CH08-S04",
+          "kind": "section",
+          "anchor": "8.4",
+          "title": "初等函数的映照",
+          "order": 4,
+          "original_text": "original_text/ch08_s04.md",
+          "block_ids": [
+            "CH08-S04-SS00-B0059"
+          ],
+          "source_lines": [
+            2751,
+            2754
+          ],
+          "content_sha256": "a526ea907e7b353d99bf59bc8b528f66d4a657437270a6aca1dd4baa744476c5",
+          "subsections": [
+            {
+              "id": "CH08-S04-SS01",
+              "kind": "subsection",
+              "anchor": "8.4.1",
+              "title": "变换 w = z^n 和 w = \\sqrt{z}, n \\geqslant 2 是自然数",
+              "order": 1,
+              "original_text": "original_text/ch08_s04_ss01.md",
+              "block_ids": [
+                "CH08-S04-SS01-B0060"
+              ],
+              "source_lines": [
+                2755,
+                2807
+              ],
+              "content_sha256": "47db752df598b2f20e960e9c97dbcaefcf7b98d088f53726b6701f0c7b056dd5",
+              "subsections": []
+            },
+            {
+              "id": "CH08-S04-SS02",
+              "kind": "subsection",
+              "anchor": "8.4.2",
+              "title": "变换 w = e^{z} 和 w = \\mathrm{Ln}z",
+              "order": 2,
+              "original_text": "original_text/ch08_s04_ss02.md",
+              "block_ids": [
+                "CH08-S04-SS02-B0061"
+              ],
+              "source_lines": [
+                2808,
+                2831
+              ],
+              "content_sha256": "b6d9efc915ca544e583c1d7de6283216dccd349c5d06a6fa7f5f8ee7777953e5",
+              "subsections": []
+            },
+            {
+              "id": "CH08-S04-SS03",
+              "kind": "subsection",
+              "anchor": "8.4.3",
+              "title": "儒可夫斯基变换",
+              "order": 3,
+              "original_text": "original_text/ch08_s04_ss03.md",
+              "block_ids": [
+                "CH08-S04-SS03-B0062"
+              ],
+              "source_lines": [
+                2832,
+                2884
+              ],
+              "content_sha256": "2b7cc2de207d01d6cd5ccf713a2ab78f416a41da4d1ab0d34871cde55bfe04a8",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH08-S05",
+          "kind": "section",
+          "anchor": "8.5",
+          "title": "许瓦兹-克利斯托菲变换",
+          "order": 5,
+          "original_text": "original_text/ch08_s05.md",
+          "block_ids": [
+            "CH08-S05-SS00-B0063"
+          ],
+          "source_lines": [
+            2885,
+            2990
+          ],
+          "content_sha256": "0bff7de07d9a3500843b76331ab2bb8cff79722fe0134ec3cc13359d05d61dd4",
+          "subsections": []
+        },
+        {
+          "id": "CH08-S06",
+          "kind": "section",
+          "anchor": "8.6",
+          "title": "平面场",
+          "order": 6,
+          "original_text": "original_text/ch08_s06.md",
+          "block_ids": [
+            "CH08-S06-SS00-B0064"
+          ],
+          "source_lines": [
+            2991,
+            3233
+          ],
+          "content_sha256": "f4cce7cd8d07e39d2caa44fd0abdead8665182aa22056974aac51450fbe5968c",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "id": "CH09",
+      "kind": "chapter",
+      "anchor": "9",
+      "title": "拉氏变换",
+      "order": 9,
+      "original_text": "original_text/ch09.md",
+      "block_ids": [
+        "CH09-S00-SS00-B0065"
+      ],
+      "source_lines": [
+        3234,
+        3237
+      ],
+      "content_sha256": "07a4d31f95115efe5d841c23a3c6520506c8d024c4f7a63c34fe31fc677af08e",
+      "sections": [
+        {
+          "id": "CH09-S01",
+          "kind": "section",
+          "anchor": "9.1",
+          "title": "拉氏变换的定义",
+          "order": 1,
+          "original_text": "original_text/ch09_s01.md",
+          "block_ids": [
+            "CH09-S01-SS00-B0066"
+          ],
+          "source_lines": [
+            3238,
+            3298
+          ],
+          "content_sha256": "255cba693a2e5efb8561c80db598367c9358537096f846a2004a189d643b1723",
+          "subsections": []
+        },
+        {
+          "id": "CH09-S02",
+          "kind": "section",
+          "anchor": "9.2",
+          "title": "拉氏变换的基本性质",
+          "order": 2,
+          "original_text": "original_text/ch09_s02.md",
+          "block_ids": [
+            "CH09-S02-SS00-B0067"
+          ],
+          "source_lines": [
+            3299,
+            3300
+          ],
+          "content_sha256": "eb663a708234958d807655aa1e9a37c94d555837aec6a5d92590171201a8a7b9",
+          "subsections": [
+            {
+              "id": "CH09-S02-SS01",
+              "kind": "subsection",
+              "anchor": "9.2.1",
+              "title": "线性关系",
+              "order": 1,
+              "original_text": "original_text/ch09_s02_ss01.md",
+              "block_ids": [
+                "CH09-S02-SS01-B0068"
+              ],
+              "source_lines": [
+                3301,
+                3313
+              ],
+              "content_sha256": "7179627a11ab5f63b0fcd230282d79f5f18915b685adad97d2b124658e941430",
+              "subsections": []
+            },
+            {
+              "id": "CH09-S02-SS02",
+              "kind": "subsection",
+              "anchor": "9.2.2",
+              "title": "相似定理",
+              "order": 2,
+              "original_text": "original_text/ch09_s02_ss02.md",
+              "block_ids": [
+                "CH09-S02-SS02-B0069"
+              ],
+              "source_lines": [
+                3314,
+                3320
+              ],
+              "content_sha256": "d7a834bdc97ae5cd2ddd567b1a8906811d67fad3b618fc81313afdcc7a77ae69",
+              "subsections": []
+            },
+            {
+              "id": "CH09-S02-SS03",
+              "kind": "subsection",
+              "anchor": "9.2.3",
+              "title": "本函数的微分法",
+              "order": 3,
+              "original_text": "original_text/ch09_s02_ss03.md",
+              "block_ids": [
+                "CH09-S02-SS03-B0070"
+              ],
+              "source_lines": [
+                3321,
+                3352
+              ],
+              "content_sha256": "cf20f814b8e3787961c5559e7cc8b34b14e978d1be664d96988addbc3f578c61",
+              "subsections": []
+            },
+            {
+              "id": "CH09-S02-SS04",
+              "kind": "subsection",
+              "anchor": "9.2.4",
+              "title": "本函数的积分法",
+              "order": 4,
+              "original_text": "original_text/ch09_s02_ss04.md",
+              "block_ids": [
+                "CH09-S02-SS04-B0071"
+              ],
+              "source_lines": [
+                3353,
+                3371
+              ],
+              "content_sha256": "8df6f6b4d3f3eef6a6c261bbec40d8c12c9ba6702aafb14b32855fcb50b07141",
+              "subsections": []
+            },
+            {
+              "id": "CH09-S02-SS05",
+              "kind": "subsection",
+              "anchor": "9.2.5",
+              "title": "像函数的微分法",
+              "order": 5,
+              "original_text": "original_text/ch09_s02_ss05.md",
+              "block_ids": [
+                "CH09-S02-SS05-B0072"
+              ],
+              "source_lines": [
+                3372,
+                3389
+              ],
+              "content_sha256": "39fca4b0e5ab32ebeea3f752221fd28579ebf130e6877699f47a31383549a212",
+              "subsections": []
+            },
+            {
+              "id": "CH09-S02-SS06",
+              "kind": "subsection",
+              "anchor": "9.2.6",
+              "title": "像函数的积分法",
+              "order": 6,
+              "original_text": "original_text/ch09_s02_ss06.md",
+              "block_ids": [
+                "CH09-S02-SS06-B0073"
+              ],
+              "source_lines": [
+                3390,
+                3415
+              ],
+              "content_sha256": "1032b74a259a4221ea258736e6563b7b39a42fa30b8448a63d93dfc0a87c328d",
+              "subsections": []
+            },
+            {
+              "id": "CH09-S02-SS07",
+              "kind": "subsection",
+              "anchor": "9.2.7",
+              "title": "延迟定理",
+              "order": 7,
+              "original_text": "original_text/ch09_s02_ss07.md",
+              "block_ids": [
+                "CH09-S02-SS07-B0074"
+              ],
+              "source_lines": [
+                3416,
+                3460
+              ],
+              "content_sha256": "9105e12a8f6c1bbee3d101bb53a5e972dc687914709c88771f07a4229619e178",
+              "subsections": []
+            },
+            {
+              "id": "CH09-S02-SS08",
+              "kind": "subsection",
+              "anchor": "9.2.8",
+              "title": "位移定理",
+              "order": 8,
+              "original_text": "original_text/ch09_s02_ss08.md",
+              "block_ids": [
+                "CH09-S02-SS08-B0075"
+              ],
+              "source_lines": [
+                3461,
+                3475
+              ],
+              "content_sha256": "df75f68b0a1fc212e8154cb517c1e610ccc03dc1922ae003aeafaf5ed8364e7a",
+              "subsections": []
+            },
+            {
+              "id": "CH09-S02-SS09",
+              "kind": "subsection",
+              "anchor": "9.2.9",
+              "title": "周期函数的像函数",
+              "order": 9,
+              "original_text": "original_text/ch09_s02_ss09.md",
+              "block_ids": [
+                "CH09-S02-SS09-B0076"
+              ],
+              "source_lines": [
+                3476,
+                3492
+              ],
+              "content_sha256": "6e9ae148c99040bdb01e48dd2a300fee1c696563d6c1649c19b1c62496ae3370",
+              "subsections": []
+            },
+            {
+              "id": "CH09-S02-SS10",
+              "kind": "subsection",
+              "anchor": "9.2.10",
+              "title": "卷积定理",
+              "order": 10,
+              "original_text": "original_text/ch09_s02_ss10.md",
+              "block_ids": [
+                "CH09-S02-SS10-B0077"
+              ],
+              "source_lines": [
+                3493,
+                3526
+              ],
+              "content_sha256": "cabd13ccba72ec163540b3b5955d890d8a7d89782bd4491ff53219f59c814903",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH09-S03",
+          "kind": "section",
+          "anchor": "9.3",
+          "title": "由像函数求本函数",
+          "order": 3,
+          "original_text": "original_text/ch09_s03.md",
+          "block_ids": [
+            "CH09-S03-SS00-B0078"
+          ],
+          "source_lines": [
+            3527,
+            3531
+          ],
+          "content_sha256": "244efb35edb39de832c2fa6aa1faeff1444966355ec686f2ae7e65f09d6db711",
+          "subsections": [
+            {
+              "id": "CH09-S03-SS01",
+              "kind": "subsection",
+              "anchor": "9.3.1",
+              "title": "部分分式法",
+              "order": 1,
+              "original_text": "original_text/ch09_s03_ss01.md",
+              "block_ids": [
+                "CH09-S03-SS01-B0079"
+              ],
+              "source_lines": [
+                3532,
+                3563
+              ],
+              "content_sha256": "45852fb69638412368bd497bce5cc9e7a772c8748250c12932a6f814a1fe845b",
+              "subsections": []
+            },
+            {
+              "id": "CH09-S03-SS02",
+              "kind": "subsection",
+              "anchor": "9.3.2",
+              "title": "拉氏变换的反演公式",
+              "order": 2,
+              "original_text": "original_text/ch09_s03_ss02.md",
+              "block_ids": [
+                "CH09-S03-SS02-B0080"
+              ],
+              "source_lines": [
+                3564,
+                3630
+              ],
+              "content_sha256": "e6b020d9dc7daaf9f920423b913d9d5c957599ad8f975fb3fdcf9d9b4ccf08e5",
+              "subsections": []
+            },
+            {
+              "id": "CH09-S03-SS03",
+              "kind": "subsection",
+              "anchor": "9.3.3",
+              "title": "其他方法",
+              "order": 3,
+              "original_text": "original_text/ch09_s03_ss03.md",
+              "block_ids": [
+                "CH09-S03-SS03-B0081"
+              ],
+              "source_lines": [
+                3631,
+                3938
+              ],
+              "content_sha256": "f1dedffb7861f5391b4678f83fc27873b0c5abf6c873399fe1ff7fce4f38b506",
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lesson_units": [
+    {
+      "unit_id": "CH01",
+      "level": "chapter_intro",
+      "chapter": "CH01",
+      "section": null,
+      "title": "复数和平面点集",
+      "anchor": "1",
+      "original_text": "original_text/ch01.md"
+    },
+    {
+      "unit_id": "CH01-S01-SS01",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S01",
+      "title": "复数的四则运算",
+      "anchor": "1.1.1",
+      "original_text": "original_text/ch01_s01_ss01.md"
+    },
+    {
+      "unit_id": "CH01-S01-SS02",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S01",
+      "title": "共轭复数",
+      "anchor": "1.1.2",
+      "original_text": "original_text/ch01_s01_ss02.md"
+    },
+    {
+      "unit_id": "CH01-S01-SS03",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S01",
+      "title": "复数的几何表示、模与辐角",
+      "anchor": "1.1.3",
+      "original_text": "original_text/ch01_s01_ss03.md"
+    },
+    {
+      "unit_id": "CH01-S01-SS04",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S01",
+      "title": "复数的乘方和开方",
+      "anchor": "1.1.4",
+      "original_text": "original_text/ch01_s01_ss04.md"
+    },
+    {
+      "unit_id": "CH01-S01-SS05",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S01",
+      "title": "复数序列的极限、无穷远点",
+      "anchor": "1.1.5",
+      "original_text": "original_text/ch01_s01_ss05.md"
+    },
+    {
+      "unit_id": "CH01-S02-SS01",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S02",
+      "title": "基本概念",
+      "anchor": "1.2.1",
+      "original_text": "original_text/ch01_s02_ss01.md"
+    },
+    {
+      "unit_id": "CH01-S02-SS02",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S02",
+      "title": "区域与曲线",
+      "anchor": "1.2.2",
+      "original_text": "original_text/ch01_s02_ss02.md"
+    },
+    {
+      "unit_id": "CH02",
+      "level": "chapter_intro",
+      "chapter": "CH02",
+      "section": null,
+      "title": "复变数函数",
+      "anchor": "2",
+      "original_text": "original_text/ch02.md"
+    },
+    {
+      "unit_id": "CH02-S01",
+      "level": "section",
+      "chapter": "CH02",
+      "section": "CH02-S01",
+      "title": "复变数函数的概念",
+      "anchor": "2.1",
+      "original_text": "original_text/ch02_s01.md"
+    },
+    {
+      "unit_id": "CH02-S02",
+      "level": "section",
+      "chapter": "CH02",
+      "section": "CH02-S02",
+      "title": "函数极限和连续性",
+      "anchor": "2.2",
+      "original_text": "original_text/ch02_s02.md"
+    },
+    {
+      "unit_id": "CH02-S03",
+      "level": "section",
+      "chapter": "CH02",
+      "section": "CH02-S03",
+      "title": "导数和解析函数的概念",
+      "anchor": "2.3",
+      "original_text": "original_text/ch02_s03.md"
+    },
+    {
+      "unit_id": "CH02-S04",
+      "level": "section",
+      "chapter": "CH02",
+      "section": "CH02-S04",
+      "title": "柯西－黎曼方程",
+      "anchor": "2.4",
+      "original_text": "original_text/ch02_s04.md"
+    },
+    {
+      "unit_id": "CH02-S05",
+      "level": "section_intro",
+      "chapter": "CH02",
+      "section": "CH02-S05",
+      "title": "初等函数",
+      "anchor": "2.5",
+      "original_text": "original_text/ch02_s05.md"
+    },
+    {
+      "unit_id": "CH02-S05-SS01",
+      "level": "subsection",
+      "chapter": "CH02",
+      "section": "CH02-S05",
+      "title": "幂函数",
+      "anchor": "2.5.1",
+      "original_text": "original_text/ch02_s05_ss01.md"
+    },
+    {
+      "unit_id": "CH02-S05-SS02",
+      "level": "subsection",
+      "chapter": "CH02",
+      "section": "CH02-S05",
+      "title": "根式函数",
+      "anchor": "2.5.2",
+      "original_text": "original_text/ch02_s05_ss02.md"
+    },
+    {
+      "unit_id": "CH02-S05-SS03",
+      "level": "subsection",
+      "chapter": "CH02",
+      "section": "CH02-S05",
+      "title": "指数函数",
+      "anchor": "2.5.3",
+      "original_text": "original_text/ch02_s05_ss03.md"
+    },
+    {
+      "unit_id": "CH02-S05-SS04",
+      "level": "subsection",
+      "chapter": "CH02",
+      "section": "CH02-S05",
+      "title": "对数函数",
+      "anchor": "2.5.4",
+      "original_text": "original_text/ch02_s05_ss04.md"
+    },
+    {
+      "unit_id": "CH02-S05-SS05",
+      "level": "subsection",
+      "chapter": "CH02",
+      "section": "CH02-S05",
+      "title": "三角函数",
+      "anchor": "2.5.5",
+      "original_text": "original_text/ch02_s05_ss05.md"
+    },
+    {
+      "unit_id": "CH02-S05-SS06",
+      "level": "subsection",
+      "chapter": "CH02",
+      "section": "CH02-S05",
+      "title": "双曲函数",
+      "anchor": "2.5.6",
+      "original_text": "original_text/ch02_s05_ss06.md"
+    },
+    {
+      "unit_id": "CH02-S05-SS07",
+      "level": "subsection",
+      "chapter": "CH02",
+      "section": "CH02-S05",
+      "title": "一般幂函数",
+      "anchor": "2.5.7",
+      "original_text": "original_text/ch02_s05_ss07.md"
+    },
+    {
+      "unit_id": "CH02-S05-SS08",
+      "level": "subsection",
+      "chapter": "CH02",
+      "section": "CH02-S05",
+      "title": "反三角函数",
+      "anchor": "2.5.8",
+      "original_text": "original_text/ch02_s05_ss08.md"
+    },
+    {
+      "unit_id": "CH03",
+      "level": "chapter_intro",
+      "chapter": "CH03",
+      "section": null,
+      "title": "解析函数的积分表示",
+      "anchor": "3",
+      "original_text": "original_text/ch03.md"
+    },
+    {
+      "unit_id": "CH03-S01",
+      "level": "section",
+      "chapter": "CH03",
+      "section": "CH03-S01",
+      "title": "复变函数的积分",
+      "anchor": "3.1",
+      "original_text": "original_text/ch03_s01.md"
+    },
+    {
+      "unit_id": "CH03-S02",
+      "level": "section",
+      "chapter": "CH03",
+      "section": "CH03-S02",
+      "title": "柯西积分定理",
+      "anchor": "3.2",
+      "original_text": "original_text/ch03_s02.md"
+    },
+    {
+      "unit_id": "CH03-S03",
+      "level": "section",
+      "chapter": "CH03",
+      "section": "CH03-S03",
+      "title": "原函数",
+      "anchor": "3.3",
+      "original_text": "original_text/ch03_s03.md"
+    },
+    {
+      "unit_id": "CH03-S04",
+      "level": "section",
+      "chapter": "CH03",
+      "section": "CH03-S04",
+      "title": "柯西积分公式",
+      "anchor": "3.4",
+      "original_text": "original_text/ch03_s04.md"
+    },
+    {
+      "unit_id": "CH03-S05",
+      "level": "section",
+      "chapter": "CH03",
+      "section": "CH03-S05",
+      "title": "解析函数的性质",
+      "anchor": "3.5",
+      "original_text": "original_text/ch03_s05.md"
+    },
+    {
+      "unit_id": "CH04",
+      "level": "chapter_intro",
+      "chapter": "CH04",
+      "section": null,
+      "title": "调和函数",
+      "anchor": "4",
+      "original_text": "original_text/ch04.md"
+    },
+    {
+      "unit_id": "CH04-S01",
+      "level": "section",
+      "chapter": "CH04",
+      "section": "CH04-S01",
+      "title": "解析函数与调和函数的关系",
+      "anchor": "4.1",
+      "original_text": "original_text/ch04_s01.md"
+    },
+    {
+      "unit_id": "CH04-S02",
+      "level": "section",
+      "chapter": "CH04",
+      "section": "CH04-S02",
+      "title": "调和函数的性质和狭利克雷问题",
+      "anchor": "4.2",
+      "original_text": "original_text/ch04_s02.md"
+    },
+    {
+      "unit_id": "CH05",
+      "level": "chapter_intro",
+      "chapter": "CH05",
+      "section": null,
+      "title": "解析函数的级数展开",
+      "anchor": "5",
+      "original_text": "original_text/ch05.md"
+    },
+    {
+      "unit_id": "CH05-S01-SS01",
+      "level": "subsection",
+      "chapter": "CH05",
+      "section": "CH05-S01",
+      "title": "复数项级数",
+      "anchor": "5.1.1",
+      "original_text": "original_text/ch05_s01_ss01.md"
+    },
+    {
+      "unit_id": "CH05-S01-SS02",
+      "level": "subsection",
+      "chapter": "CH05",
+      "section": "CH05-S01",
+      "title": "复变函数项级数",
+      "anchor": "5.1.2",
+      "original_text": "original_text/ch05_s01_ss02.md"
+    },
+    {
+      "unit_id": "CH05-S02",
+      "level": "section",
+      "chapter": "CH05",
+      "section": "CH05-S02",
+      "title": "基级数",
+      "anchor": "5.2",
+      "original_text": "original_text/ch05_s02.md"
+    },
+    {
+      "unit_id": "CH05-S03",
+      "level": "section",
+      "chapter": "CH05",
+      "section": "CH05-S03",
+      "title": "解析函数的泰勒(Taylor)展开",
+      "anchor": "5.3",
+      "original_text": "original_text/ch05_s03.md"
+    },
+    {
+      "unit_id": "CH05-S04",
+      "level": "section",
+      "chapter": "CH05",
+      "section": "CH05-S04",
+      "title": "罗朗(Laurent)级数",
+      "anchor": "5.4",
+      "original_text": "original_text/ch05_s04.md"
+    },
+    {
+      "unit_id": "CH05-S05",
+      "level": "section",
+      "chapter": "CH05",
+      "section": "CH05-S05",
+      "title": "解析函数的孤立奇点",
+      "anchor": "5.5",
+      "original_text": "original_text/ch05_s05.md"
+    },
+    {
+      "unit_id": "CH06",
+      "level": "chapter_intro",
+      "chapter": "CH06",
+      "section": null,
+      "title": "留数及其应用",
+      "anchor": "6",
+      "original_text": "original_text/ch06.md"
+    },
+    {
+      "unit_id": "CH06-S01",
+      "level": "section",
+      "chapter": "CH06",
+      "section": "CH06-S01",
+      "title": "留数定理",
+      "anchor": "6.1",
+      "original_text": "original_text/ch06_s01.md"
+    },
+    {
+      "unit_id": "CH06-S02",
+      "level": "section_intro",
+      "chapter": "CH06",
+      "section": "CH06-S02",
+      "title": "积分计算",
+      "anchor": "6.2",
+      "original_text": "original_text/ch06_s02.md"
+    },
+    {
+      "unit_id": "CH06-S02-SS01",
+      "level": "subsection",
+      "chapter": "CH06",
+      "section": "CH06-S02",
+      "title": "$\\int_0^{2\\pi}R(\\cos \\theta ,\\sin \\theta)\\mathrm{d}\\theta$ 型积分",
+      "anchor": "6.2.1",
+      "original_text": "original_text/ch06_s02_ss01.md"
+    },
+    {
+      "unit_id": "CH06-S02-SS02",
+      "level": "subsection",
+      "chapter": "CH06",
+      "section": "CH06-S02",
+      "title": "有理函数的积分 $\\int_{-\\infty}^{+\\infty} R(x) \\mathrm{d}x$",
+      "anchor": "6.2.2",
+      "original_text": "original_text/ch06_s02_ss02.md"
+    },
+    {
+      "unit_id": "CH06-S02-SS03",
+      "level": "subsection",
+      "chapter": "CH06",
+      "section": "CH06-S02",
+      "title": "$I_{1} = \\int_{-\\infty}^{+\\infty}R(x)\\cos mx\\mathrm{d}x$ 及 $I_{2} = \\int_{-\\infty}^{+\\infty}R(x)\\sin mx\\mathrm{d}x,m > 0$ 型的积分",
+      "anchor": "6.2.3",
+      "original_text": "original_text/ch06_s02_ss03.md"
+    },
+    {
+      "unit_id": "CH06-S02-SS04",
+      "level": "subsection",
+      "chapter": "CH06",
+      "section": "CH06-S02",
+      "title": "杂例",
+      "anchor": "6.2.4",
+      "original_text": "original_text/ch06_s02_ss04.md"
+    },
+    {
+      "unit_id": "CH06-S02-SS05",
+      "level": "subsection",
+      "chapter": "CH06",
+      "section": "CH06-S02",
+      "title": "多值函数的积分",
+      "anchor": "6.2.5",
+      "original_text": "original_text/ch06_s02_ss05.md"
+    },
+    {
+      "unit_id": "CH06-S03",
+      "level": "section",
+      "chapter": "CH06",
+      "section": "CH06-S03",
+      "title": "辐角原理",
+      "anchor": "6.3",
+      "original_text": "original_text/ch06_s03.md"
+    },
+    {
+      "unit_id": "CH07",
+      "level": "chapter_intro",
+      "chapter": "CH07",
+      "section": null,
+      "title": "解析开拓",
+      "anchor": "7",
+      "original_text": "original_text/ch07.md"
+    },
+    {
+      "unit_id": "CH07-S01",
+      "level": "section",
+      "chapter": "CH07",
+      "section": "CH07-S01",
+      "title": "唯一性定理和解析开拓的概念",
+      "anchor": "7.1",
+      "original_text": "original_text/ch07_s01.md"
+    },
+    {
+      "unit_id": "CH07-S02",
+      "level": "section",
+      "chapter": "CH07",
+      "section": "CH07-S02",
+      "title": "含复参变量积分及Γ函数",
+      "anchor": "7.2",
+      "original_text": "original_text/ch07_s02.md"
+    },
+    {
+      "unit_id": "CH08",
+      "level": "chapter_intro",
+      "chapter": "CH08",
+      "section": null,
+      "title": "保形变换及其应用",
+      "anchor": "8",
+      "original_text": "original_text/ch08.md"
+    },
+    {
+      "unit_id": "CH08-S01",
+      "level": "section",
+      "chapter": "CH08",
+      "section": "CH08-S01",
+      "title": "导数的几何意义",
+      "anchor": "8.1",
+      "original_text": "original_text/ch08_s01.md"
+    },
+    {
+      "unit_id": "CH08-S02",
+      "level": "section",
+      "chapter": "CH08",
+      "section": "CH08-S02",
+      "title": "保形变换的概念",
+      "anchor": "8.2",
+      "original_text": "original_text/ch08_s02.md"
+    },
+    {
+      "unit_id": "CH08-S03",
+      "level": "section",
+      "chapter": "CH08",
+      "section": "CH08-S03",
+      "title": "分式线性变换",
+      "anchor": "8.3",
+      "original_text": "original_text/ch08_s03.md"
+    },
+    {
+      "unit_id": "CH08-S04",
+      "level": "section_intro",
+      "chapter": "CH08",
+      "section": "CH08-S04",
+      "title": "初等函数的映照",
+      "anchor": "8.4",
+      "original_text": "original_text/ch08_s04.md"
+    },
+    {
+      "unit_id": "CH08-S04-SS01",
+      "level": "subsection",
+      "chapter": "CH08",
+      "section": "CH08-S04",
+      "title": "变换 w = z^n 和 w = \\sqrt{z}, n \\geqslant 2 是自然数",
+      "anchor": "8.4.1",
+      "original_text": "original_text/ch08_s04_ss01.md"
+    },
+    {
+      "unit_id": "CH08-S04-SS02",
+      "level": "subsection",
+      "chapter": "CH08",
+      "section": "CH08-S04",
+      "title": "变换 w = e^{z} 和 w = \\mathrm{Ln}z",
+      "anchor": "8.4.2",
+      "original_text": "original_text/ch08_s04_ss02.md"
+    },
+    {
+      "unit_id": "CH08-S04-SS03",
+      "level": "subsection",
+      "chapter": "CH08",
+      "section": "CH08-S04",
+      "title": "儒可夫斯基变换",
+      "anchor": "8.4.3",
+      "original_text": "original_text/ch08_s04_ss03.md"
+    },
+    {
+      "unit_id": "CH08-S05",
+      "level": "section",
+      "chapter": "CH08",
+      "section": "CH08-S05",
+      "title": "许瓦兹-克利斯托菲变换",
+      "anchor": "8.5",
+      "original_text": "original_text/ch08_s05.md"
+    },
+    {
+      "unit_id": "CH08-S06",
+      "level": "section",
+      "chapter": "CH08",
+      "section": "CH08-S06",
+      "title": "平面场",
+      "anchor": "8.6",
+      "original_text": "original_text/ch08_s06.md"
+    },
+    {
+      "unit_id": "CH09",
+      "level": "chapter_intro",
+      "chapter": "CH09",
+      "section": null,
+      "title": "拉氏变换",
+      "anchor": "9",
+      "original_text": "original_text/ch09.md"
+    },
+    {
+      "unit_id": "CH09-S01",
+      "level": "section",
+      "chapter": "CH09",
+      "section": "CH09-S01",
+      "title": "拉氏变换的定义",
+      "anchor": "9.1",
+      "original_text": "original_text/ch09_s01.md"
+    },
+    {
+      "unit_id": "CH09-S02-SS01",
+      "level": "subsection",
+      "chapter": "CH09",
+      "section": "CH09-S02",
+      "title": "线性关系",
+      "anchor": "9.2.1",
+      "original_text": "original_text/ch09_s02_ss01.md"
+    },
+    {
+      "unit_id": "CH09-S02-SS02",
+      "level": "subsection",
+      "chapter": "CH09",
+      "section": "CH09-S02",
+      "title": "相似定理",
+      "anchor": "9.2.2",
+      "original_text": "original_text/ch09_s02_ss02.md"
+    },
+    {
+      "unit_id": "CH09-S02-SS03",
+      "level": "subsection",
+      "chapter": "CH09",
+      "section": "CH09-S02",
+      "title": "本函数的微分法",
+      "anchor": "9.2.3",
+      "original_text": "original_text/ch09_s02_ss03.md"
+    },
+    {
+      "unit_id": "CH09-S02-SS04",
+      "level": "subsection",
+      "chapter": "CH09",
+      "section": "CH09-S02",
+      "title": "本函数的积分法",
+      "anchor": "9.2.4",
+      "original_text": "original_text/ch09_s02_ss04.md"
+    },
+    {
+      "unit_id": "CH09-S02-SS05",
+      "level": "subsection",
+      "chapter": "CH09",
+      "section": "CH09-S02",
+      "title": "像函数的微分法",
+      "anchor": "9.2.5",
+      "original_text": "original_text/ch09_s02_ss05.md"
+    },
+    {
+      "unit_id": "CH09-S02-SS06",
+      "level": "subsection",
+      "chapter": "CH09",
+      "section": "CH09-S02",
+      "title": "像函数的积分法",
+      "anchor": "9.2.6",
+      "original_text": "original_text/ch09_s02_ss06.md"
+    },
+    {
+      "unit_id": "CH09-S02-SS07",
+      "level": "subsection",
+      "chapter": "CH09",
+      "section": "CH09-S02",
+      "title": "延迟定理",
+      "anchor": "9.2.7",
+      "original_text": "original_text/ch09_s02_ss07.md"
+    },
+    {
+      "unit_id": "CH09-S02-SS08",
+      "level": "subsection",
+      "chapter": "CH09",
+      "section": "CH09-S02",
+      "title": "位移定理",
+      "anchor": "9.2.8",
+      "original_text": "original_text/ch09_s02_ss08.md"
+    },
+    {
+      "unit_id": "CH09-S02-SS09",
+      "level": "subsection",
+      "chapter": "CH09",
+      "section": "CH09-S02",
+      "title": "周期函数的像函数",
+      "anchor": "9.2.9",
+      "original_text": "original_text/ch09_s02_ss09.md"
+    },
+    {
+      "unit_id": "CH09-S02-SS10",
+      "level": "subsection",
+      "chapter": "CH09",
+      "section": "CH09-S02",
+      "title": "卷积定理",
+      "anchor": "9.2.10",
+      "original_text": "original_text/ch09_s02_ss10.md"
+    },
+    {
+      "unit_id": "CH09-S03",
+      "level": "section_intro",
+      "chapter": "CH09",
+      "section": "CH09-S03",
+      "title": "由像函数求本函数",
+      "anchor": "9.3",
+      "original_text": "original_text/ch09_s03.md"
+    },
+    {
+      "unit_id": "CH09-S03-SS01",
+      "level": "subsection",
+      "chapter": "CH09",
+      "section": "CH09-S03",
+      "title": "部分分式法",
+      "anchor": "9.3.1",
+      "original_text": "original_text/ch09_s03_ss01.md"
+    },
+    {
+      "unit_id": "CH09-S03-SS02",
+      "level": "subsection",
+      "chapter": "CH09",
+      "section": "CH09-S03",
+      "title": "拉氏变换的反演公式",
+      "anchor": "9.3.2",
+      "original_text": "original_text/ch09_s03_ss02.md"
+    },
+    {
+      "unit_id": "CH09-S03-SS03",
+      "level": "subsection",
+      "chapter": "CH09",
+      "section": "CH09-S03",
+      "title": "其他方法",
+      "anchor": "9.3.3",
+      "original_text": "original_text/ch09_s03_ss03.md"
+    }
+  ],
+  "frontmatter": "original_text/_frontmatter.md"
+}

@@ -1,0 +1,125 @@
+{
+  "_meta": {
+    "file_type": "book_run",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.run_book",
+    "run_id": "book-20261003-082654-c2aaa8",
+    "field_notes": {
+      "章[]": "逐章：退出码、花费（token）、墙钟、worker 日志路径、结论",
+      "并行度": "同时跑了几个 worker（规格 D3：默认 2，上限 8）",
+      "预算": "token / 墙钟上限；一超就停新 worker 并收尾（规格 A8）",
+      "reconcile": "所有 worker 停之后的单线程重建（幂等，可重复跑）",
+      "doctor违规": "收尾时的不变量违规；空数组才算整本成功"
+    }
+  },
+  "run_id": "book-20261003-082654-c2aaa8",
+  "书": "data/parse/complex-analysis-v2",
+  "章": [
+    {
+      "chapter": "CH01",
+      "code": 1,
+      "tokens": 1415701,
+      "seconds": 3590.8,
+      "log": "data/lesson/complex-analysis-v2/book-runs/book-20261003-082654-c2aaa8/CH01.log",
+      "status": "failed"
+    },
+    {
+      "chapter": "CH02",
+      "code": 1,
+      "tokens": 3229807,
+      "seconds": 7365.1,
+      "log": "data/lesson/complex-analysis-v2/book-runs/book-20261003-082654-c2aaa8/CH02.log",
+      "status": "failed"
+    },
+    {
+      "chapter": "CH03",
+      "code": 1,
+      "tokens": 1075876,
+      "seconds": 2766.6,
+      "log": "data/lesson/complex-analysis-v2/book-runs/book-20261003-082654-c2aaa8/CH03.log",
+      "status": "failed"
+    },
+    {
+      "chapter": "CH04",
+      "code": 1,
+      "tokens": 494283,
+      "seconds": 1146.4,
+      "log": "data/lesson/complex-analysis-v2/book-runs/book-20261003-082654-c2aaa8/CH04.log",
+      "status": "failed"
+    },
+    {
+      "chapter": "CH05",
+      "code": 1,
+      "tokens": 1509567,
+      "seconds": 3564.6,
+      "log": "data/lesson/complex-analysis-v2/book-runs/book-20261003-082654-c2aaa8/CH05.log",
+      "status": "failed"
+    },
+    {
+      "chapter": "CH06",
+      "code": 1,
+      "tokens": 1253857,
+      "seconds": 3582.6,
+      "log": "data/lesson/complex-analysis-v2/book-runs/book-20261003-082654-c2aaa8/CH06.log",
+      "status": "failed"
+    },
+    {
+      "chapter": "CH07",
+      "code": 1,
+      "tokens": 269587,
+      "seconds": 926.2,
+      "log": "data/lesson/complex-analysis-v2/book-runs/book-20261003-082654-c2aaa8/CH07.log",
+      "status": "failed"
+    },
+    {
+      "chapter": "CH08",
+      "code": 1,
+      "tokens": 1137216,
+      "seconds": 4092.5,
+      "log": "data/lesson/complex-analysis-v2/book-runs/book-20261003-082654-c2aaa8/CH08.log",
+      "status": "failed"
+    },
+    {
+      "chapter": "CH09",
+      "code": 1,
+      "tokens": 2460834,
+      "seconds": 7042.7,
+      "log": "data/lesson/complex-analysis-v2/book-runs/book-20261003-082654-c2aaa8/CH09.log",
+      "status": "failed"
+    }
+  ],
+  "并行度": 8,
+  "预算": {
+    "token": 14000000,
+    "分钟": 600,
+    "触发": ""
+  },
+  "总花费": 12846728,
+  "墙钟分钟": 132.9,
+  "reconcile": {
+    "索引": [
+      "64 行（原 0 行）"
+    ],
+    "概念登记": [
+      "occurrence +343"
+    ],
+    "快照": [
+      "差异字段：confirmed, notation, progress, recap"
+    ]
+  },
+  "doctor违规": [
+    {
+      "不变量": "教案快照不过期",
+      "说明": "CH05-S05-SS01：快照 5 条、重算 1 条｜快照多的：CH05-S05-SS01: 《方阵行列式为零与不满秩》(F-05) 四样都没有 —— 图 / 某步｜漏掉的：CH05-S05-SS01: 无法重算校验（chapters.json 里没有这个单元）",
+      "证据": "/home/aaatrucklrx/桌面/AI教学/AIforStudy/data/lesson/linear-algebra-full/lessons/CH05-S05-SS01.json",
+      "后果": "闸门会按旧规则放行"
+    },
+    {
+      "不变量": "整本快照不过期",
+      "说明": "重算结果与存盘不一致（差异字段：book, confirmed, notation, progress）",
+      "证据": "/home/aaatrucklrx/桌面/AI教学/AIforStudy/data/lesson/linear-algebra-full/snapshot.json",
+      "后果": "下一节的提示词里带的是过期状态（会误导模型/让判据误报）—— 重跑 reconcile 即可，0 token"
+    }
+  ],
+  "结论": "失败"
+}

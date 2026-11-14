@@ -1,0 +1,2806 @@
+{
+  "_meta": {
+    "file_type": "chapters",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.export",
+    "source_sha256": "2fb901476e339913698738d585d420fcd364edee6f8e4b2fa23e3789290d13a4",
+    "field_notes": {
+      "chapters[].id": "章 id，形如 CH01",
+      "chapters[].sections[].id": "节 id，形如 CH01-S01",
+      "chapters[].sections[].subsections[].id": "小节 id，形如 CH01-S01-SS01",
+      "original_text": "原文文件路径（相对 data/parse/）；为 null 表示这一层没有自己的正文",
+      "content_sha256": "该节点正文的哈希，用于确认原文没被改动",
+      "lesson_units[]": "教案块要逐个处理的单元清单（取有内容的最深一层）"
+    }
+  },
+  "book": {
+    "title": "线性代数",
+    "source_sha256": "2fb901476e339913698738d585d420fcd364edee6f8e4b2fa23e3789290d13a4"
+  },
+  "chapters": [
+    {
+      "id": "CH01",
+      "kind": "chapter",
+      "anchor": "1",
+      "title": "向量",
+      "order": 1,
+      "original_text": "original_text/ch01.md",
+      "block_ids": [
+        "CH01-S00-SS00-B0001"
+      ],
+      "source_lines": [
+        1,
+        4
+      ],
+      "content_sha256": "4de7e44cac1e88e626fbdc482b2994558bdfa4f8c574746ce6032551cebb99da",
+      "sections": [
+        {
+          "id": "CH01-S01",
+          "kind": "section",
+          "anchor": "1.1",
+          "title": "向量的线性运算",
+          "order": 1,
+          "original_text": "original_text/ch01_s01.md",
+          "block_ids": [
+            "CH01-S01-SS00-B0002"
+          ],
+          "source_lines": [
+            5,
+            6
+          ],
+          "content_sha256": "3509eb293e94c14e14137000af782db070d09187ffc4c6e6ca96d8d265a22380",
+          "subsections": [
+            {
+              "id": "CH01-S01-SS01",
+              "kind": "subsection",
+              "anchor": "1.1.1",
+              "title": "向量及其表示",
+              "order": 1,
+              "original_text": "original_text/ch01_s01_ss01.md",
+              "block_ids": [
+                "CH01-S01-SS01-B0003"
+              ],
+              "source_lines": [
+                7,
+                10
+              ],
+              "content_sha256": "718ad91497e74a88eef994abaa6e3fb5c0f31f775bd5fd90554435fbdd4f2fdf",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S01-SS02",
+              "kind": "subsection",
+              "anchor": "1.1.2",
+              "title": "向量的线性运算",
+              "order": 2,
+              "original_text": "original_text/ch01_s01_ss02.md",
+              "block_ids": [
+                "CH01-S01-SS02-B0004"
+              ],
+              "source_lines": [
+                11,
+                15
+              ],
+              "content_sha256": "996ca3092426a97775386334b08f9d557e9629e0d1880b0efe22e700da92af00",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S01-SS03",
+              "kind": "subsection",
+              "anchor": "1.1.3",
+              "title": "向量的共线与共面",
+              "order": 3,
+              "original_text": "original_text/ch01_s01_ss03.md",
+              "block_ids": [
+                "CH01-S01-SS03-B0005"
+              ],
+              "source_lines": [
+                16,
+                23
+              ],
+              "content_sha256": "a5b2475c6884b684771257f5db801c2266a25ea158edf185e94279a1e9542554",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH01-S02",
+          "kind": "section",
+          "anchor": "1.2",
+          "title": "坐标系",
+          "order": 2,
+          "original_text": "original_text/ch01_s02.md",
+          "block_ids": [
+            "CH01-S02-SS00-B0006"
+          ],
+          "source_lines": [
+            24,
+            25
+          ],
+          "content_sha256": "075f7e8c6011f13e2e57c7871353cbb622c6e825ef9cca254502efe415dd269e",
+          "subsections": [
+            {
+              "id": "CH01-S02-SS01",
+              "kind": "subsection",
+              "anchor": "1.2.1",
+              "title": "仿射坐标系",
+              "order": 1,
+              "original_text": "original_text/ch01_s02_ss01.md",
+              "block_ids": [
+                "CH01-S02-SS01-B0007"
+              ],
+              "source_lines": [
+                26,
+                35
+              ],
+              "content_sha256": "ca1a064ba15615fbfdcc1de9036d2ea875c79d0638dc98b0cda4574cc9e75380",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S02-SS02",
+              "kind": "subsection",
+              "anchor": "1.2.2",
+              "title": "向量的坐标运算",
+              "order": 2,
+              "original_text": "original_text/ch01_s02_ss02.md",
+              "block_ids": [
+                "CH01-S02-SS02-B0008"
+              ],
+              "source_lines": [
+                36,
+                41
+              ],
+              "content_sha256": "23ec910aace588b1eabdd101eb7b807c9b1d74aefbcac6bd2ba40e63fcc325b4",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S02-SS03",
+              "kind": "subsection",
+              "anchor": "1.2.3",
+              "title": "直角坐标系",
+              "order": 3,
+              "original_text": "original_text/ch01_s02_ss03.md",
+              "block_ids": [
+                "CH01-S02-SS03-B0009"
+              ],
+              "source_lines": [
+                42,
+                45
+              ],
+              "content_sha256": "7a2a62cc420b2a6edaa5049c817db74964cfec6f3ca818b97eaccccd3fc96e9f",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH01-S03",
+          "kind": "section",
+          "anchor": "1.3",
+          "title": "向量的数量积",
+          "order": 3,
+          "original_text": "original_text/ch01_s03.md",
+          "block_ids": [
+            "CH01-S03-SS00-B0010"
+          ],
+          "source_lines": [
+            46,
+            47
+          ],
+          "content_sha256": "f2f379fe90c72373f4ddd0530e1065cdd064758ee4fa7564b07f5912a07309c7",
+          "subsections": [
+            {
+              "id": "CH01-S03-SS01",
+              "kind": "subsection",
+              "anchor": "1.3.1",
+              "title": "数量积的定义与性质",
+              "order": 1,
+              "original_text": "original_text/ch01_s03_ss01.md",
+              "block_ids": [
+                "CH01-S03-SS01-B0011"
+              ],
+              "source_lines": [
+                48,
+                51
+              ],
+              "content_sha256": "ff9c76c0168f22022b8a80929a06a34cd460d56b24e77e994c5b7e5a999a33ea",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S03-SS02",
+              "kind": "subsection",
+              "anchor": "1.3.2",
+              "title": "直角坐标系下数量积的计算",
+              "order": 2,
+              "original_text": "original_text/ch01_s03_ss02.md",
+              "block_ids": [
+                "CH01-S03-SS02-B0012"
+              ],
+              "source_lines": [
+                52,
+                55
+              ],
+              "content_sha256": "9603f4bc253b98c62bf78c53746748e304fa9639c798f0254410aae05dc065e4",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH01-S04",
+          "kind": "section",
+          "anchor": "1.4",
+          "title": "向量的向量积",
+          "order": 4,
+          "original_text": "original_text/ch01_s04.md",
+          "block_ids": [
+            "CH01-S04-SS00-B0013"
+          ],
+          "source_lines": [
+            56,
+            57
+          ],
+          "content_sha256": "2702d99331d6e8d9423ceb574e770d2b3fed0032bac319203b3bd190b9f1f061",
+          "subsections": [
+            {
+              "id": "CH01-S04-SS01",
+              "kind": "subsection",
+              "anchor": "1.4.1",
+              "title": "向量积的定义与性质",
+              "order": 1,
+              "original_text": "original_text/ch01_s04_ss01.md",
+              "block_ids": [
+                "CH01-S04-SS01-B0014"
+              ],
+              "source_lines": [
+                58,
+                61
+              ],
+              "content_sha256": "370bfd08d0dd20120af463a29717d56cf1245d325bdcd14a3bf3344529506cbb",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S04-SS02",
+              "kind": "subsection",
+              "anchor": "1.4.2",
+              "title": "直角坐标系下向量积的计算",
+              "order": 2,
+              "original_text": "original_text/ch01_s04_ss02.md",
+              "block_ids": [
+                "CH01-S04-SS02-B0015"
+              ],
+              "source_lines": [
+                62,
+                65
+              ],
+              "content_sha256": "45bbb9408ab84bca3194968fbe8fb51f2288359af7323103c8649c00e9d11bca",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH01-S05",
+          "kind": "section",
+          "anchor": "1.5",
+          "title": "向量的混合积",
+          "order": 5,
+          "original_text": "original_text/ch01_s05.md",
+          "block_ids": [
+            "CH01-S05-SS00-B0016"
+          ],
+          "source_lines": [
+            66,
+            67
+          ],
+          "content_sha256": "693b53d2be6bc9d35360ea66e3ee5587f6419aabe7ac93889ce8261e978f623e",
+          "subsections": [
+            {
+              "id": "CH01-S05-SS01",
+              "kind": "subsection",
+              "anchor": "1.5.1",
+              "title": "混合积的定义",
+              "order": 1,
+              "original_text": "original_text/ch01_s05_ss01.md",
+              "block_ids": [
+                "CH01-S05-SS01-B0017"
+              ],
+              "source_lines": [
+                68,
+                71
+              ],
+              "content_sha256": "5199a6dfac8773cc746ee029a232c261bc4cba478fd25d002b0ad8687349274c",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S05-SS02",
+              "kind": "subsection",
+              "anchor": "1.5.2",
+              "title": "直角坐标系下混合积的计算",
+              "order": 2,
+              "original_text": "original_text/ch01_s05_ss02.md",
+              "block_ids": [
+                "CH01-S05-SS02-B0018"
+              ],
+              "source_lines": [
+                72,
+                75
+              ],
+              "content_sha256": "1803a93972a90ca4ad1975e436efeac944ba622a6094b93496288412156cb9d0",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S05-SS03",
+              "kind": "subsection",
+              "anchor": "1.5.3",
+              "title": "二重外积",
+              "order": 3,
+              "original_text": "original_text/ch01_s05_ss03.md",
+              "block_ids": [
+                "CH01-S05-SS03-B0019"
+              ],
+              "source_lines": [
+                76,
+                79
+              ],
+              "content_sha256": "9f7dab8c80402db5dbf6c810e97d1388a5a7670486eedcc8da45722dfa5f887d",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH01-S06",
+          "kind": "section",
+          "anchor": "1.6",
+          "title": "高维数组向量",
+          "order": 6,
+          "original_text": "original_text/ch01_s06.md",
+          "block_ids": [
+            "CH01-S06-SS00-B0020"
+          ],
+          "source_lines": [
+            80,
+            83
+          ],
+          "content_sha256": "b7310f4c49c74479e11ab40c429c3108a5a307e243bdd99488ef7393260439f6",
+          "subsections": []
+        },
+        {
+          "id": "CH01-S07",
+          "kind": "section",
+          "anchor": "1.7",
+          "title": "集合与映射*",
+          "order": 7,
+          "original_text": "original_text/ch01_s07.md",
+          "block_ids": [
+            "CH01-S07-SS00-B0021"
+          ],
+          "source_lines": [
+            84,
+            87
+          ],
+          "content_sha256": "149e26f9db0424eceeb880527dba85b5b4e9036b9104e7c3bd9f2d6bc965567a",
+          "subsections": [
+            {
+              "id": "CH01-S07-SS01",
+              "kind": "subsection",
+              "anchor": "1.7.1",
+              "title": "集合的定义*",
+              "order": 1,
+              "original_text": "original_text/ch01_s07_ss01.md",
+              "block_ids": [
+                "CH01-S07-SS01-B0022"
+              ],
+              "source_lines": [
+                88,
+                95
+              ],
+              "content_sha256": "c2655c2166f227cfeb6cb7e7dea35eac1f6e0c793c4399cb1231dc8a3e0562a7",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S07-SS02",
+              "kind": "subsection",
+              "anchor": "1.7.2",
+              "title": "集合的基本运算*",
+              "order": 2,
+              "original_text": "original_text/ch01_s07_ss02.md",
+              "block_ids": [
+                "CH01-S07-SS02-B0023"
+              ],
+              "source_lines": [
+                96,
+                104
+              ],
+              "content_sha256": "a9af16816a6a8c5e7f606ec9d2407a4beb8a2e70c1f75c078191307f403ecf90",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S07-SS03",
+              "kind": "subsection",
+              "anchor": "1.7.3",
+              "title": "映射*",
+              "order": 3,
+              "original_text": "original_text/ch01_s07_ss03.md",
+              "block_ids": [
+                "CH01-S07-SS03-B0024"
+              ],
+              "source_lines": [
+                105,
+                108
+              ],
+              "content_sha256": "9f0373daf410fccd93b6acbd19c3586430d21223367fe9673cb8d2a468c12ba6",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S07-SS04",
+              "kind": "subsection",
+              "anchor": "1.7.4",
+              "title": "置换与排列*",
+              "order": 4,
+              "original_text": "original_text/ch01_s07_ss04.md",
+              "block_ids": [
+                "CH01-S07-SS04-B0025"
+              ],
+              "source_lines": [
+                109,
+                114
+              ],
+              "content_sha256": "ca28f8ae003fafbb1d5275705c60eb1e3b37c271c79cfc4f4a1dba4add779c60",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S07-SS05",
+              "kind": "subsection",
+              "anchor": "1.7.5",
+              "title": "等价关系,等价类与分拆*",
+              "order": 5,
+              "original_text": "original_text/ch01_s07_ss05.md",
+              "block_ids": [
+                "CH01-S07-SS05-B0026"
+              ],
+              "source_lines": [
+                115,
+                122
+              ],
+              "content_sha256": "d45df1f2dc715b56fc56b322202799795aad8dfded0049cba75d7328a9cbbeb9",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH01-S08",
+          "kind": "section",
+          "anchor": "1.8",
+          "title": "复数*",
+          "order": 8,
+          "original_text": "original_text/ch01_s08.md",
+          "block_ids": [
+            "CH01-S08-SS00-B0027"
+          ],
+          "source_lines": [
+            123,
+            126
+          ],
+          "content_sha256": "319357563b22e24f01a788a766f96bfeda192e173904388d0708720ab0fc964f",
+          "subsections": [
+            {
+              "id": "CH01-S08-SS01",
+              "kind": "subsection",
+              "anchor": "1.8.1",
+              "title": "复数的四则运算*",
+              "order": 1,
+              "original_text": "original_text/ch01_s08_ss01.md",
+              "block_ids": [
+                "CH01-S08-SS01-B0028"
+              ],
+              "source_lines": [
+                127,
+                131
+              ],
+              "content_sha256": "c1c62319aa7e158940de056734b11964a55ab4264070a7413363b03481d9841f",
+              "subsections": []
+            },
+            {
+              "id": "CH01-S08-SS02",
+              "kind": "subsection",
+              "anchor": "1.8.2",
+              "title": "复数的几何表示*",
+              "order": 2,
+              "original_text": "original_text/ch01_s08_ss02.md",
+              "block_ids": [
+                "CH01-S08-SS02-B0029"
+              ],
+              "source_lines": [
+                132,
+                136
+              ],
+              "content_sha256": "0a60211a98207ca29c2a2eee2c812feb897d1215dd871e35dc1ea602caf09bf7",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH01-S09",
+          "kind": "section",
+          "anchor": "1.9",
+          "title": "数域*",
+          "order": 9,
+          "original_text": "original_text/ch01_s09.md",
+          "block_ids": [
+            "CH01-S09-SS00-B0030"
+          ],
+          "source_lines": [
+            137,
+            140
+          ],
+          "content_sha256": "80d7108565194cd8f3840c29d74be0dc217144bef39036087c87e29d8d89fbd3",
+          "subsections": []
+        },
+        {
+          "id": "CH01-S10",
+          "kind": "section",
+          "anchor": "1.10",
+          "title": "求和符号*",
+          "order": 10,
+          "original_text": "original_text/ch01_s10.md",
+          "block_ids": [
+            "CH01-S10-SS00-B0031"
+          ],
+          "source_lines": [
+            141,
+            146
+          ],
+          "content_sha256": "c09973ad06182f00cbe4ccf6b232c09b0780576095dff3c0ea2f6205c7a8b9b9",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "id": "CH02",
+      "kind": "chapter",
+      "anchor": "2",
+      "title": "线性方程组",
+      "order": 2,
+      "original_text": "original_text/ch02.md",
+      "block_ids": [
+        "CH02-S00-SS00-B0032"
+      ],
+      "source_lines": [
+        147,
+        157
+      ],
+      "content_sha256": "8a3342f160909bc8f10ed8338880fe547d1f2f5b123414183c01cadf70de8a5a",
+      "sections": [
+        {
+          "id": "CH02-S01",
+          "kind": "section",
+          "anchor": "2.1",
+          "title": "Gauss 消元法",
+          "order": 1,
+          "original_text": "original_text/ch02_s01.md",
+          "block_ids": [
+            "CH02-S01-SS00-B0033"
+          ],
+          "source_lines": [
+            158,
+            173
+          ],
+          "content_sha256": "9d4e6d026d2ec6cd3b8c36ba0a2f9184a97ea7a4ed3e4ab6157b8686d216da6f",
+          "subsections": []
+        },
+        {
+          "id": "CH02-S02",
+          "kind": "section",
+          "anchor": "2.2",
+          "title": "Gauss 消元的矩阵表示",
+          "order": 2,
+          "original_text": "original_text/ch02_s02.md",
+          "block_ids": [
+            "CH02-S02-SS00-B0034"
+          ],
+          "source_lines": [
+            174,
+            184
+          ],
+          "content_sha256": "ce331e0fbe727f02e32e3219b29da188397941aa118df7ae763425fbdef51b17",
+          "subsections": []
+        },
+        {
+          "id": "CH02-S03",
+          "kind": "section",
+          "anchor": "2.3",
+          "title": "一般线性方程组的Gauss 消元法",
+          "order": 3,
+          "original_text": "original_text/ch02_s03.md",
+          "block_ids": [
+            "CH02-S03-SS00-B0035"
+          ],
+          "source_lines": [
+            185,
+            188
+          ],
+          "content_sha256": "2147abf2c6cf0f8671815155d5860fd9fa9cecfe62debe88921abe265b8c2a8e",
+          "subsections": [
+            {
+              "id": "CH02-S03-SS01",
+              "kind": "subsection",
+              "anchor": "2.3.1",
+              "title": "算法描述",
+              "order": 1,
+              "original_text": "original_text/ch02_s03_ss01.md",
+              "block_ids": [
+                "CH02-S03-SS01-B0036"
+              ],
+              "source_lines": [
+                189,
+                192
+              ],
+              "content_sha256": "d3457a0e6d7b630cc3599c11b736b9b1b7bf8bc9d4ca8706dd7e4bd245627e79",
+              "subsections": []
+            },
+            {
+              "id": "CH02-S03-SS02",
+              "kind": "subsection",
+              "anchor": "2.3.2",
+              "title": "线性方程组解的属性",
+              "order": 2,
+              "original_text": "original_text/ch02_s03_ss02.md",
+              "block_ids": [
+                "CH02-S03-SS02-B0037"
+              ],
+              "source_lines": [
+                193,
+                220
+              ],
+              "content_sha256": "c7e517dfdb02fbe5c8c8e9a59f26a6f7417c84a3dce5d43e02410328dc6ba9d7",
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CH03",
+      "kind": "chapter",
+      "anchor": "3",
+      "title": "行列式",
+      "order": 3,
+      "original_text": "original_text/ch03.md",
+      "block_ids": [
+        "CH03-S00-SS00-B0038"
+      ],
+      "source_lines": [
+        221,
+        224
+      ],
+      "content_sha256": "2cf60f00415b24736f98ce9ddc464715494b1b95b6e39849e7772d9846b8bbbc",
+      "sections": [
+        {
+          "id": "CH03-S01",
+          "kind": "section",
+          "anchor": "3.0",
+          "title": "行列式的引入",
+          "order": 1,
+          "original_text": "original_text/ch03_s01.md",
+          "block_ids": [
+            "CH03-S00-SS00-B0039"
+          ],
+          "source_lines": [
+            225,
+            228
+          ],
+          "content_sha256": "dddd33e7cc4deac097e16565c80c231d1c3ec98cbe139179a8194ee3df487774",
+          "subsections": []
+        },
+        {
+          "id": "CH03-S02",
+          "kind": "section",
+          "anchor": "3.1",
+          "title": "行列式的定义",
+          "order": 2,
+          "original_text": "original_text/ch03_s02.md",
+          "block_ids": [
+            "CH03-S01-SS00-B0040"
+          ],
+          "source_lines": [
+            229,
+            238
+          ],
+          "content_sha256": "3ca463955877b2a6b12609721db19be7795964eff6c6e3ada790a13dea635fba",
+          "subsections": []
+        },
+        {
+          "id": "CH03-S03",
+          "kind": "section",
+          "anchor": "3.2",
+          "title": "行列式的性质",
+          "order": 3,
+          "original_text": "original_text/ch03_s03.md",
+          "block_ids": [
+            "CH03-S02-SS00-B0041"
+          ],
+          "source_lines": [
+            239,
+            256
+          ],
+          "content_sha256": "dbce2fa9e32bb19a9bae63b75b4de356fe4755897c4bd64a28c3da7ed080ef3b",
+          "subsections": []
+        },
+        {
+          "id": "CH03-S04",
+          "kind": "section",
+          "anchor": "3.3",
+          "title": "行列式的完全展开式",
+          "order": 4,
+          "original_text": "original_text/ch03_s04.md",
+          "block_ids": [
+            "CH03-S03-SS00-B0042"
+          ],
+          "source_lines": [
+            257,
+            262
+          ],
+          "content_sha256": "58bdbda9147b67804d80f0fd77e5b415f6583ccfd96cbc5522f9a97ad3f1a063",
+          "subsections": []
+        },
+        {
+          "id": "CH03-S05",
+          "kind": "section",
+          "anchor": "3.4",
+          "title": "Cramer法则",
+          "order": 5,
+          "original_text": "original_text/ch03_s05.md",
+          "block_ids": [
+            "CH03-S04-SS00-B0043"
+          ],
+          "source_lines": [
+            263,
+            266
+          ],
+          "content_sha256": "9d96782d8786a7398b36e579bec3a9823736e7cc62bb35d23073dc760ca3be34",
+          "subsections": []
+        },
+        {
+          "id": "CH03-S06",
+          "kind": "section",
+          "anchor": "3.5",
+          "title": "行列式的计算",
+          "order": 6,
+          "original_text": "original_text/ch03_s06.md",
+          "block_ids": [
+            "CH03-S05-SS00-B0044"
+          ],
+          "source_lines": [
+            267,
+            294
+          ],
+          "content_sha256": "d649227429e74c71b27ec32cb98f26641dfb4a706961a2d5502ca1780a0f897c",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "id": "CH04",
+      "kind": "chapter",
+      "anchor": "4",
+      "title": "矩阵",
+      "order": 4,
+      "original_text": "original_text/ch04.md",
+      "block_ids": [
+        "CH04-S00-SS00-B0045"
+      ],
+      "source_lines": [
+        295,
+        298
+      ],
+      "content_sha256": "62dedd6122b02adb93b76ae697fcefe38f19f372b108323101e88170fdee5348",
+      "sections": [
+        {
+          "id": "CH04-S01",
+          "kind": "section",
+          "anchor": "4.1",
+          "title": "矩阵的定义",
+          "order": 1,
+          "original_text": "original_text/ch04_s01.md",
+          "block_ids": [
+            "CH04-S01-SS00-B0046"
+          ],
+          "source_lines": [
+            299,
+            312
+          ],
+          "content_sha256": "efa830d87b569272659c48fc897f7d4fd787e851e86e14e2603bbb568dcb618c",
+          "subsections": []
+        },
+        {
+          "id": "CH04-S02",
+          "kind": "section",
+          "anchor": "4.2",
+          "title": "矩阵的运算",
+          "order": 2,
+          "original_text": "original_text/ch04_s02.md",
+          "block_ids": [
+            "CH04-S02-SS00-B0047"
+          ],
+          "source_lines": [
+            313,
+            317
+          ],
+          "content_sha256": "704145f48cf0e3b66f52bf8abaf93a6f22000b6d284d811e7106e7aea47ee791",
+          "subsections": [
+            {
+              "id": "CH04-S02-SS01",
+              "kind": "subsection",
+              "anchor": "4.2.1",
+              "title": "加法与数乘",
+              "order": 1,
+              "original_text": "original_text/ch04_s02_ss01.md",
+              "block_ids": [
+                "CH04-S02-SS01-B0048"
+              ],
+              "source_lines": [
+                318,
+                330
+              ],
+              "content_sha256": "ebf59b56916a50aada79af348ea42d6e709fbcbd1d0c6b7039d1759fd8e4deca",
+              "subsections": []
+            },
+            {
+              "id": "CH04-S02-SS02",
+              "kind": "subsection",
+              "anchor": "4.2.2",
+              "title": "矩阵的乘法",
+              "order": 2,
+              "original_text": "original_text/ch04_s02_ss02.md",
+              "block_ids": [
+                "CH04-S02-SS02-B0049"
+              ],
+              "source_lines": [
+                331,
+                346
+              ],
+              "content_sha256": "ae751aaeeec47210fccf899fff314af220cce832ca86aaa03c5cba0cdad5a8df",
+              "subsections": []
+            },
+            {
+              "id": "CH04-S02-SS03",
+              "kind": "subsection",
+              "anchor": "4.2.3",
+              "title": "逆矩阵",
+              "order": 3,
+              "original_text": "original_text/ch04_s02_ss03.md",
+              "block_ids": [
+                "CH04-S02-SS03-B0050"
+              ],
+              "source_lines": [
+                347,
+                357
+              ],
+              "content_sha256": "599ba1b49b56242a9d4ef8701e6e3734754f2059dcee2601fdea17eb8a8e0fbf",
+              "subsections": []
+            },
+            {
+              "id": "CH04-S02-SS04",
+              "kind": "subsection",
+              "anchor": "4.2.4",
+              "title": "转置、共轭与迹",
+              "order": 4,
+              "original_text": "original_text/ch04_s02_ss04.md",
+              "block_ids": [
+                "CH04-S02-SS04-B0051"
+              ],
+              "source_lines": [
+                358,
+                369
+              ],
+              "content_sha256": "a1b81f78f9588c6e1195d3e6946d6e1d457ea365148a0f8c2c64d6cc1a997810",
+              "subsections": []
+            },
+            {
+              "id": "CH04-S02-SS05",
+              "kind": "subsection",
+              "anchor": "4.2.5",
+              "title": "分块运算",
+              "order": 5,
+              "original_text": "original_text/ch04_s02_ss05.md",
+              "block_ids": [
+                "CH04-S02-SS05-B0052"
+              ],
+              "source_lines": [
+                370,
+                383
+              ],
+              "content_sha256": "ba26a0922e10d2e2462357b130f207b55b3c1bd5091ed0ed59ce1a12cad89672",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH04-S03",
+          "kind": "section",
+          "anchor": "4.3",
+          "title": "初等变换",
+          "order": 3,
+          "original_text": "original_text/ch04_s03.md",
+          "block_ids": [
+            "CH04-S03-SS00-B0053"
+          ],
+          "source_lines": [
+            384,
+            397
+          ],
+          "content_sha256": "cf51f8cdd45e9fc955a967e1a2f0fce1ff28e3c85090a01f1ec7ef06f48eed3e",
+          "subsections": []
+        },
+        {
+          "id": "CH04-S04",
+          "kind": "section",
+          "anchor": "4.4",
+          "title": "矩阵的秩与相抵",
+          "order": 4,
+          "original_text": "original_text/ch04_s04.md",
+          "block_ids": [
+            "CH04-S04-SS00-B0054"
+          ],
+          "source_lines": [
+            398,
+            401
+          ],
+          "content_sha256": "b31f39c8115f30bcf1386051b60a4a6f1ff65d84997fa262eb3cc168672640e3",
+          "subsections": [
+            {
+              "id": "CH04-S04-SS01",
+              "kind": "subsection",
+              "anchor": "4.4.1",
+              "title": "矩阵秩与相抵的定义",
+              "order": 1,
+              "original_text": "original_text/ch04_s04_ss01.md",
+              "block_ids": [
+                "CH04-S04-SS01-B0055"
+              ],
+              "source_lines": [
+                402,
+                413
+              ],
+              "content_sha256": "72207efdefbc346056d7221ce6ab10919b631e54e381aa1608219c6c88ea57d7",
+              "subsections": []
+            },
+            {
+              "id": "CH04-S04-SS02",
+              "kind": "subsection",
+              "anchor": "4.4.2",
+              "title": "秩的计算",
+              "order": 2,
+              "original_text": "original_text/ch04_s04_ss02.md",
+              "block_ids": [
+                "CH04-S04-SS02-B0056"
+              ],
+              "source_lines": [
+                414,
+                417
+              ],
+              "content_sha256": "ecf97c6ad6b635f22c8d0a1405b49fc84c12ca9614d5ab88565112c7283ebf2e",
+              "subsections": []
+            },
+            {
+              "id": "CH04-S04-SS03",
+              "kind": "subsection",
+              "anchor": "4.4.3",
+              "title": "相抵标准形的应用*",
+              "order": 3,
+              "original_text": "original_text/ch04_s04_ss03.md",
+              "block_ids": [
+                "CH04-S04-SS03-B0057"
+              ],
+              "source_lines": [
+                418,
+                421
+              ],
+              "content_sha256": "0850241db0cd39dd99e0326c5fe2849054c5492bba9bb26990ab7d36de314755",
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CH05",
+      "kind": "chapter",
+      "anchor": "5",
+      "title": "线性空间",
+      "order": 5,
+      "original_text": "original_text/ch05.md",
+      "block_ids": [
+        "CH05-S00-SS00-B0058"
+      ],
+      "source_lines": [
+        422,
+        427
+      ],
+      "content_sha256": "8fb6eba78295df4e24552ad3a73b80f14bad9054f8be18deaf5df7a32fb07fb8",
+      "sections": [
+        {
+          "id": "CH05-S01",
+          "kind": "section",
+          "anchor": "5.1",
+          "title": "数组空间",
+          "order": 1,
+          "original_text": "original_text/ch05_s01.md",
+          "block_ids": [
+            "CH05-S01-SS00-B0059"
+          ],
+          "source_lines": [
+            428,
+            445
+          ],
+          "content_sha256": "5bf4ed789d183c07e536c318e7e779d5130493340c076d8d5a51026c4012bd34",
+          "subsections": []
+        },
+        {
+          "id": "CH05-S02",
+          "kind": "section",
+          "anchor": "5.2",
+          "title": "线性相关与线性无关",
+          "order": 2,
+          "original_text": "original_text/ch05_s02.md",
+          "block_ids": [
+            "CH05-S02-SS00-B0060"
+          ],
+          "source_lines": [
+            446,
+            467
+          ],
+          "content_sha256": "278c13f8270f610cc992bdb8913d12f8a6247124aa0e45a6eeadbba870232b7e",
+          "subsections": []
+        },
+        {
+          "id": "CH05-S03",
+          "kind": "section",
+          "anchor": "5.3",
+          "title": "极大无关组与秩",
+          "order": 3,
+          "original_text": "original_text/ch05_s03.md",
+          "block_ids": [
+            "CH05-S03-SS00-B0061"
+          ],
+          "source_lines": [
+            468,
+            488
+          ],
+          "content_sha256": "d9d706331e9ccf5c796d85f176dd6ce9ffee042fd11d3a71d6b3ebfaad412bf1",
+          "subsections": []
+        },
+        {
+          "id": "CH05-S04",
+          "kind": "section",
+          "anchor": "5.4",
+          "title": "基与维数",
+          "order": 4,
+          "original_text": "original_text/ch05_s04.md",
+          "block_ids": [
+            "CH05-S04-SS00-B0062"
+          ],
+          "source_lines": [
+            489,
+            499
+          ],
+          "content_sha256": "100cbc4c2091fcf6f54bdfbd177e0e612e39adc77481bd36281cb747e6b655bb",
+          "subsections": []
+        },
+        {
+          "id": "CH05-S05",
+          "kind": "section",
+          "anchor": "5.5",
+          "title": "线性方程组解集的结构",
+          "order": 5,
+          "original_text": "original_text/ch05_s05.md",
+          "block_ids": [
+            "CH05-S05-SS00-B0063"
+          ],
+          "source_lines": [
+            500,
+            506
+          ],
+          "content_sha256": "10e7c4016cf70c0cece669c1a9b4b291f8f3c87ef96982894e2758da8f03edc2",
+          "subsections": [
+            {
+              "id": "CH05-S05-SS01",
+              "kind": "subsection",
+              "anchor": "5.5.1",
+              "title": "线性方程组解的存在性与唯一性",
+              "order": 1,
+              "original_text": "original_text/ch05_s05_ss01.md",
+              "block_ids": [
+                "CH05-S05-SS01-B0064"
+              ],
+              "source_lines": [
+                507,
+                511
+              ],
+              "content_sha256": "cf061a455ca14871fff143d16540c360893436ae926e64ed613df31a5ddcd175",
+              "subsections": []
+            },
+            {
+              "id": "CH05-S05-SS02",
+              "kind": "subsection",
+              "anchor": "5.5.2",
+              "title": "齐次线性方程组解集的结构",
+              "order": 2,
+              "original_text": "original_text/ch05_s05_ss02.md",
+              "block_ids": [
+                "CH05-S05-SS02-B0065"
+              ],
+              "source_lines": [
+                512,
+                515
+              ],
+              "content_sha256": "787b8319a1f6f21451faf5dcd09dbcad3c395dc6d5e1d526d156ef50ea2965ac",
+              "subsections": []
+            },
+            {
+              "id": "CH05-S05-SS03",
+              "kind": "subsection",
+              "anchor": "5.5.3",
+              "title": "非齐次线性方程组解集的结构",
+              "order": 3,
+              "original_text": "original_text/ch05_s05_ss03.md",
+              "block_ids": [
+                "CH05-S05-SS03-B0066"
+              ],
+              "source_lines": [
+                516,
+                522
+              ],
+              "content_sha256": "6a6fe1fc871ef7a4faafbd2c63352b3915884f48434545b0c15935a668c450d9",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH05-S06",
+          "kind": "section",
+          "anchor": "5.6",
+          "title": "一般线性空间",
+          "order": 6,
+          "original_text": "original_text/ch05_s06.md",
+          "block_ids": [
+            "CH05-S06-SS00-B0067"
+          ],
+          "source_lines": [
+            523,
+            526
+          ],
+          "content_sha256": "cfacb990fdedd5d1e4a36623d4ebf04d53b1b18bbb89c5b1558cc67e21653f3c",
+          "subsections": [
+            {
+              "id": "CH05-S06-SS01",
+              "kind": "subsection",
+              "anchor": "5.6.1",
+              "title": "一般线性空间的定义",
+              "order": 1,
+              "original_text": "original_text/ch05_s06_ss01.md",
+              "block_ids": [
+                "CH05-S06-SS01-B0068"
+              ],
+              "source_lines": [
+                527,
+                549
+              ],
+              "content_sha256": "a71299dcb5e8b90f250ae6bdc7cb0c1ae6830b501dabde25b3d536bfe292e141",
+              "subsections": []
+            },
+            {
+              "id": "CH05-S06-SS02",
+              "kind": "subsection",
+              "anchor": "5.6.2",
+              "title": "一般线性空间的理论",
+              "order": 2,
+              "original_text": "original_text/ch05_s06_ss02.md",
+              "block_ids": [
+                "CH05-S06-SS02-B0069"
+              ],
+              "source_lines": [
+                550,
+                575
+              ],
+              "content_sha256": "32c3032f4ac5183fe9a069192354b42aa899bffc4522b0dccac2da675d696150",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH05-S07",
+          "kind": "section",
+          "anchor": "5.7",
+          "title": "子空间运算*",
+          "order": 7,
+          "original_text": "original_text/ch05_s07.md",
+          "block_ids": [
+            "CH05-S07-SS00-B0070"
+          ],
+          "source_lines": [
+            576,
+            579
+          ],
+          "content_sha256": "fdd585f75300a7fc1d20bdeba8e19fffa85a8e9b66f075387ae1383d46ee34f7",
+          "subsections": [
+            {
+              "id": "CH05-S07-SS01",
+              "kind": "subsection",
+              "anchor": "5.7.1",
+              "title": "子空间的交*",
+              "order": 1,
+              "original_text": "original_text/ch05_s07_ss01.md",
+              "block_ids": [
+                "CH05-S07-SS01-B0071"
+              ],
+              "source_lines": [
+                580,
+                585
+              ],
+              "content_sha256": "b926395fc71f3c287919d9692886ea2e403e74fa653bf06df26c457cf8dd02b4",
+              "subsections": []
+            },
+            {
+              "id": "CH05-S07-SS02",
+              "kind": "subsection",
+              "anchor": "5.7.2",
+              "title": "子空间的和*",
+              "order": 2,
+              "original_text": "original_text/ch05_s07_ss02.md",
+              "block_ids": [
+                "CH05-S07-SS02-B0072"
+              ],
+              "source_lines": [
+                586,
+                589
+              ],
+              "content_sha256": "2cfb40d1fde8611eb28df251e77cd1cae60cfd28336d9d37739f6a10c4124ffb",
+              "subsections": []
+            },
+            {
+              "id": "CH05-S07-SS03",
+              "kind": "subsection",
+              "anchor": "5.7.3",
+              "title": "子空间的直和*",
+              "order": 3,
+              "original_text": "original_text/ch05_s07_ss03.md",
+              "block_ids": [
+                "CH05-S07-SS03-B0073"
+              ],
+              "source_lines": [
+                590,
+                599
+              ],
+              "content_sha256": "77bc020050f9d7d4bc08dc223114665bf0213fdf7fe25e4c971617d921477293",
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CH06",
+      "kind": "chapter",
+      "anchor": "6",
+      "title": "线性变换",
+      "order": 6,
+      "original_text": "original_text/ch06.md",
+      "block_ids": [
+        "CH06-S00-SS00-B0074"
+      ],
+      "source_lines": [
+        600,
+        603
+      ],
+      "content_sha256": "8f20d57329631aef22fbf8b0e79e69e1ee112bbe61434dcd0e3e0a8f3d0ce5e5",
+      "sections": [
+        {
+          "id": "CH06-S01",
+          "kind": "section",
+          "anchor": "6.1",
+          "title": "数组空间上的线性映射",
+          "order": 1,
+          "original_text": "original_text/ch06_s01.md",
+          "block_ids": [
+            "CH06-S01-SS00-B0075"
+          ],
+          "source_lines": [
+            604,
+            612
+          ],
+          "content_sha256": "1a201c761413ffee770daf8b4f32cfe4b2ddb82ae0f8f6c0be0e606aa380e38d",
+          "subsections": []
+        },
+        {
+          "id": "CH06-S02",
+          "kind": "section",
+          "anchor": "6.2",
+          "title": "线性变换的特征值与特征向量",
+          "order": 2,
+          "original_text": "original_text/ch06_s02.md",
+          "block_ids": [
+            "CH06-S02-SS00-B0076"
+          ],
+          "source_lines": [
+            613,
+            614
+          ],
+          "content_sha256": "e81d66c4dc7ade7a70ebacc23e6a012462358f086be7a4a00e60e747a5805d99",
+          "subsections": [
+            {
+              "id": "CH06-S02-SS01",
+              "kind": "subsection",
+              "anchor": "6.2.1",
+              "title": "特征值与特征向量的定义",
+              "order": 1,
+              "original_text": "original_text/ch06_s02_ss01.md",
+              "block_ids": [
+                "CH06-S02-SS01-B0077"
+              ],
+              "source_lines": [
+                615,
+                619
+              ],
+              "content_sha256": "4faa86809cf1ed4c5d0aa5b6b4460a3b1dc577707f874db19a869bd077a7e425",
+              "subsections": []
+            },
+            {
+              "id": "CH06-S02-SS02",
+              "kind": "subsection",
+              "anchor": "6.2.2",
+              "title": "特征值与特征向量的计算",
+              "order": 2,
+              "original_text": "original_text/ch06_s02_ss02.md",
+              "block_ids": [
+                "CH06-S02-SS02-B0078"
+              ],
+              "source_lines": [
+                620,
+                630
+              ],
+              "content_sha256": "eddd2ae751d9c2270c36f8aad6bf2dc6ddf37ddcd690fd8280400367bc93e116",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH06-S03",
+          "kind": "section",
+          "anchor": "6.3",
+          "title": "矩阵的相似",
+          "order": 3,
+          "original_text": "original_text/ch06_s03.md",
+          "block_ids": [
+            "CH06-S03-SS00-B0079"
+          ],
+          "source_lines": [
+            631,
+            636
+          ],
+          "content_sha256": "6b979db6d047a2c7d55830aa57f0f27808c2ae9c903f73baf083b246e0dabe49",
+          "subsections": [
+            {
+              "id": "CH06-S03-SS01",
+              "kind": "subsection",
+              "anchor": "6.3.1",
+              "title": "矩阵相似的定义",
+              "order": 1,
+              "original_text": "original_text/ch06_s03_ss01.md",
+              "block_ids": [
+                "CH06-S03-SS01-B0080"
+              ],
+              "source_lines": [
+                637,
+                646
+              ],
+              "content_sha256": "14162c75a10ac2b7b6a408839731021447fcd19f4f8ea48ddfc31c0044b25125",
+              "subsections": []
+            },
+            {
+              "id": "CH06-S03-SS02",
+              "kind": "subsection",
+              "anchor": "6.3.2",
+              "title": "矩阵相似于对角阵的条件",
+              "order": 2,
+              "original_text": "original_text/ch06_s03_ss02.md",
+              "block_ids": [
+                "CH06-S03-SS02-B0081"
+              ],
+              "source_lines": [
+                647,
+                653
+              ],
+              "content_sha256": "04eea31fe3dfde64805afd8633ea5f5c0a8efc237900c5f40d10e4948dabe967",
+              "subsections": []
+            },
+            {
+              "id": "CH06-S03-SS03",
+              "kind": "subsection",
+              "anchor": "6.3.3",
+              "title": "相似于上三角阵",
+              "order": 3,
+              "original_text": "original_text/ch06_s03_ss03.md",
+              "block_ids": [
+                "CH06-S03-SS03-B0082"
+              ],
+              "source_lines": [
+                654,
+                657
+              ],
+              "content_sha256": "c8e9a4fd15217ca3b846f1a18de5aa317ecea01492f733308c032958061cd2c6",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH06-S04",
+          "kind": "section",
+          "anchor": "6.4",
+          "title": "一般空间上的线性变换",
+          "order": 4,
+          "original_text": "original_text/ch06_s04.md",
+          "block_ids": [
+            "CH06-S04-SS00-B0083"
+          ],
+          "source_lines": [
+            658,
+            661
+          ],
+          "content_sha256": "bdeccdb9e1b1b99c18f0db171f518891ed58f13d3b1b2c7c898ddbf7b13f7b98",
+          "subsections": [
+            {
+              "id": "CH06-S04-SS01",
+              "kind": "subsection",
+              "anchor": "6.4.1",
+              "title": "线性变换的定义",
+              "order": 1,
+              "original_text": "original_text/ch06_s04_ss01.md",
+              "block_ids": [
+                "CH06-S04-SS01-B0084"
+              ],
+              "source_lines": [
+                662,
+                670
+              ],
+              "content_sha256": "c53887008c033eb9082c567d8b63caf370b88a0b50be52638b3165d164f9c962",
+              "subsections": []
+            },
+            {
+              "id": "CH06-S04-SS02",
+              "kind": "subsection",
+              "anchor": "6.4.2",
+              "title": "线性变换在一组基下的矩阵",
+              "order": 2,
+              "original_text": "original_text/ch06_s04_ss02.md",
+              "block_ids": [
+                "CH06-S04-SS02-B0085"
+              ],
+              "source_lines": [
+                671,
+                682
+              ],
+              "content_sha256": "ca56e64c2137fe5328a6e2495023e97831544db1860d3abac671c452482bd340",
+              "subsections": []
+            },
+            {
+              "id": "CH06-S04-SS03",
+              "kind": "subsection",
+              "anchor": "6.4.3",
+              "title": "线性变换的特征值与特征向量",
+              "order": 3,
+              "original_text": "original_text/ch06_s04_ss03.md",
+              "block_ids": [
+                "CH06-S04-SS03-B0086"
+              ],
+              "source_lines": [
+                683,
+                690
+              ],
+              "content_sha256": "63d52cf34b2139bd93538b5849ebb46733b8d1a7dac72dedad1e7571448f38c2",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH06-S05",
+          "kind": "section",
+          "anchor": "6.5",
+          "title": "若当标准形简介*",
+          "order": 5,
+          "original_text": "original_text/ch06_s05.md",
+          "block_ids": [
+            "CH06-S05-SS00-B0087"
+          ],
+          "source_lines": [
+            691,
+            696
+          ],
+          "content_sha256": "06c8f50e4c22aea13f02bd62a27bc1c88b87a8a7c8a14a3af04f9bfded2adb91",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "id": "CH07",
+      "kind": "chapter",
+      "anchor": "7",
+      "title": "内积空间及变换",
+      "order": 7,
+      "original_text": "original_text/ch07.md",
+      "block_ids": [
+        "CH07-S00-SS00-B0088"
+      ],
+      "source_lines": [
+        697,
+        700
+      ],
+      "content_sha256": "b0d4f7d357c3a408e1f9bcf498584b996fbcb851e818492227a0b00bb4df8580",
+      "sections": [
+        {
+          "id": "CH07-S01",
+          "kind": "section",
+          "anchor": "7.1",
+          "title": "数组内积空间的定义与性质",
+          "order": 1,
+          "original_text": "original_text/ch07_s01.md",
+          "block_ids": [
+            "CH07-S01-SS00-B0089"
+          ],
+          "source_lines": [
+            701,
+            712
+          ],
+          "content_sha256": "1fe0158e1ab6ddc97a11fe6894e201a5fec00cdbdd1323d829cedc5ec21b53ba",
+          "subsections": []
+        },
+        {
+          "id": "CH07-S02",
+          "kind": "section",
+          "anchor": "7.2",
+          "title": "标准正交基",
+          "order": 2,
+          "original_text": "original_text/ch07_s02.md",
+          "block_ids": [
+            "CH07-S02-SS00-B0090"
+          ],
+          "source_lines": [
+            713,
+            725
+          ],
+          "content_sha256": "d164eeb221c81002183e11c4ab9594d850d0b2f570df8045bede0544ff612327",
+          "subsections": []
+        },
+        {
+          "id": "CH07-S03",
+          "kind": "section",
+          "anchor": "7.3",
+          "title": "$\\mathbb{R}^n$ 上的线性变换",
+          "order": 3,
+          "original_text": "original_text/ch07_s03.md",
+          "block_ids": [
+            "CH07-S03-SS00-B0091"
+          ],
+          "source_lines": [
+            726,
+            729
+          ],
+          "content_sha256": "45e32d9643c86b71897714b136d709c2793036034b58851e304284a7e063deb1",
+          "subsections": [
+            {
+              "id": "CH07-S03-SS01",
+              "kind": "subsection",
+              "anchor": "7.3.1",
+              "title": "正交变换",
+              "order": 1,
+              "original_text": "original_text/ch07_s03_ss01.md",
+              "block_ids": [
+                "CH07-S03-SS01-B0092"
+              ],
+              "source_lines": [
+                730,
+                745
+              ],
+              "content_sha256": "1b06fc7512beb810318b58fbfe7f7a6dc92c396847159c994aba34a050c85298",
+              "subsections": []
+            },
+            {
+              "id": "CH07-S03-SS02",
+              "kind": "subsection",
+              "anchor": "7.3.2",
+              "title": "对称变换",
+              "order": 2,
+              "original_text": "original_text/ch07_s03_ss02.md",
+              "block_ids": [
+                "CH07-S03-SS02-B0093"
+              ],
+              "source_lines": [
+                746,
+                757
+              ],
+              "content_sha256": "aaffda93984ccfa6b73c685477cb2e231e23f1b116c557249cf42a23b2e58dfb",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH07-S04",
+          "kind": "section",
+          "anchor": "7.4",
+          "title": "一般的欧氏空间",
+          "order": 4,
+          "original_text": "original_text/ch07_s04.md",
+          "block_ids": [
+            "CH07-S04-SS00-B0094"
+          ],
+          "source_lines": [
+            758,
+            761
+          ],
+          "content_sha256": "a0d74fa653eb384810fddf8fd1cbebab214443a72b0c25766834454e67a35880",
+          "subsections": [
+            {
+              "id": "CH07-S04-SS01",
+              "kind": "subsection",
+              "anchor": "7.4.1",
+              "title": "一般欧氏空间的定义与性质",
+              "order": 1,
+              "original_text": "original_text/ch07_s04_ss01.md",
+              "block_ids": [
+                "CH07-S04-SS01-B0095"
+              ],
+              "source_lines": [
+                762,
+                768
+              ],
+              "content_sha256": "0c8e1e12ca07c9fff806ad5aa51c11feb0d337692f445e97d7b948a5b654bc94",
+              "subsections": []
+            },
+            {
+              "id": "CH07-S04-SS02",
+              "kind": "subsection",
+              "anchor": "7.4.2",
+              "title": "标准正交基",
+              "order": 2,
+              "original_text": "original_text/ch07_s04_ss02.md",
+              "block_ids": [
+                "CH07-S04-SS02-B0096"
+              ],
+              "source_lines": [
+                769,
+                774
+              ],
+              "content_sha256": "4dc0100f72bfe1cb260b3360ccb81dcb8d49bd09f201636633459fddc75f2c92",
+              "subsections": []
+            },
+            {
+              "id": "CH07-S04-SS03",
+              "kind": "subsection",
+              "anchor": "7.4.3",
+              "title": "正交变换与对称变换",
+              "order": 3,
+              "original_text": "original_text/ch07_s04_ss03.md",
+              "block_ids": [
+                "CH07-S04-SS03-B0097"
+              ],
+              "source_lines": [
+                775,
+                783
+              ],
+              "content_sha256": "65e65861fa8fb8f62162c90772fa5376e76dc6e10983e938835b0cbb61ac0b55",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "id": "CH07-S05",
+          "kind": "section",
+          "anchor": "7.5",
+          "title": "酉空间*",
+          "order": 5,
+          "original_text": "original_text/ch07_s05.md",
+          "block_ids": [
+            "CH07-S05-SS00-B0098"
+          ],
+          "source_lines": [
+            784,
+            787
+          ],
+          "content_sha256": "e31df90fd3ac07538b79fa835b8c0222a94dfdd8039c929ca3a7a10d07c3392e",
+          "subsections": [
+            {
+              "id": "CH07-S05-SS01",
+              "kind": "subsection",
+              "anchor": "7.5.1",
+              "title": "酉空间的基本概念*",
+              "order": 1,
+              "original_text": "original_text/ch07_s05_ss01.md",
+              "block_ids": [
+                "CH07-S05-SS01-B0099"
+              ],
+              "source_lines": [
+                788,
+                793
+              ],
+              "content_sha256": "55c3b8162428f513d7e789c03a3b7549a50b7de26796ff24c7d72fe4656cebfa",
+              "subsections": []
+            },
+            {
+              "id": "CH07-S05-SS02",
+              "kind": "subsection",
+              "anchor": "7.5.2",
+              "title": "酉空间的基本性质*",
+              "order": 2,
+              "original_text": "original_text/ch07_s05_ss02.md",
+              "block_ids": [
+                "CH07-S05-SS02-B0100"
+              ],
+              "source_lines": [
+                794,
+                805
+              ],
+              "content_sha256": "64a9496f2fd705be8d7a86d4b7dcda9aedf7430163ffeb53ed9b39e3ffbc4540",
+              "subsections": []
+            },
+            {
+              "id": "CH07-S05-SS03",
+              "kind": "subsection",
+              "anchor": "7.5.3",
+              "title": "酉矩阵与酉变换*",
+              "order": 3,
+              "original_text": "original_text/ch07_s05_ss03.md",
+              "block_ids": [
+                "CH07-S05-SS03-B0101"
+              ],
+              "source_lines": [
+                806,
+                822
+              ],
+              "content_sha256": "744efbf26faba90bbd55e882af9216f8d2861c7c249d49158567c5fea39bf0bc",
+              "subsections": []
+            },
+            {
+              "id": "CH07-S05-SS04",
+              "kind": "subsection",
+              "anchor": "7.5.4",
+              "title": "Hermite矩阵与Hermite变换*",
+              "order": 4,
+              "original_text": "original_text/ch07_s05_ss04.md",
+              "block_ids": [
+                "CH07-S05-SS04-B0102"
+              ],
+              "source_lines": [
+                823,
+                836
+              ],
+              "content_sha256": "52ddbee976642807bf46d71316fff261771bed9440ccfa2c5825adfd6eac8305",
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CH08",
+      "kind": "chapter",
+      "anchor": "8",
+      "title": "实二次型",
+      "order": 8,
+      "original_text": "original_text/ch08.md",
+      "block_ids": [
+        "CH08-S00-SS00-B0103"
+      ],
+      "source_lines": [
+        837,
+        840
+      ],
+      "content_sha256": "6c64241f062400af87610b77ba9081e81c0ba97a19fc4d32f4da8df6b9fdb4a5",
+      "sections": [
+        {
+          "id": "CH08-S01",
+          "kind": "section",
+          "anchor": "8.1",
+          "title": "二次型的矩阵表示",
+          "order": 1,
+          "original_text": "original_text/ch08_s01.md",
+          "block_ids": [
+            "CH08-S01-SS00-B0104"
+          ],
+          "source_lines": [
+            841,
+            849
+          ],
+          "content_sha256": "799648d28f3e3216738204d343057fc80f6823cb5354329b91d7667384c5c89c",
+          "subsections": []
+        },
+        {
+          "id": "CH08-S02",
+          "kind": "section",
+          "anchor": "8.2",
+          "title": "二次型的标准形",
+          "order": 2,
+          "original_text": "original_text/ch08_s02.md",
+          "block_ids": [
+            "CH08-S02-SS00-B0105"
+          ],
+          "source_lines": [
+            850,
+            859
+          ],
+          "content_sha256": "3e942992d7ebde461f0b670da8688c3215336ca6980ac7e9fe44b24939f4c591",
+          "subsections": []
+        },
+        {
+          "id": "CH08-S03",
+          "kind": "section",
+          "anchor": "8.3",
+          "title": "相合不变量与分类",
+          "order": 3,
+          "original_text": "original_text/ch08_s03.md",
+          "block_ids": [
+            "CH08-S03-SS00-B0106"
+          ],
+          "source_lines": [
+            860,
+            863
+          ],
+          "content_sha256": "71c062d72df714a88c56be29f5de0e34d0fff946e5af25e28535e3a43c6a9653",
+          "subsections": []
+        },
+        {
+          "id": "CH08-S04",
+          "kind": "section",
+          "anchor": "8.4",
+          "title": "二次曲线与曲面的分类",
+          "order": 4,
+          "original_text": "original_text/ch08_s04.md",
+          "block_ids": [
+            "CH08-S04-SS00-B0107"
+          ],
+          "source_lines": [
+            864,
+            876
+          ],
+          "content_sha256": "7e82db168ecd3609fb106d80b60ee5169b505819f0bffb0d5f7bb6a4f24ca0a9",
+          "subsections": []
+        },
+        {
+          "id": "CH08-S05",
+          "kind": "section",
+          "anchor": "8.5",
+          "title": "正定二次型",
+          "order": 5,
+          "original_text": "original_text/ch08_s05.md",
+          "block_ids": [
+            "CH08-S05-SS00-B0108"
+          ],
+          "source_lines": [
+            877,
+            896
+          ],
+          "content_sha256": "a78f08dd02fb38a7fc7677f623439b7a251a613f976657646eccb04c15e2412c",
+          "subsections": []
+        }
+      ]
+    }
+  ],
+  "lesson_units": [
+    {
+      "unit_id": "CH01",
+      "level": "chapter_intro",
+      "chapter": "CH01",
+      "section": null,
+      "title": "向量",
+      "anchor": "1",
+      "original_text": "original_text/ch01.md"
+    },
+    {
+      "unit_id": "CH01-S01-SS01",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S01",
+      "title": "向量及其表示",
+      "anchor": "1.1.1",
+      "original_text": "original_text/ch01_s01_ss01.md"
+    },
+    {
+      "unit_id": "CH01-S01-SS02",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S01",
+      "title": "向量的线性运算",
+      "anchor": "1.1.2",
+      "original_text": "original_text/ch01_s01_ss02.md"
+    },
+    {
+      "unit_id": "CH01-S01-SS03",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S01",
+      "title": "向量的共线与共面",
+      "anchor": "1.1.3",
+      "original_text": "original_text/ch01_s01_ss03.md"
+    },
+    {
+      "unit_id": "CH01-S02-SS01",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S02",
+      "title": "仿射坐标系",
+      "anchor": "1.2.1",
+      "original_text": "original_text/ch01_s02_ss01.md"
+    },
+    {
+      "unit_id": "CH01-S02-SS02",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S02",
+      "title": "向量的坐标运算",
+      "anchor": "1.2.2",
+      "original_text": "original_text/ch01_s02_ss02.md"
+    },
+    {
+      "unit_id": "CH01-S02-SS03",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S02",
+      "title": "直角坐标系",
+      "anchor": "1.2.3",
+      "original_text": "original_text/ch01_s02_ss03.md"
+    },
+    {
+      "unit_id": "CH01-S03-SS01",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S03",
+      "title": "数量积的定义与性质",
+      "anchor": "1.3.1",
+      "original_text": "original_text/ch01_s03_ss01.md"
+    },
+    {
+      "unit_id": "CH01-S03-SS02",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S03",
+      "title": "直角坐标系下数量积的计算",
+      "anchor": "1.3.2",
+      "original_text": "original_text/ch01_s03_ss02.md"
+    },
+    {
+      "unit_id": "CH01-S04-SS01",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S04",
+      "title": "向量积的定义与性质",
+      "anchor": "1.4.1",
+      "original_text": "original_text/ch01_s04_ss01.md"
+    },
+    {
+      "unit_id": "CH01-S04-SS02",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S04",
+      "title": "直角坐标系下向量积的计算",
+      "anchor": "1.4.2",
+      "original_text": "original_text/ch01_s04_ss02.md"
+    },
+    {
+      "unit_id": "CH01-S05-SS01",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S05",
+      "title": "混合积的定义",
+      "anchor": "1.5.1",
+      "original_text": "original_text/ch01_s05_ss01.md"
+    },
+    {
+      "unit_id": "CH01-S05-SS02",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S05",
+      "title": "直角坐标系下混合积的计算",
+      "anchor": "1.5.2",
+      "original_text": "original_text/ch01_s05_ss02.md"
+    },
+    {
+      "unit_id": "CH01-S05-SS03",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S05",
+      "title": "二重外积",
+      "anchor": "1.5.3",
+      "original_text": "original_text/ch01_s05_ss03.md"
+    },
+    {
+      "unit_id": "CH01-S06",
+      "level": "section",
+      "chapter": "CH01",
+      "section": "CH01-S06",
+      "title": "高维数组向量",
+      "anchor": "1.6",
+      "original_text": "original_text/ch01_s06.md"
+    },
+    {
+      "unit_id": "CH01-S07",
+      "level": "section_intro",
+      "chapter": "CH01",
+      "section": "CH01-S07",
+      "title": "集合与映射*",
+      "anchor": "1.7",
+      "original_text": "original_text/ch01_s07.md"
+    },
+    {
+      "unit_id": "CH01-S07-SS01",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S07",
+      "title": "集合的定义*",
+      "anchor": "1.7.1",
+      "original_text": "original_text/ch01_s07_ss01.md"
+    },
+    {
+      "unit_id": "CH01-S07-SS02",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S07",
+      "title": "集合的基本运算*",
+      "anchor": "1.7.2",
+      "original_text": "original_text/ch01_s07_ss02.md"
+    },
+    {
+      "unit_id": "CH01-S07-SS03",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S07",
+      "title": "映射*",
+      "anchor": "1.7.3",
+      "original_text": "original_text/ch01_s07_ss03.md"
+    },
+    {
+      "unit_id": "CH01-S07-SS04",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S07",
+      "title": "置换与排列*",
+      "anchor": "1.7.4",
+      "original_text": "original_text/ch01_s07_ss04.md"
+    },
+    {
+      "unit_id": "CH01-S07-SS05",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S07",
+      "title": "等价关系,等价类与分拆*",
+      "anchor": "1.7.5",
+      "original_text": "original_text/ch01_s07_ss05.md"
+    },
+    {
+      "unit_id": "CH01-S08",
+      "level": "section_intro",
+      "chapter": "CH01",
+      "section": "CH01-S08",
+      "title": "复数*",
+      "anchor": "1.8",
+      "original_text": "original_text/ch01_s08.md"
+    },
+    {
+      "unit_id": "CH01-S08-SS01",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S08",
+      "title": "复数的四则运算*",
+      "anchor": "1.8.1",
+      "original_text": "original_text/ch01_s08_ss01.md"
+    },
+    {
+      "unit_id": "CH01-S08-SS02",
+      "level": "subsection",
+      "chapter": "CH01",
+      "section": "CH01-S08",
+      "title": "复数的几何表示*",
+      "anchor": "1.8.2",
+      "original_text": "original_text/ch01_s08_ss02.md"
+    },
+    {
+      "unit_id": "CH01-S09",
+      "level": "section",
+      "chapter": "CH01",
+      "section": "CH01-S09",
+      "title": "数域*",
+      "anchor": "1.9",
+      "original_text": "original_text/ch01_s09.md"
+    },
+    {
+      "unit_id": "CH01-S10",
+      "level": "section",
+      "chapter": "CH01",
+      "section": "CH01-S10",
+      "title": "求和符号*",
+      "anchor": "1.10",
+      "original_text": "original_text/ch01_s10.md"
+    },
+    {
+      "unit_id": "CH02",
+      "level": "chapter_intro",
+      "chapter": "CH02",
+      "section": null,
+      "title": "线性方程组",
+      "anchor": "2",
+      "original_text": "original_text/ch02.md"
+    },
+    {
+      "unit_id": "CH02-S01",
+      "level": "section",
+      "chapter": "CH02",
+      "section": "CH02-S01",
+      "title": "Gauss 消元法",
+      "anchor": "2.1",
+      "original_text": "original_text/ch02_s01.md"
+    },
+    {
+      "unit_id": "CH02-S02",
+      "level": "section",
+      "chapter": "CH02",
+      "section": "CH02-S02",
+      "title": "Gauss 消元的矩阵表示",
+      "anchor": "2.2",
+      "original_text": "original_text/ch02_s02.md"
+    },
+    {
+      "unit_id": "CH02-S03",
+      "level": "section_intro",
+      "chapter": "CH02",
+      "section": "CH02-S03",
+      "title": "一般线性方程组的Gauss 消元法",
+      "anchor": "2.3",
+      "original_text": "original_text/ch02_s03.md"
+    },
+    {
+      "unit_id": "CH02-S03-SS01",
+      "level": "subsection",
+      "chapter": "CH02",
+      "section": "CH02-S03",
+      "title": "算法描述",
+      "anchor": "2.3.1",
+      "original_text": "original_text/ch02_s03_ss01.md"
+    },
+    {
+      "unit_id": "CH02-S03-SS02",
+      "level": "subsection",
+      "chapter": "CH02",
+      "section": "CH02-S03",
+      "title": "线性方程组解的属性",
+      "anchor": "2.3.2",
+      "original_text": "original_text/ch02_s03_ss02.md"
+    },
+    {
+      "unit_id": "CH03",
+      "level": "chapter_intro",
+      "chapter": "CH03",
+      "section": null,
+      "title": "行列式",
+      "anchor": "3",
+      "original_text": "original_text/ch03.md"
+    },
+    {
+      "unit_id": "CH03-S01",
+      "level": "section",
+      "chapter": "CH03",
+      "section": "CH03-S01",
+      "title": "行列式的引入",
+      "anchor": "3.0",
+      "original_text": "original_text/ch03_s01.md"
+    },
+    {
+      "unit_id": "CH03-S02",
+      "level": "section",
+      "chapter": "CH03",
+      "section": "CH03-S02",
+      "title": "行列式的定义",
+      "anchor": "3.1",
+      "original_text": "original_text/ch03_s02.md"
+    },
+    {
+      "unit_id": "CH03-S03",
+      "level": "section",
+      "chapter": "CH03",
+      "section": "CH03-S03",
+      "title": "行列式的性质",
+      "anchor": "3.2",
+      "original_text": "original_text/ch03_s03.md"
+    },
+    {
+      "unit_id": "CH03-S04",
+      "level": "section",
+      "chapter": "CH03",
+      "section": "CH03-S04",
+      "title": "行列式的完全展开式",
+      "anchor": "3.3",
+      "original_text": "original_text/ch03_s04.md"
+    },
+    {
+      "unit_id": "CH03-S05",
+      "level": "section",
+      "chapter": "CH03",
+      "section": "CH03-S05",
+      "title": "Cramer法则",
+      "anchor": "3.4",
+      "original_text": "original_text/ch03_s05.md"
+    },
+    {
+      "unit_id": "CH03-S06",
+      "level": "section",
+      "chapter": "CH03",
+      "section": "CH03-S06",
+      "title": "行列式的计算",
+      "anchor": "3.5",
+      "original_text": "original_text/ch03_s06.md"
+    },
+    {
+      "unit_id": "CH04",
+      "level": "chapter_intro",
+      "chapter": "CH04",
+      "section": null,
+      "title": "矩阵",
+      "anchor": "4",
+      "original_text": "original_text/ch04.md"
+    },
+    {
+      "unit_id": "CH04-S01",
+      "level": "section",
+      "chapter": "CH04",
+      "section": "CH04-S01",
+      "title": "矩阵的定义",
+      "anchor": "4.1",
+      "original_text": "original_text/ch04_s01.md"
+    },
+    {
+      "unit_id": "CH04-S02",
+      "level": "section_intro",
+      "chapter": "CH04",
+      "section": "CH04-S02",
+      "title": "矩阵的运算",
+      "anchor": "4.2",
+      "original_text": "original_text/ch04_s02.md"
+    },
+    {
+      "unit_id": "CH04-S02-SS01",
+      "level": "subsection",
+      "chapter": "CH04",
+      "section": "CH04-S02",
+      "title": "加法与数乘",
+      "anchor": "4.2.1",
+      "original_text": "original_text/ch04_s02_ss01.md"
+    },
+    {
+      "unit_id": "CH04-S02-SS02",
+      "level": "subsection",
+      "chapter": "CH04",
+      "section": "CH04-S02",
+      "title": "矩阵的乘法",
+      "anchor": "4.2.2",
+      "original_text": "original_text/ch04_s02_ss02.md"
+    },
+    {
+      "unit_id": "CH04-S02-SS03",
+      "level": "subsection",
+      "chapter": "CH04",
+      "section": "CH04-S02",
+      "title": "逆矩阵",
+      "anchor": "4.2.3",
+      "original_text": "original_text/ch04_s02_ss03.md"
+    },
+    {
+      "unit_id": "CH04-S02-SS04",
+      "level": "subsection",
+      "chapter": "CH04",
+      "section": "CH04-S02",
+      "title": "转置、共轭与迹",
+      "anchor": "4.2.4",
+      "original_text": "original_text/ch04_s02_ss04.md"
+    },
+    {
+      "unit_id": "CH04-S02-SS05",
+      "level": "subsection",
+      "chapter": "CH04",
+      "section": "CH04-S02",
+      "title": "分块运算",
+      "anchor": "4.2.5",
+      "original_text": "original_text/ch04_s02_ss05.md"
+    },
+    {
+      "unit_id": "CH04-S03",
+      "level": "section",
+      "chapter": "CH04",
+      "section": "CH04-S03",
+      "title": "初等变换",
+      "anchor": "4.3",
+      "original_text": "original_text/ch04_s03.md"
+    },
+    {
+      "unit_id": "CH04-S04",
+      "level": "section_intro",
+      "chapter": "CH04",
+      "section": "CH04-S04",
+      "title": "矩阵的秩与相抵",
+      "anchor": "4.4",
+      "original_text": "original_text/ch04_s04.md"
+    },
+    {
+      "unit_id": "CH04-S04-SS01",
+      "level": "subsection",
+      "chapter": "CH04",
+      "section": "CH04-S04",
+      "title": "矩阵秩与相抵的定义",
+      "anchor": "4.4.1",
+      "original_text": "original_text/ch04_s04_ss01.md"
+    },
+    {
+      "unit_id": "CH04-S04-SS02",
+      "level": "subsection",
+      "chapter": "CH04",
+      "section": "CH04-S04",
+      "title": "秩的计算",
+      "anchor": "4.4.2",
+      "original_text": "original_text/ch04_s04_ss02.md"
+    },
+    {
+      "unit_id": "CH04-S04-SS03",
+      "level": "subsection",
+      "chapter": "CH04",
+      "section": "CH04-S04",
+      "title": "相抵标准形的应用*",
+      "anchor": "4.4.3",
+      "original_text": "original_text/ch04_s04_ss03.md"
+    },
+    {
+      "unit_id": "CH05",
+      "level": "chapter_intro",
+      "chapter": "CH05",
+      "section": null,
+      "title": "线性空间",
+      "anchor": "5",
+      "original_text": "original_text/ch05.md"
+    },
+    {
+      "unit_id": "CH05-S01",
+      "level": "section",
+      "chapter": "CH05",
+      "section": "CH05-S01",
+      "title": "数组空间",
+      "anchor": "5.1",
+      "original_text": "original_text/ch05_s01.md"
+    },
+    {
+      "unit_id": "CH05-S02",
+      "level": "section",
+      "chapter": "CH05",
+      "section": "CH05-S02",
+      "title": "线性相关与线性无关",
+      "anchor": "5.2",
+      "original_text": "original_text/ch05_s02.md"
+    },
+    {
+      "unit_id": "CH05-S03",
+      "level": "section",
+      "chapter": "CH05",
+      "section": "CH05-S03",
+      "title": "极大无关组与秩",
+      "anchor": "5.3",
+      "original_text": "original_text/ch05_s03.md"
+    },
+    {
+      "unit_id": "CH05-S04",
+      "level": "section",
+      "chapter": "CH05",
+      "section": "CH05-S04",
+      "title": "基与维数",
+      "anchor": "5.4",
+      "original_text": "original_text/ch05_s04.md"
+    },
+    {
+      "unit_id": "CH05-S05",
+      "level": "section_intro",
+      "chapter": "CH05",
+      "section": "CH05-S05",
+      "title": "线性方程组解集的结构",
+      "anchor": "5.5",
+      "original_text": "original_text/ch05_s05.md"
+    },
+    {
+      "unit_id": "CH05-S05-SS01",
+      "level": "subsection",
+      "chapter": "CH05",
+      "section": "CH05-S05",
+      "title": "线性方程组解的存在性与唯一性",
+      "anchor": "5.5.1",
+      "original_text": "original_text/ch05_s05_ss01.md"
+    },
+    {
+      "unit_id": "CH05-S05-SS02",
+      "level": "subsection",
+      "chapter": "CH05",
+      "section": "CH05-S05",
+      "title": "齐次线性方程组解集的结构",
+      "anchor": "5.5.2",
+      "original_text": "original_text/ch05_s05_ss02.md"
+    },
+    {
+      "unit_id": "CH05-S05-SS03",
+      "level": "subsection",
+      "chapter": "CH05",
+      "section": "CH05-S05",
+      "title": "非齐次线性方程组解集的结构",
+      "anchor": "5.5.3",
+      "original_text": "original_text/ch05_s05_ss03.md"
+    },
+    {
+      "unit_id": "CH05-S06",
+      "level": "section_intro",
+      "chapter": "CH05",
+      "section": "CH05-S06",
+      "title": "一般线性空间",
+      "anchor": "5.6",
+      "original_text": "original_text/ch05_s06.md"
+    },
+    {
+      "unit_id": "CH05-S06-SS01",
+      "level": "subsection",
+      "chapter": "CH05",
+      "section": "CH05-S06",
+      "title": "一般线性空间的定义",
+      "anchor": "5.6.1",
+      "original_text": "original_text/ch05_s06_ss01.md"
+    },
+    {
+      "unit_id": "CH05-S06-SS02",
+      "level": "subsection",
+      "chapter": "CH05",
+      "section": "CH05-S06",
+      "title": "一般线性空间的理论",
+      "anchor": "5.6.2",
+      "original_text": "original_text/ch05_s06_ss02.md"
+    },
+    {
+      "unit_id": "CH05-S07",
+      "level": "section_intro",
+      "chapter": "CH05",
+      "section": "CH05-S07",
+      "title": "子空间运算*",
+      "anchor": "5.7",
+      "original_text": "original_text/ch05_s07.md"
+    },
+    {
+      "unit_id": "CH05-S07-SS01",
+      "level": "subsection",
+      "chapter": "CH05",
+      "section": "CH05-S07",
+      "title": "子空间的交*",
+      "anchor": "5.7.1",
+      "original_text": "original_text/ch05_s07_ss01.md"
+    },
+    {
+      "unit_id": "CH05-S07-SS02",
+      "level": "subsection",
+      "chapter": "CH05",
+      "section": "CH05-S07",
+      "title": "子空间的和*",
+      "anchor": "5.7.2",
+      "original_text": "original_text/ch05_s07_ss02.md"
+    },
+    {
+      "unit_id": "CH05-S07-SS03",
+      "level": "subsection",
+      "chapter": "CH05",
+      "section": "CH05-S07",
+      "title": "子空间的直和*",
+      "anchor": "5.7.3",
+      "original_text": "original_text/ch05_s07_ss03.md"
+    },
+    {
+      "unit_id": "CH06",
+      "level": "chapter_intro",
+      "chapter": "CH06",
+      "section": null,
+      "title": "线性变换",
+      "anchor": "6",
+      "original_text": "original_text/ch06.md"
+    },
+    {
+      "unit_id": "CH06-S01",
+      "level": "section",
+      "chapter": "CH06",
+      "section": "CH06-S01",
+      "title": "数组空间上的线性映射",
+      "anchor": "6.1",
+      "original_text": "original_text/ch06_s01.md"
+    },
+    {
+      "unit_id": "CH06-S02-SS01",
+      "level": "subsection",
+      "chapter": "CH06",
+      "section": "CH06-S02",
+      "title": "特征值与特征向量的定义",
+      "anchor": "6.2.1",
+      "original_text": "original_text/ch06_s02_ss01.md"
+    },
+    {
+      "unit_id": "CH06-S02-SS02",
+      "level": "subsection",
+      "chapter": "CH06",
+      "section": "CH06-S02",
+      "title": "特征值与特征向量的计算",
+      "anchor": "6.2.2",
+      "original_text": "original_text/ch06_s02_ss02.md"
+    },
+    {
+      "unit_id": "CH06-S03",
+      "level": "section_intro",
+      "chapter": "CH06",
+      "section": "CH06-S03",
+      "title": "矩阵的相似",
+      "anchor": "6.3",
+      "original_text": "original_text/ch06_s03.md"
+    },
+    {
+      "unit_id": "CH06-S03-SS01",
+      "level": "subsection",
+      "chapter": "CH06",
+      "section": "CH06-S03",
+      "title": "矩阵相似的定义",
+      "anchor": "6.3.1",
+      "original_text": "original_text/ch06_s03_ss01.md"
+    },
+    {
+      "unit_id": "CH06-S03-SS02",
+      "level": "subsection",
+      "chapter": "CH06",
+      "section": "CH06-S03",
+      "title": "矩阵相似于对角阵的条件",
+      "anchor": "6.3.2",
+      "original_text": "original_text/ch06_s03_ss02.md"
+    },
+    {
+      "unit_id": "CH06-S03-SS03",
+      "level": "subsection",
+      "chapter": "CH06",
+      "section": "CH06-S03",
+      "title": "相似于上三角阵",
+      "anchor": "6.3.3",
+      "original_text": "original_text/ch06_s03_ss03.md"
+    },
+    {
+      "unit_id": "CH06-S04",
+      "level": "section_intro",
+      "chapter": "CH06",
+      "section": "CH06-S04",
+      "title": "一般空间上的线性变换",
+      "anchor": "6.4",
+      "original_text": "original_text/ch06_s04.md"
+    },
+    {
+      "unit_id": "CH06-S04-SS01",
+      "level": "subsection",
+      "chapter": "CH06",
+      "section": "CH06-S04",
+      "title": "线性变换的定义",
+      "anchor": "6.4.1",
+      "original_text": "original_text/ch06_s04_ss01.md"
+    },
+    {
+      "unit_id": "CH06-S04-SS02",
+      "level": "subsection",
+      "chapter": "CH06",
+      "section": "CH06-S04",
+      "title": "线性变换在一组基下的矩阵",
+      "anchor": "6.4.2",
+      "original_text": "original_text/ch06_s04_ss02.md"
+    },
+    {
+      "unit_id": "CH06-S04-SS03",
+      "level": "subsection",
+      "chapter": "CH06",
+      "section": "CH06-S04",
+      "title": "线性变换的特征值与特征向量",
+      "anchor": "6.4.3",
+      "original_text": "original_text/ch06_s04_ss03.md"
+    },
+    {
+      "unit_id": "CH06-S05",
+      "level": "section",
+      "chapter": "CH06",
+      "section": "CH06-S05",
+      "title": "若当标准形简介*",
+      "anchor": "6.5",
+      "original_text": "original_text/ch06_s05.md"
+    },
+    {
+      "unit_id": "CH07",
+      "level": "chapter_intro",
+      "chapter": "CH07",
+      "section": null,
+      "title": "内积空间及变换",
+      "anchor": "7",
+      "original_text": "original_text/ch07.md"
+    },
+    {
+      "unit_id": "CH07-S01",
+      "level": "section",
+      "chapter": "CH07",
+      "section": "CH07-S01",
+      "title": "数组内积空间的定义与性质",
+      "anchor": "7.1",
+      "original_text": "original_text/ch07_s01.md"
+    },
+    {
+      "unit_id": "CH07-S02",
+      "level": "section",
+      "chapter": "CH07",
+      "section": "CH07-S02",
+      "title": "标准正交基",
+      "anchor": "7.2",
+      "original_text": "original_text/ch07_s02.md"
+    },
+    {
+      "unit_id": "CH07-S03",
+      "level": "section_intro",
+      "chapter": "CH07",
+      "section": "CH07-S03",
+      "title": "$\\mathbb{R}^n$ 上的线性变换",
+      "anchor": "7.3",
+      "original_text": "original_text/ch07_s03.md"
+    },
+    {
+      "unit_id": "CH07-S03-SS01",
+      "level": "subsection",
+      "chapter": "CH07",
+      "section": "CH07-S03",
+      "title": "正交变换",
+      "anchor": "7.3.1",
+      "original_text": "original_text/ch07_s03_ss01.md"
+    },
+    {
+      "unit_id": "CH07-S03-SS02",
+      "level": "subsection",
+      "chapter": "CH07",
+      "section": "CH07-S03",
+      "title": "对称变换",
+      "anchor": "7.3.2",
+      "original_text": "original_text/ch07_s03_ss02.md"
+    },
+    {
+      "unit_id": "CH07-S04",
+      "level": "section_intro",
+      "chapter": "CH07",
+      "section": "CH07-S04",
+      "title": "一般的欧氏空间",
+      "anchor": "7.4",
+      "original_text": "original_text/ch07_s04.md"
+    },
+    {
+      "unit_id": "CH07-S04-SS01",
+      "level": "subsection",
+      "chapter": "CH07",
+      "section": "CH07-S04",
+      "title": "一般欧氏空间的定义与性质",
+      "anchor": "7.4.1",
+      "original_text": "original_text/ch07_s04_ss01.md"
+    },
+    {
+      "unit_id": "CH07-S04-SS02",
+      "level": "subsection",
+      "chapter": "CH07",
+      "section": "CH07-S04",
+      "title": "标准正交基",
+      "anchor": "7.4.2",
+      "original_text": "original_text/ch07_s04_ss02.md"
+    },
+    {
+      "unit_id": "CH07-S04-SS03",
+      "level": "subsection",
+      "chapter": "CH07",
+      "section": "CH07-S04",
+      "title": "正交变换与对称变换",
+      "anchor": "7.4.3",
+      "original_text": "original_text/ch07_s04_ss03.md"
+    },
+    {
+      "unit_id": "CH07-S05",
+      "level": "section_intro",
+      "chapter": "CH07",
+      "section": "CH07-S05",
+      "title": "酉空间*",
+      "anchor": "7.5",
+      "original_text": "original_text/ch07_s05.md"
+    },
+    {
+      "unit_id": "CH07-S05-SS01",
+      "level": "subsection",
+      "chapter": "CH07",
+      "section": "CH07-S05",
+      "title": "酉空间的基本概念*",
+      "anchor": "7.5.1",
+      "original_text": "original_text/ch07_s05_ss01.md"
+    },
+    {
+      "unit_id": "CH07-S05-SS02",
+      "level": "subsection",
+      "chapter": "CH07",
+      "section": "CH07-S05",
+      "title": "酉空间的基本性质*",
+      "anchor": "7.5.2",
+      "original_text": "original_text/ch07_s05_ss02.md"
+    },
+    {
+      "unit_id": "CH07-S05-SS03",
+      "level": "subsection",
+      "chapter": "CH07",
+      "section": "CH07-S05",
+      "title": "酉矩阵与酉变换*",
+      "anchor": "7.5.3",
+      "original_text": "original_text/ch07_s05_ss03.md"
+    },
+    {
+      "unit_id": "CH07-S05-SS04",
+      "level": "subsection",
+      "chapter": "CH07",
+      "section": "CH07-S05",
+      "title": "Hermite矩阵与Hermite变换*",
+      "anchor": "7.5.4",
+      "original_text": "original_text/ch07_s05_ss04.md"
+    },
+    {
+      "unit_id": "CH08",
+      "level": "chapter_intro",
+      "chapter": "CH08",
+      "section": null,
+      "title": "实二次型",
+      "anchor": "8",
+      "original_text": "original_text/ch08.md"
+    },
+    {
+      "unit_id": "CH08-S01",
+      "level": "section",
+      "chapter": "CH08",
+      "section": "CH08-S01",
+      "title": "二次型的矩阵表示",
+      "anchor": "8.1",
+      "original_text": "original_text/ch08_s01.md"
+    },
+    {
+      "unit_id": "CH08-S02",
+      "level": "section",
+      "chapter": "CH08",
+      "section": "CH08-S02",
+      "title": "二次型的标准形",
+      "anchor": "8.2",
+      "original_text": "original_text/ch08_s02.md"
+    },
+    {
+      "unit_id": "CH08-S03",
+      "level": "section",
+      "chapter": "CH08",
+      "section": "CH08-S03",
+      "title": "相合不变量与分类",
+      "anchor": "8.3",
+      "original_text": "original_text/ch08_s03.md"
+    },
+    {
+      "unit_id": "CH08-S04",
+      "level": "section",
+      "chapter": "CH08",
+      "section": "CH08-S04",
+      "title": "二次曲线与曲面的分类",
+      "anchor": "8.4",
+      "original_text": "original_text/ch08_s04.md"
+    },
+    {
+      "unit_id": "CH08-S05",
+      "level": "section",
+      "chapter": "CH08",
+      "section": "CH08-S05",
+      "title": "正定二次型",
+      "anchor": "8.5",
+      "original_text": "original_text/ch08_s05.md"
+    }
+  ],
+  "frontmatter": null
+}

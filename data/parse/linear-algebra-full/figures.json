@@ -1,0 +1,1468 @@
+{
+  "_meta": {
+    "file_type": "figures",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.mineru",
+    "source_sha256": "dc9b35284043bab4f95073b4ace0532428b79aa9bf865b17f7dac35c0a8b3aa2",
+    "field_notes": {
+      "images[].bbox": "插图在整页图上的像素框 [x0,y0,x1,y1]；由 MinerU 的 pt 坐标 ×2 换算",
+      "images[].bbox_pt": "MinerU 原始 pt 坐标（换算依据，留档用）",
+      "images[].bbox_source": "mineru=MinerU 直接给的框（与我们的独立实现互校差 <10pt）",
+      "images[].file": "裁好的单图文件（相对 data/parse/）；展示层直接用，不再从整页图裁",
+      "images[].caption": "MinerU 给的图题（image_caption / table_caption），同时作为正文一行出现在 document.md 里",
+      "empty_figure_blocks": "既没有图体也没有图题的图表块（可能是内容丢失，audit 里留着页号）"
+    }
+  },
+  "pdf": null,
+  "scale": 2.0,
+  "pages": [],
+  "pages_with_candidates": 0,
+  "pages_reviewed": 0,
+  "confidence_counts": {
+    "high": 29
+  },
+  "images": [
+    {
+      "id": "IMG-0001",
+      "page": 8,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        404.0,
+        544.0,
+        686.0,
+        684.0
+      ],
+      "bbox_pt": [
+        202.0,
+        272.0,
+        343.0,
+        342.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            202.0,
+            272.0,
+            343.0,
+            342.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.1 向量的加法",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0001.jpg",
+      "sha256": "0411f1faa717f9ffc900152e215cea366d39a300655c8aff3d96a2bfb3bdbed2",
+      "mineru_file": "images/08192b6de14f1602fd7c82ab26a8eed423885e6236182a904b66ed9504116d00.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0002",
+      "page": 10,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        426.0,
+        228.0,
+        658.0,
+        412.0
+      ],
+      "bbox_pt": [
+        213.0,
+        114.0,
+        329.0,
+        206.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            213.0,
+            114.0,
+            329.0,
+            206.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.2 三向量共面条件",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0002.jpg",
+      "sha256": "b44fb518900fed658ac59c555c7792bd5443b59e35886ad8493e09671faa031f",
+      "mineru_file": "images/4bf58bc1626b272668e5bcf3fef8f01f1885f345463ce8491ccb935eda866d6c.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0003",
+      "page": 12,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        408.0,
+        222.0,
+        686.0,
+        430.0
+      ],
+      "bbox_pt": [
+        204.0,
+        111.0,
+        343.0,
+        215.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            204.0,
+            111.0,
+            343.0,
+            215.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图1.3",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0003.jpg",
+      "sha256": "1104a3f89360b2ac047eef90474446e3c3fcb2e19ff8ee0f24a173fbff6311d2",
+      "mineru_file": "images/f6f411e1e365e68490f6143574da13f5d22702740cd229b56f5023f8136c5870.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0004",
+      "page": 13,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        476.0,
+        228.0,
+        766.0,
+        452.0
+      ],
+      "bbox_pt": [
+        238.0,
+        114.0,
+        383.0,
+        226.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            238.0,
+            114.0,
+            383.0,
+            226.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.4 向量基本定理",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0004.jpg",
+      "sha256": "2645a39a017fd8ef8b9934c074fd3756b2648f2e4cbf29def63b7498783fa515",
+      "mineru_file": "images/178b1412541cfbc783591a1f5347444cea1ef6ed132f8ea128c91b85f0045a93.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0005",
+      "page": 15,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        266.0,
+        222.0,
+        874.0,
+        454.0
+      ],
+      "bbox_pt": [
+        133.0,
+        111.0,
+        437.0,
+        227.0
+      ],
+      "bbox_source": "mineru-merged",
+      "bbox_picked": "mineru-merged",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            133.0,
+            112.0,
+            249.0,
+            227.0
+          ]
+        },
+        {
+          "source": "mineru",
+          "bbox": [
+            321.0,
+            111.0,
+            437.0,
+            227.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图1.5",
+      "panel_label": "(b) 左手系",
+      "caption_from_pool": true,
+      "panels": [
+        {
+          "bbox_pt": [
+            133.0,
+            112.0,
+            249.0,
+            227.0
+          ],
+          "mineru_file": "/home/aaatrucklrx/桌面/AI教学/AIforStudy/data/books/linear-algebra-full/runs/run-20261007-151704-b55a5a/work/prepared-parse/mineru/images/40ca9ac42177e300f4fc4ce762b03dd1a36d5b620a3562854ce91de7216e9125.jpg"
+        },
+        {
+          "bbox_pt": [
+            321.0,
+            111.0,
+            437.0,
+            227.0
+          ],
+          "mineru_file": "/home/aaatrucklrx/桌面/AI教学/AIforStudy/data/books/linear-algebra-full/runs/run-20261007-151704-b55a5a/work/prepared-parse/mineru/images/a4955778ac1219a0b48ebc6714ec78706113602f2829deb83304cfa33b368203.jpg"
+        }
+      ],
+      "file": "images/mineru-IMG-0005.jpg",
+      "sha256": "35b5114783cde4f16908cc00b669fd6846b4746ed4dd47af5c03d6c1fdc329cc",
+      "mineru_file": "images/40ca9ac42177e300f4fc4ce762b03dd1a36d5b620a3562854ce91de7216e9125.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0006",
+      "page": 16,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        430.0,
+        928.0,
+        662.0,
+        1142.0
+      ],
+      "bbox_pt": [
+        215.0,
+        464.0,
+        331.0,
+        571.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            215.0,
+            464.0,
+            331.0,
+            571.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.6 方向余弦",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0006.jpg",
+      "sha256": "45595dbdff89642d2717dd700ca7ac8351e08d139b8d1a4da5a8773809722130",
+      "mineru_file": "images/202a3d31fd93c88f754d627e021de0ad65d8794eba999c8bdc7a41660cf4a5ba.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0007",
+      "page": 18,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        398.0,
+        400.0,
+        696.0,
+        562.0
+      ],
+      "bbox_pt": [
+        199.0,
+        200.0,
+        348.0,
+        281.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            199.0,
+            200.0,
+            348.0,
+            281.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.7",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0007.jpg",
+      "sha256": "4c633d5b8cdcbe13372c8abaa49a628ad2f9b45f98fa225f6401881c66bbe90c",
+      "mineru_file": "images/09d8d72385b64947138423c38cd1a38080621b8e5a157487921e9fe0bac2aa47.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0008",
+      "page": 20,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        478.0,
+        1166.0,
+        636.0,
+        1384.0
+      ],
+      "bbox_pt": [
+        239.0,
+        583.0,
+        318.0,
+        692.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            239.0,
+            583.0,
+            318.0,
+            692.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.8 向量的外积",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0008.jpg",
+      "sha256": "5241a414992c91eef59f5cae2ce5d416feb6a12dbb1d374bdd7481eb75887306",
+      "mineru_file": "images/e23ab6a1f2b983e20b8246d4de449e948188c0cebe4e3abce6af999dbabaf245.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0009",
+      "page": 21,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        224.0,
+        854.0,
+        898.0,
+        1062.0
+      ],
+      "bbox_pt": [
+        112.0,
+        427.0,
+        449.0,
+        531.0
+      ],
+      "bbox_source": "mineru-merged",
+      "bbox_picked": "mineru-merged",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            112.0,
+            427.0,
+            263.0,
+            531.0
+          ]
+        },
+        {
+          "source": "mineru",
+          "bbox": [
+            288.0,
+            428.0,
+            449.0,
+            530.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.9",
+      "panel_label": "(a)、(b)",
+      "caption_from_pool": true,
+      "panels": [
+        {
+          "bbox_pt": [
+            112.0,
+            427.0,
+            263.0,
+            531.0
+          ],
+          "mineru_file": "/home/aaatrucklrx/桌面/AI教学/AIforStudy/data/books/linear-algebra-full/runs/run-20261007-151704-b55a5a/work/prepared-parse/mineru/images/085b5d546a5f5992f36254ad2abb1691f8145bcbe503eee52f4cc64fc336613a.jpg"
+        },
+        {
+          "bbox_pt": [
+            288.0,
+            428.0,
+            449.0,
+            530.0
+          ],
+          "mineru_file": "/home/aaatrucklrx/桌面/AI教学/AIforStudy/data/books/linear-algebra-full/runs/run-20261007-151704-b55a5a/work/prepared-parse/mineru/images/2be400a3b618fa185ba3f95f9ce58619b46c3667a8db0dd46e80c19c47a224ce.jpg"
+        }
+      ],
+      "file": "images/mineru-IMG-0009.jpg",
+      "sha256": "50fe9c7e1107b7177fad7c8aced0e4649557fad17746f982ffc77877c23e57ab",
+      "mineru_file": "images/085b5d546a5f5992f36254ad2abb1691f8145bcbe503eee52f4cc64fc336613a.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0010",
+      "page": 24,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        434.0,
+        1088.0,
+        658.0,
+        1300.0
+      ],
+      "bbox_pt": [
+        217.0,
+        544.0,
+        329.0,
+        650.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            217.0,
+            544.0,
+            329.0,
+            650.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.10 向量的混合积",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0010.jpg",
+      "sha256": "a6818aba1ddd9f0420e3a9e93be9d18f959009571d192eb7a4b0a1cc05ee0d40",
+      "mineru_file": "images/64b8ee5f1e68e69d84612e4bceb8ca1f1d183abbf29fdffbf1589755b8d471dd.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0011",
+      "page": 29,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        290.0,
+        412.0,
+        422.0,
+        538.0
+      ],
+      "bbox_pt": [
+        145.0,
+        206.0,
+        211.0,
+        269.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            145.0,
+            206.0,
+            211.0,
+            269.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.11 集合的包含",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0011.jpg",
+      "sha256": "30614efe53f05ff6a7d510b146bb42ddd2dd3b086a29f3575c5abdb6c4503305",
+      "mineru_file": "images/e102d8d85e487de8548ace45d0d7cff2d7124c917ab2f2a1b7ff1b03b82b2d41.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0012",
+      "page": 29,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        524.0,
+        414.0,
+        720.0,
+        542.0
+      ],
+      "bbox_pt": [
+        262.0,
+        207.0,
+        360.0,
+        271.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            262.0,
+            207.0,
+            360.0,
+            271.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.12 集合的交",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0012.jpg",
+      "sha256": "3fc1e54ab5e6f8fe5d3aaf64c53126255d2235cd3bd77e3aa459e744ea99eb52",
+      "mineru_file": "images/a8cfd5481e7580321740c95bb6443ebcf30b3dfd4bf008fc7487c71a9ced10b9.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0013",
+      "page": 29,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        778.0,
+        418.0,
+        960.0,
+        538.0
+      ],
+      "bbox_pt": [
+        389.0,
+        209.0,
+        480.0,
+        269.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            389.0,
+            209.0,
+            480.0,
+            269.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.13 集合的并",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0013.jpg",
+      "sha256": "93ef9a70e80c2d1b72635cda36e5174c511435891d09713e80ad7171999078fc",
+      "mineru_file": "images/a8b79bc7699d44416b0e2008ee14ee41545c14ad0ef33f7a0c624749ba29d158.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0014",
+      "page": 30,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        224.0,
+        1182.0,
+        462.0,
+        1336.0
+      ],
+      "bbox_pt": [
+        112.0,
+        591.0,
+        231.0,
+        668.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            112.0,
+            591.0,
+            231.0,
+            668.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.14 集合的差集 A - B",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0014.jpg",
+      "sha256": "14d08572b8891bdd651eaa8290563bd97b3b281ed94f10e1024a7c8fcb4cd8b6",
+      "mineru_file": "images/1f7d48d25c77aeb38a52c4b1aaced3e969097920e5e0653a0d39522ad4dc2b5c.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0015",
+      "page": 30,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        654.0,
+        1204.0,
+        846.0,
+        1354.0
+      ],
+      "bbox_pt": [
+        327.0,
+        602.0,
+        423.0,
+        677.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            327.0,
+            602.0,
+            423.0,
+            677.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图1.15 集合的补集 A^c",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0015.jpg",
+      "sha256": "e10d5d37568d6b3bba3b6735a2287057121c0ffa756387cb1b6411a6af9eb34a",
+      "mineru_file": "images/3292f82ba1d4466ce87753c1efe72f654e8505b20a89da8718ee93da3d02c6d3.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0016",
+      "page": 38,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        414.0,
+        894.0,
+        674.0,
+        1110.0
+      ],
+      "bbox_pt": [
+        207.0,
+        447.0,
+        337.0,
+        555.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            207.0,
+            447.0,
+            337.0,
+            555.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 1.16 复数的几何定义",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0016.jpg",
+      "sha256": "98295b76b56be5ff690e46d2bd9e1525144822fa5c7a4db67a53402655462b81",
+      "mineru_file": "images/102a329e2cbe9f26c8b713f101d631cfdb3a23ca5bd5bdadb7f9a380cae6f348.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0017",
+      "page": 59,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        348.0,
+        1240.0,
+        884.0,
+        1424.0
+      ],
+      "bbox_pt": [
+        174.0,
+        620.0,
+        442.0,
+        712.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            174.0,
+            620.0,
+            442.0,
+            712.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "panel_label": null,
+      "caption_from_pool": false,
+      "panels": [],
+      "file": "images/mineru-IMG-0017.jpg",
+      "sha256": "eb93b4ea8bd0fd9c08b700521df70c9baf8f443acda8657a9dc292eaa5bfdfac",
+      "mineru_file": "images/9d7258d88f5f70b3869bbae4eaaa93483437e73714838c4d7f71f68735b9816b.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0018",
+      "page": 62,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        422.0,
+        296.0,
+        712.0,
+        476.0
+      ],
+      "bbox_pt": [
+        211.0,
+        148.0,
+        356.0,
+        238.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            211.0,
+            148.0,
+            356.0,
+            238.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "panel_label": null,
+      "caption_from_pool": false,
+      "panels": [],
+      "file": "images/mineru-IMG-0018.jpg",
+      "sha256": "6501abe036fd85c64066dd1d229ea2b86e8d230c2d45e305c0af4afc628f8216",
+      "mineru_file": "images/2a292035db9a1f28fc86bfd7d75c079fd167ee9a1e96c5f5fb138c573be2908f.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0019",
+      "page": 72,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        396.0,
+        250.0,
+        690.0,
+        518.0
+      ],
+      "bbox_pt": [
+        198.0,
+        125.0,
+        345.0,
+        259.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            198.0,
+            125.0,
+            345.0,
+            259.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 3.1 二阶行列式的几何意义",
+      "panel_label": "§3.2 行列式的性质",
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0019.jpg",
+      "sha256": "018ee64964f6b405f72625ff8c4f38370f06c321974697be8ea55cd26cf91478",
+      "mineru_file": "images/183894264a734d623073f6e8a55d183775e953fac5c79cf8e68c3e3a688650be.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0020",
+      "page": 72,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        388.0,
+        760.0,
+        706.0,
+        1056.0
+      ],
+      "bbox_pt": [
+        194.0,
+        380.0,
+        353.0,
+        528.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            194.0,
+            380.0,
+            353.0,
+            528.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 3.2 三阶行列式的几何意义",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0020.jpg",
+      "sha256": "41cb5f25b3492760c0a4dd6b62a5885065da4afdbd783699b0a70b8ab6d56a1e",
+      "mineru_file": "images/ae2297a2dffb84371797ce61712f425d96b53cbfb2bd6ac16c4f7d93ff6460fe.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0021",
+      "page": 75,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        464.0,
+        666.0,
+        768.0,
+        976.0
+      ],
+      "bbox_pt": [
+        232.0,
+        333.0,
+        384.0,
+        488.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            232.0,
+            333.0,
+            384.0,
+            488.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 3.3 行列式性质4的几何解释.",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0021.jpg",
+      "sha256": "24444671600dbc8c6b8ffdf4c5cd0ddee13a59f4ac46bf396585cb9e005aa51a",
+      "mineru_file": "images/b3013ca9c38bae61ba70cbd09bcb273184b106d32aa7326d6f32d7aa4e445a6c.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0022",
+      "page": 91,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        512.0,
+        250.0,
+        720.0,
+        518.0
+      ],
+      "bbox_pt": [
+        256.0,
+        125.0,
+        360.0,
+        259.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            256.0,
+            125.0,
+            360.0,
+            259.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 4.1 图的邻接矩阵",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0022.jpg",
+      "sha256": "f78b44fb20f7a4196fd6a0b832fa65c95a92861a5da91faca7abc511fc45914e",
+      "mineru_file": "images/0b2d2497cd879c75dcfecfb86268d1e67ffb570629b0ab2fd40508235e313933.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0023",
+      "page": 92,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        402.0,
+        440.0,
+        690.0,
+        728.0
+      ],
+      "bbox_pt": [
+        201.0,
+        220.0,
+        345.0,
+        364.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            201.0,
+            220.0,
+            345.0,
+            364.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 4.2 数字图像",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0023.jpg",
+      "sha256": "7afd95df70d9cf04438feae111ba2dfecf13b5cebbb7962baebb05671407d2d1",
+      "mineru_file": "images/aa4045b91e581ddd0160776ebaea9e56f2516255c25e0eeff66bd0cc900084cc.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0024",
+      "page": 101,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        210.0,
+        354.0,
+        1046.0,
+        476.0
+      ],
+      "bbox_pt": [
+        105.0,
+        177.0,
+        523.0,
+        238.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            105.0,
+            177.0,
+            523.0,
+            238.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 4.3 矩阵乘积行列式的几何意义",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0024.jpg",
+      "sha256": "b5005c516ab8ac46fa857683876b55cb39d5165b3fa3891ee8e2f39d77727a4e",
+      "mineru_file": "images/5180fcb1ef053141a0f89a4e91795b0a7008019f945c7f51f2775beba2587e5a.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0025",
+      "page": 180,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        172.0,
+        434.0,
+        918.0,
+        836.0
+      ],
+      "bbox_pt": [
+        86.0,
+        217.0,
+        459.0,
+        418.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            86.0,
+            217.0,
+            459.0,
+            418.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 6.1 图形的线性变换",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0025.jpg",
+      "sha256": "cae86b303095481b0b37433a5ce4dd0edc4c5cf9d5fa3ea60be7ce7e03402168",
+      "mineru_file": "images/967ca6e2d3182102a16e658623acfbfd33ca120e2e653707e0bfe6fd3da7d13a.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0026",
+      "page": 184,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        190.0,
+        250.0,
+        890.0,
+        592.0
+      ],
+      "bbox_pt": [
+        95.0,
+        125.0,
+        445.0,
+        296.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            95.0,
+            125.0,
+            445.0,
+            296.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 6.2 线性变换的特征值与特征向量的几何意义",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0026.jpg",
+      "sha256": "0df409da385a7bc90f208277e830da4f003f20232e47b7e4addc581c71a1a90a",
+      "mineru_file": "images/098df71e1e2f7f98058af5d7c0cf9148b0a79dadeaf8c3360a1c3353dbeb4847.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0027",
+      "page": 224,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        442.0,
+        552.0,
+        622.0,
+        684.0
+      ],
+      "bbox_pt": [
+        221.0,
+        276.0,
+        311.0,
+        342.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            221.0,
+            276.0,
+            311.0,
+            342.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "panel_label": null,
+      "caption_from_pool": false,
+      "panels": [],
+      "file": "images/mineru-IMG-0027.jpg",
+      "sha256": "c4911c29db9672a009d9f8e9083870c45c1849bb48d00a2b4cc1ee4475bb4b74",
+      "mineru_file": "images/d500a5fda7cfbc1e2b766ffc6ba775abe009ccb34dd4ae075a134d36f6b0b62c.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0028",
+      "page": 229,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        370.0,
+        250.0,
+        856.0,
+        618.0
+      ],
+      "bbox_pt": [
+        185.0,
+        125.0,
+        428.0,
+        309.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            185.0,
+            125.0,
+            428.0,
+            309.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": "图 7.1 向量的正交投影",
+      "panel_label": null,
+      "caption_from_pool": true,
+      "panels": [],
+      "file": "images/mineru-IMG-0028.jpg",
+      "sha256": "86ee475ed80eced5087e10ef2e7f144bbc83a509575ce733dbc0bcccfda1fe12",
+      "mineru_file": "images/37fe96b38702b8af87014ba4c29789eedeab2c89ac6035fb3000038052b3a0e3.jpg",
+      "concepts": [],
+      "occurrences": []
+    },
+    {
+      "id": "IMG-0029",
+      "page": 248,
+      "page_image": null,
+      "page_image_sha256": null,
+      "bbox": [
+        176.0,
+        244.0,
+        916.0,
+        1088.0
+      ],
+      "bbox_pt": [
+        88.0,
+        122.0,
+        458.0,
+        544.0
+      ],
+      "bbox_source": "mineru",
+      "bbox_picked": "mineru",
+      "confidence": "high",
+      "needs_review": false,
+      "local_bbox": null,
+      "model_bbox": null,
+      "candidates": [
+        {
+          "source": "mineru",
+          "bbox": [
+            88.0,
+            122.0,
+            458.0,
+            544.0
+          ]
+        }
+      ],
+      "kind": "diagram",
+      "caption": null,
+      "panel_label": null,
+      "caption_from_pool": false,
+      "panels": [],
+      "file": "images/mineru-IMG-0029.jpg",
+      "sha256": "6502435bbea4fa52310e5346b284d270f4c5aed25f9efad456ea6f9fbf45b067",
+      "mineru_file": "images/d045c95113c0e29c8f99939d2afb92c078140341340ddaf98442c909e70259e0.jpg",
+      "concepts": [],
+      "occurrences": []
+    }
+  ],
+  "page_index": {
+    "8": [
+      "IMG-0001"
+    ],
+    "10": [
+      "IMG-0002"
+    ],
+    "12": [
+      "IMG-0003"
+    ],
+    "13": [
+      "IMG-0004"
+    ],
+    "15": [
+      "IMG-0005"
+    ],
+    "16": [
+      "IMG-0006"
+    ],
+    "18": [
+      "IMG-0007"
+    ],
+    "20": [
+      "IMG-0008"
+    ],
+    "21": [
+      "IMG-0009"
+    ],
+    "24": [
+      "IMG-0010"
+    ],
+    "29": [
+      "IMG-0011",
+      "IMG-0012",
+      "IMG-0013"
+    ],
+    "30": [
+      "IMG-0014",
+      "IMG-0015"
+    ],
+    "38": [
+      "IMG-0016"
+    ],
+    "59": [
+      "IMG-0017"
+    ],
+    "62": [
+      "IMG-0018"
+    ],
+    "72": [
+      "IMG-0019",
+      "IMG-0020"
+    ],
+    "75": [
+      "IMG-0021"
+    ],
+    "91": [
+      "IMG-0022"
+    ],
+    "92": [
+      "IMG-0023"
+    ],
+    "101": [
+      "IMG-0024"
+    ],
+    "180": [
+      "IMG-0025"
+    ],
+    "184": [
+      "IMG-0026"
+    ],
+    "224": [
+      "IMG-0027"
+    ],
+    "229": [
+      "IMG-0028"
+    ],
+    "248": [
+      "IMG-0029"
+    ]
+  }
+}

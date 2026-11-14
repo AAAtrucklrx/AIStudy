@@ -1,0 +1,77 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH02-S02",
+    "text_sha256": "a909d3e7524f8fb02941d102d08396f78e51135f1fabe654a971030d3da3c3b4",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "a909d3e7524f8fb02941d102d08396f78e51135f1fabe654a971030d3da3c3b4",
+    "source": "original_text",
+    "source_path": "original_text/ch02_s02.md"
+  },
+  "unit": {
+    "unit_id": "CH02-S02",
+    "level": "section",
+    "chapter": "CH02",
+    "section": "CH02-S02",
+    "title": "函数极限和连续性",
+    "anchor": "2.2"
+  },
+  "concepts": [
+    {
+      "name": "复变函数的极限",
+      "type": "definition",
+      "formal": "设函数 $w = f(z)$ 在区域 $0 < |z - z_0| < \\rho$ 内有定义. 如果对任意 $\\varepsilon > 0$，总能找到 $\\delta > 0$，使当 $0 < |z - z_0| < \\delta, \\delta \\leqslant \\rho$ 时，就有 $|f(z) - w_0| < \\varepsilon$ 成立，就称当 $z$ 趋于 $z_0$ 时，$f(z)$ 的极限值是 $w_0$，记作 $\\lim _ {z \\rightarrow z _ {0}} f (z) = w _ {0}.$",
+      "source_quote": "定义3 设函数 $w = f(z)$ 在区域 $0 < |z - z_0| < \\rho$ 内有定义. 如果对任意 $\\varepsilon > 0$，总能找到 $\\delta > 0$，使当 $0 < |z - z_0| < \\delta, \\delta \\leqslant \\rho$ 时，就有 $|f(z) - w_0| < \\varepsilon$ 成立，就称当 $z$ 趋于 $z_0$ 时，$f(z)$ 的极限值是 $w_0$"
+    },
+    {
+      "name": "函数的连续性",
+      "type": "definition",
+      "formal": "如果等式 $\\lim _ {z \\rightarrow z _ {0}} f (z) = f \\left(z _ {0}\\right)$ 成立，就称函数 $f(z)$ 在点 $z_0$ 连续.如果 $f(z)$ 在区域 $D$ 中的每点都连续，就称 $f(z)$ 在区域 $D$ 中连续.",
+      "source_quote": "定义4 如果等式 $$\\lim _ {z \\rightarrow z _ {0}} f (z) = f \\left(z _ {0}\\right)$$ 成立，就称函数 $f(z)$ 在点 $z_0$ 连续."
+    },
+    {
+      "name": "函数连续的充要条件",
+      "type": "theorem",
+      "formal": "函数 $f(z) = u(x, y) + \\mathrm{i}v(x, y)$ 在 $z_0 = x_0 + \\mathrm{i}y_0$ 连续的充要条件是 $u(x, y)$ 和 $v(x, y)$ 作为二元函数在 $(x_0, y_0)$ 处连续.",
+      "source_quote": "定理1 函数 $f(z) = u(x, y) + \\mathrm{i}v(x, y)$ 在 $z_0 = x_0 + \\mathrm{i}y_0$ 连续的充要条件是 $u(x, y)$ 和 $v(x, y)$ 作为二元函数在 $(x_0, y_0)$ 处连续."
+    },
+    {
+      "name": "连续函数的和、差、积、商及复合函数的连续性",
+      "type": "theorem",
+      "formal": "关于连续函数的和、差、积、商（分母不为0的点）及复合函数仍然连续的定理依然成立.",
+      "source_quote": "数学分析中证明过的关于连续函数的和、差、积、商（分母不为0的点）及复合函数仍然连续的定理依然成立."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 4,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "因而定理",
+      "复合函数仍然连续的定理"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "复变函数的极限",
+    "函数的连续性",
+    "函数连续的充要条件",
+    "连续函数的和、差、积、商及复合函数的连续性"
+  ]
+}

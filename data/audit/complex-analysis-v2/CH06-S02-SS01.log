@@ -1,0 +1,60 @@
+—— CH06-S02-SS01 回路开始（run 2026-10-03 08:40:59）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 2, '教案问题明细': ['CH06-S02-SS01: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH06-S02-SS01: 《带辅助曲线的积分公式 (6.5)》(F-05) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃'], '教案提醒': 4, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 2 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH06-S02-SS01: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH06-S02-SS01: 《带辅助曲线的积分公式 (6.5)》(F-05) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [2] 条 → 并集 3 条工单
+    T-Rae1fe [P1] hits=2 「CH06-S02-SS01: 《带辅助曲线的积分公式 (6.5)》(F-」
+    T-2eea1b [P1] hits=1 「第二个动作是补一个 $I_2$。$\frac{\sin mx}{5-4\」
+    T-78c4f6 [P1] hits=1 「例5 就是照这条路算完的 。它算出的那个积分有一个专门的名字：泊松积分」
+[轮 1] 按 3 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06-S02-SS01 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH06-S02-SS01.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06-S02-SS01 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH06-S02-SS01.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 2 条：['CH06-S02-SS01: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH06-S02-SS01: 《带辅助曲线的积分公式 (6.5)》(F-05) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 1 / 仍开着 3；新 P0 0 条
+  ⚠ 这一轮工单没有净减少（3 → 3）
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 0 条（丢了 2 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-2eea1b [P1]：例6 题面与 $I_1$、$I_2$ 的显式定义都已按工单补齐，且随后说明 $I_2=0$ 的理由（$\sin mx$ 为奇函数）。（引用的
+   · 工单没关掉 T-78c4f6 [P1]：例5 的题面、换元后的复积分、两极点位置判定、留数计算与最终结果均已完整给出。（引用的句子在当前成品里找不到 → 按 partly 处理）
+   · 工单没关掉 T-R1eb98 [P1]：（这一轮没给出判定）
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（3 条）：
+  [P1] T-2eea1b 「第二个动作是补一个 $I_2$。$\frac{\sin mx}{5-4\cos 」
+  [P1] T-78c4f6 「例5 就是照这条路算完的 。它算出的那个积分有一个专门的名字：泊松积分」
+  [P1] T-R1eb98 「CH06-S02-SS01: 《带辅助曲线的积分公式 (6.5)》(F-05) 」
+记录写到 data/audit/complex-analysis-v2/CH06-S02-SS01.loop.json
+—— CH06-S02-SS01 回路开始（run 2026-10-03 10:48:34）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 2, '教案问题明细': ['CH06-S02-SS01: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH06-S02-SS01: 《带辅助曲线的积分公式 (6.5)》(F-05) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃'], '教案提醒': 4, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 2 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH06-S02-SS01: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH06-S02-SS01: 《带辅助曲线的积分公式 (6.5)》(F-05) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  上一趟的 ['T-2eea1b', 'T-78c4f6', 'T-R1eb98', 'T-2eea1b', 'T-78c4f6', 'T-R1eb98'] 原句已不在成品里 → 视为已改，不再背
+  每次 [4] 条 → 并集 2 条工单
+    T-Rae1fe [P1] hits=2 「CH06-S02-SS01: 《带辅助曲线的积分公式 (6.5)》(F-」
+    T-e928e3 [P1] hits=1 「右边这个积分的被积函数 $g(z)=\frac{z^m}{5z-2(1+」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06-S02-SS01 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH06-S02-SS01.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06-S02-SS01 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH06-S02-SS01.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 2 条：['CH06-S02-SS01: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH06-S02-SS01: 《带辅助曲线的积分公式 (6.5)》(F-05) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 1 / 仍开着 2；新 P0 0 条
+  ⚠ 这一轮工单没有净减少（2 → 2）
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 3 条（丢了 1 条没引到原句的）
+  📌 发现 2 处**原文疑似有错** → 记进勘误清单（不改成品）
+  📌 原文疑似有错：这一节 2 条 → 原文疑似有错.json（共 41 条）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-e928e3 [P1]：分解式、两个一阶极点的明确说明、一阶极点留数公式三者都已按例5 的写法补齐。（引用的句子在当前成品里找不到 → 按 partly 处理）
+   · 工单没关掉 T-R1eb98 [P1]：（这一轮没给出判定）
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（2 条）：
+  [P1] T-R1eb98 「CH06-S02-SS01: 《带辅助曲线的积分公式 (6.5)》(F-05) 」
+  [P1] T-e928e3 「右边这个积分的被积函数 $g(z)=\frac{z^m}{5z-2(1+z^2)」
+记录写到 data/audit/complex-analysis-v2/CH06-S02-SS01.loop.json

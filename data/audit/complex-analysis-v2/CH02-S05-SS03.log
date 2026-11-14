@@ -1,0 +1,24 @@
+—— CH02-S05-SS03 回路开始（run 2026-10-03 09:27:33）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 2, '教案问题明细': ['CH02-S05-SS03: 《e^z 的极限不存在》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，最好再给一个边界/反例），并点出两种情况差在哪', 'CH02-S05-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'], '教案提醒': 4, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 2 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH02-S05-SS03: 《e^z 的极限不存在》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，最好再给一个边界/反例），并点出两种情况差在哪', 'CH02-S05-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [1] 条 → 并集 2 条工单
+    T-R79df8 [P1] hits=2 「CH02-S05-SS03: 《e^z 的极限不存在》只给了 1 个例子」
+    T-250710 [P1] hits=1 「高等数学里有过结论：二阶线性齐次方程的通解，由两个线性无关的解拼成。」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH02-S05-SS03 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH02-S05-SS03.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH02-S05-SS03 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH02-S05-SS03.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 1 条：['CH02-S05-SS03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 2 / 仍开着 1；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 0 条（丢了 4 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R88b0a [P1]：（这一轮没给出判定）
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（1 条）：
+  [P1] T-R88b0a 「CH02-S05-SS03: 有一张图没声明**服务什么** （缺 concep」
+记录写到 data/audit/complex-analysis-v2/CH02-S05-SS03.loop.json

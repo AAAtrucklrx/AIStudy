@@ -1,0 +1,156 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH01-S01-SS05",
+    "text_sha256": "774df9ed570df6bee9baf4675c3c990511d829342b5c7ac84ef43ab2bc64d3a2",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "774df9ed570df6bee9baf4675c3c990511d829342b5c7ac84ef43ab2bc64d3a2",
+    "source": "original_text",
+    "source_path": "original_text/ch01_s01_ss05.md"
+  },
+  "unit": {
+    "unit_id": "CH01-S01-SS05",
+    "level": "subsection",
+    "chapter": "CH01",
+    "section": "CH01-S01",
+    "title": "复数序列的极限、无穷远点",
+    "anchor": "1.1.5"
+  },
+  "concepts": [
+    {
+      "name": "复数列的极限",
+      "type": "definition",
+      "formal": "设 $z_{1}, z_{2}, \\cdots, z_{n}, \\cdots$ 是一个复数序列，$z_{0}$ 是已给复数，如果 $$\\lim _ {n \\rightarrow + \\infty} | z _ {n} - z _ {0} | = 0,$$ 就称复数 $z_0$ 是复数列 $\\{z_n\\}$ 的极限，记作 $$\\lim _ {n \\to + \\infty} z _ {n} = z _ {0} \\quad \\text {或} \\quad z _ {n} \\to z _ {0}.$$ 上述定义用“$\\varepsilon - N$”的语言来说就是：对任给正数 $\\varepsilon > 0$，存在自然数 $N$，使当 $n > N$ 时，总有 $$\\left| z _ {n} - z _ {0} \\right| < \\epsilon .$$",
+      "source_quote": "定义 1 设 $z_{1}, z_{2}, \\cdots, z_{n}, \\cdots$ 是一个复数序列，$z_{0}$ 是已给复数，如果 $$\\lim _ {n \\rightarrow + \\infty} | z _ {n} - z _ {0} | = 0,$$ 就称复数 $z_0$ 是复数列 $\\{z_n\\}$ 的极限，记作 $$\\lim _ {n \\to + \\infty} z _ {n} = z _ {0} \\quad \\text {或} \\quad z _ {n} \\to z _ {0}.$$"
+    },
+    {
+      "name": "定理1",
+      "type": "theorem",
+      "formal": "设 $z_0 = x_0 + \\mathrm{i}y_0, z_n = x_n + \\mathrm{i}y_n, n = 1,2,\\dots$，则 $\\lim_{n\\to \\infty}z_n = z_0$ 的充分必要条件是 $$\\lim _ {n \\to + \\infty} x _ {n} = x _ {0} \\quad {\\text {及}} \\quad \\lim _ {n \\to + \\infty} y _ {n} = y _ {0}.$$",
+      "source_quote": "定理1 设 $z_0 = x_0 + \\mathrm{i}y_0, z_n = x_n + \\mathrm{i}y_n, n = 1,2,\\dots$，则 $\\lim_{n\\to \\infty}z_n = z_0$ 的充分必要条件是 $$\\lim _ {n \\to + \\infty} x _ {n} = x _ {0} \\quad {\\text {及}} \\quad \\lim _ {n \\to + \\infty} y _ {n} = y _ {0}.$$"
+    },
+    {
+      "name": "定理2",
+      "type": "theorem",
+      "formal": "如果 $z_0 \\neq 0$，则 $\\lim_{n \\to \\infty} z_n = z_0$ 的充分必要条件是 $$\\lim _ {n \\to + \\infty} | z _ {n} | = | z _ {0} | \\quad \\text {及} \\quad \\lim _ {n \\to + \\infty} \\mathrm{Arg} z _ {n} = \\mathrm{Arg} z _ {0}.$$ 上面的第二个等式应这样来理解：对于 $\\mathrm{Argz}_0$ 的任一个值 $\\arg z_0$ ，总可以选取一个序列 $\\{\\arg z_n\\}$ ，使得 $\\arg z_n \\to \\arg z_0$",
+      "source_quote": "定理2 如果 $z_0 \\neq 0$，则 $\\lim_{n \\to \\infty} z_n = z_0$ 的充分必要条件是 $$\\lim _ {n \\to + \\infty} | z _ {n} | = | z _ {0} | \\quad \\text {及} \\quad \\lim _ {n \\to + \\infty} \\mathrm{Arg} z _ {n} = \\mathrm{Arg} z _ {0}.$$ 上面的第二个等式应这样来理解：对于 $\\mathrm{Argz}_0$ 的任一个值 $\\arg z_0$ ，总可以选取一个序列 $\\{\\arg z_n\\}$ ，使得 $\\arg z_n \\to \\arg z_0$"
+    },
+    {
+      "name": "收敛于无穷远点",
+      "type": "definition",
+      "formal": "如果数列  $z_{1}, z_{2}, \\cdots, z_{n}, \\cdots$  具有这样的性质：对任意正数 M，总可以找到一个自然数 N，使当 n > N 时，有  $|z_{n}| > M$ ，即当 n 增大时  $z_{n}$  的模可以变得大于任意预先指定的界限，那么我们就说这个数列收敛于无穷远点，并记作 $$\\lim _ {n \\to \\infty} z _ {n} = \\infty .$$",
+      "source_quote": "如果数列  $z_{1}, z_{2}, \\cdots, z_{n}, \\cdots$  具有这样的性质：对任意正数 M，总可以找到一个自然数 N，使当 n > N 时，有  $|z_{n}| > M$ ，即当 n 增大时  $z_{n}$  的模可以变得大于任意预先指定的界限，那么我们就说这个数列收敛于无穷远点，并记作 $$\\lim _ {n \\to \\infty} z _ {n} = \\infty .$$"
+    },
+    {
+      "name": "无穷远点",
+      "type": "definition",
+      "formal": "为了使得球面上的北极 N；也在 z 平面上有一个对应点，我们就约定在 z 平面上引进一个理想点，称为无穷远点。",
+      "source_quote": "为了使得球面上的北极 N；也在 z 平面上有一个对应点，我们就约定在 z 平面上引进一个理想点，称为无穷远点。"
+    },
+    {
+      "name": "北极（球极）",
+      "type": "definition",
+      "formal": "过 $O$ 点作 $z$ 平面的垂线与球面交于 $N$ 点，$N$ 称为北极或球极（图1.5）。",
+      "source_quote": "过 $O$ 点作 $z$ 平面的垂线与球面交于 $N$ 点，$N$ 称为北极或球极（图1.5）。"
+    },
+    {
+      "name": "扩充平面（闭复平面）",
+      "type": "definition",
+      "formal": "增加了 $\\infty$ 点的复数平面称为扩充平面或闭复平面，与它对应的就是整个球面，称为复数球面或黎曼（Riemann）球面，由上讨论可知，扩充平面的一个几何模型就是复数球面。原来的复数平面则称为开平面或有限平面。",
+      "source_quote": "增加了 $\\infty$ 点的复数平面称为扩充平面或闭复平面，与它对应的就是整个球面，称为复数球面或黎曼（Riemann）球面，由上讨论可知，扩充平面的一个几何模型就是复数球面。原来的复数平面则称为开平面或有限平面。"
+    },
+    {
+      "name": "复数球面（黎曼球面）",
+      "type": "definition",
+      "formal": "与它对应的就是整个球面，称为复数球面或黎曼（Riemann）球面，由上讨论可知，扩充平面的一个几何模型就是复数球面。",
+      "source_quote": "与它对应的就是整个球面，称为复数球面或黎曼（Riemann）球面，由上讨论可知，扩充平面的一个几何模型就是复数球面。"
+    },
+    {
+      "name": "开平面（有限平面）",
+      "type": "definition",
+      "formal": "原来的复数平面则称为开平面或有限平面。",
+      "source_quote": "原来的复数平面则称为开平面或有限平面。"
+    },
+    {
+      "name": "无穷远点的实部、虚部、辐角及模",
+      "type": "property",
+      "formal": "1) $\\infty$ 点的实部、虚部及辐角都无意义，其模 $|\\infty| = +\\infty$",
+      "source_quote": "1) $\\infty$ 点的实部、虚部及辐角都无意义，其模 $|\\infty| = +\\infty$"
+    },
+    {
+      "name": "无穷远点的乘法与除法",
+      "type": "property",
+      "formal": "2) 若 $a \\neq 0$, 则 $a \\cdot \\infty = \\infty \\cdot a = \\infty, \\frac{a}{0} = \\infty$.",
+      "source_quote": "2) 若 $a \\neq 0$, 则 $a \\cdot \\infty = \\infty \\cdot a = \\infty, \\frac{a}{0} = \\infty$."
+    },
+    {
+      "name": "无穷远点的加减与除法",
+      "type": "property",
+      "formal": "3) 若 $a \\neq \\infty$，则 $a \\pm \\infty = \\infty \\pm a = \\infty, \\frac{a}{\\infty} = 0, \\frac{\\infty}{a} = \\infty$.",
+      "source_quote": "3) 若 $a \\neq \\infty$，则 $a \\pm \\infty = \\infty \\pm a = \\infty, \\frac{a}{\\infty} = 0, \\frac{\\infty}{a} = \\infty$."
+    },
+    {
+      "name": "无穷远点的邻域",
+      "type": "definition",
+      "formal": "4）在闭复平面上任何一个以原点 $O$ 为中心的圆的外部 $\\mid z\\mid >R$ ，都称为无穷远点的邻域，从复数球面上看，就是某个纬圈以北的地区.",
+      "source_quote": "4）在闭复平面上任何一个以原点 $O$ 为中心的圆的外部 $\\mid z\\mid >R$ ，都称为无穷远点的邻域，从复数球面上看，就是某个纬圈以北的地区."
+    },
+    {
+      "name": "三角不等式",
+      "type": "property",
+      "formal": "$$\\left| \\left| z _ {n} \\right| - \\mid z _ {0} \\right| \\leqslant \\left| z _ {n} - z _ {0} \\right|$$",
+      "source_quote": "由三角不等式 $$\\left| \\left| z _ {n} \\right| - \\mid z _ {0} \\right| \\leqslant \\left| z _ {n} - z _ {0} \\right|$$ 及 $\\lim_{n\\to +\\infty}|z_n - z_0| = 0$ ，即得 $\\lim_{n\\to \\infty}|z_n| = |z_0|$"
+    },
+    {
+      "name": "余弦函数及正弦函数的连续性",
+      "type": "property",
+      "formal": "余弦函数及正弦函数的连续性",
+      "source_quote": "利用余弦函数及正弦函数的连续性，由所设条件即得"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 15,
+    "漏掉的具名结论": [
+      "定理1",
+      "定理2"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "具有这样的性质"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "复数列的极限",
+    "定理1",
+    "定理2",
+    "收敛于无穷远点",
+    "无穷远点",
+    "北极（球极）",
+    "扩充平面（闭复平面）",
+    "复数球面（黎曼球面）",
+    "开平面（有限平面）",
+    "无穷远点的实部、虚部、辐角及模",
+    "无穷远点的乘法与除法",
+    "无穷远点的加减与除法",
+    "无穷远点的邻域",
+    "三角不等式",
+    "余弦函数及正弦函数的连续性"
+  ]
+}

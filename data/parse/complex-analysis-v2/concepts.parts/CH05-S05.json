@@ -1,0 +1,183 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH05-S05",
+    "text_sha256": "e7668e2111d4457f341d6c048a9ee42031f745b845a578f3203b27411266c3ee",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "e7668e2111d4457f341d6c048a9ee42031f745b845a578f3203b27411266c3ee",
+    "source": "original_text",
+    "source_path": "original_text/ch05_s05.md"
+  },
+  "unit": {
+    "unit_id": "CH05-S05",
+    "level": "section",
+    "chapter": "CH05",
+    "section": "CH05-S05",
+    "title": "解析函数的孤立奇点",
+    "anchor": "5.5"
+  },
+  "concepts": [
+    {
+      "name": "定义6 孤立奇点",
+      "type": "definition",
+      "formal": "如果函数 $f(z)$ 在 $a$ 点的某个邻域： $|z - a| < \\rho$ 内除 $a$ 点外都是解析的，则称 $a$ 是 $f(z)$ 的孤立奇点.",
+      "source_quote": "定义6 如果函数 $f(z)$ 在 $a$ 点的某个邻域： $|z - a| < \\rho$ 内除 $a$ 点外都是解析的，则称 $a$ 是 $f(z)$ 的孤立奇点."
+    },
+    {
+      "name": "罗朗展开",
+      "type": "definition",
+      "formal": "它称为 $f(z)$ 在孤立奇点 $a$ 的罗朗展开.",
+      "source_quote": "它称为 $f(z)$ 在孤立奇点 $a$ 的罗朗展开."
+    },
+    {
+      "name": "主要部分",
+      "type": "definition",
+      "formal": "其中，带负次幂的部分称为这级数的主要部分；而幂级数部分称为这级数的正则部分.",
+      "source_quote": "其中，带负次幂的部分称为这级数的主要部分；而幂级数部分称为这级数的正则部分."
+    },
+    {
+      "name": "正则部分",
+      "type": "definition",
+      "formal": "其中，带负次幂的部分称为这级数的主要部分；而幂级数部分称为这级数的正则部分.",
+      "source_quote": "其中，带负次幂的部分称为这级数的主要部分；而幂级数部分称为这级数的正则部分."
+    },
+    {
+      "name": "可去奇点",
+      "type": "definition",
+      "formal": "当 $n = -1, -2, \\cdots$ 时，$a_n = 0$. 这时罗朗展开中没有主要部分，只有正则部分，即 $$f (z) = a _ {0} + a _ {1} (z - a) + a _ {2} (z - a) ^ {2} + \\dots , \\quad 0 <   | z - a | <   \\rho .\\tag{5.19}$$ 我们称 $a$ 为可去奇点.",
+      "source_quote": "我们称 $a$ 为可去奇点."
+    },
+    {
+      "name": "定理17",
+      "type": "theorem",
+      "formal": "由上节定理17知，$f(z)$ 在圆环 $0 < |z - a| < \\rho$ 内可以展成罗朗级数",
+      "source_quote": "由上节定理17知，$f(z)$ 在圆环 $0 < |z - a| < \\rho$ 内可以展成罗朗级数"
+    },
+    {
+      "name": "定理18",
+      "type": "theorem",
+      "formal": "设 $a$ 是 $f(z)$ 孤立奇点，那么 $a$ 是 $f(z)$ 的可去奇点的充分必要条件是：存在着某个正数 $\\rho$ ，使得 $f(z)$ 在环域：$0 < |z - a| < \\rho$ 内有界.",
+      "source_quote": "定理18 设 $a$ 是 $f(z)$ 孤立奇点，那么 $a$ 是 $f(z)$ 的可去奇点的充分必要条件是：存在着某个正数 $\\rho$ ，使得 $f(z)$ 在环域：$0 < |z - a| < \\rho$ 内有界."
+    },
+    {
+      "name": "定理18的推论",
+      "type": "corollary",
+      "formal": "设 $a$ 是 $f(z)$ 的孤立奇点，那么 $a$ 是 $f(z)$ 的可去奇点的充分必要条件是：$$\\lim _ {z \\to a} f (z) = a _ {0} \\quad (\\text {有限}).$$",
+      "source_quote": "推论 设 $a$ 是 $f(z)$ 的孤立奇点，那么 $a$ 是 $f(z)$ 的可去奇点的充分必要条件是：$$\\lim _ {z \\to a} f (z) = a _ {0} \\quad (\\text {有限}).$$"
+    },
+    {
+      "name": "m级极点",
+      "type": "definition",
+      "formal": "设 $f(z)$ 在 $a$ 点的罗朗展开式的主要部分只有有限多个（但至少有一个）不为 0 的项，设 $a_{-m}$ 是 $f(z)$ 的罗朗展开式中，从左边数起的第一个不为 0 的系数，即 $$f (z) = \\frac {a _ {- m}}{(z - a) ^ {m}} + \\dots + \\frac {a _ {- 1}}{(z - a)} + \\sum_ {n = 0} ^ {\\infty} a _ {n} (z - a) ^ {n}, \\quad a _ {- m} \\neq 0.$$ 这时称 $a$ 是 $f(z)$ 的 $m$ 级（或 $m$ 阶）极点.",
+      "source_quote": "这时称 $a$ 是 $f(z)$ 的 $m$ 级（或 $m$ 阶）极点."
+    },
+    {
+      "name": "定理19",
+      "type": "theorem",
+      "formal": "设 $a$ 为 $f(z)$ 的孤立奇点，则下面两个条件的任一个，都是 $a$ 为 $f(z)$ 的 $m$ 级极点的充分必要条件：1) $f(z)$ 在某环域内可表示为 $$f (z) = \\frac {\\varphi (z)}{(z - a) ^ {m}},\\tag{5.20}$$ 其中， $\\varphi(z)$ 在 a 点解析，且 $\\varphi(a) \\neq 0$ . 2) $a$ 是函数 $g(z) = 1 / f(z)$ 的 $m$ 级零点.",
+      "source_quote": "定理19 设 $a$ 为 $f(z)$ 的孤立奇点，则下面两个条件的任一个，都是 $a$ 为 $f(z)$ 的 $m$ 级极点的充分必要条件：1) $f(z)$ 在某环域内可表示为 $$f (z) = \\frac {\\varphi (z)}{(z - a) ^ {m}},\\tag{5.20}$$ 其中， $\\varphi(z)$ 在 a 点解析，且 $\\varphi(a) \\neq 0$ . 2) $a$ 是函数 $g(z) = 1 / f(z)$ 的 $m$ 级零点."
+    },
+    {
+      "name": "定理19的推论",
+      "type": "corollary",
+      "formal": "$f(z)$ 的孤立奇点 $\\pmb{a}$ 为极点充分必要条件是 $$\\lim _ {z \\rightarrow a} f (z) = \\infty .$$",
+      "source_quote": "推论 $f(z)$ 的孤立奇点 $\\pmb{a}$ 为极点充分必要条件是 $$\\lim _ {z \\rightarrow a} f (z) = \\infty .$$"
+    },
+    {
+      "name": "本性奇点",
+      "type": "definition",
+      "formal": "如果 $f(z)$ 的罗朗展开的主要部分含有无限多项，也就是说含有无限多个关于 $z - a$ 的负次幂，这时 $a$ 称为 $f(z)$ 的本性奇点。",
+      "source_quote": "这时 $a$ 称为 $f(z)$ 的本性奇点。"
+    },
+    {
+      "name": "定理20",
+      "type": "theorem",
+      "formal": "$f(z)$ 以 $a$ 为本性奇点的充分必要条件是：不存在有限或无限的极限 $\\lim_{z\\to a}f(z)$",
+      "source_quote": "定理20 $f(z)$ 以 $a$ 为本性奇点的充分必要条件是：不存在有限或无限的极限 $\\lim_{z\\to a}f(z)$"
+    },
+    {
+      "name": "定义7 无穷远点的孤立奇点",
+      "type": "definition",
+      "formal": "如果 $f(z)$ 在 $\\infty$ 点的某邻域（即某个圆的外区域：$R < |z| < +\\infty$）内解析，则 $\\infty$ 称为 $f(z)$ 的孤立奇点.",
+      "source_quote": "定义7 如果 $f(z)$ 在 $\\infty$ 点的某邻域（即某个圆的外区域：$R < |z| < +\\infty$）内解析，则 $\\infty$ 称为 $f(z)$ 的孤立奇点."
+    },
+    {
+      "name": "无穷远点的可去奇点",
+      "type": "definition",
+      "formal": "如果 $\\zeta = 0$ 是 $\\varphi(\\zeta)$ 的可去奇点、$(m$ 级)极点或本性奇点，就分别称 $z = \\infty$ 是 $f(z)$ 的可去奇点、$(m$ 级)极点或本性奇点。",
+      "source_quote": "如果 $\\zeta = 0$ 是 $\\varphi(\\zeta)$ 的可去奇点、$(m$ 级)极点或本性奇点，就分别称 $z = \\infty$ 是 $f(z)$ 的可去奇点、$(m$ 级)极点或本性奇点。"
+    },
+    {
+      "name": "无穷远点的极点",
+      "type": "definition",
+      "formal": "如果 $\\zeta = 0$ 是 $\\varphi(\\zeta)$ 的可去奇点、$(m$ 级)极点或本性奇点，就分别称 $z = \\infty$ 是 $f(z)$ 的可去奇点、$(m$ 级)极点或本性奇点。",
+      "source_quote": "如果 $\\zeta = 0$ 是 $\\varphi(\\zeta)$ 的可去奇点、$(m$ 级)极点或本性奇点，就分别称 $z = \\infty$ 是 $f(z)$ 的可去奇点、$(m$ 级)极点或本性奇点。"
+    },
+    {
+      "name": "无穷远点的本性奇点",
+      "type": "definition",
+      "formal": "如果 $\\zeta = 0$ 是 $\\varphi(\\zeta)$ 的可去奇点、$(m$ 级)极点或本性奇点，就分别称 $z = \\infty$ 是 $f(z)$ 的可去奇点、$(m$ 级)极点或本性奇点。",
+      "source_quote": "如果 $\\zeta = 0$ 是 $\\varphi(\\zeta)$ 的可去奇点、$(m$ 级)极点或本性奇点，就分别称 $z = \\infty$ 是 $f(z)$ 的可去奇点、$(m$ 级)极点或本性奇点。"
+    },
+    {
+      "name": "长大不等式",
+      "type": "formula",
+      "formal": "用长大不等式估计罗朗展开式的系数",
+      "source_quote": "用长大不等式估计罗朗展开式的系数，得"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 18,
+    "漏掉的具名结论": [
+      "定理17",
+      "定理18",
+      "定理19",
+      "定理20"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "则由上节定理",
+      "下面的定理",
+      "讨论函数在无穷远点附近的性质",
+      "内的性质",
+      "处具有何种性质"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "定义6 孤立奇点",
+    "罗朗展开",
+    "主要部分",
+    "正则部分",
+    "可去奇点",
+    "定理17",
+    "定理18",
+    "定理18的推论",
+    "m级极点",
+    "定理19",
+    "定理19的推论",
+    "本性奇点",
+    "定理20",
+    "定义7 无穷远点的孤立奇点",
+    "无穷远点的可去奇点",
+    "无穷远点的极点",
+    "无穷远点的本性奇点",
+    "长大不等式"
+  ]
+}

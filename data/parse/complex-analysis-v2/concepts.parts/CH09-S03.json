@@ -1,0 +1,46 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH09-S03",
+    "text_sha256": "3455e5426afb023e2af58195f33b6c573bc76587ac2d90c6d0cf40f77a416403",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "3455e5426afb023e2af58195f33b6c573bc76587ac2d90c6d0cf40f77a416403",
+    "source": "original_text",
+    "source_path": "original_text/ch09_s03.md"
+  },
+  "unit": {
+    "unit_id": "CH09-S03",
+    "level": "section_intro",
+    "chapter": "CH09",
+    "section": "CH09-S03",
+    "title": "由像函数求本函数",
+    "anchor": "9.3"
+  },
+  "concepts": [],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 0,
+    "漏掉的具名结论": [],
+    "完整": null,
+    "完整说明": "本节没有编号条目、也没有具名结论可核对",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "讲了如何用拉氏变换的性质"
+    ],
+    "记号缺口": []
+  },
+  "named_results": []
+}

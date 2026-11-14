@@ -1,0 +1,184 @@
+{
+  "schema_version": "AnswerPageDisplayErrataV1",
+  "match": {
+    "material_id": "material:A0047",
+    "entry_id": "A0047",
+    "source_sha256": "sha256:67b680747c782cf9ea837e6a2e0dce0fa3a2bcec7d07afa7ff71c4cecb539d94"
+  },
+  "target": "display_markdown and formatting.notes only",
+  "display_replacements": [
+    {
+      "id": "A0047-CH01-Q1-3-PRINTED-LABEL",
+      "old": "$$\\frac {\\sqrt {1 3}}{2} \\mathrm{e} ^ {i (- x + \\arctan 2 / 5)}; \\operatorname{Arg} z = (2 k - 1) \\pi + \\arctan 2 \\sqrt {3}, k = 0, \\pm 1, \\pm 2, \\dots ;$$",
+      "new": "(3) $\\frac{\\sqrt{13}}2\\mathrm e^{\\mathrm i(-\\pi+\\arctan(2\\sqrt3))}$；\n$\\operatorname{Arg}z=(2k-1)\\pi+\\arctan(2\\sqrt3)$，$k=0,\\pm1,\\pm2,\\ldots$。",
+      "reason": "两版印刷第218页明确有小题(3)，不是纸面漏题号。按同一印刷行一并恢复指数里的-pi、arctan(2*sqrt3)，避免仅补题号却保留该行的OCR字母x/2除5错误。",
+      "expected_display_match_count": 1,
+      "source_pdf_page_1based": 227,
+      "printed_page": 218
+    },
+    {
+      "id": "A0047-CH01-Q1-4-EXPONENT",
+      "old": "$z = 2\\sin\\frac{\\theta_{0}}{2}\\mathrm{e}^{(\\frac{\\theta}{2}-\\frac{\\theta}{2})i}$",
+      "new": "$z=2\\sin\\frac{\\theta_0}2\\mathrm e^{(\\frac\\pi2-\\frac{\\theta_0}2)\\mathrm i}$",
+      "reason": "两版纸面指数明确为(pi/2-theta_0/2)i：前项是pi，后项是带下标0的theta_0，并非两个theta抵消。保留题设0<theta_0<2pi及已有模长因子。",
+      "expected_display_match_count": 1,
+      "source_pdf_page_1based": 227,
+      "printed_page": 218
+    },
+    {
+      "id": "A0047-CH02-Q21-FUNCTION-TYPESETTING",
+      "old": "Resinz = sinxcoshy, Imsinz = cosxsinh y,\n| sinz | =  $\\sqrt{\\sin^{2}x + \\sinh^{2}y}$ .",
+      "new": "$\\operatorname{Re}(\\sin z)=\\sin x\\cosh y$，$\\operatorname{Im}(\\sin z)=\\cos x\\sinh y$，\n$|\\sin z|=\\sqrt{\\sin^2x+\\sinh^2y}$。",
+      "reason": "仅复用此前已核两版印刷第220页的Re sin/Im sin纯排版：函数名与变量分开并补数学界符，保留所有平方项；未另猜本页其他答案。",
+      "expected_display_match_count": 1,
+      "source_pdf_page_1based": 229,
+      "printed_page": 220
+    }
+  ],
+  "formatting_notes_replacements": [
+    {
+      "index": 0,
+      "old": "第1章第1题第(3)小题的题号在原文中缺失，公式位于(2)与(4)之间；未补题号。",
+      "new": "已核源PDF第227页、印刷第218页（用户PDF第220页）：第1章第1题小题(3)的题号实际印出，是OCR漏识；显示层已按纸面恢复(3)及该行公式，原始OCR快照保留。"
+    },
+    {
+      "index": 1,
+      "old": "第1章第1题(4)中 $\\mathrm{e}^{(\\frac{\\theta}{2}-\\frac{\\theta}{2})i}$ 原文如此，疑有 OCR 错误，未改。",
+      "new": "已核源PDF第227页、印刷第218页：第1章第1题(4)纸面指数是 $(\\pi/2-\\theta_0/2)\\mathrm i$，前项为 $\\pi$、后项为 $\\theta_0$。显示层已按实图订正，原始OCR快照保留。"
+    },
+    {
+      "index": 2,
+      "old": "第1章第3题在原文中缺失。",
+      "new": "已核两版印刷第218页：第1章第2题答案之后直接列第4题，纸面未列第3题参考答案；这不是已证实的OCR漏答，显示层不补造第3题答案。"
+    }
+  ],
+  "formatting_notes_after": [
+    "已核源PDF第227页、印刷第218页（用户PDF第220页）：第1章第1题小题(3)的题号实际印出，是OCR漏识；显示层已按纸面恢复(3)及该行公式，原始OCR快照保留。",
+    "已核源PDF第227页、印刷第218页：第1章第1题(4)纸面指数是 $(\\pi/2-\\theta_0/2)\\mathrm i$，前项为 $\\pi$、后项为 $\\theta_0$。显示层已按实图订正，原始OCR快照保留。",
+    "已核两版印刷第218页：第1章第2题答案之后直接列第4题，纸面未列第3题参考答案；这不是已证实的OCR漏答，显示层不补造第3题答案。",
+    "第2章第6题(2)中 $\\div ie^{x}$、第6题(3)中 sinxcoshy 等写法按原文保留。",
+    "第2章第13题中 $\\mathrm{iarg}z$ 原文如此，未改。",
+    "第2章第23题中 $\\int_{\\ln}\\sqrt{13}$ 等表达式原文如此，疑有 OCR 错误，未改；同题答案中一处缺少右括号的公式已按原书第220页补全。",
+    "第3章第6题(2)中 $1 + i_{1}$ 原文如此，未改。",
+    "第5章第11题中求和上下限 $n$、$z$ 及 $(z-a)^{*}$ 等原文如此，疑有 OCR 错误，未改。",
+    "第5章第13题(8)的题号在原文中缺失，紧接在(7)之后。",
+    "第9章第5题(2)中 $\\mathrm{e}^{-np/w}$ 原文如此，疑有 OCR 错误，未改。",
+    "第9章第7题(5)的题号在原文中缺失，仅以公式形式出现。",
+    "第9章第8题(3)中 $\\mathbf{e}^{bc}$ 原文如此，疑有 OCR 错误，未改。"
+  ],
+  "preserve_fields": [
+    "raw_markdown",
+    "source_sha256",
+    "source_lines",
+    "source_pages"
+  ],
+  "source_scope": {
+    "requested_source_pdf_page": 228,
+    "requested_printed_page": 219,
+    "actual_issue_source_pdf_page": 227,
+    "actual_issue_printed_page": 218,
+    "actual_issue_user_pdf_page": 220,
+    "explanation": "实图228/219从第1章第13题开始；任务三疑点实际在227/218。只核对应这一页，不扩扫全书。已核Re/Im排版仅复用已有220页证据。"
+  },
+  "evidence": [
+    {
+      "edition": "source",
+      "pdf_page_1based": 227,
+      "printed_page": 218,
+      "path": "data/study-revision-20261029/wholebook/display-evidence/source-pdf-227-print-218.png",
+      "sha256": "sha256:8e49e7802bbb1be8ca069abb9a1f09d26f96d4f1f3d41d89a73394cc8f5e6f82",
+      "visually_read": true,
+      "role": "targeted answer page"
+    },
+    {
+      "edition": "user",
+      "pdf_page_1based": 220,
+      "printed_page": 218,
+      "path": "data/study-revision-20261029/wholebook/display-evidence/user-pdf-220-print-218-upright.png",
+      "sha256": "sha256:6fa77e044a31ab76bb81fc51a9de7370bc087e47c9be701f9c929b57f31de5bf",
+      "visually_read": true,
+      "role": "targeted answer page"
+    },
+    {
+      "edition": "source",
+      "pdf_page_1based": 228,
+      "printed_page": 219,
+      "path": "data/study-revision-20261029/wholebook/display-evidence/source-pdf-228-print-219.png",
+      "sha256": "sha256:566205adb0c20c87b1a3ed18d8ae05403e3f07498ec824174101d29219934026",
+      "visually_read": true,
+      "role": "requested page-number cross-check; contains later answers starting at question13"
+    },
+    {
+      "edition": "user",
+      "pdf_page_1based": 221,
+      "printed_page": 219,
+      "path": "data/study-revision-20261029/wholebook/display-evidence/user-pdf-221-print-219-upright.png",
+      "sha256": "sha256:e977bae4f725cb3eb1622790ac29a70275de6dd7c224206e2bacb833d8de1097",
+      "visually_read": true,
+      "role": "requested page-number cross-check; contains later answers starting at question13"
+    },
+    {
+      "edition": "source",
+      "pdf_page_1based": 229,
+      "printed_page": 220,
+      "path": "data/study-revision-20261029/wholebook/display-evidence/source-pdf-229-print-220.png",
+      "sha256": "sha256:1498c5b1d14bda8ca1d0d86dac6755c831a275aa09ef327b4acedcd612a68a6b",
+      "visually_read": true,
+      "role": "reuse of previously verified Re sin/Im sin typesetting evidence; no new full-book scan"
+    },
+    {
+      "edition": "user",
+      "pdf_page_1based": 222,
+      "printed_page": 220,
+      "path": "data/study-revision-20261029/wholebook/display-evidence/user-pdf-222-print-220-upright.png",
+      "sha256": "sha256:9cb897762ef5d157582006000a30c12c7cbdd95e504026078b463d006f8a5b22",
+      "visually_read": true,
+      "role": "reuse of previously verified Re sin/Im sin typesetting evidence; no new full-book scan"
+    }
+  ],
+  "confirmed_findings": [
+    {
+      "id": "subquestion-3-label",
+      "finding": "纸面明确印有(3)；OCR漏题号。",
+      "action": "恢复题号与同行可清读公式。"
+    },
+    {
+      "id": "subquestion-4-exponent",
+      "finding": "纸面是 $(\\pi/2-\\theta_0/2)\\mathrm i$。",
+      "action": "仅显示投影恢复pi和theta_0。"
+    },
+    {
+      "id": "exercise-3-absence",
+      "finding": "纸面在第2题之后直接到第4题，未提供第3题参考答案。",
+      "action": "保持未列，不编造答案；将notes从笼统原文缺失改为纸面未列。"
+    }
+  ],
+  "verification": {
+    "each_before_matches_display_once": true,
+    "all_other_notes_preserved": true,
+    "raw_markdown_sha256": "sha256:616af430c3705cc638765125a65f46d0944838c786654e599a7a3cf4006448f5",
+    "source_sha256_preserved": "sha256:67b680747c782cf9ea837e6a2e0dce0fa3a2bcec7d07afa7ff71c4cecb539d94",
+    "raw_snapshot_mutated": false,
+    "source_formula_q1_3_numeric_value": [
+      -0.4999999999999997,
+      -1.7320508075688772
+    ],
+    "q1_4_identity_samples": [
+      {
+        "theta_0": 0.4,
+        "difference": 6.206335383118183e-17
+      },
+      {
+        "theta_0": 1.7,
+        "difference": 1.1102230246251565e-16
+      },
+      {
+        "theta_0": 5.8,
+        "difference": 6.206335383118183e-17
+      }
+    ],
+    "new_katex_math_spans": 10,
+    "katex_errors": 0
+  },
+  "merge_policy": "严格匹配material:A0047与source_sha256，仅逐条替换display_markdown和formatting.notes；old不唯一或签名不符就报告，不回写raw/source_sha；其余答案不推测订正。"
+}

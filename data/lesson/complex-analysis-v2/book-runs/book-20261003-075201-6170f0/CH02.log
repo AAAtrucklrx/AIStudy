@@ -1,0 +1,59 @@
+=== CH02：14 个单元 ===
+    CH02
+    CH02-S01
+    CH02-S02
+    CH02-S03
+    CH02-S04
+    CH02-S05
+    CH02-S05-SS01
+    CH02-S05-SS02
+    CH02-S05-SS03
+    CH02-S05-SS04
+    CH02-S05-SS05
+    CH02-S05-SS06
+    CH02-S05-SS07
+    CH02-S05-SS08
+
+计划：
+    CH02               概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH02-S01           概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH02-S02           概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH02-S03           概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH02-S04           概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH02-S05           概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH02-S05-SS01      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH02-S05-SS02      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH02-S05-SS03      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH02-S05-SS04      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH02-S05-SS05      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH02-S05-SS06      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH02-S05-SS07      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH02-S05-SS08      概念有    教案要生成    模型要生成    回路最多 1 轮
+
+估价（按实测单价，粗算）：概念 ~10k/节、教案 ~25~70k/节（看原文长度）、模型 ~10~20k/节、回路 ~80~120k/节（K=2）
+run_id：book-20261003-075201-6170f0/CH02（本趟账目只算这一趟，并行下不会串账）
+
+===== CH02 复变数函数 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH02 --quiet --temperature 0 --seed 42
+    模型：CH02: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH02 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH02 --fix-anchors
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH02 --max-rounds 1 --discover-runs 1
+    → 字数 927｜倍数 9.45｜套话 0｜详解 2｜硬问题 0｜本步 120,371 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH02 新增 ['CH02']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH02 --only CH02
+
+===== CH02-S01 复变数函数的概念 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH02-S01 --quiet --temperature 0 --seed 42
+    模型：CH02-S01: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH02-S01 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH02-S01 --fix-anchors
+    · 教案有 8 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH02-S01: 《复变数函数》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，最好…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH02-S01 --max-rounds 1 --discover-runs 1
+    · 还有 8 条**非篇幅**硬问题 → 不动它，交给回路的补丁模式（下次跑会带上）：CH02-S01: 《复变数函数》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特…
+    → 字数 2561｜倍数 1.69｜套话 0｜详解 8｜硬问题 8｜本步 233,575 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH02 新增 ['CH02-S01']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH02 --only CH02,CH02-S01
+
+===== CH02-S02 函数极限和连续性 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH02-S02 --quiet --temperature 0 --seed 42

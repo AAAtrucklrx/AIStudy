@@ -1,0 +1,125 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH09-S03-SS03",
+    "text_sha256": "2095dc8c8c37acab26382dc4a7d806e10f7824a270f2094109fb366458894158",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "2095dc8c8c37acab26382dc4a7d806e10f7824a270f2094109fb366458894158",
+    "source": "original_text",
+    "source_path": "original_text/ch09_s03_ss03.md"
+  },
+  "unit": {
+    "unit_id": "CH09-S03-SS03",
+    "level": "subsection",
+    "chapter": "CH09",
+    "section": "CH09-S03",
+    "title": "其他方法",
+    "anchor": "9.3.3"
+  },
+  "concepts": [
+    {
+      "name": "定理5",
+      "type": "theorem",
+      "formal": "若 $F(p)$ 在 $\\infty$ 点解析，且它在 $\\infty$ 点的邻域内有罗朗展开式 $$F (p) = \\sum_ {k = 1} ^ {+ \\infty} \\frac {c _ {k}}{p ^ {k}}.\\tag{9.18}$$ 把此级数逐项求本函数，得级数 $$\\sum_ {k = 1} ^ {\\infty} \\frac {c _ {k}}{(k - 1) !} t ^ {k - 1}.\\tag{9.19}$$ 则这个级数的收敛半径为 $+\\infty$ ，它所定义的函数 $f(t)$ 满足不等式 $\\mid f(t)\\mid \\leqslant K\\mathrm{e}^{\\alpha}$ $t\\geqslant 0,K,c$ 是正常数，且 $h(t)f(t)$ 是 $F(p)$ 的本函数.",
+      "source_quote": "定理5 若 $F(p)$ 在 $\\infty$ 点解析，且它在 $\\infty$ 点的邻域内有罗朗展开式 $$F (p) = \\sum_ {k = 1} ^ {+ \\infty} \\frac {c _ {k}}{p ^ {k}}.\\tag{9.18}$$ 把此级数逐项求本函数，得级数 $$\\sum_ {k = 1} ^ {\\infty} \\frac {c _ {k}}{(k - 1) !} t ^ {k - 1}.\\tag{9.19}$$ 则这个级数的收敛半径为 $+\\infty$ ，它所定义的函数 $f(t)$ 满足不等式 $\\mid f(t)\\mid \\leqslant K\\mathrm{e}^{\\alpha}$ $t\\geqslant 0,K,c$ 是正常数，且 $h(t)f(t)$ 是 $F(p)$ 的本函数."
+    },
+    {
+      "name": "定理5的逆定理",
+      "type": "theorem",
+      "formal": "若 $f(t)$ 在整个数轴上可展成幂级数(9.19)，且 $\\mid f(t)\\mid \\leqslant K\\mathrm{e}^{ct},t\\geqslant 0$ ，则它的像函数由(9.18)式表示.",
+      "source_quote": "这个定理的逆定理也成立：若 $f(t)$ 在整个数轴上可展成幂级数(9.19)，且 $\\mid f(t)\\mid \\leqslant K\\mathrm{e}^{ct},t\\geqslant 0$ ，则它的像函数由(9.18)式表示."
+    },
+    {
+      "name": "罗朗展开式",
+      "type": "formula",
+      "formal": "$F (p) = \\sum_ {k = 1} ^ {+ \\infty} \\frac {c _ {k}}{p ^ {k}}.$",
+      "source_quote": "它在 $\\infty$ 点的邻域内有罗朗展开式 $$F (p) = \\sum_ {k = 1} ^ {+ \\infty} \\frac {c _ {k}}{p ^ {k}}.$$"
+    },
+    {
+      "name": "卷积公式",
+      "type": "formula",
+      "formal": "$\\mathrm{L} ^ {- 1} [ F (p) G (p) ] = f (t) * g (t) = \\int_ {0} ^ {t} f (t - \\tau) g (\\tau) \\mathrm{d} \\tau .$",
+      "source_quote": "当像函数是两个函数的乘积 $F(p)G(p)$ 时，可以利用卷积公式求本函数，即 $$\\mathrm{L} ^ {- 1} [ F (p) G (p) ] = f (t) * g (t) = \\int_ {0} ^ {t} f (t - \\tau) g (\\tau) \\mathrm{d} \\tau .$$"
+    },
+    {
+      "name": "位移定理",
+      "type": "theorem",
+      "formal": "由位移定理得",
+      "source_quote": "由位移定理得"
+    },
+    {
+      "name": "概率积分（误差函数）",
+      "type": "definition",
+      "formal": "由积分 $\\frac{2}{\\sqrt{\\pi}}\\int_0^n\\mathrm{e}^{-x^2}\\mathrm{d}x$ 所定义的函数，也是一类重要的特殊函数，它称为概率积分或误差函数，记为 $\\operatorname {erf}(x)$",
+      "source_quote": "由积分 $\\frac{2}{\\sqrt{\\pi}}\\int_0^n\\mathrm{e}^{-x^2}\\mathrm{d}x$ 所定义的函数，也是一类重要的特殊函数，它称为概率积分或误差函数，记为 $\\operatorname {erf}(x)$ ，于是"
+    },
+    {
+      "name": "贝塞尔函数",
+      "type": "definition",
+      "formal": "$n$ 阶的贝塞尔函数$\\mathrm{J}_n(x)$",
+      "source_quote": "是我们在5.4节中已经讲过的 $n$ 阶的贝塞尔函数$\\mathrm{J}_n(x)$"
+    },
+    {
+      "name": "零阶贝塞尔函数",
+      "type": "definition",
+      "formal": "$L^{-1}\\left[\\frac{1}{p}e^{-\\frac{1}{p}}\\right]=J_{0}(2\\sqrt{t})$ （零阶贝塞尔函数）",
+      "source_quote": "$L^{-1}\\left[\\frac{1}{p}e^{-\\frac{1}{p}}\\right]=J_{0}(2\\sqrt{t})$ （零阶贝塞尔函数）"
+    },
+    {
+      "name": "Z变换",
+      "type": "definition",
+      "formal": "$Z[f(t)] = \\sum_{n=-\\infty}^{+\\infty} f_n z^{-n}$",
+      "source_quote": "记 $\\mathrm{L}[f_{T}(t)] = Z[f(t)]$ ，就得到 $f(t)$ 的 Z 变换为 $Z[f(t)] = \\sum_{n=-\\infty}^{+\\infty} f_n z^{-n}$ ."
+    },
+    {
+      "name": "δ函数的拉普拉斯变换",
+      "type": "formula",
+      "formal": "$\\mathrm{L}[\\delta(t)] = \\int_{-0}^{+\\infty}\\delta(t)\\mathrm{e}^{-pt}\\mathrm{d}t = \\mathrm{e}^{-pt^2} = 1$",
+      "source_quote": "为使 $\\delta$ 函数的拉普拉斯变换与其傅氏变换一致，就规定 $\\mathrm{L}[\\delta(t)] = \\int_{-0}^{+\\infty}\\delta(t)\\mathrm{e}^{-pt}\\mathrm{d}t = \\mathrm{e}^{-pt^2} = 1$ （附表2中公式31）."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 10,
+    "漏掉的具名结论": [
+      "定理5"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "读者对后面附表中的一些公式",
+      "首先是下面定理",
+      "故由上述定理",
+      "基本法则",
+      "拉氏变换的性质",
+      "节中B函数的性质"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "定理5",
+    "定理5的逆定理",
+    "罗朗展开式",
+    "卷积公式",
+    "位移定理",
+    "概率积分（误差函数）",
+    "贝塞尔函数",
+    "零阶贝塞尔函数",
+    "Z变换",
+    "δ函数的拉普拉斯变换"
+  ]
+}

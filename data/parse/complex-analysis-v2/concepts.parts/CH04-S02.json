@@ -1,0 +1,145 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH04-S02",
+    "text_sha256": "28d454880949aa4126345c5109739d22a61967338bd8ec33e9677f3a7d24c03b",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "28d454880949aa4126345c5109739d22a61967338bd8ec33e9677f3a7d24c03b",
+    "source": "original_text",
+    "source_path": "original_text/ch04_s02.md"
+  },
+  "unit": {
+    "unit_id": "CH04-S02",
+    "level": "section",
+    "chapter": "CH04",
+    "section": "CH04-S02",
+    "title": "调和函数的性质和狭利克雷问题",
+    "anchor": "4.2"
+  },
+  "concepts": [
+    {
+      "name": "平均值定理（定理4）",
+      "type": "theorem",
+      "formal": "设 $u(z)$ 是闭圆 $\\bar{D}:|z - z_0|\\leqslant R$ 内的调和函数（这应理解为在包含 $\\bar{D}$ 的某个较大区域内是调和函数），则 $$u (z _ {0}) = \\frac {1}{2 \\pi R} \\int_ {c} u (z) \\mathrm{d} s,$$ 这里， $C$ 是圆周 $\\mid z - z_0\\mid = R$ ，即调和函数在圆周 $C$ 上的平均值等于它在圆心的值.",
+      "source_quote": "定理4（平均值定理）设 $u(z)$ 是闭圆 $\\bar{D}:|z - z_0|\\leqslant R$ 内的调和函数（这应理解为在包含 $\\bar{D}$ 的某个较大区域内是调和函数），则 $$u (z _ {0}) = \\frac {1}{2 \\pi R} \\int_ {c} u (z) \\mathrm{d} s,$$"
+    },
+    {
+      "name": "极值原理（定理5）",
+      "type": "law",
+      "formal": "若函数 $u(x,y)$ 在一个有界域 $D$ 内是调和函数，且在有界闭域 $C + D$ 上连续，这里 $C$ 是 $D$ 的边界，并且 $u$ 不恒等于常数，则函数 $u(z)$ 只能在域 $D$ 的边界 $C$ 上取到整个有界闭域 $C + D$ 上的最大值和最小值.",
+      "source_quote": "定理5（极值原理）若函数 $u(x,y)$ 在一个有界域 $D$ 内是调和函数，且在有界闭域 $C + D$ 上连续，这里 $C$ 是 $D$ 的边界，并且 $u$ 不恒等于常数，则函数 $u(z)$ 只能在域 $D$ 的边界 $C$ 上取到整个有界闭域 $C + D$ 上的最大值和最小值."
+    },
+    {
+      "name": "定理6",
+      "type": "theorem",
+      "formal": "设 $u(z)$ 是闭圆 $\\bar{D}: |z - z_0| \\leqslant R$ 上的调和函数，则对此圆内部任一点 $z = z_0 + r\\mathrm{e}^{\\mathrm{i}\\varphi}(r < R)$，有 $$\\begin{array}{r} {u (r, \\varphi) = \\frac {1}{2 \\pi} \\int_ {0} ^ {2 \\pi} u (R, \\theta)   \\frac {R ^ {2} - r ^ {2}}{R ^ {2} - 2 R r \\cos (\\theta - \\varphi) + r ^ {2}} \\mathrm{d} \\theta ,} \\\\ {\\text {里记} u (z _ {0} + r \\mathrm{e} ^ {\\mathrm{i} \\varphi}) = u (r, \\varphi),   u (z _ {0} + R \\mathrm{e} ^ {\\mathrm{i} \\theta}) = u (R, \\theta).} \\end{array}$$",
+      "source_quote": "定理6 设 $u(z)$ 是闭圆 $\\bar{D}: |z - z_0| \\leqslant R$ 上的调和函数，则对此圆内部任一点 $z = z_0 + r\\mathrm{e}^{\\mathrm{i}\\varphi}(r < R)$，有"
+    },
+    {
+      "name": "泊松积分公式",
+      "type": "formula",
+      "formal": "$$\\begin{array}{r} {u (r, \\varphi) = \\frac {1}{2 \\pi} \\int_ {0} ^ {2 \\pi} u (R, \\theta)   \\frac {R ^ {2} - r ^ {2}}{R ^ {2} - 2 R r \\cos (\\theta - \\varphi) + r ^ {2}} \\mathrm{d} \\theta ,} \\\\ {\\text {里记} u (z _ {0} + r \\mathrm{e} ^ {\\mathrm{i} \\varphi}) = u (r, \\varphi),   u (z _ {0} + R \\mathrm{e} ^ {\\mathrm{i} \\theta}) = u (R, \\theta).} \\end{array}$$",
+      "source_quote": "公式(4.7)称为泊松(Poisson)积分公式.它说明若已知一个闭圆上的调和函数在圆周上的值,这个调和函数在该圆内的值就唯一地确定了."
+    },
+    {
+      "name": "狄利克雷问题",
+      "type": "definition",
+      "formal": "要求出一个在区域 $D$ 内调和并且在 $D$ 上连续的函数 $u(z)$, 使它在 $D$ 的边界 $C$ 上取已经给定的连续函数 $u(\\zeta)$. 这个问题称为狄利克雷 (Dirichlet) 问题，用数学式子表示就是 $$\\left\\{ \\begin{array}{l} \\frac {\\partial^ {2} u}{\\partial x ^ {2}} + \\frac {\\partial^ {2} u}{\\partial y ^ {2}} = 0, \\quad z \\in D \\\\ u (z) | _ {C} = u (\\zeta). \\end{array} \\right.$$",
+      "source_quote": "这个问题称为狄利克雷 (Dirichlet) 问题，用数学式子表示就是"
+    },
+    {
+      "name": "广义狄氏问题",
+      "type": "definition",
+      "formal": "设已经在区域 $D$ 的边界 $C$ 上给出一个函数 $u(\\zeta)$，它除了有有限多个第一类间断点外，处处连续。要求出一个在 $D$ 内有界的调和函数 $u(z)$，使它在 $u(\\zeta)$ 的所有连续点 $\\zeta$ 处都取值 $u(\\zeta)$，亦即 $$\\lim _ {z \\rightarrow \\zeta} u (z) = u (\\zeta), \\quad z \\in D.$$",
+      "source_quote": "因此常考虑广义狄氏问题：设已经在区域 $D$ 的边界 $C$ 上给出一个函数 $u(\\zeta)$，它除了有有限多个第一类间断点外，处处连续。"
+    },
+    {
+      "name": "定理7",
+      "type": "theorem",
+      "formal": "设函数 $u_{1}$ 及 $u_{2}$ 在有界域 $D$ 内调和，在有界闭域 $\\bar{D} = C + D$ 上连续，且 $u_{1}$ 和 $u_{2}$ 在 $C$ 上相差不超过 $\\varepsilon$ ，即当 $\\zeta \\in C$ 时，$|u_{1}(\\zeta) - u_{2}(\\zeta)| \\leqslant \\varepsilon$ ，则在整个域 $\\bar{D}$ 上也有 $$\\mid u _ {1} (z) - u _ {2} (z) \\mid \\leqslant \\varepsilon , \\quad z \\in \\bar {D}.$$ 特别地，如果在边界上二者相等，则在区域内部二者也相等，即狄氏问题的解（如果存在的话）是唯一的.",
+      "source_quote": "定理7 设函数 $u_{1}$ 及 $u_{2}$ 在有界域 $D$ 内调和，在有界闭域 $\\bar{D} = C + D$ 上连续，且 $u_{1}$ 和 $u_{2}$ 在 $C$ 上相差不超过 $\\varepsilon$"
+    },
+    {
+      "name": "解析函数的平均值公式",
+      "type": "formula",
+      "formal": "由解析函数的平均值公式，有 $$\\begin{array}{r l} u (z _ {0}) + \\mathrm{i} \\nu (z _ {0}) & = f (z _ {0}) = \\frac {1}{2 \\pi R} \\int_ {c} f (z) \\mathrm{d} s \\\\ & = \\frac {1}{2 \\pi R} \\int_ {c} [ u (z) + \\mathrm{i} \\nu (z) ] \\mathrm{d} s. \\end{array}$$",
+      "source_quote": "由解析函数的平均值公式，有"
+    },
+    {
+      "name": "最大模原理",
+      "type": "law",
+      "formal": "利用公式(4.6)，可以仿照解析函数的最大模原理，给出调和函数极值原理的证明；在证明中用到：与最大模原理矛盾.",
+      "source_quote": "与最大模原理矛盾."
+    },
+    {
+      "name": "柯西积分公式",
+      "type": "formula",
+      "formal": "由柯西积分公式，得 $$\\begin{array}{l} f (z) = \\frac {1}{2 \\pi \\mathrm{i}} \\int_ {C} \\frac {f (\\zeta)}{\\zeta - z} \\mathrm{d} \\zeta \\\\ = \\frac {1}{2 \\pi} \\int_ {0} ^ {2 \\pi} f (z _ {0} + R e ^ {\\mathrm{i} \\theta}) \\frac {R e ^ {\\mathrm{i} \\theta}}{R e ^ {\\mathrm{i} \\theta} - r e ^ {\\mathrm{i} \\varphi}} \\mathrm{d} \\theta . \\end{array}$$",
+      "source_quote": "由柯西积分公式，得"
+    },
+    {
+      "name": "柯西积分定理",
+      "type": "theorem",
+      "formal": "由柯西积分定理，得 $$\\begin{array}{l} 0 = \\frac {1}{2 \\pi \\mathrm{i}} \\int_ {C} \\frac {f (\\zeta)}{\\zeta - z _ {1}} \\mathrm{d} \\zeta \\\\ = \\frac {1}{2 \\pi} \\int_ {0} ^ {2 \\pi} f (z _ {0} + R e ^ {\\mathrm{i} \\theta}) \\frac {R e ^ {\\mathrm{i} \\theta} \\mathrm{d} \\theta}{R e ^ {\\mathrm{i} \\theta} - \\frac {R ^ {2}}{r} e ^ {\\mathrm{i} \\varphi}} \\\\ = \\frac {1}{2 \\pi} \\int_ {0} ^ {2 \\pi} f (z _ {0} + R e ^ {\\mathrm{i} \\theta}) \\frac {r e ^ {\\mathrm{i} \\theta}}{r e ^ {\\mathrm{i} \\theta} - R e ^ {\\mathrm{i} \\varphi}} \\mathrm{d} \\theta , \\end{array}$$",
+      "source_quote": "由柯西积分定理，得"
+    },
+    {
+      "name": "拉普拉斯方程",
+      "type": "formula",
+      "formal": "$$\\frac {\\partial^ {2} u}{\\partial x ^ {2}} + \\frac {\\partial^ {2} u}{\\partial y ^ {2}} = 0$$",
+      "source_quote": "任何调和函数都是拉普拉斯方程 $$\\frac {\\partial^ {2} u}{\\partial x ^ {2}} + \\frac {\\partial^ {2} u}{\\partial y ^ {2}} = 0$$ 的解."
+    },
+    {
+      "name": "稳定性",
+      "type": "property",
+      "formal": "所谓稳定性是指：当边界值 $u(\\zeta)$ 作很小的变化时，解的变化也很小.",
+      "source_quote": "而且解具有稳定性.所谓稳定性是指：当边界值 $u(\\zeta)$ 作很小的变化时，解的变化也很小."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 13,
+    "漏掉的具名结论": [
+      "定理6",
+      "定理7"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "调和函数的性质",
+      "本节利用解析函数的性质",
+      "导出调和函数的性质",
+      "泊松公式"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "平均值定理（定理4）",
+    "极值原理（定理5）",
+    "定理6",
+    "泊松积分公式",
+    "狄利克雷问题",
+    "广义狄氏问题",
+    "定理7",
+    "解析函数的平均值公式",
+    "最大模原理",
+    "柯西积分公式",
+    "柯西积分定理",
+    "拉普拉斯方程",
+    "稳定性"
+  ]
+}

@@ -1,0 +1,16 @@
+—— CH09-S03-SS03 回路开始（run 2026-10-03 11:48:43）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 1, '确定性已知误报': 0, '教案硬问题': 2, '教案问题明细': ['CH09-S03-SS03: 《级数法求本函数》(F-01) 四样都没有 —— 图 / 某步的图 / 图请求 / 正当的不配图理由，至少要有一样', 'CH09-S03-SS03: 第 1 条配图请求没有 `quote`（原文摘录）—— 没有它，画出来的图没法核对服务于哪句话'], '教案提醒': 6, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 2 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH09-S03-SS03: 《级数法求本函数》(F-01) 四样都没有 —— 图 / 某步的图 / 图请求 / 正当的不配图理由，至少要有一样', 'CH09-S03-SS03: 第 1 条配图请求没有 `quote`（原文摘录）—— 没有它，画出来的图没法核对服务于哪句话']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [2] 条 → 并集 2 条工单
+    T-R619ab [P1] hits=2 「CH09-S03-SS03: 《级数法求本函数》(F-01) 四样都没有」
+    T-86fe93 [P1] hits=1 「意思是当 $|p|$ 足够大时 $F(p)$ 能展开成幂级数 （见批注）」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S03-SS03 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH09-S03-SS03.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH09-S03-SS03 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH09-S03-SS03.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 1 条：['CH09-S03-SS03: 《级数法求本函数》(F-01) 四样都没有 —— 图 / 某步的图 / 图请求 / 正当的不配图理由，至少要有一样'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 2 / 仍开着 0；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…

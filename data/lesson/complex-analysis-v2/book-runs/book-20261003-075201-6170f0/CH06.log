@@ -1,0 +1,48 @@
+=== CH06：9 个单元 ===
+    CH06
+    CH06-S01
+    CH06-S02
+    CH06-S02-SS01
+    CH06-S02-SS02
+    CH06-S02-SS03
+    CH06-S02-SS04
+    CH06-S02-SS05
+    CH06-S03
+
+计划：
+    CH06               概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH06-S01           概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH06-S02           概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH06-S02-SS01      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH06-S02-SS02      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH06-S02-SS03      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH06-S02-SS04      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH06-S02-SS05      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH06-S03           概念有    教案要生成    模型要生成    回路最多 1 轮
+
+估价（按实测单价，粗算）：概念 ~10k/节、教案 ~25~70k/节（看原文长度）、模型 ~10~20k/节、回路 ~80~120k/节（K=2）
+run_id：book-20261003-075201-6170f0/CH06（本趟账目只算这一趟，并行下不会串账）
+
+===== CH06 留数及其应用 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06 --quiet --temperature 0 --seed 42
+    模型：CH06: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH06 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH06 --fix-anchors
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH06 --max-rounds 1 --discover-runs 1
+    → 字数 417｜倍数 5.83｜套话 0｜详解 0｜硬问题 0｜本步 85,329 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH06 新增 ['CH06']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH06 --only CH06
+
+===== CH06-S01 留数定理 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06-S01 --quiet --temperature 0 --seed 42
+    模型：CH06-S01: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH06-S01 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH06-S01 --fix-anchors
+    · 教案有 2 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH06-S01: 《留数等于罗朗展开的 $a_{-1}$》(F-04) 四样都没有 —— 图 / 某步的图 / 图请求…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH06-S01 --max-rounds 1 --discover-runs 1
+    → 字数 3369｜倍数 2.76｜套话 0｜详解 5｜硬问题 0｜本步 278,225 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH06 新增 ['CH06-S01']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH06 --only CH06,CH06-S01
+
+===== CH06-S02 积分计算 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06-S02 --quiet --temperature 0 --seed 42

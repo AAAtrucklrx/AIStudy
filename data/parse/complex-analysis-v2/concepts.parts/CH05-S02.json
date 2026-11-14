@@ -1,0 +1,132 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH05-S02",
+    "text_sha256": "49003da9114dcb427938038b9eda1c5436b535c42b09dd512374aaac00134024",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "49003da9114dcb427938038b9eda1c5436b535c42b09dd512374aaac00134024",
+    "source": "original_text",
+    "source_path": "original_text/ch05_s02.md"
+  },
+  "unit": {
+    "unit_id": "CH05-S02",
+    "level": "section",
+    "chapter": "CH05",
+    "section": "CH05-S02",
+    "title": "基级数",
+    "anchor": "5.2"
+  },
+  "concepts": [
+    {
+      "name": "幂级数",
+      "type": "definition",
+      "formal": "最简单的函数项级数是幂级数 $$\\sum_ {n = 0} ^ {+ \\infty} a _ {n} (z - a) ^ {n} = a _ {0} + a _ {1} (z - a) + a _ {2} (z - a) ^ {2} + \\dots ,\\tag{5.5}$$ 其中， $a$ 及 $a_{n}(n = 0,1,2,\\dots)$ 是复常数，它的每一项 $$f _ {n} (z) = a _ {n} (z - a) ^ {n}, \\quad n = 0, 1, 2, \\dots$$ 都是全平面上的解析函数.",
+      "source_quote": "最简单的函数项级数是幂级数 $$\\sum_ {n = 0} ^ {+ \\infty} a _ {n} (z - a) ^ {n} = a _ {0} + a _ {1} (z - a) + a _ {2} (z - a) ^ {2} + \\dots ,\\tag{5.5}$$"
+    },
+    {
+      "name": "定理9（阿贝尔定理）",
+      "type": "theorem",
+      "formal": "定理 9（阿贝尔（Abel）定理） 1）如果幂级数(5.5)在某点 $z_0(\\neq a)$ 收敛，则它在圆： $\\mid z - a\\mid < \\mid z_0 - a\\mid$ 内绝对收敛. 2）在1)的条件下，幂级数(5.5)在任何闭圆 $|z - a|\\leqslant \\rho (\\rho < |z_0 - a|)$ 上一致收敛. 3）如果幂级数(5.5)在某点 $z_{1}$ 发散，则它在圆外域： $\\mid z - a\\mid >\\mid z_1 - a\\mid$ 内处处发散.",
+      "source_quote": "定理 9（阿贝尔（Abel）定理） 1）如果幂级数(5.5)在某点 $z_0(\\neq a)$ 收敛，则它在圆： $\\mid z - a\\mid < \\mid z_0 - a\\mid$ 内绝对收敛. 2）在1)的条件下，幂级数(5.5)在任何闭圆 $|z - a|\\leqslant \\rho (\\rho < |z_0 - a|)$ 上一致收敛. 3）如果幂级数(5.5)在某点 $z_{1}$ 发散，则它在圆外域： $\\mid z - a\\mid >\\mid z_1 - a\\mid$ 内处处发散."
+    },
+    {
+      "name": "定理10",
+      "type": "theorem",
+      "formal": "定理 10 设幂级数(5.6)的收敛半径为 R，则按照不同的情况有： 1) 如果 $0 < R < +\\infty$，则级数(5.5)在圆 $D: |z - a| < R$ 内绝对收敛；在圆外域：$|z - a| > R$ 内处处发散。 2）如果 $R = +\\infty$ ，则级数(5.5)在全平面内收敛. 3) 如果 R = 0，则级数(5.5)在复平面内除去 z = a 外处处发散.",
+      "source_quote": "定理 10 设幂级数(5.6)的收敛半径为 R，则按照不同的情况有： 1) 如果 $0 < R < +\\infty$，则级数(5.5)在圆 $D: |z - a| < R$ 内绝对收敛；在圆外域：$|z - a| > R$ 内处处发散。 2）如果 $R = +\\infty$ ，则级数(5.5)在全平面内收敛. 3) 如果 R = 0，则级数(5.5)在复平面内除去 z = a 外处处发散."
+    },
+    {
+      "name": "定理11",
+      "type": "theorem",
+      "formal": "定理 11 设复幂级数(5.5)的收敛半径为 R, R > 0, 则 1）和函数 $$f (z) = \\sum_ {n = 0} ^ {\\infty} a _ {n} (z - a) ^ {n}\\tag{5.7}$$ 是收敛圆 $|z - a| < R$ 的解析函数，并且可以逐项求导至任意阶.即对任意自然数$k$ ，有 $$\\begin{array}{r l} f ^ {(k)} (z) & = \\sum_ {n = k} ^ {\\infty} n (n - 1) \\dots (n - k + 1) a _ {n} (z - a) ^ {* - k} \\\\ & = \\sum_ {n = 0} ^ {\\infty} (n + k) (n + k - 1) \\dots (n + 1) a _ {n + k} (z - a) ^ {*}. \\end{array}\\tag{5.8}$$ 2)  $a_{k} = \\frac{f^{(k)}(a)}{k!}, k = 0, 1, 2, \\cdots.$",
+      "source_quote": "定理 11 设复幂级数(5.5)的收敛半径为 R, R > 0, 则 1）和函数 $$f (z) = \\sum_ {n = 0} ^ {\\infty} a _ {n} (z - a) ^ {n}\\tag{5.7}$$ 是收敛圆 $|z - a| < R$ 的解析函数，并且可以逐项求导至任意阶.即对任意自然数$k$ ，有 ... 2)  $a_{k} = \\frac{f^{(k)}(a)}{k!}, k = 0, 1, 2, \\cdots.$"
+    },
+    {
+      "name": "定理8",
+      "type": "theorem",
+      "formal": "5.1节中定理8：和函数 $f(z)$ 在圆 $|z - a| < \\rho$ 内解析，因而在点 $z_0$ 解析，并且可以逐项求导至任意阶.",
+      "source_quote": "故由5.1节中定理8.和函数 $f(z)$ 在圆 $|z - a| < \\rho$ 内解析，因而在点 $z_0$ 解析，并且可以逐项求导至任意阶."
+    },
+    {
+      "name": "收敛半径",
+      "type": "definition",
+      "formal": "基于定理10,我们把实幂级数(5.6)收敛半径称为复幂级数(5.5)的收敛半径.",
+      "source_quote": "基于定理10,我们把实幂级数(5.6)收敛半径称为复幂级数(5.5)的收敛半径."
+    },
+    {
+      "name": "收敛圆",
+      "type": "definition",
+      "formal": "当 $R\\neq0$ 时，把圆 $|z-a|<R$ 称为幂级数(5.5)的收敛圆.",
+      "source_quote": "当 $R\\neq0$ 时，把圆 $|z-a|<R$ 称为幂级数(5.5)的收敛圆."
+    },
+    {
+      "name": "达朗贝尔公式",
+      "type": "formula",
+      "formal": "如果 $\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r$，则复幂级数(5.5)的收敛半径 $R = 1/r$.",
+      "source_quote": "可按达朗贝尔(d'Alembert)公式或柯西公式计算：如果 $$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$ 则复幂级数(5.5)的收敛半径 R = 1/r."
+    },
+    {
+      "name": "柯西公式",
+      "type": "formula",
+      "formal": "如果 $\\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r$，则复幂级数(5.5)的收敛半径 $R = 1/r$.",
+      "source_quote": "可按达朗贝尔(d'Alembert)公式或柯西公式计算：如果 $$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$ 则复幂级数(5.5)的收敛半径 R = 1/r."
+    },
+    {
+      "name": "和函数",
+      "type": "definition",
+      "formal": "和函数 $$f (z) = \\sum_ {n = 0} ^ {\\infty} a _ {n} (z - a) ^ {n}\\tag{5.7}$$",
+      "source_quote": "和函数 $$f (z) = \\sum_ {n = 0} ^ {\\infty} a _ {n} (z - a) ^ {n}\\tag{5.7}$$ 是收敛圆 $|z - a| < R$ 的解析函数"
+    },
+    {
+      "name": "正项级数的比较判别法",
+      "type": "law",
+      "formal": "由正项级数的比较判别法，得知 $\\sum_{n=0}^{\\infty} |a_{n}(z-a)^{n}|$ 收敛，即级数(5.5)绝对收敛。",
+      "source_quote": "由正项级数的比较判别法，得知 $\\sum_{n=0}^{\\infty} |a_{n}(z-a)^{n}|$ 收敛，即级数(5.5)绝对收敛。"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 11,
+    "漏掉的具名结论": [
+      "定理10",
+      "定理11",
+      "定理8"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "而由定理",
+      "则由定理",
+      "基于定理",
+      "节中定理"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "幂级数",
+    "定理9（阿贝尔定理）",
+    "定理10",
+    "定理11",
+    "定理8",
+    "收敛半径",
+    "收敛圆",
+    "达朗贝尔公式",
+    "柯西公式",
+    "和函数",
+    "正项级数的比较判别法"
+  ]
+}

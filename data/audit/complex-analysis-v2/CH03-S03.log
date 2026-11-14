@@ -1,0 +1,54 @@
+—— CH03-S03 回路开始（run 2026-10-03 08:48:24）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 1, '确定性已知误报': 0, '教案硬问题': 3, '教案问题明细': ["CH03-S03: F-04 第 4 步的 `basis` 指不回任何东西（'C-R 方程（$H-F$ 解析时成立）'）—— 必须指回定义/定理/上一步/某个详解", 'CH03-S03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH03-S03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'], '教案提醒': 4, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 3 条 → **也建成工单**，由回路一起改（不再只是提醒）：["CH03-S03: F-04 第 4 步的 `basis` 指不回任何东西（'C-R 方程（$H-F$ 解析时成立）'）—— 必须指回定义/定理/上一步/某个详解", 'CH03-S03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [3] 条 → 并集 2 条工单
+    T-R10ae8 [P1] hits=3 「CH03-S03: F-04 第 4 步的 `basis` 指不回任何东」
+    T-4b0b3d [P1] hits=1 「由 3.2 节的例题 5（沿单位圆周逆时针绕一圈，$\oint\frac」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH03-S03 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH03-S03.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH03-S03 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH03-S03.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 2 条：['CH03-S03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH03-S03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 2 / 仍开着 1；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 1 条（丢了 2 条没引到原句的）
+  📌 发现 1 处**原文疑似有错** → 记进勘误清单（不改成品）
+  📌 原文疑似有错：这一节 1 条 → 原文疑似有错.json（共 17 条）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R2847b [P1]：（这一轮没给出判定）
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（1 条）：
+  [P1] T-R2847b 「CH03-S03: 有一张图没声明**服务什么** （缺 concept_id/」
+记录写到 data/audit/complex-analysis-v2/CH03-S03.loop.json
+—— CH03-S03 回路开始（run 2026-10-03 10:59:22）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 1, '确定性已知误报': 0, '教案硬问题': 2, '教案问题明细': ['CH03-S03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH03-S03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'], '教案提醒': 4, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 2 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH03-S03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH03-S03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  上一趟的 ['T-R2847b', 'T-R2847b'] 原句已不在成品里 → 视为已改，不再背
+  每次 [4] 条 → 并集 2 条工单
+    T-R2847b [P1] hits=2 「CH03-S03: 有一张图没声明**服务什么** （缺 concept」
+    T-083a3f [P1] hits=1 「记 $H(z)-F(z)=u+\mathrm{i}v$，其中 $u$、$」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH03-S03 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH03-S03.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH03-S03 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH03-S03.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 2 条：['CH03-S03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰', 'CH03-S03: 有一张图没声明**服务什么** （缺 concept_id/serves）—— 图必须服务内容，不许只当装饰'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 0 / 仍开着 2；新 P0 0 条
+  ⚠ 这一轮工单没有净减少（2 → 2）
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 2 条（丢了 1 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-R2847b [P1]：定理 4 证明中的图已写明服务对象，但多连通情形 $C_1$、$C_2$ 之后的第二张图仍只有孤零零一个「（插图）」，没有任何一句说明它服务
+   · 工单没关掉 T-083a3f [P1]：该法则已在用它对 $H-F$ 求导之前补出，并给出了沿实轴方向取极限的来源推导，C-R 的等价写法也在。（引用的句子在当前成品里找不到 → 
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（2 条）：
+  [P1] T-083a3f 「记 $H(z)-F(z)=u+\mathrm{i}v$，其中 $u$、$v$ 是」
+  [P1] T-R2847b 「CH03-S03: 有一张图没声明**服务什么** （缺 concept_id/」
+记录写到 data/audit/complex-analysis-v2/CH03-S03.loop.json

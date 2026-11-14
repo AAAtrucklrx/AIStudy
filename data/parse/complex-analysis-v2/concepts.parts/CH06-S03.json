@@ -1,0 +1,96 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH06-S03",
+    "text_sha256": "dc5b175d00ca2ced67f1c82037b64a9d207ff462b8bf65c4c5cde4675fa54c2f",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "dc5b175d00ca2ced67f1c82037b64a9d207ff462b8bf65c4c5cde4675fa54c2f",
+    "source": "original_text",
+    "source_path": "original_text/ch06_s03.md"
+  },
+  "unit": {
+    "unit_id": "CH06-S03",
+    "level": "section",
+    "chapter": "CH06",
+    "section": "CH06-S03",
+    "title": "辐角原理",
+    "anchor": "6.3"
+  },
+  "concepts": [
+    {
+      "name": "定理3",
+      "type": "theorem",
+      "formal": "设 $a, b$ 分别是函数 $f(z)$ 的 $m$ 级零点和 $n$ 级极点，则 $a, b$ 都是 $\\frac{f'(z)}{f(z)}$ 的一级极点，且 $$\\operatorname{Res} \\left[ \\frac {f ^ {\\prime} (z)}{f (z)}, a \\right] = m, \\quad \\operatorname{Res} \\left[ \\frac {f ^ {\\prime} (z)}{f (z)}, b \\right] = - n.$$",
+      "source_quote": "定理3 设 $a, b$ 分别是函数 $f(z)$ 的 $m$ 级零点和 $n$ 级极点，则 $a, b$ 都是 $\\frac{f'(z)}{f(z)}$ 的一级极点，且 $$\\operatorname{Res} \\left[ \\frac {f ^ {\\prime} (z)}{f (z)}, a \\right] = m, \\quad \\operatorname{Res} \\left[ \\frac {f ^ {\\prime} (z)}{f (z)}, b \\right] = - n.$$"
+    },
+    {
+      "name": "定理4",
+      "type": "theorem",
+      "formal": "设 $f(z)$ 在闭路 $C$ 的内部可能有有限多个极点，除去这些极点外，$f(z)$ 在 $C$ 及其内部解析，且在 $C$ 上无零点，则 $$\\frac {1}{2 \\pi \\mathrm{i}} \\int_ {c} \\frac {f ^ {\\prime} (z)}{f (z)} \\mathrm{d} z = N - P.$$ 这里， $N$ 及 $P$ 分别表示 $f(z)$ 在 $C$ 的内部的零点和极点的总数（约定每个 $k$ 级零点或极点算 $k$ 个零点或极点）.",
+      "source_quote": "定理4 设 $f(z)$ 在闭路 $C$ 的内部可能有有限多个极点，除去这些极点外，$f(z)$ 在 $C$ 及其内部解析，且在 $C$ 上无零点，则 $$\\frac {1}{2 \\pi \\mathrm{i}} \\int_ {c} \\frac {f ^ {\\prime} (z)}{f (z)} \\mathrm{d} z = N - P.$$ 这里， $N$ 及 $P$ 分别表示 $f(z)$ 在 $C$ 的内部的零点和极点的总数（约定每个 $k$ 级零点或极点算 $k$ 个零点或极点）."
+    },
+    {
+      "name": "辐角原理",
+      "type": "law",
+      "formal": "在定理4的条件下，有 $$N - P = \\frac {1}{2 \\pi} \\Delta_ {C} \\arg f (z).$$",
+      "source_quote": "定理5（辐角原理）在定理4的条件下，有 $$N - P = \\frac {1}{2 \\pi} \\Delta_ {C} \\arg f (z).$$"
+    },
+    {
+      "name": "儒歇定理",
+      "type": "theorem",
+      "formal": "设函数 $f(z)$ 及 $\\varphi (z)$ 在闭路 $C$ 及其内部解析，且在 $C$ 上有不等式 $$\\mid f (z) \\mid > \\mid \\varphi (z) \\mid .$$ 则在 $C$ 的内部 $f(z) + \\varphi (z)$ 和 $f(z)$ 的零点个数相等.",
+      "source_quote": "定理6（儒歇(Rouché)定理）设函数 $f(z)$ 及 $\\varphi (z)$ 在闭路 $C$ 及其内部解析，且在 $C$ 上有不等式 $$\\mid f (z) \\mid > \\mid \\varphi (z) \\mid .$$ 则在 $C$ 的内部 $f(z) + \\varphi (z)$ 和 $f(z)$ 的零点个数相等."
+    },
+    {
+      "name": "定理7",
+      "type": "theorem",
+      "formal": "设多项式 $$P (z) = z ^ {n} + a _ {1} z ^ {n - 1} + \\dots + a _ {n - 1} z + a _ {n}$$ 在虚轴上无零点，如果当点 $z$ 自下而上沿虚轴从 $-\\infty$ 点走向 $+\\infty$ 点的过程中 $P(z)$ 绕原点转了 $k$ 圈，即 $$\\underset {y (- \\infty , + \\infty)} {\\Delta \\arg P (i y)} = 2 k \\pi ,$$ 则 $P(z)$ 在左半平面共有 $(n + 2k) / 2$ 个零点.",
+      "source_quote": "定理7 设多项式 $$P (z) = z ^ {n} + a _ {1} z ^ {n - 1} + \\dots + a _ {n - 1} z + a _ {n}$$ 在虚轴上无零点，如果当点 $z$ 自下而上沿虚轴从 $-\\infty$ 点走向 $+\\infty$ 点的过程中 $P(z)$ 绕原点转了 $k$ 圈，即 $$\\underset {y (- \\infty , + \\infty)} {\\Delta \\arg P (i y)} = 2 k \\pi ,$$ 则 $P(z)$ 在左半平面共有 $(n + 2k) / 2$ 个零点."
+    },
+    {
+      "name": "留数定理",
+      "type": "theorem",
+      "formal": "由留数定理得",
+      "source_quote": "于是，由留数定理得"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 7,
+    "漏掉的具名结论": [
+      "定理3",
+      "定理4",
+      "定理7"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "下面讨论定理",
+      "综合上述讨论及定理"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "定理3",
+    "定理4",
+    "辐角原理",
+    "儒歇定理",
+    "定理7",
+    "留数定理",
+    "$\theoremstyle$ 辐角原理的几何意义公式"
+  ]
+}

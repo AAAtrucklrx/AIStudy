@@ -1,0 +1,63 @@
+—— CH06-S02 回路开始（run 2026-10-03 08:32:12）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 1, '教案问题明细': ['CH06-S02: 《闭曲线的积分 = 内部留数之和 × 2πi》(F-01) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃'], '教案提醒': 0, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 1 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH06-S02: 《闭曲线的积分 = 内部留数之和 × 2πi》(F-01) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  每次 [3] 条 → 并集 3 条工单
+    T-3cf26b [P1] hits=1 「设 $f(z)$ 在简单闭曲线 $C$ 上以及 $C$ 的内部，除了有限」
+    T-Rfdaa3 [P1] hits=1 「CH06-S02: 《闭曲线的积分 = 内部留数之和 × 2πi》(F-」
+    T-e01264 [P1] hits=1 「拿它算积分，动作只有三步。第一步，找出闭曲线内部有哪些孤立奇点；第二步，」
+[轮 1] 按 3 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06-S02 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH06-S02.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06-S02 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH06-S02.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 1 条：['CH06-S02: 《闭曲线的积分 = 内部留数之和 × 2πi》(F-01) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃'] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 3 / 仍开着 0；新 P0 0 条
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 2 条
+  ⛔ 验收发现 P0：「曲线选对了，原积分恰好等于 $\oint_C f(z)\,\mathrm{d}z」→ 读者会忽略辅助曲线上的积分贡献，直接把原积分与围道积分画等号；若辅助曲线积分不为 0 或不可忽略，结果会差一项或完全错误
+  ↻ 验收 P0 当趟补一次最小改动改写（1 条）…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06-S02 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH06-S02.acceptance.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-1d8fc1 [P0]：（这一轮没给出判定）
+
+结论：未通过（验收发现：回路说通过，但重新独立复核又抓到 P0）
+backlog（1 条）：
+  [P0] T-1d8fc1 「曲线选对了，原积分恰好等于 $\oint_C f(z)\,\mathrm{d}z」
+记录写到 data/audit/complex-analysis-v2/CH06-S02.loop.json
+—— CH06-S02 回路开始（run 2026-10-03 10:41:39）——
+[闸门 1 · 确定性规则（0 token）] {'确定性疑似真问题': 0, '确定性已知误报': 0, '教案硬问题': 1, '教案问题明细': ['CH06-S02: 《闭曲线的积分 = 内部留数之和 × 2πi》(F-01) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃'], '教案提醒': 1, 'audit_error': ''}
+  ⚠ 教案自己的硬问题 1 条 → **也建成工单**，由回路一起改（不再只是提醒）：['CH06-S02: 《闭曲线的积分 = 内部留数之和 × 2πi》(F-01) 属于**必须配图**的内容（涉及曲线/图形/过程/关系），却没有图 —— 这一级不许用 no_figure_reason 逃']
+[闸门 2 · 发现] 跑 1 次复核取并集…
+  上一趟的 ['T-1d8fc1', 'T-1d8fc1'] 原句已不在成品里 → 视为已改，不再背
+  每次 [5] 条 → 并集 2 条工单
+    T-Rfdaa3 [P1] hits=1 「CH06-S02: 《闭曲线的积分 = 内部留数之和 × 2πi》(F-」
+    T-af5c4f [P1] hits=1 「做法是：把实被积函数换成它的复解析延拓 $f(z)$。它在实轴上的取值，」
+[轮 1] 按 2 条工单**最小改动**重写…
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06-S02 --force --quiet --rewrite-mode patch --feedback-file data/audit/complex-analysis-v2/CH06-S02.feedback.json --temperature 0.0 --seed 42
+    ✗ 命令失败：      ] /     } /   ] / }
+  · 补丁**一处都没落地**（引文在成品里找不到） → 改用**整篇重写**（把工单当要求喂给 full 模式）
+    $ blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH06-S02 --force --quiet --rewrite-mode full --feedback-file data/audit/complex-analysis-v2/CH06-S02.feedback.json --temperature 0.0 --seed 42
+  ⚠ 这一轮改完，教案自己的硬问题 5 条：["CH06-S02: 这些详解写了却没人引用（孤立详解）：['F-03', 'F-04']", "CH06-S02: F-03 第 1 步的 `basis` 指不回任何东西（'题目给定的对象。'）—— 必须指回定义/定理/上一步/某个详解"] → 一并进工单
+  替换清单 0 条 → 应用 0 处、拒绝 0 处
+  关工单：closed 1 / 仍开着 5；新 P0 0 条
+  ⚠ 这一轮工单没有净减少（2 → 5）
+[验收] 在最终版上再跑 1 次独立发现（只认 P0）…
+  [换一种查法] 推了一遍，报 1 条（丢了 2 条没引到原句的）
+── 卡在哪（这一趟）──────────────────────────────
+   · 工单没关掉 T-Rfdaa3 [P1]：定理式后已紧接一张过程图（「留数定理是怎么来的」）并配有「沿闭曲线的积分 = 留数之和乘 2πi」的图注，不再是 no_figure_rea
+   · 工单没关掉 T-Rf5255 [P1]：（这一轮没给出判定）
+   · 工单没关掉 T-Rfeb03 [P1]：（这一轮没给出判定）
+   · 工单没关掉 T-Rd41b3 [P1]：（这一轮没给出判定）
+   · 工单没关掉 T-Rfb7f2 [P1]：（这一轮没给出判定）
+
+结论：冻结（跑满轮数上限，剩余工单进 backlog）
+backlog（5 条）：
+  [P1] T-Rd41b3 「CH06-S02: F-04 第 2 步的 `basis` 指不回任何东西（'洛」
+  [P1] T-Rf5255 「CH06-S02: 这些详解写了却没人引用（孤立详解）：['F-03', 'F-」
+  [P1] T-Rfb7f2 「CH06-S02: F-04 第 4 步的 `basis` 指不回任何东西（'留」
+  [P1] T-Rfdaa3 「CH06-S02: 《闭曲线的积分 = 内部留数之和 × 2πi》(F-01) 」
+  [P1] T-Rfeb03 「CH06-S02: F-03 第 1 步的 `basis` 指不回任何东西（'题」
+记录写到 data/audit/complex-analysis-v2/CH06-S02.loop.json

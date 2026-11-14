@@ -1,0 +1,4754 @@
+[第 1 页]
+线性代数(I)
+[第 2 页]
+[第 3 页]
+[第 4 页]
+[第 5 页]
+[第 6 页]
+[第 7 页]
+第一章 向量
+向量是力学与物理等领域中诸多概念的数学抽象,例如力、速度、加速度、动量等等.向量具有很强的几何直观,同时也可以进行代数运算.利用向量可以很简洁地表示数学与物理中的结构,在力学、物理和工程技术领域有着广泛的应用.此外,向量是解析几何的重要工具,也是我们学习抽象线性空间理论的基础.
+中学教材中介绍了平面向量和空间向量的加法、数乘、内积等运算,以及向量法在求解平面几何和空间几何问题中的应用.为保证本教材的自完备性,我们还是从向量的定义出发,完整地介绍向量的各种运算规则,并着重强调它与后续章节(特别是第五章)的关系.
+本章前五节我们讨论的向量均为三维空间中的向量.
+§1.1 向量的线性运算
+§1.1.1 向量及其表示
+向量的概念来源于物理学. 很多物理量不仅有大小, 而且有方向, 例如速度、位移、力等等. 抛开它们的物理意义, 只保留大小与方向两个要素, 就抽象为数学中的向量概念: 既有大小, 又有方向的量称为向量.
+一般用有向线段表示一个向量, 线段的长度表示它的大小, 线段的方向表示它的方向. 以空间中 A 为起点, B 为终点的有向线段所表示的向量记为  $\overrightarrow{AB}$ . 常用黑斜体小写字母 a, b, c 等表示向量. 如果两个向量大小相等、方向相同, 就称这两个向量是相等的.
+如果两个向量的大小相等而方向相反, 则称这两个向量互为反向量. 向量 a 的反向量记为 -a, 也称为 a 的负向量.
+向量的长度也称为向量的模, 向量 a 的模用  $|a|$  表示. 模为 1 的向量称为单位向量, 模为零的向量称为零向量, 记作 0. 零向量的起点和终点是重合的, 因此它没有确定的方向.
+如果向量 a 与向量 b 的方向相同或相反, 就称它们平行, 记作 a//b. 如果向量 a 与向量 b 的方向互相垂直, 就称它们垂直或正交, 记作 a⊥b. 规定零向量与任何向量都平行且正交.
+向量  $\overrightarrow{OA}$  与  $\overrightarrow{OB}$  所夹的角  $\angle AOB$  称为它们之间的夹角. 向量夹角介于 0 与  $\pi$  之间. 向量  $\overrightarrow{OA}$  与  $\overrightarrow{OB}$  平行当且仅当它们之间的夹角为 0 或  $\pi$ , 而向量  $\overrightarrow{OA}$  与  $\overrightarrow{OB}$  垂直当且仅当它们之间夹角为  $\pi/2$ .
+[第 8 页]
+§1.1.2 向量的线性运算
+将物理中速度、力的合成法加以抽象, 就得到向量加法的定义. 给定具有相同起点 O 的两个向量  $a = \overrightarrow{OA}, b = \overrightarrow{OB}$ , 则以  $\overrightarrow{OA}, \overrightarrow{OB}$  为邻边的平行四边形的对角线向量  $c = \overrightarrow{OC}$  (图 1.1) 就称为这两个向量的和, 记作
+$$\overrightarrow {O C} = \overrightarrow {O A} + \overrightarrow {O B} \quad \text {或者} \quad \mathbf {c} = \mathbf {a} + \mathbf {b}.$$
+这种求和的方法称为平行四边形法则.
+图 1.1 向量的加法
+从图 1.1 可知,  $\overrightarrow{OB} = \overrightarrow{AC}$ , 所以  $\overrightarrow{OC} = \overrightarrow{OA} + \overrightarrow{AC}$ , 这称为两个向量的和的三角形法则. 由定义不难看出向量的加法满足以下的性质:
+$$\mathbf {a} + \mathbf {b} = \mathbf {b} + \mathbf {a}\tag{1.1}$$
+$$\mathbf {a} + (\mathbf {b} + \mathbf {c}) = (\mathbf {a} + \mathbf {b}) + \mathbf {c}\tag{1.2}$$
+$$\mathbf {a} + \mathbf {0} = \mathbf {a}\tag{1.3}$$
+$$\mathbf {a} + (- \mathbf {a}) = \mathbf {0}\tag{1.4}$$
+向量的减法为向量加法的逆运算. 对于向量 a, b, 定义向量减法  $a - b = a + (-b)$ .
+定义向量 a 与实数  $\lambda$  的乘积为一个向量, 记为  $\lambda a$ , 它的模为  $|\lambda||a|$ , 它的方向规定为: 当  $\lambda > 0$  时, 与 a 同向; 当  $\lambda < 0$  时, 与 a 反向. 这种运算称为向量的数乘. 由数乘的定义可知 0a = 0, 并且对任意实数  $\lambda, \mu$ , 都有
+$$1 \mathbf {a} = \mathbf {a}\tag{1.5}$$
+$$\lambda (\mu \mathbf {a}) = (\lambda \mu) \mathbf {a}\tag{1.6}$$
+$$(\lambda + \mu) \mathbf {a} = \lambda \mathbf {a} + \mu \mathbf {a}\tag{1.7}$$
+$$\lambda (\mathbf {a} + \mathbf {b}) = \lambda \mathbf {a} + \lambda \mathbf {b}\tag{1.8}$$
+[第 9 页]
+对于非零向量 a, 用  $a^{0}$  表示与 a 同向的单位向量, 则由向量数乘的定义知
+$$\mathbf {a} ^ {0} = \frac {\mathbf {a}}{| \mathbf {a} |}.$$
+向量的加法与数乘运算统称为向量的线性运算. 线性运算并非三维向量所特有. 事实上, 在很多非空集合中都可以定义所谓的加法与数乘运算, 并且满足相应于 (1.1)-(1.8) 的 8 条性质. 我们将这样的集合(附带加法与数乘运算)称为线性空间或向量空间, 线性空间中的元素称为(抽象的)向量. 具体内容详见第五章.
+§1.1.3 向量的共线与共面
+一组向量称为是共线的, 如果它们都平行于某条直线. 一组向量称为是共面的, 如果它们都平行于某个平面.
+命题1.1.1. 向量 $a, b$ 共线的充分必要条件是存在不全为零的实数 $\lambda, \mu$, 使得
+$$\lambda \boldsymbol {a} + \mu \boldsymbol {b} = \boldsymbol {0}.$$
+证明. 必要性: 设向量 a, b 共线, 不妨设 a 不是零向量. 若向量 b 与向量 a 同向, 则  $b = \frac{|b|}{|a|}a$ , 因此  $\frac{|b|}{|a|}a + (-1)b = 0$ . 若向量 b 与向量 a 反向, 则  $b = -\frac{|b|}{|a|}a$ , 因此  $\frac{|b|}{|a|}a + 1 \cdot b = 0$ .
+充分性: 设 $\lambda, \mu$ 为不全为零的实数且 $\lambda \mathbf{a} + \mu \mathbf{b} = \mathbf{0}$. 不妨设 $\mu \neq 0$, 则 $\mathbf{b} = -\frac{\lambda}{\mu} \mathbf{a}$, 因此 $\mathbf{a}, \mathbf{b}$ 共线.
+命题1.1.2. 向量 a, b, c 共面的充分必要条件是存在不全为零的实数  $\lambda, \mu, v$ ，使得
+$$\lambda \boldsymbol {a} + \mu \boldsymbol {b} + v \boldsymbol {c} = \boldsymbol {0}.$$
+证明. 必要性: 若 a, b, c 中有两个向量, 例如 a, b 共线, 则存在不全为零的实数  $\lambda, \mu$ , 使得  $\lambda a + \mu b = 0$ . 从而  $\lambda a + \mu b + 0 \cdot c = 0$ , 其中  $\lambda, \mu, 0$  不全为零.
+设 a,b,c 中任意两个向量都不共线. 取定一点 O, 作  $\overrightarrow{OA} = a, \overrightarrow{OB} = b, \overrightarrow{OC} = c$ . 过 C 点作 OB 的平行线交直线 OA 于点 D(图 1.2), 则存在实数  $\lambda, \mu$ , 使得  $\overrightarrow{OC} = \overrightarrow{OD} + \overrightarrow{DC} = \lambda \overrightarrow{OA} + \mu \overrightarrow{OB}$ . 移项后得  $\lambda a + \mu b + (-1)c = 0$ , 其中  $\lambda, \mu, -1$  不全为零.
+充分性:设存在不全为零的实数  $\lambda, \mu, v$ ，使得  $\lambda a + \mu b + v c = 0$ 。不妨设  $v \neq 0$ ，于是  $c = -\frac{\lambda}{v} a - \frac{\mu}{v} b$ 。因此 c 是以  $-\frac{\lambda}{v} a, -\frac{\mu}{v} b$  为边的平行四边形的对角线，从而 a, b, c 共面。
+定义1.1.1. 设  $a_{1}, a_{2}, \cdots, a_{n}$  为一组向量,  $\lambda_{1}, \lambda_{2}, \cdots, \lambda_{n}$  为实数. 称向量
+$$\mathbf {a} = \lambda_ {1} \mathbf {a} _ {1} + \lambda_ {2} \mathbf {a} _ {2} + \dots + \lambda_ {n} \mathbf {a} _ {n}$$
+[第 10 页]
+图 1.2 三向量共面条件
+为向量  $a_{1}, a_{2}, \cdots, a_{n}$  的线性组合.
+利用这个定义, 命题 1.1.1 和命题 1.1.2 也有如下的表述方式: 两个向量共线当且仅当某一个向量为另一个向量的线性组合(倍数); 三个向量共面当且仅当某一个向量为另外两个向量的线性组合.
+定义1.1.2. 一组向量  $a_{1}, a_{2}, \cdots, a_{n}$  称为线性相关，如果存在不全为零的实数  $\lambda_{1}, \lambda_{2}, \cdots, \lambda_{n}$ ，使得
+$$\lambda_ {1} \mathbf {a} _ {1} + \lambda_ {2} \mathbf {a} _ {2} + \dots + \lambda_ {n} \mathbf {a} _ {n} = \mathbf {0}.$$
+反之, 不是线性相关的一组向量称为线性无关. 也就是, 如果上式成立, 则 $\lambda_{1} = \lambda_{2} = \ldots = \lambda_{n} = 0$.
+利用命题 1.1.1 与命题 1.1.2 可以得到
+- 一个向量 $\mathbf{a}$ 线性相关当且仅当 $\mathbf{a} = \mathbf{0}$;
+- 两个向量线性相关当且仅当它们共线；
+- 三个向量线性相关当且仅当它们共面.
+类似可以得到线性无关的等价条件. 线性相关与线性无关是线性代数中最基本的概念之一, 在第五章中我们会作进一步的讨论.
+例1.1.1. 对任意向量a,b,c, 证明向量  $a + b + c$ ,  $a - b - c$ ,  $a + 2b + 2c$  线性相关.
+证明. 我们只要证明, 存在不全为零的实数解  $\lambda, \mu, v$  使得
+$$\lambda (\mathbf {a} + \mathbf {b} + \mathbf {c}) + \mu (\mathbf {a} - \mathbf {b} - \mathbf {c}) + v (\mathbf {a} + 2 \mathbf {b} + 2 \mathbf {c}) = \mathbf {0}.$$
+化简上式得
+$$(\lambda + \mu + \nu) \mathbf {a} + (\lambda - \mu + 2 \nu) \mathbf {b} + (\lambda - \mu + 2 \nu) \mathbf {c} = \mathbf {0}.$$
+[第 11 页]
+所以只要证明方程组
+$$\left\{ \begin{array}{l} \lambda + \mu + v = 0 \\ \lambda - \mu + 2 v = 0 \end{array} \right.$$
+有不全为零的解. 易见 $\lambda = -3, \mu = 1, \nu = 2$ 为一组非零解, 因此三个向量线性相关. □
+例1.1.2. 证明:空间中任意三点 A, B, C 共线的充分必要条件是, 存在不全为零的实数  $k_{1}, k_{2}, k_{3}$  使得对任意点 O 都有
+$$k _ {1} \overrightarrow {O A} + k _ {2} \overrightarrow {O B} + k _ {3} \overrightarrow {O C} = \mathbf {0}, \quad \text {且} \quad k _ {1} + k _ {2} + k _ {3} = 0.$$
+证明. 必要性: 设 A, B, C 三点共线, 则向量  $\overrightarrow{AB}$  与向量  $\overrightarrow{AC}$  共线. 因此存在不全为零的实数  $\lambda, \mu$ , 使得  $\lambda \overrightarrow{AB} + \mu \overrightarrow{AC} = 0$ , 即
+$$\lambda (\overrightarrow {O B} - \overrightarrow {O A}) + \mu (\overrightarrow {O C} - \overrightarrow {O A}) = \mathbf {0}.$$
+化简得 $(- \lambda - \mu) \overrightarrow{OA} + \lambda \overrightarrow{OB} + \mu \overrightarrow{OC} = 0$. 取 $k_{1} = -\lambda - \mu, k_{2} = \lambda, k_{3} = \mu$, 则
+$$k _ {1} \overrightarrow {O A} + k _ {2} \overrightarrow {O B} + k _ {3} \overrightarrow {O C} = \mathbf {0}, \quad \text {且} \quad k _ {1} + k _ {2} + k _ {3} = 0.$$
+充分性:设存在不全为零的  $k_{1}, k_{2}, k_{3}$  满足条件, 不妨设  $k_{1} \neq 0$ . 则  $k_{3} = -k_{1} - k_{2}$ , 且  $k_{1}\overrightarrow{OA} + k_{2}\overrightarrow{OB} + (-k_{1} - k_{2})\overrightarrow{OC} = 0$ . 所以
+$$k _ {1} (\overrightarrow {O A} - \overrightarrow {O C}) + k _ {2} (\overrightarrow {O B} - \overrightarrow {O C}) = \mathbf {0},$$
+即  $k_{1}\overrightarrow{CA} + k_{2}\overrightarrow{CB} = 0$ . 由于  $k_{1}, k_{2}$  不全为零, 向量  $\overrightarrow{CA}$  与  $\overrightarrow{CB}$  共线, 即 A, B, C 三点共线.
+利用向量运算可以解决许多几何问题, 其思想是将几何性质转化为向量的代数运算.
+例1.1.3. $\triangle ABC$ 中, $D, E$ 分别是边 $BC, AC$ 的中点, $AD, BE$ 相交于点 $G$ (图 1.3). 证明: $AG = \frac{2}{3} AD$.
+证明. 设 $\overrightarrow{AG} = x\overrightarrow{AD}$, 由于 $D$ 为 $BC$ 的中点, $\overrightarrow{AD} = \frac{1}{2} (\overrightarrow{AB} + \overrightarrow{AC})$. 所以
+$$\overrightarrow {A G} = \frac {x}{2} (\overrightarrow {A B} + \overrightarrow {A C}).$$
+由于 B, G, E 共线, 根据例 1.1.2, 可设  $\overrightarrow{AG} = y\overrightarrow{AB} + (1 - y)\overrightarrow{AE}$ . 由于 E 为 AC 的中点, 所以
+$$\overrightarrow {A G} = y \overrightarrow {A B} + \frac {(1 - y)}{2} \overrightarrow {A C}.$$
+[第 12 页]
+图1.3
+因此
+$$(\frac {x}{2} - y) \overrightarrow {A B} + (\frac {x}{2} - \frac {1 - y}{2}) \overrightarrow {A C} = \mathbf {0}.$$
+由于 $\overrightarrow{AB},\overrightarrow{AC}$ 不共线，由命题1.1.1得
+$$\left\{ \begin{array}{l} \frac {x}{2} - y = 0 \\ \frac {x}{2} - \frac {1 - y}{2} = 0 \end{array} \right.$$
+解得  $x=\frac{2}{3}$ ，因此  $AG=\frac{2}{3}AD$ .
+§1.2 坐标系
+§1.2.1 仿射坐标系
+在中学我们学习了直角坐标系. 在直角坐标系中, 三个坐标轴两两垂直. 本节我们将坐标系推广到坐标轴不相互垂直的情形. 我们先陈述向量的基本定理.
+定理1.2.1. 设 $e_1, e_2, e_3$ 为空间中三个不共面的向量, 则对每个向量 $a$ 都存在唯一的三元有序实数组 $(x_1, x_2, x_3)$, 使得
+$$\boldsymbol {a} = x _ {1} \boldsymbol {e} _ {1} + x _ {2} \boldsymbol {e} _ {2} + x _ {3} \boldsymbol {e} _ {3}.\tag{1.9}$$
+证明. 在空间中任取一点 O, 作向量  $\overrightarrow{OA} = e_{1}, \overrightarrow{OB} = e_{2}, \overrightarrow{OC} = e_{3}, \overrightarrow{OP} = a$  (图 1.4).
+过 $P$ 点作直线 $OC$ 的平行线, 交 $AOB$ 平面于 $Q$ 点. 再过 $Q$ 点作直线 $OB$ 的平行线, 交 $OA$ 直线于 $R$ 点. 则 $\mathbf{a} = \overrightarrow{OP} = \overrightarrow{OR} + \overrightarrow{RQ} + \overrightarrow{QP}$. 由于 $\overrightarrow{OR} // \overrightarrow{OA}, \overrightarrow{RQ} // \overrightarrow{OB}, \overrightarrow{QP} // \overrightarrow{OC}$, 利用命题1.1.1知, 存在实数 $x_1, x_2, x_3$ 使得
+$$\overrightarrow {O R} = x _ {1} \mathbf {e} _ {1}, \quad \overrightarrow {R Q} = x _ {2} \mathbf {e} _ {2}, \quad \overrightarrow {Q P} = x _ {3} \mathbf {e} _ {3}.$$
+因此  $a = x_{1}e_{1} + x_{2}e_{2} + x_{3}e_{3}.$
+[第 13 页]
+图 1.4 向量基本定理
+下面证明唯一性. 如果向量 a 有两种表示方式:
+$$\mathbf {a} = x _ {1} \mathbf {e} _ {1} + x _ {2} \mathbf {e} _ {2} + x _ {3} \mathbf {e} _ {3} = y _ {1} \mathbf {e} _ {1} + y _ {2} \mathbf {e} _ {2} + y _ {3} \mathbf {e} _ {3},$$
+则有
+$$(x _ {1} - y _ {1}) \mathbf {e} _ {1} + (x _ {2} - y _ {2}) \mathbf {e} _ {2} + (x _ {3} - y _ {3}) \mathbf {e} _ {3} = \mathbf {0}.$$
+由于向量  $e_{1}, e_{2}, e_{3}$  不共面, 由命题 1.1.2 知  $x_{1} = y_{1}, x_{2} = y_{2}, x_{3} = y_{3}$ , 因此表示方式是唯一的. ☐
+定义1.2.1. 空间中任意三个有序的不共面的向量 $\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3$ 称为空间的一组基. 对于向量 $\mathbf{a}$, 若
+$$\mathbf {a} = x _ {1} \mathbf {e} _ {1} + x _ {2} \mathbf {e} _ {2} + x _ {3} \mathbf {e} _ {3},$$
+则称 $(x_{1},x_{2},x_{3})$ 为向量a在基 $e_{1},e_{2},e_{3}$ 下的仿射坐标或简称坐标.
+定义1.2.2. 空间中任意一点 O 和一组基  $e_{1}, e_{2}, e_{3}$  合在一起称为空间的一个仿射坐标系, 记为  $[O; e_{1}, e_{2}, e_{3}]$ . 点 O 称为坐标原点,  $e_{1}, e_{2}, e_{3}$  称为坐标向量.  $e_{1}, e_{2}, e_{3}$  所在直线分别称为 x 轴, y 轴和 z 轴, 统称为坐标轴. 三个坐标轴的任意两个决定了一个平面, 称为坐标面, 分别记为 Oxy, Oyz, Ozx.
+给定仿射坐标系 $[O; \mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3]$, 对空间中一点 $P$, 向量 $\overrightarrow{OP}$ 在基 $\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3$ 下的坐标称为点 $P$ 在仿射坐标系 $[O; \mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3]$ 下的坐标. 因此点 $P$ 在 $[O; \mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3]$ 下的坐标为 $(x_1, x_2, x_3)$ 当且仅当 $\overrightarrow{OP} = x_1 \mathbf{e}_1 + x_2 \mathbf{e}_2 + x_3 \mathbf{e}_3$.
+从上面的讨论知,在引入仿射坐标系后,在下列三者间存在一一对应的关系:
+空间中的点 $P \longleftrightarrow$ 向量 $\overrightarrow{OP} \longleftrightarrow$ 坐标 $(x_{1}, x_{2}, x_{3})$
+例1.2.1. 设  $e_{1}, e_{2}, e_{3}$  为一组基,
+(1) 证明:  $a = e_{1} + e_{2} + e_{3}, b = e_{1} - e_{2} + e_{3}, c = e_{1} + e_{2} - e_{3}$  也是一组基;
+[第 14 页]
+(2) 求向量  $d = a + 2b - 3c$  在基  $e_{1}, e_{2}, e_{3}$  下的坐标.
+解. (1) 为证明 $\mathbf{a}, \mathbf{b}, \mathbf{c}$ 为一组基, 只需证明 $\mathbf{a}, \mathbf{b}, \mathbf{c}$ 不共面. 为此设实数 $\lambda, \mu, \nu$ 满足 $\lambda \mathbf{a} + \mu \mathbf{b} + \nu \mathbf{c} = \mathbf{0}$, 即
+$$\lambda \left(\mathbf {e} _ {1} + \mathbf {e} _ {2} + \mathbf {e} _ {3}\right) + \mu \left(\mathbf {e} _ {1} - \mathbf {e} _ {2} + \mathbf {e} _ {3}\right) + \nu \left(\mathbf {e} _ {1} + \mathbf {e} _ {2} - \mathbf {e} _ {3}\right) = \mathbf {0}.$$
+化简得
+$$(\lambda + \mu + \nu) \mathbf {e} _ {1} + (\lambda - \mu + \nu) \mathbf {e} _ {2} + (\lambda + \mu - \nu) \mathbf {e} _ {3} = \mathbf {0}.$$
+由于  $e_{1}, e_{2}, e_{3}$  不共面, 我们得到下面的方程组
+$$\left\{ \begin{array}{l} \lambda + \mu + v = 0 \\ \lambda - \mu + v = 0 \\ \lambda + \mu - v = 0 \end{array} \right.$$
+不难解得  $\lambda = \mu = v = 0$ , 因此 a, b, c 不共面.
+(2) 由于
+$$\begin{array}{r l} \mathbf {d} & = \mathbf {a} + 2 \mathbf {b} - 3 \mathbf {c} \\ & = (\mathbf {e} _ {1} + \mathbf {e} _ {2} + \mathbf {e} _ {3}) + 2 (\mathbf {e} _ {1} - \mathbf {e} _ {2} + \mathbf {e} _ {3}) - 3 (\mathbf {e} _ {1} + \mathbf {e} _ {2} - \mathbf {e} _ {3}) \\ & = - 4 \mathbf {e} _ {2} + 6 \mathbf {e} _ {3} \end{array}$$
+所以向量 d 在基  $e_{1}, e_{2}, e_{3}$  下的坐标为  $(0, -4, 6)$ .
+一个仿射坐标系的三个坐标面将空间分成八个部分, 称为八个卦限. 其中每个卦限内点的坐标的正负号规定为:
+$$\begin{array}{l l l l} \mathrm{I} (+, +, +), & \mathrm{II} (-, +, +), & \mathrm{III} (-, -, +), & \mathrm{IV} (+, -, +) \\ \mathrm{V} (+, +, -), & \mathrm{VI} (-, +, -), & \mathrm{VII} (-, -, -), & \mathrm{VIII} (+, -, -) \end{array}$$
+一组基  $e_{1}, e_{2}, e_{3}$  在空间中的位置关系有两种情形, 如图 1.5. 称图 1.5(a) 所示的坐标系为右手仿射坐标系, 图 1.5(b) 所示的为左手仿射坐标系.
+§1.2.2 向量的坐标运算
+设在空间中取定了一个仿射坐标系  $[O; e_{1}, e_{2}, e_{3}]$ . 由于向量与其坐标之间存在一一对应的关系, 向量的运算可以转化为其坐标间的运算.
+[第 15 页]
+§1.2 坐标系
+图1.5
+设  $\mathbf{a}=(x_{1},x_{2},x_{3}),\mathbf{b}=(y_{1},y_{2},y_{3}),\lambda$  为一个实数, 则
+$$\begin{array}{r l} \mathbf {a} + \mathbf {b} & = (x _ {1} \mathbf {e} _ {1} + x _ {2} \mathbf {e} _ {2} + x _ {3} \mathbf {e} _ {3}) + (y _ {1} \mathbf {e} _ {1} + y _ {2} \mathbf {e} _ {2} + y _ {3} \mathbf {e} _ {3}) \\ & = (x _ {1} + y _ {1}) \mathbf {e} _ {1} + (x _ {2} + y _ {2}) \mathbf {e} _ {2} + (x _ {3} + y _ {3}) \mathbf {e} _ {3}, \\ \lambda \mathbf {a} & = \lambda (x _ {1} \mathbf {e} _ {1} + x _ {2} \mathbf {e} _ {2} + x _ {3} \mathbf {e} _ {3}) = \lambda x _ {1} \mathbf {e} _ {1} + \lambda x _ {2} \mathbf {e} _ {2} + \lambda x _ {3} \mathbf {e} _ {3}. \end{array}$$
+所以我们有下面的坐标计算公式:
+$$(x _ {1}, x _ {2}, x _ {3}) + (y _ {1}, y _ {2}, y _ {3}) = (x _ {1} + y _ {1}, x _ {2} + y _ {2}, x _ {3} + y _ {3}),$$
+$$\lambda \left(x _ {1}, x _ {2}, x _ {3}\right) = \left(\lambda x _ {1}, \lambda x _ {2}, \lambda x _ {3}\right).\tag{1.10}$$
+(1.11)
+例1.2.2. 设 $A(x_{1},y_{1},z_{1}), B(x_{2},y_{2},z_{2})$ 为空间中两点, 若点 $P$ 将 $\overrightarrow{AB}$ 分割成定比 $\lambda$, 即 $\overrightarrow{AP} = \lambda \overrightarrow{PB}$, 求分点 $P$ 的坐标.
+解. 由 $\overrightarrow{AP} = \lambda \overrightarrow{PB}$, 知 $\overrightarrow{OP} - \overrightarrow{OA} = \lambda (\overrightarrow{OB} - \overrightarrow{OP})$. 因此
+$$\overrightarrow {O P} = \frac {1}{1 + \lambda} \overrightarrow {O A} + \frac {\lambda}{1 + \lambda} \overrightarrow {O B} = \left(\frac {x _ {1} + \lambda x _ {2}}{1 + \lambda}, \frac {y _ {1} + \lambda y _ {2}}{1 + \lambda}, \frac {z _ {1} + \lambda z _ {2}}{1 + \lambda}\right).$$
+特别地, AB 中点的坐标为  $((x_{1}+x_{2})/2, (y_{1}+y_{2})/2, (z_{1}+z_{2})/2)$ .
+例1.2.3. 设 $A(x_{1},y_{1},z_{1}),B(x_{2},y_{2},z_{2}),C(x_{3},y_{3},z_{3})$ ，求 $\triangle ABC$ 重心 $G$ 的坐标
+解. 设 BC 边的中点为 D, 则 D 点的坐标为
+$$\left(\frac {x _ {2} + x _ {3}}{2}, \frac {y _ {2} + y _ {3}}{2}, \frac {z _ {2} + z _ {3}}{2}\right).$$
+由例 1.1.3 知,  $\overrightarrow{AG} = 2\overrightarrow{GD}$ , 利用定比分点公式得
+$$x = \frac {x _ {1} + 2 \frac {x _ {2} + x _ {3}}{2}}{1 + 2} = \frac {x _ {1} + x _ {2} + x _ {3}}{3},$$
+[第 16 页]
+同理
+$$y = \frac {y _ {1} + y _ {2} + y _ {3}}{3}, \quad z = \frac {z _ {1} + z _ {2} + z _ {3}}{3}.$$
+所以, 重心 G 的坐标为
+$$\left(\frac {x _ {1} + x _ {2} + x _ {3}}{3}, \frac {y _ {1} + y _ {2} + y _ {3}}{3}, \frac {z _ {1} + z _ {2} + z _ {3}}{3}\right).$$
+□
+§1.2.3 直角坐标系
+空间直角坐标系为一个特殊的仿射坐标系, 它要求三个坐标向量为两两垂直的单位向量. 一般用 i,j,k 表示这三个坐标向量, 相应的坐标轴为 x 轴, y 轴和 z 轴.
+关于仿射坐标系的所有概念与结论都适用于直角坐标系,而直角坐标系的特殊性使得利用向量的坐标来计算模长、夹角等变得容易.
+设  $[O;i,j,k]$  为一个空间直角坐标系, 若向量  $a=a_{1}i+a_{2}j+a_{3}k$ , 则
+$$| \mathbf {a} | = \sqrt {a _ {1} ^ {2} + a _ {2} ^ {2} + a _ {3} ^ {2}}.\tag{1.12}$$
+设向量  $\mathbf{a}=(a_{1},a_{2},a_{3})$  与坐标向量 i,j 和 k 的夹角分别为  $\alpha,\beta,\gamma,\cos\alpha,\cos\beta,\cos\gamma$  称为向量 a 的方向余弦.
+图 1.6 方向余弦
+从图 1.6 不难看出
+$$(\cos \alpha , \cos \beta , \cos \gamma) = \left(\frac {a _ {1}}{\sqrt {a _ {1} ^ {2} + a _ {2} ^ {2} + a _ {3} ^ {2}}}, \frac {a _ {2}}{\sqrt {a _ {1} ^ {2} + a _ {2} ^ {2} + a _ {3} ^ {2}}}, \frac {a _ {3}}{\sqrt {a _ {1} ^ {2} + a _ {2} ^ {2} + a _ {3} ^ {2}}}\right).\tag{1.13}$$
+从而
+$$\cos^ {2} \alpha + \cos^ {2} \beta + \cos^ {2} \gamma = 1.$$
+[第 17 页]
+例1.2.4. 已知  $P(1,2,3)$ ,  $Q(2,4,-1)$ , 求向量  $\overrightarrow{PQ}$  的方向余弦.
+解. 由于
+$$\begin{array}{l} \overrightarrow {P Q} = (1, 2, - 4) \\ | \overrightarrow {P Q} | = \sqrt {1 ^ {2} + 2 ^ {2} + (- 4) ^ {2}} = \sqrt {2 1}, \end{array}$$
+所以  $\overrightarrow{PQ}$  的方向余弦为  $\left(\frac{1}{\sqrt{21}},\frac{2}{\sqrt{21}},\frac{-4}{\sqrt{21}}\right)$ .
+§1.3 向量的数量积
+§1.3.1 数量积的定义与性质
+设一物体位于光滑水平面上, 力 F 作用于该物体上. 设 F 与水平面的夹角为  $\theta$ , 物体产生的位移是 S, 则力 F 所作的功为
+$$W = | \mathbf {F} | | \mathbf {S} | \cos \theta .$$
+功是由力 F 和位移 S 两个向量所唯一决定的一个数量. 除去其中的物理含义, 我们就得到了两个向量的数量积的概念.
+定义1.3.1. 两个向量 a 与 b 的数量积为一个实数, 它等于两个向量的模长与两向量夹角的余弦的乘积, 记为  $a \cdot b$ . 如果向量 a, b 的夹角为  $\theta$ , 则
+$$\mathbf {a} \cdot \mathbf {b} = | \mathbf {a} | | \mathbf {b} | \cos \theta .\tag{1.14}$$
+数量积也常称为内积.
+利用这个定义, 力所作的功为  $W = F \cdot S$ .
+由数量积的定义知, $a\cdot b=0$ 当且仅当两个向量是正交的(包含其中一个向量为零向量的情形).
+数量积的运算具有如下的性质.
+命题1.3.1. 对向量 a, b, c 及实数  $\lambda$ , 我们有
+$$\boldsymbol {a} \cdot \boldsymbol {b} = \boldsymbol {b} \cdot \boldsymbol {a},\tag{1.15}$$
+$$(\boldsymbol {a} + \boldsymbol {b}) \cdot \boldsymbol {c} = \boldsymbol {a} \cdot \boldsymbol {c} + \boldsymbol {b} \cdot \boldsymbol {c},\tag{1.16}$$
+$$(\lambda \boldsymbol {a}) \cdot \boldsymbol {b} = \lambda (\boldsymbol {a} \cdot \boldsymbol {b}) = \boldsymbol {a} \cdot (\lambda \boldsymbol {b}),\tag{1.17}$$
+$$\pmb {a} ^ {2} := \pmb {a} \cdot \pmb {a} \geq 0, \text {等号成立当且仅当} \pmb {a} = \pmb {0}.\tag{1.18}$$
+[第 18 页]
+证明. 我们只证(1.16), 其余等式可利用数量积的定义直接验证.
+不妨设  $c \neq 0$ . 如图 1.7, 作向量  $\overrightarrow{OA} = a, \overrightarrow{AB} = b, \overrightarrow{OC} = c$ , 则有  $\overrightarrow{OB} = \overrightarrow{OA} + \overrightarrow{AB} = a + b$ . 过点 A, B 作直线 OC 的垂线, 垂足分别为  $A', B'$ . 则存在实数 x, y 使得  $\overrightarrow{OA'} = xc, \overrightarrow{A'B'} = yc, \overrightarrow{OB'} = (x + y)c$ .
+图 1.7
+由数量积的定义可知
+$$\mathbf {a} \cdot \mathbf {c} = x | \mathbf {c} | ^ {2}, \quad \mathbf {b} \cdot \mathbf {c} = y | \mathbf {c} | ^ {2}, \quad (\mathbf {a} + \mathbf {b}) \cdot \mathbf {c} = (x + y) | \mathbf {c} | ^ {2}.$$
+所以 $(\mathbf{a} + \mathbf{b})\cdot \mathbf{c} = \mathbf{a}\cdot \mathbf{c} + \mathbf{b}\cdot \mathbf{c}.$
+利用数量积的性质可以得到下面的等式
+$$(\mathbf {a} \pm \mathbf {b}) ^ {2} = \mathbf {a} ^ {2} \pm 2 \mathbf {a} \cdot \mathbf {b} + \mathbf {b} ^ {2}.\tag{1.19}$$
+由于
+$$(\mathbf {a} + \mathbf {b}) ^ {2} = \mathbf {a} ^ {2} + \mathbf {b} ^ {2} + 2 \mathbf {a} \cdot \mathbf {b} = | \mathbf {a} | ^ {2} + | \mathbf {b} | ^ {2} + 2 | \mathbf {a} | | \mathbf {b} | \cos \theta \leq (| \mathbf {a} | + | \mathbf {b} |) ^ {2},$$
+因此有向量模的三角不等式
+$$| \mathbf {a} | + | \mathbf {b} | \geq | \mathbf {a} + \mathbf {b} |.\tag{1.20}$$
+从(1.19)式还可以得到余弦定理的一个简单证明,读者不妨一试.
+下面我们通过一个例子来看向量的数量积在求解几何问题中的应用.
+例1.3.1. 四面体 OABC 中,  $OA \perp BC$ ,  $OB \perp AC$ , 证明:  $OC \perp AB$ .
+证明. 记 $\overrightarrow{OA} = \mathbf{a}, \overrightarrow{OB} = \mathbf{b}, \overrightarrow{OC} = \mathbf{c}$, 则
+$$\overrightarrow {B C} = \mathbf {c} - \mathbf {b}, \quad \overrightarrow {C A} = \mathbf {a} - \mathbf {c}, \quad \overrightarrow {A B} = \mathbf {b} - \mathbf {a}.$$
+由 $OA \perp BC$ 知, $\mathbf{a} \cdot (\mathbf{c} - \mathbf{b}) = 0$, 即 $\mathbf{a} \cdot \mathbf{c} = \mathbf{a} \cdot \mathbf{b}$. 同理, $OB \perp AC$ 蕴含了 $\mathbf{b} \cdot \mathbf{c} = \mathbf{b} \cdot \mathbf{a}$. 因此 $\mathbf{a} \cdot \mathbf{c} - \mathbf{b} \cdot \mathbf{c} = 0$, 即 $(\mathbf{a} - \mathbf{b}) \cdot \mathbf{c} = 0$, 所以 $OC \perp AB$.
+[第 19 页]
+§1.3.2 直角坐标系下数量积的计算
+设 $[O; \mathbf{i}, \mathbf{j}, \mathbf{k}]$ 为一个直角坐标系. 由于向量 $\mathbf{i}, \mathbf{j}, \mathbf{k}$ 为两两垂直的单位向量, 所以
+$$\begin{array}{l l} \mathbf {i} \cdot \mathbf {i} = 1, & \mathbf {j} \cdot \mathbf {j} = 1, \qquad \mathbf {k} \cdot \mathbf {k} = 1 \\ \mathbf {i} \cdot \mathbf {j} = 0, & \mathbf {j} \cdot \mathbf {k} = 0, \qquad \mathbf {k} \cdot \mathbf {i} = 0. \end{array}$$
+给定两个向量  $a = a_{1}i + a_{2}j + a_{3}k,\quad b = b_{1}i + b_{2}j + b_{3}k,$  则有
+$$\begin{array}{r l} \mathbf {a} \cdot \mathbf {b} & = (a _ {1} \mathbf {i} + a _ {2} \mathbf {j} + a _ {3} \mathbf {k}) \cdot (b _ {1} \mathbf {i} + b _ {2} \mathbf {j} + b _ {3} \mathbf {k}) \\ & = a _ {1} b _ {1} (\mathbf {i} \cdot \mathbf {i}) + a _ {1} b _ {2} (\mathbf {i} \cdot \mathbf {j}) + a _ {1} b _ {3} (\mathbf {i} \cdot \mathbf {k}) \\ & \quad + a _ {2} b _ {1} (\mathbf {j} \cdot \mathbf {i}) + a _ {2} b _ {2} (\mathbf {j} \cdot \mathbf {j}) + a _ {2} b _ {3} (\mathbf {j} \cdot \mathbf {k}) \\ & \quad + a _ {3} b _ {1} (\mathbf {k} \cdot \mathbf {i}) + a _ {3} b _ {2} (\mathbf {k} \cdot \mathbf {j}) + a _ {3} b _ {3} (\mathbf {k} \cdot \mathbf {k}) \\ & = a _ {1} b _ {1} + a _ {2} b _ {2} + a _ {3} b _ {3}. \end{array}$$
+所以有
+$$(a _ {1}, a _ {2}, a _ {3}) \cdot (b _ {1}, b _ {2}, b _ {3}) = a _ {1} b _ {1} + a _ {2} b _ {2} + a _ {3} b _ {3}.\tag{1.21}$$
+就是说, 两个向量的数量积等于它们对应坐标乘积之和.
+设向量 a, b 之间的夹角为  $\theta$ , 则由数量积的定义知
+$$\cos \theta = \frac {\mathbf {a} \cdot \mathbf {b}}{| \mathbf {a} | | \mathbf {b} |} = \frac {a _ {1} b _ {1} + a _ {2} b _ {2} + a _ {3} b _ {3}}{\sqrt {a _ {1} ^ {2} + a _ {2} ^ {2} + a _ {3} ^ {2}} \sqrt {b _ {1} ^ {2} + b _ {2} ^ {2} + b _ {3} ^ {2}}}.\tag{1.22}$$
+例1.3.2. 求一个单位向量, 使它与向量  $a = -i + 2j + k$ ,  $b = i + 3k$  都垂直.
+解. 设所求的单位向量为  $x = x_{1}i + x_{2}j + x_{3}k$ ，由条件知
+$$\mathbf {x} \cdot \mathbf {a} = 0, \quad \mathbf {x} \cdot \mathbf {b} = 0, \quad | \mathbf {x} | = 1.$$
+用坐标表示, 即得
+$$\left\{ \begin{array}{l} - x _ {1} + 2 x _ {2} + x _ {3} = 0 \\ x _ {1} + 3 x _ {3} = 0 \\ x _ {1} ^ {2} + x _ {2} ^ {2} + x _ {3} ^ {2} = 1 \end{array} \right.$$
+解得
+$$(x _ {1}, x _ {2}, x _ {3}) = \pm (\frac {3}{\sqrt {1 4}}, \frac {2}{\sqrt {1 4}}, \frac {- 1}{\sqrt {1 4}}).$$
+所以
+$$\mathbf {x} = \pm \frac {1}{\sqrt {1 4}} (3 \mathbf {i} + 2 \mathbf {j} - \mathbf {k}).$$
+[第 20 页]
+例1.3.3. 证明 Cauchy 不等式
+$$(a _ {1} b _ {1} + a _ {2} b _ {2} + a _ {3} b _ {3}) ^ {2} \leq (a _ {1} ^ {2} + a _ {2} ^ {2} + a _ {3} ^ {2}) (b _ {1} ^ {2} + b _ {2} ^ {2} + b _ {3} ^ {2}).$$
+证明. 设  $\mathbf{a}=(a_{1},a_{2},a_{3}),\mathbf{b}=(b_{1},b_{2},b_{3})$ ，则有
+$$\begin{array}{c} \mathbf {a} \cdot \mathbf {b} = a _ {1} b _ {1} + a _ {2} b _ {2} + a _ {3} b _ {3}, \\ | \mathbf {a} | ^ {2} = a _ {1} ^ {2} + a _ {2} ^ {2} + a _ {3} ^ {2}, \quad | \mathbf {b} | ^ {2} = b _ {1} ^ {2} + b _ {1} ^ {2} + b _ {3} ^ {2}. \end{array}$$
+由数量积的定义  $a \cdot b = |a||b|\cos\theta$  及  $|\cos\theta| \leq 1$  推知  $(\mathbf{a} \cdot \mathbf{b})^{2} \leq |\mathbf{a}|^{2}|\mathbf{b}|^{2}$ . 把它写成坐标的形式, 即得 Cauchy 不等式. ☐
+§1.4 向量的向量积
+§1.4.1 向量积的定义与性质
+设刚体以等角速度  $\omega$  绕定轴转动, O 为转动轴上的一个定点, M 为刚体上的一个点, 到转动轴的距离为 R, 记向量  $r = \overrightarrow{OM}$  (图 1.8). 由物理学知道, 点 M 处的速度向量 v 的方向与定轴及点 M 决定的平面垂直, 大小等于  $\omega \cdot R$ . 为了更好地描述这一特征, 在转动轴上引一向量  $\omega$ , 称为角速度向量, 它的模  $|\omega| = \omega$ , 它的方向与转动的方向构成右手螺旋系统, 即向量  $\omega, r, v$  满足右手法则. 若记向量  $\omega$  与 r 的夹角为  $\theta$ , 则
+$$| \mathbf {v} | = \omega R = | \omega | | \mathbf {r} | \sin \theta ,$$
+象这样由两个向量  $\omega, r$  决定第三个向量 v 的现象在物理学中十分常见. 将其抽象化, 就得到了两个向量的向量积的概念.
+图 1.8 向量的外积
+[第 21 页]
+定义1.4.1. 两个向量 a, b 的向量积  $a \times b$  为一个向量, 它的方向与 a, b 都垂直, 且使  $a, b, a \times b$  构成右手系; 它的模等于以 a, b 为边的平行四边形的面积, 即  $|a \times b| = |a||b|\sin\theta$ , 其中  $\theta$  为 a, b 的夹角.
+向量的向量积运算具有以下性质.
+命题1.4.1. 设 a, b, c 为三个向量,  $\lambda$  为实数, 则有
+$$\boldsymbol {a} \times \boldsymbol {b} = - \boldsymbol {b} \times \boldsymbol {a},\tag{1.23}$$
+$$(\lambda \boldsymbol {a}) \times \boldsymbol {b} = \lambda (\boldsymbol {a} \times \boldsymbol {b}) = \boldsymbol {a} \times (\lambda \boldsymbol {b}),\tag{1.24}$$
+$$(\boldsymbol {a} + \boldsymbol {b}) \times \boldsymbol {c} = \boldsymbol {a} \times \boldsymbol {c} + \boldsymbol {b} \times \boldsymbol {c}.\tag{1.25}$$
+证明. 我们只证(1.25), 为此首先来看当 c 为一个单位向量时, 向量积  $a \times c$  的几何作图法.
+设 a 与 c 有共同的起点 O, a 与 c 的夹角为  $\theta$ . 把向量 a 投影到与 c 垂直的平面上得向量  $a_{1}$ , 再将  $a_{1}$  绕 c 顺时针旋转  $\frac{\pi}{2}$  得向量  $a_{2}$ , 使得  $a, c, a_{2}$  组成右手系(图 1.9(a)).
+图 1.9
+由于
+$$\left| \mathbf {a} _ {2} \right| = \left| \mathbf {a} _ {1} \right| = \left| \mathbf {a} \right| \sin \theta = \left| \mathbf {a} \times \mathbf {c} \right|,$$
+因此
+$$\mathbf {a} _ {2} = \mathbf {a} \times \mathbf {c}.$$
+现在设 c 为单位向量, 将 a 平移使它与 c 有共同起点 O, 过 a 的终点引向量 b, 按三角形法则得向量  $\mathbf{a} + \mathbf{b}$  (图 1.9(b)). 将向量  $\mathbf{a}, \mathbf{b}, \mathbf{a} + \mathbf{b}$  组成的三角形投影到与 c 垂直的平面中, 得到一个由向量  $\mathbf{a}_{1}, \mathbf{b}_{1}, \mathbf{a}_{1} + \mathbf{b}_{1}$  组成的三角形. 再将所得的三角形在
+这个平面上绕 O 点顺时针方向旋转  $\frac{\pi}{2}$  角度, 得到一个由向量  $a_{2}, b_{2}, a_{2} + b_{2}$  组成的三角形.
+[第 22 页]
+根据上述向量积的几何作图法, 我们得到
+$$\mathbf {a} \times \mathbf {c} = \mathbf {a} _ {2}, \quad \mathbf {b} \times \mathbf {c} = \mathbf {b} _ {2}, \quad (\mathbf {a} + \mathbf {b}) \times \mathbf {c} = \mathbf {a} _ {2} + \mathbf {b} _ {2},$$
+所以 $(\mathbf{a} + \mathbf{b})\times \mathbf{c} = \mathbf{a}\times \mathbf{c} + \mathbf{b}\times \mathbf{c}.$
+进而考察一般情形. 因为  $c = |c|c^{0}$ ，其中  $c^{0}$  为与 c 同向的单位向量, 利用上式及性质 (2), 得
+$$\begin{array}{r l} (\mathbf {a} + \mathbf {b}) \times (| \mathbf {c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c} & = | \mathbf {c} | ((\mathbf {a} + \mathbf {b}) \times \mathbf {c} ^ {0}) \\ & = | \mathbf {c} | (\mathbf {a} \times \mathbf {c} ^ {0} + \mathbf {b} \times \mathbf {c} ^ {0}) \\ & = \mathbf {a} \times (| \mathbf {c c c c c c c} | + \mathbf {b} \times (| \mathbf {c c c c c c} |), \end{array}$$
+即
+$$(\mathbf {a} + \mathbf {b}) \times \mathbf {c} = \mathbf {a} \times \mathbf {c} + \mathbf {b} \times \mathbf {c}.$$
+□
+§1.4.2 直角坐标系下向量积的计算
+设 $[O; \mathbf{i}, \mathbf{j}, \mathbf{k}]$ 为一个直角坐标系. 由于 $\mathbf{i}, \mathbf{j}, \mathbf{k}$ 为两两垂直的单位向量且满足右手法则, 由向量积的定义知
+$$\begin{array}{l l} \mathbf {i} \times \mathbf {i} = \mathbf {0}, & \mathbf {j} \times \mathbf {j} = \mathbf {0}, \quad \mathbf {k} \times \mathbf {k} = \mathbf {0} \\ \mathbf {i} \times \mathbf {j} = \mathbf {k}, & \mathbf {j} \times \mathbf {k} = \mathbf {i}, \quad \mathbf {k} \times \mathbf {i} = \mathbf {j}. \end{array}$$
+给定两个向量
+$$\mathbf {a} = a _ {1} \mathbf {i} + a _ {2} \mathbf {j} + a _ {3} \mathbf {k}, \quad \mathbf {b} = b _ {1} \mathbf {i} + b _ {2} \mathbf {j} + b _ {3} \mathbf {k},$$
+则有
+$$\begin{array}{r l} \mathbf {a} \times \mathbf {b} & = (a _ {1} \mathbf {i} + a _ {2} \mathbf {j} + a _ {3} \mathbf {k}) \times (b _ {1} \mathbf {i} + b _ {2} \mathbf {j} + b _ {3} \mathbf {k}) \\ & = a _ {1} b _ {1} (\mathbf {i} \times \mathbf {i}) + a _ {1} b _ {2} (\mathbf {i} \times \mathbf {j}) + a _ {1} b _ {3} (\mathbf {i} \times \mathbf {k}) \\ & \quad + a _ {2} b _ {1} (\mathbf {j} \times \mathbf {i}) + a _ {2} b _ {2} (\mathbf {i} \times \mathbf {j}) + a _ {2} b _ {3} (\mathbf {j} \times \mathbf {k}) \\ & \quad + a _ {3} b _ {1} (\mathbf {k} \times \mathbf {i}) + a _ {3} b _ {2} (\mathbf {k} \times \mathbf {j}) + a _ {3} b _ {3} (\mathbf {k} \times \mathbf {k}) \\ & = (a _ {2} b _ {3} - a _ {3} b _ {2}) \mathbf {i} + (a _ {3} b _ {1} - a _ {1} b _ {3}) \mathbf {j} + (a _ {1} b _ {2} - a _ {2} b _ {1}) \mathbf {k} \end{array}$$
+为了便于记忆上式, 我们引入 2 阶和 3 阶行列式的概念.
+[第 23 页]
+把 4 个数排成两行两列, 在两边加上两条竖线, 就得到一个 2 阶行列式. 它代表一个数, 其运算规则是
+$$\left| \begin{array}{c c} a _ {1} & a _ {2} \\ b _ {1} & b _ {2} \end{array} \right| = a _ {1} b _ {2} - a _ {2} b _ {1}.$$
+类似地, 9 个数排成 3 行 3 列, 就得到一个 3 阶行列式. 它的运算规则是
+$$\begin{array}{l} \left| \begin{array}{c c c} a _ {1} & a _ {2} & a _ {3} \\ b _ {1} & b _ {2} & b _ {3} \\ c _ {1} & c _ {2} & c _ {3} \end{array} \right| = a _ {1} \left| \begin{array}{c c} b _ {2} & b _ {3} \\ c _ {2} & c _ {3} \end{array} \right| - a _ {2} \left| \begin{array}{c c} b _ {1} & b _ {3} \\ c _ {1} & c _ {3} \end{array} \right| + a _ {3} \left| \begin{array}{c c} b _ {1} & b _ {3} \\ c _ {1} & c _ {3} \end{array} \right| \\ = a _ {1} b _ {2} c _ {3} + a _ {2} b _ {3} c _ {1} + a _ {3} b _ {1} c _ {2} - a _ {1} b _ {3} c _ {2} - a _ {2} b _ {1} c _ {3} - a _ {3} b _ {2} c _ {1}. \end{array}$$
+关于行列式的详细介绍,请参看第三章.
+利用行列式的语言,前面关于向量积的运算公式可以改写为
+$$\begin{array}{r l} \mathbf {a} \times \mathbf {b} & = \left| \begin{array}{c c} a _ {2} & a _ {3} \\ b _ {2} & b _ {3} \end{array} \right| \mathbf {i} - \left| \begin{array}{c c} a _ {1} & a _ {3} \\ b _ {1} & b _ {3} \end{array} \right| \mathbf {j} + \left| \begin{array}{c c} a _ {1} & a _ {2} \\ b _ {1} & b _ {2} \end{array} \right| \mathbf {k} \\ & = \left| \begin{array}{c c c} \mathbf {i} & \mathbf {j} & \mathbf {k} \\ a _ {1} & a _ {2} & a _ {3} \\ b _ {1} & b _ {2} & b _ {3} \end{array} \right|. \end{array}\tag{1.26}$$
+例1.4.1. 求垂直于向量  $\mathbf{a}=(-1,2,1)$  和  $\mathbf{b}=(1,0,3)$  的单位向量.
+解.  $a \times b$  就是一个垂直于 a 和 b 的向量, 而
+$$\begin{array}{l} \mathbf {a} \times \mathbf {b} = \left| \begin{array}{c c c} \mathbf {i} & \mathbf {j} & \mathbf {k} \\ - 1 & 2 & 1 \\ 1 & 0 & 3 \end{array} \right| = \left| \begin{array}{c c} 2 & 1 \\ 0 & 3 \end{array} \right| \mathbf {i} - \left| \begin{array}{c c} - 1 & 1 \\ 1 & 3 \end{array} \right| \mathbf {j} + \left| \begin{array}{c c} - 1 & 2 \\ 1 & 0 \end{array} \right| \mathbf {k} \\ = 6 \mathbf {i} + 4 \mathbf {j} - 2 \mathbf {k}. \\ | \mathbf {a} \times \mathbf {b} | = \sqrt {6 ^ {2} + 4 ^ {2} + (- 2) ^ {2}} = 2 \sqrt {1 4} \end{array}$$
+因此所求的单位向量为
+$$\pm \frac {\mathbf {a} \times \mathbf {b}}{| \mathbf {a} \times \mathbf {b} |} = \pm \frac {1}{\sqrt {1 4}} (3, 2, - 1).$$
+与例 1.3.2 相比, 这里的解法更为简单.
+例1.4.2. 设三角形的三个定点为 $A(1,1,2), B(-2,0,3), C(2,4,5)$, 求 $\triangle ABC$ 的面积以及 $BC$ 边上的高 $h$.
+[第 24 页]
+解. 设 $\triangle ABC$ 的面积为 $S$, 由向量积的几何意义知 $S = \frac{1}{2} |\overrightarrow{AB} \times \overrightarrow{AC}|$. 而 $\overrightarrow{AB} = (-3, -1, 1), \overrightarrow{AC} = (1, 3, 3)$, 所以
+$$\overrightarrow {A B} \times \overrightarrow {A C} = \left| \begin{array}{c c c} \mathbf {i} & \mathbf {j} & \mathbf {k} \\ - 3 & - 1 & 1 \\ 1 & 3 & 3 \end{array} \right| = - 6 \mathbf {i} + 1 0 \mathbf {j} - 8 \mathbf {k}.$$
+因此
+$$S = \frac {1}{2} \sqrt {(- 6) ^ {2} + 1 0 ^ {2} + (- 8) ^ {2}} = 5 \sqrt {2}.$$
+另一方面, 由 $S = \frac{1}{2} |\overrightarrow{BC}| \cdot h$ 及 $\overrightarrow{BC} = (4,4,2)$ 可解得 $h = \frac{5\sqrt{2}}{3}$.
+§1.5 向量的混合积
+§1.5.1 混合积的定义
+给定三个向量 a,b,c, 称  $(\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c}$  为 a,b,c 的混合积.
+以 a,b,c 为棱的平行六面体的体积 V 等于以 a,b 为边的平行四边形的面积 S 乘以高 h(图 1.10), 即 V = Sh. 由向量积的定义知  $S = |a \times b|$ , 另一方面, 设  $a \times b$  与 c 的夹角为  $\varphi$ , 则有  $|h| = |c||\cos\varphi|$ . 于是
+$$V = | \mathbf {a} \times \mathbf {b} | | \mathbf {c} | | \cos \varphi | = | (\mathbf {a} \times \mathbf {b}) \cdot \mathbf {c} |.$$
+注意到  $\varphi$  为锐角时, a, b, c 构成右手系,  $V = (\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c}$ ; 当  $\varphi$  为钝角时, a, b, c 构成左手系,  $V = -(\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c}$ . 因此混合积  $(\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c}$  表示的是以 a, b, c 为棱的平行六面体的 “有向体积”. 即: 当 a, b, c 为右手系时, 就是六面体的体积; 当 a, b, c 为左手系时, 它是六面体体积的相反数.
+图 1.10 向量的混合积
+由于轮换 a,b,c 的次序时, 不会改变左右手系, 因此混合积的值不变. 即
+$$(\mathbf {a} \times \mathbf {b}) \cdot \mathbf {c} = (\mathbf {b} \times \mathbf {c}) \cdot \mathbf {a} = (\mathbf {c} \times \mathbf {a}) \cdot \mathbf {b}.\tag{1.27}$$
+[第 25 页]
+另一方面, 交换 a,b,c 中任意两个的次序会改变左右手系, 因此混合积的值改变符号, 例如
+$$(\mathbf {a} \times \mathbf {b}) \cdot \mathbf {c} = - (\mathbf {b} \times \mathbf {a}) \cdot \mathbf {c}.\tag{1.28}$$
+此外, 当 a,b,c 中任意两个平行时, 混合积为零, 例如
+$$(\mathbf {a} \times \mathbf {b}) \cdot \mathbf {a} = (\mathbf {a} \times \mathbf {b}) \cdot \mathbf {b} = 0.$$
+§1.5.2 直角坐标系下混合积的计算
+设  $\mathbf{a}=(a_{1},a_{2},a_{3}),\mathbf{b}=(b_{1},b_{2},b_{3}),\mathbf{c}=(c_{1},c_{2},c_{3})$ ，因为
+$$\mathbf {a} \times \mathbf {b} = \left| \begin{array}{c c c} \mathbf {i} & \mathbf {j} & \mathbf {k} \\ a _ {1} & a _ {2} & a _ {3} \\ b _ {1} & b _ {2} & b _ {3} \end{array} \right| = \left| \begin{array}{c c} a _ {2} & a _ {3} \\ b _ {2} & b _ {3} \end{array} \right| \mathbf {i} - \left| \begin{array}{c c} a _ {1} & a _ {3} \\ b _ {1} & b _ {3} \end{array} \right| \mathbf {j} + \left| \begin{array}{c c} a _ {1} & a _ {2} \\ b _ {1} & b _ {2} \end{array} \right| \mathbf {k},$$
+所以
+$$(\mathbf {a} \times \mathbf {b}) \cdot \mathbf {c} = \left| \begin{array}{c c} a _ {2} & a _ {3} \\ b _ {2} & b _ {3} \end{array} \right| c _ {1} - \left| \begin{array}{c c} a _ {1} & a _ {3} \\ b _ {1} & b _ {3} \end{array} \right| c _ {2} + \left| \begin{array}{c c} a _ {1} & a _ {2} \\ b _ {1} & b _ {2} \end{array} \right| c _ {3},$$
+即
+$$(\mathbf {a} \times \mathbf {b}) \cdot \mathbf {c} = \left| \begin{array}{c c c} a _ {1} & a _ {2} & a _ {3} \\ b _ {1} & b _ {2} & b _ {3} \\ c _ {1} & c _ {2} & c _ {3} \end{array} \right|.\tag{1.29}$$
+命题1.5.1. 三个向量 $\pmb{a} = (a_{1}, a_{2}, a_{3}), \pmb{b} = (b_{1}, b_{2}, b_{3}), \pmb{c} = (c_{1}, c_{2}, c_{3})$ 共面当且仅当
+$$\left| \begin{array}{c c c} a _ {1} & a _ {2} & a _ {3} \\ b _ {1} & b _ {2} & b _ {3} \\ c _ {1} & c _ {2} & c _ {3} \end{array} \right| = 0.$$
+证明. 由于混合积 $(\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c}$ 表示的是 $\mathbf{a}, \mathbf{b}, \mathbf{c}$ 构成的平行六面体的有向体积, $\mathbf{a}, \mathbf{b}, \mathbf{c}$ 共面当且仅当 $(\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c} = 0$. 由上面的公式即得命题.
+例1.5.1. 设四面体的四个顶点为  $A(1,2,3)$ ,  $B(2,1,4)$ ,  $C(1,3,5)$ ,  $D(3,2,1)$ , 求该四面体的体积.
+解. 所求四面体的体积 V 是以  $\overrightarrow{AB}, \overrightarrow{AC}, \overrightarrow{AD}$  为棱的平行六面体的体积的六分之一, 故
+$$V = \frac {1}{6} | (\overrightarrow {A B} \times \overrightarrow {A C}) \cdot \overrightarrow {A D} |.$$
+[第 26 页]
+由于 $\overrightarrow{AB} = (1, - 1,1),\overrightarrow{AC} = (0,1,2),\overrightarrow{AD} = (2,0, - 2)$ ，所以
+$$(\overrightarrow {A B} \times \overrightarrow {A C}) \cdot \overrightarrow {A D} = \left| \begin{array}{c c c} 1 & - 1 & 1 \\ 0 & 1 & 2 \\ 2 & 0 & - 2 \end{array} \right| = - 8.$$
+于是得到 $V = \frac{4}{3}$
+§1.5.3 二重外积
+给定三个向量 a, b, c, 称  $(\mathbf{a} \times \mathbf{b}) \times \mathbf{c}$  为这三个向量的二重外积.
+命题1.5.2. 对任意向量 a, b, c, 有
+$$(\boldsymbol {a} \times \boldsymbol {b}) \times \boldsymbol {c} = (\boldsymbol {a} \cdot \boldsymbol {c}) \boldsymbol {b} - (\boldsymbol {b} \cdot \boldsymbol {c}) \boldsymbol {a}.$$
+证明. 取一个右手直角坐标系, 设
+$$\mathbf {a} = (a _ {1}, a _ {2}, a _ {3}), \quad \mathbf {b} = (b _ {1}, b _ {2}, b _ {3}), \quad \mathbf {c} = (c _ {1}, c _ {2}, c _ {3}).$$
+只要验证等式两边的向量具有相同的坐标即可. 由于
+$$\mathbf {a} \times \mathbf {b} = (a _ {2} b _ {3} - a _ {3} b _ {2}, a _ {3} b _ {1} - a _ {1} b _ {3}, a _ {1} b _ {2} - a _ {2} b _ {1}),$$
+所以 $(\mathbf{a} \times \mathbf{b}) \times \mathbf{c}$ 的第一个坐标为
+$$(a _ {3} b _ {1} - a _ {1} b _ {3}) c _ {3} - (a _ {1} b _ {2} - a _ {2} b _ {1}) c _ {2}.$$
+另一方面, $(\mathbf{a} \cdot \mathbf{c})\mathbf{b} - (\mathbf{b} \cdot \mathbf{c})\mathbf{a}$ 的第一个坐标为
+$$\begin{array}{l} (a _ {1} c _ {1} + a _ {2} c _ {2} + a _ {3} c _ {3}) b _ {1} - (b _ {1} c _ {1} + b _ {2} c _ {2} + b _ {3} c _ {3}) a _ {1} \\ = (a _ {3} b _ {1} - a _ {1} b _ {3}) c _ {3} - (a _ {1} b _ {2} - a _ {2} b _ {1}) c _ {2}. \end{array}$$
+因此等式两边向量的第一个坐标相同, 同理另两个坐标相同, 从而等式成立. □
+上述公式通常称作二重外积展开式,从这个公式可以看出,外积不满足结合律,就是说,一般情况下,
+$$(\mathbf {a} \times \mathbf {b}) \times \mathbf {c} \neq \mathbf {a} \times (\mathbf {b} \times \mathbf {c}),$$
+因为上式左边是 a 和 b 的线性组合, 而右边是 b 和 c 的线性组合.
+例1.5.2. 证明: $(\mathbf{a} \times \mathbf{b}) \cdot (\mathbf{c} \times \mathbf{d}) = (\mathbf{a} \cdot \mathbf{c})(\mathbf{b} \cdot \mathbf{d}) - (\mathbf{a} \cdot \mathbf{d})(\mathbf{b} \cdot \mathbf{c})$.
+[第 27 页]
+证明.
+$$\begin{array}{r l} (\mathbf {a} \times \mathbf {b}) \cdot (\mathbf {c} \times \mathbf {d}) & = ((\mathbf {a} \times \mathbf {b}) \times \mathbf {c}) \cdot \mathbf {d} \\ & = ((\mathbf {a} \cdot \mathbf {c}) \mathbf {b} - (\mathbf {b} \cdot \mathbf {c}) \mathbf {a}) \cdot \mathbf {d} \\ & = (\mathbf {a} \cdot \mathbf {c}) (\mathbf {b} \cdot \mathbf {d}) - (\mathbf {a} \cdot \mathbf {d}) (\mathbf {b} \cdot \mathbf {c}). \end{array}$$
+§1.6 高维数组向量
+在现实生活中,很多量无法在三维空间中表示,如物体在某点的温度、密度、压力等.因为物体的每一点的位置要用一个三维坐标表示,温度,密度等量还要一个坐标表示.因此,表示物体在某一点的温度(或密度)要四个坐标.而表示物体一点的速度则要六个坐标.因此,有必要将三维向量推广到高维向量.
+取定一个坐标系, 一个空间向量可以用一个三元数组(坐标)来表示. 向量的线性运算(加法与数乘)都可以转化为坐标运算. 因此, 将三维向量推广到高维的一个直接方法是通过多元数组来定义.
+定义1.6.1. 一个 $n$ 维数组向量 $\mathbf{a}$ 是一个有序的 $n$ 元数组
+$$\mathbf {a} = (a _ {1}, a _ {2}, \dots , a _ {n}),\tag{1.30}$$
+其中 $a_{i}\in F(i=1,2,\ldots,n)$ 称为向量a的第i个分量. 这里F表示实数集、复数集或其它数域(定义见1.8节).
+n维数组向量有时需要写成行的形式, 如 $a=(a_{1},a_{2},\ldots,a_{n})$ , 称为行向量, 有时需要写成列的形式, 如
+$$\mathbf {a} = \left( \begin{array}{c} a _ {1} \\ a _ {2} \\ \vdots \\ a _ {n} \end{array} \right)\tag{1.31}$$
+称为列向量. 虽然形式上看上去不同, 但我们将它们认为是一样的.
+给定两个n维数组向量 $\mathbf{a}=(a_{1},a_{2},\ldots,a_{n})$ 与 $\mathbf{b}=(b_{1},b_{2},\ldots,b_{n})$ ，规定a与b相等，当且仅当它们对应的分量分别相等，即 $a_{i}=b_{i},i=1,2,\ldots,n$ .
+定义 $n$ 维数组向量的加法与数乘运算如下
+$$\begin{array}{l} \mathbf {a} + \mathbf {b} = (a _ {1} + b _ {1}, a _ {2} + b _ {2}, \ldots , a _ {n} + b _ {n}), \\ \lambda \mathbf {a} = (\lambda a _ {1}, \lambda a _ {2}, \ldots , \lambda a _ {n}). \end{array}\tag{1.32}$$
+[第 28 页]
+即按分量分别执行加法与数乘运算. 规定零向量  $\mathbf{0} = (0, \ldots, 0)$ ，负向量  $-\mathbf{a} = (-a_{1}, \ldots, -a_{n})$ . 容易验证, 数组向量的加法与数乘运算满足几何向量的性质 (1.1)-(1.8).
+定义了向量的加法与数乘, 就可以引进向量的一种重要的运算-线性组合.
+定义1.6.2. 给定一组n维数组向量 $a_{1},a_{2},\ldots,a_{m}$ 及一组数 $\lambda_{1},\lambda_{2},\ldots,\lambda_{m}$ ，称和式
+$$\lambda_ {1} \mathbf {a} _ {1} + \lambda_ {2} \mathbf {a} _ {2} + \dots + \lambda_ {m} \mathbf {a} _ {m}$$
+为 $a_{1},a_{2},\ldots,a_{m}$ 的线性组合. $\lambda_{1},\lambda_{2},\ldots,\lambda_{m}$ 称为组合系数.如果a可以写成 $a_{1},a_{2},\ldots,a_{m}$ 的线性组合,则称a可以用 $a_{1},a_{2},\ldots,a_{m}$ 线性表示.
+用 $\mathbf{e}_{i}=(0,\ldots,1,\ldots,0)$ 表示第i个分量为1，其余分量为0的n维数组向量， $e_{1},\ldots,e_{n}$ 称为单位坐标向量。任何一个n维数组向量都可以表示为单位坐标向量的线性组合。实际上，设 $\mathbf{a}=(a_{1},a_{2},\ldots,a_{n})$ ，则
+$$\mathbf {a} = a _ {1} \mathbf {e} _ {1} + a _ {2} \mathbf {e} _ {2} + \dots + a _ {n} \mathbf {e} _ {n}.$$
+关于数组向量的一般理论我们将在第五章详细研究.
+§1.7 集合与映射*
+集合论是由数学家Cantor于十九世纪建立, 现已成为现代数学的基础. 中学阶段我们已经学习了集合与映射的基本概念及运算, 本节对其做一个简单的回顾.
+§1.7.1 集合的定义*
+将一些不同的对象放在一起, 即为集合, 其中的对象称为集合的元素. 在本书中, 我们将使用大写字母 $A, B, C, \ldots$ 来表示集合, 用小写字母 $a, b, c, \ldots$ 来表示集合中的元素. 记 $A$ 为一个集合. 如果 $a$ 是 $A$ 中的元素, 则称 $a$ 属于 $A$, 记为 $a \in A$, 否则记为 $a \notin A$. 本书中我们总是假设集合中元素是不重复的.
+集合的描述通常有两者方式. 一种是列出集合中的所有元素, 并用花括号将这些元素括起来, 例如 $A = \{1,3,5,7,9\}$ 表示由1,3,5,7,9五个整数构成的集合. 另一种方式是通过语言描述来定义集合, 如偶数集合 $= \{a$ 为整数 $|a$ 被2整除}. 我们通常分别用 $\mathbb{N}, \mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}$ 表示自然数、整数、有理数、实数及复数集合. 平面上以原点为圆心、半径为1的圆可以表示为满足以下条件的点的集合 $C = \{(x,y) \in \mathbb{R}^2 | x^2 + y^2 = 1\}$.
+[第 29 页]
+如果集合 A 中的每一个元素均是集合 B 中的元素, 则称 A 是 B 的子集, 记为  $A \subseteq B$  或  $B \supseteq A$ . 图 1.11 表示了集合 A 包含于集合 B, 即  $A \subseteq B$ . 如果  $A \subseteq B$  且  $A \neq B$ , 则称 A 为 B 的真子集, 记为  $A \subset B$  或者  $A \subsetneq B$ . 如果集合 A 与 B 都包含相同的元素, 则称 A 与 B 相等, 记为 A = B. 易知, 集合 A 与 B 相等当且仅当  $A \subseteq B$  且  $B \subseteq A$ .
+图 1.11 集合的包含
+图 1.12 集合的交
+图 1.13 集合的并
+我们可以用一个简单例子来理解集合.
+- 班级 $\longleftrightarrow$ 集合,
+- 班上的学生 $\longleftrightarrow$ 元素,
+- 班上的一个学习小组 $\longleftrightarrow$ 子集合,
+- 学校的所有班级 $\longleftrightarrow$ 集合构成的集族.
+不含任何元素的集合称为空集, 记为  $\varnothing$ . 由定义可知, 空集  $\varnothing$  是任何集合的子集, 且是任何非空集合的真子集.
+如果集合A的元素个数有限, 称A为有限集, 其元素个数称为集合的阶或基数, 记为 $|A|$ . 元素个数无限的集合称为无限集, 它的阶定义为 $\infty$ .
+§1.7.2 集合的基本运算*
+一般来说,对于某固定集合U的子集合,有如下四种基本运算.
+(1) 集合的交设 A, B 为 U 的两个子集合, 则 A 与 B 的交集定义为
+$$A \cap B := \{x \mid x \in A \text {且} x \in B \}.$$
+如图 1.12 所示. 在上式中, 记号: = 表示的是将其右边的集合记作  $A \cap B$ .
+更一般地, 设 I 为集合, I 中每个元素 i 对应 U 的子集合  $A_{i}$ , 则集合族  $A_{i}(i \in I)$  的交定义为
+$$\bigcap_ {i \in I} A _ {i} := \{x \mid x \in A _ {i}, \text {对每个} i \in I \text {成立} \}.$$
+(2) 集合的并设 A, B 是集合 U 的子集合. 则 A 与 B 的并集定义为
+$$A \cup B := \{x \mid x \in A \text {或} x \in B \}.$$
+[第 30 页]
+如图 1.13 所示. 更一般地, 集合族  $A_{i}(i \in I)$  的并定义为
+$$\bigcup_ {i \in I} A _ {i} := \{x \mid x \in A _ {i}, \text {对某个} i \in I \text {成立} \}.$$
+如果 $A_{i}$ 两两不交(即交集为空集), 我们称 $\bigcup_{i\in I}A_{i}$ 为不交并, 并记为 $\bigsqcup_{i\in I}A_{i}$.
+命题1.7.1. 设A,B,C为集合U的子集, 则
+$$A \cap (B \cup C) = (A \cap B) \cup (A \cap C), \quad A \cup (B \cap C) = (A \cup B) \cap (A \cup C).\tag{1.33}$$
+证明. 我们只证前一式, 后一式类似可证. 设 $x \in A \cap (B \cup C)$, 则 $x \in A$ 且 $x \in B \cup C$. 若 $x \in B$, 则 $x \in A \cap B$, 于是 $x \in (A \cap B) \cup (A \cap C)$. 若 $x \in C$, 则 $x \in A \cap C$, 同样有 $x \in (A \cap B) \cup (A \cap C)$. 故 $A \cap (B \cup C) \subset (A \cap B) \cup (A \cap C)$.
+反之, 设 $x \in (A \cap B) \cup (A \cap C)$, 则 $x \in A \cap B$ 或 $x \in A \cap C$. 无论哪种情形都有 $x \in A$, $x \in B \cup C$. 故 $x \in A \cap (B \cup C)$. 从而 $(A \cap B) \cup (A \cap C) \subset A \cap (B \cup C)$. 证毕.
+(3) 集合的差集与补集 设 A, B 为 U 的子集, 则 A 对 B 的补集或差集定义为
+$$A - B = A \backslash B := \{x \mid x \in A \text {且} x \notin B \}.$$
+如图 1.14 所示. 由补集定义, 我们有
+$$A = (A \cap B) \sqcup (A - B).$$
+$A$ 在 $U$ 中的补集定义为
+$$A ^ {c} := \{x \in U \mid x \notin A \}.$$
+如图 1.15 所示.
+图 1.14 集合的差集 A - B
+图1.15 集合的补集 A^c
+关于补集运算,有以下结论:
+[第 31 页]
+§1.7 集合与映射*
+命题1.7.2. 设  $A_{i} (i \in I)$  为某固定集合 U 的子集, 则
+$$\bigcap_ {i \in I} A _ {i} ^ {c} = \left(\bigcup_ {i \in I} A _ {i}\right) ^ {c}.\tag{1.34}$$
+通俗地说, 补集的交等于并集的补.
+证明. 我们有
+$$\begin{array}{r l} & {x \in \bigcap_ {i \in I} A _ {i} ^ {c} \Longleftrightarrow x \in A _ {i} ^ {c} \text {对任意} i \in I \text {成立}} \\ & {\qquad \Longleftrightarrow x \notin A _ {i} \text {对任意} i \in I \text {成立}} \\ & {\qquad \Longleftrightarrow x \notin \bigcup_ {i \in I} A _ {i}, \text {即} x \in \left(\bigcup_ {i \in I} A _ {i}\right) ^ {c}.} \end{array}$$
+关于两个集合并集的阶数有以下结论.
+命题1.7.3. (容斥原理) 如果 A, B 为有限集合, 则  $A \cup B$  和  $A \cap B$  均为有限集, 且
+$$\left| A \cup B \right| = \left| A \right| + \left| B \right| - \left| A \cap B \right|.\tag{1.35}$$
+证明. 易证
+$$A \cup B = (A - B) \sqcup B, \quad A = (A - B) \sqcup (A \cap B).$$
+故
+$$| A \cup B | = | A - B | + | B |, \quad | A | = | A - B | + | A \cap B |.$$
+由此即可得(1.35).
+(4) 集合的笛卡尔积集合 A 与 B 的笛卡尔积是由所有元素对  $(a, b)$  (其中  $a \in A, b \in B$ ) 构成的集合, 即
+$$A \times B := \{(a, b) \mid a \in A, b \in B \}.$$
+$A \times B$ 中的两个元素 $(a, b)$ 与 $(c, d)$ 相等当且仅当a = c, b = d.
+更进一步地, 集合族  $A_{i} (i \in I)$  的笛卡尔积定义为
+$$\prod_ {i \in I} A _ {i} := \left\{\left(a _ {i}\right) _ {i \in I} \mid a _ {i} \in A _ {i} \right\}.$$
+如所有的 $A_{i}$ 均为 $A$, 我们通常用 $A^{I}$ 表示其笛卡尔积. 特别地, 我们用 $A^{n}$ 表示 $n$ 个 $A$ 的笛卡尔积. 例如, $\mathbb{R}^n = \{(x_1, x_2, \ldots, x_n) | x_i \in \mathbb{R}, i = 1, 2, \ldots, n\}$. 再如, 设 $A = \{1, 2\}$, 则 $A^2 = \{(1, 1), (1, 2), (2, 1), (2, 2)\}$. 容易证明, $|A \times B| = |A| \times |B|$.
+[第 32 页]
+§1.7.3 映射*
+设 A, B 为两个非空集合. 如果对 A 中每个元素 a, 均有唯一元素  $b \in B$  与之对应, 则称此对应为 A 到 B 的映射, 记之为
+$$f: A \to B, \quad a \mapsto b = f (a).$$
+有时候也记为
+$$A \xrightarrow {f} B.$$
+集合A 称为 f 的定义域,  $Im(f) := f(A) = \{f(a) \mid a \in A\} \subseteq B$  称为 f 的值域或像集. b 称为 a 的像, a 称为 b 的原像.
+设f与g为集合A到B的两个映射.如果对于A中任意元素a,均有 $f(a)=g(a)$ ,则称映射f与g相等,记为f=g.
+当集合 $B$ 是数(如有理数或者实数)的集合时, 映射 $f$ 习惯上称为函数. 因此, 我们在中学阶段学习到的各种初等函数, 如多项式函数, 三角函数, 指数函数等都可以看成从 $\mathbb{R}$ 到 $\mathbb{R}$ 的映射.
+如果映射 $f$ 将不同的元素映射到不同的元素, 即当 $a \neq b \in A$ 时, $f(a) \neq f(b)$, 则称映射 $f$ 为单射. 容易验证, $f$ 为单射当且仅当 $f$ 的每个像都有唯一的原像, 即对元素 $a, b \in A$, 当 $f(a) = f(b)$ 时, 必有 $a = b$. 如果对任意 $b \in B$, 存在 $a \in A$, 使得 $f(a) = b$, 则称 $f$ 为满射. 如果 $f$ 既是单射又是满射, 则称 $f$ 为一一映射或双射. 例如, 恒同映射 $I_A: A \mapsto A, a \mapsto a$ (即将每个元素映射到自身的映射) 是双射.
+设  $f: A \mapsto B$  和  $g: B \mapsto C$  为映射, 则映射
+$$g \circ f: A \mapsto C, \quad a \mapsto g (f (a))$$
+称为 f 与 g 的复合映射.
+例如, 设 $f$ 是集合 $A$ 到集合 $B$ 的映射, 则 $f \circ I_A = f$, $I_B \circ f = f$. 映射复合的一个重要性质是结合律.
+命题1.7.4. (结合律) 设  $f: A \mapsto B, g: B \mapsto C$  与  $h: C \mapsto D$  为集合间的映射, 则
+$$(h \circ g) \circ f = h \circ (g \circ f).$$
+证明. 直接验证即可.
+设f是集合A到B的映射, $A_{0}\subset A$ . 映射 $f|_{A_{0}}:A_{0}\mapsto B,a\mapsto f(a)$ 称为映射f在集合 $A_{0}$ 上的限制. 映射 $i_{A_{0}}:A_{0}\mapsto A,a\mapsto a$ 称为嵌入映射. 显然, $f|_{A_{0}}=f\circ i_{A_{0}}$ .
+下面我们介绍逆映射. 设 f 是集合 A 到 B 的映射. 如果存在从集合 B 到集合 A 的映射 g, 满足  $g \circ f = I_{A}, f \circ g = I_{B}$ , 则称 g 是 f 的逆映射, 并称 f 是可逆的. f 的逆映射记
+为 $f^{-1}$ . 容易证明, 逆映射如果存在则是唯一的, 并且 $(f^{-1})^{-1}=f$ . 实际上, 设g,h均为f的逆, 则 $g=g\circ I_{B}=g\circ(f\circ h)=(g\circ f)\circ h=I_{A}\circ h=h$ .
+[第 33 页]
+例如, $f:\mathbb{R}\mapsto\mathbb{R}_{+},x\mapsto e^{x}$ 是可逆的,f的逆为 $f^{-1}:\mathbb{R}_{+}\mapsto\mathbb{R},x\mapsto\log(x)$ .这里 $R_{+}$ 表示全体正实数的集合.
+定理1.7.5. 映射 $f: A \mapsto B$ 可逆当且仅当f是双射.
+证明. 设 $f$ 是双射. 则对任意 $b \in B$, 存在唯一 $a \in A$ 使得 $f(a) = b$. 于是存在映射 $g: B \mapsto A$ 满足 $g(b) = a$, 且 $f(g(b)) = b$, 或等价地, $f \circ g = I_B$. 另一方面, $g(f(a)) = g(b) = a$, 亦即 $g \circ f = I_A$. 从而 $g$ 是 $f$ 的逆.
+反过来, 设 $f$ 可逆. 则存在映射 $g: B \mapsto A$ 满足 $f \circ g = I_B$, $g \circ f = I_A$. 对任何 $a_1 \neq a_2 \in A$, $a_1 = (g \circ f)(a_1) = g(f(a_1)) \neq g(f(a_2)) = (g \circ f)(a_2) = a_2$, 故 $f(a_1) \neq f(a_2)$, 从而 $f$ 是单射. 另一方面, 对任意 $b \in B$, $f(g(b)) = (f \circ g)(b) = b$, 故 $f$ 是满射, 从而 $f$ 是双射.
+对于有限集合, 我们有以下结论.
+命题1.7.6. 设A为有限集,  $f: A \mapsto A$  为映射. 则f是单射当且仅当f是满射.
+证明. 设 $f$ 为单射, 则 $|Im(f)| \geq |A|$. 但 $Im(f) \subset A$, 故 $|Im(f)| = |A|$, 进而 $Im(f) = A$, 即 $f$ 是满射.
+反之, 设 $f$ 是满射, 即 $Im(f) = A$, 于是 $|Im(f)| = |A|$. 若 $f$ 不是单射, 则 $|Im(f)| < |A|$. 矛盾! 故 $f$ 为单射.
+定义1.7.1. 设 $S$ 为集合. 我们称映射 $f: S \times S \mapsto S, (a, b) \mapsto p$ 为 $S$ 上的一个二元运算.
+注1. 在数学应用中, 记号  $p = f(a, b)$  并不是一个很适宜的记号. 实际上, 我们经常使用 +, ×, *, · 等符号来表示二元运算, 即
+$$\boxed {p = a b, a \times b, a + b, a * b, a \cdot b, \text {诸如此类}.}$$
+例1.7.1. 加法, 减法和乘法是实数集 $\mathbb{R}$ 上的二元运算, 除法是非零实数集 $\mathbb{R}^{\times} := \mathbb{R} \setminus \{0\}$ 上的二元运算.
+例1.7.2. 记  $\Sigma_{A}$  为集合 A 到自身的所有映射的集合, 则映射的复合构成  $\Sigma_{A}$  上的二元运算. 记  $S_{A}$  为集合 A 到自身的所有双射构成的集合, 则映射的复合构成  $S_{A}$  上的二元运算.
+[第 34 页]
+定义1.7.2. 集合 S 上的二元运算如果满足条件: 对所有  $a, b, c \in S$ ,
+$$(a b) c = a (b c),\tag{1.36}$$
+则称该二元运算满足结合律. 如果对任意  $a, b \in S$ ,
+$$a b = b a,\tag{1.37}$$
+则称其满足交换律.
+容易看出, 例1.7.1和1.7.2中的二元运算均满足结合律, 但映射的复合并不满足交换律. 因此, 结合律是更一般性的规律.
+§1.7.4 置换与排列*
+本小节, 我们简单介绍一个特殊的映射-置换. 置换在诸多代数问题, 如多项式方程求根以及行列式中都会用到.
+设 $A=\{1,2,\ldots,n\}$ . 则A到自身的一一映射称为一个置换,也称为排列. 所有置换的全体构成的集合记为 $S_{n}$ . 设 $\sigma$ 是一个置换,我们一般将置换表示成形式:
+$$\sigma = \left( \begin{array}{c c c c} 1 & 2 & \dots & n \\ \sigma (1) & \sigma (2) & \dots & \sigma (n) \end{array} \right)$$
+或者写成一个排列的形式 $\sigma=(\sigma(1),\sigma(2),\ldots,\sigma(n))$ . 特别地,  $\sigma=(1,2,\ldots,n)$  称为恒同置换, 记为 e. 显然,  $e\sigma=\sigma e=\sigma$ .
+例如, 置换  $\sigma=\begin{pmatrix}1&2&3\\2&3&1\end{pmatrix}$  表示  $A=\{1,2,3\}$  到自身的映射:  $\sigma(1)=2,\sigma(2)=3,$ $\sigma(3)=1$ . 该置换也可以表示成一个排列 $(2,3,1)$ .
+$S_{n}$ 中一共有n!个元素.例如, $S_{3}$ 由以下6个置换构成:
+$$\left( \begin{array}{c c c} 1 & 2 & 3 \\ 1 & 2 & 3 \end{array} \right), \left( \begin{array}{c c c} 1 & 2 & 3 \\ 1 & 3 & 2 \end{array} \right), \left( \begin{array}{c c c} 1 & 2 & 3 \\ 2 & 1 & 3 \end{array} \right), \left( \begin{array}{c c c} 1 & 2 & 3 \\ 2 & 3 & 1 \end{array} \right), \left( \begin{array}{c c c} 1 & 2 & 3 \\ 3 & 1 & 2 \end{array} \right), \left( \begin{array}{c c c} 1 & 2 & 3 \\ 3 & 2 & 1 \end{array} \right).$$
+或者写成 $S_{3} = \{(1,2,3),(1,3,2),(2,1,3),(2,3,1),(3,1,2),(3,2,1)\}$
+任意两个置换的复合仍然为一个置换, 我们称之为两个置换的乘积. 置换 $\sigma, \tau$ 的乘积记为 $\sigma \tau$. 例如, $\sigma = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 1 & 3 \end{pmatrix}$, $\tau = \begin{pmatrix} 1 & 2 & 3 \\ 3 & 2 & 1 \end{pmatrix}$. 则 $\sigma \tau = \begin{pmatrix} 1 & 2 & 3 \\ 3 & 1 & 2 \end{pmatrix}$, $\tau \sigma = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 3 & 1 \end{pmatrix}$.
+称只改变两个位置的置换为对换. 若改变的元素为 $i, j$, 则该置换记为 $(ij)$. 例如, $\begin{pmatrix} 1 & 2 & 3 & 4 & 5 \\ 1 & 2 & 5 & 4 & 3 \end{pmatrix}$ 即是对换(35).
+[第 35 页]
+命题1.7.7. 任意置换都是有限个对换的乘积.
+证明. 我们对 $n$ 做归纳. 当 $n = 2$ 时, $S_{2} = \{(12), (21)\}$. (21)本身是对换, 而(12)是恒同置换, 它可以表示为(12)(12). 现假设结论对 $n - 1$ 成立. 对 $n$, 我们先证: 任意置换 $\sigma$ 可以写成最多一个对换与一个置换 $\tau$ 的乘积, 这里 $\tau(n) = n$.
+设 $\sigma(i)=n,$ 如果i=n,取 $\tau=\sigma$ 即可.下设i<n,令
+$$\tau = (\sigma (1), \dots , \sigma (i - 1), \sigma (n), \sigma (i + 1), \dots , \sigma (n - 1), \sigma (i)),$$
+则 $\sigma=\tau\cdot(i,n)$ ，且 $\tau(n)=\sigma(i)=n.$
+对 $\tau' = (\tau(1), \tau(2), \ldots, \tau(n-1))$ 用归纳假设知, $\tau'$ 可以写成有限个对换的乘积, 于是 $\tau$ 也可以写成有限个对换的乘积, 从而 $\sigma$ 也是有限个对换的乘积. $\square$
+作为一个例子, 我们给出  $\sigma = (31542)$  的对换分解:  $\sigma = (35)(13)(12)$ . 当然, 上述分解并不唯一. 例如,  $\sigma$  还可以分解为  $\sigma = (12)(34)(45)(34)(23)$ . 不过无论如何分解,  $\sigma$  分解出的对换个数具有相同的奇偶性.
+定理1.7.8. 一个置换的所有对换分解中, 对换的个数具有相同的奇偶性.
+证明. 对置换 $\sigma$ , 引进 $\sigma$ 对函数 $f(x_{1},x_{2},\ldots,x_{n})$ 的作用
+$$\sigma (f) \left(x _ {1}, x _ {2}, \dots , x _ {n}\right) := f \left(x _ {\sigma (1)}, x _ {\sigma (2)}, \dots , x _ {\sigma (n)}\right).$$
+令 $\Delta(x_{1},x_{2},\ldots,x_{n}):=\Pi_{1\leq i<j\leq n}(x_{j}-x_{i})$ . 容易验证, 如果 $\sigma$ 是i个对换的乘积, 则
+$$\sigma (\Delta) (x _ {1}, x _ {2}, \dots , x _ {n}) = (- 1) ^ {i} \Delta (x _ {1}, x _ {2}, \dots , x _ {n}).$$
+如果 $\sigma$ 又可以分解为j个对换的乘积,则
+$$\sigma (\Delta) (x _ {1}, x _ {2}, \dots , x _ {n}) = (- 1) ^ {j} \Delta (x _ {1}, x _ {2}, \dots , x _ {n}).$$
+于是i与j必须具有相同的奇偶性.
+由上面的定理, 我们可以定义一个置换或排列的奇偶性. 如果一个置换的对换分解中对换的个数为偶数(奇数), 则称该置换为为偶置换(奇置换). 对任意置换 $\sigma$, 定义它的符号为 $\varepsilon_{\sigma} = (-1)^{k}$, 这里 $k$ 是 $\sigma$ 的对换分解中对换的个数. 因此, 偶置换的符号为 1 , 奇置换的符号为 -1 . 容易验证, 对任意两个置换 $\sigma$ 与 $\tau$, $\varepsilon_{\sigma\tau} = \varepsilon_{\sigma}\varepsilon_{\tau}$
+[第 36 页]
+§1.7.5 等价关系,等价类与分拆*
+定义1.7.3. 集合 A 中的元素间的关系 ~ 称为等价关系, 是指下述三条性质成立:
+(1) (自反性) 对所有  $a \in A, a \sim a$ .
+(2) (对称性) 如果 $a \sim b$, 则 $b \sim a$.
+(3) (传递性) 如果 $a \sim b$ 且 $b \sim c$, 则 $a \sim c$.
+定义1.7.4. 集合 A 作为它的一些子集合的不交并, 称为 A 的一个分拆.
+设 $\sim$ 是 $A$ 上的一个等价关系. 对 $a \in A$, 记 $[a] = \{b \in A \mid b \sim a\}$, 即 $[a]$ 为 $A$ 中所有与 $a$ 等价的元素构成的子集合. 子集合 $[a]$ 称为 $a$ 所在的等价类. 注意到
+$$[ a ] \cap [ b ] = {\left\{ \begin{array}{l l} {[ a ] = [ b ],} & {{\text {如果}} a \sim b,} \\ {\varnothing ,} & {{\text {如果}} a \approx b.} \end{array} \right.}$$
+记 $A / \sim$ 为 $A$ 中所有等价类构成的集合, 即
+$$A / \sim := \{[ a ] \mid a \in A \} \quad (\text { 去掉重复项 }).$$
+则 $A$ 可以写为不交并
+$$A = \bigsqcup_ {[ a ] \in A / \sim} [ a ].\tag{1.38}$$
+由此我们得到 A 的一个分拆. 反过来, 如果  $A = \bigsqcup_{i \in I} A_i$  为 A 的分拆, 则很容易在 A 上定义等价关系:
+$$a \sim b \quad {\text { 当   且   仅   当 }} \quad a, b   \text { 属   于   同   一   个 } A _ {i}.$$
+故我们有如下定理
+定理1.7.9. 集合 A 的分拆与定义在 A 上的等价关系一一对应.
+例1.7.3. 整数集合 $\mathbb{Z}$ 可以分拆为偶数集合和奇数集合的不交并. 另一方面, 在 $\mathbb{Z}$ 上可以定义等价关系: $a \sim b$ 如果 $a - b$ 是偶数. 则偶数集合是此等价关系中 0 所在的等价类, 奇数集合为 1 所在的等价类.
+设 $f: A \mapsto B$ 为集合间的映射. 对于元素 $b \in B$, 令 $b$ 的原像集合 $f^{-1}(b) = \{a \in A \mid f(a) = b\}$, 则 $f^{-1}(b)$ 为 $A$ 的子集. 对于 $B$ 中不同的元素 $b$ 和 $b'$, 有 $f^{-1}(b) \cap f^{-1}(b') = \varnothing$. 并且, $f^{-1}(b) = \varnothing$ 当且仅当 $b \notin f(A)$. 故我们得到分拆
+$$A = \bigsqcup_ {b \in f (A)} f ^ {- 1} (b).\tag{1.39}$$
+[第 37 页]
+我们称集合 $A$ 的这个分拆为映射 $f$ 决定的分拆. 它决定的等价关系即
+$$a \sim a ^ {\prime} \iff f (a) = f \left(a ^ {\prime}\right).$$
+例1.7.4. 如果～是集合A上的等价关系,对于自然映射
+$$p: A \to A / \sim , \quad a \mapsto [ a ],$$
+可以看出, p 所决定的分拆即等价关系~所决定的分拆.
+例1.7.5. 定义映射 $f: \mathbb{Z} \mapsto \{0,1\}$, 其中 $f(2n) = 0$, $f(2n + 1) = 1$. 则映射 $f$ 决定的等价关系和分拆即与例1.7.3给出的等价关系是同一等价关系.
+例1.7.6. 设 $f: \mathbb{R}^2 = \mathbb{R} \times \mathbb{R} \mapsto \mathbb{R}$ 为实数减法映射 $(x, y) \mapsto x - y$, 则 $f^{-1}(a)$ 为直线 $y = x - a$. 实平面 $\mathbb{R}^2$ 由映射 $f$ 决定的分拆即是平行直线束 $y = x - a (a \in \mathbb{R})$ 的不交并.
+§1.8 复数*
+这一节中,我们简单回顾一下有关复数的一些知识,特别是复数的几何表示与运算.
+§1.8.1 复数的四则运算*
+复数就是形如 $z = x + iy$ 的数, 其中 $i$ 为虚数单位 $\sqrt{-1}$, 而 $x, y$ 为实数, 分别称为复数 $z$ 的实部和虚部, 记作 $\operatorname{Re} z$ 和 $\operatorname{Im} z$.
+设 $z_{1} = x_{1} + iy_{1}, z_{2} = x_{2} + iy_{2}$ 为两个复数, 复数的加法与减法定义为:
+$$\begin{array}{l} z _ {1} + z _ {2} = (x _ {1} + x _ {2}) + i (y _ {1} + y _ {2}), \\ z _ {1} - z _ {2} = (x _ {1} - x _ {2}) + i (y _ {1} - y _ {2}). \end{array}\tag{1.40}$$
+复数的乘法与实数的乘法一样, 只要注意  $i^{2} = -1$  即可. 就是说
+$$z _ {1} z _ {2} = \left(x _ {1} + i y _ {1}\right) \left(x _ {2} + i y _ {2}\right) = \left(x _ {1} x _ {2} - y _ {1} y _ {2}\right) + i \left(x _ {1} y _ {2} + x _ {2} y _ {1}\right).\tag{1.41}$$
+除法定义为
+$$\frac {x _ {2} + i y _ {2}}{x _ {1} + i y _ {1}} = \frac {(x _ {2} + i y _ {2}) (x _ {1} - i y _ {1})}{(x _ {1} + i y _ {1}) (x _ {1} - i y _ {1})} = \frac {(x _ {1} x _ {2} + y _ {1} y _ {2}) + i (x _ {1} y _ {2} - x _ {2} y _ {1})}{x _ {1} ^ {2} + y _ {1} ^ {2}}.\tag{1.42}$$
+[第 38 页]
+§1.8.2 复数的几何表示*
+在平面中取一个直角坐标系 Oxy, 我们用坐标为  $(x,y)$  的点 P 表示复数  $z = x + iy$ . 这样, 复数就与平面中的点一一对应. x 轴与实数对应, 也称为实轴; y 轴与纯虚数对应, 也称为虚轴. 与复数建立了这种对应关系的平面称为复平面.
+我们也常用向量  $\overrightarrow{OP}$  表示复数  $z = x + iy$ . 这样复数 z, 复平面上的点 P 以及向量  $\overrightarrow{OP}$  之间建立了一一对应关系. 如果  $z_{1}, z_{2}$  对应的向量分别为  $\overrightarrow{OP_{1}}, \overrightarrow{OP_{2}}$ , 则  $z_{1} + z_{2}$  对应的向量恰为  $\overrightarrow{OP_{1}} + \overrightarrow{OP_{2}}$ . 因此复数的加法运算和向量的加法运算是一致的. 由于复数  $z_{1}, z_{2}, z_{1} + z_{2}$  对应的向量恰好构成了一个三角形, 由三角形两边之和大于第三边的性质可得到复数的三角不等式
+$$\left| z _ {1} + z _ {2} \right| \leq \left| z _ {1} \right| + \left| z _ {2} \right|.\tag{1.43}$$
+复数 z 对应的向量  $\overrightarrow{OP}$  的长度称为复数 z 的模, 记作  $|z| = r = \sqrt{x^{2} + y^{2}}$ . 将 x 轴正向逆时针旋转至向量  $\overrightarrow{OP}$  所得的角  $\theta$  称为复数 z 的幅角, 记作 arg z (图 1.16). 复数 z 的幅角并不唯一, 它们彼此相差  $2\pi$  的整数倍. 在实际中, 我们一般规定  $0 \leq arg z < 2\pi$ , 称之为幅角的主值. 例如,  $\arg(-i) = \frac{3}{2}\pi$ . 当然也可以规定幅角主值在其它的范围, 如  $-\pi \leq arg z < \pi$ . 规定复数 z = 0 的幅角是不定的.
+图 1.16 复数的几何定义
+复数 $x - iy$ 称为复数 $z = x + iy$ 的共轭复数, 记为 $\bar{z}$. 从几何上看, $z$ 和 $\bar{z}$ 关于实轴对称, 因此有 $|\bar{z}| = |z|$, $\arg \bar{z} = 2\pi - \arg z$. 关于复数的共轭有如下简单的性质, 证明留作习题.
+$$| z | ^ {2} = z \bar {z}, \quad \overline {{z _ {1} + z _ {2}}} = \overline {{z _ {1}}} + \overline {{z _ {2}}}, \quad \overline {{z _ {1} z _ {2}}} = \overline {{z _ {1}}}   \overline {{z _ {2}}}.\tag{1.44}$$
+知道了复数 z 的模长 r 与幅角  $\theta$ ，则 z 可以表示为
+$$z = x + i y = r \cos \theta + i r \sin \theta = r (\cos \theta + i \sin \theta)\tag{1.45}$$
+[第 39 页]
+§1.8 复数*
+称上式为复数的三角表示. 利用复数的三角表示, 很容易实现复数的乘法运算, 并且可以给予简单的几何解释.
+假设  $z_{1}=r_{1}(\cos\theta_{1}+i\sin\theta_{1}), z_{2}=r_{2}(\cos\theta_{2}+i\sin\theta_{2})$ ，则由乘法定义知
+$$\begin{array}{l} z _ {1} z _ {2} = r _ {1} r _ {2} \left[ \left(\cos \theta_ {1} \cos \theta_ {2} - \sin \theta_ {1} \sin \theta_ {2}\right) + i \left(\sin \theta_ {1} \cos \theta_ {2} + \sin \theta_ {2} \cos \theta_ {1}\right) \right] \\ = r _ {1} r _ {2} \left(\cos (\theta_ {1} + \theta_ {2}) + i \sin (\theta_ {1} + \theta_ {2})\right). \end{array}\tag{1.46}$$
+由此可得
+$$| z _ {1} z _ {2} | = | z _ {1} | | z _ {2} |,\tag{1.47}$$
+$$\arg (z _ {1} z _ {2}) = \arg z _ {1} + \arg z _ {2}.\tag{1.48}$$
+即复数乘积的模等于复数模的乘积, 复数乘积的幅角等于各幅角的和(如超出主值范围, 则还要减去 $2\pi$ 的整数倍). 由此可以得到乘法的一个几何解释. 设复数 $w = r(\cos \theta + i \sin \theta)$, 则 $w \cdot z$ 表示将复数 $z$ 对应的向量模长伸缩 $r$ 倍, 再逆时针旋转 $\theta$ 角. 因此, 利用复数乘法可以方便地表示旋转变换.
+复数的三角形式还有一种更为常用的表示方式. 根据 Euler 公式
+$$e ^ {i \theta} = \cos \theta + i \sin \theta$$
+(只要给出复指数函数的适当定义, 上述公式是可以证明的, 这里我们可以将它看成是一个记号), 模长为 $r$ 幅角为 $\theta$ 的复数 $z$ 可记为 $z = re^{i\theta}$. 由 (1.46) 知
+$$r _ {1} e ^ {i \theta_ {1}} \cdot r _ {2} e ^ {i \theta_ {2}} = r _ {1} r _ {2} e ^ {i (\theta_ {1} + \theta_ {2})}.$$
+因此  $e^{i\theta}$  可以象普通的指数函数一样进行运算.例如:
+$$(r e ^ {i \theta}) ^ {n} = r ^ {n} e ^ {i n \theta}, \quad n = 0, \pm 1, \pm 2, \dots \quad (\text { de   Moivre   公式 })\tag{1.49}$$
+例1.8.1. 求复数 $z = 1 + \cos \theta + i\sin \theta (-\pi \leq \theta < \pi)$ 的三角形式.
+解.
+$$| z | = \sqrt {(1 + \cos \theta) ^ {2} + \sin^ {2} \theta} = 2 \left| \cos \frac {\theta}{2} \right| = 2 \cos \frac {\theta}{2},$$
+$$\arg z = \arccos \frac {1 + \cos \theta}{2 \cos \frac {\theta}{2}} = \arccos \cos \frac {\theta}{2} = \frac {\theta}{2}.$$
+从而 $z = 2\cos \frac{\theta}{2}\left(\cos \frac{\theta}{2} +i\sin \frac{\theta}{2}\right).$
+例1.8.2. 在复数域范围内求方程  $z^{n}=a$  的根, 其中 a 为复数, n 为正整数.
+[第 40 页]
+解. 设 $a = r e^{i\theta}$, 其中 $r \geq 0, 0 \leq \theta < 2\pi$. 设 $z = s e^{i\phi}$, 则
+$$s ^ {n} e ^ {i n \phi} = r e ^ {i \theta}.$$
+因此
+$$s = r ^ {\frac {1}{n}}, \quad \phi = \frac {\theta + 2 k \pi}{n} \quad (k = 0, 1, \dots , n - 1)$$
+所求方程有 n 个不同的根, 它们是
+$$r ^ {\frac {1}{n}} e ^ {i \frac {\theta + 2 k \pi}{n}} \quad (k = 0, 1, \dots , n - 1).$$
+本节最后,我们给出两个例子说明复数在几何中的应用.
+例1.8.3. 证明:平行四边形的两条对角线的平方和等于四边的平方和.
+证明. 假设平行四边形某相邻两边向量对应的复数分别为 $z_{1}, z_{2}$ ，则两对角线向量分别对应复数 $z_{1} + z_{2}$ 与 $z_{1} - z_{2}$ . 于是我们只需证明
+$$\left| z _ {1} + z _ {2} \right| ^ {2} + \left| z _ {1} - z _ {2} \right| ^ {2} = 2 \left(\left| z _ {1} \right| ^ {2} + \left| z _ {2} \right| ^ {2}\right).$$
+实际上，
+$$\begin{array}{c} | z _ {1} + z _ {2} | ^ {2} = (z _ {1} + z _ {2}) (\overline {{z _ {1} + z _ {2}}}) = (z _ {1} + z _ {2}) (\bar {z} _ {1} + \bar {z} _ {2}) \\ = z _ {1} \bar {z} _ {1} + z _ {1} \bar {z} _ {2} + z _ {2} \bar {z} _ {1} + z _ {2} \bar {z} _ {2} \\ = | z _ {1} | ^ {2} + z _ {1} \bar {z} _ {2} + z _ {2} \bar {z} _ {1} + | z _ {2} | ^ {2}. \end{array}$$
+同理可得
+$$\left| z _ {1} - z _ {2} \right| ^ {2} = \left| z _ {1} \right| ^ {2} - z _ {1} \bar {z} _ {2} - z _ {2} \bar {z} _ {1} + \left| z _ {2} \right| ^ {2}.$$
+两式相加, 即得要证的等式.
+例1.8.4. 在平面直角坐标系Oxy中, 求将点 $P = (x, y)$ 绕原点逆时针旋转 $\theta$ 角后所得点 $P'$ 的坐标.
+解. 设 $P'$ 的坐标为 $(x', y')$. 点P与 $P'$ 对应的复数分别为 $z = x + yi$ 及 $z' = x' + y'i$. 根据复数乘法的意义, $z' = e^{i\theta}z$, 即
+$$x ^ {\prime} + y ^ {\prime} i = (x + i y) (\cos \theta + i \sin \theta) = (x \cos \theta - y \sin \theta) + (x \sin \theta + y \cos \theta) i.$$
+因此，
+$$\left\{ \begin{array}{l l} x ^ {\prime} & = x \cos \theta - y \sin \theta , \\ y ^ {\prime} & = x \sin \theta + y \cos \theta . \end{array} \right.\tag{1.50}$$
+[第 41 页]
+上述公式即平面直角坐标系中,绕原点逆时针旋转 $\theta$ 角的点变换公式.
+§1.9 数域*
+复数集的任何一个子集称为一个数集. 自然数集 $\mathbb{N}$, 整数集 $\mathbb{Z}$, 有理数集 $\mathbb{Q}$, 实数集 $\mathbb{R}$ 都是大家熟知的数集.
+设 $F$ 为一个数集, 在 $F$ 中任取两数作某种运算, 如果其结果仍在 $F$ 中, 则称数集 $F$ 对这种运算是封闭的. 例如 $\mathbb{C}, \mathbb{R}, \mathbb{Q}$ 对数的加减乘除运算是封闭的, $\mathbb{Z}$ 对数的加减乘运算是封闭的, 但对除法运算不封闭, 而 $\mathbb{N}$ 只对加法乘法运算封闭.
+定义1.9.1. 设数集 F 至少包含两个不同的元素, 称 F 为数域, 如果 F 对数的加减乘除运算是封闭的, 即当  $a, b \in F$  时,  $a \pm b, ab, \frac{a}{b} (b \neq 0) \in F$ .
+由定义知, $\mathbb{C},\mathbb{R},\mathbb{Q}$ 为数域, 分别称为复数域, 实数域和有理数域. $\mathbb{Z},\mathbb{N}$ 则不是数域.
+由定义不难看出, 一个数域必含有 0,1 两个元素.实际上可以证明, 在通常的四则运算下任何数域都包含有理数域(读者不妨证明).下面的例子表明, 除了上述三种数域, 还有其它的数域.
+例1.9.1. 证明数集 $\mathbb{Q}(\sqrt{2}) = \{a + b\sqrt{2}: a, b \in \mathbb{Q}\}$ 为一个数域.
+证明. 首先 $\mathbb{Q}(\sqrt{2})$ 对加减运算封闭是显然的. 任取 $\mathbb{Q}(\sqrt{2})$ 中的两个元素 $a + b\sqrt{2}, c + d\sqrt{2}$,
+$$(a + b \sqrt {2}) (c + d \sqrt {2}) = (a c + 2 b d) + (a d + b c) \sqrt {2},$$
+而当 $c + d\sqrt{2} \neq 0$ 时，
+$$\frac {a + b \sqrt {2}}{c + d \sqrt {2}} = \frac {(a + b \sqrt {2}) (c - d \sqrt {2})}{(c + d \sqrt {2}) (c - d \sqrt {2})} = \frac {a c - 2 b d}{c ^ {2} - 2 d ^ {2}} + \frac {b c - a d}{c ^ {2} - 2 d ^ {2}} \sqrt {2}.$$
+由于 $a, b, c, d \in \mathbb{Q}$, $\mathbb{Q}$ 为数域, 所以 $ac + 2bd \in \mathbb{Q}$, $ad + bc \in \mathbb{Q}$, 即 $\mathbb{Q}(\sqrt{2})$ 对乘法运算是封闭的. 又由于 $c^2 - 2d^2 \neq 0$, 所以
+$$\frac {a c - 2 b d}{c ^ {2} - 2 d ^ {2}} \in \mathbb {Q}, \quad \frac {b c - a d}{c ^ {2} - 2 d ^ {2}} \in \mathbb {Q},$$
+即 $\mathbb{Q}(\sqrt{2})$ 对除法运算是封闭的.故 $\mathbb{Q}(\sqrt{2})$ 为一个数域.
+在本书的后续章节中, 我们考虑的数域 F 均指包含有理数域, 运算为通常四则运算的数域, 如实数域、复数域等.
+[第 42 页]
+§1.10 求和符号*
+为了后面的需要,我们在这里简单介绍一下求和符号的运用.
+设  $a_{1}, a_{2} \cdots, a_{n}$  为 n 个数, 通常我们用  $\sum_{i=1}^{n} a_{i}$  表示和式  $a_{1} + a_{2} + \cdots + a_{n}$ . 其中  $\Sigma$  为求和符号, i 为求和指标,  $\Sigma$  的上下标表示求和指标 i 的取值范围. 注意求和指标可以用其它的字母代替, 例如  $\sum_{j=1}^{n} a_{j}, \sum_{k=1}^{n} a_{k}$  表示的都是同一个和式. 容易看出, 求和符号满足以下性质:
+$$\begin{array}{l} {\sum_ {i = 1} ^ {n} (a _ {i} + b _ {i}) = \sum_ {i = 1} ^ {n} a _ {i} + \sum_ {i = 1} ^ {n} b _ {i},} \\ {\sum_ {i = 1} ^ {n} \lambda a _ {i} = \lambda \sum_ {i = 1} ^ {n} a _ {i}. \qquad (\text {其中}   \lambda   \text {为常数})} \end{array}$$
+在线性代数课程中, 我们经常会遇到双重, 甚至多重求和. 多重求和的原则是从内向外对每个求和符号逐次求和. 例如 $\sum_{j=1}^{m} \sum_{i=1}^{n} a_{ij}$ 中, 就应该先对求和指标 $i$ 求和, 再对求和指标 $j$ 求和. 在对指标 $i$ 求和时, 指标 $j$ 是固定不变的, 因此有
+$$\sum_ {i = 1} ^ {n} a _ {i j} = a _ {1 j} + a _ {2 j} + \dots + a _ {n j},$$
+所以
+$$\begin{array}{c} \sum_ {j = 1} ^ {m} \sum_ {i = 1} ^ {n} a _ {i j} = \sum_ {j = 1} ^ {m} (a _ {1 j} + a _ {2 j} + \dots + a _ {n j}) \\ = \sum_ {j = 1} ^ {m} a _ {1 j} + \sum_ {j = 1} ^ {m} a _ {2 j} + \dots + \sum_ {j = 1} ^ {m} a _ {n j}. \end{array}$$
+从上式可以看出 $\sum_{j=1}^{m} \sum_{i=1}^{n} a_{ij}$ 等于所有 $a_{ij} (1 \leq i \leq n, 1 \leq j \leq m)$ 的和. 同样的道理, $\sum_{i=1}^{n} \sum_{j=1}^{m} a_{ij}$ 表示的也是所有 $a_{ij}$ 的和. 事实上, 如果我们将这些数 $a_{ij}$ 排成如下的一个方块:
+$$\begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 m} \\ a _ {2 1} & a _ {2 2} & \dots & a _ {2 m} \\ \dots & \dots & \dots & \dots \\ a _ {n 1} & a _ {n 2} & \dots & a _ {n m} \end{array}$$
+那么 $\sum_{j=1}^{m} \sum_{i=1}^{n} a_{ij}$ 就是先固定一个 $j$, 对上述方块的第 $j$ 列求和, 再将得到的和相加; 而 $\sum_{i=1}^{n} \sum_{j=1}^{m} a_{ij}$ 则是先固定一个 $i$, 对第 $i$ 行求和, 再将得到的和相加. 因此我们有
+$$\sum_ {j = 1} ^ {m} \sum_ {i = 1} ^ {n} a _ {i j} = \sum_ {i = 1} ^ {n} \sum_ {j = 1} ^ {m} a _ {i j}.$$
+[第 43 页]
+上式表明在多重求和时, 可以交换求和符号的次序. 这一点非常重要, 今后会经常用到.
+尽管是多重求和, 有时也可以只用一个求和号表示. 例如 $\sum_{1 \leq i, j \leq n} a_{ij}$ 就是 $\sum_{j=1}^{n} \sum_{i=1}^{n} a_{ij}$. 有些时候, 我们并不是对所有的项求和, 而只是对满足一定条件的项求和. 这时我们通常将这些条件写在求和符号的下方. 例如
+$$\begin{array}{c} \sum_ {1 \leq i \leq j \leq n} a _ {i j} = a _ {1 1} + (a _ {1 2} + a _ {2 2}) + (a _ {1 3} + a _ {2 3} + a _ {3 3}) \\ + \dots + (a _ {1 n} + a _ {2 n} + \dots + a _ {n n}) \end{array}$$
+表示的是满足  $i \leq j$  的所有项的和. 如果用二重和式表示, 可得
+$$\sum_ {1 \leq i \leq j \leq n} a _ {i j} = \sum_ {j = 1} ^ {n} \sum_ {i = 1} ^ {j} a _ {i j} = \sum_ {i = 1} ^ {n} \sum_ {j = i} ^ {n} a _ {i j}.$$
+注意上式中的后一个等式,形式上似乎与前面所说的求和可交换次序不符,这是由于和式  $\sum_{j=1}^{n}\sum_{i=1}^{j}a_{ij}$  中,内层的求和  $\sum_{i=1}^{j}a_{ij}$  中,指标 i 的取值范围涉及到了外层指标 j,这时就不能轻易的直接交换求和次序了.
+例1.10.1. 证明: $\sum_{j=1}^{m} \sum_{i=1}^{n} a_i b_j = (\sum_{i=1}^{n} a_i) (\sum_{j=1}^{m} b_j)$.
+证明. 在左端的二重求和中, 先固定一个 $j$, 对指标 $i$ 求和. 这时 $b_{j}$ 与求和指标 $i$ 无关, 可看成常数, 可以提到求和号的外面, 所以
+$$\sum_ {j = 1} ^ {m} \sum_ {i = 1} ^ {n} a _ {i} b _ {j} = \sum_ {j = 1} ^ {m} \left(b _ {j} \sum_ {i = 1} ^ {n} a _ {i}\right).$$
+再对 $j$ 求和时, $\sum_{i=1}^{n} a_i$ 与求和指标 $j$ 无关, 可看成常数, 因此有
+$$\sum_ {j = 1} ^ {m} \left(b _ {j} \sum_ {i = 1} ^ {n} a _ {i}\right) = \left(\sum_ {i = 1} ^ {n} a _ {i}\right) \left(\sum_ {j = 1} ^ {m} b _ {j}\right).$$
+求和符号还有更一般的形式. 设  $\Lambda$  为一个有限集,  $\Lambda$  中每个元素  $\lambda$  对应了一个数  $a_{\lambda}$ , 我们将所有  $a_{\lambda} (\lambda \in \Lambda)$  的和记为  $\sum_{\lambda \in \Lambda} a_{\lambda}$ . 上面介绍的  $\sum_{i=1}^{n} a_{i}$  可以看成一个特例, 即取  $\Lambda = \{1, 2, \cdots, n\}$ . 今后在定义 n 阶行列式时, 我们要用到这样的求和符号. 在那里,  $\Lambda$  为 n 个元素的所有排列构成的集合.
+最后,介绍一下乘积符号  $\Pi$ . 设  $a_{1}, a_{2}, \cdots, a_{n}$  为一列数, 我们用  $\prod_{i=1}^{n} a_{i}$  表示乘积  $a_{1}, a_{2}, \cdots, a_{n}$ . 乘积符号的上下标的含义与求和符号完全一样, 不再赘述.
+[第 44 页]
+习题一
+注: 以下各题中涉及的坐标系均为直角坐标系.
+1. 设  $\overrightarrow{AM} = \overrightarrow{MB}$ ，证明：对任意一点 O,  $\overrightarrow{OM} = \frac{1}{2} (\overrightarrow{OA} + \overrightarrow{OB})$ .
+2. 设 O 为一定点, A, B, C 为不共线的三点. 证明点 M 位于平面 ABC 上的充分必要条件是存在实数  $k_{1}, k_{2}, k_{3}$ , 使得
+$$\overrightarrow {O M} = k _ {1} \overrightarrow {O A} + k _ {2} \overrightarrow {O B} + k _ {3} \overrightarrow {O C}, \quad \text {且} \quad k _ {1} + k _ {2} + k _ {3} = 1.$$
+3. 证明向量 $\mathbf{a} - \mathbf{b} + \mathbf{c}, -2\mathbf{a} + 3\mathbf{b} - 2\mathbf{c}, 2\mathbf{a} - \mathbf{b} + 2\mathbf{c}$ 线性相关.
+4. 证明: 三维空间中四个或四个以上的向量一定线性相关.
+5. 设  $e_{1}, e_{2}, e_{3}$  为一组基.
+(1) 证明:  $a = e_{1} + 2e_{2} - e_{3}, b = 2e_{1} + e_{2} + e_{3}, c = 3e_{1} + 2e_{3}$  为一组基;
+(2) 设  $\tilde{c}=3e_{1}+xe_{2}+2e_{3}$ ，当 x 取何值时，a,b, $\tilde{c}$  共面.
+6. 已知三点 $A(2,1,-1), B(3,5,1), C(1,-3,-3)$, 问 $A, B, C$ 是否共线?
+7. 已知线段 AB 被点  $C(1,2,3)$  和  $D(2,-1,5)$  三等分, 求端点 A, B 的坐标.
+8. 设  $\mathbf{a}=(1,-2,4)$ ,  $\mathbf{b}=(2,2,1)$ , 试计算  $\mathbf{a}\cdot\mathbf{b}, (\mathbf{a}+\mathbf{b})\cdot(\mathbf{a}-\mathbf{b}), (\mathbf{a}-\mathbf{b})^{2}$ .
+9. 设三个向量 $\mathbf{a}, \mathbf{b}, \mathbf{c}$ 两两间的夹角为 $45^{\circ}$, 且 $|\mathbf{a}| = 1, |\mathbf{b}| = 2, |\mathbf{c}| = 3$. 求向量 $\mathbf{a} + 2\mathbf{b} - \mathbf{c}$ 的模.
+10. 设 a, b, c 是满足  $a + b + c = 0$  的单位向量, 试求  $a \cdot b + b \cdot c + c \cdot a$  的值.
+11. 设向量 a, b 的夹角为  $60^{\circ}$ ，且  $|a| = 1, |b| = 2$ ，试求  $(\mathbf{a} \times \mathbf{b})^{2}, |(\mathbf{a} + \mathbf{b}) \times (\mathbf{a} - \mathbf{b})|$ .
+12. 设向量 $\mathbf{a} = (1, -1, 2), \mathbf{b} = (2, 3, -4)$, 求 $\mathbf{a} \times \mathbf{b}, (\mathbf{a} + \mathbf{b}) \times (\mathbf{a} - \mathbf{b})$.
+13. 一个四面体的顶点为 $A(1,2,3), B(-1,0,2), C(2,4,5), D(0,-3,4)$, 求它的体积.
+14. 判断下列结论是否成立, 不成立时请举例说明.
+(1) 若 $\mathbf{a} \cdot \mathbf{b} = 0$, 则 $\mathbf{a} = \mathbf{0}$ 或 $\mathbf{b} = \mathbf{0}$;
+(2) 若  $a \times b = a \times c$ ，则必有 b = c;
+(3) $(\mathbf{a} \cdot \mathbf{b})\mathbf{c} = \mathbf{a}(\mathbf{b} \cdot \mathbf{c})$;
+[第 45 页]
+§1.10 求和符号*
+(4) $(\mathbf{a} \cdot \mathbf{b})^2 = \mathbf{a}^2 \cdot \mathbf{b}^2$;
+(5)  $(\mathbf{a}+\mathbf{b})\times(\mathbf{a}+\mathbf{b})=\mathbf{a}\times\mathbf{a}+2\mathbf{a}\times\mathbf{b}+\mathbf{b}\times\mathbf{b};$
+(6)  $(\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c} = \mathbf{a} \times (\mathbf{b} \cdot \mathbf{c})$ .
+15. 证明下列等式:
+(1) $(\mathbf{a} \times \mathbf{b})^2 = \mathbf{a}^2\mathbf{b}^2 - (\mathbf{a} \cdot \mathbf{b})^2$.
+(2)  $(\mathbf{a} \times \mathbf{b}) \times \mathbf{c} + (\mathbf{b} \times \mathbf{c}) \times \mathbf{a} + (\mathbf{c} \times \mathbf{a}) \times \mathbf{b} = \mathbf{0}.$
+16. 证明共轭复数的下列性质:
+$$| z | ^ {2} = z \bar {z}, \quad \overline {{z _ {1} + z _ {2}}} = \overline {{z _ {1}}} + \overline {{z _ {2}}}, \quad \overline {{z _ {1} z _ {2}}} = \overline {{z _ {1}}} \overline {{z _ {2}}}.$$
+17. 设 $z = \cos \theta + i \sin \theta \neq 1$, 求 $\frac{1 + z}{1 - z}$.
+18. 求下列和式:
+(1)  $1 + \cos\theta + \cos2\theta + \cdots + \cos n\theta;$
+(2)  $\sin\theta + \sin2\theta + \cdots + \sin n\theta.$
+19. 证明: $|1 + z_1 \bar{z}_2|^2 + |z_1 - z_2|^2 = (1 + |z_2|^2)(1 + |z_1|^2)$.
+[第 46 页]
+[第 47 页]
+第二章 线性方程组
+我们在中学学过了多元一次方程组的求解方法. 在那里变量(或变元)的个数通常为两个或三个, 并且方程的个数与变量的个数相同. 在本章中, 我们将一般地讨论由任意个变量及任意个方程构成的一次方程组的求解方法以及解的属性. 我们称关于变量都为一次的方程组成的方程组为线性方程组. 求解线性方程组的问题在科学与工程计算中有广泛的应用, 如天气预报、大坝与桥梁的设计、导弹的发射等.
+一般地, 具有n个变量 $x_{1},\cdots,x_{n}$ , m个方程组成的线性方程组具有形式:
+$$\left\{ \begin{array}{l} a _ {1 1} x _ {1} + a _ {1 2} x _ {2} + \dots + a _ {1 n} x _ {n} = b _ {1} \\ a _ {2 1} x _ {1} + a _ {2 2} x _ {2} + \dots + a _ {2 n} x _ {n} = b _ {2} \\ \dots \dots \\ a _ {m 1} x _ {1} + a _ {m 2} x _ {2} + \dots + a _ {m n} x _ {n} = b _ {m} \end{array} \right.\tag{2.1}$$
+其中, $a_{ij}$ 是第i个方程中第j个变量 $x_{j}$ 的系数, $b_{i}$ 是第i个方程的常数项.本章中,我们假设系数 $a_{ij}$, 常数项 $b_{i}$ 及方程组的解 $x_{j}$ 均属于某个数域F (如有理数域Q, 实数域R或复数域C). 如果常数项都为零, 则称相应的线性方程组为齐次线性方程组. 否则, 称为非齐次线性方程组. 若将 $x_{1}=c_{1},\cdots,x_{n}=c_{n}$ 代入上述方程等式都成立, 则称 $(c_{1}\cdots c_{n})$ 为该方程组的一组解. 线性方程组(2.1)的解的全体称为该方程组的解集. 如果解集非空, 则称线性方程组(2.1)是相容的; 否则, 称线性方程组不相容.
+关于线性方程组的解,有以下几个基本问题:
+(1) 线性方程组是否存在解? 如果有解, 有多少个解?
+(2) 如何求线性方程组的解?
+(3) 解的公式表示.
+(4) 解集的几何结构.
+(5) 线性方程组的解是否符合实际的需要(可行解问题)?
+本章及后面的第三章、第四章及第五章将围绕这些问题展开讨论, 并由此引入线性代数的基本工具-矩阵与行列式, 以及线性代数的基本研究对象-线性空间.
+[第 48 页]
+§2.1 Gauss 消元法
+关于线性方程组的求解,有十分悠久的历史. 我国古代名著《九章算术》就有求解线性方程组的一般方法,现在一般称这种方法为Gauss消元法. Gauss消元法的基本思想是:将线性方程组化成所谓的三角形(或阶梯形)线性方程组,然后再通过回代技术求解出所有变量. 下面我们通过几个实例来说明这种方法.
+例2.1.1. 求解下列线性方程组
+$$\left\{ \begin{array}{l l} & 3 x _ {1} + 2 x _ {2} - x _ {3} = 6 \\ & x _ {1} + 3 x _ {2} + 2 x _ {3} = 9 \\ & 2 x _ {1} - x _ {2} + 3 x _ {3} = 3 \end{array} \right.\tag{1}$$
+(2)
+(3)
+解. 我们在中学学过了求解这类方程的方法. 其基本思想是, 从三个方程中的某一个方程(如第一个方程)出发, 将另两个方程的某个变量(如 $x_{1}$ )消去. 则变换后的这两个方程都是二元一次方程. 即将一个三元一次方程组化为一个二元一次方程组求解. 类似地, 二元一次方程组又可以化为一元一次方程. 再用回代的方法求出所有变元的解. 对本例, 为了避免分数运算, 我们先将三个方程互换
+$$\left\{ \begin{array}{l l} & x _ {1} + 3 x _ {2} + 2 x _ {3} = 9 \\ & 2 x _ {1} - x _ {2} + 3 x _ {3} = 3 \\ & 3 x _ {1} + 2 x _ {2} - x _ {3} = 6 \end{array} \right.\tag{4}$$
+(5)
+(6)
+将第(4)个方程分别乘-2与-3,再分别加到第(5)与第(6)个方程即消去了这两个方程中的变量 $x_{1}$ :
+$$\left\{ \begin{array}{l l} x _ {1} & + 3 x _ {2} + 2 x _ {3} = 9 \\ & - 7 x _ {2} - x _ {3} = - 1 5 \\ & - 7 x _ {2} - 7 x _ {3} = - 2 1 \end{array} \right.\tag{7}$$
+(8)
+(9)
+再将第(8)个方程乘-1加到第(9)个方程得
+$$\left\{ \begin{array}{c} x _ {1} + 3 x _ {2} + 2 x _ {3} = 9 \\ - 7 x _ {2} - x _ {3} = - 1 5 \\ 6 x _ {3} = 6 \end{array} \right.\tag{10}$$
+(11)
+(12)
+于是, 我们将原来的方程组化为一个三角型的方程组. 从方程(12)得 $x_{3} = 1$, 将 $x_{3} = 1$ 代入方程(11)得 $x_{2} = 2$. 再将 $x_{2} = 2, x_{3} = 1$ 代入方程(10)得 $x_{1} = 1$. 这个过程称为回代. 由此, 原方程组的解为
+$$x _ {1} = 1, \quad x _ {2} = 2, \quad x _ {3} = 1.$$
+[第 49 页]
+□
+从上述求解线性方程组的过程可以看出, 我们主要对方程做了如下三种基本变换:
+1. 交换两个方程;
+2. 某个方程乘一个非零常数;
+3. 某方程乘一非零常数加到另一个方程.
+我们称这三种变换为方程的初等变换, 并分别用记号 $(i) \leftrightarrow (j)$ (第i个方程与第j个方程交换),  $\lambda(i)$ (第i个方程乘非零常数 $\lambda$ ),  $\lambda(i) \rightarrow (j)$ (第i个方程乘 $\lambda$ 加到第j个方程)表示. 经过上述三种变换, 我们可以将原线性方程组化为三角形(或阶梯形)的线性方程组, 最后利用回代法求出所有变量. 接下来, 我们再举两个例子.
+例2.1.2. 解线性方程组
+$$\left\{ \begin{array}{l l} x _ {1} & + 2 x _ {2} + 3 x _ {3} \quad + 4 x _ {4} = - 3 \\ x _ {1} & + 2 x _ {2} \quad - 5 x _ {4} = 1 \\ 2 x _ {1} & + 4 x _ {2} - 3 x _ {3} \quad - 1 9 x _ {4} = 6 \\ 3 x _ {1} & + 6 x _ {2} - 3 x _ {3} \quad - 2 4 x _ {4} = 7 \end{array} \right.$$
+解. 我们以简记形式表示求解过程.
+$$\left\{ \begin{array}{l l} x _ {1} & + 2 x _ {2} + 3 x _ {3} \\ & + 4 x _ {4} = - 3 \end{array} \right.\tag{1}$$
+$$x _ {1} \quad + 2 x _ {2} \quad - 5 x _ {4} = 1\tag{2}$$
+$$\underbrace {- 1 (1) \rightarrow (2) , - 2 (1) \rightarrow (3)}$$
+$$2 x _ {1} + 4 x _ {2} - 3 x _ {3} - 1 9 x _ {4} = 6\tag{3}$$
+$$- 3 (1) \rightarrow (4)$$
+$$\left( \begin{array}{l l l} 3 x _ {1} & + 6 x _ {2} - 3 x _ {3} & - 2 4 x _ {4} = 7 \end{array} \right.\tag{4}$$
+$$x _ {1} + 2 x _ {2} + 3 x _ {3} + 4 x _ {4} = - 3$$
+(5)
+$$- 3 x _ {3} - 9 x _ {4} = 4$$
+(6)
+$$- 9 x _ {3} - 2 7 x _ {4} = 1 2$$
+$$\xrightarrow [ - 4 (6) \to (8) ]{- 3 (6) \to (7)}\tag{7}$$
+(8)
+$$\left\{ \begin{array}{c} x _ {1} + x _ {2} + 3 x _ {3} + 4 x _ {4} = - 3 \\ - 3 x _ {3} - 9 x _ {4} = 4 \end{array} \right.\tag{9}$$
+(10)
+[第 50 页]
+在最后一个方程组中, 由于后两个方程为0=0, 故予舍去. 因此, 变换后的方程组只由两个方程组成. 由后一个方程知道,  $x_{3}$  与  $x_{4}$  之一可以在数域 F 中任意取值. 不妨设  $x_{4}=t_{2}$ , 则  $x_{3}=-\frac{4}{3}-3t_{2}$ . 而由前一个方程知  $x_{1}$  与  $x_{2}$  之一可以在数域 F 中任意取值, 不妨设  $x_{2}=t_{1}$ . 将  $x_{2}, x_{3}, x_{4}$  代入前一个方程得  $x_{1}=1-2t_{1}+5t_{2}$ . 因此, 原方程组有多组解, 其解的一般表示形式为
+$$\left\{ \begin{array}{l l} & x _ {1} = 1 - 2 t _ {1} + 5 t _ {2} \\ & x _ {2} = t _ {1} \\ & x _ {3} = - \frac {4}{3} - 3 t _ {2} \\ & x _ {4} = t _ {2} \end{array} \quad t _ {1}, t _ {2} \in F \text {任意取值} \right.$$
+□
+例2.1.3. 解线性方程组
+$$\left\{ \begin{array}{l} x _ {1} - x _ {2} + x _ {3} = 1 \\ x _ {1} - x _ {2} - x _ {3} = 3 \\ 2 x _ {1} - 2 x _ {2} - x _ {3} = 3. \end{array} \right.$$
+解.
+$$\left\{ \begin{array}{l} x _ {1} - x _ {2} + x _ {3} = 1 \\ x _ {1} - x _ {2} - x _ {3} = 3 \\ 2 x _ {1} - 2 x _ {2} - x _ {3} = 3. \end{array} \right.$$
+(1)
+(2)
+(3)
+$$\xrightarrow [ - 2 (1) \to (3) ]{- 1 (1) \to (2)}$$
+$$\left\{ \begin{array}{c} x _ {1} - x _ {2} + x _ {3} = 1 \\ - 2 x _ {3} = 2 \\ - 3 x _ {3} = 1. \end{array} \right.\tag{4}$$
+(5)
+$$\xrightarrow {- \frac {3}{2} (5) \to (6)}\tag{6}$$
+$$\left\{ \begin{array}{c} x _ {1} - x _ {2} + x _ {3} = 1 \\ - 2 x _ {3} = 2 \\ 0 = - 2. \end{array} \right.\tag{7}$$
+(8)
+(9)
+最后一个方程组的最后一个方程 $0 = -2$ 是一个矛盾方程, 因此原方程组无解. $\square$
+关于Gauss消元求解线性方程组还有一个基本问题未解决, 即
+原线性方程组与经过初等变换后的线性方程组是否有相同的解？
+[第 51 页]
+如果两个线性方程组有相同的解, 则我们称它们为同解方程组. 很显然, 原线性方程组的解一定是变换后的线性方程组的解. 但反过来结论是否成立? 经过变换后的线性方程组是否会产生“增根”? 要回答这个问题, 我们只需考察三个初等变换是否将原方程组化为同解方程组. 显然, 互换方程后方程组的解不变. 将某个方程乘一个非零常数 $\lambda$ 也不会改变方程组的解, 因为将这个方程乘 $\lambda^{-1}$ 后得到原方程. 对第三个初等变换 $\lambda(i) \to (j)$, 设原方程组为
+$$\left\{ \begin{array}{l} l _ {1} = b _ {1} \\ \dots \dots \\ l _ {i} = b _ {i} \\ \dots \dots \\ l _ {m} = b _ {m} \end{array} \right.$$
+其中 $l_{i}(x_{1},\ldots,x_{n}):=a_{i1}x_{1}+a_{i2}x_{2}+\ldots+a_{in}x_{n}$ . 变换后的方程组为
+$$\left\{ \begin{array}{l} l _ {1} = b _ {1} \\ \dots \dots \\ \lambda l _ {i} + l _ {j} = \lambda b _ {i} + b _ {j} \\ \dots \dots \\ l _ {m} = b _ {m} \end{array} \right.$$
+设 $x_{1} = c_{1}, x_{2} = c_{2}, \ldots, x_{n} = c_{n}$ 是变换后方程组的解. 则 $l_{i}(c_{1}, c_{2}, \ldots, c_{n}) = b_{i}, 1 \leq i \leq m, i \neq j$, 且 $\lambda l_{i}(c_{1}, c_{2}, \ldots, c_{n}) + l_{j}(c_{1}, c_{2}, \ldots, c_{n}) = \lambda b_{i} + b_{j}$. 于是也有 $l_{j}(c_{1}, c_{2}, \ldots, c_{n}) = b_{j}$. 从而 $x_{1} = c_{1}, x_{2} = c_{2}, \ldots, x_{n} = c_{n}$ 也是原方程组的解. 由此, 我们有以下结论.
+命题2.1.1. 三种初等变换将线性方程组变为同解线性方程组, 因此不会产生增根.
+§2.2 Gauss 消元的矩阵表示
+观察Gauss消元法解线性方程组的过程, 其中的变元并不参与运算, 只是变元的系数与常数项参与运算, 因此可以省去变元与等号. 这样一个线性方程组可以表示成一个矩形表格的形式, 我们称之为矩阵. 一个矩阵是由若干行及若干列
+的数构成的矩形阵列. 例如, 线性方程组(2.1)可以表示为矩阵形式:
+[第 52 页]
+$$\left( \begin{array}{c c c c c} a _ {1 1} & a _ {1 2} & \ldots & a _ {1 n} & b _ {1} \\ a _ {2 1} & a _ {2 2} & \ldots & a _ {2 n} & b _ {2} \\ \ldots & \ldots & \ldots & \ldots & \ldots \\ a _ {m 1} & a _ {m 2} & \ldots & a _ {m n} & b _ {m} \end{array} \right)\tag{2.2}$$
+其中圆括号是为了表示矩阵是一个整体. 称矩阵(2.2)为线性方程组(2.1)的增广矩阵, 而矩阵(2.2)的m行及前n列构成的矩阵称为线性方程组(2.1)的系数矩阵. 容易观察到, 线性方程组(2.1)的第i个方程正好对应矩阵(2.2)的第i行. 这样对线性方程组做初等变换等价于对相应矩阵的行做相同的初等变换. 对应矩阵的三个初等行变换为:
+1 互换矩阵的两行;
+2 将某行乘一个非零常数;
+3 将某行乘一个非零常数加到另一行.
+我们分别用以下记号表示矩阵的三个初等行变换:  $r_{i} \leftrightarrow r_{j}$  (互换第 i 与第 j 两行),  $\lambda r_{i}$  (第 i 行乘非零常数  $\lambda$ ),  $\lambda r_{i} \rightarrow r_{j}$  (第 i 行乘  $\lambda$  加到第 j 行). 利用矩阵的初等行变换, 将矩阵化为三角或阶梯形式的矩阵, 就可以求出方程组的解了. 下面我们举几个例子加以说明.
+例2.2.1. 重新考察例3.1.1. 其Gauss消元的矩阵形式如下:
+解.
+$$\left(\begin{array}{c c c c}3&2&- 1&6\\1&3&2&9\\2&- 1&3&3\end{array}\right) \xrightarrow [ r _ {2} \leftrightarrow r _ {3} ]{r _ {1} \leftrightarrow r _ {2}} \left(\begin{array}{c c c c}1&3&2&9\\2&- 1&3&3\\3&2&- 1&6\end{array}\right) \xrightarrow [ - 3 r _ {1} \rightarrow r _ {3} ]{- 2 r _ {1} \rightarrow r _ {2}}$$
+$$\left( \begin{array}{c c c c} 1 & 3 & 2 & 9 \\ 0 & - 7 & - 1 & - 1 5 \\ 0 & - 7 & - 7 & - 2 1 \end{array} \right) \quad \xrightarrow {- r _ {2} \to r _ {3}} \quad \left( \begin{array}{c c c c} 1 & 3 & 2 & 9 \\ 0 & - 7 & - 1 & - 1 5 \\ 0 & 0 & 6 & 6 \end{array} \right) \quad \xrightarrow {\frac {1}{6} r _ {3}}$$
+$$\left( \begin{array}{c c c c} 1 & 3 & 2 & 9 \\ 0 & - 7 & - 1 & - 1 5 \\ 0 & 0 & 1 & 1 \end{array} \right) \xrightarrow [ - 2 r _ {3} \to r _ {1} ]{r _ {3} \to r _ {2}} \quad \left( \begin{array}{c c c c} 1 & 3 & 0 & 7 \\ 0 & - 7 & 0 & - 1 4 \\ 0 & 0 & 1 & 1 \end{array} \right) \xrightarrow {- \frac {1}{7} r _ {2}}$$
+$$\left( \begin{array}{c c c c} 1 & 3 & 0 & 7 \\ 0 & 1 & 0 & 2 \\ 0 & 0 & 1 & 1 \end{array} \right) \quad \xrightarrow {- 3 r _ {2} \to r _ {1}} \quad \left( \begin{array}{c c c c} 1 & 0 & 0 & 1 \\ 0 & 1 & 0 & 2 \\ 0 & 0 & 1 & 1 \end{array} \right)$$
+[第 53 页]
+§2.2 Gauss 消元的矩阵表示
+于是原线性方程组的解为 $x_{1}=2,x_{2}=2,x_{3}=1$ .
+□
+例2.2.2. 解线性方程组
+$$\left\{ \begin{array}{l l} x _ {1} & + x _ {2} + x _ {3} + x _ {4} + x _ {5} = 0 \\ 3 x _ {1} & + 2 x _ {2} + x _ {3} + x _ {4} - 3 x _ {5} = 0 \\ & x _ {2} + 2 x _ {3} + 2 x _ {4} + 6 x _ {5} = 0 \\ 5 x _ {1} & + 4 x _ {2} + 3 x _ {3} + 3 x _ {4} - x _ {5} = 0 \end{array} \right.$$
+解.
+$$\left( \begin{array}{c c c c c} 1 & 1 & 1 & 1 & 1 \\ 3 & 2 & 1 & 1 & - 3 \\ 0 & 1 & 2 & 2 & 6 \\ 5 & 4 & 3 & 3 & - 1 \end{array} \right) \xrightarrow [ - 5 r _ {1} \to r _ {4} ]{- 3 r _ {1} \to r _ {2}} \left( \begin{array}{c c c c c} 1 & 1 & 1 & 1 & 1 \\ 0 & - 1 & - 2 & - 2 & - 6 \\ 0 & 1 & 2 & 2 & 6 \\ 0 & - 1 & - 2 & - 2 & - 6 \end{array} \right)$$
+$$\xrightarrow [ - r _ {2} \to r _ {4} ]{r _ {2} \to r _ {3}} \left( \begin{array}{c c c c c} 1 & 1 & 1 & 1 & 1 \\ 0 & - 1 & - 2 & - 2 & - 6 \\ 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 \end{array} \right)$$
+因此原方程组等价于
+$$\left\{ \begin{array}{r l} & x _ {1} + x _ {2} + x _ {3} + x _ {4} + x _ {5} = 0 \\ & x _ {2} + 2 x _ {3} + 2 x _ {4} + 6 x _ {5} = 0 \end{array} \right.$$
+令 $x_{3}=t_{1},x_{4}=t_{2},x_{5}=t_{3}$ ，得 $x_{1}=t_{1}+t_{2}+5t_{3},x_{2}=-2t_{1}-2t_{2}-6t_{3}$ 。即原方程组的解为：
+$$\left\{ \begin{array}{l l} x _ {1} = t _ {1} + t _ {2} + 5 t _ {3} \\ x _ {2} = - 2 t _ {1} - 2 t _ {2} - 6 t _ {3} \\ x _ {3} = t _ {1} & t _ {1}, t _ {2}, t _ {3} \in F \\ x _ {4} = t _ {2} \\ x _ {5} = t _ {3} \end{array} \right.$$
+□
+例2.2.3. 解线性方程组
+$$\left\{ \begin{array}{l} 3 x _ {1} - 2 x _ {2} + 5 x _ {3} + 4 x _ {4} = 2 \\ 6 x _ {1} - 7 x _ {2} + 4 x _ {3} + 3 x _ {4} = 3 \\ 9 x _ {1} - 9 x _ {2} + 9 x _ {3} + 7 x _ {4} = - 1 \end{array} \right.$$
+[第 54 页]
+解.
+$$\begin{array}{r l} & \left( \begin{array}{c c c c c} 3 & - 2 & 5 & 4 & 2 \\ 6 & - 7 & 4 & 3 & 3 \\ 9 & - 9 & 9 & 7 & - 1 \end{array} \right) \xrightarrow [ - 3 r _ {1} \to r _ {3} ]{- 2 r _ {1} \to r _ {2}} \left( \begin{array}{c c c c c} 3 & - 2 & 5 & 4 & 2 \\ 0 & - 3 & - 6 & - 5 & - 1 \\ 0 & - 3 & - 6 & - 5 & - 7 \end{array} \right) \\ & \xrightarrow {- r _ {2} \to r _ {3}} \left( \begin{array}{c c c c c} 3 & - 2 & 5 & 4 & 2 \\ 0 & - 3 & - 6 & - 5 & - 1 \\ 0 & 0 & 0 & 0 & - 6 \end{array} \right) \end{array}$$
+从最后一个矩阵的最后一行看出, 原方程组无解.
+从上面的例子可以看到, 矩阵形式的Gauss消元本质上是对矩阵的行做两个基本运算: (1) 两行相加; (2) 某行乘一个非零常数. 而矩阵的每一行都可以视为一个 $n+1$ 维数组向量, 因此Gauss消元就是对矩阵的行向量做线性运算, 变换后的矩阵的行向量都是原矩阵行向量的线性组合. 方程组的解也可以写成一些向量的线性组合, 本章中我们将方程组的解写成列向量形式. 例如, 例 (2.2.2) 中方程组的解可以写成:
+$$\left( \begin{array}{c} x _ {1} \\ x _ {2} \\ x _ {3} \\ x _ {4} \\ x _ {5} \end{array} \right) = \left( \begin{array}{c} 1 \\ - 2 \\ 1 \\ 0 \\ 0 \end{array} \right) t _ {1} + \left( \begin{array}{c} 1 \\ - 2 \\ 0 \\ 1 \\ 0 \end{array} \right) t _ {2} + \left( \begin{array}{c} 5 \\ - 6 \\ 0 \\ 0 \\ 1 \end{array} \right) t _ {3},$$
+其中 $t_{1},t_{2},t_{3}$ 为参数.
+§2.3 一般线性方程组的Gauss 消元法
+从前两节的例子看出, 线性方程组的解有三种情况: 唯一解, 多解(如数域F无限, 则有无穷多解)及无解. 本节我们对一般的线性方程组给出Gauss消元的过程, 并由此判断线性方程组解的属性, 即有唯一解、多解还是无解.
+§2.3.1 算法描述
+给定线性方程组(2.1)或其矩阵形式(2.2), 我们先将它化为三角形(或阶梯形). 首先, $a_{i1}, i = 1,2,\ldots,m$ 中至少有一个非零元素, 否则原方程组不含变量 $x_1$. 通过行的交换, 不妨设 $a_{11} \neq 0$. 对矩阵(2.2)做如下初等行变换: $-a_{11}^{-1}a_{i1}r_1 \to r_i$, $i = 2,3,\ldots,m$, 则矩阵(2.2)变为
+[第 55 页]
+$$\left( \begin{array}{c c c c c} a _ {1 1} & a _ {1 2} & \ldots & a _ {1 n} & b _ {1} \\ 0 & a _ {2 2} ^ {(1)} & \ldots & a _ {2 n} ^ {(1)} & b _ {2} ^ {(1)} \\ \ldots & \ldots & \ldots & \ldots & \ldots \\ 0 & a _ {m 2} ^ {(1)} & \ldots & a _ {m n} ^ {(1)} & b _ {m} ^ {(1)} \end{array} \right)$$
+如果 $a_{i2}^{(1)}, i=2,3,\ldots,m$ 全为零，则进一步考察 $a_{i3}^{(1)}, i=2,3,\ldots,m$ 是否全为零。假设 $j_{2}$ 是满足如下条件的下标：使得 $a_{ij}^{(1)}, i=2,3,\ldots,m, j=2,\ldots,j_{2}-1$ 全为零，但 $a_{ij_{2}}^{(1)}, i=2,3,\ldots,m$ 中至少有一个非零。通过行的互换，不妨设 $a_{2j_{2}}^{(1)}\neq0$ 。对上述矩阵做行变换 $-(a_{2j_{2}}^{(1)})^{-1}a_{ij_{2}}^{(1)}r_{2}\rightarrow r_{i}, i=3,\ldots,m$ ，则矩阵进一步化为
+$$\left( \begin{array}{c c c c c c c c c c} a _ {1 1} & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & a _ {1 n} & b _ {1} \\ 0 & \ldots & 0 & a _ {2 j _ {2}} ^ {(1)} & \ldots & \ldots & \ldots & \ldots & a _ {2 n} ^ {(1)} & b _ {2} ^ {(1)} \\ 0 & \ldots & \ldots & 0 & \ldots & 0 & a _ {3 j _ {3}} ^ {(2)} & \ldots & a _ {3 n} ^ {(2)} & b _ {3} ^ {(2)} \\ \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots \\ 0 & \ldots & \ldots & 0 & \ldots & 0 & a _ {m j _ {3}} ^ {(2)} & \ldots & a _ {m n} ^ {(2)} & b _ {m} ^ {(2)} \end{array} \right)$$
+上述过程可以一直进行下去, 最后矩阵变为如下阶梯形矩阵
+$$\left( \begin{array}{c c c c c c c c c c} c _ {1 1} & \dots & \dots & \dots & \dots & \dots & \dots & \dots & c _ {1 n} & d _ {1} \\ 0 & \dots & 0 & c _ {2 j _ {2}} & \dots & \dots & \dots & \dots & c _ {2 n} & d _ {2} \\ \dots & \dots & \dots & \dots & \dots & \dots & \dots & \dots & \dots & \dots \\ 0 & \dots & \dots & \dots & \dots & 0 & c _ {r j _ {r}} & \dots & c _ {r n} & d _ {r} \\ 0 & \dots & \dots & \dots & \dots & \dots & \dots & \dots & 0 & d _ {r + 1} \\ 0 & \dots & \dots & \dots & \dots & \dots & \dots & \dots & 0 & 0 \\ \dots & \dots & \dots & \dots & \dots & \dots & \dots & \dots & \dots & \dots \\ 0 & \dots & \dots & \dots & \dots & \dots & \dots & \dots & 0 & 0 \end{array} \right)\tag{2.3}$$
+其中 $c_{11}, c_{2j_2}, \ldots, c_{rj_r}$ 均非零. 我们称上述形式为矩阵的最简形式或标准形式. 当矩阵化为最简形式后, 我们就可以由此判断原线性方程组解的属性, 并给出其通解.
+§2.3.2 线性方程组解的属性
+利用矩阵的最简形式(2.3), 我们很方便得到线性方程组的解存在、唯一及有多个解的条件.
+定理2.3.1. 线性方程组(2.1)的解的属性如下:
+1. 当 $d_{r+1} \neq 0$ 时, 线性方程组(2.1)无解.
+[第 56 页]
+2. 当 $d_{r+1}=0$ 且r=n时, 线性方程组(2.1)有唯一解.
+3. 当 $d_{r+1}=0$ 且r<n时, 线性方程组(2.1)有多解.
+证明. (1) 当 $d_{r+1} \neq 0$ 时, 矩阵(2.3)的第 $r+1$ 行表示方程 $0 = d_{r+1}$. 此时, 原线性方程组无解.
+(2) 当 $d_{r+1}=0$ 且r=n时, 矩阵(2.3)具有形式
+$$\left( \begin{array}{c c c c c c} c _ {1 1} & \ldots & \ldots & \ldots & c _ {1 n} & d _ {1} \\ 0 & c _ {2 2} & \ldots & \ldots & c _ {2 n} & d _ {2} \\ \ldots & \ldots & \ldots & \ldots & \ldots & \ldots \\ 0 & \ldots & \ldots & 0 & c _ {n n} & d _ {n} \\ 0 & \ldots & \ldots & \ldots & 0 & 0 \\ \ldots & \ldots & \ldots & \ldots & \ldots & \ldots \\ 0 & \ldots & \ldots & \ldots & 0 & 0 \end{array} \right)$$
+对上述矩阵做行变换:  $-c_{jj}^{-1}c_{ij}r_{j}\rightarrow r_{i}, i=1,2,\ldots,j-1, j=n,n-1,\ldots,2.$  则矩阵变为
+$$\left( \begin{array}{c c c c c c} c _ {1 1} & 0 & \ldots & \ldots & 0 & \tilde {d} _ {1} \\ 0 & c _ {2 2} & 0 & \ldots & 0 & \tilde {d} _ {2} \\ \ldots & \ldots & \ldots & \ldots & \ldots & \ldots \\ 0 & \ldots & \ldots & 0 & c _ {n n} & \tilde {d} _ {n} \\ 0 & \ldots & \ldots & \ldots & 0 & 0 \\ \ldots & \ldots & \ldots & \ldots & \ldots & \ldots \\ 0 & \ldots & \ldots & \ldots & 0 & 0 \end{array} \right)$$
+从而, 原线性方程组(2.1)有唯一解:  $x_{1}=\tilde{d}_{1}/c_{11},\ldots,x_{n}=\tilde{d}_{n}/c_{nn}$ .
+(3) 当 $d_{r+1}=0$ 且r<n时, 矩阵(2.3)对应的线性方程组为
+$$\left\{ \begin{array}{c c c} c _ {1 1} x _ {1} + c _ {1 2} x _ {2} + \ldots & \ldots \ldots & + c _ {1 n} x _ {n} = d _ {1} \\ c _ {2 j _ {2}} x _ {j _ {2}} + & \ldots \ldots & + c _ {2 n} x _ {n} = d _ {2} \\ & \ldots \ldots & \ldots \ldots \\ & c _ {r j _ {r}} x _ {j _ {r}} + \ldots & + c _ {r n} x _ {n} = d _ {r} \end{array} \right.$$
+在上述方程组中, 将 $x_{j_1}, \ldots, x_{j_r} (j_1 = 1)$ 视为变量, 而其余 $x_j$ (共 $n - r$ 个) 视为参数.
+[第 57 页]
+§2.3 一般线性方程组的Gauss 消元法
+于是上述方程组可以改写为
+$$\left\{ \begin{array}{c c} c _ {1 1} x _ {1} + c _ {1 j _ {2}} x _ {j _ {2}} + & \dots \dots + c _ {1 j _ {r}} x _ {j _ {r}} = d _ {1} - c _ {1 2} x _ {2} - \dots - c _ {1 n} x _ {n} \\ c _ {2 j _ {2}} x _ {j _ {2}} + & \dots \dots + c _ {2 j _ {r}} x _ {j _ {r}} = d _ {2} - c _ {2 3} x _ {3} - \dots - c _ {2 n} x _ {n} \\ & \dots \dots \\ & c _ {r j _ {r}} x _ {j _ {r}} = d _ {r} - c _ {r j _ {r} + 1} x _ {j _ {r} + 1} - \dots - c _ {r n} x _ {n} \end{array} \right.$$
+用 $t_{1},\cdots,t_{n-r}$ 表示n-r个独立参数. 则由(2)知, 对于取定的一组参数值, 上述方程组的解唯一. 求解上述方程组, 可得线性方程组(2.1)的解具有如下形式
+$$\left\{ \begin{array}{l l} x _ {1} = & \alpha_ {1 1} t _ {1} + \ldots + \alpha_ {1, n - r} t _ {n - r} + \beta_ {1} \\ x _ {2} = & \alpha_ {2 1} t _ {1} + \ldots + \alpha_ {2, n - r} t _ {n - r} + \beta_ {2} \\ \ldots & \ldots \\ x _ {n} = & \alpha_ {n 1} t _ {1} + \ldots + \alpha_ {n, n - r} t _ {n - r} + \beta_ {n} \end{array} \right.\tag{2.4}$$
+或者写成向量形式
+$$\mathbf {x} = \alpha_ {1} t _ {1} + \ldots + \alpha_ {n - r} t _ {n - r} + \beta ,\tag{2.5}$$
+其中
+$$\mathbf {x} = \left( \begin{array}{c} x _ {1} \\ x _ {2} \\ \vdots \\ x _ {n} \end{array} \right), \quad \alpha_ {i} = \left( \begin{array}{c} \alpha_ {1 i} \\ \alpha_ {2 i} \\ \vdots \\ \alpha_ {n i} \end{array} \right), \quad i = 1, 2, \dots , n - r, \quad \beta = \left( \begin{array}{c} \beta_ {1} \\ \beta_ {2} \\ \vdots \\ \beta_ {n} \end{array} \right).$$
+我们称(2.4)为线性方程组(2.1)的通解. 将参变量 $t_{1},\cdots,t_{n-r}$ 取定一组值代入(2.4)得到的解称为一个特解. 由于参变量可以任意取值, 此时线性方程组(2.1)有多解. □
+对于齐次线性方程组, 由于总有 $d_{r+1}=0$ , 故线性方程组总有解, 特别地,  $x_{1}=0,\ldots,x_{n}=0$  就是齐次线性方程组的一组解, 我们称之为零解或平凡解. 齐次线性方程组的非零解称为非平凡解.
+推论2.3.1. 齐次线性方程组有非零解的充要条件为 $r < n$.
+证明. 当 $r = n$ 时, 原齐次线性方程组有唯一解-零解. 当 $r < n$ 时, 原齐次线性方程组有多解, 因而有非零解. $\square$
+推论2.3.2. 若 $m < n$, 则齐次线性方程组一定有非零解.
+[第 58 页]
+证明. 由于 $r \leq m < n$ , 由推论2.3.1, 结论成立.
+□
+从上述论证可以看出, 最简形式(2.3)中的整数 $r$ 是一个非常重要的量. 它表示了线性方程组(2.1)独立方程的个数, 并且决定了解集的“大小”.
+例2.3.1. 当 $\lambda$ 为何值时, 下列线性方程组有解, 并求其通解.
+$$\left\{ \begin{array}{l} 2 x _ {1} - x _ {2} + x _ {3} + x _ {4} = 1 \\ x _ {1} + 2 x _ {2} - x _ {3} + 4 x _ {4} = 2 \\ x _ {1} + 7 x _ {2} - 4 x _ {3} + 1 1 x _ {4} = \lambda \end{array} \right.$$
+解.
+$$\begin{array}{l}\left(\begin{array}{c c c c c}2&- 1&1&1&1\\1&2&- 1&4&2\\1&7&- 4&1 1&\lambda\end{array}\right) \xrightarrow {r _ {1} \leftrightarrow r _ {2}} \left(\begin{array}{c c c c c}1&2&- 1&4&2\\2&- 1&1&1&1\\1&7&- 4&1 1&\lambda\end{array}\right) \xrightarrow [ - r _ {1} \rightarrow r _ {3} ]{- 2 r _ {1} \rightarrow r _ {2}}\\\left(\begin{array}{c c c c c}1&2&- 1&4&2\\0&- 5&3&- 7&- 3\\0&5&- 3&7&\lambda - 2\end{array}\right) \xrightarrow {r _ {2} \rightarrow r _ {3}} \left(\begin{array}{c c c c c}1&2&- 1&4&2\\0&- 5&3&- 7&- 3\\0&0&0&0&\lambda - 5\end{array}\right)\end{array}$$
+因此, 当  $\lambda = 5$  时原线性方程组有解. 此时, 原方程组等价于
+$$\left\{ \begin{array}{l l} & x _ {1} + 2 x _ {2} - x _ {3} + 4 x _ {4} = 2 \\ & - 5 x _ {2} + 3 x _ {3} - 7 x _ {4} = - 3 \end{array} \right.$$
+令 $x_{3}=t_{1},x_{4}=t_{2}$ ，解得
+$$\left\{ \begin{array}{l l} x _ {1} = - \frac {1}{5} t _ {1} - \frac {6}{5} t _ {2} + \frac {4}{5} \\ x _ {2} = \frac {3}{5} t _ {1} - \frac {7}{5} t _ {2} + \frac {3}{5} & t _ {1}, t _ {2} \in F \\ x _ {3} = t _ {1} \\ x _ {4} = t _ {2} \end{array} \right.$$
+□
+或写成向量形式
+$$\left( \begin{array}{c} x _ {1} \\ x _ {2} \\ x _ {3} \\ x _ {4} \end{array} \right) = \left( \begin{array}{c} - \frac {1}{5} \\ \frac {3}{5} \\ 1 \\ 0 \end{array} \right) + \left( \begin{array}{c} - \frac {6}{5} \\ - \frac {7}{5} \\ 0 \\ 1 \end{array} \right) + \left( \begin{array}{c} \frac {4}{5} \\ \frac {3}{5} \\ 0 \\ 0 \end{array} \right).$$
+我们现在回头看看本章开头提出的几个基本问题:
+[第 59 页]
+§2.3 一般线性方程组的Gauss 消元法
+1. 解的存在性与唯一性问题已解决;
+2. 求解方法以及通解的表达形式已解决.
+我们还需继续研究线性方程组的公式解、Gauss消元的矩阵表示以及解的几何结构. 这些问题将留待第三章、第四章与第五章解决.
+关于线性方程组的解集的几何结构问题, 我们先对 n=3 的情形做一点初步的分析. 对于 n=3, 由于每个方程表示三维空间中的一个平面, 因此方程组的解集将是一些平面的交集. 因此解集可以是一个平面, 一条直线, 一个点或空集. 这里, r(独立方程的个数) 是决定解集 “大小” (即是平面, 还是直线还是点) 的一个非常重要的量!
+虽然我们解决了线性方程组的解的属性(存在性, 唯一性等)问题以及求解方法, 但是我们是对原线性方程组做了一系列初等变换将它化成阶梯形方程组后再判断, 求解. 能否不做初等变换, 直接从原线性方程组出发判断解的属性, 并给出线性方程组的解? 为此, 我们重新提出以下几个新的问题:
+1. 如何从原方程组直接判别解的存在性、唯一性及多解性?
+2. 如何从原方程组直接确定 $r$?
+3. $r$ 是否唯一？
+4. 解集的大小与 $r$ 有何关系?
+5. 直接从原方程获得公式解.
+为研究线性方程组的公式解, 我们将引入行列式的概念. 为研究线性方程组解的属性(存在性, 唯一性等)及解集的结构, 我们将引入线性空间的概念与有关理论. 为研究线性方程组求解, 我们将引入矩阵的运算(特别是乘法运算). 以上问题将引出我们以下各章的内容, 我们用下列图形表示:
+[第 60 页]
+小知识:《九章算术》
+《九章算术》是我国古代一部数学专著,成书于公元一世纪,作者不详.西汉张苍、耿寿昌做过增补与整理,魏晋时期刘徽(公元225年-295年)为《九章》做注,称为《九章算术注》.
+《九章算术》共收集了246个应用问题和各种问题的解法,分别隶属于方田、粟米、衰分、少广、商功、均输、盈不足、方程、勾股九章.《九章算术》系统地总结了我国从先秦到东汉的数学成就.其中负数、分数计算,联立一次方程(线性方程组)解法等都是具有世界意义的数学成就.
+在西方，线性方程组的研究是在17世纪后期由莱布尼茨开创的，18世纪Gauss提出了求解线性方程组的Gauss消元法，其本质与《九章算术》是相同的.中国在线性方程组的研究比西方早1500余年.
+1. 解下列线性方程组
+(1)
+$$\left\{ \begin{array}{l} x _ {1} + x _ {2} - 3 x _ {3} = - 1 \\ 2 x _ {1} + x _ {2} - 2 x _ {3} = 1 \\ x _ {1} + x _ {2} + x _ {3} = 3 \\ x _ {1} + 2 x _ {2} - 3 x _ {3} = 1 \end{array} \right.\tag{2}$$
+$$\left\{ \begin{array}{l} x _ {1} - 2 x _ {2} + 3 x _ {3} - 4 x _ {4} = 4 \\ x _ {2} - x _ {3} + x _ {4} = - 3 \\ x _ {1} + 3 x _ {2} - 3 x _ {4} = 1 \\ - 7 x _ {2} + 3 x _ {3} + x _ {4} = - 3 \end{array} \right.$$
+(3)
+$$\left\{ \begin{array}{l} 2 x _ {1} + 3 x _ {2} - x _ {3} + x _ {4} = 1 \\ 8 x _ {1} + 1 2 x _ {2} - 9 x _ {3} + 8 x _ {4} = 3 \\ 4 x _ {1} + 6 x _ {2} + 3 x _ {3} - 2 x _ {4} = 3 \\ 2 x _ {1} + 3 x _ {2} + 9 x _ {3} - 7 x _ {4} = 3 \end{array} \right.\tag{4}$$
+$$\left\{ \begin{array}{l} 2 x _ {1} + 4 x _ {2} - 6 x _ {3} + x _ {4} = 2 \\ x _ {1} - x _ {2} + 4 x _ {3} + x _ {4} = 1 \\ - x _ {1} + x _ {2} - x _ {3} + x _ {4} = 0 \end{array} \right.\tag{5}$$
+$$\left\{ \begin{array}{l} 2 x _ {1} - 3 x _ {2} + 7 x _ {3} + 5 x _ {4} = 7 \\ x _ {1} - x _ {2} + x _ {3} - x _ {4} = 1 \\ x _ {1} + x _ {2} - 8 x _ {3} + x _ {4} = 0 \\ 4 x _ {1} - 3 x _ {2} + 5 x _ {4} = 0 \end{array} \right.\tag{6}$$
+$$\left\{ \begin{array}{l} 3 x _ {1} - 5 x _ {2} + x _ {3} - 2 x _ {4} = 0 \\ 2 x _ {1} + 3 x _ {2} - 5 x _ {3} + x _ {4} = 0 \\ - x _ {1} + 7 x _ {2} - 4 x _ {3} + 3 x _ {4} = 0 \\ 4 x _ {1} + 1 5 x _ {2} - 7 x _ {3} + 9 x _ {4} = 0 \end{array} \right.$$
+[第 61 页]
+$$\left\{ \begin{array}{l} x _ {1} + x _ {2} - 3 x _ {4} - x _ {5} = 0 \\ x _ {1} - x _ {2} - 2 x _ {3} - x _ {4} = 0 \\ 4 x _ {1} - 2 x _ {2} + 6 x _ {3} + 3 x _ {4} - 4 x _ {5} = 0 \\ 2 x _ {1} + 4 x _ {2} - 2 x _ {3} + 4 x _ {4} - 7 x _ {5} = 0 \end{array} \right.\tag{7}$$
+2. 当a为何值时,下列线性方程组有解?有解时求出它的通解.
+(1)
+$$\left\{ \begin{array}{l} 3 x _ {1} + 2 x _ {2} + x _ {3} = 2 \\ x _ {1} - x _ {2} - 2 x _ {3} = - 3 \\ a x _ {1} - 2 x _ {2} + 2 x _ {3} = 6 \end{array} \right.\tag{2}$$
+$$\left\{ \begin{array}{l} x _ {1} - 4 x _ {2} + 2 x _ {3} = - 1 \\ - x _ {1} + 1 1 x _ {2} - x _ {3} = 3 \\ 3 x _ {1} - 5 x _ {2} + 7 x _ {3} = a \end{array} \right.$$
+3. a为何值时, 下述线性方程组有唯一解? a为何值时, 此方程组无解?
+$$\left\{ \begin{array}{l} x _ {1} + x _ {2} + x _ {3} = 3 \\ x _ {1} + 2 x _ {2} - a x _ {3} = 9 \\ 2 x _ {1} - x _ {2} + 3 x _ {3} = 6 \end{array} \right.$$
+4. 求三次多项式 $f(x) = ax^3 + bx^2 + cx + d$，使 $y = f(x)$ 的图象经过以下4个点：$A(1,2), B(-1,3), C(3,0), D(0,2)$.
+5. 求三次多项式 $f(x) = ax^{3} + bx^{2} + cx + d$ 满足
+$$f (0) = 1, f (1) = 2, f ^ {\prime} (0) = 1, f ^ {\prime} (1) = - 1.$$
+6. 给定线性方程组
+$$\left\{ \begin{array}{l} x _ {1} + 2 x _ {2} - 3 x _ {3} + 4 x _ {4} = 2 \\ 2 x _ {1} + 5 x _ {2} - 2 x _ {3} + x _ {4} = 1 \\ 3 x _ {1} + 8 x _ {2} - x _ {3} - 2 x _ {4} = 0 \end{array} \right.$$
+将常数项改为零得到另一个方程组, 求解这两个方程组, 并研究这两个方程组解之间的关系. 对其它方程组做类似的讨论.
+7. 兽医建议某宠物的食谱每天要包含100单位的蛋白质, 200单位的糖, 50单位的脂肪. 某宠物商店出售四种食品A, B, C, D. 这四种食物每千克含蛋白质、
+[第 62 页]
+糖、脂肪的含量(单位)如下
+问是否可以适量配备上述四种食品, 满足兽医的建议.
+[第 63 页]
+第三章 行列式
+行列式的概念最早出现于线性方程组的求解, 它是由日本数学家关孝和及德国数学家莱布尼茨于十七世纪末期提出, 现已成为线性代数的基本工具之一. 行列式在坐标变换、多重积分中的变量替换、二次型及多元多项式消元等有重要的应用. 本章将介绍行列式的定义、基本性质以及行列式的计算. 作为行列式的应用, 我们将给出求解线性方程组公式解的Cramer法则.
+§3.0 行列式的引入
+我们从求线性方程组的公式解入手. 考察 $n$ 个变元与 $n$ 个方程的线性方程组
+$$\left\{ \begin{array}{l} a _ {1 1} x _ {1} + a _ {1 2} x _ {2} + \dots + a _ {1 n} x _ {n} = b _ {1} \\ a _ {2 1} x _ {1} + a _ {2 2} x _ {2} + \dots + a _ {2 n} x _ {n} = b _ {2} \\ \dots \dots \\ a _ {n 1} x _ {1} + a _ {n 2} x _ {2} + \dots + a _ {n n} x _ {n} = b _ {n} \end{array} \right.\tag{3.1}$$
+的公式解.
+当n=2时,上述线性方程组化为
+$$\left\{ \begin{array}{l l} a _ {1 1} x _ {1} + a _ {1 2} x _ {2} & = b _ {1} \\ a _ {2 1} x _ {1} + a _ {2 2} x _ {2} & = b _ {2}. \end{array} \right.$$
+将第一个方程乘 $a_{22}$ 减去第二个方程乘 $a_{12}$ 得
+$$(a _ {1 1} a _ {2 2} - a _ {1 2} a _ {2 1}) x _ {1} = b _ {1} a _ {2 2} - b _ {2} a _ {1 2}.$$
+类似地, 将第二个方程乘 $a_{11}$ 减去第一个方程乘 $a_{21}$ 得
+$$(a _ {1 1} a _ {2 2} - a _ {1 2} a _ {2 1}) x _ {2} = b _ {2} a _ {1 1} - b _ {1} a _ {2 1}.$$
+因此, 当 $a_{11}a_{22}-a_{12}a_{21}\neq0$ 时, 方程组有唯一解
+$$\left\{ \begin{array}{l l} x _ {1} & = \frac {b _ {1} a _ {2 2} - b _ {2} a _ {1 2}}{a _ {1 1} a _ {2 2} - a _ {1 2} a _ {2 1}} \\ x _ {2} & = \frac {b _ {2} a _ {1 1} - b _ {1} a _ {2 1}}{a _ {1 1} a _ {2 2} - a _ {1 2} a _ {2 1}} \end{array} \right.$$
+引入记号
+$$\left| \begin{array}{c c} a _ {1 1} & a _ {1 2} \\ a _ {2 1} & a _ {2 2} \end{array} \right| = a _ {1 1} a _ {2 2} - a _ {1 2} a _ {2 1}, \quad \left| \begin{array}{c c} b _ {1} & a _ {1 2} \\ b _ {2} & a _ {2 2} \end{array} \right| = b _ {1} a _ {2 2} - b _ {2} a _ {1 2}, \quad \left| \begin{array}{c c} a _ {1 1} & b _ {1} \\ a _ {2 1} & b _ {2} \end{array} \right| = b _ {2} a _ {1 1} - b _ {1} a _ {2 1}.$$
+[第 64 页]
+则二阶线性方程组的公式解可以简洁地表示为
+$$x _ {1} = \frac {\left| \begin{array}{c c} b _ {1} & a _ {1 2} \\ b _ {2} & a _ {2 2} \end{array} \right|}{\left| \begin{array}{c c} a _ {1 1} & a _ {1 2} \\ a _ {2 1} & a _ {2 2} \end{array} \right|}, \qquad x _ {2} = \frac {\left| \begin{array}{c c} a _ {1 1} & b _ {1} \\ a _ {2 1} & b _ {2} \end{array} \right|}{\left| \begin{array}{c c} a _ {1 1} & a _ {1 2} \\ a _ {2 1} & a _ {2 2} \end{array} \right|}.$$
+我们称上式中的分子与分母为二阶行列式. 二阶行列式也可以视为 $2 \times 2$ 阶矩阵的行列式. 一般地, 设矩阵
+$$A = \left( \begin{array}{c c} a _ {1} & a _ {2} \\ b _ {1} & b _ {2} \end{array} \right)$$
+则A的行列式(记为 $\det(A)$ 或 $|A|$ )为
+$$\det (A) = \left| \begin{array}{c c} a _ {1} & a _ {2} \\ b _ {1} & b _ {2} \end{array} \right| = a _ {1} b _ {2} - a _ {2} b _ {1}.$$
+下面我们研究三阶线性方程组的公式解. 考虑三阶线性方程组
+$$\left\{ \begin{array}{l l} a _ {1 1} x _ {1} + a _ {1 2} x _ {2} + a _ {1 3} x _ {3} & = b _ {1} \\ a _ {2 1} x _ {1} + a _ {2 2} x _ {2} + a _ {2 3} x _ {3} & = b _ {2} \\ a _ {3 1} x _ {1} + a _ {3 2} x _ {2} + a _ {3 3} x _ {3} & = b _ {3} \end{array} \right.$$
+将第一个方程乘 $A_{1}$ ，第二个方程乘 $A_{2}$ ，第三个方程乘 $A_{3}$ ，然后相加得
+$$\begin{array}{l} (a _ {1 1} A _ {1} + a _ {2 1} A _ {2} + a _ {3 1} A _ {3}) x _ {1} + (a _ {1 2} A _ {1} + a _ {2 2} A _ {2} + a _ {3 2} A _ {3}) x _ {2} + \\ (a _ {1 3} A _ {1} + a _ {2 3} A _ {2} + a _ {3 3} A _ {3}) x _ {3} = b _ {1} A _ {1} + b _ {2} A _ {2} + b _ {3} A _ {3}. \end{array}$$
+为了消去变元 $x_{2}$ 与 $x_{3}$ ，令
+$$a _ {1 2} A _ {1} + a _ {2 2} A _ {2} + a _ {3 2} A _ {3} = 0, \quad a _ {1 3} A _ {1} + a _ {2 3} A _ {2} + a _ {3 3} A _ {3} = 0.$$
+将上式改写成关于 $A_{1},A_{2}$ 的线性方程组
+$$\left\{ \begin{array}{l} a _ {1 2} A _ {1} + a _ {2 2} A _ {2} = - a _ {3 2} A _ {3} \\ a _ {1 3} A _ {1} + a _ {2 3} A _ {2} = - a _ {3 3} A _ {3} \end{array} \right.$$
+解得
+$$A _ {1} = \frac {\left| \begin{array}{c c} a _ {2 2} & a _ {2 3} \\ a _ {3 2} & a _ {3 3} \end{array} \right|}{\left| \begin{array}{c c} a _ {1 2} & a _ {1 3} \\ a _ {2 2} & a _ {2 3} \end{array} \right|} A _ {3}, \quad A _ {2} = - \frac {\left| \begin{array}{c c} a _ {1 2} & a _ {1 3} \\ a _ {3 2} & a _ {3 3} \end{array} \right|}{\left| \begin{array}{c c} a _ {1 2} & a _ {1 3} \\ a _ {2 2} & a _ {2 3} \end{array} \right|} A _ {3}.$$
+[第 65 页]
+§3.0 行列式的引入
+因此, 令
+$$A _ {1} = \left| \begin{array}{c c} a _ {2 2} & a _ {2 3} \\ a _ {3 2} & a _ {3 3} \end{array} \right|, \qquad A _ {2} = - \left| \begin{array}{c c} a _ {1 2} & a _ {1 3} \\ a _ {3 2} & a _ {3 3} \end{array} \right|, \qquad A _ {3} = \left| \begin{array}{c c} a _ {1 2} & a _ {1 3} \\ a _ {2 2} & a _ {2 3} \end{array} \right|.$$
+即得
+$$\begin{array}{l} \left(a _ {1 1} \left| \begin{array}{c c} a _ {2 2} & a _ {2 3} \\ a _ {3 2} & a _ {3 3} \end{array} \right| - a _ {2 1} \left| \begin{array}{c c} a _ {1 2} & a _ {1 3} \\ a _ {3 2} & a _ {3 3} \end{array} \right| + a _ {3 1} \left| \begin{array}{c c} a _ {1 2} & a _ {1 3} \\ a _ {2 2} & a _ {2 3} \end{array} \right|\right) x _ {1} \\ = b _ {1} \left| \begin{array}{c c} a _ {2 2} & a _ {2 3} \\ a _ {3 2} & a _ {3 3} \end{array} \right| - b _ {2} \left| \begin{array}{c c} a _ {1 2} & a _ {1 3} \\ a _ {3 2} & a _ {3 3} \end{array} \right| + b _ {3} \left| \begin{array}{c c} a _ {1 2} & a _ {1 3} \\ a _ {2 2} & a _ {2 3} \end{array} \right|. \end{array}$$
+引进记号
+$$\begin{array}{l} \left| \begin{array}{c c c} a _ {1 1} & a _ {1 2} & a _ {1 3} \\ a _ {2 1} & a _ {2 2} & a _ {2 3} \\ a _ {3 1} & a _ {3 2} & a _ {3 3} \end{array} \right| := a _ {1 1} \left| \begin{array}{c c} a _ {2 2} & a _ {2 3} \\ a _ {3 2} & a _ {3 3} \end{array} \right| - a _ {2 1} \left| \begin{array}{c c} a _ {1 2} & a _ {1 3} \\ a _ {3 2} & a _ {3 3} \end{array} \right| + a _ {3 1} \left| \begin{array}{c c} a _ {1 2} & a _ {1 3} \\ a _ {2 2} & a _ {2 3} \end{array} \right| \\ \left| \begin{array}{c c c} b _ {1} & a _ {1 2} & a _ {1 3} \\ b _ {2} & a _ {2 2} & a _ {2 3} \\ b _ {3} & a _ {3 2} & a _ {3 3} \end{array} \right| := b _ {1} \left| \begin{array}{c c} a _ {2 2} & a _ {2 3} \\ a _ {3 2} & a _ {3 3} \end{array} \right| - b _ {2} \left| \begin{array}{c c} a _ {1 2} & a _ {1 3} \\ a _ {3 2} & a _ {3 3} \end{array} \right| + b _ {3} \left| \begin{array}{c c} a _ {1 2} & a _ {1 3} \\ a _ {2 2} & a _ {2 3} \end{array} \right|. \end{array}$$
+则得
+$$x _ {1} = \frac {\left| \begin{array}{c c c} b _ {1} & a _ {1 2} & a _ {1 3} \\ b _ {2} & a _ {2 2} & a _ {2 3} \\ b _ {3} & a _ {3 2} & a _ {3 3} \end{array} \right|}{\left| \begin{array}{c c c} a _ {1 1} & a _ {1 2} & a _ {1 3} \\ a _ {2 1} & a _ {2 2} & a _ {2 3} \\ a _ {3 1} & a _ {3 2} & a _ {3 3} \end{array} \right|}$$
+类似可得
+$$x _ {2} = \frac {\left| \begin{array}{c c c} a _ {1 1} & b _ {1} & a _ {1 3} \\ a _ {2 1} & b _ {2} & a _ {2 3} \\ a _ {3 1} & b _ {3} & a _ {3 3} \end{array} \right|}{\left| \begin{array}{c c c} a _ {1 1} & a _ {1 2} & a _ {1 3} \\ a _ {2 1} & a _ {2 2} & a _ {2 3} \\ a _ {3 1} & a _ {3 2} & a _ {3 3} \end{array} \right|}, \quad x _ {3} = \frac {\left| \begin{array}{c c c} a _ {1 1} & a _ {1 2} & b _ {1} \\ a _ {2 1} & a _ {2 2} & b _ {2} \\ a _ {3 1} & a _ {3 2} & b _ {3} \end{array} \right|}{\left| \begin{array}{c c c} a _ {1 1} & a _ {1 2} & a _ {1 3} \\ a _ {2 1} & a _ {2 2} & a _ {2 3} \\ a _ {3 1} & a _ {3 2} & a _ {3 3} \end{array} . \right|}$$
+[第 66 页]
+其中
+$$\begin{array}{l} \left| \begin{array}{c c c} a _ {1 1} & b _ {1} & a _ {1 3} \\ a _ {2 1} & b _ {2} & a _ {2 3} \\ a _ {3 1} & b _ {3} & a _ {3 3} \end{array} \right| := - b _ {1} \left| \begin{array}{c c} a _ {2 1} & a _ {2 3} \\ a _ {3 1} & a _ {3 3} \end{array} \right| + b _ {2} \left| \begin{array}{c c} a _ {1 1} & a _ {1 3} \\ a _ {3 1} & a _ {3 3} \end{array} \right| - b _ {3} \left| \begin{array}{c c} a _ {1 1} & a _ {1 3} \\ a _ {2 1} & a _ {2 3} \end{array} \right|. \\ \left| \begin{array}{c c c} a _ {1 1} & a _ {1 2} & b _ {1} \\ a _ {2 1} & a _ {2 2} & b _ {2} \\ a _ {3 1} & a _ {3 2} & b _ {3} \end{array} \right| := b _ {1} \left| \begin{array}{c c} a _ {2 1} & a _ {2 2} \\ a _ {3 1} & a _ {3 2} \end{array} \right| - b _ {2} \left| \begin{array}{c c} a _ {1 1} & a _ {1 2} \\ a _ {3 1} & a _ {3 2} \end{array} \right| + b _ {3} \left| \begin{array}{c c} a _ {1 1} & a _ {1 2} \\ a _ {2 1} & a _ {2 2} \end{array} \right|. \end{array}$$
+$x_{1},x_{2},x_{3}$ 的分子与分母均称为三阶行列式. 可以看到, 三阶行列式都可以表达为二阶行列式的求和形式, 并且是按某一列进行展开得到的.
+利用归纳法, 一般地 $n$ 元线性方程组(3.1)的公式解可以表示为两个 $n$ 阶行列式的比, 而 $n$ 阶行列式可以表示为 $n - 1$ 阶行列式求和的形式. 据此, 我们用递归的方式引入 $n$ 阶行列式的定义.
+§3.1 行列式的定义
+一个行数与列数相等的矩阵称之为方阵, 由n行与n列组成的方程 $A=(a_{ij})$ 称为n阶方阵, 其中 $a_{ij}$ 表示位置 $(i,j)$ 的元素. 由前一节的讨论, 我们可以用递归的方式定义方阵A的行列式.
+定义3.1.1. $n$ 阶方阵 $A = (a_{ij})$ 的行列式通常记为
+det(A)
+或
+$$\left| \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ a _ {2 1} & a _ {2 2} & \dots & a _ {2 n} \\ \vdots & \vdots & \dots & \vdots \\ a _ {n 1} & a _ {n 2} & \dots & a _ {n n} \end{array} \right|.$$
+当 $n = 1$ 时, $\operatorname{det}(A)$ 定义为 $a_{11}$. 当 $n \geq 2$ 时, $\operatorname{det}(A)$ 递归地定义为
+$$\det (A) := \sum_ {i = 1} ^ {n} (- 1) ^ {i + 1} a _ {i 1} M _ {i 1} = \sum_ {i = 1} ^ {n} a _ {i 1} A _ {i 1},\tag{3.2}$$
+其中
+$$M _ {i j} = \left| \begin{array}{c c c c c c} a _ {1 1} & \dots & a _ {1, j - 1} & a _ {1, j + 1} & \dots & a _ {1 n} \\ \vdots & \dots & \vdots & \vdots & \dots & \vdots \\ a _ {i - 1, 1} & \dots & a _ {i - 1, j - 1} & a _ {i - 1, j + 1} & \dots & a _ {i - 1, n} \\ a _ {i + 1, 1} & \dots & a _ {i + 1, j - 1} & a _ {i + 1, j + 1} & \dots & a _ {i + 1, n} \\ \vdots & \dots & \vdots & \vdots & \dots & \vdots \\ a _ {n 1} & \dots & a _ {n, j - 1} & a _ {n, j + 1} & \dots & a _ {n n}, \end{array} \right|,\tag{3.3}$$
+[第 67 页]
+即 $M_{ij}$ 是删除A的第i行与第j列所得n-1阶方阵的行列式, 称为行列式 $\det(A)$ 的元素 $a_{ij}$ 的余子式, $A_{ij}=(-1)^{i+j}M_{ij}$ 称为 $a_{ij}$ 的代数余子式. 定义(3.2)表明, 一个n阶行列式可表示为第一列元素与之对应代数余子式(n-1阶行列式)乘积的和. 显然, 2阶和3阶行列式的定义与上一节中引入的定义是一致的.
+例3.1.1. 计算行列式 $\left| \begin{array}{lll}2 & 1 & 0\\ 1 & 2 & 1\\ 0 & 1 & 2 \end{array} \right|$
+解:
+$$\begin{array}{l} \left| \begin{array}{c c c} 2 & 1 & 0 \\ 1 & 2 & 1 \\ 0 & 1 & 2 \end{array} \right| = 2 \times \left| \begin{array}{c c} 2 & 1 \\ 1 & 2 \end{array} \right| - 1 \times \left| \begin{array}{c c} 1 & 0 \\ 1 & 2 \end{array} \right| + 0 \times \left| \begin{array}{c c} 1 & 0 \\ 2 & 1 \end{array} \right| \\ = 2 \times (2 \times 2 - 1 \times 1) - 1 \times (1 \times 2 - 0 \times 1) = 2 \times 3 - 2 = 4. \end{array}$$
+例3.1.2. 证明:
+$$\left| \begin{array}{c c c} a _ {1 1} & a _ {1 2} & a _ {1 3} \\ a _ {2 1} & a _ {2 2} & a _ {2 3} \\ a _ {3 1} & a _ {3 2} & a _ {3 3} \end{array} \right| = a _ {1 1} a _ {2 2} a _ {3 3} + a _ {1 2} a _ {2 3} a _ {3 1} + a _ {1 3} a _ {2 1} a _ {3 2} - a _ {1 1} a _ {2 3} a _ {3 2} - a _ {1 2} a _ {2 1} a _ {3 3} - a _ {1 3} a _ {2 2} a _ {3 1}.$$
+证明.
+$$\begin{array}{l} \left| \begin{array}{c c c} a _ {1 1} & a _ {1 2} & a _ {1 3} \\ a _ {2 1} & a _ {2 2} & a _ {2 3} \\ a _ {3 1} & a _ {3 2} & a _ {3 3} \end{array} \right| = a _ {1 1} \left| \begin{array}{c c} a _ {2 2} & a _ {2 3} \\ a _ {3 2} & a _ {3 3} \end{array} \right| - a _ {2 1} \left| \begin{array}{c c} a _ {1 2} & a _ {1 3} \\ a _ {3 2} & a _ {3 3} \end{array} \right| + a _ {3 1} \left| \begin{array}{c c} a _ {1 2} & a _ {1 3} \\ a _ {2 2} & a _ {2 3} \end{array} \right| \\ = a _ {1 1} (a _ {2 2} a _ {3 3} - a _ {2 3} a _ {3 2}) - a _ {2 1} (a _ {1 2} a _ {3 3} - a _ {1 3} a _ {3 2}) + a _ {3 1} (a _ {1 2} a _ {2 3} - a _ {1 3} a _ {3 2}) \\ = a _ {1 1} a _ {2 2} a _ {3 3} - a _ {1 1} a _ {2 3} a _ {3 2} - a _ {2 1} a _ {1 2} a _ {3 3} + a _ {2 1} a _ {1 3} a _ {3 2} + a _ {3 1} a _ {1 2} a _ {2 3} - a _ {3 1} a _ {1 3} a _ {3 2} \\ = a _ {1 1} a _ {2 2} a _ {3 3} + a _ {1 2} a _ {2 3} a _ {3 1} + a _ {1 3} a _ {2 1} a _ {3 2} - a _ {1 1} a _ {2 3} a _ {3 2} - a _ {1 2} a _ {2 1} a _ {3 3} - a _ {1 3} a _ {2 2} a _ {3 1}. \end{array}$$
+从上可以看到, 三阶行列的展开式中总共有6项, 每项元素具有形式 $a_{1j_1}a_{2j_2}a_{3j_3}$ , 其中 $j_1,j_2,j_3$ 是1,2,3的一个排列. 当 $(j_1j_2j_3)=(123),(231),(312)$ 时, 对应的项符号为正. 当 $(j_1j_2j_3)=(132),(213),(321)$ 时, 对应的项符号为负. 实际上, 这不是偶然的. 后面我们将看到, 一般n阶行列式有类似的展开形式. □
+例3.1.3. 证明:
+$$\left| \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ 0 & a _ {2 2} & \dots & a _ {2 n} \\ \vdots & \vdots & \ddots & \vdots \\ 0 & \dots & 0 & a _ {n n} \end{array} \right| = a _ {1 1} a _ {2 2} \dots a _ {n n}.$$
+[第 68 页]
+特别地，
+$$\left| \begin{array}{c c c c} a _ {1 1} & 0 & \dots & 0 \\ 0 & a _ {2 2} & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & a _ {n n} \end{array} \right| = a _ {1 1} a _ {2 2} \dots a _ {n n}, \quad \left| \begin{array}{c c c c} 1 & 0 & \dots & 0 \\ 0 & 1 & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & 1 \end{array} \right| = 1.$$
+证明. 根据行列式的定义,
+$$\left| \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ 0 & a _ {2 2} & \dots & a _ {2 n} \\ \vdots & \vdots & \ddots & \vdots \\ 0 & \dots & 0 & a _ {n n} \end{array} \right| = a _ {1 1} \left| \begin{array}{c c c c} a _ {2 2} & a _ {2 3} & \dots & a _ {2 n} \\ 0 & a _ {3 3} & \dots & a _ {3 n} \\ \vdots & \vdots & \ddots & \vdots \\ 0 & \dots & 0 & a _ {n n} \end{array} \right| = \dots \dots = a _ {1 1} a _ {2 2} \dots a _ {n n}.$$
+在行列式的定义中, n 阶行列式是按照第一列元素展开成 n 个 n-1 阶行列式的和. 实际上, 行列式也可以按照任意一列展开, 我们有
+定理3.1.1. 设 $A = (a_{ij})_{n \times n}$ 为 $n$ 阶方阵. 则对固定的 $k(1 \leq k \leq n)$ 有
+$$\det (A) = \sum_ {i = 1} ^ {n} a _ {i k} A _ {i k} = \sum_ {i = 1} ^ {n} (- 1) ^ {i + k} a _ {i k} M _ {i k},\tag{3.4}$$
+即行列式可以按任意列第k列展开.
+证明. 对行列式的阶数 $n$ 用数学归纳法. 容易验证, 2阶行列式按第一列展开与按第二列展开结果相同. 现假设结论对 $n - 1$ 成立, 即 $n - 1$ 阶行列式按任意一列展开结果相同. 我们要证结论对 $n$ 阶行列式也成立.
+固定 $2 \leq k \leq n$ ，用 $D_{ij}$ 表示删除A的第1,k列与第i,j行所得n-2阶矩阵的行列式，则显然有 $D_{ij} = D_{ji}$ 。为证明(3.4)，我们将等式两边都展开成n-2阶行列式 $D_{ij}$ 的和的形式。
+首先,由行列式的定义,
+$$\det (A) = \sum_ {i = 1} ^ {n} (- 1) ^ {i + 1} a _ {i 1} M _ {i 1}.$$
+由归纳假设, 将 n-1 阶行列式  $M_{i1}$  按第 k-1 列展开
+$$M _ {i 1} = \sum_ {j = 1} ^ {i - 1} (- 1) ^ {j + (k - 1)} a _ {j k} D _ {i j} + \sum_ {j = i + 1} ^ {n} (- 1) ^ {(j - 1) + (k - 1)} a _ {j k} D _ {i j}.$$
+[第 69 页]
+§3.1 行列式的定义
+因此
+$$\begin{array}{l} \det (A) = \sum_ {i = 1} ^ {n} (- 1) ^ {i + 1} a _ {i 1} M _ {i 1} \\ = \sum_ {i = 1} ^ {n} \sum_ {j = 1} ^ {i - 1} (- 1) ^ {i + j + k} a _ {i 1} a _ {j k} D _ {i j} + \sum_ {i = 1} ^ {n} \sum_ {j = i + 1} ^ {n} (- 1) ^ {i + j + k - 1} a _ {i 1} a _ {j k} D _ {i j} \\ = \sum_ {i = 1} ^ {n} \sum_ {j = 1} ^ {i - 1} (- 1) ^ {i + j + k} a _ {i 1} a _ {j k} D _ {i j} + \sum_ {j = 1} ^ {n} \sum_ {i = 1} ^ {j - 1} (- 1) ^ {i + j + k - 1} a _ {i 1} a _ {j k} D _ {i j} \\ = \sum_ {i = 1} ^ {n} \sum_ {j = 1} ^ {i - 1} (- 1) ^ {i + j + k} (a _ {i 1} a _ {j k} - a _ {j 1} a _ {i k}) D _ {i j}. \end{array}\tag{3.5}$$
+其中对第二行第二个式子中求和号 $\sum_{i=1}^{n}\sum_{j=i+1}^{n}$ 进行交换变成了 $\sum_{j=1}^{n}\sum_{i=1}^{j-1}$ ，而对第三行第二个式子的指标i,j做对换并与第一个式子合并构成了第四行的式子.
+另一方面, 将 $n - 1$ 阶行列式 $M_{ik}$ 按第一列展开得
+$$M _ {i k} = \sum_ {j = 1} ^ {i - 1} (- 1) ^ {j + 1} a _ {j 1} D _ {i j} + \sum_ {j = i + 1} ^ {n} (- 1) ^ {j} a _ {j 1} D _ {i j}.$$
+因此，
+$$\begin{array}{l} \sum_ {i = 1} ^ {n} (- 1) ^ {i + k} a _ {i k} M _ {i k} \\ = \sum_ {i = 1} ^ {n} \sum_ {j = 1} ^ {i - 1} (- 1) ^ {i + j + k + 1} a _ {i k} a _ {j 1} D _ {i j} + \sum_ {i = 1} ^ {n} \sum_ {j = i + 1} ^ {n} (- 1) ^ {i + j + k} a _ {i k} a _ {j 1} D _ {i j} \\ = \sum_ {i = 1} ^ {n} \sum_ {j = 1} ^ {i - 1} (- 1) ^ {i + j + k + 1} a _ {i k} a _ {j 1} D _ {i j} + \sum_ {j = 1} ^ {n} \sum_ {i = 1} ^ {j - 1} (- 1) ^ {i + j + k} a _ {i k} a _ {j 1} D _ {i j} \\ = \sum_ {i = 1} ^ {n} \sum_ {j = 1} ^ {i - 1} (- 1) ^ {i + j + k} (a _ {i 1} a _ {j k} - a _ {j 1} a _ {i k}) D _ {i j}. \end{array}\tag{3.6}$$
+比较(3.5)与(3.6)两式即知结论成立. 定理证毕.
+例3.1.4. 证明
+$$\left| \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ \vdots & \vdots & \ddots \\ a _ {n - 1, 1} & a _ {n - 1, 2} & & \\ a _ {n 1} & & & \end{array} \right| = (- 1) ^ {\frac {n (n - 1)}{2}} a _ {n 1} a _ {n - 1, 2} \dots a _ {1 n}.$$
+[第 70 页]
+证明. 将行列式逐次按第 $n, n-1, \ldots, 2$ 列展开得
+$$\begin{array}{l} \left| \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ \vdots & \vdots & \ddots \\ a _ {n - 1, 1} & a _ {n - 1, 2} \end{array} \right| = (- 1) ^ {n + 1} a _ {1 n} \left| \begin{array}{c c c c} a _ {2 1} & a _ {2 2} & \dots & a _ {2, n - 1} \\ \vdots & \vdots & \ddots \\ a _ {n - 1, 1} & a _ {n - 1, 2} \\ a _ {n 1} \end{array} \right| \\ = \dots \dots = (- 1) ^ {(1 + n) + n + \dots + 3} a _ {1 n} a _ {2, n - 1} \dots a _ {n 1} = (- 1) ^ {\frac {n (n - 1)}{2}} a _ {n 1} a _ {n - 1, 2} \dots a _ {1 n}. \end{array}$$
+行列式不仅可以按列展开, 还可以按行展开. 事实上, 我们有
+定理3.1.2. 设 $A = (a_{ij})$ 为 $n$ 阶方阵. 则
+$$\det (A) = \sum_ {j = 1} ^ {n} a _ {k j} A _ {k j} = \sum_ {j = 1} ^ {n} (- 1) ^ {k + j} a _ {k j} M _ {k j}, \quad 1 \leq k \leq n.\tag{3.7}$$
+证明. 不妨设 $k = 1$. 我们需要证明:
+$$\sum_ {j = 1} ^ {n} (- 1) ^ {j + 1} a _ {1 j} M _ {1 j} = \sum_ {i = 1} ^ {n} (- 1) ^ {i + 1} a _ {i 1} M _ {i 1}.\tag{3.8}$$
+对 $n$ 用数学归纳法. 当 $n = 1,2$ 时, 易验证结论成立. 现假设结论对 $n - 1$ 阶行列式成立, 我们要证结论对 $n$ 阶行列式成立.
+用 $D_{ij}$ 表示删除第1行, 第i行, 第1列, 第j列所得到的n-2阶子行列式. 一方面, 将 $M_{1j}$ 按第一列展开得
+$$M _ {1 j} = \sum_ {i = 2} ^ {n} (- 1) ^ {i} a _ {i 1} D _ {i j}, \qquad j = 2, \dots , n.$$
+因此，
+$$\begin{array}{l} \sum_ {j = 1} ^ {n} (- 1) ^ {j + 1} a _ {1 j} M _ {1 j} = a _ {1 1} M _ {1 1} + \sum_ {j = 2} ^ {n} (- 1) ^ {j + 1} a _ {1 j} \sum_ {i = 2} ^ {n} (- 1) ^ {i} a _ {i 1} D _ {i j} \\ = a _ {1 1} M _ {1 1} + \sum_ {i = 2} ^ {n} \sum_ {j = 2} ^ {n} (- 1) ^ {i + j + 1} a _ {i 1} a _ {1 j} D _ {i j}. \end{array}\tag{3.9}$$
+另一方面, 由归纳假设, 对 $M_{i1}$ 按第一行展开
+$$M _ {i 1} = \sum_ {j = 2} ^ {n} (- 1) ^ {j} a _ {1 j} D _ {i j}.$$
+因此，
+$$\begin{array}{l} \sum_ {i = 1} ^ {n} (- 1) ^ {i + 1} a _ {i 1} M _ {i 1} = a _ {1 1} M _ {1 1} + \sum_ {i = 2} ^ {n} (- 1) ^ {i + 1} a _ {i 1} \sum_ {j = 2} ^ {n} (- 1) ^ {j} a _ {1 j} D _ {i j} \\ = a _ {1 1} M _ {1 1} + \sum_ {i = 2} ^ {n} \sum_ {j = 2} ^ {n} (- 1) ^ {i + j + 1} a _ {i 1} a _ {1 j} D _ {i j}. \end{array}\tag{3.10}$$
+[第 71 页]
+由 (3.9) 和 (3.10) 知, (3.8) 式的两边相等. 证毕.
+由定理 3.1.1 与定理 3.1.2, 行列式即可以按任意一行展开也可以按任意一列展开. 实际上, (3.4) 式与 (3.7) 式都可以作为行列式的定义.
+定义3.1.2. 设 $A = (a_{ij})_{n \times n}$ 为 $n$ 阶方阵, 固定 $k(1 \leq k \leq n)$. $A$ 的行列式 $\det(A)$ 可递归定义如下: 当 $n = 1$ 时, $\det(A) = a_{11}$; 当 $n \geq 2$ 时,
+$$\det (A) = \sum_ {i = 1} ^ {n} (- 1) ^ {i + k} a _ {i k} M _ {i k}\tag{3.11}$$
+其中 $M_{ik}$ 是 $a_{ik}$ 的余子式.
+定义3.1.3. 设 $A=(a_{ij})_{n\times n}$ 为n阶方阵, 固定 $k(1\leq k\leq n)$ . A的行列式 $\det(A)$ 可递归定义如下: 当n=1时, $\det(A)=a_{11}$ ; 当 $n\geq2$ 时,
+$$\det (A) = \sum_ {j = 1} ^ {n} (- 1) ^ {k + j} a _ {k j} M _ {k j},\tag{3.12}$$
+其中 $M_{kj}$ 是 $a_{kj}$ 的余子式.
+易知, 上述定义与定义 3.1.1 是等价的.
+最后,我们来研究一下行列式的几何含义.
+在平面直角坐标系oxy中, 令向量 $\overrightarrow{OA}=(a_{11},a_{12}),\overrightarrow{OB}=(a_{21},a_{22})$ . 以OA, OB为两邻边的平行四边形为OABC(如图3.1所示). 将 $\overrightarrow{OB}$ 绕原点O顺时针旋转90°得到向量 $\overrightarrow{OB'}=(a_{22},-a_{21})$ . 则
+$$\begin{array}{l} \left| \begin{array}{c c} a _ {1 1} & a _ {1 2} \\ a _ {2 1} & a _ {2 2} \end{array} \right| = a _ {1 1} a _ {2 2} - a _ {1 2} a _ {2 1} = \overrightarrow {O A} \cdot \overrightarrow {O B ^ {\prime}} \\ = | O A | | O B | \cos \angle B ^ {\prime} O A = | O A | | O B | \sin \angle A O B = S _ {O A B C}. \end{array}$$
+这里 $S_{OABC}$ 是平行四边形的有(带符号)向面积,它的符号由 $\sin\angle AOB$ 确定.因此,二阶行列式就是以行列式的两个行向量为边的平行四边形的有向面积.
+接下来, 我们研究三阶行列式的几何意义. 在空间直角坐标系 $oxyz$ 中, 设 $\overrightarrow{OA} = (a_{11}, a_{12}, a_{13}), \overrightarrow{OB} = (a_{21}, a_{22}, a_{23}), \overrightarrow{OC} = (a_{31}, a_{32}, a_{33})$ (如图 3.2 所示). 则
+$$\left| \begin{array}{c c c} a _ {1 1} & a _ {1 2} & a _ {1 3} \\ a _ {2 1} & a _ {2 2} & a _ {2 3} \\ a _ {3 1} & a _ {3 2} & a _ {3 3} \end{array} \right| = a _ {1 1} \left| \begin{array}{c c} a _ {2 2} & a _ {2 3} \\ a _ {3 2} & a _ {3 3} \end{array} \right| - a _ {1 2} \left| \begin{array}{c c} a _ {2 1} & a _ {2 3} \\ a _ {3 1} & a _ {3 3} \end{array} \right| + a _ {1 3} \left| \begin{array}{c c} a _ {2 1} & a _ {2 2} \\ a _ {3 1} & a _ {3 2} \end{array} \right| =$$
+$$(a _ {1 1}, a _ {1 2}, a _ {1 3}) \cdot \left(\left| \begin{array}{c c} a _ {2 2} & a _ {2 3} \\ a _ {3 2} & a _ {3 3} \end{array} \right|, - \left| \begin{array}{c c} a _ {2 1} & a _ {2 3} \\ a _ {3 1} & a _ {3 3} \end{array} \right|, \left| \begin{array}{c c} a _ {2 1} & a _ {2 2} \\ a _ {3 1} & a _ {3 2} \end{array} \right|\right) = \overrightarrow {O A} \cdot \overrightarrow {O B} \times \overrightarrow {O C} = V _ {O A B C}.$$
+[第 72 页]
+图 3.1 二阶行列式的几何意义
+其中 $V_{OABC}$ 是以OA, OB, OC为棱边的平行六面体的有向体积. 这就是三阶行列式的几何意义. 类似地可以想象, n阶行列式是n维空间中以行列式的行向量为棱边的平行多变体体积.
+图 3.2 三阶行列式的几何意义
+行列式有很多重要的性质, 这些性质对于理解行列式的概念、计算行列式, 以及行列式的应用起着至关重要的作用.
+定理3.2.1. 行列式具有下列性质:
+[第 73 页]
+§3.2 行列式的性质
+(1) 任意方阵与它的转置方阵(行列互换所得到的方阵)的行列式相等, 即
+$$\left| \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ a _ {2 1} & a _ {2 2} & \dots & a _ {2 n} \\ \vdots & \vdots & \dots & \vdots \\ a _ {n 1} & a _ {n 2} & \dots & a _ {n n} \end{array} \right| = \left| \begin{array}{c c c c} a _ {1 1} & a _ {2 1} & \dots & a _ {n 1} \\ a _ {1 2} & a _ {2 2} & \dots & a _ {n 2} \\ \vdots & \vdots & \dots & \vdots \\ a _ {1 n} & a _ {2 n} & \dots & a _ {n n} \end{array} \right|.$$
+(2) 交换方阵 $A$ 的某两行, 得到的方阵 $B$ 满足 $\operatorname{det}(B) = -\operatorname{det}(A)$, 即
+$$\left| \begin{array}{c c c c} \dots & \dots & \dots & \dots \\ a _ {q 1} & a _ {q 2} & \dots & a _ {q n} \\ \dots & \dots & \dots & \dots \\ a _ {p 1} & a _ {p 2} & \dots & a _ {p n} \\ \dots & \dots & \dots & \dots \end{array} \right| = - \left| \begin{array}{c c c c} \dots & \dots & \dots & \dots \\ a _ {p 1} & a _ {p 2} & \dots & a _ {p n} \\ \dots & \dots & \dots & \dots \\ a _ {q 1} & a _ {q 2} & \dots & a _ {q n} \\ \dots & \dots & \dots & \dots \end{array} \right|.$$
+(3) 将方阵 $A$ 的某一行乘以常数 $\lambda$, 得到的方阵 $B$ 满足 $\det(B) = \lambda \det(A)$, 即
+$$\left| \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ \dots & \dots & \dots & \dots \\ \lambda a _ {k 1} & \lambda a _ {k 2} & \dots & \lambda a _ {k n} \\ \dots & \dots & \dots & \dots \\ a _ {n 1} & a _ {n 2} & \dots & a _ {n n} \end{array} \right| = \lambda \left| \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ \dots & \dots & \dots & \dots \\ a _ {k 1} & a _ {k 2} & \dots & a _ {k n} \\ \dots & \dots & \dots & \dots \\ a _ {n 1} & a _ {n 2} & \dots & a _ {n n} \end{array} \right|.$$
+(4) 若方阵 $A$ 的某一行是两个向量之和, 则 $\operatorname{det}(A)$ 可拆成两个行列式之和, 即
+$$\left| \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ \dots & \dots & \dots & \dots \\ b _ {1} + c _ {1} & b _ {2} + c _ {2} & \dots & b _ {n} + c _ {n} \\ \dots & \dots & \dots & \dots \\ a _ {n 1} & a _ {n 2} & \dots & a _ {n n} \end{array} \right| = \left| \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ \dots & \dots & \dots & \dots \\ b _ {1} & b _ {2} & \dots & b _ {n} \\ \dots & \dots & \dots & \dots \\ a _ {n 1} & a _ {n 2} & \dots & a _ {n n} \end{array} \right| + \left| \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ \dots & \dots & \dots & \dots \\ c _ {1} & c _ {2} & \dots & c _ {n} \\ \dots & \dots & \dots & \dots \\ a _ {n 1} & a _ {n 2} & \dots & a _ {n n} \end{array} \right|.$$
+(5) 若方阵 $A$ 有某两行成比例, 则 $\operatorname{det}(A) = 0$. 特别地, 若 $A$ 有两行相同, 则其行列式为零.
+(6) 将方阵 $A$ 的某一行的常数倍加到另一行, 得到的方阵 $B$ 满足 $\operatorname{det}(B) = \operatorname{det}(A)$, 即
+$$\left| \begin{array}{c c c c} \dots & \dots & \dots & \dots \\ a _ {p 1} + \lambda a _ {q 1} & a _ {p 2} + \lambda a _ {q 2} & \dots & a _ {p n} + \lambda a _ {q n} \\ \dots & \dots & \dots & \dots \\ a _ {q 1} & a _ {q 2} & \dots & a _ {q n} \\ \dots & \dots & \dots & \dots \end{array} \right| = \left| \begin{array}{c c c c} \dots & \dots & \dots & \dots \\ a _ {p 1} & a _ {p 2} & \dots & a _ {p n} \\ \dots & \dots & \dots & \dots \\ a _ {q 1} & a _ {q 2} & \dots & a _ {q n} \\ \dots & \dots & \dots & \dots \end{array} \right|.$$
+[第 74 页]
+证明. (1) 用数学归纳法. 当 $n = 1$ 时, 结论显然成立. 设结论对 $n - 1$ 阶行列式成立, 下证结论对 $n$ 阶行列式成立.
+设 $A=(a_{ij})$ 是n阶方阵, $A'=(a'_{ij})$ 是A的转置方阵, 即 $a'_{ij}=a_{ji}$ . 分别用 $M_{ij}$ 与 $M'_{ij}$ 表示A与 $A'$ 的 $(i,j)$ 元素的余子式. 则由归纳假设, $M'_{ij}=M_{ji}$ . 将 $\det(A')$ 按第一列展开得
+$$\det (A ^ {\prime}) = \sum_ {i = 1} ^ {n} (- 1) ^ {i + 1} a _ {i 1} ^ {\prime} M _ {i 1} ^ {\prime} = \sum_ {i = 1} ^ {n} (- 1) ^ {i + 1} a _ {1 i} M _ {1 i} = \det (A).$$
+故结论成立.
+(2) 用 $D_{ij}$ 表示删除 A 的第 p, q 行与 i, j 列所得 n-2 阶矩阵的行列式. 将行列式 A 按 p, q 两行先后展开, 类似定理 3.1.1 的证明可得
+$$\det (A) = \sum_ {i = 1} ^ {n} \sum_ {j = 1} ^ {i - 1} (- 1) ^ {p + q + i + j - 1} \left(a _ {p i} a _ {q j} - a _ {p j} a _ {q i}\right) D _ {i j}.$$
+从上式看出, 如果A的p,q两行互换, 则行列式变号.
+(3) 设将方阵A的第k行乘常数 $\lambda$ 得到矩阵B. 将 $\det(B)$ 按第k行展开得
+$$\det (B) = \sum_ {i = 1} ^ {n} (\lambda a _ {k i} A _ {k i}) = \lambda \sum_ {i = 1} ^ {n} a _ {k i} A _ {k i} = \lambda \det (A).$$
+即知结论成立.
+(4) 设方阵A的第k行被拆成两向量之和, 将 $\det(A)$ 按第k行展开得
+$$\det (A) = \sum_ {i = 1} ^ {n} \left(b _ {i} + c _ {i}\right) A _ {k i} = \sum_ {i = 1} ^ {n} b _ {i} A _ {k i} + \sum_ {i = 1} ^ {n} c _ {i} A _ {k i}.$$
+从而知结论成立.
+(5) 假设矩阵 $A$ 的 $p, q$ 两行相等. 将 $A$ 的 $p, q$ 两互换后, 方阵不变, 但由性质(1), 行列式变号, 即 $\operatorname{det}(A) = -\operatorname{det}(A)$. 因此, $\operatorname{det}(A) = 0$. 如果 $A$ 的 $p, q$ 两行成比例, 则由性质(2), 将比例因子提出后, 行列式的 $p, q$ 两行相等, 从而行列式仍为零.
+(6) 根据性质(3),  $\det(B)$  可拆成两个行列式之和, 其中一个行列式是  $\det(A)$ ; 另一个行列式的 p, q 两行成比例, 根据性质(4), 其为零. 因此,  $\det(B) = \det(A)$ . ☐
+由上述定理的第一条性质知道, 行列式的行与列的地位是对等的. 因此, 定理中的有关行变换的性质对列变换也成立. 例如, 交换行列式某两列, 行列式变
+号; 行列式某列乘常数  $\lambda$ , 等于  $\lambda$  乘原行列式; 行列式某列乘常数加到另一列, 行列式不变; 等等.
+[第 75 页]
+上述性质可以用行列式的几何意义来解释. 我们以2阶行列式来说明. 如前所述, 2阶行列式 $\left| \begin{array}{cc} a_{11} & a_{12} \\ a_{21} & a_{22} \end{array} \right|$ 表示以向量 $\overrightarrow{OA} = (a_{11}, a_{12})$, $\overrightarrow{OB} = (a_{21}, a_{22})$ 为边构成的平行四边形面积. 性质(2)表明, 向量 $\overrightarrow{OA}, \overrightarrow{OB}$ 互换, 则角 $\angle AOB$ 变号, 从而平行四边形面积 $S_{OABC}$ 也变号. 性质(3)表明, 如果行列式某边长放缩 $\lambda$ 倍, 则平行四边形面积相应地放缩 $\lambda$ 倍. 性质(4)可以用图3.3来解释, 其中平面四边形 $ACA''C''$ 的面积等于平行四边形 $ABA'B'$ 与平行四边形 $BCB'C'$ 面积之和(实际上 $S_{ABC} = S_{A'B'C'}$, $S_{ACA'C'} = S_{ACA''C''}$). 如果平行四边形两相邻边平行, 则平行四边形退化, 其面积为零, 这就是性质(5). 请读者自己解释性质(1).
+图 3.3 行列式性质4的几何解释.
+例3.2.1. 证明:
+$$\left| \begin{array}{c c c c} a _ {1 1} & 0 & \dots & 0 \\ a _ {2 1} & a _ {2 2} & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ a _ {n 1} & a _ {n 2} & \dots & a _ {n n} \end{array} \right| = a _ {1 1} a _ {2 2} \dots a _ {n n}.$$
+证明：由定理 3.2.1 的第一条性质知，行列式与它的转置行列式相等，再由例 3.1.3 的结论立即可得. □
+根据行列式的上述性质, 我们还可以从另一个角度理解行列式. 设 $a_{i}$ 是n阶方阵A的第i行构成的行向量, 则 $\det(A)$ 可以看成是向量组 $a_{1}, a_{2}, \cdots, a_{n}$ 的函数, 记作 $\det(a_{1}, a_{2}, \cdots, a_{n})$. 该函数具有以下性质
+[第 76 页]
+(1) 反对称性: 互换两个变量的位置, 行列式变号, 即
+$$\det (\mathbf {a} _ {1}, \dots , \mathbf {a} _ {i}, \dots , \mathbf {a} _ {j}, \dots , \mathbf {a} _ {n}) = - \det (\mathbf {a} _ {1}, \dots , \mathbf {a} _ {j}, \dots , \mathbf {a} _ {i}, \dots , \mathbf {a} _ {n}).$$
+(2) 多重线性: 行列式关于每行是线性的, 即
+$$\det (\mathbf {a} _ {1}, \dots , \lambda \mathbf {a} _ {i} + \mu \mathbf {b} _ {i}, \dots , \mathbf {a} _ {n}) = \lambda \det (\mathbf {a} _ {1}, \dots , \mathbf {a} _ {i}, \dots) + \mu \det (\dots , \mathbf {b} _ {i}, \dots , \mathbf {a} _ {n}),$$
+其中 $a_{i},b_{i}$ 是任意n维行向量, $\lambda,\mu$ 是任意常数.
+(3) 规范性: 设 $\mathbf{e}_1, \mathbf{e}_2, \ldots, \mathbf{e}_n$ 是单位坐标向量, 即 $\mathbf{e}_i$ 为第 $i$ 个分量为 1 , 其余分量为 0 的 $n$ 维行向量. 则有
+$$\det (\mathbf {e} _ {1}, \mathbf {e} _ {2}, \dots , \mathbf {e} _ {n}) = 1.$$
+实际上, 函数 $\det(\mathbf{a}_{1},\mathbf{a}_{2},\cdots,\mathbf{a}_{n})$ 由上述三条性质唯一确定, 一些教科书也将满足上述三条性质的函数 $\det(\mathbf{a}_{1},\mathbf{a}_{2},\cdots,\mathbf{a}_{n})$ 作为行列式的定义. 从下一节我们将会看到, 该定义与我们的递归定义是等价的.
+例3.2.2. 设a,b,c都是3维向量, 证明:  $\det(\mathbf{a}+\mathbf{b},\mathbf{b}+\mathbf{c},\mathbf{c}+\mathbf{a})=2\det(\mathbf{a},\mathbf{b},\mathbf{c})$ .
+证明. 利用行列式的性质, 易得
+$$\begin{array}{l} \det (\mathbf {a} + \mathbf {b}, \mathbf {b} + \mathbf {c}, \mathbf {c} + \mathbf {a}) = \det (\mathbf {a}, \mathbf {b} + \mathbf {c}, \mathbf {c} + \mathbf {a}) + \det (\mathbf {b}, \mathbf {b} + \mathbf {c}, \mathbf {c} + \mathbf {a}) \\ = \det (\mathbf {a}, \mathbf {b} + \mathbf {c}, \mathbf {c}) + \det (\mathbf {b}, \mathbf {c}, \mathbf {c} + \mathbf {a}) = \det (\mathbf {a}, \mathbf {b}, \mathbf {c}) + \det (\mathbf {b}, \mathbf {c}, \mathbf {a}) = 2 \det (\mathbf {a}, \mathbf {b}, \mathbf {c}). \end{array}$$
+§3.3 行列式的完全展开式
+在本小中, 我们将给出行列式的完全展开式, 即将 $\det(A)$ 展开为A的元素的多项式.
+设 $a_{i}$ 是方阵 $A=(a_{ij})_{n\times n}$ 的第i行构成的行向量， $e_{i}$ 是第i个n维单位坐标向量，则 $a_{i}$ 可以表示为 $e_{1},e_{2},\ldots,e_{n}$ 的线性组合，即 $a_{i}=\sum_{k=1}^{n}a_{ik}e_{k}$ 。根据行列式关于行的线
+[第 77 页]
+性性可得
+$$\begin{array}{l} \det (A) = \det \left(\sum_ {j _ {1} = 1} ^ {n} a _ {1 j _ {1}} \mathbf {e} _ {j _ {1}}, \sum_ {j _ {2} = 1} ^ {n} a _ {2 j _ {2}} \mathbf {e} _ {j _ {2}}, \dots , \sum_ {j _ {n} = 1} ^ {n} a _ {n j _ {n}} \mathbf {e} _ {j _ {n}}\right) \\ = \sum_ {j _ {1} = 1} ^ {n} a _ {1 j _ {1}} \det \left(\mathbf {e} _ {j _ {1}}, \sum_ {j _ {2} = 1} ^ {n} a _ {2 j _ {2}} \mathbf {e} _ {j _ {2}}, \dots , \sum_ {j _ {n} = 1} ^ {n} a _ {n j _ {n}} \mathbf {e} _ {j _ {n}}\right) \\ = \left. \sum_ {j _ {1} = 1} ^ {n} \sum_ {j _ {2} = 1} ^ {n} a _ {1 j _ {1}} a _ {2 j _ {2}} \det \left(\mathbf {e} _ {j _ {1}}, \mathbf {e} _ {j _ {2}}, \sum_ {j _ {3} = 1} ^ {n} a _ {3 j _ {3}} \mathbf {e} _ {j _ {3}}, \dots , \sum_ {j _ {n} = 1} ^ {n} a _ {n j _ {n}} \mathbf {e} _ {j _ {n}}\right) \right. \\ = \ldots = \sum_ {j _ {1} = 1} ^ {n} \sum_ {j _ {2} = 1} ^ {n} \dots \sum_ {j _ {n} = 1} ^ {n} a _ {1 j _ {1}} a _ {2 j _ {2}} \dots a _ {n j _ {n}} \det (\mathbf {e} _ {j _ {1}}, \mathbf {e} _ {j _ {2}}, \dots , \mathbf {e} _ {j _ {n}}). \end{array}$$
+再由行列式的性质(5)可知, 当 $j_{1}, j_{2}, \ldots, j_{n}$ 中有两个相等时, $\det(\mathbf{e}_{j_{1}}, \mathbf{e}_{j_{2}}, \ldots, \mathbf{e}_{j_{n}}) = 0$; 而当 $j_{1}, j_{2}, \ldots, j_{n}$ 两两不等时, $(j_{1}, j_{2}, \ldots, j_{n})$ 是 $(1, 2, \ldots, n)$ 的一个排列. 因此,
+$$\det (A) = \sum_ {(j _ {1}, j _ {2}, \dots , j _ {n}) \in S _ {n}} a _ {1 j _ {1}} a _ {2 j _ {2}} \dots a _ {n j _ {n}} \det (\mathbf {e} _ {j _ {1}}, \mathbf {e} _ {j _ {2}}, \dots , \mathbf {e} _ {j _ {n}}).\tag{3.13}$$
+其中 $S_{n}$ 是 $(1,2,\ldots,n)$ 的所有排列构成的集合.为进一步展开上式,我们引入逆序数的概念.
+定义3.3.1. 将 $n$ 个两两不同的正整数 $s_1, s_2, \ldots, s_n$ 按顺序排成的一个有序数组称为一个排列, 记做 $s = (s_1, s_2, \ldots, s_n)$. 满足 $s_1 < s_2 < \ldots < s_n$ 的排列称为顺序排列. 特别地, 排列 $(1, 2, \ldots, n)$ 称为自然排列. 互换 $s$ 中 $i, j$ 位置的两个数 $s_i$ 与 $s_j$ 称为一次对换. 满足 $i < j$ 且 $s_i > s_j$ 的一对数 $(s_i, s_j)$ 称为 $s$ 的一个逆序. $s$ 的逆序的个数称为 $s$ 的逆序数, 记作 $\tau(s)$. 逆序数为奇数的排列称为奇排列; 逆序数为偶数的排列称为偶排列.
+例如，$(3,1,4,2),(1,2,3,4)$ 都是 $1,2,3,4$ 的排列，其中 $(1,2,3,4)$ 是自然排列，其逆序数为零，因此是偶排列。排列 $(3,1,4,2)$ 有逆序 $(3,1),(3,2),(4,2)$，其逆序数 $\tau(3,1,4,2) = 3$，因此是奇排列。
+任何一个排列都可以通过对换将其变成一个顺序排列. 例如, $(3,1,4,2) \to (1,3,4,2) \to (1,3,2,4) \to (1,2,3,4)$, 即排列 $(3,1,4,2)$ 经过3次对换变成了顺序排列. 实际上, 我们有
+引理3.3.1. 每个排列s可经过 $\tau(s)$ 次相邻位置的对换变成从小到大的顺序排列.
+证明. 设s是正整数列 $a_{1}<a_{2}<\ldots<a_{n}$ 的一个排列, s中形如 $(*,a_{i})$ 的逆序共有 $m_{i}$ 个, $i=1,2,\ldots,n$ . 则可经过 $m_{1}$ 次相邻位置间的对换, 将 $a_{1}$ 置换到位置1; 再经过 $m_{2}$ 次相邻位置间的对换, 将 $a_{2}$ 置换到位置2; 以此类推, 可经过总共 $m_{1}+m_{2}+\ldots+m_{n-1}=\tau(s)$ 次相邻位置的对换, 把s变成顺序排列 $(a_{1},a_{2},\cdots,a_{n})$ . □
+有了排列的逆序数的概念,下面我们就可以给出行列式的完全展开式.
+[第 78 页]
+定理3.3.1. 设 $A=(a_{ij})_{n\times n}$ 为n阶方阵, 则
+$$\det (A) = \sum_ {(j _ {1}, j _ {2}, \dots , j _ {n}) \in S _ {n}} (- 1) ^ {\tau (j _ {1}, j _ {2}, \dots , j _ {n})} a _ {1 j _ {1}} a _ {2 j _ {2}} \dots a _ {n j _ {n}}.\tag{3.14}$$
+证明. 根据引理3.3.1, 可经过 $\tau(j_1, j_2, \ldots, j_n)$ 次对换, 将 $(j_1, j_2, \ldots, j_n)$ 变成标准排列 $(1, 2, \cdots, n)$. 又根据行列式的性质(1), 每次对换都会使行列式变号. 因此,
+$$\det (\mathbf {e} _ {j _ {1}}, \mathbf {e} _ {j _ {2}}, \dots , \mathbf {e} _ {j _ {n}}) = (- 1) ^ {\tau (j _ {1}, j _ {2}, \dots , j _ {n})}.$$
+代入(3.13)得
+$$\det (A) = \sum_ {(j _ {1}, j _ {2}, \dots , j _ {n}) \in S _ {n}} (- 1) ^ {\tau (j _ {1}, j _ {2}, \dots , j _ {n})} a _ {1 j _ {1}} a _ {2 j _ {2}} \dots a _ {n j _ {n}}.$$
+上式就是行列式的完全展开式, 许多教科书也直接将 (3.14) 式作为行列式的定义.
+特别地, 我们再次得到二阶与三阶行列式的完全展开式
+$$\left| \begin{array}{c c} a _ {1 1} & a _ {1 2} \\ a _ {2 1} & a _ {2 2} \end{array} \right| = a _ {1 1} a _ {2 2} - a _ {2 1} a _ {1 2},$$
+$$\begin{array}{l} \left| \begin{array}{c c c} a _ {1 1} & a _ {1 2} & a _ {1 3} \\ a _ {2 1} & a _ {2 2} & a _ {2 3} \\ a _ {3 1} & a _ {3 2} & a _ {3 3} \end{array} \right| = \\ a _ {1 1} a _ {2 2} a _ {3 3} + a _ {1 2} a _ {2 3} a _ {3 1} + a _ {1 3} a _ {2 1} a _ {3 2} - a _ {1 1} a _ {2 3} a _ {3 2} - a _ {1 2} a _ {2 1} a _ {3 3} - a _ {1 3} a _ {2 2} a _ {3 1}. \end{array}$$
+例3.3.1. 证明:
+$$\left| \begin{array}{c c c c c c} a _ {1 1} & \dots & a _ {1 r} & a _ {1, r + 1} & \dots & a _ {1 n} \\ \vdots & \dots & \vdots & \vdots & \dots & \vdots \\ a _ {r 1} & \dots & a _ {r r} & a _ {r, r + 1} & \dots & a _ {r n} \\ 0 & \dots & 0 & a _ {r + 1, r + 1} & \dots & a _ {r + 1, n} \\ \vdots & \dots & \vdots & \vdots & \dots & \vdots \\ 0 & \dots & 0 & a _ {n, r + 1} & \dots & a _ {n n} \end{array} \right| = \left| \begin{array}{c c c} a _ {1 1} & \dots & a _ {1 r} \\ \vdots & \dots & \vdots \\ a _ {r 1} & \dots & a _ {r r} \end{array} \right| \cdot \left| \begin{array}{c c c} a _ {r + 1, r + 1} & \dots & a _ {r + 1, n} \\ \vdots & \dots & \vdots \\ a _ {n, r + 1} & \dots & a _ {n n} \end{array} \right|.$$
+[第 79 页]
+证明. 用 $\Delta$ 记左边的行列式. 考察 $\Delta$ 的完全展开式(3.14)中的非零项. 由于当 $r + 1 \leq i \leq n$ 且 $1 \leq j \leq r$ 时, $a_{ij} = 0$, 故若 $a_{1j_1} a_{2j_2} \cdots a_{nj_n} \neq 0$, 则必然有 $r + 1 \leq j_{r+1}, \ldots, j_n \leq n$. 从而 $(j_{r+1}, \ldots, j_n)$ 是 $(r + 1, \ldots, n)$ 的一个排列, 进而 $(j_1, \ldots, j_r)$ 也是 $(1, \ldots, r)$ 的一个排列. 而且容易验证, 逆序数 $\tau(j_1, \ldots, j_n) = \tau(j_1, \ldots, j_r) + \tau(j_{r+1}, \cdots, j_n)$. 记 $S_1$ 是 $1, 2, \ldots, r$ 的排列的集合, $S_2$ 是 $r + 1, r + 2, \ldots, n$ 的排列的集合. 则
+$$\begin{aligned} \Delta & = \sum_{(j_{1},j_{2},\dots ,j_{n})\in S_{n}}(-1)^{\tau (j_{1},j_{2},\dots ,j_{n})}a_{1j_{1}}a_{2j_{2}}\dots a_{nj_{n}}\\ & = \sum_{\substack{(j_{1},\dots ,j_{r})\in S_{1}\\ (j_{r + 1},\dots ,j_{n})\in S_{2}}}(-1)^{\tau (j_{1}\dots j_{r}) + \tau (j_{r + 1}\dots j_{n})}a_{1j_{1}}\dots a_{rj_{r}}a_{r + 1,j_{r + 1}}\dots a_{nj_{n}}\\ & = \sum_{(j_{1},\dots ,j_{r})\in S_{1}}(-1)^{\tau (j_{1}\dots j_{r})}a_{1j_{1}}\dots a_{rj_{r}}\cdot \sum_{(j_{r + 1},\dots ,j_{n})\in S_{2}}(-1)^{\tau (j_{r + 1}\dots j_{n})}a_{r + 1,j_{r + 1}}\dots a_{nj_{n}}\\ & = \left| \begin{array}{ccc}a_{11} & \dots & a_{1r}\\ \vdots & \dots & \vdots \\ a_{r1} & \dots & a_{rr} \end{array} \right|\cdot \left| \begin{array}{ccc}a_{r + 1,r + 1} & \dots & a_{r + 1,n}\\ \vdots & \dots & \vdots \\ a_{n,r + 1} & \dots & a_{nn} \end{array} \right|. \end{aligned}$$
+§3.4 Cramer法则
+在第一章中, 我们提出了求线性方程组的公式解的问题. 在本章的第0节, 我们给给出了二元一次方程组及三元一次方程组的公式解. 本节中, 我们将给出求解具有 $n$ 个方程和 $n$ 个未知数的线性方程组的公式解的法则-Cramer 法则. 为此, 我们先给出一个有用的结论.
+定理3.4.1. 设 $A=(a_{ij})$ 为n阶方阵, 则
+$$\sum_ {k = 1} ^ {n} a _ {i k} A _ {j k} = \det (A) \delta_ {i j}, \quad \sum_ {k = 1} ^ {n} a _ {k i} A _ {k j} = \det (A) \delta_ {i j}, \qquad i, j = 1, 2, \dots , n,\tag{3.15}$$
+其中 $\delta_{ij}$ 为Kronecker记号
+$$\delta_ {i j} = \left\{ \begin{array}{l l} 1, & i = j \\ 0, & i \neq j \end{array} \right.$$
+证明. 我们只证 $\sum_{k=1}^{n} a_{ik} A_{jk} = \det(A) \delta_{ij}$, 也就是
+$$\sum_ {k = 1} ^ {n} a _ {i k} A _ {i k} = \det (A), \quad \sum_ {k = 1} ^ {n} a _ {i k} A _ {j k} = 0, i \neq j.$$
+另一式同理可得.
+[第 80 页]
+$\operatorname{det}(A)$ 按第 $i$ 行展开显然有 $\sum_{k=1}^{n} a_{ik} A_{ik} = \operatorname{det}(A)$. 下设 $i \neq j$, 记矩阵 $B$ 为将 $A$ 的第 $j$ 行用第 $i$ 行替换所得矩阵. 由于 $B$ 的第 $i, j$ 两行元素相同, 由行列式的性质(4), $\operatorname{det}(B) = 0$. 另一方面, 将行列式 $\operatorname{det}(B)$ 按第 $j$ 行展开得
+$$\det (B) = \sum_ {k = 1} ^ {n} a _ {i k} A _ {j k} = 0.$$
+定理证毕.
+□
+我们以 $n = 3$ 为例解释一下定理3.4.1的结论.由(3.15)式得
+$$a _ {1 1} A _ {1 1} + a _ {1 2} A _ {1 2} + a _ {1 3} A _ {1 3} = \det (A), \quad a _ {2 1} A _ {1 1} + a _ {2 2} A _ {1 2} + a _ {2 3} A _ {1 3} = 0, \quad a _ {3 1} A _ {1 1} + a _ {3 2} A _ {1 2} + a _ {3 3} A _ {1 3} = 0.$$
+分别用 $a_{1},a_{2},a_{3}$ 表示三阶行列式 $\det(A)$ 的三个行向量. 则 $(A_{11},A_{12},A_{13})=\mathbf{a}_{2}\times\mathbf{a}_{3}$ ，于是上面几个式子等价于
+$$\det (A) = \mathbf {a} _ {1} \cdot \mathbf {a} _ {2} \times \mathbf {a} _ {3}, \quad \mathbf {a} _ {2} \cdot \mathbf {a} _ {2} \times \mathbf {a} _ {3} = 0, \quad \mathbf {a} _ {3} \cdot \mathbf {a} _ {2} \times \mathbf {a} _ {3} = 0.$$
+利用上述定理的结论, 我们可以方便地证明Cramer法则.
+定理3.4.2 (Cramer法则). 当系数矩阵 $A = (a_{ij})_{n \times n}$ 的行列式不等于零时, 线性方程组
+$$\left\{ \begin{array}{c} a _ {1 1} x _ {1} + a _ {1 2} x _ {2} + \dots + a _ {1 n} x _ {n} = b _ {1} \\ a _ {2 1} x _ {1} + a _ {2 2} x _ {2} + \dots + a _ {2 n} x _ {n} = b _ {2} \\ \dots \quad \dots \quad \dots \\ a _ {n 1} x _ {1} + a _ {n 2} x _ {2} + \dots + a _ {n n} x _ {n} = b _ {n} \end{array} \right.$$
+有唯一解
+$$(x _ {1}, x _ {2}, \dots , x _ {n}) = \left(\frac {\Delta_ {1}}{\Delta}, \frac {\Delta_ {2}}{\Delta}, \dots , \frac {\Delta_ {n}}{\Delta}\right),$$
+其中 $\Delta = \det(A), \Delta_i$ 是将 $A$ 的第 $i$ 列换成常数项后所得方阵的行列式, $i = 1,2,\ldots,n$. 证. 将线性方程组的每个方程分别乘 $A_{1i}, A_{2i}, \ldots, A_{ni}$, 然后求和得
+$$\sum_ {j = 1} ^ {n} A _ {j i} \sum_ {k = 1} ^ {n} a _ {j k} x _ {k} = \sum_ {j = 1} ^ {n} A _ {j i} b _ {j}.$$
+上式左边为
+$$\sum_ {j = 1} ^ {n} A _ {j i} \sum_ {k = 1} ^ {n} a _ {j k} x _ {k} = \sum_ {k = 1} ^ {n} \left(\sum_ {j = 1} ^ {n} a _ {j k} A _ {j i}\right) x _ {k} = \sum_ {k = 1} ^ {n} \delta_ {k i} \det (A) x _ {k} = \Delta \cdot x _ {i}.$$
+而行列式 $\Delta_{i}$ 按第i列展开得到 $\Delta_{i}=\sum_{j=1}^{n}A_{ji}b_{j}$ . 因此当 $\Delta\neq0$ 时, $x_{i}=\Delta_{i}/\Delta,i=1,2,\ldots,n$ . 定理证毕. □
+[第 81 页]
+我们以 $n = 3$ 来理解一下上面证明的思路. 当 $n = 3$ 时, 原方程组可以写成向量形式
+$$x _ {1} \mathbf {a} _ {1} + x _ {2} \mathbf {a} _ {2} + x _ {3} \mathbf {a} _ {3} = \mathbf {b},$$
+其中
+$$\mathbf {a} _ {1} = \left( \begin{array}{c} a _ {1 1} \\ a _ {2 1} \\ a _ {3 1} \end{array} \right), \quad \mathbf {a} _ {2} = \left( \begin{array}{c} a _ {1 2} \\ a _ {2 2} \\ a _ {3 2} \end{array} \right), \quad \mathbf {a} _ {3} = \left( \begin{array}{c} a _ {1 3} \\ a _ {2 3} \\ a _ {3 3} \end{array} \right), \quad \mathbf {b} = \left( \begin{array}{c} b _ {1} \\ b _ {2} \\ b _ {3} \end{array} \right).$$
+对方程两边点乘 $a_{2}\times a_{3}$ 可得
+$$\mathbf {a} _ {1} \cdot \mathbf {a} _ {2} \times \mathbf {a} _ {3} x _ {1} = \mathbf {b} \cdot \mathbf {a} _ {2} \times \mathbf {a} _ {3}.$$
+从而
+$$x _ {1} = \frac {\mathbf {b} \cdot \mathbf {a} _ {2} \times \mathbf {a} _ {3}}{\mathbf {a} _ {1} \cdot \mathbf {a} _ {2} \times \mathbf {a} _ {3}} = \frac {\Delta_ {1}}{\Delta}.$$
+同理, 可以得到 $x_{2}, x_{3}$ 的表示式.
+例3.4.1. 用Cramer法则解线性方程组
+$$\left\{ \begin{array}{c} x _ {2} + x _ {3} + x _ {4} = 1 \\ x _ {1} \quad + x _ {3} + x _ {4} = 2 \\ x _ {1} + x _ {2} \quad + x _ {4} = 3 \\ x _ {1} + x _ {2} + x _ {3} \quad = 4 \end{array} \right.$$
+解.
+$$\Delta = \left| \begin{array}{c c c c} 0 & 1 & 1 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 0 & 1 \\ 1 & 1 & 1 & 0 \end{array} \right| = - 3, \quad \Delta_ {1} = \left| \begin{array}{c c c c} 1 & 1 & 1 & 1 \\ 2 & 0 & 1 & 1 \\ 3 & 1 & 0 & 1 \\ 4 & 1 & 1 & 0 \end{array} \right| = - 7, \quad \Delta_ {2} = \left| \begin{array}{c c c c} 0 & 1 & 1 & 1 \\ 1 & 2 & 1 & 1 \\ 1 & 3 & 0 & 1 \\ 1 & 4 & 1 & 0 \end{array} \right| = - 4,$$
+$$\Delta_ {3} = \left| \begin{array}{c c c c} 0 & 1 & 1 & 1 \\ 1 & 0 & 2 & 1 \\ 1 & 1 & 3 & 1 \\ 1 & 1 & 4 & 0 \end{array} \right| = - 1, \quad \Delta_ {4} = \left| \begin{array}{c c c c} 0 & 1 & 1 & 1 \\ 1 & 0 & 1 & 2 \\ 1 & 1 & 0 & 3 \\ 1 & 1 & 1 & 4 \end{array} \right| = 2.$$
+故方程组的解为
+$$x _ {1} = \frac {7}{3}, x _ {2} = \frac {4}{3}, x _ {3} = \frac {1}{3}, x _ {4} = - \frac {2}{3}.$$
+一般来说, Cramer法则主要用于理论分析, 除非相关的行列式容易计算, 否则用Cramer法则求解方程的运算量非常巨大.
+[第 82 页]
+§3.5 行列式的计算
+计算行列式的最基本的方法是: 通过行与列的初等变换, 化一般方阵的行列式为三角方阵的行列式. 根据行列式的性质,
+- 交换方阵的两行(列)之后, 行列式变为原来的相反数.
+- 将某行(列)乘以非零常数 $\lambda$ 之后, 行列式变为原来的 $\lambda$ 倍.
+- 将某行(列)的常数倍加到另一行(列)之后,行列式保持不变.
+为方便起见，我们采用以下记号来表示行列式的初等变换．分别用 $r_{i}\leftrightarrow r_{j}$ 、 $\lambda r_{i}$ 、 $\lambda r_{i}\rightarrow r_{j}$ 表示第i,j两行互换、第i行乘常数 $\lambda$ 、第i行乘 $\lambda$ 加到第j行．类似地，分别用记号 $c_{i}\leftrightarrow c_{j}$ 、 $\lambda c_{i}$ 、 $\lambda c_{i}\rightarrow c_{j}$ 表示三类列变换.例如，把第2行的3倍加到第3行，记为 $3r_{2}\rightarrow r_{3}$ ;将第3列乘-2记为 $-2c_{3}$ .
+例3.5.1. 计算以下行列式
+$$\left| \begin{array}{c c c c} 0 & 5 & - 4 & 5 \\ - 3 & - 1 & - 5 & 3 \\ 3 & 1 & - 2 & - 3 \\ - 1 & 4 & - 5 & - 1 \end{array} \right|.$$
+解.
+$$\left|\begin{array}{r r r r}0&5&- 4&5\\- 3&- 1&- 5&3\\3&1&- 2&- 3\\- 1&4&- 5&- 1\end{array}\right| \xrightarrow {r _ {3} \rightarrow r _ {2}} \left|\begin{array}{r r r r}0&5&- 4&5\\0&0&- 7&0\\3&1&- 2&- 3\\- 1&4&- 5&- 1\end{array}\right| \xrightarrow {3 r _ {4} \rightarrow r _ {3}} \left|\begin{array}{r r r r}0&5&- 4&5\\0&0&- 7&0\\0&1 3&- 1 7&- 6\\- 1&4&- 5&- 1\end{array}\right| \xrightarrow {- c _ {4} \rightarrow c _ {2}}$$
+$$\left| \begin{array}{c c c c} 0 & 0 & - 4 & 5 \\ 0 & 0 & - 7 & 0 \\ 0 & 1 9 & - 1 7 & - 6 \\ - 1 & 5 & - 5 & - 1 \end{array} \right| \xrightarrow {r _ {1} \leftrightarrow r _ {4}, r _ {2} \leftrightarrow r _ {3}} \left| \begin{array}{c c c c} - 1 & 5 & - 5 & - 1 \\ 0 & 1 9 & - 1 7 & - 6 \\ 0 & 0 & - 7 & 0 \\ 0 & 0 & - 4 & 5 \end{array} \right| = - 1 9 \cdot \left| \begin{array}{c c} - 7 & 0 \\ - 4 & 5 \end{array} \right| = 6 6 5.$$
+例3.5.2. 计算 $n$ 阶行列式
+$$\left| \begin{array}{c c c c} x & 1 & \dots & 1 \\ 1 & x & \ddots & \vdots \\ \vdots & \ddots & \ddots & 1 \\ 1 & \dots & 1 & x \end{array} \right|.$$
+[第 83 页]
+§3.5 行列式的计算
+解.
+$$\begin{array}{r l} & {\left| \begin{array}{c c c c} {x} & {1} & {\dots} & {1} \\ {1} & {x} & {\ddots} & {\vdots} \\ {\vdots} & {\ddots} & {\ddots} & {1} \\ {1} & {\dots} & {1} & {x} \end{array} \right| \xrightarrow [ \text {其它各行} ]{\text {第1行加上}} \left| \begin{array}{c c c c} {x + n - 1} & {x + n - 1} & {\dots} & {x + n - 1} \\ {1} & {x} & {\ddots} & {\vdots} \\ {\vdots} & {\ddots} & {\ddots} & {1} \\ {1} & {\dots} & {1} & {x} \end{array} \right| \xrightarrow [ \text {提取因子} ]{\text {第1行}}} \\ & {(x + n - 1) \left| \begin{array}{c c c c} {1} & {1} & {\dots} & {1} \\ {1} & {x} & {\ddots} & {\vdots} \\ {\vdots} & {\ddots} & {\ddots} & {1} \\ {1} & {\dots} & {1} & {x} \end{array} \right| \xrightarrow [ \text {减去第1行} ]{\text {其它各行}} (x + n - 1) \left| \begin{array}{c c c c} {1} & {1} & {\dots} & {1} \\ & {x - 1} & & \\ & & {\ddots} & \\ & & & {x - 1} \end{array} \right|} \\ & {= (x + n - 1) (x - 1) ^ {n - 1}.} \end{array}$$
+对于一些结构性很高的行列式, 可以将行列式按某一行(列)展开, 建立行列式的递推公式求解.
+例3.5.3. 计算Vandermonde行列式
+$$\Delta_ {n} (a _ {1}, a _ {2}, \ldots , a _ {n}) = \left| \begin{array}{c c c c} 1 & a _ {1} & \dots & a _ {1} ^ {n - 1} \\ 1 & a _ {2} & \dots & a _ {2} ^ {n - 1} \\ \vdots & \vdots & \dots & \vdots \\ 1 & a _ {n} & \dots & a _ {n} ^ {n - 1} \end{array} \right|.$$
+解. 从行列式的第n列开始至第2列, 依次把各列减去前一列的 $a_{n}$ 倍, 得
+$$\begin{array}{l} \Delta_ {n} (a _ {1}, a _ {2}, \dots , a _ {n}) = \left| \begin{array}{c c c c} 1 & a _ {1} - a _ {n} & \dots & a _ {1} ^ {n - 2} (a _ {1} - a _ {n}) \\ \vdots & \vdots & \dots & \vdots \\ 1 & a _ {n - 1} - a _ {n} & \dots & a _ {n - 1} ^ {n - 2} (a _ {n - 1} - a _ {n}) \\ 1 & 0 & \dots & 0 \end{array} \right| \\ = (- 1) ^ {n - 1} \left| \begin{array}{c c c c} a _ {1} - a _ {n} & a _ {1} (a _ {1} - a _ {n}) & \dots & a _ {1} ^ {n - 2} (a _ {1} - a _ {n}) \\ a _ {2} - a _ {n} & a _ {2} (a _ {2} - a _ {n}) & \dots & a _ {2} ^ {n - 2} (a _ {2} - a _ {n}) \\ \vdots & \vdots & \dots & \vdots \\ a _ {n - 1} - a _ {n} & a _ {n - 1} (a _ {n - 1} - a _ {n}) & \dots & a _ {n - 1} ^ {n - 2} (a _ {n - 1} - a _ {n}) \end{array} \right| \\ = \prod_ {i = 1} ^ {n - 1} (a _ {n} - a _ {i}) \cdot \Delta_ {n - 1} (a _ {1}, a _ {2}, \dots , a _ {n - 1}). \end{array}$$
+易知 $\Delta_1 = 1, \Delta_2(a_1, a_2) = a_2 - a_1$. 利用数学归纳法可得
+$$\Delta_ {n} (a _ {1}, a _ {2}, \dots , a _ {n}) = \prod_ {1 \leq i <   j \leq n} (a _ {j} - a _ {i}).$$
+[第 84 页]
+□
+例3.5.4. 计算 $n$ 阶行列式
+$$\Delta_ {n} = \left| \begin{array}{c c c c c} 2 & 1 & 0 & \dots & 0 \\ 1 & 2 & 1 & \ddots & \vdots \\ 0 & 1 & \ddots & \ddots & 0 \\ \vdots & \ddots & \ddots & 2 & 1 \\ 0 & \dots & 0 & 1 & 2 \end{array} \right|$$
+解. 容易算得 $\Delta_1 = 2, \Delta_2 = 3$. 当 $n \geq 3$ 时, 按第一行展开行列式得
+$$\Delta_ {n} = 2 \Delta_ {n - 1} - \Delta_ {n - 2}.$$
+由此
+$$\Delta_ {n} - \Delta_ {n - 1} = \Delta_ {n - 1} - \Delta_ {n - 2} = \dots = \Delta_ {2} - \Delta_ {1} = 1.$$
+从而
+$$\Delta_ {n} = n + 1.$$
+小知识:行列式
+行列式的概念作为一个速记工具最早出现于线性方程组的求解, 它是由日本数学家关孝和及德国数学家Leibnitz于十七世纪末期提出, 现已称为线性代数的基本工具之一.
+1683年关孝和写了一部专著《解伏题之法》，意思就是《解行列式问题的方法》. 1693年Leibnitz在写给洛必达的一封信中使用了行列式记号，但没有提出行列式的概念. 1729年英国数学家Maclaurin以行列式为工具解含有2,3,4个末知量的线性方程组. 1750年，瑞士数学家Cramer更完整地叙述了行列式的展开法则并将它用于解线性方程组. 1772年法国数学家Vandermonde专门对行列式做了理论上的研究，建立了行列式展开法则，用子式和代数余子式表示一个行列式. 1772年法国数学家Laplace推广了Vandermonde展开行列式的方法，得到我们熟知的拉普拉斯展开定理. 1813至1815年法国数学家Cauchy对行列式做了系统的代数处理. 1841年，德国数学家Jacobi发表的《论行列式的形成与性质》一文，总结了行列式的理论.
+行列式在坐标变换、多重积分中的变量替换、二次型及多元多项式消元等有重要的应用.
+[第 85 页]
+习题二
+习题二
+1. 计算下列行列式:
+$$\left| \begin{array}{c c c c} 1 & 0 & 1 & - 4 \\ - 1 & - 3 & 0 & - 2 \\ 2 & - 1 & 4 & 0 \\ 0 & 3 & - 3 & 2 \end{array} \right|\tag{1}$$
+(2)
+$$\left| \begin{array}{c c c c} 1 & 4 & - 1 & - 1 \\ 1 & 0 & 0 & 1 \\ - 3 & 3 & - 4 & 0 \\ 0 & 1 & - 1 & - 1 \end{array} \right|\tag{3}$$
+$$\left| \begin{array}{c c c} x + a & x + b & x + c \\ y + a & y + b & y + c \\ z + a & z + b & z + c \end{array} \right|\tag{4}$$
+$$\left| \begin{array}{c c c c} & & & a _ {1 n} \\ & & a _ {2, n - 1} & a _ {2 n} \\ & \ddots & \ddots & \vdots \\ a _ {n 1} & a _ {n 2} & \dots & a _ {n n} \end{array} \right|$$
+(5)
+$$\left| \begin{array}{c c c} a ^ {2} & (a + 1) ^ {2} & (a + 2) ^ {2} \\ b ^ {2} & (b + 1) ^ {2} & (b + 2) ^ {2} \\ c ^ {2} & (c + 1) ^ {2} & (c + 2) ^ {2} \end{array} \right|\tag{6}$$
+$$\left| \begin{array}{c c c c c} a _ {1} & a _ {2} & 0 & 0 & 0 \\ b _ {1} & b _ {2} & 0 & 0 & 0 \\ c _ {1} & c _ {2} & c _ {3} & 0 & 0 \\ d _ {1} & d _ {2} & d _ {3} & d _ {4} & 0 \\ e _ {1} & e _ {2} & e _ {3} & e _ {4} & e _ {5} \end{array} \right|$$
+2. 在三维空间直角坐标系中, 已知点 $A, B, C, D$ 的坐标分别是 $(1, 1, 0)$, $(3, 1, 2)$, $(0, 1, 3)$, $(2, 2, 4)$. 求四面体ABCD的体积及各个面的面积.
+3. 将行列式
+$$\left| \begin{array}{c c c c} x - 2 & 1 & 0 & 0 \\ 1 & x - 2 & 1 & 0 \\ 0 & 1 & x - 2 & 1 \\ 0 & 0 & 1 & x - 2 \end{array} \right|$$
+展开为关于x的多项式.
+4. A为n阶方阵,  $\lambda$ 为常数. 证明:  $\det(\lambda A)=\lambda^{n}\det(A)$ .
+5. 方阵A称为反对称方阵, 如果它的转置方阵等于-A. 证明: 奇数阶反对称方阵的行列式为零.
+6. 证明:
+$$\left| \begin{array}{c c} a _ {1 1} b _ {1 1} + a _ {1 2} b _ {2 1} & a _ {1 1} b _ {1 2} + a _ {1 2} b _ {2 2} \\ a _ {2 1} b _ {1 1} + a _ {2 2} b _ {2 1} & a _ {2 1} b _ {1 2} + a _ {2 2} b _ {2 2} \end{array} \right| = \left| \begin{array}{c c} a _ {1 1} & a _ {1 2} \\ a _ {2 1} & a _ {2 2} \end{array} \right|. \left| \begin{array}{c c} b _ {1 1} & b _ {1 2} \\ b _ {2 1} & b _ {2 2} \end{array} \right|$$
+[第 86 页]
+7. 证明:
+$$\left| \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & 1 & 0 \\ a _ {2 1} & a _ {2 2} & 0 & 1 \\ 1 & 0 & b _ {1 1} & b _ {1 2} \\ 0 & 1 & b _ {2 1} & b _ {2 2} \end{array} \right| = \left| \begin{array}{c c} a _ {1 1} b _ {1 1} + a _ {1 2} b _ {2 1} - 1 & a _ {1 1} b _ {1 2} + a _ {1 2} b _ {2 2} \\ a _ {2 1} b _ {1 1} + a _ {2 2} b _ {2 1} & a _ {2 1} b _ {1 2} + a _ {2 2} b _ {2 2} - 1 \end{array} \right|$$
+8. 设 $\mathbf{a}, \mathbf{b}, \mathbf{c}, \mathbf{d}$ 为4维数组向量. 证明: $\det(2\mathbf{a} - \mathbf{b}, -\mathbf{a} + 2\mathbf{b} - \mathbf{c}, -\mathbf{b} + 2\mathbf{c} - \mathbf{d}, -\mathbf{c} + 2\mathbf{d}) = 5\det(\mathbf{a}, \mathbf{b}, \mathbf{c}, \mathbf{d})$.
+9. 求以下排列的逆序数, 并指出其奇偶性.
+(1) $(6,8,1,4,7,5,3,2,9)$  (2) $(6,4,2,1,9,7,3,5,8)$  (3) $(7,5,2,3,9,8,1,6,4)$
+10. 证明: 任意一个排列经过一次对换后, 必改变其奇偶性.
+11. 证明: 等式 (3.14)作为行列式的定义与行列式其它定义等价.
+12. 写出四阶行列式的完全展开式.
+13. 用Cramer法则求解下列线性方程组:
+(1)
+$$\left\{ \begin{array}{l} x _ {1} - x _ {2} + x _ {3} = 3 \\ x _ {1} + 2 x _ {2} + 4 x _ {3} = 5 \\ x _ {1} + 3 x _ {2} + 9 x _ {3} = 7 \end{array} \right.\tag{2}$$
+$$\left\{ \begin{array}{l} 2 x _ {1} + x _ {2} - 5 x _ {3} + x _ {4} = 8 \\ x _ {1} - 3 x _ {2} - 6 x _ {4} = 9 \\ 2 x _ {2} - x _ {3} + 2 x _ {4} = - 5 \\ x _ {1} + 4 x _ {2} - 7 x _ {3} + 6 x _ {4} = 0 \end{array} \right.$$
+14. 设 $x_0, x_1, \ldots, x_n$ 及 $y_0, y_1, \ldots, y_n$ 是任给实数, 其中 $x_i (0 \leq i \leq n)$ 两两互不相等. 证明: 存在唯一的次数不超过 $n$ 的多项式 $p(x)$ 满足 $p(x_i) = y_i$, $i = 0, 1, \ldots, n$.
+15. 证明: $n$ 个变元、$n$ 个方程的线性方程组有非零解当且仅当系数矩阵的行列式为零.
+16. 计算下列 $n$ 阶行列式
+(1)
+$$\left| \begin{array}{c c c c c c} a _ {1} & & & & & b _ {1} \\ & \ddots & & & \ddots \\ & & a _ {n} & b _ {n} & & \\ & & c _ {n} & d _ {n} & & \\ & \ddots & & & \ddots \\ c _ {1} & & & & & d _ {1} \end{array} \right|\tag{2}$$
+$$\left| \begin{array}{c c c c} 1 + a _ {1} & 1 & \dots & 1 \\ 1 & 1 + a _ {2} & \ddots & \vdots \\ \vdots & \ddots & \ddots & 1 \\ 1 & \dots & 1 & 1 + a _ {n} \end{array} \right|$$
+[第 87 页]
+$$\left| \begin{array}{c c c c c} 2 \cos (\theta) & 1 & 0 & \dots & 0 \\ 1 & 2 \cos (\theta) & 1 & \dots & 0 \\ 0 & 1 & 2 \cos (\theta) & \dots & 0 \\ \vdots & \vdots & \vdots & & \vdots \\ 0 & 0 & 0 & \dots & 2 \cos (\theta) \end{array} \right|\tag{3}$$
+[第 88 页]
+[第 89 页]
+第四章 矩阵
+在第一章介绍求解线性方程组的Gauss消元法时, 我们引进了矩阵的概念. 但在那里, 矩阵仅仅是方程组的一个简略记号, 并没有定义矩阵之间的运算. 实际上, 通过引入矩阵之间的运算(特别是乘法), 我们可以将求解线性方程组的Gauss消元法用矩阵运算来表述, 从而理解Gauss消元法的本质. 经过几个世纪的发展, 矩阵现已称为线性代数的主要研究工具和基本研究对象之一. 科学与工程计算中的许多问题都可以转化成矩阵的计算问题. 本章将介绍矩阵的基本运算, 包括线性运算、乘法、求逆、分块运算、初等矩阵及其应用.
+§4.1 矩阵的定义
+矩阵的概念在现实生活中有着广泛的应用. 例如, 我们经常见到的各种统计表格就是矩阵的具体体现. 第一章中我们用矩阵来表示线性方程组. 后面我们将看到, 矩阵还可以表示更多的数学对象. 虽然第一章引入了矩阵的记号, 但是这里我们还是给出矩阵的正式定义.
+定义4.1.1. 对任意正整数 $m$ 和 $n$, 由 $m \times n$ 个数排成的 $m$ 行 $n$ 列的矩形列表
+$$\left( \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ a _ {2 1} & a _ {2 2} & \dots & a _ {2 n} \\ \vdots & \vdots & \dots & \vdots \\ a _ {m 1} & a _ {m 2} & \dots & a _ {m n} \end{array} \right)\tag{4.1}$$
+称为一个 $m \times n$ 阶矩阵, 记作 $A = (a_{ij})_{m \times n}$. 称表中的每个数为矩阵A的元素; 排在第i行第j列的元素 $a_{ij}$ 被称为A的第 $(i,j)$ 元素; 当i = j时, $a_{ii}$ 被称为A的对角元. 两个矩阵A与B称为是相等的, 如果它们的行数和列数都相等并且每个位置上的元素也相等, 记作A = B.
+矩阵的概念可以看成数组向量的一个自然推广. 两者之间既略有区别, 同时也有紧密的联系. 一个 $n$ 维数组行向量可以看成一个1行 $n$ 列的矩阵; 同理, 一个 $n$ 维数组列向量可视为一个 $n$ 行1列的矩阵. 在向量的意义下, 行向量
+$$(a _ {1}, a _ {2}, \dots , a _ {n})$$
+和列向量
+$$\left( \begin{array}{c} a _ {1} \\ \vdots \\ a _ {n} \end{array} \right)$$
+[第 90 页]
+表示同一个向量;但是在矩阵的意义下,它们表示不同的矩阵.
+一个 $m \times n$ 阶矩阵A既可以被看作是m个行向量按列排在一起, 又可以被看作n个列向量按行排在一起, 还可以被看作是将一个mn维的数组向量. 除此之外, 矩阵还可以表示许多数学对象. 下面, 我们给出几个例子.
+例4.1.1. 旋转变换矩阵 在平面直角坐标系Oxy中, 将点 $P = (x, y)$ 绕原点逆时针旋转 $\theta$ 角得到点 $P' = (x', y')$, 则有
+$$\left\{ \begin{array}{l} x ^ {\prime} = \cos (\theta) x - \sin (\theta) y \\ y ^ {\prime} = \sin (\theta) x + \cos (\theta) y \end{array} \right.$$
+该坐标变换公式的系数排成的 $2 \times 2$ 阶矩阵
+$$P = \left( \begin{array}{c c} \cos \theta & - \sin \theta \\ \sin \theta & \cos \theta \end{array} \right)$$
+表示平面上绕原点逆时针旋转 $\theta$ 角的旋转变换. 类似地,  $3 \times 3$ 阶矩阵
+$$Q = \left( \begin{array}{c c c} \cos \theta & - \sin \theta & 0 \\ \sin \theta & \cos \theta & 0 \\ 0 & 0 & 1 \end{array} \right)$$
+表示空间中点绕z轴正向逆时针旋转 $\theta$ 角的坐标变换公式.
+例4.1.2. 线性映射 设 $\mathbf{x} = (x_{1}, x_{2}, \cdots, x_{m})$ 是一个m维数组向量, 其中每个 $x_{i}$ 都可以表示为n维数组向量 $\mathbf{y} = (y_{1}, y_{2}, \cdots, y_{n})$ 的分量的齐次线性函数:
+$$\left\{ \begin{array}{l} x _ {1} = a _ {1 1} y _ {1} + a _ {1 2} y _ {2} + \dots + a _ {1 n} y _ {n}, \\ x _ {2} = a _ {2 1} y _ {1} + a _ {2 2} y _ {2} + \dots + a _ {2 n} y _ {n}, \\ \dots \dots \\ x _ {m} = a _ {m 1} y _ {1} + a _ {m 2} y _ {2} + \dots + a _ {m n} y _ {n}. \end{array} \right.$$
+由上式确定的映射 $\mathcal{A}:\mathbf{y}\mapsto \mathbf{x}$ 称为线性映射．该线性映射可用矩阵 $A = (a_{ij})_{m\times n}$ 来表示.线性映射 $\mathcal{A}$ 与矩阵 $A$ 建立了一一对应关系,即每个矩阵 $A$ 对应了一个线性映射 $\mathcal{A}$ ;反过来,每个线性映射 $\mathcal{A}$ 都对应一个矩阵 $A$ .显然，例4.1.1中的旋转变换是线性映射的一个特例
+[第 91 页]
+图 4.1 图的邻接矩阵
+例4.1.3. 图的邻接矩阵 一个平面图G是由顶点与边构成. 每条边连接两个顶点. 设图G有n个顶点 $v_{1}, v_{2}, \ldots, v_{n}$ . 现构造一个矩阵 $A = (a_{ij})_{n \times n}$ , 如果顶点 $v_{i}$ 与 $v_{j}$ 有一条边相连, 则定义 $a_{ij} = 1$ ; 否则, 定义 $a_{ij} = 0$ . 称矩阵A为图G的邻接矩阵. 例如, 图4.1的邻接矩阵
+$$A = \left( \begin{array}{c c c c c} 0 & 1 & 1 & 1 & 0 \\ 1 & 0 & 0 & 1 & 0 \\ 1 & 0 & 0 & 1 & 1 \\ 1 & 1 & 1 & 0 & 1 \\ 0 & 0 & 1 & 1 & 0 \end{array} \right).$$
+图的邻接矩阵完全反映了图的拓扑关系.
+例4.1.4. 社团关系 某校有 $n$ 名学生加入了 $m$ 个社团. 引进一个 $m \times n$ 阶矩阵 $A = (a_{ij})$, 其中
+$$a _ {i j} = \left\{ \begin{array}{l l} 1 & \text {如果第} j \text {号学生属于第} i \text {个社团} \\ 0 & \text {其它} \end{array} \right.$$
+则矩阵A描述了学生与社团之间的关系.例如,
+$$A = \left( \begin{array}{c c c c c} 1 & 1 & 1 & 1 & 0 \\ 1 & 0 & 1 & 0 & 1 \\ 0 & 1 & 1 & 0 & 1 \end{array} \right)$$
+表示有三个社团, 5名学生. 第一个社团有编号位1,2,3,4的学生, 第二个社团有编号位1,3,5的学生, 第三个社团有编号位2,3,5的学生.
+例4.1.5. 数字图像 一幅灰度数字图像通过分割成 $m \times n$ 的均匀小方格, 可以看成一个 $m \times n$ 阶矩阵 $A = (a_{ij})$. 每一个小方格称为一个像素. 因此, 一幅灰度图像总
+共有mn个像素. 每个像素对应的灰度值由矩阵A的元素 $a_{ij}(0 \leq a_{ij} \leq 1)$ 给出. 例如, $a_{ij} = 0$ 表示像素 $(i,j)$ 为黑色; $a_{ij} = 1$ 表示像素 $(i,j)$ 为白色; 一般地, $a_{ij}$ 越小表示对应像素的颜色越暗; 反之, $a_{ij}$ 越大表示对应像素的颜色越明亮.
+[第 92 页]
+一幅数字图像可以看成一幅真实图像的离散表示. m, n 越大(即像素越多), 则逼近效果越好. 图 4.2 显示了一幅  $256 \times 256$  的灰度图像.
+图 4.2 数字图像
+下面介绍几种常见的矩阵名称及其记号.
+- 元素都是0的矩阵称为零矩阵,记作 $O$ 或0.
+- $n \times n$ 矩阵称为 $n$ 阶方阵.
+- 对角元是1其它元素都是0的 $n$ 阶方阵称为单位阵, 记作 $I, I_n$ 或 $I^{(n)}$.
+- 对角元是 $a$ 其它元素都是0的方阵称为数量阵, 记作 $aI$.
+- 若方阵 $A = (a_{ij})_{n \times n}$ 的元素除对角元外都为零, 则称 $A$ 为对角阵, 记作
+$$A = \left( \begin{array}{c c c} {a _ {1 1}} & & \\ & {\ddots} & \\ & & {a _ {n n}} \end{array} \right) \quad \text {或} \quad A = \mathrm{diag} (a _ {1 1}, a _ {2 2}, \dots , a _ {n n}).$$
+- 若矩阵 $A = (a_{ij})_{m \times n}$ 满足 $a_{ij} = 0$ 对所有 $i > j$ 成立, 则 $A$ 称为上三角阵.
+- 若矩阵 $A = (a_{ij})_{m \times n}$ 满足 $a_{ij} = 0$ 对所有 $i < j$ 成立, 则 $A$ 称为下三角阵.
+- 上三角阵和下三角阵统称为三角阵.
+- 若方阵 $A = (a_{ij})_{n \times n}$ 满足 $a_{ij} = a_{ji}$ 对所有 $i, j$ 成立, 则 $A$ 称为对称阵.
+[第 93 页]
+§4.2 矩阵的运算
+- 若方阵 $A = (a_{ij})_{n \times n}$ 满足 $a_{ij} = -a_{ji}$ 对所有 $i, j$ 成立, 则 $A$ 称为反对称阵.
+- 若矩阵A的元素都是整数、有理数、实数、复数、多项式等, 则A分别称为整数矩阵、有理数矩阵、实矩阵、复矩阵、多项式矩阵. 一般地, 若A的元素都取自某个数域F, 则A称为数域F上的矩阵. 数域F上的 $m \times n$ 矩阵的全体, 记作 $F^{m \times n}$.
+例4.1.6. 在下列2阶方阵
+$$A = \left( \begin{array}{c c} 0 & 1 \\ 1 & 0 \end{array} \right), B = \left( \begin{array}{c c} 1 & 0 \\ \frac {1}{2} & 1 \end{array} \right), C = \left( \begin{array}{c c} 0 & \pi \\ - \pi & 0 \end{array} \right), D = \left( \begin{array}{c c} x & 0 \\ 0 & x ^ {2} \end{array} \right), E = \left( \begin{array}{c c} e ^ {i \pi / 3} & 0 \\ 0 & e ^ {i \pi / 3} \end{array} \right)$$
+中, A 为整数方阵、对称阵, B 为有理方阵、下三角阵, C 为实方阵、反对称阵, D 为多项式方阵、对角阵, E 为复方阵、数量阵.
+在本节中, 我们介绍矩阵的最基本运算, 包括加法、数乘、乘积、求逆、转置、分块等. 其中最重要的矩阵乘法与逆. 初学者只有通过加深对基本概念的理解、提高矩阵运算的熟练程度, 才能逐渐地掌握矩阵运算技巧、并灵活地加以运用.
+§4.2.1 加法与数乘
+矩阵的加法与数乘又称为线性运算. 矩阵的线性运算可以视为数组向量的线性运算的简单推广.
+定义4.2.1. 设矩阵 $A = (a_{ij})_{m \times n} \in F^{m \times n}, B_{m \times n} = (b_{ij}) \in F^{m \times n}, \lambda \in F$. 定义
+$$A + B := \left( \begin{array}{c c c c} a _ {1 1} + b _ {1 1} & a _ {1 2} + b _ {1 2} & \dots & a _ {1 n} + b _ {1 n} \\ a _ {2 1} + b _ {2 1} & a _ {2 2} + b _ {2 2} & \dots & a _ {2 n} + b _ {2 n} \\ \vdots & \vdots & \dots & \vdots \\ a _ {m 1} + b _ {m 1} & a _ {m 2} + b _ {m 2} & \dots & a _ {m n} + b _ {m n} \end{array} \right)\tag{4.2}$$
+和
+$$\lambda A := \left( \begin{array}{c c c c} \lambda a _ {1 1} & \lambda a _ {1 2} & \dots & \lambda a _ {1 n} \\ \lambda a _ {2 1} & \lambda a _ {2 2} & \dots & \lambda a _ {2 n} \\ \vdots & \vdots & \dots & \vdots \\ \lambda a _ {m 1} & \lambda a _ {m 2} & \dots & \lambda a _ {m n} \end{array} \right)\tag{4.3}$$
+[第 94 页]
+分别称为矩阵的加法运算和数乘运算, 记作
+$$A + B = (a _ {i j} + b _ {i j}) _ {m \times n}, \quad \lambda A = (\lambda a _ {i j}) _ {m \times n}.$$
+类似地, 可以定义矩阵的减法运算和负矩阵
+$$A - B = (a _ {i j} - b _ {i j}) _ {m \times n}, \quad - A = (- a _ {i j}) _ {m \times n}.\tag{4.4}$$
+例4.2.1. 设A,B,C,D,E为例4.1.6中的矩阵,则有
+$$A + B = \left( \begin{array}{c c} 1 & 1 \\ \frac {3}{2} & 1 \end{array} \right), \quad C - D = \left( \begin{array}{c c} - x & \pi \\ - \pi & - x ^ {2} \end{array} \right), \quad 2 E = \left( \begin{array}{c c} 1 + \sqrt {3} i & 0 \\ 0 & 1 + \sqrt {3} i \end{array} \right)$$
+定理4.2.1. 矩阵的加法和数乘运算具有下列性质：
+(1) 加法交换律  $A + B = B + A$
+(2) 加法结合律 $(A + B) + C = A + (B + C)$
+(3) 有零矩阵 $A + O = O + A = A$
+(4) 有负矩阵 $A + (-A) = (-A) + A = O$
+(5) 左分配律 $(\lambda + \mu)A = \lambda A + \mu A$
+(6) 右分配律 $\lambda (A + B) = \lambda A + \lambda B$
+(7) 数乘结合律  $(\lambda\mu)A=\lambda(\mu A)$
+(8) 数乘单位元 $1A = A$
+其中A,B,C是使运算有意义的矩阵, $\lambda,\mu$ 是数.
+证明. 以上性质可通过矩阵运算的定义直接验证, 留作习题.
+同数组向量类似, 我们也可以定义一组矩阵的线性组合概念.
+定义4.2.2. 设 $A_{1}, A_{2}, \ldots, A_{k} \in F^{m \times n}$ 是一组矩阵，$\lambda_{1}, \lambda_{2}, \ldots, \lambda_{k} \in F$ 是一组数。称和式
+$$\lambda_ {1} A _ {1} + \lambda_ {2} A _ {2} + \dots + \lambda_ {k} A _ {k}\tag{4.5}$$
+为 $A_{1},A_{2},\ldots,A_{k}$ 的线性组合.
+[第 95 页]
+第 $(i,j)$ 元素是1,其它元素全是0的 $m\times n$ 矩阵
+$$\left( \begin{array}{c c c} {0} & {\dots} & {0} \\ {\vdots} & {1} & {\vdots} \\ {0} & {\dots} & {0} \end{array} \right) \leftarrow \text {第} i \text {行}$$
+称为基本矩阵, 记作 $E_{ij}$. 每个 $m \times n$ 矩阵 $A = (a_{ij})_{m \times n}$ 都可以表示为基本矩阵的线性组合:
+$$A = \sum_ {i = 1} ^ {m} \sum_ {j = 1} ^ {n} a _ {i j} E _ {i j}.$$
+§4.2.2 矩阵的乘法
+在定义矩阵的乘法运算之前, 我们首先看一个例子.
+例4.2.2. 给定线性映射 $\mathcal{A}:\mathbf{y}\in F^n\mapsto \mathbf{x}\in F^m$
+$$\left\{ \begin{array}{l} x _ {1} = a _ {1 1} y _ {1} + a _ {1 2} y _ {2} + \dots + a _ {1 n} y _ {n}, \\ x _ {2} = a _ {2 1} y _ {1} + a _ {2 2} y _ {2} + \dots + a _ {2 n} y _ {n}, \\ \dots \dots \\ x _ {m} = a _ {m 1} y _ {1} + a _ {m 2} y _ {2} + \dots + a _ {m n} y _ {n}. \end{array} \right.\tag{4.6}$$
+该映射可以用矩阵 $A = (a_{ij})_{m\times n}$ 来表示.再给定线性映射 $\mathcal{B}\colon \mathbf{z}\in F^p\mapsto \mathbf{y}\in F^n$
+$$\left\{ \begin{array}{l} y _ {1} = b _ {1 1} z _ {1} + b _ {1 2} z _ {2} + \dots + b _ {1 p} z _ {p}, \\ y _ {2} = b _ {2 1} z _ {1} + b _ {2 2} z _ {2} + \dots + b _ {2 p} z _ {p}, \\ \qquad \qquad \qquad \dots \dots \\ y _ {n} = b _ {n 1} z _ {1} + b _ {n 2} z _ {2} + \dots + b _ {n p} z _ {p}. \end{array} \right.\tag{4.7}$$
+该线性映射可以用矩阵 $B=(b_{ij})_{n\times p}$ 来表示.
+下面我们来考虑A与B的复合映射. 由
+$$x _ {i} = \sum_ {k = 1} ^ {n} a _ {i k} y _ {k} = \sum_ {k = 1} ^ {n} a _ {i k} \sum_ {j = 1} ^ {p} b _ {k j} z _ {j} = \sum_ {j = 1} ^ {p} \sum_ {k = 1} ^ {n} a _ {i k} b _ {k j} z _ {j}$$
+[第 96 页]
+可知, 线性映射 A 和 B 的复合  $C = A \circ B: z \mapsto x$  仍是一个线性映射:
+$$\left\{ \begin{array}{l} x _ {1} = c _ {1 1} z _ {1} + c _ {1 2} z _ {2} + \dots + c _ {1 p} z _ {p}, \\ x _ {2} = c _ {2 1} z _ {1} + c _ {2 2} z _ {2} + \dots + c _ {2 p} z _ {p}, \\ \qquad \qquad \qquad \dots \dots \\ x _ {m} = c _ {m 1} z _ {1} + c _ {m 2} z _ {2} + \dots + c _ {m p} z _ {p}. \end{array} \right.\tag{4.8}$$
+其中
+$$c _ {i j} = \sum_ {k = 1} ^ {n} a _ {i k} b _ {k j}, \quad 1 \leq i \leq m, 1 \leq j \leq p.$$
+$\mathcal{C}$ 对应的矩阵为 $C = (c_{ij})_{m\times p}$.
+由于线性映射与矩阵之间存在着一一对应的关系, 线性映射的复合对应于矩阵的某种运算, 我们定义它为矩阵的乘积.
+定义4.2.3. 设矩阵 $A=(a_{ij})_{m\times n}\in F^{n\times p}$ 与 $B=(b_{ij})_{n\times p}\in F^{n\times p}$ ，定义A与B的乘积为 $m\times p$ 阶矩阵 $C:=(c_{ij})_{m\times p}$ ，其中元素
+$$c _ {i j} = \sum_ {k = 1} ^ {n} a _ {i k} b _ {k j} = a _ {i 1} b _ {1 j} + a _ {i 2} b _ {2 j} + \dots + a _ {i n} b _ {n j}$$
+是A的第i行与B的第j列对应元素的乘积之和. 简记为C=AB.
+我们看两个矩阵乘法的例子.
+例4.2.3. 设
+$$A = \left( \begin{array}{c c c} 1 & 2 & 3 \\ 4 & 5 & 6 \end{array} \right), \quad B = \left( \begin{array}{c c} 1 & 2 \\ 3 & 4 \\ 5 & 6 \end{array} \right), \quad C = \left( \begin{array}{c c} 0 & 1 \\ 0 & 0 \end{array} \right), \quad D = \left( \begin{array}{c c} 0 & 0 \\ 1 & 0 \end{array} \right).$$
+则有
+$$\begin{array}{l} A B = \left( \begin{array}{c c} 1 \cdot 1 + 2 \cdot 3 + 3 \cdot 5 & 1 \cdot 2 + 2 \cdot 4 + 3 \cdot 6 \\ 4 \cdot 1 + 5 \cdot 3 + 6 \cdot 5 & 4 \cdot 2 + 5 \cdot 4 + 6 \cdot 6 \end{array} \right) = \left( \begin{array}{c c} 2 2 & 2 8 \\ 4 9 & 6 4 \end{array} \right), \\ B A = \left( \begin{array}{c c c} 1 \cdot 1 + 2 \cdot 4 & 1 \cdot 2 + 2 \cdot 5 & 1 \cdot 3 + 2 \cdot 6 \\ 3 \cdot 1 + 4 \cdot 4 & 3 \cdot 2 + 4 \cdot 5 & 3 \cdot 3 + 4 \cdot 6 \\ 5 \cdot 1 + 6 \cdot 4 & 5 \cdot 2 + 6 \cdot 5 & 5 \cdot 3 + 6 \cdot 6 \end{array} \right) = \left( \begin{array}{c c c} 9 & 1 2 & 1 5 \\ 1 9 & 2 6 & 3 3 \\ 2 9 & 4 0 & 5 1 \end{array} \right), \end{array}$$
+$$C D = \left( \begin{array}{c c} 1 & 0 \\ 0 & 0 \end{array} \right), \qquad D C = \left( \begin{array}{c c} 0 & 0 \\ 0 & 1 \end{array} \right), \qquad C C = D D = \left( \begin{array}{c c} 0 & 0 \\ 0 & 0 \end{array} \right).$$
+[第 97 页]
+例4.2.4. 设
+$$A = \left( \begin{array}{c c c} a _ {1 1} & \dots & a _ {1 n} \\ \vdots & \dots & \vdots \\ a _ {m 1} & \dots & a _ {m n} \end{array} \right), \quad B = \left( \begin{array}{c c c} b _ {1} & & \\ & \ddots & \\ & & b _ {m} \end{array} \right), \quad C = \left( \begin{array}{c c c} c _ {1} & & \\ & \ddots & \\ & & c _ {n} \end{array} \right).$$
+则有
+$$B A = \left( \begin{array}{c c c} b _ {1} a _ {1 1} & \dots & b _ {1} a _ {1 n} \\ \vdots & \dots & \vdots \\ b _ {m} a _ {m 1} & \dots & b _ {m} a _ {m n} \end{array} \right), A C = \left( \begin{array}{c c c} a _ {1 1} c _ {1} & \dots & a _ {1 n} c _ {n} \\ \vdots & \dots & \vdots \\ a _ {m 1} c _ {1} & \dots & a _ {m n} c _ {n} \end{array} \right).$$
+注2. 根据矩阵乘法的定义和上面的例子, 我们有以下的观察:
+(1) 并非任意两个矩阵 $A$ 与 $B$ 都可以相乘. 只有当 $A$ 的列数等于 $B$ 的行数时, $A$ 与 $B$ 才可以相乘.
+(2) 即使 $A$ 与 $B$ 是同阶方阵, $AB$ 与 $BA$ 也不一定相等. 若 $AB = BA$, 则称 $A, B$ 乘法可交换.
+(3) 两个非零矩阵的乘积可能是零矩阵, 即由AB = O不能推出A = O或B = O.
+(4) 在 $A$ 的左边乘上对角阵相当于将 $A$ 的各行分别乘上一个数, 在 $A$ 的右边乘上对角阵相当于将 $A$ 的各列分别乘上一个数.
+(5) 数量阵 $\lambda I$ 与矩阵 $A$ 相乘的效果等于矩阵的数乘 $\lambda A$; 特别地, $IA = AI = A$, $OA = AO = O$.
+定理4.2.2. 矩阵的乘法运算具有以下性质:
+(1) 乘法结合律  $(AB)C = A(BC)$
+(2) 乘法单位元 $IA = AI = A$
+(3) 左分配律 $(A + B)C = AC + BC$
+(4) 右分配律 $A(B + C) = AB + AC$
+(5) 数乘结合律 $\lambda (AB) = (\lambda A)B = A(\lambda B)$
+其中A,B,C是使运算有意义的矩阵, $\lambda$ 是数.
+[第 98 页]
+证明. 我们仅证明性质(1), 其余性质证明留作习题.
+设 $A=(a_{ij})_{m\times n},B=(b_{ij})_{n\times p},C=(c_{ij})_{p\times q}$ .则有
+$$\bigl ((A B) C \bigr) _ {i j} = \sum_ {l = 1} ^ {p} (A B) _ {i l} c _ {l j} = \sum_ {l = 1} ^ {p} \sum_ {k = 1} ^ {n} a _ {i k} b _ {k l} c _ {l j},$$
+$$\left(A (B C)\right) _ {i j} = \sum_ {k = 1} ^ {n} a _ {i k} (B C) _ {k j} = \sum_ {k = 1} ^ {n} \sum_ {l = 1} ^ {p} a _ {i k} b _ {k l} c _ {l j}.$$
+通过交换求和的次序知, 以上两式相等, 故 $(AB)C = A(BC)$ .
+矩阵的乘法运算在矩阵运算中有着特别重要的地位. 许多代数问题都可以利用矩阵乘法得到简洁的表示和求解. 例如, 线性方程组 (2.1) 可以被简单地写成矩阵乘积的形式
+$$A \mathbf {x} = \mathbf {b},$$
+其中 $A=(a_{ij})_{m\times n}$ 称为线性方程组的系数矩阵,x和b为列向量
+$$\mathbf {x} = \left( \begin{array}{c} x _ {1} \\ x _ {2} \\ \dots \\ x _ {n} \end{array} \right), \qquad \mathbf {b} = \left( \begin{array}{c} b _ {1} \\ b _ {2} \\ \dots \\ b _ {m} \end{array} \right).$$
+再如, 例 4.1.2 中的线性映射可以表示为矩阵乘积形式
+$$\left( \begin{array}{c} x _ {1} \\ \vdots \\ x _ {m} \end{array} \right) = \left( \begin{array}{c c c} a _ {1 1} & \dots & a _ {1 n} \\ \vdots & \vdots & \vdots \\ a _ {m 1} & \dots & a _ {m n} \end{array} \right) \left( \begin{array}{c} y _ {1} \\ \vdots \\ y _ {n} \end{array} \right)$$
+类似地, 例 4.1.1 中的坐标变换公式可以写成
+$$\binom{x ^ {\prime}}{y ^ {\prime}} = \left( \begin{array}{c c} \cos (\theta) & - \sin (\theta) \\ \sin (\theta) & \cos (\theta) \end{array} \right) \binom{x}{y}$$
+及
+$$\left( \begin{array}{c} x ^ {\prime} \\ y ^ {\prime} \\ z ^ {\prime} \end{array} \right) = \left( \begin{array}{c c c} \cos (\theta) & - \sin (\theta) & 0 \\ \sin (\theta) & \cos (\theta) & 0 \\ 0 & 0 & 1 \end{array} \right) \left( \begin{array}{c} x \\ y \\ z \end{array} \right)$$
+以后,我们会看到更多的矩阵乘法的应用.
+通过矩阵的乘法, 可以定义任意方阵A的正整数次幂
+$$A ^ {k} = \underbrace {A \cdots A} _ {k}, \quad k = 1, 2, \dots\tag{4.9}$$
+[第 99 页]
+另外, 对任意方阵A, 规定 $A^{0}=I$ . 有了方阵的各次幂, 就可以将方阵代入多项式求值. 设多项式 $f(x)=c_{0}+c_{1}x+\cdots+c_{k}x^{k}$ , 定义矩阵多项式
+$$f (A) = c _ {0} I + c _ {1} A + \dots + c _ {k} A ^ {k}.\tag{4.10}$$
+例4.2.5. 设 $A = \begin{pmatrix} \cos(\theta) & -\sin(\theta) \\ \sin(\theta) & \cos(\theta) \end{pmatrix}$. 求 $A^n$, 这里 $n$ 为正整数.
+解. 容易验证
+$$A ^ {2} = \left( \begin{array}{c c} \cos (\theta) & - \sin (\theta) \\ \sin (\theta) & \cos (\theta) \end{array} \right) \left( \begin{array}{c c} \cos (\theta) & - \sin (\theta) \\ \sin (\theta) & \cos (\theta) \end{array} \right) = \left( \begin{array}{c c} \cos (2 \theta) & - \sin (2 \theta) \\ \sin (2 \theta) & \cos (2 \theta) \end{array} \right).$$
+用归纳法,一般可证
+$$A ^ {n} = \left( \begin{array}{c c} \cos (n \theta) & - \sin (n \theta) \\ \sin (n \theta) & \cos (n \theta) \end{array} \right).$$
+上式有明显的几何意义. 我们知道, A表示逆时针旋转 $\theta$ 角的旋转变换. 因此,  $A^{2}$ 表示该变换与自身的复合变换, 从而是旋转 $2\theta$ 角的变换. 一般地,  $A^{n}$ 表示n个旋转 $\theta$ 角的变换的复合, 从而是一个旋转 $n\theta$ 角的变换. □
+例4.2.6. 设A,B为同阶方阵,且AB=BA. 证明:
+$$(A + B) ^ {n} = C _ {n} ^ {0} A ^ {n} + C _ {n} ^ {1} A ^ {n - 1} B + \dots + C _ {n} ^ {n - 1} A B ^ {n - 1} + C _ {n} ^ {n} B ^ {n}.$$
+证明.: 用数学归纳法, 请读者自己完成.
+例4.2.7. 设 $A = \begin{pmatrix} a & b \\ 0 & a \end{pmatrix}$. 求 $A^n$, 这里 $n$ 为正整数.
+解. 将 $A$ 分解为 $A = aI_{2} + N$, 这里 $N = \begin{pmatrix} 0 & b \\ 0 & 0 \end{pmatrix}$. 易验证 $N^{k} = 0, k \geq 2$. 于是
+$$A ^ {n} = \left(a I _ {2} + N\right) ^ {n} = a ^ {n} I _ {2} + C _ {n} ^ {1} a ^ {n - 1} N = \left( \begin{array}{c c} a ^ {n} & n a ^ {n - 1} b \\ 0 & a ^ {n} \end{array} \right).$$
+下面我们给出关于矩阵乘法的行列式的一个重要结论.
+[第 100 页]
+定理4.2.3. 设 $A, B$ 均为同阶方阵. 则 $\operatorname{det}(AB) = \operatorname{det}(A) \operatorname{det}(B)$.
+证明.：设 $A=(a_{ij})_{n\times n},B=(b_{ij})_{n\times n}$ .用 $\beta_{1},\ldots,\beta_{n}$ 表示B的n个行.则AB的第i行可以写成
+$$\left(\sum_ {k = 1} ^ {n} a _ {i k} b _ {k 1}, \dots , \sum_ {k = 1} ^ {n} a _ {i k} b _ {k n}\right) = \sum_ {k = 1} ^ {n} a _ {i k} \left(b _ {k 1}, \dots , b _ {k n}\right) = \sum_ {k = 1} ^ {n} a _ {i k} \beta_ {k}.$$
+这样
+$$\det (A B) = \det \left(\sum_ {j _ {1} = 1} ^ {n} a _ {1 j _ {1}} \beta_ {j _ {1}}, \dots , \sum_ {j _ {n} = 1} ^ {n} a _ {n j _ {n}} \beta_ {j _ {n}}\right).$$
+利用行列式的多重线性性得
+$$\det (A B) = \sum_ {j _ {1} = 1} ^ {n} \dots \sum_ {j _ {n} = 1} ^ {n} a _ {1 j _ {1}} \dots a _ {n j _ {n}} \det (\beta_ {j _ {1}}, \dots , \beta_ {j _ {n}}).$$
+上式中, 当下标 $j_{1}, \ldots, j_{n}$ 中有两个相等时, 对应项为零. 因此
+$$\begin{array}{l} \det (A B) = \sum_ {(j _ {1} \dots j _ {n}) \in S _ {n}} a _ {1 j _ {1}} \dots a _ {n j _ {n}} \det (\beta_ {j _ {1}}, \ldots , \beta_ {j _ {n}}) \\ = \sum_ {(j _ {1} \dots j _ {n}) \in S _ {n}} a _ {1 j _ {1}} \dots a _ {n j _ {n}} (- 1) ^ {\tau (j _ {1} \dots j _ {n})} \det (\beta_ {1}, \ldots , \beta_ {n}) \\ = \det (A) \det (B). \end{array}$$
+定理证毕.
+上述定理有明确的几何意义. 如图 §4.2.2所示. 设 $A_0$ 为单位正方形, 其面积 $S_0 = 1$. 经线性变换 $\mathcal{B}: \mathbf{y} = B\mathbf{x}$, $A_0$ 变为平行四边形 $A_1$, 其面积 $S_1 = \det(B)$. 平行四边形 $A_1$ 经线性变换 $\mathcal{A}: \mathbf{z} = A\mathbf{y}$ 变为平行四边形 $A_2$, 其面积 $S_2 = \det(A)S_1 = \det(A)\det(B)$. 另一方面, $A_2$ 是由 $A_0$ 经复合线性变换 $\mathcal{A} \circ \mathcal{B}$ 得到, 故 $S_2 = \det(AB)$. 因此, $\det(AB) = \det(A)\det(B)$.
+例4.2.8. 计算行列式
+$$\left| \begin{array}{c c c} 3 & x + y + z & x ^ {2} + y ^ {2} + z ^ {2} \\ x + y + z & x ^ {2} + y ^ {2} + z ^ {2} & x ^ {3} + y ^ {3} + z ^ {3} \\ x ^ {2} + y ^ {2} + z ^ {2} & x ^ {3} + y ^ {3} + z ^ {3} & x ^ {4} + y ^ {4} + z ^ {4} \end{array} \right|$$
+解. 由于
+$$\left( \begin{array}{c c c} 3 & x + y + z & x ^ {2} + y ^ {2} + z ^ {2} \\ x + y + z & x ^ {2} + y ^ {2} + z ^ {2} & x ^ {3} + y ^ {3} + z ^ {3} \\ x ^ {2} + y ^ {2} + z ^ {2} & x ^ {3} + y ^ {3} + z ^ {3} & x ^ {4} + y ^ {4} + z ^ {4} \end{array} \right) = \left( \begin{array}{c c c} 1 & 1 & 1 \\ x & y & z \\ x ^ {2} & y ^ {2} & z ^ {2} \end{array} \right) \left( \begin{array}{c c c} 1 & x & x ^ {2} \\ 1 & y & y ^ {2} \\ 1 & z & z ^ {2} \end{array} \right)$$
+[第 101 页]
+图 4.3 矩阵乘积行列式的几何意义
+因此
+$$\begin{array}{l} \left| \begin{array}{c c c} 3 & x + y + z & x ^ {2} + y ^ {2} + z ^ {2} \\ x + y + z & x ^ {2} + y ^ {2} + z ^ {2} & x ^ {3} + y ^ {3} + z ^ {3} \\ x ^ {2} + y ^ {2} + z ^ {2} & x ^ {3} + y ^ {3} + z ^ {3} & x ^ {4} + y ^ {4} + z ^ {4} \end{array} \right| = \left| \begin{array}{c c c} 1 & 1 & 1 \\ x & y & z \\ x ^ {2} & y ^ {2} & z ^ {2} \end{array} \right| \cdot \left| \begin{array}{c c c} 1 & x & x ^ {2} \\ 1 & y & y ^ {2} \\ 1 & z & z ^ {2} \end{array} \right| \\ = (x - y) ^ {2} (y - z) ^ {2} (z - x) ^ {2}. \end{array}$$
+§4.2.3 逆矩阵
+我们定义了矩阵的乘法, 自然也希望能够定义乘法的逆运算 “除法”. 为此我们引入逆矩阵的概念.
+定义4.2.4. 设A是一个n阶方阵, 如果存在n阶方阵X满足XA = AX = I, 则称A可逆, 并称X为A的逆矩阵, 记作 $A^{-1}$ . 可逆方阵也称为非奇异方阵, 称不可逆方阵为奇异方阵.
+容易知道, 若A可逆, 其逆矩阵是唯一的. 这是因为: 若X和Y都是A的逆矩阵, 则有
+$$X = X I = X (A Y) = (X A) Y = I Y = Y.$$
+显然不是每个方阵都可逆,例如零方阵就不可逆.那么如何判断一个给定的方阵是否可逆呢?
+定理4.2.4. 设 $A = (a_{ij})_{n \times n}$ 为 $n$ 阶方阵. 则 $A$ 可逆当且仅当 $\operatorname{det}(A) \neq 0$. 且当 $A$ 可逆时,
+$$A ^ {- 1} = \frac {1}{\det (A)} A ^ {*},\tag{4.11}$$
+[第 102 页]
+这里
+$$A ^ {*} = \left( \begin{array}{c c c c} A _ {1 1} & A _ {2 1} & \dots & A _ {n 1} \\ A _ {1 2} & A _ {2 2} & \dots & A _ {n 2} \\ \vdots & \vdots & \vdots & \vdots \\ A _ {1 n} & A _ {2 n} & \dots & A _ {n n} \end{array} \right),\tag{4.12}$$
+$A_{ij}$ 是 $a_{ij}$ 的关于行列式 $\det(A)$ 的代数余子式. 称 $A^{*}$ 为A的伴随方阵.
+证明. 若 $A$ 可逆, 则存在 $n$ 阶方阵 $X$ 使得 $AX = I$. 上式两边取行列式得 $\det(A) \det(X) = 1$. 从而 $\det(A) \neq 0$.
+反过来, 设 $\operatorname{det}(A) \neq 0$. 则由第二章定理 3.4.1 直接验证可得, $AA^{*} = A^{*}A = \operatorname{det}(A)I^{(n)}$. 因此, $A^{-1} = \frac{1}{\operatorname{det}(A)} A^{*}$.
+注3. 上述定理还表明, n 阶方阵 A 可逆当且仅当存在 n 阶方阵 X 使得
+$$A X = I \quad {\text {或者}} \quad X A = I.$$
+注4. 设 $A \in F^{n \times n}$, $\mathbf{b} \in F^n$. 则当 $\operatorname{det}(A) \neq 0$ 时, 线性方程组 $A\mathbf{x} = \mathbf{b}$ 的解
+$$\mathbf {x} = A ^ {- 1} \mathbf {b} = \frac {1}{\det (A)} A ^ {*} \mathbf {b}.$$
+由此可以立即得到Cramer法则.
+下面给出可逆矩阵的基本性质.
+定理4.2.5. 对任意同阶可逆方阵 $A, B$, 都有
+(1) $(A^{-1})^{-1} = A$
+(2) $(\lambda A)^{-1} = \lambda^{-1}A^{-1},\lambda \neq 0$
+(3) $(AB)^{-1} = B^{-1}A^{-1}$
+证明. 可通过逆矩阵的定义直接验证, 留作习题.
+例4.2.9. 证明:
+(1) 当 $ad \neq bc$ 时,
+$$\left( \begin{array}{c c} a & b \\ c & d \end{array} \right) ^ {- 1} = \frac {1}{a d - b c} \left( \begin{array}{c c} d & - b \\ - c & a \end{array} \right).$$
+[第 103 页]
+§4.2 矩阵的运算
+(2) 设向量  $\mathbf{a} = (a_{1}, a_{2}, a_{3}), \mathbf{b} = (b_{1}, b_{2}, b_{3}), \mathbf{c} = (c_{1}, c_{2}, c_{3})$ ，则当  $(\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c} \neq 0$  时，
+$$\left( \begin{array}{c c c} a _ {1} & a _ {2} & a _ {3} \\ b _ {1} & b _ {2} & b _ {3} \\ c _ {1} & c _ {2} & c _ {3} \end{array} \right) ^ {- 1} = \frac {1}{(\mathbf {a} \times \mathbf {b}) \cdot \mathbf {c}} \left( \begin{array}{c c c} u _ {1} & v _ {1} & w _ {1} \\ u _ {2} & v _ {2} & w _ {2} \\ u _ {3} & v _ {3} & w _ {3} \end{array} \right),$$
+其中 $\mathbf{u}=(u_{1},u_{2},u_{3})=\mathbf{b}\times\mathbf{c},\mathbf{v}=(v_{1},v_{2},v_{3})=\mathbf{c}\times\mathbf{a},\mathbf{w}=(w_{1},w_{2},w_{3})=\mathbf{a}\times\mathbf{b}.$
+(3) 当 $a_{1}\cdots a_{n}\neq0$ 时,
+$$\left( \begin{array}{c c c} a _ {1} & & \\ & \ddots & \\ & & a _ {n} \end{array} \right) ^ {- 1} = \left( \begin{array}{c c c} a _ {1} ^ {- 1} & & \\ & \ddots & \\ & & a _ {n} ^ {- 1} \end{array} \right).$$
+证明. 我们只证明(2),(1)与(3)留给读者完成.
+$$\left( \begin{array}{c c c} a _ {1} & a _ {2} & a _ {3} \\ b _ {1} & b _ {2} & b _ {3} \\ c _ {1} & c _ {2} & c _ {3} \end{array} \right) \left( \begin{array}{c c c} u _ {1} & v _ {1} & w _ {1} \\ u _ {2} & v _ {2} & w _ {2} \\ u _ {3} & v _ {3} & w _ {3} \end{array} \right) = \left( \begin{array}{c c c} \mathbf {a} \cdot \mathbf {u} & \mathbf {a} \cdot \mathbf {v} & \mathbf {a} \cdot \mathbf {w} \\ \mathbf {b} \cdot \mathbf {u} & \mathbf {b} \cdot \mathbf {v} & \mathbf {b} \cdot \mathbf {w} \\ \mathbf {c} \cdot \mathbf {u} & \mathbf {c} \cdot \mathbf {v} & \mathbf {c} \cdot \mathbf {w} \end{array} \right).$$
+右边矩阵的对角元为 $(\mathbf{b}\times\mathbf{c})\cdot\mathbf{a}=(\mathbf{c}\times\mathbf{a})\cdot\mathbf{b}=(\mathbf{a}\times\mathbf{b})\cdot\mathbf{c}$ ，而非对角元全为零。例如，(1,2)元素为 $\mathbf{a}\cdot(\mathbf{c}\times\mathbf{a})=0$ 。因此，右边矩阵为数量矩阵 $(\mathbf{a}\times\mathbf{b})\cdot\mathbf{c}I$ ，从而结论正确。☐
+§4.2.4 转置、共轭与迹
+定义4.2.5. 将矩阵 $A=(a_{ij})_{m\times n}$ 的行列互换, 得到的矩阵
+$$\left( \begin{array}{c c c c} a _ {1 1} & a _ {2 1} & \dots & a _ {m 1} \\ a _ {1 2} & a _ {2 2} & \dots & a _ {m 2} \\ \vdots & \vdots & \dots & \vdots \\ a _ {1 n} & a _ {2 n} & \dots & a _ {m n} \end{array} \right),\tag{4.13}$$
+称为A的转置矩阵, 记作 $A^{T}=(a_{ji})_{n\times m}$ .
+将复矩阵A的每个元素换成它的共轭复数,得到的矩阵
+$$\left( \begin{array}{c c c c} \overline {{a _ {1 1}}} & \overline {{a _ {1 2}}} & \dots & \overline {{a _ {1 n}}} \\ \overline {{a _ {2 1}}} & \overline {{a _ {2 2}}} & \dots & a _ {2 n} \\ \vdots & \vdots & \dots & \vdots \\ \overline {{a _ {n 1}}} & \overline {{a _ {n 2}}} & \dots & \overline {{a _ {m n}}} \end{array} \right),\tag{4.14}$$
+称为A的共轭矩阵, 记作 $\overline{A}=(\overline{a_{ij}})_{m\times n}$ .
+[第 104 页]
+$n$ 阶方阵 $A$ 的对角元之和
+$$a _ {1 1} + a _ {2 2} + \dots + a _ {n n}\tag{4.15}$$
+称为A的迹, 记作 $\mathrm{tr}(A)$ .
+例4.2.10. 设 $A = \begin{pmatrix} 1 + i & 2 - i \\ 3 - i & 4 + i \end{pmatrix}$, 计算 $A^T$、$\overline{A}$、$\operatorname{tr}(A)$.
+解. $A^T = \begin{pmatrix} 1 + i & 3 - i \\ 2 - i & 4 + i \end{pmatrix}, \overline{A} = \begin{pmatrix} 1 - i & 2 + i \\ 3 + i & 4 - i \end{pmatrix}, \operatorname{tr}(A) = 5 + 2i.$
+定理4.2.6. 矩阵的转置运算具有以下性质:
+(1) $(A + B)^T = A^T + B^T$
+(2) $(\lambda A)^T = \lambda A^T$
+(3) $(AB)^T = B^T A^T$
+(4) $(A^{-1})^T = (A^T)^{-1}$
+其中A,B是使运算有意义的矩阵, $\lambda$ 是数.
+证明. 性质(1)与(2)可通过矩阵运算的定义直接验证, 留作习题. 下证性质(3)与(4). 设 $A=(a_{ij})_{m\times n}, B=(b_{ij})_{n\times p}$ , 则有
+$$\left(\left(A B\right) ^ {T}\right) _ {i j} = (A B) _ {j i} = \sum_ {k = 1} ^ {n} a _ {j k} b _ {k i},$$
+$$\left(B ^ {T} A ^ {T}\right) _ {i j} = \sum_ {k = 1} ^ {n} b _ {k i} a _ {j k}.$$
+上述两和式相等, 故 $(AB)^{T}=B^{T}A^{T}$ . 特别地, 对可逆方阵A,
+$$(A ^ {- 1}) ^ {T} A ^ {T} = (A A ^ {- 1}) ^ {T} = I, \quad A ^ {T} (A ^ {- 1}) ^ {T} = (A ^ {- 1} A) ^ {T} = I.$$
+根据定义4.2.4, $(A^{-1})^{T} = (A^{T})^{-1}$.
+定理4.2.7. 矩阵的迹具有以下性质:
+(1) $\operatorname{tr}(A + B) = \operatorname{tr}(A) + \operatorname{tr}(B)$
+[第 105 页]
+§4.2 矩阵的运算
+(2) $\operatorname{tr}(\lambda A) = \lambda \operatorname{tr}(A)$
+(3) $\operatorname{tr}(A^T) = \operatorname{tr}(A), \operatorname{tr}(\overline{A}) = \overline{\operatorname{tr}(A)}$
+(4) $\operatorname{tr}(AB) = \operatorname{tr}(BA)$
+其中A,B是使运算有意义的矩阵, $\lambda$ 是数.
+证明. 性质(1)、(2)、(3)可通过矩阵运算的定义直接验证, 留作习题. 下证性质(4).
+设 $A=(a_{ij})_{m\times n},B=(b_{ij})_{n\times m}$ ，则有
+$$\operatorname{tr} (A B) = \sum_ {i = 1} ^ {m} (A B) _ {i i} = \sum_ {i = 1} ^ {m} \sum_ {j = 1} ^ {n} a _ {i j} b _ {j i},$$
+$$\operatorname{tr} (B A) = \sum_ {j = 1} ^ {n} (B A) _ {j j} = \sum_ {j = 1} ^ {n} \sum_ {i = 1} ^ {m} b _ {j i} a _ {i j}.$$
+通过交换求和的次序, 以上两式相等, 故 $\operatorname{tr}(AB) = \operatorname{tr}(BA)$.
+例4.2.11. 设复矩阵A满足 $\mathrm{tr}(A\overline{A}^{T})=0,$ 证明:A=O.
+证明. 设 $A = (a_{ij})_{m \times n}, A\overline{A}^T = (b_{ij})_{m \times m}$. 由
+$$0 = \operatorname{tr} (A \overline {{A}} ^ {T}) = \sum_ {i = 1} ^ {m} b _ {i i} = \sum_ {i = 1} ^ {m} \sum_ {j = 1} ^ {n} a _ {i j} \overline {{a _ {i j}}} = \sum_ {i = 1} ^ {m} \sum_ {j = 1} ^ {n} | a _ {i j} | ^ {2}$$
+可知所有 $a_{ij}=0$ ，即A=O。
+§4.2.5 分块运算
+在矩阵运算过程中, 有时候将某些子矩阵看成一个整体来参加运算会方便许多. 例如, 可以将矩阵看成一组行向量或列向量:
+$$A = \left( \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ a _ {2 1} & a _ {2 2} & \dots & a _ {2 n} \\ \vdots & \vdots & \dots & \vdots \\ a _ {m 1} & a _ {m 2} & \dots & a _ {m n} \end{array} \right) \begin{array}{c} \leftarrow \mathbf {b} _ {1} \\ \leftarrow \mathbf {b} _ {2} \\ \vdots \\ \leftarrow \mathbf {b} _ {m} \end{array}$$
+记作
+$$A = \left( \begin{array}{c c c c} {\mathbf {a} _ {1}} & {\mathbf {a} _ {2}} & {\dots} & {\mathbf {a} _ {n}} \end{array} \right) \quad \text {或} \quad A = \left( \begin{array}{c} {\mathbf {b} _ {1}} \\ {\mathbf {b} _ {2}} \\ {\vdots} \\ {\mathbf {b} _ {m}} \end{array} \right)$$
+[第 106 页]
+一般地, 可以将A同时按行按列分成若干块
+$$A = \left( \begin{array}{c c c c} A _ {1 1} & A _ {1 2} & \dots & A _ {1 s} \\ A _ {2 1} & A _ {2 2} & \dots & A _ {2 s} \\ \vdots & \vdots & \dots & \vdots \\ A _ {r 1} & A _ {r 2} & \dots & A _ {r s} \end{array} \right)$$
+称为分块矩阵, 记作 $A=(A_{ij})_{r\times s}$ , 每个 $A_{ij}$ 称为A的子块.
+更一般地，由A的第 $i_{1},i_{2},\cdots,i_{r}$ 行和第 $j_{1},j_{2},\cdots,j_{s}$ 列上的元素依次排列组成的 $r\times s$ 矩阵称为A的子矩阵,记作
+$$A \binom {i _ {1} i _ {2} \dots i _ {r}} {j _ {1} j _ {2} \dots j _ {s}} = \left( \begin{array}{c c c c} a _ {i _ {1} j _ {1}} & a _ {i _ {1} j _ {2}} & \dots & a _ {i _ {1} j _ {s}} \\ a _ {i _ {2} j _ {1}} & a _ {i _ {2} j _ {2}} & \dots & a _ {i _ {2} j _ {s}} \\ \vdots & \vdots & \dots & \vdots \\ a _ {i _ {r} j _ {1}} & a _ {i _ {r} j _ {2}} & \dots & a _ {i _ {r} j _ {s}} \end{array} \right)\tag{4.16}$$
+若 $A_{ij}=O$ 对所有 $i\neq j$ 成立,则称A为准对角阵,记作
+$$A = \left( \begin{array}{c c c} {A _ {1 1}} & & \\ & {\ddots} & \\ & & {A _ {r r}} \end{array} \right) \quad \text {或} \quad A = \mathrm{diag} (A _ {1 1}, A _ {2 2}, \dots , A _ {r r}).$$
+若 $A_{ij}=O$ 对所有i>j成立,则A称为准上三角阵.若 $A_{ij}=O$ 对所有i<j成立,则称A为准下三角阵.准上三角阵和准下三角阵统称为准三角阵.
+例4.2.12. 若将矩阵
+$$A = \left( \begin{array}{c c c c} 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 1 & 1 \end{array} \right)$$
+按照下列方式分块
+$$\left( \begin{array}{c c c c} 1 & 1 & 0 & 0 \\ \hline 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 1 & 1 \end{array} \right), \quad \left( \begin{array}{c c c c} 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ \hline 0 & 0 & 1 & 0 \\ 0 & 0 & 1 & 1 \end{array} \right), \quad \left( \begin{array}{c c c c} 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ \hline 0 & 0 & 1 & 1 \end{array} \right).$$
+则A分别成为准上三角阵、准对角阵、准下三角阵.
+[第 107 页]
+由此可见，“准对角”、“准上三角”、“准下三角”的概念并不是孤立的，是和矩阵分块的方式联系在一起的。在实际运用的时候，选择恰当的分块方式也许会有助于问题的解决。
+下面我们考虑分块矩阵的运算. 先看一个例子. 假设矩阵
+$$A = \left( \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & a _ {1 3} & a _ {1 4} \\ a _ {2 1} & a _ {2 2} & a _ {2 3} & a _ {2 4} \\ \hline a _ {3 1} & a _ {3 2} & a _ {3 3} & a _ {3 4} \\ a _ {4 1} & a _ {4 2} & a _ {4 3} & a _ {4 4} \end{array} \right), \quad B = \left( \begin{array}{c c c c} b _ {1 1} & b _ {1 2} & b _ {1 3} & b _ {1 4} \\ b _ {2 1} & b _ {2 2} & b _ {2 3} & b _ {2 4} \\ \hline b _ {3 1} & b _ {3 2} & b _ {3 3} & b _ {3 4} \\ b _ {4 1} & b _ {4 2} & b _ {4 3} & b _ {4 4} \end{array} \right)$$
+按照以上方式分块成
+$$A = \left( \begin{array}{c c} A _ {1} & A _ {2} \\ A _ {3} & A _ {4} \end{array} \right), \quad B = \left( \begin{array}{c c} B _ {1} & B _ {2} \\ B _ {3} & B _ {4} \end{array} \right),$$
+则有
+$$A + B = \left( \begin{array}{c c c c} a _ {1 1} + b _ {1 1} & a _ {1 2} + b _ {1 2} & a _ {1 3} + b _ {1 3} & a _ {1 4} + b _ {1 4} \\ a _ {2 1} + b _ {2 1} & a _ {2 2} + b _ {2 2} & a _ {2 3} + b _ {2 3} & a _ {2 4} + b _ {2 4} \\ \hline a _ {3 1} + b _ {3 1} & a _ {3 2} + b _ {3 2} & a _ {3 3} + b _ {3 3} & a _ {3 4} + b _ {3 4} \\ a _ {4 1} + b _ {4 1} & a _ {4 2} + b _ {4 2} & a _ {4 3} + b _ {4 3} & a _ {4 4} + b _ {4 4} \end{array} \right) = \left( \begin{array}{c c} A _ {1} + B _ {1} & A _ {2} + B _ {2} \\ A _ {3} + B _ {3} & A _ {4} + B _ {4} \end{array} \right),$$
+$$\begin{array}{l} A B = \left( \begin{array}{c c c c} a _ {1 1} b _ {1 1} + a _ {1 2} b _ {2 1} & a _ {1 1} b _ {1 2} + a _ {1 2} b _ {2 2} & a _ {1 1} b _ {1 3} + a _ {1 2} b _ {2 3} & a _ {1 1} b _ {1 4} + a _ {1 2} b _ {2 4} \\ + a _ {1 3} b _ {3 1} + a _ {1 4} b _ {4 1} & + a _ {1 3} b _ {3 2} + a _ {1 4} b _ {4 2} & + a _ {1 3} b _ {3 3} + a _ {1 4} b _ {4 3} & + a _ {1 3} b _ {3 4} + a _ {1 4} b _ {4 4} \\ a _ {2 1} b _ {1 1} + a _ {2 2} b _ {2 1} & a _ {2 1} b _ {1 2} + a _ {2 2} b _ {2 2} & a _ {2 1} b _ {1 3} + a _ {2 2} b _ {2 3} & a _ {2 1} b _ {1 4} + a _ {2 2} b _ {2 4} \\ + a _ {2 3} b _ {3 1} + a _ {2 4} b _ {4 1} & + a _ {2 3} b _ {3 2} + a _ {2 4} b _ {4 2} & + a _ {2 3} b _ {3 3} + a _ {2 4} b _ {4 3} & + a _ {2 3} b _ {3 4} + a _ {2 4} b _ {4 4} \\ \hline a _ {3 1} b _ {1 1} + a _ {3 2} b _ {2 1} & a _ {3 1} b _ {1 2} + a _ {3 2} b _ {2 2} & a _ {3 1} b _ {1 3} + a _ {3 2} b _ {2 3} & a _ {3 1} b _ {1 4} + a _ {3 2} b _ {2 4} \\ + a _ {3 3} b _ {3 1} + a _ {3 4} b _ {4 1} & + a _ {3 3} b _ {3 2} + a _ {3 4} b _ {4 2} & + a _ {3 3} b _ {3 3} + a _ {3 4} b _ {4 3} & + a _ {3 3} b _ {3 4} + a _ {3 4} b _ {4 4} \\ a _ {4 1} b _ {1 1} + a _ {4 2} b _ {2 1} & a _ {4 1} b _ {1 2} + a _ {4 2} b _ {2 2} & a _ {4 1} b _ {1 3} + a _ {4 2} b _ {2 3} & a _ {4 1} b _ {1 4} + a _ {4 2} b _ {2 4} \\ + a _ {4 3} b _ {3 1} + a _ {4 4} b _ {4 1} & + a _ {4 3} b _ {3 2} + a _ {4 4} b _ {4 2} & + a _ {4 3} b _ {3 3} + a _ {4 4} b _ {4 3} & + a _ {4 3} b _ {3 4} + a _ {4 4} b _ {4 4} \end{array}\right) \\ = \left( \begin{array}{c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c } \end{array}$$
+类似地,对于数乘、转置、共轭、迹运算,还有
+$$\lambda A = \left( \begin{array}{c c} \lambda A _ {1} & \lambda A _ {2} \\ \lambda A _ {3} & \lambda A _ {4} \end{array} \right),   A ^ {T} = \left( \begin{array}{c c} A _ {1} ^ {T} & A _ {3} ^ {T} \\ A _ {2} ^ {T} & A _ {4} ^ {T} \end{array} \right),   \overline {{A}} = \left( \begin{array}{c c} \overline {{A _ {1}}} & \overline {{A _ {2}}} \\ \overline {{A _ {3}}} & \overline {{A _ {4}}} \end{array} \right),   \operatorname{tr} (A) = \operatorname{tr} (A _ {1}) + \operatorname{tr} (A _ {4}).$$
+从以上例子可以看出, 在对分块矩阵施行矩阵的加法、数乘、乘法、转置、共轭、迹运算的时候, 可以把每个矩阵块看作是一个元素进行运算, 然后再对每个矩阵块施行同样的运算.
+[第 108 页]
+定理4.2.8. 矩阵的分块运算具有以下性质:
+(1) 设 $A = (A_{ij})_{r \times s}$, $B = (B_{ij})_{r \times s}$, 则 $A + B = (A_{ij} + B_{ij})_{r \times s}$.
+(2) 设 $A = (A_{ij})_{r \times s}$, 则 $\lambda A = (\lambda A_{ij})_{r \times s}$.
+(3) 设 $A = (A_{ij})_{r \times s}$, $B = (B_{ij})_{s \times t}$, 则 $AB = (C_{ij})_{r \times t}$, 其中 $C_{ij} = \sum_{k=1}^{s} A_{ik} B_{kj}$.
+(4) 设 $A = (A_{ij})_{r \times s}$, 则 $A^T = (A_{ji}^T)_{s \times r}$.
+(5) 设 $A=(A_{ij})_{r\times s}$ 是复方阵, 则 $\overline{A}=(\overline{A_{ij}})_{r\times s}$ .
+(6) 设 $A = (A_{ij})_{r \times r}$ 且每个 $A_{ii}$ 都是方阵, 则 $\operatorname{tr}(A) = \sum_{i=1}^{r} \operatorname{tr}(A_{ii})$.
+(7) 当 $A_{1}, \cdots, A_{r}$ 都可逆时, $(\mathrm{diag}(A_{1}, \ldots, A_{r}))^{-1} = \mathrm{diag}(A_{1}^{-1}, \ldots, A_{r}^{-1})$.
+其中矩阵A,B的分块方式使运算有意义, $\lambda$ 是数.
+证明. 可通过矩阵运算的定义直接验证, 留作习题.
+注5. 在上述定理(3)中, 若使矩阵的乘法运算有意义, 每个 $A_{ik}$ 的列数必须等于 $B_{kj}$ 的行数. 而且, 在公式 $C_{ij} = \sum_{k=1}^{s} A_{ik} B_{kj}$ 中, $A_{ik}$ 和 $B_{kj}$ 的次序不可以交换.
+下面, 我们说明分块在矩阵运算中的一些应用.
+例4.2.13. 重新考虑例4.2.4. 设矩阵A的行为 $a_{1},\ldots,a_{m}$ ，列为 $b_{1},\ldots,b_{n}$ 。则
+$$B A = \left( \begin{array}{c c c} b _ {1} & & \\ & \ddots & \\ & & b _ {m} \end{array} \right) \left( \begin{array}{c} \mathbf {a} _ {1} \\ \vdots \\ \mathbf {a} _ {m} \end{array} \right) = \left( \begin{array}{c} b _ {1} \mathbf {a} _ {1} \\ \vdots \\ b _ {m} \mathbf {a} _ {m} \end{array} \right) = \left( \begin{array}{c c c} b _ {1} a _ {1 1} & \dots & b _ {1} a _ {1 n} \\ \vdots & \vdots & \vdots \\ b _ {1} a _ {m 1} & \dots & b _ {m} a _ {m n} \end{array} \right).$$
+同理
+$$A C = \left( \begin{array}{c c c} \mathbf {b} _ {1} & \dots & \mathbf {b} _ {n} \end{array} \right) \left( \begin{array}{c c c} c _ {1} & & \\ & \ddots & \\ & & c _ {n} \end{array} \right) = \left( \begin{array}{c c c} c _ {1} \mathbf {b} _ {1} & \dots & c _ {n} \mathbf {b} _ {n} \end{array} \right) = \left( \begin{array}{c c c} c _ {1} a _ {1 1} & \dots & c _ {n} a _ {1 n} \\ \vdots & \vdots & \vdots \\ c _ {1} a _ {m 1} & \dots & c _ {n} a _ {m n} \end{array} \right).$$
+例4.2.14. 设A是一个 $m \times n$ 矩阵, B是一个 $n \times m$ 矩阵, m > n. 证明: $\det(AB) = 0$.
+[第 109 页]
+证明. 在矩阵A的右端添加m-n列零向量使之成为方阵 $\tilde{A}=(A,O)$ . 在矩阵B的下端添加m-n行零向量使之成为方阵 $\tilde{B}=\begin{pmatrix}B\\O\end{pmatrix}$ . 则 $\tilde{A}\tilde{B}=AB$ . 根据定理4.2.3,
+$$\det (A B) = \det (\tilde {A} \tilde {B}) = \det (\tilde {A}) \det (\tilde {B}) = 0.$$
+□
+例4.2.15. 设准上三角方阵 $A=(A_{ij})_{k\times k}$ 的每个对角块 $A_{ii}$ 都是方阵, 则有
+$$\det (A) = \left| \begin{array}{c c c c} A _ {1 1} & A _ {1 2} & \dots & A _ {1 k} \\ O & A _ {2 2} & \dots & A _ {2 k} \\ \vdots & \ddots & \ddots & \vdots \\ O & \dots & O & A _ {k k} \end{array} \right| = \det (A _ {1 1}) \det (A _ {2 2}) \dots \det (A _ {k k}).$$
+证明. 对 $k$ 用归纳法. 当 $k = 1$ 时, 结论显然成立. 假设结论对 $k - 1$ 成立. 对 $k \geq 2$, 将矩阵 $A$ 可分块成
+$$A = \left( \begin{array}{c c} A _ {1 1} & \bar {A} _ {1 2} \\ O & \bar {A} _ {2 2} \end{array} \right),$$
+其中
+$$\bar {A} _ {1 2} = \left( \begin{array}{c c c} A _ {1 2} & \dots & A _ {1 k} \end{array} \right), \qquad \bar {A} _ {2 2} = \left( \begin{array}{c c c c} A _ {2 2} & A _ {2 3} & \dots & A _ {2 k} \\ O & A _ {3 3} & \dots & A _ {3 k} \\ \vdots & \ddots & \ddots & \vdots \\ O & \dots & O & A _ {k k} \end{array} \right).$$
+由第二章例 3.3.1 知,
+$$\det (A) = \det (A _ {1 1}) \det (\bar {A} _ {2 2}).$$
+而由归纳假设
+$$\det (\bar {A} _ {2 2}) = \det (A _ {2 2}) \dots \det (A _ {k k}).$$
+故
+$$\det (A) = \det (A _ {1 1}) \det (A _ {2 2}) \dots \det (A _ {k k}).$$
+□
+例4.2.16. 给定矩阵
+$$A = \left( \begin{array}{c c c c} 1 & 1 & 1 & 0 \\ 0 & 1 & 0 & 1 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 1 \end{array} \right).$$
+[第 110 页]
+计算 $A^{n}$ ，其中n为正整数.
+解. 将 $A$ 分块成
+$$A = \left( \begin{array}{c c} B & I \\ O & B \end{array} \right), \quad B = \left( \begin{array}{c c} 1 & 1 \\ 0 & 1 \end{array} \right).$$
+用数学归纳法可以证明:
+$$A ^ {n} = \left( \begin{array}{c c} B ^ {n} & n B ^ {n - 1} \\ O & B ^ {n} \end{array} \right), \qquad B ^ {n} = \left( \begin{array}{c c} 1 & n \\ 0 & 1 \end{array} \right), \qquad n \geq 1.$$
+于是
+$$A ^ {n} = \left( \begin{array}{c c c c} 1 & n & n & n (n - 1) \\ 0 & 1 & 0 & n \\ 0 & 0 & 1 & n \\ 0 & 0 & 0 & 1 \end{array} \right).$$
+□
+例4.2.17. 设 $A \in F^{m \times m}$, $B \in F^{n \times n}$, $C \in F^{m \times n}$, $D \in F^{n \times m}$, 且 $A, B$ 可逆. 证明: 矩阵 $\begin{pmatrix} A & C \\ O & B \end{pmatrix}$ 与 $\begin{pmatrix} A & O \\ D & B \end{pmatrix}$ 可逆, 并求它们的逆.
+证明. 由于
+$$\det \left( \begin{array}{c c} A & C \\ O & B \end{array} \right) = \det (A) \det (B) \neq 0,$$
+因此矩阵 $\begin{pmatrix}A&C\\O&B\end{pmatrix}$ 可逆. 假设它的逆可以表示为分块矩阵形式 $X=\begin{pmatrix}X_{1}&X_{2}\\X_{3}&X_{4}\end{pmatrix}$ ，其中 $X_{1}\in F^{m\times m},X_{2}\in F^{m\times n},X_{3}\in F^{n\times m},X_{4}\in F^{n\times n}$ . 由
+$$\left( \begin{array}{c c} A & C \\ O & B \end{array} \right) \left( \begin{array}{c c} X _ {1} & X _ {2} \\ X _ {3} & X _ {4} \end{array} \right) = \left( \begin{array}{c c} I _ {m} & O \\ O & I _ {n} \end{array} \right)$$
+可得
+$$A X _ {1} + C X _ {3} = I _ {m}, \quad A X _ {2} + C X _ {4} = O, \quad B X _ {3} = O, \quad B X _ {4} = I.$$
+由上式解得
+$$X _ {3} = O, \quad X _ {4} = B ^ {- 1}, \quad X _ {1} = A ^ {- 1}, \quad X _ {2} = - A ^ {- 1} C B ^ {- 1}.$$
+即
+$$\left( \begin{array}{c c} A & C \\ O & B \end{array} \right) ^ {- 1} = \left( \begin{array}{c c} A ^ {- 1} & - A ^ {- 1} C B ^ {- 1} \\ O & B ^ {- 1} \end{array} \right).$$
+[第 111 页]
+§4.3 初等变换
+类似可得
+$$\left( \begin{array}{c c} A & O \\ D & B \end{array} \right) ^ {- 1} = \left( \begin{array}{c c} A ^ {- 1} & O \\ - B ^ {- 1} D A ^ {- 1} & B ^ {- 1} \end{array} \right).$$
+特别地，
+$$\left( \begin{array}{c c} I & C \\ O & I \end{array} \right) ^ {- 1} = \left( \begin{array}{c c} I & - C \\ O & I \end{array} \right), \quad \left( \begin{array}{c c} I & O \\ D & I \end{array} \right) ^ {- 1} = \left( \begin{array}{c c} I & O \\ - D & I \end{array} \right).$$
+例4.2.18. 求例 4.2.16 中矩阵 A 的逆.
+解. 同例 4.2.16 类似, 将矩阵 A 分块为
+$$A = \left( \begin{array}{c c} B & I \\ O & B \end{array} \right), \quad B = \left( \begin{array}{c c} 1 & 1 \\ 0 & 1 \end{array} \right).$$
+由上例结论,
+$$A ^ {- 1} = \left( \begin{array}{c c} B ^ {- 1} & - B ^ {- 2} \\ O & B ^ {- 1} \end{array} \right).$$
+由于
+$$B ^ {- 1} = \left( \begin{array}{c c} 1 & - 1 \\ 0 & 1 \end{array} \right), \quad B ^ {- 2} = \left( \begin{array}{c c} 1 & - 2 \\ 0 & 1 \end{array} \right)$$
+因此
+$$A ^ {- 1} = \left( \begin{array}{c c c c} 1 & - 1 & - 1 & 2 \\ 0 & 1 & 0 & - 1 \\ 0 & 0 & 1 & - 1 \\ 0 & 0 & 0 & 1 \end{array} \right).$$
+§4.3 初等变换
+在本书第一章中,我们引入了求解线性方程组的三种初等变换.上一章我们看到了初等变换在行列式计算中的重要作用.本节我们将看到初等变换也是矩阵运算的重要工具.利用矩阵乘法,我们可以简洁地表示矩阵的初等变换.因此,Gauss消元法可以用矩阵乘法表示,进而可以帮助我们用矩阵的理解解决线性方程组的基本理论问题,如解的存在性与唯一性等.
+回忆一下三种初等变换
+[第 112 页]
+(1) 交换矩阵的两行;
+(2) 将某行乘以一个非零常数;
+(3) 将某行的常数倍加到另一行.
+以上变换称为矩阵的初等行变换. 类似地, 对矩阵的列也可以实施三种对应的变换, 称为矩阵的初等列变换, 这六种变换统称为矩阵的初等变换. 我们仍然用行列式初等变换相同的记号表示矩阵的初等变换, 即用 $r_i \leftrightarrow r_j$、$\lambda r_i$、$\lambda r_i \to r_j$ 表示三个行变换, 用 $c_i \leftrightarrow c_j$、$\lambda c_i$、$\lambda c_i \to c_j$ 表示三个列变换. 每个初等变换对应一个初等矩阵. 下面分别予以介绍.
+- 交换单位阵的第 $i, j$ 行(或交换第 $i, j$ 列), 得到
+$$S _ {i j} = \left( \begin{array}{c c c c c c c} 1 & & & & & & \\ & \ddots & & & & & \\ & & 0 & & 1 & & \\ & & & \ddots & & \\ & & 1 & & 0 & & \\ & & & & & \ddots & \\ & & & & & & 1 \end{array} \right) \leftarrow \text {第} i \text {行} \leftarrow \text {第} j \text {行}\tag{4.17}$$
+- 将单位阵的第i行(或第i列)乘以非零数 $\lambda$ , 得到
+$$D _ {i} (\lambda) = \left( \begin{array}{c c c c c c c} 1 & & & & & & \\ & \ddots & & & & & \\ & & 1 & & & & \\ & & & \lambda & & & \\ & & & & 1 & & \\ & & & & & \ddots & \\ & & & & & & 1 \end{array} \right) \leftarrow \text {第} i \text {行}\tag{4.18}$$
+[第 113 页]
+§4.3 初等变换
+- 将单位阵的第 $j$ 行的 $\lambda$ 倍加到第 $i$ 行(或将第 $i$ 列的 $\lambda$ 倍加到第 $j$ 列), 得到
+$$T _ {i j} (\lambda) = \left( \begin{array}{c c c c c c c} 1 & & & & & & \\ & \ddots & & & & & \\ & & 1 & & \lambda & & \\ & & & \ddots & & & \\ & & & & 1 & & \\ & & & & & \ddots & \\ & & & & & & 1 \end{array} \right) \leftarrow \text {第} i \text {行} \leftarrow \text {第} j \text {行}\tag{4.19}$$
+上述三类方阵称为初等方阵. 每一类初等方阵与一类初等变换相对应.
+定理4.3.1. 对矩阵作初等行变换, 相当于在矩阵的左边乘上一个相应的初等方阵; 对矩阵作初等列变换, 相当于在矩阵的右边乘上一个相应的初等方阵.
+证明. 我们仅证明行变换的情形. 设 $m \times n$ 阶矩阵 $A$ 的行为 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_m$, 则有
+$$S _ {i j} A = \left( \begin{array}{c c c c c c c} 1 & & & & & & \\ & \ddots & & & & & \\ & & 0 & & 1 & & \\ & & & \ddots & & \\ & & 1 & & 0 & & \\ & & & & & \ddots & \\ & & & & & & 1 \end{array} \right) \left( \begin{array}{c} \mathbf {a} _ {1} \\ \vdots \\ \mathbf {a} _ {i} \\ \vdots \\ \mathbf {a} _ {j} \\ \vdots \\ \mathbf {a} _ {m} \end{array} \right) = \left( \begin{array}{c} \mathbf {a} _ {1} \\ \vdots \\ \mathbf {a} _ {j} \\ \vdots \\ \mathbf {a} _ {i} \\ \vdots \\ \mathbf {a} _ {m} \end{array} \right)$$
+$$D _ {i} (\lambda) A = \left( \begin{array}{c c c c c c c} 1 & & & & & & \\ & \ddots & & & & & \\ & & 1 & & & & \\ & & & \lambda & & & \\ & & & & 1 & & \\ & & & & & \ddots & \\ & & & & & & 1 \end{array} \right) \left( \begin{array}{c} \mathbf {a} _ {1} \\ \vdots \\ \vdots \\ \mathbf {a} _ {i} \\ \vdots \\ \vdots \\ \mathbf {a} _ {m} \end{array} \right) = \left( \begin{array}{c} \mathbf {a} _ {1} \\ \vdots \\ \vdots \\ \lambda \mathbf {a} _ {i} \\ \vdots \\ \vdots \\ \mathbf {a} _ {m} \end{array} \right)$$
+[第 114 页]
+$$T _ {i j} (\lambda) A = \left( \begin{array}{c c c c c c c} 1 & & & & & & \\ & \ddots & & & & & \\ & & 1 & & \lambda & & \\ & & & \ddots & & \\ & & & & 1 & & \\ & & & & & \ddots & \\ & & & & & & 1 \end{array} \right) \left( \begin{array}{c} \mathbf {a} _ {1} \\ \vdots \\ \mathbf {a} _ {i} \\ \vdots \\ \mathbf {a} _ {j} \\ \vdots \\ \mathbf {a} _ {m} \end{array} \right) = \left( \begin{array}{c} \mathbf {a} _ {1} \\ \vdots \\ \mathbf {a} _ {i} + \lambda \mathbf {a} _ {j} \\ \vdots \\ \mathbf {a} _ {j} \\ \vdots \\ \mathbf {a} _ {m} \end{array} \right).$$
+列变换的情形可以类似证明, 留作习题.
+定理4.3.2. 初等方阵具有下列性质:
+(1) $S_{ij}$ 为对称方阵, 且 $S_{ij}^{-1} = S_{ij}$;
+(2) $D_{i}(\lambda)$ 为对角方阵, 且 $D_{i}(\lambda)^{-1} = D_{i}(\lambda^{-1})$;
+(3) $T_{ij}(\lambda)$ 为三角方阵, 且 $T_{ij}(\lambda)^{-1} = T_{ij}(-\lambda)$.
+证明. 留作习题.
+第一章中求解线性方阵组的Gauss消元法本质上是对矩阵做行的初等变换,最终将矩阵化为阶梯形的标准形式.利用矩阵语言表述就是,存在一系列初等方阵 $P_{1},P_{2},\cdots,P_{s}$ 使得
+$$P _ {s} \dots P _ {2} P _ {1} A = J,$$
+其中J是阶梯形矩阵(2.3).
+特别地, 假设A是n阶可逆方阵, 则J是可逆上三角阵. 如果再假设我们做的初等变换只有第三类, 即用 $(k,k)$ 位置的元素消去 $(j,k)$ 位置的元素, j>k, k=1,2,...,n-1, 则 $P_{s}\cdots P_{2}P_{1}$ 是一个可逆下三角阵, 且对角元均为1, 记为 $L^{-1}$ . 同时记J=U, 则A=LU. 我们称A=LU为矩阵A的LU分解. 如果我们得到了矩阵A的LU分解, 解线性方程组Ax=b就可以转化为求解两个简单的线性方程组: Ly=b, Ux=y.
+如果对矩阵同时实施行和列的初等变换, 则矩阵可以化为更简单的形式. 我们有
+定理4.3.3. 对任意矩阵 $A=(a_{ij})_{m\times n}$ ，存在一系列m阶初等方阵 $P_{1},P_{2},\ldots,P_{s}$ 和n阶初等方阵 $Q_{1},Q_{2},\ldots,Q_{t}$ ，使得
+$$P _ {s} \dots P _ {2} P _ {1}   A   Q _ {1} Q _ {2} \dots Q _ {t} = \left( \begin{array}{c c} I _ {r} & O \\ O & O \end{array} \right).\tag{4.20}$$
+[第 115 页]
+其中r为非负整数.
+证明. 若 $A = O$, 结论显然成立. 下设 $A \neq O$, 不妨设 $a_{pq} \neq 0$. 则将 $A$ 的第一行与第 $p$ 行互换, 第一列与第 $q$ 列互换, 则可以将 $a_{pq}$ 置换到(1,1)位置. 因此, 矩阵
+$$B = (b _ {i j}) _ {m \times n} = D _ {1} (a _ {p q} ^ {- 1}) S _ {1 p} A S _ {1 q}$$
+满足 $b_{11}=1$ . 利用初等变换将B的第一行和第一列元素(除 $b_{11}$ 外)都化为零, 即
+$$T _ {m 1} (- b _ {m 1}) \dots T _ {2 1} (- b _ {2 1}) B T _ {1 2} (- b _ {1 2}) \dots T _ {1 n} (- b _ {1 n}) = \left( \begin{array}{c c} 1 & 0 \\ 0 & C \end{array} \right),$$
+其中C为 $(m-1)\times(n-1)$ 阶矩阵. 对矩阵C重复以上步骤, 最终可化为(4.20)形式. □
+由于初等方阵都是可逆方阵,并且可逆方阵的乘积也是可逆方阵,由上述定理有
+定理4.3.4. 对任意矩阵 $A=(a_{ij})_{m\times n}$ ，存在m阶可逆方阵P和n阶可逆方阵Q，使得
+$$P A Q = \left( \begin{array}{c c} I _ {r} & O \\ O & O \end{array} \right),\tag{4.21}$$
+其中非负整数r由A唯一决定.
+证明. 只需证 $r$ 的唯一性. 用反证法. 假设存在 $r \neq s$ (不妨设 $r < s$) 及可逆方阵 $P_{1}, P_{2}, Q_{1}, Q_{2}$ 满足
+$$P _ {1} A Q _ {1} = \left( \begin{array}{c c} I _ {r} & O \\ O & O \end{array} \right), \quad P _ {2} A Q _ {2} = \left( \begin{array}{c c} I _ {s} & O \\ O & O \end{array} \right).$$
+令 $P=P_{2}P_{1}^{-1},Q=Q_{1}^{-1}Q_{2}$ ，则
+$$P \left( \begin{array}{c c} I _ {r} & O \\ O & O \end{array} \right) Q = \left( \begin{array}{c c} I _ {s} & O \\ O & O \end{array} \right).$$
+把 $P$ 和 $Q$ 分块
+$$P = \left( \begin{array}{c c} P _ {1} & P _ {2} \\ P _ {3} & P _ {4} \end{array} \right), \quad Q = \left( \begin{array}{c c} Q _ {1} & Q _ {2} \\ Q _ {3} & Q _ {4} \end{array} \right),$$
+其中 $P_{1}$ 是 $s \times r$ 矩阵, $Q_{1}$ 是 $r \times s$ 矩阵. 于是 $P_{1}Q_{1} = I_{s}$. 然而, 由于 $r < s$, 根据例4.2.14的结论, $\det(P_{1}Q_{1}) = 0$. 这与 $P_{1}Q_{1} = I_{s}$ 矛盾.
+[第 116 页]
+上述定理中的非负整数 $r$ 有特别的含义. 它对应于第一章中矩阵做初等变换后, (2.3)式中的梯形矩阵 $J$ 的非零行数. 它是 $A$ 的一个非常重要的量, 称为矩阵的秩. 我们将在下一节详细介绍它.
+在(4.20)式中, 如果A为n阶可逆方阵, 则由于 $P_{s}\cdots P_{1}AQ_{1}\cdots Q_{t}$ 也可逆, 因此r=n. 从而
+$$P _ {s} \dots P _ {1} A Q _ {1} \dots Q _ {t} = I.$$
+由此
+$$A = P _ {1} ^ {- 1} \dots P _ {s} ^ {- 1} Q _ {t} ^ {- 1} \dots Q _ {1} ^ {- 1}.\tag{4.22}$$
+由于初等矩阵的逆矩阵仍为初等矩阵, 因此有
+定理4.3.5. 方阵A可逆的充要条件是, A可以分解为一系列(有限个)初等方阵的乘积.
+从(4.22)式还可以得到
+$$\begin{array}{l} Q _ {1} \dots Q _ {t} P _ {s} \dots P _ {1} A = I, \\ A Q _ {1} \dots Q _ {t} P _ {s} \dots P _ {1} = I. \end{array}\tag{4.23}$$
+以上两式的含义是, 可以对可逆方阵A做一系列的初等行变换将A变为最简形式I, 也可以对可逆方阵A做一系列的初等列变换将A变为最简形式I. 利用这一结论, 可以给出计算可逆方阵的逆矩阵的有效方法-初等变换法.
+设X是方阵的逆矩阵, 即AX=I. 再设 $P_{s}\cdots P_{1}A=I$ , 其中 $P_{i}$ 为初等矩阵. 则 $X=P_{s}\cdots P_{1}$ . 为计算矩阵A的逆, 我们将方阵A与I组合在一起形成一个n行、2n列的矩阵 $(A,I)$ . 现对矩阵 $(A,I)$ 实施一系列的初等行变换(对应的初等矩阵为 $P_{1},\ldots,P_{s}$ ). 则由于
+$$P _ {s} \dots P _ {1} (A, I) = (P _ {s} \dots P _ {1} A, P _ {s} \dots P _ {1} I) = (I, A ^ {- 1}),\tag{4.24}$$
+这些初等变换将A简化为I, 与此同时将I化为 $A^{-1}$ , 由此通过一系列初等变换就可以求得矩阵的逆. 用类似的方法还可以求解矩阵方程AX = B. 下面我们给一个具体例子.
+例4.3.1. 计算矩阵A的逆矩阵, 这里
+$$A = \left( \begin{array}{c c c} 2 & 1 & 0 \\ 1 & 2 & 1 \\ 0 & 1 & 2 \end{array} \right).$$
+[第 117 页]
+§4.3 初等变换
+解. 对矩阵 $(A,I)$ 做一系列初等行变换, 使得A简化为I:
+$$\left( \begin{array}{c c c c c c} 2 & 1 & 0 & 1 & 0 & 0 \\ 1 & 2 & 1 & 0 & 1 & 0 \\ 0 & 1 & 2 & 0 & 0 & 1 \end{array} \right) \xrightarrow {\frac {1}{2} r _ {1}} \left( \begin{array}{c c c c c c} 1 & \frac {1}{2} & 0 & \frac {1}{2} & 0 & 0 \\ 1 & 2 & 1 & 0 & 1 & 0 \\ 0 & 1 & 2 & 0 & 0 & 1 \end{array} \right) \xrightarrow {- r _ {1} \to r _ {2}} \left( \begin{array}{c c c c c c} 1 & \frac {1}{2} & 0 & \frac {1}{2} & 0 & 0 \\ 0 & \frac {3}{2} & 1 & - \frac {1}{2} & 1 & 0 \\ 0 & 1 & 2 & 0 & 0 & 1 \end{array} \right) \xrightarrow {\frac {2}{3} r _ {2}}$$
+$$\left( \begin{array}{c c c c c c} 1 & \frac {1}{2} & 0 & \frac {1}{2} & 0 & 0 \\ 0 & 1 & \frac {3}{2} & - \frac {1}{3} & \frac {2}{3} & 0 \\ 0 & 1 & 2 & 0 & 0 & 1 \end{array} \right) \xrightarrow {- r _ {2} \to r _ {3}} \left( \begin{array}{c c c c c c} 1 & \frac {1}{2} & 0 & \frac {1}{2} & 0 & 0 \\ 0 & 1 & \frac {3}{2} & - \frac {1}{3} & \frac {2}{3} & 0 \\ 0 & 0 & \frac {4}{3} & \frac {1}{3} & - \frac {2}{3} & 1 \end{array} \right) \xrightarrow {\frac {3}{4} r _ {3}} \left( \begin{array}{c c c c c c} 1 & \frac {1}{2} & 0 & \frac {1}{2} & 0 & 0 \\ 0 & 1 & \frac {3}{2} & - \frac {1}{3} & \frac {2}{3} & 0 \\ 0 & 0 & 1 & \frac {1}{4} & - \frac {2}{4} & \frac {3}{4} \end{array} \right)$$
+$$\xrightarrow {- \frac {2}{3} r _ {3} \to r _ {2}} \left( \begin{array}{c c c c c c} 1 & \frac {1}{2} & 0 & \frac {1}{2} & 0 & 0 \\ 0 & 1 & 0 & - \frac {1}{2} & 1 & - \frac {1}{2} \\ 0 & 0 & 1 & \frac {1}{4} & - \frac {2}{4} & \frac {3}{4} \end{array} \right) \xrightarrow {- \frac {1}{2} r _ {2} \to r _ {1}} \left( \begin{array}{c c c c c c} 1 & 0 & 0 & \frac {3}{4} & - \frac {2}{4} & \frac {1}{4} \\ 0 & 1 & 0 & - \frac {1}{2} & 1 & - \frac {1}{2} \\ 0 & 0 & 1 & \frac {1}{4} & - \frac {2}{4} & \frac {3}{4} \end{array} \right).$$
+因此
+$$A ^ {- 1} = \left( \begin{array}{c c c} \frac {3}{4} & - \frac {2}{4} & \frac {1}{4} \\ - \frac {1}{2} & 1 & - \frac {1}{2} \\ \frac {1}{4} & - \frac {2}{4} & \frac {3}{4} \end{array} \right).$$
+□
+例4.3.2. 设 $A = \begin{pmatrix} 0 & 1 & 1 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 0 & 1 \\ 1 & 1 & 1 & 0 \end{pmatrix}$. 求 $A^{-1}$.
+解法一. 用初等变换.
+$$\left(\begin{array}{c c c c c c c c}0&1&1&1&1&0&0&0\\1&0&1&1&0&1&0&0\\1&1&0&1&0&0&1&0\\1&1&1&0&0&0&0&1\end{array}\right) \xrightarrow {r _ {i} \rightarrow r _ {1} , i = 2 , 3 , 4} \left(\begin{array}{c c c c c c c c}3&3&3&3&1&1&1&1\\1&0&1&1&0&1&0&0\\1&1&0&1&0&0&1&0\\1&1&1&0&0&0&0&1\end{array}\right) \xrightarrow {\frac {1}{3} r _ {1} , - r _ {1} \rightarrow r _ {i} , i = 2 , 3 , 4}$$
+$$\left( \begin{array}{c c c c c c c c} 1 & 1 & 1 & 1 & 1 / 3 & 1 / 3 & 1 / 3 & 1 / 3 \\ 0 & - 1 & 0 & 0 & - 1 / 3 & 2 / 3 & - 1 / 3 & - 1 / 3 \\ 0 & 0 & - 1 & 0 & - 1 / 3 & - 1 / 3 & 2 / 3 & - 1 / 3 \\ 0 & 0 & 0 & - 1 & - 1 / 3 & - 1 / 3 & - 1 / 3 & 2 / 3 \end{array} \right) \xrightarrow {r _ {i} \to r _ {1} , - r _ {i} , i = 2 , 3 , 4}$$
+$$\left( \begin{array}{c c c c c c c c} 1 & 0 & 0 & 0 & - 2 / 3 & 1 / 3 & 1 / 3 & 1 / 3 \\ 0 & 1 & 0 & 0 & 1 / 3 & - 2 / 3 & 1 / 3 & 1 / 3 \\ 0 & 0 & 1 & 0 & 1 / 3 & 1 / 3 & - 2 / 3 & 1 / 3 \\ 0 & 0 & 0 & 1 & 1 / 3 & 1 / 3 & 1 / 3 & - 2 / 3 \end{array} \right).$$
+[第 118 页]
+第四章 矩阵
+因此
+$$A ^ {- 1} = \left( \begin{array}{c c c c} - 2 / 3 & 1 / 3 & 1 / 3 & 1 / 3 \\ 1 / 3 & - 2 / 3 & 1 / 3 & 1 / 3 \\ 1 / 3 & 1 / 3 & - 2 / 3 & 1 / 3 \\ 1 / 3 & 1 / 3 & 1 / 3 & - 2 / 3 \end{array} \right).$$
+□
+解法二. 由于
+$$A + I _ {4} = \left( \begin{array}{c c c c} 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 1 \end{array} \right)$$
+易验证, $(A + I_4)^2 = 4(A + I_4)$. 于是 $A^2 - 2A - 3I_4 = 0$, $A(A - 2I_4) = 3I_4$. 因此, $A^{-1} = \frac{1}{3}(A - 2I_4)$.
+对于分块矩阵也可以施行与上面类似的“初等行(列)变换”，这种变换也是通过对分块矩阵左(右)乘相应的“初等方阵”实现的.
+例4.3.3. 给定分块矩阵
+$$\left( \begin{array}{c c} A & B \\ C & D \end{array} \right),$$
+其中A为可逆方阵. 可以直接验证
+$$\left( \begin{array}{c c} I & O \\ - C A ^ {- 1} & I \end{array} \right) \left( \begin{array}{c c} A & B \\ C & D \end{array} \right) = \left( \begin{array}{c c} A & B \\ O & D - C A ^ {- 1} B \end{array} \right)\tag{4.25}$$
+$$\left( \begin{array}{c c} A & B \\ C & D \end{array} \right) \left( \begin{array}{c c} I & - A ^ {- 1} B \\ O & I \end{array} \right) = \left( \begin{array}{c c} A & O \\ C & D - C A ^ {- 1} B \end{array} \right)\tag{4.26}$$
+$$\left( \begin{array}{c c} I & O \\ - C A ^ {- 1} & I \end{array} \right) \left( \begin{array}{c c} A & B \\ C & D \end{array} \right) \left( \begin{array}{c c} I & - A ^ {- 1} B \\ O & I \end{array} \right) = \left( \begin{array}{c c} A & O \\ O & D - C A ^ {- 1} B \end{array} \right)\tag{4.27}$$
+其中准三角“初等方阵”
+$$\left( \begin{array}{c c} {{I}} & {{O}} \\ {{- C A ^ {- 1}}} & {{I}} \end{array} \right) \quad \text {和} \quad \left( \begin{array}{c c} {{I}} & {{- A ^ {- 1} B}} \\ {{O}} & {{I}} \end{array} \right)$$
+具有与初等方阵 $T_{ij}(\lambda)$ 类似的性质,并且可以验证
+$$\left( \begin{array}{c c} I & O \\ X & I \end{array} \right) ^ {- 1} = \left( \begin{array}{c c} I & O \\ - X & I \end{array} \right), \quad \left( \begin{array}{c c} I & Y \\ O & I \end{array} \right) ^ {- 1} = \left( \begin{array}{c c} I & - Y \\ O & I \end{array} \right).$$
+[第 119 页]
+§4.3 初等变换
+例4.3.4. 设A,D分别为m,n阶方阵, $B\in F^{n\times m},C\in F^{m\times n}$ ，且A可逆.证明
+$$\det \left( \begin{array}{c c} A & C \\ B & D \end{array} \right) = \det (A) \det (D - B A ^ {- 1} C).\tag{4.28}$$
+证明. 容易验证
+$$\left( \begin{array}{c c} I _ {m} & 0 \\ - B A ^ {- 1} & I _ {n} \end{array} \right) \left( \begin{array}{c c} A & C \\ B & D \end{array} \right) = \left( \begin{array}{c c} A & C \\ 0 & D - B A ^ {- 1} C \end{array} \right)$$
+上式两边取行列式即得证.
+特别地, 如果 m = n 且 AB = BA, 则由于
+$$A (D - B A ^ {- 1} C) = A D - A B A ^ {- 1} C = A D - B C,$$
+故
+$$\det \left( \begin{array}{c c} A & C \\ B & D \end{array} \right) = \det (A D - B C).$$
+对于分块矩阵, 也可以使用初等变换法求逆.
+例4.3.5. 设A,B,I为n阶方阵,且BA=0.计算分块矩阵
+$$M = \left( \begin{array}{c c} I & A \\ B & I \end{array} \right)$$
+的逆矩阵.
+解.
+$$\left( \begin{array}{c c c c} I & A & I & O \\ B & I & O & I \end{array} \right) \longrightarrow \left( \begin{array}{c c c c} I & A & I & O \\ O & I & - B & I \end{array} \right) \longrightarrow \left( \begin{array}{c c c c} I & O & I + A B & - A \\ O & I & - B & I \end{array} \right).$$
+因此
+$$\left( \begin{array}{c c} I & A \\ B & I \end{array} \right) ^ {- 1} = \left( \begin{array}{c c} I + A B & - A \\ - B & I \end{array} \right).$$
+利用定理 4.3.5, 我们还可以方便地证明行列式的基本性质-行列式的行列互换不改变行列式的值.
+例4.3.6. 设 $A$ 为 $n$ 阶方阵. 则 $\operatorname{det}(A^T) = \operatorname{det}(A)$.
+[第 120 页]
+证明.：当A不可逆时, $A^{T}$ 也不可逆. 此时 $\det(A^{T})=\det(A)=0$ . 下面假设A可逆. 由定理4.3.5知, 存在初等方阵 $P_{1},P_{2},\ldots,P_{s}$ 使得
+$$A = P _ {1} P _ {2} \dots P _ {s}.$$
+于是
+$$A ^ {T} = P _ {s} ^ {T} \dots P _ {2} ^ {T} P _ {1} ^ {T}.$$
+注意到 $\det(P_{i}^{T})=\det(P_{i}),i=1,2,\ldots,s,$ 故
+$$\det (A ^ {T}) = \det (A) = \Pi_ {i = 1} ^ {s} \det (P _ {i}).$$
+总之, $\det(A^{T})=\det(A)$ .
+§4.4 矩阵的秩与相抵
+在第一章我们讲到, 线性方程组及相应的矩阵可以通过初等行变换化成阶梯形式, 而阶梯形矩阵中非零行数是决定线性方程组的解的重要参数. 这个非零行数正是定理 4.3.4 中的非负整数 r, 它是由矩阵 A 唯一确定的, 这就是矩阵 A 的秩. 矩阵秩的概念在矩阵运算及线性方程组的求解理论中有着重要的作用.
+§4.4.1 矩阵秩与相抵的定义
+回顾一下Gauss消元的过程, 我们实际上是对一个矩阵做一系列初等行变换. 变换后的矩阵对应的方程组与原矩阵对应的方程组是同解的. 此时, 我们说变换后的矩阵与原矩阵是等价(相抵)的. 据此, 我们引进以下概念.
+定义4.4.1. 设A,B是 $m \times n$ 阶矩阵,如果存在一系列(有限个)初等变换将矩阵A化成矩阵B,则称矩阵A和B相抵.
+由于可逆方阵可以分解为一系列初等方阵的乘积, 因此有
+定理4.4.1. 设 $A, B$ 是 $m \times n$ 阶矩阵. 则 $A$ 和 $B$ 相抵当且仅当, 存在 $m$ 阶可逆方阵 $P$ 和 $n$ 阶可逆方阵 $Q$ 使得
+$$B = P A Q.$$
+容易验证, 矩阵的相抵关系满足性质
+1. $A$ 与 $A$ 本身相抵;
+2. 若A与B相抵, 则B与A相抵;
+[第 121 页]
+3. 若A与B相抵, 且B与C相抵, 则A与C相抵.
+满足上述性质的关系称为等价关系, 等价关系用~表示. 容易验证, 相抵是一种等价关系. 所有 $m \times n$ 矩阵的全体依据相抵关系可以被分解为一些不相交的子集的并, 每个子集称为一个相抵等价类. 两个矩阵相抵当且仅当它们属于同一个相抵等价类. 关于矩阵相抵, 我们有以下基本问题:
+1. 两个矩阵属于同一相抵等价类的条件是什么? 或者说, 设 $A, B$ 均为 $m \times n$ 矩阵, $A$ 与 $B$ 相抵的充要条件是什么?
+2. 在每个相抵等价类中, 最简单的代表元具有怎样的形式? 也就是说, 对每个 $m \times n$ 矩阵, 与它相抵的最简矩阵(相抵标准形)是什么?
+定理 4.3.4 表明, 任意矩阵 A 相抵于准对角方阵  $\begin{pmatrix} I_{r} & O \\ O & O \end{pmatrix}$ , 这是与 A 相抵的最简矩阵.
+定义4.4.2. 设A是 $m \times n$ 矩阵, 公式(4.21)中的矩阵 $\begin{pmatrix} I_r & O \\ O & O \end{pmatrix}$ 称为A的相抵标准形. 整数r称为矩阵A的秩, 记为 $\text{rank}(A)$ 或 $r(A)$. 若r = m, 则A称为是行满秩的; 若r = n, 则A称为是列满秩的. 特别地, 零矩阵的秩等于0.
+接下来我们回答两个矩阵何时相抵的问题.
+定理4.4.2. 设A,B是同阶矩阵, 则A与B相抵的充要条件是 $\text{rank}(A) = \text{rank}(B)$ .
+证明. 充分性. 设 $\operatorname{rank}(A) = \operatorname{rank}(B) = r$, 则 $A$ 与 $B$ 都相抵于标准形 $\left( \begin{array}{cc}I_r & O\\ O & O \end{array} \right)$, 从而 $A$ 与 $B$ 也相抵.
+必要性. 设A与B相抵, 则A与B的标准形也相抵. 设 $\operatorname{rank}(A)=r,\operatorname{rank}(B)=s$ .
+则 $\begin{pmatrix}I_{r}&O\\O&O\end{pmatrix}$ 与 $\begin{pmatrix}I_{s}&O\\O&O\end{pmatrix}$ 相抵. 由定理4.3.4的证明知, r=s.
+上述定理表明, 矩阵根据它的秩分成不同的等价类. 对于 $m \times n$ 阶矩阵全体 $F^{m \times n}$, 由于 $0 \leq r \leq \min(m, n)$, 并且每个 $r$ 对应唯一的一个相抵等价类, 因此 $F^{m \times n}$ 总共有 $\min(m, n) + 1$ 个相抵等价类. 同一等价类的矩阵都相抵于 $\begin{pmatrix} I_r & O \\ O & O \end{pmatrix}$.
+定理4.4.3. 设A是 $m \times n$ 矩阵, P, Q分别是m, n阶可逆方阵, 则 $\text{rank}(PAQ) = \text{rank}(A)$.
+证明. 由于 $PAQ$ 与 $A$ 相抵, 故它们的秩相等. $\square$
+[第 122 页]
+上述定理表明,初等变换不改变矩阵的秩.
+例4.4.1. 设A为n阶方阵. 证明: A可逆当且仅当 $\text{rank}(A) = n$ .
+证明. 设 $\operatorname{rank}(A) = r$, 则存在 $n$ 阶可逆方阵 $P, Q$ 使得
+$$P A Q = \left( \begin{array}{c c} I _ {r} & O \\ O & O \end{array} \right).$$
+如果A可逆, 则PAQ可逆, 从而r=n. 反之, 如果r=n, 则PAQ= $I_{n}$ , 从而 $A=P^{-1}Q^{-1}$ 可逆. □
+例4.4.2. 证明: 对任意矩阵 $A$, $\operatorname{rank}(A^T) = \operatorname{rank}(A)$.
+证明. 设 $\operatorname{rank}(A) = r$, 由定理4.3.4知, 存在可逆方阵 $P, Q$ 使得 $PAQ = \begin{pmatrix} I_r & O \\ O & O \end{pmatrix}$. 于是 $Q^T A^T P^T = \begin{pmatrix} I_r & O \\ O & O \end{pmatrix}$. 从而, $\operatorname{rank}(A^T) = r = \operatorname{rank}(A) = r$.
+例4.4.3. 设A,B为任意矩阵. 证明
+$$\operatorname{rank} \left( \begin{array}{c c} A & O \\ O & B \end{array} \right) = \operatorname{rank} (A) + \operatorname{rank} (B).$$
+证明. 设 $\operatorname{rank}(A) = r$, $\operatorname{rank}(B) = s$. 则存在可逆方阵 $P_{1}, Q_{1}$ 与 $P_{2}, Q_{2}$ 使得 $P_{1}AQ_{1} = \begin{pmatrix} I_{r} & O \\ O & O \end{pmatrix}$, $P_{2}BQ_{2} = \begin{pmatrix} I_{s} & O \\ O & O \end{pmatrix}$. 于是
+$$\left( \begin{array}{c c} P _ {1} & O \\ O & P _ {2} \end{array} \right) \left( \begin{array}{c c} A & O \\ O & B \end{array} \right) \left( \begin{array}{c c} Q _ {1} & O \\ O & Q _ {2} \end{array} \right) = \left( \begin{array}{c c c c} I _ {r} & O & O & O \\ O & O & O & O \\ O & O & I _ {s} & O \\ O & O & O & O \end{array} \right).$$
+通过简单的初等变换(行列互换)知, 上式等式右端的矩阵相抵于  $\begin{pmatrix} I_{r+s} & O \\ O & O \end{pmatrix}$ . 因此需证的等式成立. ☐
+矩阵的秩与其非零子式有着紧密的联系. 为揭示这种联系, 我们先给出一个引理.
+[第 123 页]
+引理4.4.1. 设 $A$ 是 $m \times n$ 方阵, $P, Q$ 分别是 $m, n$ 阶初等方阵. 若 $A$ 的所有 $k$ 阶子式都为零, 则 $PA$ 与 $AQ$ 的所有 $k$ 阶子式也为零.
+证明. 当 $P = S_{ij}$ 或 $P = D_i(\lambda)$ 时, 结论显然成立. 当 $P = T_{pq}(\lambda)$ 时, 设 $B = PA$, 则
+$$\det B \binom{i _ {1} i _ {2} \dots i _ {k}}{j _ {1} j _ {2} \dots j _ {k}} = \left\{ \begin{array}{l l} \det A \binom{i _ {1} i _ {2} \dots i _ {k}}{j _ {1} j _ {2} \dots j _ {k}}, & p \notin \{i _ {1}, i _ {2}, \ldots , i _ {k} \} \\ \det A \binom{i _ {1} \dots i _ {t} \dots i _ {k}}{j _ {1} \dots j _ {t} \dots j _ {k}} + \lambda \det A \binom{i _ {1} \dots q \dots i _ {k}}{j _ {1} \dots j _ {t} \dots j _ {k}}, & p = i _ {s} (1 \leq s \leq k) \end{array} \right..$$
+因此若A的所有k阶子式都是为零, 则B = PA的所有k阶子式也都为零. 类似可证, QA的所有k阶子式也都为零. □
+矩阵的秩与其非零子式之间的联系由下列定理给出.
+定理4.4.4. 矩阵A的非零子式的最高阶数等于矩阵A的秩.
+证明. 设矩阵 $A$ 的秩为 $r$, 它的非零子式的最大阶数为 $s$. 将矩阵 $A$ 通过一系列初等变换变成其相抵标准形 $B = \begin{pmatrix} I_r & O \\ O & O \end{pmatrix}$, 即存在可逆方阵 $P, Q$ 使得 $A = PBQ$, 则 $A$ 至少有一个 $r$ 阶子式非零. 否则, 由引理4.4.1知, $B$ 的所有 $r$ 阶子式都为零, 矛盾. 因此, $s \geq r$.
+另一方面, 由于 $B=\begin{pmatrix}I_{r}&O\\O&O\end{pmatrix}$ 的任意 $k(k\geq r+1)$ 阶子式为零, 由引理4.4.1, A=PBQ的任意 $k(k\geq r+1)$ 阶子式也为零, 从而 $s\leq r$ . 因此, r=s. 定理证毕. □
+由上述定理, 我们给出矩阵秩的一个等价定义.
+定义4.4.3. 设矩阵 $A$ 至少有一个 $r$ 阶非零子式, 且 $A$ 的所有 $r + 1$ 阶子式都为零, 则称 $A$ 的秩为 $r$.
+利用上述定义可以方便地验证, 第一章中Gauss消元得到的标准型矩阵J ((2.3)式)的秩为
+$$\operatorname{rank} (J) = \left\{ \begin{array}{l l} r & d _ {r + 1} = 0 \\ r + 1 & d _ {r + 1} \neq 0. \end{array} \right.$$
+例如, 当 $d_{r+1}=0$ 时, J 的第 1,2, ..., r 行, 第 1, j₂, ..., jᵣ 列的子式非零, 但 J 的任意  $r+1$  阶子式为零. 因此,  $\operatorname{rank}(J)=r$ . 同理, 当  $d_{r+1} \neq 0$  时,  $\operatorname{rank}(J)=r+1$ . 这正好表明, 标准型 J 中的非零行数恰好是 J 的秩, 也是矩阵 A 的秩.
+这样,我们实际上可以回答第一章中提出的如下问题:
+1. (2.3)式中, r是由矩阵A唯一确定的, 它就是矩阵A的秩.
+2. 线性方程组 $A\mathbf{x} = \mathbf{b}$ 有解, 当且仅当 $\operatorname{rank}(A) = \operatorname{rank}(J) = \operatorname{rank}(A, \mathbf{b}) = r$.
+[第 124 页]
+§4.4.2 秩的计算
+根据定理4.4.3, 初等变换不改变矩阵的秩. 因此, 对给定矩阵做行列初等变换将其化为简单方阵, 是计算矩阵秩的一般方法.
+例4.4.4. 对于x的不同值, 讨论n阶方阵A的秩, 这里
+$$A = \left( \begin{array}{c c c c} x & 1 & \dots & 1 \\ 1 & x & \ddots & \vdots \\ \vdots & \ddots & \ddots & 1 \\ 1 & \dots & 1 & x \end{array} \right).$$
+解. 作初等变换
+$$A \longrightarrow \left( \begin{array}{c c c c} x + n - 1 & 1 & \dots & 1 \\ x + n - 1 & x & \ddots & \vdots \\ \vdots & \ddots & \ddots & 1 \\ x + n - 1 & \dots & 1 & x \end{array} \right) \longrightarrow \left( \begin{array}{c c c c} x + n - 1 & 1 & \dots & 1 \\ & x - 1 & & \\ & & \ddots & \\ & & & x - 1 \end{array} \right) = B.$$
+当 $x = 1$ 时，$B$ 和 $\mathrm{diag}(1, O_{n-1})$ 相抵. 当 $x \neq 1$ 时，$B$ 和 $(x + n - 1, I_{n-1})$ 相抵. 综上可得
+$$\operatorname{rank} (A) = \left\{ \begin{array}{l l} 1, & x = 1; \\ n - 1, & x = 1 - n; \\ n, & \text {其它情形.} \end{array} \right.$$
+另一种计算秩的方法是计算矩阵的子式, 不过这种方法只对特殊矩阵(结构简单)有效.
+例4.4.5. 计算 $n$ 阶方阵 $A$ 的秩, 这里
+$$A = \left( \begin{array}{c c c c} 1 & 1 & & \\ & 1 & \ddots & \\ & & \ddots & 1 \\ 1 & & & 1 \end{array} \right).$$
+解. 由 $A$ 的右上角的 $n - 1$ 阶子式非零知, $\operatorname{rank}(A) \geq n - 1$. 又由 $\det(A) = 1 - (-1)^n$, 故当 $n$ 是奇数时, $\operatorname{rank}(A) = n$; 当 $n$ 是偶数时, $\operatorname{rank}(A) = n - 1$.
+[第 125 页]
+§4.4 矩阵的秩与相抵
+§4.4.3 相抵标准形的应用*
+利用矩阵的相抵标准形, 可以使一些矩阵问题得到简化, 把关于一般矩阵的问题转化为关于标准形矩阵的问题处理. 下面给出一些例子.
+例4.4.6. 设 $A \in F^{m \times n}$ 且 $\operatorname{rank}(A) = 1$。证明: 存在 $m$ 维非零列向量 $\mathbf{a}$ 及 $n$ 维非零行向量 $\mathbf{b}$ 使得 $A = \mathbf{ab}$.
+证明.：由 $\operatorname{rank}(A) = 1$ 知存在 $m$ 阶可逆方阵 $P$ 及 $n$ 阶可逆方阵 $Q$ 使得
+$$A = P \left( \begin{array}{c c} 1 & O \\ O & O \end{array} \right) Q = P \left( \begin{array}{c} 1 \\ 0 \\ \vdots \\ 0 \end{array} \right) \left( \begin{array}{c c c c} 1 & 0 & \dots & 0 \end{array} \right) Q.$$
+令
+$$\mathbf {a} = P \left( \begin{array}{c} 1 \\ 0 \\ \vdots \\ 0 \end{array} \right), \quad \mathbf {b} = \left( \begin{array}{c c c c} 1 & 0 & \dots & 0 \end{array} \right) Q$$
+即有A = ab, 且a为m维非零列向量, b为n维非零行向量.
+例4.4.7. 每个秩为 $r$ 的矩阵都可以写成 $r$ 个秩是1的矩阵之和.
+证明. 设 $\operatorname{rank}(A) = r$, 则存在可逆方阵 $P, Q$ 满足 $A = P \begin{pmatrix} I_r & O \\ O & O \end{pmatrix} Q$. 于是 $A = PE_{11}Q + \ldots + PE_{rr}Q$, 其中 $E_{ii}$ 是基本矩阵, 它的秩为 1. 从而矩阵 $PE_{ii}Q$ 的秩也都是 1.
+例4.4.8. 证明: 对任意 $m \times n$ 矩阵A, $n \times p$ 矩阵B, 都有
+$$\operatorname{rank} (A B) \leq \min \left(\operatorname{rank} (A), \operatorname{rank} (B)\right).$$
+证明. 设 $\operatorname{rank}(A) = r$, 则存在可逆 $P, Q$ 使得 $A = P \begin{pmatrix} I_r & O \\ O & O \end{pmatrix} Q$. 于是 $AB = P \begin{pmatrix} I_r & O \\ O & O \end{pmatrix} QB$. 将矩阵 $QB$ 做如下分块 $QB = \begin{pmatrix} B_1 \\ B_2 \end{pmatrix}$, 其中 $B_1 \in F^{r \times p}, B_2 \in F^{(n - r) \times p}$. 则
+$$\operatorname{rank} (A B) = \operatorname{rank} \left(\operatorname{diag} (I _ {r}, O) \binom{B _ {1}}{B _ {2}}\right) = \operatorname{rank} (B _ {1}) \leq \operatorname{rank} (B).$$
+另一方面, $\operatorname{rank}(AB) = \operatorname{rank}((AB)^T) = \operatorname{rank}(B^TA^T) \leq \operatorname{rank}(A^T) = \operatorname{rank}(A)$. 即 $\operatorname{rank}(AB) \leq \min(\operatorname{rank}(A), \operatorname{rank}(B))$.
+[第 126 页]
+例4.4.9. 设 $A \in F^{m \times p}, B \in F^{n \times p}$. 证明: $\operatorname{rank}\left( \begin{array}{c} A \\ B \end{array} \right) \leq \operatorname{rank}(A) + \operatorname{rank}(B)$.
+证明. 由于
+$$\binom{A}{B} = \left( \begin{array}{c c} A & O \\ O & B \end{array} \right) \binom{I _ {p}}{I _ {p}},$$
+因此
+$$\operatorname{rank} \binom{A}{B} \leq \operatorname{rank} \left( \begin{array}{c c} A & O \\ O & B \end{array} \right) = \operatorname{rank} (A) + \operatorname{rank} (B).$$
+例4.4.10. 设 $A \in F^{m \times n}, B \in F^{n \times m}, m > n$. 证明: $\operatorname{det}(AB) = 0$.
+证明. 由 $\operatorname{rank}(AB) \leq \operatorname{rank}(A) \leq n < m$, 即知 $AB$ 不可逆, 从而 $\det(AB) = 0$.
+例4.4.11. 设 $A$ 为 $n$ 阶方阵, $I$ 为同阶单位阵, 且 $A^2 = A$. 证明: $\operatorname{rank}(A) + \operatorname{rank}(I - A) = n$. 证明. 对以下分块矩阵做初等变换
+$$\left( \begin{array}{c c} A & O \\ O & I - A \end{array} \right) \longrightarrow \left( \begin{array}{c c} A & O \\ A & I - A \end{array} \right) \longrightarrow \left( \begin{array}{c c} A & A \\ A & I \end{array} \right) \longrightarrow \left( \begin{array}{c c} A - A ^ {2} & O \\ A & I \end{array} \right) \longrightarrow \left( \begin{array}{c c} O & O \\ O & I \end{array} \right).$$
+由于初等变换不改变矩阵的秩, 因此
+$$\operatorname{rank} (A) + \operatorname{rank} (I - A) = \operatorname{rank} \left( \begin{array}{c c} A & O \\ O & I - A \end{array} \right) = \operatorname{rank} (I) = n.$$
+小知识: 矩阵发展史
+从逻辑上, 矩阵应该早于行列式. 但矩阵概念比行列式要晚. 1850年英国数学家Sylvester(1814-1897)在研究线性方程组的时候, 引入了矩阵的概念. 但这时矩阵只是线性方程组的一个速记形式.
+1855年, 英国数学家凯莱(Caylay, 1821-1895)在研究线性变换下的不变量时, 引入了矩阵的概念. 1858年, 凯莱在《矩阵论的研究报告》中, 定义了两个矩阵相等、相加以及数与矩阵的数乘等运算和算律. 同时, 定义了零矩阵、单位阵等特殊矩阵, 更重要的是在该文中他给出了矩阵相乘、矩阵可逆等概念, 以及利用伴随阵求逆阵的方法, 证明了有关的性质, 如矩阵乘法有结合律, 没有交换律, 两个非零阵乘积可以为零矩阵等结论. 定义了转置阵、对称阵、反对称阵等概
+[第 127 页]
+习题三
+念. 因此可以说, 凯莱是矩阵理论的奠基人. 凯莱还提出了矩阵的特征多项式的概念以及凯莱-哈密尔顿定理, 并验证了 $3 \times 3$ 阶矩阵的情况. 哈密尔顿证明了 $4 \times 4$ 阶矩阵的情况, 而一般情况下的证明是德国数学家弗罗贝尼乌斯(F.G.Frohenius, 1849—1917)于1898年给出的.
+1854年时法国数学家埃尔米特(C.Hermite)使用了“正交矩阵”这一术语，但他的正式定义直到1878年才由费罗贝尼乌斯发表。1879年，费罗贝尼乌斯(Frobenius)引入矩阵秩的概念，他还引入了矩阵最小多项式。迹的概念由Taber引入。至此，矩阵的体系基本上建立起来了。
+1878年, 弗罗伯纽斯(Frobenius)在他的论文中引入了多项式矩阵的行列式因子、不变因子和初等因子等概念, 证明了两个多项式矩阵等价当且仅当它们有相同的不变因子和初等因子.
+关于行列式的乘积定理 $(\det (AB) = \det (A)\det (B))$ ，Lagrange对三阶方阵给出了证明.对一般情形，Binet叙述过但没有给出满意的证明,Cauchy给出了给定理的证明.
+1. 完成定理4.2.1、定理4.2.2的证明.
+2. 证明: 每个方阵都可以表示为一个对称阵与一个反对称阵之和的形式.
+3. 设 $A = \begin{pmatrix} -3 & -1 & -2 \\ 1 & 3 & 4 \end{pmatrix}, B = \begin{pmatrix} 2 & 2 & -2 \\ 4 & -1 & -4 \\ 4 & 3 & -3 \end{pmatrix}, C = \begin{pmatrix} 1 & 1 \\ -4 & 1 \\ -1 & -2 \end{pmatrix}$ ，计算AB, BC, ABC,
+ $B^{2}$ , AC, CA.
+$$4. \text {计算} \left( \begin{array}{c c c c c} 1 & x & x ^ {2} & \dots & x ^ {n} \\ 1 & y & y ^ {2} & \dots & y ^ {n} \\ 1 & z & z ^ {2} & \dots & z ^ {n} \end{array} \right) \left( \begin{array}{c c c} a _ {0} & b _ {0} & c _ {0} \\ a _ {1} & b _ {1} & c _ {1} \\ a _ {2} & b _ {2} & c _ {2} \\ \vdots & \vdots & \vdots \\ a _ {n} & b _ {n} & c _ {n} \end{array} \right).$$
+5. 计算 $\begin{pmatrix} x_{1} & x_{2} & \cdots & x_{m} \end{pmatrix}$ $\begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \cdots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{pmatrix}$ $\begin{pmatrix} y_{1} \\ y_{2} \\ \vdots \\ y_{n} \end{pmatrix}$ .
+[第 128 页]
+6. 举例求满足条件的2阶实方阵A.
+(1) $A^{2}=\begin{pmatrix}0&1\\1&0\end{pmatrix}$  (2) $A^{2}=\begin{pmatrix}0&1\\-1&0\end{pmatrix}$  (3) $A^{3}=I$ 且 $A\neq I$ .
+7. 计算下列方阵的k次方幂, k为正整数.
+(1) $\begin{pmatrix}\cos\theta&\sin\theta\\-\sin\theta&\cos\theta\end{pmatrix}$  (2) $\begin{pmatrix}a&b\\-b&a\end{pmatrix}$  (3) $\begin{pmatrix}1&a&1&0\\0&1&0&1\\0&0&1&a\\0&0&0&1\end{pmatrix}$
+(4)
+$$\left( \begin{array}{c c c c} 1 & 1 & & \\ & 1 & \ddots & \\ & & \ddots & 1 \\ & & & 1 \end{array} \right)$$
+(5)
+$$\left( \begin{array}{c c c c} a _ {1} b _ {1} & a _ {1} b _ {2} & \dots & a _ {1} b _ {n} \\ a _ {2} b _ {1} & a _ {2} b _ {2} & \dots & a _ {2} b _ {n} \\ \vdots & \vdots & \dots & \vdots \\ a _ {n} b _ {1} & a _ {n} b _ {2} & \dots & a _ {n} b _ {n} \end{array} \right)$$
+8. 设A,B都是n阶对称方阵,且AB=BA.证明AB也是对称方阵.
+9. 证明: 两个 $n$ 阶上(下)三角方阵的乘积仍是上(下)三角.
+10. 证明: 与任意 $n$ 阶方阵都乘法可交换的方阵一定是数量阵.
+11. 完成定理 4.2.5 的证明.
+12. 设 $A_{1}, A_{2}, \ldots, A_{k}$ 都是 $n$ 阶可逆方阵. 证明: $(A_{1}A_{2} \cdots A_{k})^{-1} = A_{k}^{-1} \cdots A_{2}^{-1}A_{1}^{-1}$.
+13. 设方阵A满足 $A^{k}=O$ , k为正整数. 证明:  $I+A$ 可逆, 并求 $(I+A)^{-1}$ .
+14. 设方阵A满足 $I-2A-3A^{2}+4A^{3}+5A^{4}-6A^{5}=O$ . 证明: I-A可逆. 并求 $(I-A)^{-1}$
+15. 完成定理4.2.6, 定理4.2.7, 定理4.2.8的证明.
+16. 证明:  $(A_{1}A_{2}\cdots A_{k})^{T}=A_{k}^{T}\cdots A_{2}^{T}A_{1}^{T}$  (假设其中的矩阵乘法有意义).
+17. 求所有满足 $A^2 = O, B^2 = I, \overline{C}^T C = I$ 的2阶复方阵 $A, B, C$.
+18. 证明: 不存在n阶复方阵A,B满足AB-BA= $I_{n}$ .
+19. 证明: 可逆上(下)三角、准对角、对称、反对称方阵的逆矩阵仍然分别是上(下)三角、准对角、对称、反对称的.
+20. 设 $A = \begin{pmatrix} 2 & 1 & 0 \\ 1 & 2 & 1 \\ 2 & -1 & 1 \end{pmatrix}$. 求 $A$ 的LU分解, 并基于 $A$ 的LU分解, 求解线性方程组 $A\mathbf{x} = \mathbf{b}$, 这里 $\mathbf{b} = (1, -2, 1)^T$.
+[第 129 页]
+习题三
+21. 求解下列矩阵方程
+(1)  $X\begin{pmatrix}-2 & -2 & 1 \\ 1 & 4 & -3 \\ 1 & -1 & 1\end{pmatrix} = \begin{pmatrix} 2 & -1 & 3 \\ -3 & 2 & 5 \\ -1 & 5 & 4\end{pmatrix}$ 
+(2) $\begin{pmatrix}0&1&0\\0&0&1\\1&0&0\end{pmatrix}X-X\begin{pmatrix}0&1&0\\0&0&1\\0&0&0\end{pmatrix}=\begin{pmatrix}1&2&3\\2&4&6\\3&6&9\end{pmatrix}$
+22. 设 $A, B$ 是 $n$ 阶方阵, $\lambda$ 是数. 证明: (1) $(\lambda A)^{*} = \lambda^{n-1}A^{*}$; (2) $(AB)^{*} = B^{*}A^{*}$; (3) $\det(A^{*}) = (\det(A))^{n-1}$.
+23. 设方阵 $A$ 的逆矩阵 $A^{-1} = \begin{pmatrix} 1 & 1 & 1 \\ 1 & 2 & 1 \\ 1 & 1 & 3 \end{pmatrix}$, 求 $A^{*}$.
+24. 设方阵 $A$ 的伴随矩阵 $A^{*} = \begin{pmatrix} 0 & 0 & 0 & 1 \\ 0 & 0 & 2 & 0 \\ 0 & -1 & 0 & 0 \\ 4 & 0 & 0 & 0 \end{pmatrix}$, 求 $A$.
+25. 设 $n$ 阶方阵 $A$ 的每行、每列元素之和都是0, 证明: $A^{*}$ 的所有元素都相等.
+26. 设A是方阵, 证明: 线性方程组 $A\mathbf{x} = \mathbf{0}$ 有非零解当且仅当 $\det(A) = 0$.
+27. 完成定理4.3.1、定理4.3.2的证明.
+28. 设 $A = \begin{pmatrix} 1 & -1 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 1 & 0 & 1 & -1 \\ 0 & 1 & 0 & 1 \end{pmatrix}$. 计算 $A^n$ 及 $A^{-1}$.
+29. 设 $A, B$ 为同阶方阵, 且满足 $AB = BA$. 计算 $\begin{pmatrix} A & B \\ O & A \end{pmatrix}^n$.
+30. 设 $A$ 为 $n$ 阶方阵, 且满足 $A^3 = I_n$. 计算 $\begin{pmatrix} O & I_n \\ A & O \end{pmatrix}^{2024}$.
+31. 设 $A \in F^{m \times m}, B \in F^{n \times n}, C \in F^{n \times m}$, 且 $A, B$ 可逆. 求分块矩阵 $\begin{pmatrix} A & O \\ C & B \end{pmatrix}$ 的逆.
+[第 130 页]
+32. 证明: 初等方阵具有以下性质
+(1) $T_{ij}(\lambda)T_{ij}(\mu) = T_{ij}(\lambda +\mu);$
+(2) 当 $i \neq q$ 且 $j \neq p$ 时, $T_{ij}(\lambda) T_{pq}(\mu) = T_{pq}(\mu) T_{ij}(\lambda)$;
+(3) $D_{i}(-1)S_{ij} = S_{ij}D_{j}(-1) = T_{ji}(1)T_{ij}(-1)T_{ji}(1).$
+33. 将单位矩阵做一系列(有限次)行与行的对换得到的矩阵称为置换矩阵. 证明:
+(1) 将单位矩阵做一系列的列与列的对换得到的矩阵也为置换矩阵;
+(2) 置换矩阵可以通过按某种次序排列单位阵的行(或列)得到;
+(3) 置换矩阵的乘积仍为置换矩阵;
+(4) 置换矩阵的逆、转置也是置换矩阵.
+34. 计算下列矩阵的逆矩阵
+(1)
+$$\left( \begin{array}{c c c c} 1 & 0 & 1 & - 4 \\ - 1 & - 3 & - 4 & - 2 \\ 2 & - 1 & 4 & 4 \\ 2 & 3 & - 3 & 2 \end{array} \right)$$
+(2)
+$$\left( \begin{array}{c c c c} 1 & 4 & - 1 & - 1 \\ 1 & - 2 & - 1 & 1 \\ - 3 & 3 & - 4 & - 2 \\ 0 & 1 & - 1 & - 1 \end{array} \right)$$
+(3)
+$$\left( \begin{array}{c c c c} & & & 1 \\ & & 1 & 1 \\ & \ddots & \ddots & \vdots \\ 1 & 1 & \dots & 1 \end{array} \right)$$
+(4)
+$$\left( \begin{array}{c c c c} & & & A _ {1} \\ & & A _ {2} \\ & \ddots & \\ A _ {k} & & \end{array} \right)$$
+$A_{i}$ 可逆
+(5)
+$$\left( \begin{array}{c c c c} 1 + a _ {1} & 1 & \dots & 1 \\ 1 & 1 + a _ {2} & \ddots & \vdots \\ \vdots & \ddots & \ddots & 1 \\ 1 & \dots & 1 & 1 + a _ {n} \end{array} \right)$$
+35. 本题给出定理 4.2.3 的另一个证明. 设 A, B 均为 n 阶方阵.
+(1) 若A或者B不可逆, 证明AB也不可逆.
+(2) 设 $P$ 为初等方阵, 证明 $\operatorname{det}(PB) = \operatorname{det}(P) \operatorname{det}(B)$.
+(3) 证明: $\operatorname{det}(AB) = \operatorname{det}(A)\operatorname{det}(B)$.
+36. 设A是n阶可逆方阵, a为n维列向量. 证明:
+$$\det (A - \mathbf {a} \mathbf {a} ^ {T}) = (1 - \mathbf {a} ^ {T} A ^ {- 1} \mathbf {a}) \det (A).$$
+[第 131 页]
+习题三
+37. 设 $A$ 是 $n$ 阶可逆方阵, $\mathbf{a}, \mathbf{b}$ 为 $n$ 维列向量. 证明: $A + \mathbf{ab}^T$ 可逆当且仅当 $1 + \mathbf{b}^T A^{-1} \mathbf{a} \neq 0$. 且 $A + \mathbf{ab}^T$ 可逆时,
+$$(A + \mathbf {a b} ^ {T}) ^ {- 1} = A ^ {- 1} - \frac {A ^ {- 1} \mathbf {a b} ^ {T} A ^ {- 1}}{1 + \mathbf {b} ^ {T} A ^ {- 1} \mathbf {a}}.$$
+38. 设 $A \in F^{m \times m}, B \in F^{n \times n}, C \in F^{n \times m}$, 且 $A$ 为对称可逆方阵. 证明: 存在可逆方阵 $P$ 使得 $P\begin{pmatrix} A & C^T \\ C & B \end{pmatrix} P^T$ 为准对角阵.
+39. 设 $A$ 是 $m \times n$ 矩阵, $B$ 是 $n \times m$ 矩阵. 证明:
+$$\det (I _ {n} - B A) = \det \left( \begin{array}{c c} I _ {m} & A \\ B & I _ {n} \end{array} \right) = \det (I _ {m} - A B).$$
+40. 计算下列矩阵的秩.
+$$\left( \begin{array}{c c c c} 3 & 2 & - 1 & 9 \\ - 2 & 1 & - 4 & 2 \\ - 1 & - 2 & 3 & - 2 \\ 3 & 2 & - 1 & 9 \end{array} \right) \tag {1}$$
+(2)
+$$\left( \begin{array}{c c c c} 0 & 4 & 8 & - 5 \\ - 7 & 9 & - 3 & 1 \\ 1 & - 7 & - 1 1 & 7 \\ - 5 & 7 & - 1 & 0 \end{array} \right)$$
+(3)
+$$\left( \begin{array}{c c c c} 1 & 4 & 9 & 1 6 \\ 4 & 9 & 1 6 & 2 5 \\ 9 & 1 6 & 2 5 & 3 6 \\ 1 6 & 2 5 & 3 6 & 4 9 \end{array} \right)$$
+41. 对于 $a, b$ 的各种取值, 讨论实矩阵 $\begin{pmatrix} 1 & 2 & 3 \\ 2 & 4 & a \\ 3 & b & 9 \end{pmatrix}$ 的秩.
+42. 设 $A$ 为 $n$ 阶方阵, 且 $A^2 = I$. 求方阵 $\operatorname{diag}(I + A, I - A)$ 的相抵标准形.
+43. 设 $A$ 是 $n$ 阶方阵, 证明: $\operatorname{rank}(A^*) = \begin{cases} n, & \operatorname{rank}(A) = n; \\ 1, & \operatorname{rank}(A) = n - 1; \\ 0, & \operatorname{rank}(A) \leq n - 2. \end{cases}$
+44. 设 $A \in F^{m \times n}$. 证明: 线性方程组 $A\mathbf{x} = \mathbf{0}$ 有非零解的充分必要条件是 $\operatorname{rank}(A) < n$.
+45. 证明下列关于秩的不等式.
+(1) $\max\left(\operatorname{rank}(A), \operatorname{rank}(B), \operatorname{rank}(A+B)\right) \leq \operatorname{rank}\left(A - B\right)$;
+(2) $\operatorname{rank}\left( \begin{array}{cc}A & B \end{array} \right)\leq \operatorname{rank}(A) + \operatorname{rank}(B);$
+(3) $\left( \begin{array}{cc}A & C\\ O & B \end{array} \right)\geq \mathrm{rank}(A) + \mathrm{rank}(B).$
+[第 132 页]
+其中A,B,C是使运算有意义的矩阵.
+46* 设 $n$ 阶方阵 $A$ 满足 $A^2 = I$, 证明: $\operatorname{rank}(I + A) + \operatorname{rank}(I - A) = n$.
+47* 设A是 $m \times n$ 矩阵, B是 $n \times p$ 矩阵. 证明: $\text{rank}(AB) \geq \text{rank}(A) + \text{rank}(B) - n$.
+$$m + \operatorname{rank} (I _ {n} - B A) = \operatorname{rank} \left( \begin{array}{c c} I _ {m} & A \\ B & I _ {n} \end{array} \right) = n + \operatorname{rank} (I _ {m} - A B).$$
+48* 设A是 $m \times n$ 矩阵, B是 $n \times m$ 矩阵. 证明
+[第 133 页]
+第五章 线性空间
+在第一章中, 我们熟悉了向量与三维几何空间. 本章中, 我们将向量与几何空间的概念加以推广到一般的抽象空间-线性空间, 并且要回答第一章提出的以下问题:
+1. 确定线性方程组解存在、唯一的条件.
+2. 确定线性方程组解的几何结构.
+我们先研究一个具体的线性空间- $n$ 维数组空间的相关理论, 包括向量组的线性相关/无关性, 向量组的极大无关组与秩, 线性空间的基与维数等. 然后我们将有关结论推广到一般的抽象线性空间.
+§5.1 数组空间
+在第一章中, 我们引进了 $n$-维数组向量及其加法与数乘运算. 下面我们做一个简单回顾.
+一个n维数组向量 a 是一个有序的n元数组
+$$\mathbf {a} = (a _ {1}, a _ {2}, \dots , a _ {n}),\tag{5.1}$$
+其中 $a_{i}\in F(i=1,2,\ldots,n)$ 称为向量a的第i个分量.这里F是一个数域.
+$n$ 维数组向量的加法与数乘运算定义如下
+$$\begin{array}{l} \mathbf {a} + \mathbf {b} = (a _ {1} + b _ {1}, a _ {2} + b _ {2}, \ldots , a _ {n} + b _ {n}), \\ \lambda \mathbf {a} = (\lambda a _ {1}, \lambda a _ {2}, \ldots , \lambda a _ {n}). \end{array}\tag{5.2}$$
+即按分量分别执行加法与数乘运算. 规定零向量 $\mathbf{0} = (0, \dots, 0)$, 负向量 $-\mathbf{a} = (-a_1, \dots, -a_n)$. 容易验证, 数组向量的加法与数乘运算满足三维几何向量相同的性质:
+(1) 加法交换律:  $a + b = b + a,$
+(2) 加法结合律: $(\mathbf{a} + \mathbf{b}) + \mathbf{c} = \mathbf{a} + (\mathbf{b} + \mathbf{c})$,
+(3) 分配律: $\lambda (\mathbf{a} + \mathbf{b}) = \lambda \mathbf{a} + \lambda \mathbf{b}$,
+(4) 分配律:  $(\lambda + \mu)\mathbf{a} = \lambda\mathbf{a} + \mu\mathbf{a}.$
+[第 134 页]
+(5) 零向量: 称每个分量为零的向量 $\mathbf{0} = (0, 0, \ldots, 0)$ 为零向量. 零向量满足: $\mathbf{a} = \mathbf{a} + \mathbf{0} = \mathbf{0} + \mathbf{a}$.
+(6) 负向量: 称满足 $\mathbf{b} + \mathbf{a} = \mathbf{0}$ 的向量 $\mathbf{b}$ 为 $\mathbf{a}$ 的负向量, 简记为 -$\mathbf{a}$. 显然, 负向量存在唯一. 实际上, 若 $\mathbf{a} = (a_1, a_2, \ldots, a_n)$, 则 $-\mathbf{a} = (-a_1, -a_2, \ldots, -a_n)$.
+(7) 乘法结合律: $\lambda (\mu \mathbf{a}) = (\lambda \mu)\mathbf{a}$.
+(8)  $1 \cdot a = a.$
+定义了上述加法与数乘运算的n维数组向量全体就构成n维数组空间.
+定义5.1.1. 设 $F$ 是数域. 定义了线性运算 (5.2) 的 $n$ 维数组向量全体
+$$F ^ {n} := \left\{\left(a _ {1}, a _ {2}, \dots , a _ {n}\right) \mid a _ {i} \in F \right\}$$
+称为n维数组空间.
+注6. 本书中, 通过建立单位直角坐标系我们将平面与三维几何空间分别与数组空间 $\mathbb{R}^2$ 及 $\mathbb{R}^3$ 等价起来. 在平面直角坐标系中, 点 $(x,y)$ 与 $\mathbb{R}^2$ 中的向量 $(x,y)$ 对应, 在空间直角坐标系中, 点 $(x,y,z)$ 与 $\mathbb{R}^3$ 中的向量 $(x,y,z)$ 对应.
+有了向量的加法与数乘, 就可以引进向量的一种重要的运算-线性组合.
+定义5.1.2. 给定一组n维数组向量 $a_{1},a_{2},\ldots,a_{m}$ 及一组数 $\lambda_{1},\lambda_{2},\ldots,\lambda_{m}$ ，称和式
+$$\lambda_ {1} \mathbf {a} _ {1} + \lambda_ {2} \mathbf {a} _ {2} + \dots + \lambda_ {m} \mathbf {a} _ {m}$$
+为 $a_{1},a_{2},\ldots,a_{m}$ 的线性组合. $\lambda_{1},\lambda_{2},\ldots,\lambda_{m}$ 称为组合系数.如果a可以写成 $a_{1},a_{2},\ldots,a_{m}$ 的线性组合,则称a可以用 $a_{1},a_{2},\ldots,a_{m}$ 线性表示.
+定义5.1.3. 给定两个向量组 $S = \{\mathbf{a}_1, \ldots, \mathbf{a}_m\}$ 与 $T = \{\mathbf{b}_1, \ldots, \mathbf{b}_l\}$，如果 $S$ 中的每一个向量 $\mathbf{a}_i$ 都可以用向量组 $T$ 线性表示，则称向量组 $S$ 可以由向量组 $T$ 线性表示。如果两个向量组 $S$ 与 $T$ 可以相互表示，则称 $S$ 与 $T$ 等价。记为 $S \sim T$。
+容易证明, 向量组等价具有下列性质:
+1. 反身性:  $S \sim S;$
+2. 对称性: 若 $S \sim T$ , 则 $T \sim S$ ;
+3. 传递性: 若 $S \sim T, T \sim U$ , 则 $S \sim U$ .
+[第 135 页]
+因此, 向量组的等价是一种等价关系. 向量组的等价有明确的几何意义, 我们稍后介绍.
+例5.1.1. 设a,b,c是三维几何空间中三个共面的向量,且其中任意两个向量不平行. 则 $\{a,b\}\sim\{b,c\}\sim\{a,c\}$ .
+实际上, 由a,b,c共面知, 存在不全为零的数 $\lambda,\mu,\nu$ 使得
+$$\lambda \mathbf {a} + \mu \mathbf {b} + v \mathbf {c} = \mathbf {0}.$$
+下证 $\lambda, \mu, v$ 均不为零. 若不然, 假设其中某个数为零, 比如 $\lambda = 0$, 则 $\mu \mathbf{b} + v \mathbf{c} = \mathbf{0}$. 由于 $\mu, v$ 不全为零, 则 $\mathbf{b}, \mathbf{c}$ 平行, 矛盾! 因此, $\lambda, \mu, v$ 均不为零. 于是
+$$\mathbf {a} = - \frac {\mu}{\lambda} \mathbf {b} - \frac {v}{\lambda} \mathbf {c}, \quad \mathbf {c} = - \frac {\lambda}{v} \mathbf {a} - \frac {\mu}{v} \mathbf {b}.$$
+这样 $\{a,b\}\sim\{b,c\}$ . 同理, $\{a,b\}\sim\{a,c\}$ .
+本章将研究由一组给定向量的线性组合全体构成的集合性质与结构,为此考察集合
+$$V := \left\{\lambda_ {1} \mathbf {a} _ {1} + \lambda_ {2} \mathbf {a} _ {2} + \dots + \lambda_ {m} \mathbf {a} _ {m} \mid \lambda_ {i} \in F, i = 1, 2, \dots , m \right\}$$
+容易验证，集合V具有以下性质(见本章习题2): 对任意 $b_{1},\ldots,b_{l}\in V$  及 $\mu_{1},\ldots,\mu_{l}\in F,\sum_{i=1}^{l}\mu_{i}b_{i}\in V$ . 也就是说, 集合V对线性运算是封闭的. 我们称具有如此性质的集合为一个子空间.
+定义5.1.4. 设 $V \subset F^{n}$ 为非空向量集合, 它满足
+1. 若 $\mathbf{a}, \mathbf{b} \in V$, 则 $\mathbf{a} + \mathbf{b} \in V$;
+2. 如 $\mathbf{a} \in V, \lambda \in F$, 则 $\lambda \mathbf{a} \in V$.
+则称V为 $F^{n}$ 的子空间.
+设V为子空间, 则对任意  $a_{1}, \ldots, a_{m} \in V$  及  $\lambda_{1}, \ldots, \lambda_{m} \in F$ , 都有  $\sum_{i=1}^{m} \lambda_{i} a_{i} \in V$ . 显然,  $V = \{0\}$  以及  $V = F^{n}$  都是  $F^{n}$  的子空间, 我们称之为平凡子空间. 一个非平凡子空间的例子是由一组向量的线性组合全体构成的集合. 由前面的讨论我们有
+定理5.1.1. 设 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_m \in F^n$ 是一组给定的 $n$ 维数组向量. 则集合
+$$\left\langle \mathbf {a} _ {1}, \mathbf {a} _ {2}, \dots , \mathbf {a} _ {m} \right\rangle := \left\{\lambda_ {1} \mathbf {a} _ {1} + \lambda_ {2} \mathbf {a} _ {2} + \dots + \lambda_ {m} \mathbf {a} _ {m} \mid \lambda_ {i} \in F, i = 1, 2, \dots , m \right\}\tag{5.3}$$
+是 $F^{n}$ 的子空间, 称为由向量组 $a_{1}, a_{2}, \ldots, a_{m}$ 生成的子空间.
+[第 136 页]
+利用生成子空间, 向量组等价的概念可以表述为
+定理5.1.2. 两组向量组S与T等价当且仅当 $\langle S\rangle=\langle T\rangle$ .
+证明. 必要性. 由于向量组S可以由T线性表示, S中每个向量都可以用T线性表示. 因此,  $S \subset \langle T \rangle$ . 进而, S中任意若干元素的线性组合均属于 $\langle T \rangle$ , 即 $\langle S \rangle \subset \langle T \rangle$ . 类似可证,  $\langle T \rangle \subset \langle S \rangle$ . 因而,  $\langle S \rangle = \langle T \rangle$ .
+充分性. 若 $\langle S\rangle = \langle T\rangle$, 则 $S$ 中每个元素都属于 $\langle T\rangle$, 即 $S$ 中每个元素都可以用 $T$ 线性表示. 同理可证, $T$ 中每个元素可以用 $S$ 线性表示. 因此, 向量组 $S$ 与 $T$ 等价. $\square$
+上述定理表明,两组向量等价当且仅当它们生成的子空间相同,这就是向量组等价的几何意义.下面我们来看一些子空间的例子.
+例5.1.2. 设a,b,c是三维几何空间中三个不共面的向量．由三维空间向量的基本定理,任何向量可以唯一地表示成三个不共面的向量的线性组合,因此生成子空间 $\langle a,b,c\rangle$ 正好是整个三维几何空间 $R^{3}$ ．而 $\langle a\rangle,\langle b\rangle,\langle c\rangle,\langle a,b\rangle,\langle a,c\rangle,\langle b,c\rangle$ 等都是 $R^{3}$ 的生成子空间．从几何上, $\langle a\rangle$ 表示由a确定的直线, $\langle a,b\rangle$ 表示a,b确定的平面.
+例5.1.3. 设矩阵 $A \in F^{m \times n}$. 由 $A$ 的行向量生成 $F^n$ 的子空间, 称为 $A$ 的行空间, 记为 $R(A)$. 由 $A$ 的列向量生成 $F^m$ 的子空间, 称为 $A$ 的列空间, 记为 $C(A)$. 齐次线性方程组 $Ax = 0$ 的解集全体构成一个线性子空间, 称为 $A$ 的零空间, 记为 $N(A)$. 例如, $n$ 阶单位向量生成的行空间与列空间均是 $F^n$.
+例5.1.4. 用 $a_{j}$ 表示m维列向量 $(a_{1j}, a_{2j}, \ldots, a_{mj})^{T}$ ，b表示m维列向量 $(b_{1}, b_{2}, \ldots, b_{m})^{T}$ ，则线性方程组(2.1)可以表示为向量形式
+$$x _ {1} \mathbf {a} _ {1} + x _ {2} \mathbf {a} _ {2} + \dots + x _ {n} \mathbf {a} _ {n} = \mathbf {b}.\tag{5.4}$$
+即b是 $a_{1},a_{2},\ldots,a_{n}$ 的线性组合,组合系数就是线性方程组的解.因此,线性方程组有解等价于 $b\in\langle a_{1},a_{2},\ldots,a_{n}\rangle$ .
+例5.1.5. 由本书第一章的理论, 齐次线性方程组的通解可以写成一些向量的线性组合形式
+$$\mathbf {x} = t _ {1} \alpha_ {1} + t _ {2} \alpha_ {2} + \dots + t _ {n - r} \alpha_ {n - r},$$
+其中 $\alpha_{1},\alpha_{2},\ldots ,\alpha_{n - r}\in F^{n},t_{1},t_{2},\ldots ,t_{n - r}$ 为参数.因此，齐次线性方程组解的全体构成一个子空间 $\langle \alpha_1,\alpha_2,\dots ,\alpha_{n - r}\rangle$
+由上面的例子我们看到, 要研究线性方程组的解的属性(存在性、唯一性等)以及解的结构, 就要研究向量的线性组合及其性质. 为此, 先研究向量之间的线性关系.
+[第 137 页]
+§5.2 线性相关与线性无关
+我们先回顾一下三维向量之间的线性关系. 三维几何空间的两个向量a, b共线, 当且仅当其中一个向量是另一个向量的常数倍, 如 $a = \lambda b$, 这里 $\lambda$ 为常数. 此时, 我们称向量a, b线性相关. 反之, a, b不共线, 当且仅当a不是b的常数倍, 且b不是a的常数倍. 此时, 我们称a, b线性无关. 类似地, 三个向量a, b, c共面, 当且仅当其中一个向量是另两个向量的线性组合, 如 $c = \lambda a + \mu b$, 这里 $\lambda, \mu$ 为常数, 此时我们称向量a, b, c线性相关. 反之, a, b, c不共面, 当且仅当a, b, c中任一向量都不是另两个向量的线性组合. 此时, 我们称向量a, b, c线性无关.
+接下来, 我们讨论n维数组向量的线性相关性与线性无关性. 我们从考察线性方程组的方程之间的线性关系开始.
+给定线性方程组
+$$\left\{ \begin{array}{c} l _ {1} := a _ {1 1} x _ {1} + a _ {1 2} x _ {2} + \dots + a _ {1 n} x _ {n} - b _ {1} = 0 \\ l _ {2} := a _ {2 1} x _ {1} + a _ {2 2} x _ {2} + \dots + a _ {2 n} x _ {n} - b _ {2} = 0 \\ \vdots \\ l _ {m} := a _ {m 1} x _ {1} + a _ {m 2} x _ {2} + \dots + a _ {m n} x _ {n} - b _ {m} = 0 \end{array} \right.\tag{5.5}$$
+在本书第一章介绍求解线性方程组的Gauss消元法时, 我们知道了线性方程也可以进行线性运算(求和及数乘), 从而可以定义线性方程的线性组合. 例如,
+$$\lambda_ {1} l _ {1} + \lambda_ {2} l _ {2} := (\lambda_ {1} a _ {1 1} + \lambda_ {2} a _ {2 1}) x _ {1} + \dots + (\lambda_ {1} a _ {1 n} + \lambda_ {2} a _ {2 n}) x _ {n} - (\lambda_ {1} b _ {1} + \lambda_ {2} b _ {2}) = 0.$$
+如果方程 $l_{i}$ 是其余方程的线性组合, 即 $l_{i}=\sum_{j\neq i}\lambda_{j}l_{j}(\lambda_{j}$ 为常数), 则去掉方程 $l_{i}$ 后, 原方程组与去掉 $l_{i}$ 后的方程组等价, 此时称方程组 $l_{1},l_{2},\cdots,l_{m}$ 是线性相关的. 反之, 如果任何一个方程都不能写成其它方程的线性组合, 则称方程组 $l_{1},l_{2},\cdots,l_{m}$ 线性无关.
+例5.2.1. 线性方程组
+$$\left\{ \begin{array}{l} x + y + z = 1 \\ 2 x + y + 5 z = 2 \\ x - 3 y + 1 3 z = 1 \end{array} \right.$$
+是否线性相关?
+解. 令 $l_{1}=x+y+z-1$ ,  $l_{2}=2x+y+5z-2$ ,  $l_{3}=x-3y+13z-1$ . 假设 $l_{3}=\lambda_{1}l_{1}+\lambda_{2}l_{2}$ ,
+[第 138 页]
+则
+$$\left\{ \begin{array}{l} \lambda_ {1} + 2 \lambda_ {2} = 1 \\ \lambda_ {1} + \lambda_ {2} = - 3 \\ \lambda_ {1} + 5 \lambda_ {2} = 1 3 \\ \lambda_ {1} + 2 \lambda_ {2} = 1 \end{array} \right.$$
+解得 $\lambda_{1}=-7,\lambda_{2}=4.$ 于是 $l_{3}=-7l_{1}+4l_{2}$ ，即原方程组线性相关.
+线性方程与数组向量之间存在一一对应关系. 实际上, 方程组(5.5)中的方程 $l_{i}$ 与一个 $n+1$ 维的数组向量 $\mathbf{a}_{i}=(a_{i1},a_{i2},\ldots,a_{in},-b_{i})$ 一一对应, $i=1,2,\ldots,m$. 因此, 方程组(5.5)与一组数组向量 $a_{1},a_{2},\ldots,a_{m}$ 一一对应, 并且线性方程之间的线性运算也与向量组之间的线性运算一一对应. 例如, $\lambda_{1}l_{1}+\lambda_{2}l_{2}$ 与 $\lambda_{1}a_{1}+\lambda_{2}a_{2}$ 对应. 由此, 可以类似于线性方程组的线性相关性与无关性, 定义数组向量组的线性相关性与无关性.
+定义5.2.1. 设 $a_{1},a_{2},\cdots,a_{m}\in F^{n},m\geq2$ . 如果其中某个向量能用其它向量线性表示, 即存在 $a_{i}$ 及 $\lambda_{j}\in F(j\neq i)$ 使得 $a_{i}=\sum_{j\neq i}\lambda_{j}a_{j}$ , 则称 $a_{1},\cdots,a_{m}$ 线性相关. 否则, 称它们线性无关. 一个向量 $a_{1}$ 称为线性相关如果 $a_{1}=0$ , 否则称它线性无关.
+本章中, 我们规定向量组的个数都是有限的, 以后不再说明.
+例5.2.2. 重新考察例5.2.1 线性方程 $l_{1}$ ， $l_{2}$ 与 $l_{3}$ 分别与向量 $\mathbf{a}_{1}=(1,1,1,1)$ ， $\mathbf{a}_{2}=(2,1,5,2)$ ， $\mathbf{a}_{3}=(1,-3,13,1)$ 对应。由于 $a_{3}=-7a_{1}+4a_{2}$ ， $a_{1}$ ， $a_{2}$ ， $a_{3}$ 线性相关，因而 $l_{1},l_{2},l_{3}$ 也线性相关。
+利用生成子空间的概念, 向量组的线性相关性可以表述如下
+定理5.2.1. 给定向量组 $a_{1},\beta a_{2},\cdots,a_{m}\in F^{n},m\geq2$ 。则 $a_{1},a_{2},\cdots,a_{m}$ 线性相关当且仅当，存在 $i\in\{1,2,\ldots,m\}$ 满足
+$$\left\langle \mathbf {a} _ {1}, \mathbf {a} _ {2}, \dots , \mathbf {a} _ {m} \right\rangle = \left\langle \mathbf {a} _ {1}, \dots , \mathbf {a} _ {i - 1}, \mathbf {a} _ {i + 1}, \dots , \mathbf {a} _ {m} \right\rangle .\tag{5.6}$$
+证明. 由定义 5.2.1,  $a_{1}, a_{2}, \cdots, a_{m}$  线性相关当且仅当存在  $i \in \{1, 2, \ldots, m\}$  使得,  $a_{i} = \sum_{j=1, j \neq i}^{m} \lambda_{j} a_{j}$ , 或等价地
+$$\mathbf {a} _ {i} \in \left\langle \mathbf {a} _ {1}, \dots , \mathbf {a} _ {i - 1}, \mathbf {a} _ {i + 1}, \dots , \mathbf {a} _ {m} \right\rangle .$$
+上式显然与(5.6)等价.
+[第 139 页]
+上述定理表明, 向量组 $a_{1},a_{2},\cdots,a_{m}$ 线性相关等价于, 其中某个向量对生成子空间 $\langle a_{1},a_{2},\ldots,a_{m}\rangle$ 而言是多余的.
+用记号 $\Leftrightarrow$ 表示“等价”或“当且仅当”.由于
+$$\begin{array}{r l} {\text {存在常数} \lambda_ {j} \text {使得}} & {{\bf a} _ {i} = \sum_ {j \neq i} \lambda_ {j} {\bf a} _ {j} \Leftrightarrow} \\ {\text {存在常数} \lambda_ {j} \text {使得}} & {\sum_ {j = 1} ^ {m} \lambda_ {j} {\bf a} _ {j} = {\bf 0},   \lambda_ {i} = - 1 \Leftrightarrow} \\ {\text {存在常数} \mu_ {j} \text {使得}} & {\sum_ {j = 1} ^ {m} \mu_ {j} {\bf a} _ {j} = {\bf 0},   \text {某个} \mu_ {i} \neq 0} \end{array}$$
+因此有
+定理5.2.2. 设 $a_{1},a_{2},\cdots,a_{m}\in F^{n}$ ，则 $a_{1},a_{2},\cdots,a_{m}$ 线性相关的充要条件是存在不全为零的常数 $\lambda_{1},\lambda_{2},\cdots,\lambda_{m}$ ，使得
+$$\sum_ {i = 1} ^ {m} \lambda_ {i} \mathbf {a} _ {i} = \lambda_ {1} \mathbf {a} _ {1} + \lambda_ {2} \mathbf {a} _ {2} + \dots + \lambda_ {m} \mathbf {a} _ {m} = \mathbf {0}.\tag{5.7}$$
+例5.2.3. 包含零向量的任何向量组一定线性相关.
+证明. 实际上, 如果向量组  $a_{1}, a_{2}, \cdots, a_{m}$  含零向量, 不妨设  $a_{1} = 0$ . 则
+$$1 \mathbf {a} _ {1} + 0 \mathbf {a} _ {2} + \dots + 0 \mathbf {a} _ {m} = \mathbf {0}.$$
+因此, 向量组 $a_{1}, a_{2}, \cdots, a_{m}$ 线性相关.
+上述例子的一般地情形是如下结论.
+定理5.2.3. 设向量组 $\tilde{S}$ 是向量组 $S$ 的一个子集. 那么, 如果 $\tilde{S}$ 线性相关, 则 $S$ 也线性相关; 反之, 如果 $S$ 线性无关, 则 $\tilde{S}$ 也线性无关.
+证明. 不妨设, $\tilde{S} = \{\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_k\}$, $S = \{\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_m\} (k < m)$. 设 $\tilde{S}$ 线性相关, 则存在不全为零的常数 $\lambda_1, \lambda_2, \ldots, \lambda_k$ 使得
+$$\lambda_ {1} \mathbf {a} _ {1} + \lambda_ {2} \mathbf {a} _ {2} + \ldots + \lambda_ {k} \mathbf {a} _ {k} = \mathbf {0}.$$
+则
+$$\lambda_ {1} \mathbf {a} _ {1} + \dots + \lambda_ {k} \mathbf {a} _ {k} + 0 \cdot \mathbf {a} _ {k + 1} + \dots + 0 \cdot \mathbf {a} _ {m} = \mathbf {0}.$$
+这表明, S 也线性相关. 反之, 如果 S 线性无关, 则  $\tilde{S}$  必线性无关.
+如果用生成子空间的语言来说大致意思是, 如果 $\tilde{s}$ 中有多余的向量, 则s中必有多余的向量.
+[第 140 页]
+下面, 我们给出向量组线性相关(无关)的进一步的判别方法.
+定理5.2.4. 设 $\mathbf{a}_{i}=(a_{i1},a_{i2},\ldots,a_{in})\in F^{n}, i=1,2,\ldots,m.$  用A表示以 $a_{1},a_{2},\cdots,a_{m}$ 为行构成的 $m\times n$ 阶矩阵. 则 $a_{1},a_{2},\cdots,a_{m}$ 线性相关当且仅当, 关于 $\lambda_{1},\lambda_{2},\ldots,\lambda_{m}$ 的齐次线性方程组
+$$A ^ {T} \left( \begin{array}{c} \lambda_ {1} \\ \vdots \\ \lambda_ {m} \end{array} \right) = \mathbf {0}\tag{5.8}$$
+有非零解.
+证明. 由定理 5.2.2, 向量组 $a_{1}, a_{2}, \cdots, a_{m}$ 线性相关, 当且仅当存在不全为零的常数 $\lambda_{1}, \lambda_{2}, \ldots, \lambda_{m}$ 使得
+$$\lambda_ {1} \mathbf {a} _ {1} + \lambda_ {2} \mathbf {a} _ {2} + \dots + \lambda_ {m} \mathbf {a} _ {m} = \mathbf {0}$$
+亦即线性方程组(5.8)有非零解.
+由上述定理, 下面的推论是显然的.
+推论5.2.1. 设 $a_{1},a_{2},\cdots,a_{m}\in F^{n}$ 是一组数组向量,则
+1. 若 $m > n$, 则 $\mathbf{a}_1, \mathbf{a}_2, \dots, \mathbf{a}_m$ 必然线性相关.
+2. 若 m=n，则  $a_{1},a_{2},\cdots,a_{m}$  线性相关当且仅当  $\det(A)=0$ .
+总结起来, 下列说法等价
+1. n维向量组 $a_{1},a_{2},\cdots,a_{m}$ 线性相关;
+2. 某个  $a_{i}$  是其它向量的线性组合, 这里  $m \geq 2$ ;
+3. 关于  $\lambda_{1}, \lambda_{2}, \ldots, \lambda_{m}$  的线性方程组  $\lambda_{1}a_{1} + \lambda_{2}a_{2} + \cdots + \lambda_{m}a_{m} = 0$  有非零解;
+对应地, 可以得到线性无关的判别条件, 在此略去. 下面, 我们给出一些实例.
+例5.2.4. 判断下列向量组的线性相关(无关)性.
+(1)  $e_{1}, e_{2}, \cdots, e_{n}$ ，其中  $e_{i} \in F^{n}$  是 n 维单位坐标向量， $i = 1, 2, \ldots, n$ .
+(2)  $\mathbf{a}_{1}=(1,0,\cdots,0),\mathbf{a}_{2}=(1,1,0,\cdots),\cdots,\mathbf{a}_{n}=(1,\cdots,1).$
+(3) $\mathbf{a}_1 + \mathbf{a}_2, \mathbf{a}_2 + \mathbf{a}_3, \mathbf{a}_3 + \mathbf{a}_1$，其中 $\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_3 \in F^n$ 线性无关.
+[第 141 页]
+(4) $\mathbf{a}_1 = (3,4, - 2,5)$, $\mathbf{a}_2 = (2, - 5,0, - 3)$, $\mathbf{a}_3 = (5,0, - 1,2)$, $\mathbf{a}_4 = (3,3, - 3,5)$.
+解. (1) 由于以 $e_{1},e_{2},\cdots,e_{n}$ 为行的矩阵为单位阵，其行列式显然非零．因此， $e_{1},e_{2},\cdots,e_{n}$ 线性无关.
+(2) 因为以 $a_{1},a_{2},\ldots,a_{n}$ 构成矩阵的行列式为1,所以向量组 $a_{1},a_{2},\cdots,a_{n}$ 线性无关.
+(3) 由
+$$\lambda_ {1} \left(\mathbf {a} _ {1} + \mathbf {a} _ {2}\right) + \lambda_ {2} \left(\mathbf {a} _ {2} + \mathbf {a} _ {3}\right) + \lambda_ {3} \left(\mathbf {a} _ {3} + \mathbf {a} _ {1}\right) = \mathbf {0}$$
+得
+$$(\lambda_ {1} + \lambda_ {3}) \mathbf {a} _ {1} + (\lambda_ {1} + \lambda_ {2}) \mathbf {a} _ {2} + (\lambda_ {2} + \lambda_ {3}) \mathbf {a} _ {3} = \mathbf {0}.$$
+由于 $a_{1},a_{2},a_{3}$ 线性无关,因此
+$$\lambda_ {1} + \lambda_ {3} = 0, \quad \lambda_ {1} + \lambda_ {2} = 0, \quad \lambda_ {2} + \lambda_ {3} = 0.$$
+故 $\lambda_{1}=\lambda_{2}=\lambda_{3}=0.$ 从而, $a_{1}+a_{2},a_{2}+a_{3},a_{3}+a_{1}$ 线性无关.
+(4) 解线性方程组
+$$\lambda_ {1} \mathbf {a} _ {1} + \lambda_ {2} \mathbf {a} _ {2} + \lambda_ {3} \mathbf {a} _ {3} + \lambda_ {4} \mathbf {a} _ {4} = \mathbf {0}$$
+得一组解 $(\lambda_{1},\lambda_{2},\lambda_{3},\lambda_{4})=(2,1,-1,1)$ ，即 $2a_{1}+a_{2}-a_{3}-a_{4}=0$ 。因此， $a_{1},a_{2},a_{3},a_{4}$ 线性相关。
+例5.2.5. 设 $a_{1},a_{2}\in R^{3}$ 是三维空间向量, $b_{1},b_{2}$ 是 $a_{1},a_{2}$ 在oxy平面上的投影向量. 如果 $b_{1},b_{2}$ 线性无关,则 $a_{1},a_{2}$ 也线性无关. 反之不然.
+证明. 请读者完成.
+上述例子中的结果可以推广到一般情形.
+定理5.2.5. 设 $\mathbf{a}_i = (a_{i1}, a_{i2}, \ldots, a_{ir}) \in F^r$, $i = 1, 2, \ldots, m$. 它们的加长向量组为 $\mathbf{b}_i = (a_{i1}, \ldots, a_{ir}, \ldots, a_{in}) \in F^n$ ($n > r$), $i = 1, 2, \ldots, m$. 则有
+1. 若 $a_{1},a_{2},\cdots,a_{m}$ 线性无关,则 $b_{1},b_{2},\cdots,b_{m}$ 也线性无关;
+2. 若 $b_{1},b_{2},\cdots,b_{m}$ 线性相关,则 $a_{1},a_{2},\cdots,a_{m}$ 也线性相关.
+[第 142 页]
+证明. 只用证明第2条. 设 $b_{1}, b_{2}, \cdots, b_{m}$ 线性相关, 则存在不全为零的数 $\lambda_{i}, i = 1, \ldots, m$ 使得 $\lambda_{1}b_{1} + \lambda_{2}b_{2} + \ldots + \lambda_{m}b_{m} = 0$, 即
+$$\left\{ \begin{array}{r l} & a _ {1 1} \lambda_ {1} + a _ {2 1} \lambda_ {2} + \ldots + a _ {m 1} \lambda_ {m} = 0 \\ & a _ {1 2} \lambda_ {1} + a _ {2 2} \lambda_ {2} + \ldots + a _ {m 2} \lambda_ {m} = 0 \\ & \dots \dots \\ & a _ {1 n} \lambda_ {1} + a _ {2 n} \lambda_ {2} + \ldots + a _ {m n} \lambda_ {m} = 0 \end{array} \right.$$
+上述方程组的前r个方程即 $\lambda_{1}a_{1}+\lambda_{2}a_{2}+\ldots+\lambda_{m}a_{m}=0$ . 从而 $a_{1},a_{2},\cdots,a_{m}$ 也线性相关. □
+在上述定理中, 向量组 $a_{1},a_{2},\cdots,a_{m}$ 可以视为向量组 $b_{1},b_{2},\cdots,b_{m}$ 在低维空间中的投影向量.
+§5.3 极大无关组与秩
+我们先来考察线性方程组独立方程的个数问题, 也就是Gauss消元的标准型(2.3)中非零行数的问题. 独立方程的个数决定了解集的“大小”. 例如, 下列线性方程组的解集分别为一个点、一条直线、一个平面, 它们独立方程的个数分别为3,2,1.
+$$\left\{ \begin{array}{l} x + y + z = 1 \\ 2 x + y - z = 2 \\ 3 x - y + z = 3 \end{array} \right. \quad \left\{ \begin{array}{l} x + y + z = 0 \\ 2 x + y + z = 0 \\ 3 x + 2 y + 2 z = 0 \end{array} \right. \quad \left\{ \begin{array}{l} x + y + z = 1 \\ 2 x + 2 y + 2 z = 2 \\ 3 x + 3 y + 3 z = 3 \end{array} \right.$$
+一般地, 给定一个线性方程组, 如何确定它的独立方程的个数?
+注意到, 如果有一个方程 $l_{i}$ 可以表示成其它方程的线性组合, 则去掉 $l_{i}$ 后得到的线性方程组与原方程组同解. 因此, 如果线性方程组线性相关, 则其独立方程个数小于m. 如果去掉 $l_{i}$ 后的线性方程组仍然线性相关, 则可以进一步去掉其中一个方程, 剩下方程构成的方程组仍与原方程组等价. 这个过程可以一直进行下去, 直到剩下的方程构成的方程组线性无关. 这时, 剩下方程构成的方程组仍与原方程组等价, 它的个数就是原方程组独立方程的个数. 我们称这个数为原方程组的秩, 剩下的方程称为原方程组的极大无关组.
+上述概念可以平行推广到到n维向量组.
+定义5.3.1. 设 $S$ 是一组数组向量, $S_{1}$ 是 $S$ 的子向量组. 若 $S_{1}$ 线性无关, 且对任意向量 $\mathbf{a} \in S \setminus S_{1}, S_{1} \cup \{\mathbf{a}\}$ 线性相关, 则称 $S_{1}$ 是 $S$ 的极大无关组.
+[第 143 页]
+由本章习题 13 的结论, 向量组的每一向量都可以由它的极大无关组线性表示.
+例5.3.1. 求 $\mathbf{a}_1 = (2, -1, 3, 1)$, $\mathbf{a}_2 = (4, -2, 5, 4)$, $\mathbf{a}_3 = (2, -1, 4, -1)$ 的极大无关组.
+解. 由于 $3\mathbf{a}_1 = \mathbf{a}_2 + \mathbf{a}_3$，且 $\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_3$ 中任两个线性无关，故其中任何两个为极大无关组. □
+上述例子表明, 极大无关组不唯一. 一般地, 如何有效地求一组极大无关组? 在给出算法之前, 我们先叙述一个基本结论.
+定理5.3.1. 设 $a_{1},a_{2},\cdots,a_{m}\in F^{n}$ 为一组列向量, $A=(a_{1},a_{2},\cdots,a_{m})$ 是以 $a_{1},a_{2},\cdots,a_{m}$ 为列构成的 $n\times m$ 阶矩阵. A经一系列的初等行变换变为矩阵 $B=(b_{1},b_{2},\cdots,b_{m})$ . 则
+1.  $a_{1},a_{2},\cdots,a_{m}$ 线性相关(无关), 当且仅当 $b_{1},b_{2},\cdots,b_{m}$ 线性相关(无关).
+2.  $a_{i_{1}}, a_{i_{2}}, \cdots, a_{i_{r}}$  为  $a_{1}, a_{2}, \cdots, a_{m}$  的极大无关组，当且仅当  $b_{i_{1}}, b_{i_{2}}, \cdots, b_{i_{r}}$  为  $b_{1}, b_{2}, \cdots, b_{m}$  的极大无关组。这里  $1 \leq i_{1} < \ldots < i_{r} \leq m$ 。
+证明. 1. 记 $\mathbf{x} = (\lambda_1, \lambda_2, \ldots, \lambda_m)^T$. 由于初等变换不改变线性方程组的解, 因此
+$\mathbf{a}_1, \mathbf{a}_2, \cdots, \mathbf{a}_m$ 线性相关
+线性方程组 $A\mathbf{x} = \mathbf{0}$ 有非零解
+线性方程组 $B\mathbf{x} = \mathbf{0}$ 有非零解
+$\mathbf{b}_1, \mathbf{b}_2, \cdots, \mathbf{b}_m$ 线性相关.
+2. 由1的结论, 容易验证,
+$a_{i_{1}},a_{i_{2}},\cdots,a_{i_{r}}$  为  $a_{1},a_{2},\cdots,a_{m}$  的极大无关组  $\Leftrightarrow$ $a_{i_{1}},a_{i_{2}},\cdots,a_{i_{r}}$  线性无关, 而  $a_{i_{1}},a_{i_{2}},\cdots,a_{i_{r}},a_{i_{r+1}}$  线性相关, 这里  $a_{i_{r+1}}$  为  $a_{1},a_{2},\cdots,a_{m}$  中除去  $a_{i_{1}},a_{i_{2}},\cdots,a_{i_{r}}$  中向量的任一向量  $\Leftrightarrow$ $b_{i_{1}},b_{i_{2}},\cdots,b_{i_{r}}$  线性无关, 而  $b_{i_{1}},b_{i_{2}},\cdots,b_{i_{r}},b_{r+1}$  线性相关  $\Leftrightarrow$ $b_{i_{1}},b_{i_{2}},\cdots,b_{i_{r}}$  为  $b_{1},b_{2},\cdots,b_{m}$  的极大无关组
+根据上述定理, 要求一组列向量 $a_{1}, a_{2}, \cdots, a_{m}$ 的极大无关组, 只需要对它做初等变换得到一组较简单的向量组, 其极大无关组就容易求得.
+例5.3.2. 给定向量组 $\mathbf{a}_{1}=(-1,5,3,-2)$ ， $\mathbf{a}_{2}=(4,1,-2,9)$ ， $\mathbf{a}_{3}=(2,0,-1,4)$ ， $\mathbf{a}_{4}=(0,3,4,-5)$ ，求它的极大无关组.
+[第 144 页]
+解. 对 $(\mathbf{a}_1^T, \mathbf{a}_2^T, \mathbf{a}_3^T, \mathbf{a}_4^T)$ 做初等行变换得
+$$\left( \begin{array}{c c c c} - 1 & 4 & 2 & 0 \\ 5 & 1 & 0 & 3 \\ 3 & - 2 & - 1 & 4 \\ - 2 & 9 & 4 & - 5 \end{array} \right) \longrightarrow \left( \begin{array}{c c c c} - 1 & 4 & 2 & 0 \\ 0 & 1 & 0 & - 5 \\ 0 & 0 & 5 & 5 4 \\ 0 & 0 & 0 & 0 \end{array} \right)$$
+易知, $\{\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_3\}$, $\{\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_4\}$ 分别为极大无关组. 实际上, $\{\mathbf{a}_2, \mathbf{a}_3, \mathbf{a}_4\}$ 也为极大无关组.
+前面说过, 线性方程组的极大无关组与原方程组等价, 因此, 原方程组的任何两个极大无关组也等价. 这个结论对一般向量组也成立.
+定理5.3.2. 一组向量组与它的任何一组极大无关组等价.
+证明. 不妨设 $a_{1},a_{2},\ldots,a_{r}$ 是向量组 $a_{1},a_{2},\ldots,a_{m}(m\geq r)$ 的极大无关组. 显然, 极大无关组 $a_{1},a_{2},\ldots,a_{r}$ 可以由向量组 $a_{1},a_{2},\ldots,a_{m}$ 线性表示, 因为
+$$\mathbf {a} _ {i} = 0 \mathbf {a _ {1}} + \dots + 0 \mathbf {a} _ {i - 1} + 1 \mathbf {a} _ {i} + 0 \mathbf {a} _ {i + 1} + \dots + 0 \mathbf {a} _ {m}.$$
+$i = 1,2,\dots,r.$
+反过来, 由极大无关组的定义, 对任意 $j \in \{r + 1, \ldots, m\}$, $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_r, \mathbf{a}_j$ 线性相关, 而 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_r$ 线性无关, 由本章习题13的结论, $\mathbf{a}_j$ 可以表示成 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_r$ 的线性组合. 因此, 向量组 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_m$ 也可以由向量组 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_r$ 线性表示. 从而两者等价.
+由上述定理及向量组等价的传递性有
+推论5.3.1. 向量组的任何两个极大无关组彼此等价.
+对线性方程组, 极大无关组的个数即独立方程的个数. 然而, 这里有一点需要澄清. 对于给定的某个线性方程组, 由于Gauss消元过程并不唯一, 所得的独立方程组也不唯一. 那么, 不同的独立方程组个数是否一致? 如果不一致, 哪一个才是真正的独立方程的个数? 幸运的是, 不同方法获得的独立方程组的个数完全一样! 且这个结论对向量组也成立!
+命题5.3.3. 设向量组 $\{a_{1},a_{2},\cdots,a_{r}\}$ 可以由向量组 $\{b_{1},b_{2},\cdots,b_{s}\}$ 线性表示，且 $\{a_{1},a_{2},\cdots,a_{r}\}$ 线性无关，则 $r\leq s$ .
+[第 145 页]
+证明. 由于 $\{a_{1},a_{2},\cdots,a_{r}\}$ 可以用 $\{b_{1},b_{2},\cdots,b_{s}\}$ 线性表示，则存在常数 $\mu_{ij}, i=1,\ldots,r,j=1,\ldots,s$ 使得 $a_{i}=\sum_{j=1}^{s}\mu_{ij}b_{j}$ . 考察关于 $\lambda_{1},\lambda_{2},\ldots,\lambda_{r}$ 的线性方程组
+$$\sum_ {i = 1} ^ {r} \lambda_ {i} \mathbf {a} _ {i} = \mathbf {0}.$$
+由于 $\{a_{1},a_{2},\cdots,a_{r}\}$ 线性无关,该方程组只有零解.将它重新改写成
+$$\sum_ {j = 1} ^ {s} \left(\sum_ {i = 1} ^ {r} \lambda_ {i} \mu_ {i j}\right) \mathbf {b} _ {j} = \mathbf {0}.$$
+由于 $\{b_{1},b_{2},\cdots,b_{s}\}$ 线性无关,上式等价于
+$$\sum_ {i = 1} ^ {r} \lambda_ {i} \mu_ {i j} = 0, \quad , j = 1, 2, \dots , s$$
+这是关于 $\lambda_1, \ldots, \lambda_r$ 的齐次线性方程组, 且知道它只有零解. 由推论 $2.3.2, r \leq s$.
+由上述命题立即可得
+定理5.3.4. 两个分别线性无关向量组 $\{a_{1},a_{2},\cdots,a_{r}\}$ 和 $\{b_{1},b_{2},\cdots,b_{s}\}$ 等价, 则r=s.
+上述定理的一个直接推论是
+推论5.3.2. 设 $a_{i_1}, a_{i_2}, \cdots, a_{i_r}$ 和 $a_{j_1}, a_{j_2}, \cdots, a_{j_s}$ 分别为 $a_1, a_2, \cdots, a_m$ 的两个极大无关组，则 r = s.
+根据上述结论, 线性方程组的独立方程的个数是唯一确定的, 它就是方程组的秩.
+定义5.3.2. 向量组 $a_{1},a_{2},\cdots,a_{m}$ 的极大无关组元素的个数称为向量组的秩，记为 $\text{rank}(a_{1},a_{2},\cdots,a_{m})$，或 $r(a_{1},a_{2},\cdots,a_{m})$.
+下面我们进一步从几何上考察秩的含义.
+设a,b,c是三维几何空间中的向量. 如果a,b,c共线且至少有一个非零, 则生成子空间 $\langle a,b,c\rangle$ 表示一条直线, 此时 $r(a,b,c)=1$ . 如果a,b,c共面, 且至少有两个向量不共线, 则 $\langle a,b,c\rangle$ 表示一个平面, 此时 $r(a,b,c)=2$ . 如果a,b,c不共面, 则 $\langle a,b,c\rangle$ 就是整个几何空间, 此时 $r(a,b,c)=3$ . 因此, 向量组的秩表示了向量组生成子空间的维数. 秩越大, 则生成子空间也越大, 反之亦然. 这就是秩的几何意义.
+关于秩, 我们有下列有用的结论.
+[第 146 页]
+定理5.3.5. 设向量 $a_{1},a_{2},\cdots,a_{m}\in F^{n}$ ，则有
+1.  $a_{1}, a_{2}, \cdots, a_{m}$  线性无关, 当且仅当  $r(\mathbf{a}_{1}, \mathbf{a}_{2}, \cdots, \mathbf{a}_{m}) = m$ .
+2.  $a_{1}, a_{2}, \cdots, a_{m}$  线性相关, 当且仅当  $r(\mathbf{a}_{1}, \mathbf{a}_{2}, \cdots, \mathbf{a}_{m}) < m$ .
+3.  $\{b_{1},b_{2},\cdots,b_{s}\}$  可以用  $\{a_{1},a_{2},\cdots,a_{r}\}$  线性表示，则  $r(\mathbf{b}_{1},\mathbf{b}_{2},\cdots,\mathbf{b}_{s}) \leq r(\mathbf{a}_{1},\mathbf{a}_{2},\cdots,\mathbf{a}_{r})$ .
+4.  $\{b_{1},b_{2},\cdots,b_{s}\}$  与  $\{a_{1},a_{2},\cdots,a_{r}\}$  等价，则  $r(\mathbf{b}_{1},\mathbf{b}_{2},\cdots,\mathbf{b}_{s})=r(\mathbf{a}_{1},\mathbf{a}_{2},\cdots,\mathbf{a}_{r})$ .
+5. 向量b可以表示成 $a_{1},a_{2},\cdots,a_{m}$ 的线性组合，当且仅当 $r(\mathbf{a}_{1},\mathbf{a}_{2},\cdots,\mathbf{a}_{m})=r(\mathbf{a}_{1},\mathbf{a}_{2},\cdots,\mathbf{a}_{m},\mathbf{b})$ .
+证明. 只证3与5, 其余留给读者自己完成.
+3. 不妨设 $\{b_{1},b_{2},\cdots,b_{k}\}$ 是 $\{b_{1},b_{2},\cdots,b_{s}\}$ 的极大无关组， $\{a_{1},a_{2},\cdots,a_{l}\}$ 是 $\{a_{1},a_{2},\cdots,a_{r}\}$ 的极大无关组．则 $\{b_{1},b_{2},\cdots,b_{k}\}$ 可以用 $\{a_{1},a_{2},\cdots,a_{l}\}$ 线性表示.由命题5.3.4可知 $k\leq l$ ，亦即 $r(\mathbf{b}_{1},\mathbf{b}_{2},\cdots,\mathbf{b}_{s})\leq r(\mathbf{a}_{1},\mathbf{a}_{2},\cdots,\mathbf{a}_{r})$ .
+5. 假设向量b可以表示成向量组 $a_{1},a_{2},\cdots,a_{m}$ 的线性组合, 则 $a_{1},a_{2},\cdots,a_{m}$ 与 $a_{1},a_{2},\cdots,a_{m},b$ 等价, 从而 $r(a_{1},a_{2},\cdots,a_{m})=r(a_{1},a_{2},\cdots,a_{m},b)$ .
+反之, 假设 $r(\mathbf{a}_{1},\mathbf{a}_{2},\cdots,\mathbf{a}_{m})=r(\mathbf{a}_{1},\mathbf{a}_{2},\cdots,\mathbf{a}_{m},\mathbf{b})$ ，且 $a_{1},a_{2},\cdots,a_{k}$ 是 $a_{1},a_{2},\cdots,a_{m}$ 的极大无关组，则 $a_{1},a_{2},\cdots,a_{k}$ 也是 $a_{1},a_{2},\cdots,a_{m},b$ 的极大无关组，从而b是 $a_{1},a_{2},\cdots,a_{k}$ 的线性表示，因而也是 $a_{1},a_{2},\cdots,a_{m}$ 的线性表示. □
+上述定理表明, 利用秩可以判断向量组的线性相关(无关)性及等价性等. 这表明秩是很深刻的一个概念.
+定理 5.3.5 的第 5 条实际上再次给出了线性方程组 (5.4) 有解的充要条件. 这个条件直接由原方程的系数矩阵及常数项给出, 不像第一章那样需要经过初等变换后才能给出.
+接下来, 我们研究向量组的秩与矩阵秩的关系.
+给定 $m \times n$ 阶方阵A, 它可以看成由m个n维行向量组成, 也可以看成由n个m维列向量组成, 即
+$$A = \left( \begin{array}{c} \mathbf {a} _ {1} \\ \mathbf {a} _ {2} \\ \vdots \\ \mathbf {a} _ {m} \end{array} \right) = \left( \begin{array}{c c c c} \mathbf {b} _ {1} & \mathbf {b} _ {2} & \dots & \mathbf {b} _ {n} \end{array} \right).\tag{5.9}$$
+作为向量组 $a_{1},a_{2},\ldots,a_{m}$ 与 $b_{1},b_{2},\cdots,b_{n}$ 都有秩,分别称为矩阵A的行秩与列秩.问题是,矩阵A的行秩、列秩与它本身的秩有什么关系?我们先看几个具体实例.
+[第 147 页]
+例5.3.3. 计算下列矩阵的秩、行秩与列秩.
+$$(1) A = \left( \begin{array}{c c c} 1 & 2 & - 3 \\ - 1 & 3 & 1 \\ 1 & 7 & - 5 \end{array} \right) \quad (2) A = \left( \begin{array}{c c c c} 1 & 1 & 1 & 1 \\ 1 & 2 & 3 & 0 \\ 1 & 4 & 9 & 3 \end{array} \right)$$
+$$(3) A = \left( \begin{array}{c c c c c} c _ {1 1} & c _ {1 2} & c _ {1 3} & c _ {1 4} & c _ {1 5} \\ 0 & 0 & c _ {2 3} & c _ {2 4} & c _ {2 5} \\ 0 & 0 & 0 & c _ {3 4} & c _ {3 5} \\ 0 & 0 & 0 & 0 & 0 \end{array} \right) (c _ {1 1} c _ {2 3} c _ {3 4} \neq 0)$$
+解. 直接验算可知, 对矩阵(1)有, A 的行秩 = A 的列秩 = A 的秩 = 2. 对矩阵(2)有, A 的行秩 = A 的列秩 = A 的秩 = 3.
+对矩阵(3), 由于 $c_{11}c_{23}c_{34}\neq0$ , 矩阵A的前三行线性无关, 因此A的行秩为3. 同样, A的第一、三、四列线性无关, 且为A的所有列的极大无关组, 因此A的列秩也为3. 最后, 由于A的前三行、第一、三、四列构成的三阶子式非零, 因此 $r(A)=3$ . 总之, 仍然有A的行秩=A的列秩=A的秩. □
+上述例子表明, 矩阵的行秩、列秩与秩是一致的. 这一结论对任何矩阵成立.
+定理5.3.6. 任何矩阵的行秩等于它的列秩, 等于该矩阵的秩.
+证明. 该定理依赖于以下事实
+1. 初等变换不改变矩阵的列秩;
+2. 初等变换不改变矩阵的行秩;
+3. 初等变换不改变矩阵的秩.
+我们只证初等行变换对秩的不变性, 初等列变换类似证明. 第1条从定理5.3.1可以直接得到. 第3条由第三章定理4.4.3也是显然的. 下证第2条.
+设矩阵A的行为 $a_{1},a_{2},\ldots,a_{m}\in F^{n}$ . 只要说明经过三种初等行变换, 所得的向量组与 $a_{1},a_{2},\ldots,a_{m}$ 等价即可. 第一、二种初等变换显然将向量组变为等价向量组. 第三种初等变换将 $a_{1},a_{2},\ldots,a_{m}$ 变为
+$$\mathbf {a} _ {1}, \mathbf {a} _ {2}, \dots , \mathbf {a} _ {i} + \lambda \mathbf {a} _ {j}, \dots , \mathbf {a} _ {m}.$$
+由于 $\mathbf{a}_{i}=(\mathbf{a}_{i}+\lambda\mathbf{a}_{j})-\lambda\mathbf{a}_{j}$ ，变换前后的向量组可以相互表示，亦即彼此等价。因此，经过初等行变换，矩阵的行秩不变。
+[第 148 页]
+根据以上事实, 以及任何矩阵可以经过初等变换变为相抵标准形  $\begin{pmatrix} I_{r} & O \\ O & O \end{pmatrix}$ ，而相抵标准形的秩、行秩与列秩都相等, 即知结论成立.
+上述定理给出了矩阵秩的一种新的解释, 即矩阵的秩就是矩阵行向量极大无关组的个数, 也是列向量极大无关组的个数. 秩越大, 则矩阵元素之间的相关性越小; 反之, 秩越小, 则矩阵元素之间的相关性越大.
+下面两个推论比较显然,请读者完成.
+推论5.3.3. $n$ 阶方阵 $A$ 可逆 $\Leftrightarrow \operatorname{rank}(A) = n \Leftrightarrow A$ 的行向量线性无关 $\Leftrightarrow A$ 的列向量线性无关.
+推论5.3.4. 若 $\operatorname{rank}(A) = r$, 则 $A$ 的不等于零的 $r$ 阶子式所在行(列)构成 $A$ 的行(列)向量的极大无关组.
+例5.3.4. 设 $A \in F^{m \times n}, B \in F^{n \times l}$ . 证明: $\text{rank}(AB) \leq \min(\text{rank}(A), \text{rank}(B))$.
+证明. 记 $C = AB, A = (a_{ij})_{m \times n}, B$ 的 $n$ 个行向量为 $\mathbf{b}_i, i = 1, \ldots, n, C$ 的 $m$ 行向量为 $\mathbf{c}_i, i = 1, \ldots, m$. 则由 $C = AB$ 得
+$$\mathbf {c} _ {i} = a _ {i 1} \mathbf {b} _ {1} + a _ {i 2} \mathbf {b} _ {2} + \dots + a _ {i n} \mathbf {b} _ {n}, \quad i = 1, \dots , m$$
+这表明向量组 $\mathbf{c}_1, \mathbf{c}_2, \ldots, \mathbf{c}_m$ 可以由向量组 $\mathbf{b}_1, \mathbf{b}_2, \ldots, \mathbf{b}_n$ 线性表示. 因此, $\operatorname{rank}(\mathbf{c}_1, \mathbf{c}_2, \ldots, \mathbf{c}_m) \leq \operatorname{rank}(\mathbf{b}_1, \mathbf{b}_2, \ldots, \mathbf{b}_n)$. 从而 $\operatorname{rank}(AB) \leq \operatorname{rank}(B)$. 另一方面, $\operatorname{rank}(AB) = \operatorname{rank}(B^T A^T) \leq \operatorname{rank}(A^T) = \operatorname{rank}(A)$. 证毕.
+§5.4 基与维数
+在本章第一节我们引进了数组空间的子空间的概念, 本节将研究子空间的结构. 首先要回答的一个基本的问题是, 是不是数组空间 $F^n$ 的每个子空间都可以由一组向量生成? 回答是肯定的. 我们有
+定理5.4.1. 设 $V$ 是 $F^n$ 的子空间. 则存在线性无关的向量组 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_r$ 使得
+$$V = \left\langle \mathbf {a} _ {1}, \mathbf {a} _ {2}, \dots , \mathbf {a} _ {r} \right\rangle .$$
+证明. 设 $V \neq 0$. 在 $V$ 中任取向量 $\mathbf{a}_1 \neq \mathbf{0}$, 若 $V = \langle \mathbf{a}_1 \rangle$, 则结论成立. 否则, 任取 $\mathbf{a}_2 \in V \setminus \langle \mathbf{a}_1 \rangle$. 下证 $\mathbf{a}_1, \mathbf{a}_2$ 线性无关. 实际上, 若 $\mathbf{a}_1, \mathbf{a}_2$ 线性相关, 由于 $\mathbf{a}_1 \neq \mathbf{0}$, 则 $\mathbf{a}_2$ 是 $\mathbf{a}_1$ 的常数倍, 即 $\mathbf{a}_2 \in \langle \mathbf{a}_1 \rangle$, 这与 $\mathbf{a}_2$ 的取法矛盾. 因此, $\mathbf{a}_1, \mathbf{a}_2$ 线性无关.
+[第 149 页]
+接下来考察 $V=\langle\mathbf{a}_{1},\mathbf{a}_{2}\rangle$ 是否成立．若成立，则定理成立．否则，任取 $a_{3}\in V\backslash\langle\mathbf{a}_{1},\mathbf{a}_{2}\rangle$ .下证 $a_{1},a_{2},a_{3}$ 线性无关.若 $a_{1},a_{2},a_{3}$ 线性相关，由于 $a_{1},a_{2}$ 线性无关，则 $a_{3}\in\langle\mathbf{a}_{1},\mathbf{a}_{2}\rangle$ ，这与 $a_{3}$ 的取法矛盾.因此， $a_{1},a_{2},a_{3}$ 线性无关.
+继续上述过程, 由于 $F^{n}$ 的任何线性无关向量组中向量的个数最多为n, 因此, 存在线性无关向量组 $a_{1}, a_{2}, \ldots, a_{r} (r \leq n)$ 使得 $V = \langle a_{1}, a_{2}, \ldots, a_{r} \rangle$. □
+上述定理表明, 任意向量 $a \in V$ 都可以表示成 $a_{1}, a_{2}, \ldots, a_{r}$ 的线性组合
+$$\mathbf {a} = x _ {1} \mathbf {a} _ {1} + x _ {2} \mathbf {a} _ {2} + \dots + x _ {r} \mathbf {a} _ {r},$$
+并且上述表示是唯一的. 实际上, 如果
+$$\mathbf {a} = y _ {1} \mathbf {a} _ {1} + y _ {2} \mathbf {a} _ {2} + \dots + y _ {r} \mathbf {a} _ {r}$$
+是a的另一个表示, 则
+$$(x _ {1} - y _ {1}) \mathbf {a} _ {1} + (x _ {2} - y _ {2}) \mathbf {a} _ {2} + \dots + (x _ {r} - y _ {r}) \mathbf {a} _ {r} = \mathbf {0}.$$
+由 $a_{1},a_{2},\ldots,a_{r}$ 的线性无关性得, $x_{i}=y_{i},i=1,2,\ldots,r$ ,即a的表示唯一.因此,从这个意义上,一组线性无关的向量决定了子空间的结构.这样一组线性无关向量称为子空间的一组基.
+定义5.4.1.  $V \subset F^{n}$  是子空间. V 中一组向量  $\{a_{1}, a_{2}, \cdots, a_{r}\}$  称为 V 的一组基, 如果它满足
+1. 对任意向量 $a \in V$ , a 可表示成 $a_{1}, a_{2}, \cdots, a_{r}$ 的线性组合
+$$\mathbf {a} = x _ {1} \mathbf {a} _ {1} + x _ {2} \mathbf {a} _ {2} + \dots + \mathbf {x} _ {r} \mathbf {a} _ {r}.\tag{5.10}$$
+2.  $a_{1}, a_{2}, \cdots, a_{r}$  线性无关.
+称 $(x_{1},x_{2},\ldots,x_{r})$ 为向量a在基 $\{a_{1},a_{2},\cdots,a_{r}\}$ 下的坐标.
+由前面的分析, 表达式(5.10)是唯一的. 同时, 基可以看成是子空间作为一组向量组的极大无关组! 由于极大无关组不唯一, 因此基也不是唯一的. 但同一个子空间的基是彼此等价的, 因而它们所含向量的个数是一样的, 这个数称之为子空间的维数, 它可以看作是子空间作为一组向量组的秩.
+定义5.4.2. 设 $V \subset F^n$ 为子空间. 称 $V$ 的一组基的向量个数为 $V$ 的维数, 记为 $\dim V = \operatorname{rank}(V)$.
+[第 150 页]
+例5.4.1. 在 $\mathbf{R}^2$ 中, 设 $\mathbf{a}_1, \mathbf{a}_2$ 是其中两个不共线的向量. 则对任意 $\mathbf{a} \in \mathbf{R}^2$, $\mathbf{a}$ 可以唯一地表示成 $x_1 \mathbf{a}_1 + x_2 \mathbf{a}_2$. 因此, $\mathbf{a}_1, \mathbf{a}_2$ 为 $\mathbf{R}^2$ 的一组基, $(x_1, x_2)$ 是 $\mathbf{a}$ 在基 $\mathbf{a}_1, \mathbf{a}_2$ 下的坐标.
+类似地, 在 $\mathbf{R}^3$ 中, 设 $\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_3$ 是不共面的向量. 则对任意 $\mathbf{a} \in \mathbf{R}^3$, $\mathbf{a}$ 可以唯一地表示成 $x_1\mathbf{a}_1 + x_2\mathbf{a}_2 + x_3\mathbf{a}_3$. 因此, $\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_3$ 为 $\mathbf{R}^3$ 的一组基, $(x_1, x_2, x_3)$ 为 $\mathbf{a}$ 在基 $\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_3$ 下的坐标.
+例5.4.2. 设 $e_{i}$ 是 $F^{n}$ 中的单位坐标向量. 则向量组 $\{e_{1}, e_{2}, \ldots, e_{n}\}$ 是 $F^{n}$ 的一组基, 称为自然基. 任何向量 $\mathbf{b} = (b_{1}, b_{2}, \ldots, b_{n}) \in F^{n}$ 可以唯一地表示成
+$$\mathbf {b} = b _ {1} \mathbf {e} _ {1} + b _ {2} \mathbf {e} _ {2} + \dots + b _ {n} \mathbf {e} _ {n}.$$
+即b在基 $\{e_{1},e_{2},\ldots,e_{n}\}$ 下的坐标是 $(b_{1},b_{2},\ldots,b_{n})$ .
+设 $\mathbf{a}_{i}=(1,\ldots,1,0,\ldots,0)\in F^{n}$ 是前i个分量为1,后n-i个分量为零的向量.显然, $a_{1},a_{2},\ldots,a_{n}$ 线性无关,因此也是 $F^{n}$ 的一组基,并且有
+$$\mathbf {a} _ {i} = \mathbf {e} _ {1} + \mathbf {e} _ {2} + \dots + \mathbf {e} _ {i}, \quad i = 1, \dots , n.$$
+因此, $e_{1}=a_{1},e_{i}=a_{i}-a_{i-1},i=2,\ldots,n.$ 从而
+$$\mathbf {b} = \sum_ {i = 1} ^ {n} b _ {i} \mathbf {e} _ {i} = b _ {1} \mathbf {a} _ {1} + \sum_ {i = 2} ^ {n} b _ {i} (\mathbf {a} _ {i} - \mathbf {a} _ {i - 1}) = \sum_ {i = 1} ^ {n - 1} (b _ {i} - b _ {i + 1}) \mathbf {a} _ {i} + b _ {n} \mathbf {a} _ {n}.$$
+即b在 $a_{1},a_{2},\ldots,a_{n}$ 下的坐标为 $(b_{1}-b_{2},b_{2}-b_{3},\ldots,b_{n})$ .
+例5.4.3. 设 $A \in F^{m \times n}$, 且 $\operatorname{rank}(A) = r$. 则 $A$ 的行向量的极大无关组是 $A$ 的行空间 $R(A)$ 的一组基, 行空间的维数为 $r$. 同理, $A$ 的列向量的极大无关组是 $A$ 的列空间 $C(A)$ 的一组基, 且列空间的维数也为 $r$.
+一个子空间的不同基是彼此等价的, 即它们之间可以相互表示. 利用这种相互表示关系, 一个向量在一组基下的坐标与在另一组基下的坐标之间的关系也就清楚了. 这就是所谓的坐标变换. 具体地,
+设 $F^n$ 有两组基
+$$\begin{array}{c} \mathbf {a} _ {1}, \mathbf {a} _ {2}, \ldots , \mathbf {a} _ {n} \\ \mathbf {b} _ {1}, \mathbf {b} _ {2}, \ldots , \mathbf {b} _ {n} \end{array}$$
+设两组基之间的关系由下式确定
+$$\left\{ \begin{array}{l} \mathbf {b} _ {1} = t _ {1 1} \mathbf {a} _ {1} + t _ {2 1} \mathbf {a} _ {2} + \ldots + t _ {n 1} \mathbf {a} _ {n} \\ \mathbf {b} _ {2} = t _ {1 2} \mathbf {a} _ {1} + t _ {2 2} \mathbf {a} _ {2} + \ldots + t _ {n 2} \mathbf {a} _ {n} \\ \dots\dots\\ \mathbf {b} _ {n} = t _ {1 n} \mathbf {a} _ {1} + b _ {2 n} \mathbf {a} _ {2} + \ldots + t _ {n n} \mathbf {a} _ {n} \end{array} \right.$$
+[第 151 页]
+上式可以形式上写成矩阵的形式
+$$\left(\mathbf {b} _ {1}, \mathbf {b} _ {2}, \dots , \mathbf {b} _ {n}\right) = \left(\mathbf {a} _ {1}, \mathbf {a} _ {2}, \dots , \mathbf {a} _ {n}\right) T,\tag{5.11}$$
+其中矩阵
+$$T = \left( \begin{array}{c c c} t _ {1 1} & \ldots & t _ {1 n} \\ \vdots & \vdots & \vdots \\ t _ {n 1} & \ldots & t _ {n n} \end{array} \right)\tag{5.12}$$
+称矩阵T为从基 $a_{1},a_{2},\ldots,a_{n}$ 到基 $b_{1},b_{2},\ldots,b_{n}$ 的过渡矩阵.由于基都是线性无关的向量组,因此过渡矩阵T是可逆的,并且
+$$\left(\mathbf {a} _ {1}, \mathbf {a} _ {2}, \dots , \mathbf {a} _ {n}\right) = \left(\mathbf {b} _ {1}, \mathbf {b} _ {2}, \dots , \mathbf {b} _ {n}\right) T ^ {- 1},\tag{5.13}$$
+即从基 $b_{1},b_{2},\ldots,b_{n}$ 到基 $a_{1},a_{2},\ldots,a_{n}$ 的过渡矩阵为 $T^{-1}$ (请读者证明). 现设向量 $v\in F^{n}$ 在两组基 $a_{1},a_{2},\ldots,a_{n}$ 及 $b_{1},b_{2},\ldots,b_{n}$ 下的坐标分别为 $X=(x_{1},x_{2},\ldots,x_{n})^{T}$ 与 $Y=(y_{1},y_{2},\ldots,y_{n})^{T}$ ，则由
+$$\mathbf {v} = \left(\mathbf {a} _ {1}, \mathbf {a} _ {2}, \dots , \mathbf {a} _ {n}\right) X = \left(\mathbf {b} _ {1}, \mathbf {b} _ {2}, \dots , \mathbf {b} _ {n}\right) Y = \left(\mathbf {a} _ {1}, \mathbf {a} _ {2}, \dots , \mathbf {a} _ {n}\right) T Y$$
+可得X = TY. 因此, 从原坐标X到新坐标Y的坐标变换公式为
+$$Y = T ^ {- 1} X.\tag{5.14}$$
+例5.4.4. 重新考察例5.4.2. 从自然基 $e_{1},e_{2},\ldots,e_{n}$ 到基 $a_{1},a_{2},\ldots,a_{n}$ 的过渡矩阵为
+$$T = \left( \begin{array}{c c c c} 1 & 1 & \dots & 1 \\ 0 & 1 & \dots & 1 \\ \dots & \dots & \dots & \dots \\ 0 & 0 & \dots & 1 \end{array} \right)$$
+不难算得
+$$T ^ {- 1} = \left( \begin{array}{c c c c c} 1 & - 1 & 0 & \dots & 0 \\ 0 & 1 & - 1 & \dots & 0 \\ 0 & 0 & 1 & \dots & 0 \\ \dots & \dots & \dots & \dots \\ 0 & 0 & 0 & \dots & 1 \end{array} \right)$$
+因此v在自然基下的坐标 $X=(x_{1},x_{2},\ldots,x_{n})^{T}$ 与它在基 $a_{1},a_{2},\ldots,a_{n}$ 下的坐标 $Y=(y_{1},y_{2},\ldots,y_{n})^{T}$ 之间有关系(5.14)，从而 $(y_{1},y_{2},\ldots,y_{n})=(x_{1}-x_{2},x_{2}-x_{3},\ldots,x_{n})$ 。这与例5.4.2中的结果一致。
+[第 152 页]
+例5.4.5. 考察坐标系的旋转. 将平面直角坐标系 $oxy$ 逆时针旋转 $\theta$ 角得到新坐标系 $ox'y'$. 记 $x$ 轴正向的单位向量为 $\mathbf{e}_1$, $y$ 轴正向的单位向量为 $\mathbf{e}_2$. 记 $x'$ 轴正向的单位向量为 $\mathbf{e}_1'$, $y'$ 轴正向的单位向量为 $\mathbf{e}_2'$. 则 $\mathbf{R}^2$ 的两组基 $\mathbf{e}_1', \mathbf{e}_2'$ 与 $\mathbf{e}_1, \mathbf{e}_2$ 之间的关系为
+$$(\mathbf {e} _ {1} ^ {\prime}, \mathbf {e} _ {2} ^ {\prime}) = (\mathbf {e} _ {1}, \mathbf {e} _ {2}) \left( \begin{array}{c c} \cos \theta & - \sin \theta \\ \sin \theta & \cos \theta \end{array} \right).$$
+因此, 点P在原坐标系下的坐标 $(x,y)$ 与在新坐标系下的坐标 $(x',y')$ 之间的关系为
+$$\binom{x ^ {\prime}}{y ^ {\prime}} = \left( \begin{array}{c c} \cos \theta & - \sin \theta \\ \sin \theta & \cos \theta \end{array} \right) ^ {- 1} \binom{x}{y} = \left( \begin{array}{c c} \cos \theta & \sin \theta \\ - \sin \theta & \cos \theta \end{array} \right) \binom{x}{y}.$$
+类似地，在三维几何空间中，直角坐标系 $[O; \mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3]$ 经过转轴得到新坐标系 $\tilde{\mathbf{e}}_1, \tilde{\mathbf{e}}_2, \tilde{\mathbf{e}}_3$。若 $\tilde{\mathbf{e}}_1, \tilde{\mathbf{e}}_2, \tilde{\mathbf{e}}_3$ 在当前的坐标系中的坐标分别为 $(a_1, a_2, a_3), (b_1, b_2, b_3), (c_1, c_2, c_3)$，则新旧坐标系之间的过渡变换为
+$$(\tilde {\mathbf {e}} _ {1}, \tilde {\mathbf {e}} _ {2}, \tilde {\mathbf {e}} _ {3}) = (\mathbf {e} _ {1}, \mathbf {e} _ {2}, \mathbf {e} _ {3}) \left( \begin{array}{c c c} a _ {1} & b _ {1} & c _ {1} \\ a _ {2} & b _ {2} & c _ {3} \\ a _ {3} & b _ {3} & c _ {3} \end{array} \right),$$
+相应的坐标变换为
+$$\left( \begin{array}{c} \tilde {x} \\ \tilde {y} \\ \tilde {z} \end{array} \right) = \left( \begin{array}{c c c} a _ {1} & a _ {2} & a _ {3} \\ b _ {1} & b _ {2} & b _ {3} \\ c _ {1} & c _ {2} & c _ {3} \end{array} \right) \left( \begin{array}{c} x \\ y \\ z \end{array} \right).$$
+关于子空间的维数与基有下列有用的结论.
+定理5.4.2. $n$ 维数组空间 $F^n$ 中的下列结论成立.
+1. 设 $V \subset F^{n}$ 为 $r$ 维子空间, 则 $V$ 中任意 $r + 1$ 个向量线性相关.
+2. 设V为r维子空间, 则V中任意r个线性无关向量为V的一组基.
+3. 设 $U$ 与 $V$ 为 $F^n$ 的子空间, 且 $U \subseteq V$, 则 $\dim U \leq \dim V$.
+4. 设 $U$ 与 $V$ 为 $F^n$ 的子空间, 且 $U \subseteq V$, 若 $\dim U = \dim V$, 则 $U = V$.
+证明. 请读者自己完成.
+定理5.4.3. 设 $V \subset F^n$ 为 $r$ 维子空间. $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_s \in V$ 是 $s (s < r)$ 个线性无关的向量. 则存在 $V$ 中的向量 $\mathbf{a}_{s+1}, \ldots, \mathbf{a}_r$ 使得 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_r$ 构成 $V$ 的一组基. 称 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_r$ 为线性无关组 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_s$ 的一组扩充基.
+[第 153 页]
+证明. 类似定理5.4.1的证明, 请读者完成.
+例5.4.6. 在 $\mathbb{R}^3$ 中, 令 $V = \{(x_1, x_2, x_3) | x_1 + x_2 + x_3 = 0\}$. 证明: $V$ 是 $\mathbb{R}^3$ 的子空间, 并求 $V$ 的一组基与维数.
+证明. 设 $\mathbf{x} = (x_{1}, x_{2}, x_{3}), \mathbf{y} = (y_{1}, y_{2}, y_{3}) \in V$, 即 $x_{1} + x_{2} + x_{3} = 0, y_{1} + y_{2} + y_{3} = 0$. 则对任意实数 $\lambda, \mu$,
+$$\lambda \mathbf {x} + \mu \mathbf {y} = (\lambda x _ {1} + \mu y _ {1}, \lambda x _ {2} + \mu y _ {2}, \lambda x _ {3} + \mu y _ {3}) \in V,$$
+因为 $(\lambda x_{1}+\mu y_{1})+(\lambda x_{2}+\mu y_{2})+(\lambda x_{3}+\mu y_{3})=\lambda(x_{1}+x_{2}+x_{3})+\mu(y_{1}+y_{2}+y_{3})=0,$ 
+故V是子空间.
+容易验证, $(-1,1,0)$ 与 $(-1,0,1)$ 是V的一组线性无关组,且任意 $\mathbf{x}=(x_{1},x_{2},x_{3})\in V,\mathbf{x}=x_{2}(-1,1,0)+x_{3}(-1,0,1)$ .从而 $(-1,1,0)$ 与 $(-1,0,1)$ 是V的一组基,故 $\dim(V)=2$ .
+例5.4.7. 在 $\mathbb{R}^3$ 中, 令 $V = \{(x_1, x_2, x_3) | x_1 + x_2 + x_3 = 0, 2x_1 - x_2 + x_3 = 3\}$. 证明: $V$ 不是 $\mathbb{R}^3$ 的子空间.
+证明. 设 $\mathbf{x} = (x_{1}, x_{2}, x_{3}), \mathbf{y} = (y_{1}, y_{2}, y_{3}) \in V$. 显然,
+$$\mathbf {x} + \mathbf {y} = (x _ {1} + y _ {1}, x _ {2} + y _ {2}, x _ {3} + y _ {3}) \not \in V,$$
+因为 $2(x_{1}+y_{1})-(x_{2}+y_{2})+(x_{3}+y_{3})=(2x_{1}-x_{2}+x_{3})+(2y_{1}-y_{2}+y_{3})=6,$ 故V不是子空间.
+§5.5 线性方程组解集的结构
+在第一章,我们提出了关于线性方程组的下列问题:
+1. 确定线性方程组解存在、唯一的条件;
+2. 确定线性方程组解的几何结构;
+3. 给出线性方程组的公式解.
+本节我们将利用前几节的理论对上述问题给出一个完整的解答.
+[第 154 页]
+§5.5.1 线性方程组解的存在性与唯一性
+根据前几节的结论, 我们可以给出线性方程组解的存在性与唯一性条件.
+定理5.5.1. 设 $A \in F^{m \times n}$ 为 $m \times n$ 阶矩阵, $b \in F^{m}$ 为m维列向量. 则线性方程组
+$$A \mathbf {x} = \mathbf {b}\tag{5.15}$$
+有解的充要条件是 $\operatorname{rank}(A) = \operatorname{rank}(A, \mathbf{b})$。线性方程组有唯一解的充要条件是 $\operatorname{rank}(A) = \operatorname{rank}(A, \mathbf{b}) = n$。
+证明. 设矩阵 $A$ 的列为 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_n, \mathbf{x} = (x_1, \ldots, x_n)^T$. 则线性方程组 $A\mathbf{x} = \mathbf{b}$ 等价于
+$$x _ {1} \mathbf {a} _ {1} + x _ {2} \mathbf {a} _ {2} + \dots + x _ {n} \mathbf {a} _ {n} = \mathbf {b}.$$
+因此, 线性方程组有解 $\Leftrightarrow \mathbf{b} \in \langle \mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_n \rangle \Leftrightarrow \langle \mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_n \rangle = \langle \mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_n, \mathbf{b} \rangle \cdot \operatorname{rank}(\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_n) = \operatorname{rank}(\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_n, \mathbf{b}) \Leftrightarrow \operatorname{rank}(A) = \operatorname{rank}(A, \mathbf{b}).$
+$\Leftrightarrow$
+线性方程组有唯一解 $\Leftrightarrow \mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_n$ 线性无关，且 $\operatorname{rank}(A) = \operatorname{rank}(A, \mathbf{b}) \Leftrightarrow \operatorname{rank}(A) = \operatorname{rank}(A, \mathbf{b}) = n$.
+推论5.5.1. 齐次线性方程组
+$$A \mathbf {x} = \mathbf {0}\tag{5.16}$$
+有非零解的充要条件是 $\operatorname{rank}(A) < n$. 特别地, 若 $A$ 为 $n$ 阶方阵, 则齐次线性方程组有非零解当且仅当 $\det(A) = 0$.
+§5.5.2 齐次线性方程组解集的结构
+我们先研究三元线性方程组的解集的几何结构. 三元齐次线性方程组的解集表示每个方程定义的平面的公共交集, 它可以是一个点(原点), 过原点的一条直线或过原点的一个平面. 注意到, 这些解集有子空间的特性. 并且解集的 “大小” 是由独立的方程的个数决定. 如果独立方程是三个, 则解集是原点; 如果独立方程是两个, 则解集是过原点的直线; 如果独立方程是一个, 则解集是过原点的平面. 本节我们将指出, 一般的齐次线性方程组的解集有类似的特性.
+考虑齐次线性方程组(5.16)的解集的全体
+$$V := \left\{\mathbf {x} \in F ^ {n} \mid A \mathbf {x} = \mathbf {0} \right\}.\tag{5.17}$$
+定理5.5.2. 齐次线性方程组(5.16)的解集V是 $F^{n}$ 的子空间，并且 $\dim V = n - r(A)$ . 称V为矩阵A的零空间, 记为 $N(A)$ .
+[第 155 页]
+证明. 设 $\mathbf{x}, \mathbf{y} \in V$, 即 $A\mathbf{x} = \mathbf{0}, A\mathbf{y} = \mathbf{0}$. 对任意 $\lambda, \mu \in F$, 由于 $A(\lambda \mathbf{x} + \mu \mathbf{y}) = \lambda A\mathbf{x} + \mu A\mathbf{y} = \mathbf{0}$, 因此, $\lambda \mathbf{x} + \mu \mathbf{y} \in V$. 所以 $V$ 是 $F^n$ 的子空间.
+对线性方程组 $A\mathbf{x} = \mathbf{0}$ 做初等行变换不改变方程组的解, 并且方程组可以化成简化形式 $J\mathbf{x} = \mathbf{0}$. 其中 $J$ 是阶梯形式的矩阵(2.3). 由于 $\operatorname{rank}(J) = \operatorname{rank}(A) = r, J$ 有 $r$ 个非零行. 由第一章的结论, 齐次方程组的通解具有形式
+$$\left\{ \begin{array}{l} x _ {1} = \alpha_ {1 1} t _ {1} + \alpha_ {1 2} t _ {2} + \ldots + \alpha_ {1, n - r} t _ {n - r} \\ x _ {2} = \alpha_ {2 1} t _ {1} + \alpha_ {2 2} t _ {2} + \ldots + \alpha_ {2, n - r} t _ {n - r} \\ \dots\dots\\ x _ {m} = \alpha_ {m 1} t _ {1} + \alpha_ {m 2} t _ {2} + \ldots + \alpha_ {m, n - r} t _ {n - r} \end{array} \right.$$
+其中 $t_{1},\ldots,t_{n-r}$ 为自由参数.写成向量形式是
+$$\mathbf {x} = t _ {1} \alpha_ {1} + t _ {1} \alpha_ {2} + \dots + t _ {n - r} \alpha_ {n - r},$$
+这里 $\alpha_{i} = (\alpha_{1i},\alpha_{2i},\dots ,\alpha_{mi})^{T}\in F^{m},i = 1,2,\ldots ,n - r.$
+下面说明, $\alpha_{1},\alpha_{2},\ldots ,\alpha_{n - r}$ 线性无关. 一个重要的观察是, 在齐次方程组的通解中, 除去 $x_{1},x_{j_{2}},\ldots ,x_{j_{r}}$ 外, 其余变量的解为某个 $t_j$, 即向量 $t_1\alpha_1 + t_2\alpha_2 + \ldots +t_{n - r}\alpha_{n - r}$ 中有 $n - r$ 个分量分别为 $t_1,t_2,\dots ,t_{n - r}$. 因此, 如果
+$$t _ {1} \alpha_ {1} + t _ {2} \alpha_ {2} + \dots + t _ {n - r} \alpha_ {n - r} = \mathbf {0},$$
+则 $t_{1}=t_{2}=\ldots=t_{n-r}=0$ . 这表明,  $\alpha_{1},\alpha_{2},\ldots,\alpha_{n-r}$  线性无关, 从而是V的一组基.
+推论5.5.2.
+$$\dim (C (A)) + \dim (N (A)) = n.$$
+齐次线性方程组(5.16)的解集V也称为解空间. 解空间的一组基 $\alpha_{1},\alpha_{2},\ldots,\alpha_{n-r}$ 称为齐次线性方程组的一个基础解系.
+例5.5.1. 设 $A$ 是 $n$ 阶奇异方阵, 且 $A$ 的 $(i,j)$ 元素的代数余子式 $A_{ij} \neq 0$. 证明: $\alpha = (A_{i1}, A_{i2}, \ldots, A_{in})^T$ 是齐次线性方程组 $A\mathbf{x} = \mathbf{0}$ 的基础解系.
+证明. 由于 $A_{ij} \neq 0$ 及 $\operatorname{det}(A) = 0$, $\operatorname{rank}(A) = n - 1$. 因此, 齐次线性方程组 $A\mathbf{x} = \mathbf{0}$ 的解空间是1维的. 由行列式展开定理, $\sum_{j=1}^{n} a_{kj} A_{ij} = \delta_{ki} \operatorname{det}(A) = 0, k = 1, \ldots, n$, 所以 $\alpha = (A_{i1}, A_{i2}, \ldots, A_{in})^T$ 是齐次方程组 $A\mathbf{x} = \mathbf{0}$ 的解. 由于 $\alpha$ 为非零向量, 故它是基础解系.
+[第 156 页]
+例5.5.2. 求下列齐次线性方程组的一组基础解系, 并求它的通解
+$$\left\{ \begin{array}{l} x _ {1} + x _ {2} + x _ {3} + x _ {4} + x _ {5} = 0 \\ x _ {1} + 2 x _ {2} + 3 x _ {3} - 2 x _ {4} + 2 x _ {5} = 0 \\ x _ {1} - x _ {3} + 4 x _ {4} = 0 \end{array} \right.$$
+解.
+$$\begin{array}{l} \left( \begin{array}{c c c c c} 1 & 1 & 1 & 1 & 1 \\ 1 & 2 & 3 & - 2 & 2 \\ 1 & 0 & - 1 & 4 & 0 \end{array} \right) \xrightarrow [ - r _ {1} \to r _ {2} ]{- r _ {1} \to r _ {3}} \left( \begin{array}{c c c c c} 1 & 1 & 1 & 1 & 1 \\ 0 & 1 & 2 & - 3 & 1 \\ 0 & - 1 & - 2 & 3 & - 1 \end{array} \right) \xrightarrow [ - r _ {2} \to r _ {1} ]{r _ {2} \to r _ {3}} \\ \left( \begin{array}{c c c c c} 1 & 0 & - 1 & 4 & 0 \\ 0 & 1 & 2 & - 3 & 1 \\ 0 & 0 & 0 & 0 & 0 \end{array} \right) \end{array}$$
+因此原方程组等价于
+$$\left\{ \begin{array}{l} x _ {1} - x _ {3} + 4 x _ {4} = 0 \\ x _ {2} + 2 x _ {3} - 3 x _ {4} + x _ {5} = 0 \end{array} \right.$$
+取 $x_{3}=1,x_{4}=x_{5}=0$ 得方程的一组解 $\alpha_{1}=(1,-2,1,0,0)^{T}$ . 类似地，分别取 $x_{4}=1,x_{3}=x_{5}=0$ 及 $x_{5}=1,x_{3}=x_{4}=0$ 得方程组的另两组解 $\alpha_{2}=(-4,3,0,1,0)^{T}$ 与 $\alpha_{3}=(0,-1,0,0,1)^{T}$ . 则 $\alpha_{1},\alpha_{2},\alpha_{3}$ 构成原线性方程组的一组基础解系，原方程组的通解为 $t_{1}\alpha_{1}+t_{2}\alpha_{2}+t_{3}\alpha_{3},t_{1},t_{2},t_{3}$ 为任意参数.
+当然, 也可以直接令 $x_{3} = t_{1}, x_{4} = t_{2}, x_{5} = t_{3}$ 求得 $x_{1} = t_{1} - 4t_{2}, x_{2} = -2t_{1} + 3t_{2} - t_{3}$. 故
+$$\left(x _ {1}, x _ {2}, x _ {3}, x _ {4}, x _ {5}\right) ^ {T} = t _ {1} \alpha_ {1} + t _ {2} \alpha_ {2} + t _ {3} \alpha_ {3}.$$
+由此可求方程组的基础解系与通解.
+§5.5.3 非齐次线性方程组解集的结构
+本小节我们研究非齐次线性方程组的解集的几何结构. 从例 5.4.7 看出, 非齐次线性方程组的解集不再是一个子空间, 但它与子空间有密切关系.
+考察线性方程 $ax+by+cz=d(d\neq0)$ 所确定的点集W,它表示 $R^{3}$ 中不过原点的平面,因而 $\{\overrightarrow{OP}|P\in W\}$ 不是一个子空间.相应的齐次方程 $ax+by+cz=0$ 所确定的点集V表示 $R^{3}$ 中过原点的平面,它对应一个子空间.W是对V沿向量 $(0,0,d/c)$ 平移的结果.这个观察对一般非齐次线性方程组的解集也是成立的.
+考虑非齐次线性方程组(5.15)的解集. 记
+$$W = \left\{\mathbf {x} \in F ^ {n} \mid A \mathbf {x} = \mathbf {b} \right\}.\tag{5.18}$$
+[第 157 页]
+V如(5.17)所示. 我们知道, V 是 n-r(A) 维子空间. 那么, W 与 V 有什么关系?
+容易验证, W 具有性质
+1.  $\alpha,\beta\in W\Rightarrow\alpha-\beta\in V.$
+2.  $\alpha\in W,\gamma\in V\Rightarrow\alpha+\gamma\in W.$
+事实上, 设 $\alpha, \beta \in W$, 则 $A\alpha = \mathbf{b}, A\beta = \mathbf{b}$. 于是, $A(\alpha - \beta) = \mathbf{0}$, 即 $\alpha - \beta \in V$. 另一方面, 如果 $\alpha \in W, \gamma \in V$, 则 $A\alpha = \mathbf{b}, A\gamma = \mathbf{0}$. 因此, $A(\alpha + \gamma) = \mathbf{b}$, 即 $\alpha + \gamma \in W$.
+利用上述性质可以得到
+定理5.5.3. 设V,W分别(5.17),(5.18)由定义. 则有
+$$W = \gamma_ {0} + V := \{\gamma_ {0} + \alpha | \alpha \in V \}.$$
+其中 $\gamma_0$ 是 $A\mathbf{x} = \mathbf{b}$ 的一个特解.
+证明. 对任意 $\alpha \in V, A(\gamma_0 + \alpha) = A\gamma_0 + A\alpha = \mathbf{b}$. 因此, $\gamma_0 + \alpha \in W$.
+反过来, 任取 $\beta \in W$, 由 $A\beta = \mathbf{b}$ 及 $A\gamma_0 = \mathbf{b}$ 有, $A(\beta - \gamma_0) = \mathbf{0}$. 所以, $\beta - \gamma_0 \in V$. 从而 $\beta \in \gamma_0 + V$.
+上述定理表明, 非齐次线性方程组的解集是相应齐次方程组的解集的一个平移. 假设  $\alpha_{1}, \ldots, \alpha_{n-r}$  是对应的齐次方程组的基础解系,  $\gamma_{0}$  是非齐次线性方程组的特解, 则非齐次线性方程组的通解为
+$$\mathbf {x} = t _ {1} \alpha_ {1} + t _ {2} \alpha_ {2} + \ldots + t _ {n - r} \alpha_ {n - r} + \gamma_ {0}.$$
+其中 $t_1, t_2, \ldots, t_{n-r}$ 为自由参数. 或者说, 非齐次线性方程组的解集为
+$$W = \left\{t _ {1} \alpha_ {1} + t _ {2} \alpha_ {2} + \dots + t _ {n - r} \alpha_ {n - r} + \gamma_ {0} \mid t _ {1}, t _ {2}, \dots , t _ {n - r} \in F \right\}.\tag{5.19}$$
+例5.5.3. 给出线性方程组Ax=b的公式解.
+解. 设 $A \in F^{m \times n}$, $\mathbf{b} \in F^m$, 且 $\operatorname{rank}(A) = \operatorname{rank}(A, \mathbf{b}) = r$. 不妨设 $A$ 的前 $r$ 行、前 $r$ 列构成的子式非零. 则线性方程组 $A\mathbf{x} = \mathbf{b}$ 等价于 $\bar{A}\mathbf{x} = \bar{\mathbf{b}}$, 这里 $\bar{A}$ 是由 $A$ 的前 $r$ 行组成的矩阵, $\bar{\mathbf{b}}$ 是 $\mathbf{b}$ 的前 $r$ 个分量组成的向量. 记 $\bar{A} = (A_1, A_2)$, $\mathbf{x} = (\mathbf{x}_1, \mathbf{x}_2)^T$. 这里 $A_1 \in F^{r \times r}, A_2 \in F^{r \times (n - r)}$, $\mathbf{x}_1 \in F^r$, $\mathbf{x}_2 \in F^{n - r}$. 于是, 线性方程组 $\bar{A}\mathbf{x} = \bar{\mathbf{b}}$ 又可以改写成
+$$A _ {1} \mathbf {x} _ {1} = \bar {b} - A _ {2} \mathbf {x} _ {2}.$$
+[第 158 页]
+由于 $A_{1}$ 可逆,则
+$$\mathbf {x} _ {1} = A _ {1} ^ {- 1} (\bar {b} - A _ {2} \mathbf {x} _ {2}) = \frac {1}{\det (A _ {1})} A _ {1} ^ {*} (\bar {b} - A _ {2} \mathbf {x} _ {2}) = - \frac {1}{\det (A _ {1})} A _ {1} ^ {*} A _ {2} \mathbf {x} _ {2} + \frac {1}{\det (A _ {1})} A _ {1} ^ {*} \bar {b}.$$
+这里 $A_{1}^{*}$ 是 $A_{1}$ 的伴随方阵, $x_{2}$ 是可任意取值的n-r维向量.于是
+$$\mathbf {x} = \binom{\mathbf {x} _ {1}}{\mathbf {x} _ {2}} = \binom{- A _ {1} ^ {*} A _ {2} / \det (A _ {1})}{I _ {n - r}} \mathbf {t} + \binom{A _ {1} ^ {*} \bar {b} / \det (A _ {1})}{O},$$
+这里 $t\in F^{n-r}$ 为独立参数.
+§5.6 一般线性空间
+本节中,我们将数组空间的概念与理论推广到一般的线性空间.
+§5.6.1 一般线性空间的定义
+在前面几节中, 我们研究了 $n$ 维数组空间的理论. 这些理论建立在数组向量的两个基本运算之上, 即向量的加法与数乘. 简而言之, $n$ 维数组空间就是赋予了加法与数乘运算的 $n$ 数组向量的集合. 一个基本的问题是, 对一个集合, 是否可以恰当地定义其中元素的加法与数乘运算, 从而具有 $n$ 维数组空间一样的性质与结构呢? 我们先看一些实例.
+例5.6.1. 考察具有 $n$ 个变元的线性方程的全体
+$$E _ {n} := \left\{a _ {1} x _ {1} + a _ {2} x _ {2} + \dots + a _ {n} x _ {n} = b \mid a _ {1}, a _ {2}, \dots , a _ {n}, b \in F \right\}.$$
+定义方程的加法(用⊕表示)与数乘(用○表示)如下
+$$\begin{array}{l} (a _ {1} x _ {1} + a _ {2} x _ {2} + \ldots + a _ {n} x _ {n} = b) \oplus (a _ {1} ^ {\prime} x _ {1} + a _ {2} ^ {\prime} x _ {2} + \ldots + a _ {n} ^ {\prime} x _ {n} = b ^ {\prime}) \\ := (a _ {1} + a _ {1} ^ {\prime}) x _ {1} + (a _ {2} + a _ {2} ^ {\prime}) + \ldots + (a _ {n} + a _ {n} ^ {\prime}) x _ {n} = b + b ^ {\prime}. \\ \lambda \circ (a _ {1} x _ {1} + a _ {2} x _ {2} + \ldots + a _ {n} x _ {n} = b) := \lambda a _ {1} x _ {1} + \lambda a _ {2} x _ {2} + \ldots + \lambda a _ {n} x _ {n} = \lambda b. \end{array}$$
+有了加法与数乘运算, 就可以定义方程组的线性组合、线性相关、线性无关、极大无关组、秩等概念. 对线性方程组做初等变换就是做线性组合运算, 线性方程组的极大无关组就是等价的独立方程组, 秩就是独立方程的个数.
+例5.6.2. 用 $F_{n}[x]$ 表示数域 $F$ 上次数不超过 $n$ 的多项式全体
+$$F _ {n} [ x ] := \left\{a _ {0} + a _ {1} x + \dots + a _ {n} x ^ {n} \mid a _ {0}, a _ {1}, \dots , a _ {n} \in F \right\}.$$
+[第 159 页]
+§5.6 一般线性空间
+定义多项式的加法与数乘如下
+$$\begin{array}{l} (a _ {0} + a _ {1} x + \ldots + a _ {n} x ^ {n}) + (b _ {0} + b _ {1} x + \ldots + b _ {n} x ^ {n}) \\ = (a _ {0} + b _ {0}) + (a _ {1} + b _ {1}) x + \ldots + (a _ {n} + b _ {n}) x ^ {n}, \\ \lambda (a _ {0} + a _ {1} x + \ldots + a _ {n} x ^ {n}) = \lambda a _ {0} + \lambda a _ {1} x + \ldots + \lambda a _ {n} x ^ {n} \end{array}$$
+由此可以定义多项式的线性相关(无关)、极大无关组、秩、基等概念,并且相应于数组空间的有关定理与结论仍然成立.例如,多项式 $p_{1}(x)=x^{2}-2x+1$ , $p_{2}(x)=x^{2}+2$ , $p_{3}(x)=x^{2}+2x+3$ 线性相关,因为 $p_{3}(x)-2p_{2}(x)+p_{1}(x)=0$ .再如 $S:=\{1,x,x^{2}\}$ 线性无关(因为不存在不全为零常数 $a_{0},a_{1},a_{2}$ 使 $a_{0}+a_{1}x+a_{2}x^{2}=0$ ),且它们构成 $F_{2}[x]$ 的一组基.这表明,n次多项式全体在定义了加法与数乘运算后与数组空间有相似的结构与性质.
+例5.6.3. 对所有 $m \times n$ 阶矩阵的全体 $F^{m \times n}$, 按照矩阵的加法与数乘, 也可以定义一组矩阵的线性相关(无关)、极大无关组、秩、基等, 并且数组空间的有关结论可以平移过来. 例如, 矩阵
+$$\left( \begin{array}{c c} 1 & 0 \\ 0 & 0 \end{array} \right), \quad \left( \begin{array}{c c} 0 & 1 \\ 0 & 0 \end{array} \right), \quad \left( \begin{array}{c c} 0 & 0 \\ 1 & 0 \end{array} \right), \quad \left( \begin{array}{c c} 0 & 0 \\ 0 & 1 \end{array} \right)$$
+线性无关, 且它们构成 $F^{2\times2}$ 的一组基.
+上述实例表明, 对任何一个集合 $V$, 在恰当定义了元素的加法与数乘运算, 并且运算满足一定的规律后, $V$ 就有了像数组空间一样的结构与性质及相关理论. 这样, 我们可以将数组空间推广到一般的线性空间, 从而大大扩充有关数学理论的应用范围. 在进入以后的学习中, 读者会见到各种各样的线性空间, 并会发现线性空间理论在许多工程领域有着广泛的应用. 下面, 我们给出一般线性空间的定义.
+定义5.6.1. 设 $V$ 是一个非空集合, $F$ 是一个数域. 对 $V$ 中的元素定义两种运算
+1. 加法: 对 $V$ 中的任意两个元素 $\alpha, \beta$ 组成的有序对 $(\alpha, \beta)$, 存在 $V$ 中唯一的一个元素 $\gamma$ 与之对应, 简记为 $\alpha + \beta = \gamma$.
+2. 数乘: 对任意常数 $\lambda \in F$ 及向量 $\alpha \in V$, 存在 $V$ 中唯一的一个元素 $\gamma$ 与之对应, 简记为 $\lambda \alpha = \gamma$.
+加法与数乘运算满足下列运算规律
+(A1)  $\alpha + \beta = \beta + \alpha$  对任意  $\alpha, \beta \in V$  成立.
+[第 160 页]
+(A2) $(\alpha + \beta) + \gamma = \alpha + (\beta + \gamma)$ 对任意 $\alpha, \beta, \gamma \in V$ 成立.
+(A3) 存在元素  $\theta \in V$ ，使得  $\alpha + \theta = \theta + \alpha = \alpha$  对任意  $\alpha \in V$  成立。 $\theta$  称为零元素。在不致混淆的情况下，一般线性空间中的零元素也常简记为0。
+(A4) 对任意  $\alpha \in V$ ，存在  $\beta \in V$  使得  $\alpha + \beta = \beta + \alpha = 0$ 。 $\beta$  称为  $\alpha$  的负元素，简记为  $-\alpha$ ，并且定义  $\beta - \alpha = \beta + (-\alpha)$ .
+(D1)  $\lambda(\alpha+\beta)=\lambda\alpha+\lambda\beta$  对任意  $\lambda\in F$  及  $\alpha,\beta\in V$  成立.
+(D2) $(\lambda + \mu)\alpha = \lambda \alpha + \mu \alpha$ 对任意 $\lambda, \mu \in F$ 及 $\alpha \in V$ 成立.
+(M1)  $\lambda(\mu\alpha)=(\lambda\mu)\alpha$  对任意  $\lambda,\mu\in F$  及  $\alpha\in V$  成立.
+(M2)  $1\alpha = \alpha$  对任意  $\alpha \in V$  成立.
+则称V是数域F上的线性空间, 简记为 $V(F)$ 或V. 线性空间V中的元素称为向量.
+对上述定义我们做两点说明.
+关于加法与数乘两种运算可以用映射的观点解释. 用 $V \times V$ 表示所有有序向量对的集合, 即 $V \times V := \{(\alpha, \beta) | \alpha, \beta \in V\}$. 类似地, 记 $F \times V := \{(\lambda, \alpha) | \lambda \in F, \alpha \in V\}$. 所谓 $V$ 中的加法实际上是从 $V \times V$ 到 $V$ 的一个映射. 而数乘是 $F \times V$ 到 $V$ 的一个映射.
+接下来我们要说明为什么要求加法与数乘运算要满足上述八条规律.
+容易知道, 数组向量满足上述八条规律. 这些运算规律保证了后续一系列定理与结论的正确推导. 我们当然希望一般线性空间也有数组空间一样的性质与结论, 因此对这两种运算就要求满足一定的规则. 下面, 我们从以下这样一个命题加以说明.
+设 $\alpha_{1},\alpha_{2},\ldots,\alpha_{m}$ 为线性空间V中的向量,若存在不全为零的数 $\lambda_{1},\lambda_{2},\ldots,\lambda_{m}$ 使得 $\lambda_{1}\alpha_{1}+\lambda_{2}\alpha_{2}+\cdots+\lambda_{m}\alpha_{m}=\theta,$ 则存在 $\alpha_{i}(1\leq i\leq m)$ 使得
+$$\alpha_ {i} = - \frac {\lambda_ {1}}{\lambda_ {i}} \alpha_ {1} - \dots - \frac {\lambda_ {i - 1}}{\lambda_ {i}} \alpha_ {i - 1} - \frac {\lambda_ {i + 1}}{\lambda_ {i}} \alpha_ {i + 1} - \dots - \frac {\lambda_ {m}}{\lambda_ {i}} \alpha_ {m}.$$
+[第 161 页]
+设 $\lambda_{i}\neq 0$ .则
+$$\lambda_ {1} \alpha_ {1} + \lambda_ {2} \alpha_ {2} + \dots + \lambda_ {m} \alpha_ {m} = \theta \xrightarrow {(A 3)}$$
+$$\left(\lambda_ {1} \alpha_ {1} + \lambda_ {2} \alpha_ {2} + \dots + \lambda_ {m} \alpha_ {m}\right) + (- \lambda_ {i}) \alpha_ {i} = (- \lambda_ {i}) \alpha_ {i} \xrightarrow {(A 1 , A 2)}$$
+$$\lambda_ {1} \alpha_ {1} + \lambda_ {2} \alpha_ {2} + \dots + \lambda_ {i - 1} \alpha_ {i - 1} + \lambda_ {i + 1} \alpha_ {i + 1} + \dots + \lambda_ {m} \alpha_ {m} +$$
+$$\left(\lambda_ {i} \alpha_ {i} + (- \lambda_ {i}) \alpha_ {i}\right) = (- \lambda_ {i}) \alpha_ {i} \xrightarrow {(D 2 , A 3 , *)} \quad (\text {这里用到性质*:} 0 \alpha = \theta)$$
+$$\lambda_ {1} \alpha_ {1} + \dots + \lambda_ {i - 1} \alpha_ {i - 1} + \lambda_ {i + 1} \alpha_ {i + 1} + \dots + \lambda_ {m} \alpha_ {m} = (- \lambda_ {i}) \alpha_ {i} \rightarrow$$
+$$(- \frac {1}{\lambda_ {i}}) (- \lambda_ {i}) \alpha_ {i} = (- \frac {1}{\lambda_ {i}}) (\lambda_ {1} \alpha_ {1} + \dots + \lambda_ {i - 1} \alpha_ {i - 1} + \lambda_ {i + 1} \alpha_ {i + 1} + \dots + \lambda_ {m} \alpha_ {m})$$
+$$\xrightarrow {(M 1 , M 2 , D 1 , A 4)} \alpha_ {i} = - \frac {\lambda_ {1}}{\lambda_ {i}} \alpha_ {1} - \dots - \frac {\lambda_ {i - 1}}{\lambda_ {i}} \alpha_ {i - 1} - \frac {\lambda_ {i + 1}}{\lambda_ {i}} \alpha_ {i + 1} - \dots - \frac {\lambda_ {m}}{\lambda_ {i}} \alpha_ {m}.$$
+我们看到, 要证明上述命题, 八条运算规律都用到了. 实际上, 这八条规律也足够证明所有相关结论.
+下面我们列举线性空间的一些基本性质.
+1. 零向量唯一.
+设 $\theta_{1}$ 与 $\theta_{2}$ 都为零向量,则有 $\theta_{1}=\theta_{1}+\theta_{2}=\theta_{2}+\theta_{1}=\theta_{2}$ .
+2. 负向量唯一.
+设 $\beta_{1},\beta_{2}$ 均为 $\alpha$ 的负向量.则 $\beta_{1}=\beta_{1}+\theta=\beta_{1}+(\alpha+\beta_{2})=\theta+\beta_{2}=\beta_{2}.$
+3. $0\alpha = \theta ;(-1)\alpha = -\alpha ;\lambda \theta = \theta .$
+由 $\alpha = (1 + 0)\alpha = \alpha + 0\alpha$ 得, $0\alpha = \theta$.
+由 $\theta = (1 - 1)\alpha = \alpha +(-1)\alpha$ 得， $(-1)\alpha = -\alpha .$
+最后, $\lambda \theta = \lambda (0\alpha) = (\lambda \cdot 0)\alpha = 0\alpha = \theta .$
+4.  $\lambda\alpha=\theta$  当且仅当  $\lambda=0$  或  $\alpha=\theta$ .
+由3, 若 $\lambda = 0$ 或 $\alpha = \theta$, 则显然有 $\lambda \alpha = \theta$. 现设 $\lambda \neq 0$, $\lambda \alpha = \theta$, 则 $\alpha = (1 / \lambda)(\lambda \alpha) = (1 / \lambda)\theta = \theta$.
+接下来, 我们给出一些线性空间的实例.
+例5.6.4. 一些线性空间的例子, 其中F为数域.
+(1) 数组空间 $F^{n}$ 按数组向量的加法与数乘构成线性空间.
+[第 162 页]
+(2) 所有 $n$ 元的一次方程全体 $E_{n}$ 按线性方程的加法与数乘构成线性空间.
+(3) 所有次数不超过 $n$ 的多项式全体 $F_{n}[x]$ 按多项式的加法, 及数与多项式的乘法为数乘构成线性空间.
+(4) 所有 $m \times n$ 阶矩阵全体 $F^{m \times n}$ 按矩阵的加法与数乘构成线性空间.
+(5) $F = \mathbf{R}$, 所有复数全体 $\mathbf{C}$ 按复数的加法、实数与复数的乘法为数乘构成线性空间.
+(6) 用 $C_{n}$ 表示如下三角多项式全体
+$$C _ {n} = \left\{a _ {0} + a _ {1} \cos \theta + b _ {1} \sin \theta + \dots + a _ {n} \cos (n \theta) + b _ {n} \sin (n \theta) \mid a _ {i}, b _ {i} \in F \right\}.$$
+则在函数通常的加法、数与函数的乘法下构成线性空间. 特别地,  $\cos^{3}\theta \in C_{3}$ , 因为  $\cos^{3}\theta = \frac{3}{4}\cos\theta + \frac{1}{4}\cos(3\theta)$ .
+(7) 用 $C[a, b]$ 表示 $[a, b]$ 上连续函数的全体. 则 $C[a, b]$ 在函数通常的加法, 及数与函数乘法运算下构成线性空间.
+下面我们引进一般线性空间的子空间的概念.
+定义5.6.2. 设V是数域F上的线性空间, W是V的非空子集. 如果W对于线性空间V的加法与数乘运算保持封闭, 即
+1. 对任意 $\alpha, \beta \in W$, 有 $\alpha + \beta \in W$;
+2. 对任意 $\lambda \in F, \alpha \in W$, 有 $\lambda \alpha \in W$.
+则称W是V的子空间.
+容易验证, W 在 V 中的加法与数乘下构成数域 F 上的线性空间. 特别地,  $W = \{0\}$  及 W = V 也是 V 的子空间, 称为平凡子空间. 一类非平凡的子空间是生成子空间.
+定义5.6.3. 设 $V$ 是数域 $F$ 上的线性空间, $S \subset V$ 是非空集合. 则集合
+$$\langle S \rangle := \left\{\lambda_ {1} \alpha_ {1} + \lambda_ {2} \alpha_ {2} + \dots + \lambda_ {m} \alpha_ {m} \mid \lambda_ {1}, \lambda_ {2}, \dots , \lambda_ {m} \in F, \alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {m} \in S \right\}\tag{5.20}$$
+是一个子空间, 称为V的生成子空间, S称为生成子空间的生成元.
+下面, 我们给几个子空间的实例.
+[第 163 页]
+例5.6.5. 子空间的例子.
+(1) 在例 5.6.4 中,  $F_{n}[x]$  及  $C_{n}$  都是  $C[a,b]$  的子空间.
+(2) 设 $W$ 是 $F_{n}[x]$ 中满足 $p(-x) = p(x)$ 的多项式全体, 则 $W$ 是 $F_{n}[x]$ 的子空间, 且 $W = \langle 1, x^{2}, \ldots, x^{2m} \rangle$, 其中 $m = [n / 2]$.
+(3) 设 $A \in F^{n \times n}$, 则集合 $W := \{X \in F^{n \times n} | AX = 0\}$ 是 $F^{n \times n}$ 的子空间.
+证明. 我们以(2)为例给出证明. 设 $p, q \in W$, 则 $p(-x) = p(x), q(-x) = q(x)$. 于是
+$$(p + q) (- x) = p (- x) + q (- x) = p (x) + q (x) = (p + q) (x),$$
+即 $p+q\in W$ . 另一方面,
+$$(\lambda p) (- x) = \lambda p (- x) = \lambda p (x) = (\lambda p) (x).$$
+因此W在加法与数乘下封闭, 从而是 $F_{n}[x]$ 的子空间.
+另一方面, 由于W中多项式都是偶多项式, 故 $W=\{a_{0}+a_{2}x^{2}+\ldots+a_{2m}x^{2m}\}$ , 其中m=[n/2]. 因此,  $W=\langle1,x^{2},\ldots,x^{2m}\rangle$ . □
+最后对线性空间再做一点说明. 同三维几何空间不同, 一般线性空间中只定义了向量的加法与数乘运算, 没有定义向量长度、夹角等几何概念.
+§5.6.2 一般线性空间的理论
+本小节中, 我们将线性组合、线性相关、线性无关、极大无关组与秩、基与维数等概念推广到一般线性空间. 并且关于数组空间的有关结论都可以平行推广过来, 因为这些定义与结论只涉及到向量的加法与数乘, 而不管向量本身是什么, 向量的运算如何进行. 我们将主要的概念与结论重新叙述一遍, 但省略有关证明.
+定义5.6.4. 设 $V$ 是数域 $F$ 上的线性空间. 给定 $V$ 中的一组向量 $S = \{\alpha_{1}, \alpha_{2}, \ldots, \alpha_{m}\}$ 及一组数 $\lambda_{1}, \lambda_{2}, \ldots, \lambda_{m} \in F$, 称和式
+$$\lambda_ {1} \alpha_ {1} + \lambda_ {2} \alpha_ {2} + \dots + \lambda_ {m} \alpha_ {m}$$
+为向量组S的线性组合,  $\lambda_{1}, \lambda_{2}, \ldots, \lambda_{m}$  称为组合系数. 如果  $\alpha$  可以写成 S 的线性组合, 则称  $\alpha$  可以用 S 线性表示.
+显然,  $\alpha$  可以用 S 线性表示当且仅当  $\alpha \in \langle S \rangle$ .
+[第 164 页]
+定义5.6.5. 设V是数域F上的线性空间．称向量组 $T=\{\beta_{1},\beta_{2},\cdots,\beta_{l}\}$ 可以由向量组 $S=\{\alpha_{1},\alpha_{2},\cdots,\alpha_{m}\}$ 线性表示，如果每一个 $\beta_{i}(i=1,2,\ldots,l)$ 可以用向量组S线性表示. 如果向量组S与T可以相互线性表示，则称S与T等价.
+关于向量组的线性表示与等价有下列结论
+定理5.6.1. 设S与T是线性空间V的两个向量组. 则
+1. $T$ 是 $S$ 的线性组合, 当且仅当 $\langle T\rangle \subset \langle S\rangle$.
+2. U 是 T 的线性组合, T 是 S 的线性组合, 则 U 是 S 的线性组合.
+3. S与T等价, 当且仅当 $\langle S\rangle=\langle T\rangle$ .
+4. U与T等价, T与S等价, 则U与S等价.
+定义5.6.6. 设 $V$ 是数域 $F$ 上的线性空间, $S$ 是 $V$ 中一组向量. 当 $\# S \geq 2 (\# S$ 表示 $S$ 中元素的个数)时, 如果 $S$ 中某个向量能用其它向量线性表示, 则称 $S$ 线性相关. 否则, 称它们线性无关. 特别地, 一个向量组成的向量组线性相关, 当且仅当该向量为零向量.
+关于向量组的线性相关性,有下列等价的说法
+定理5.6.2. 设  $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{m}$  是线性空间 V 中的向量, 则下列说法等价
+1.  $\alpha_{1},\alpha_{2},\cdots,\alpha_{m}$  线性相关;
+2. 存在不全为零的常数  $\lambda_{1}, \lambda_{2}, \cdots, \lambda_{m} \in F$ ，使得  $\sum_{i=1}^{m} \lambda_{i} \alpha_{i} = \theta;$
+3. 存在向量 $\alpha_{i}$ 使得 $\alpha_{i} = \sum_{j \neq i} \lambda_{j} \alpha_{j}$;
+4. 存在向量  $\alpha_{i}$  使得  $\alpha_{i} \in \langle \alpha_{1}, \ldots, \alpha_{i-1}, \alpha_{i+1}, \ldots, \alpha_{m} \rangle$ ;
+5. 存在  $\alpha_{i}$  使得  $\langle\alpha_{1},\alpha_{2},\ldots,\alpha_{m}\rangle=\langle\alpha_{1},\ldots,\alpha_{i-1},\alpha_{i+1},\ldots,\alpha_{m}\rangle$ .
+定理5.6.3. 设向量组 $S_{1}$ 是向量组S的一个子集. 那么, 如果 $S_{1}$ 线性相关, 则S也线性相关; 如果S线性无关, 则 $S_{1}$ 也线性无关.
+定义5.6.7. 设S是线性空间V中的向量组．若S的子集 $S_{1}$ 线性无关，且对任意 $\alpha\in S\backslash S_{1},S_{1}\cup\{\alpha\}$ 线性相关，则称 $S_{1}$ 为向量组S的极大无关组.
+定理5.6.4. 向量组的极大无关组有下列等价的说法
+[第 165 页]
+§5.6 一般线性空间
+1. 向量组S的子集 $S_{1}$ 是S的极大无关组;
+2. 向量组S可以由子集 $S_{1}$ 线性表示, 且 $S_{1}$ 线性无关;
+3. 向量组S与它的子集 $S_{1}$ 等价, 且 $S_{1}$ 线性无关;
+4.  $\langle S\rangle=\langle S_{1}\rangle,$  且  $S_{1}$  线性无关.
+推论5.6.1. 向量组的任何两个极大无关组彼此等价.
+定理5.6.5. 两个等价向量组 $\{\alpha_{1},\alpha_{2},\cdots,\alpha_{r}\}$ 和 $\{\beta_{1},\beta_{2},\cdots,\beta_{s}\}$ 分别线性无关, 则r=s.
+推论5.6.2. 设 $\alpha_{i_{1}},\alpha_{i_{2}},\cdots,\alpha_{i_{r}}$ 和 $\alpha_{j_{1}},\alpha_{j_{2}},\cdots,\alpha_{j_{s}}$ 分别为 $\alpha_{1},\alpha_{2},\cdots,\alpha_{m}$ 的两个极大无关组, 则r=s.
+定义5.6.8. 向量组 $S$ 的极大无关组的向量的个数称为向量组的秩, 记为 $\operatorname{rank}(S)$ 或 $r(S)$.
+关于秩, 我们有下列有用的结论.
+定理5.6.6. 设 $S, T$ 是线性空间 $V$ 中的向量组. 则有下列结论
+1. S线性无关当且仅当 $\text{rank}(S) = \#S$, 这里 $\#S$ 表示S中向量的个数.
+2. S线性相关当且仅当 $\text{rank}(S) < \#S$.
+3. 若T可以用S线性表示, 则 $\text{rank}(T) \leq \text{rank}(S)$ .
+4. 若T与S等价, 则 $\text{rank}(T) = \text{rank}(S)$ .
+5. 若T可以用S线性表示, 且T线性无关, 则 $\#T \leq \#S$ .
+例5.6.6. 设 $C_n$ 是例5.6.4中由三角多项式构成的线性空间．求向量组 $S = \{1, \sin x, \cos x, \sin^2 x, \cos^2 x, \sin 2x, \cos 2x\}$ 的一组极大无关组.
+解. 由于 $\cos^2 x = \frac{1}{2} + \frac{1}{2}\cos 2x, \quad \sin^2 x = \frac{1}{2} - \frac{1}{2}\cos 2x,$ 因此，$S$ 等价于 $S_1 = \{1, \cos x, \sin x, \cos 2x, \sin 2x\}$. 下面证明，$S_1$ 线性无关，从而是 $S$ 的极大无关组.
+设 $a_{0}+a_{1}\cos x+b_{1}\sin x+a_{2}\cos 2x+b_{2}\sin 2x=0$ . 分别令 $x=0,\pi/4,\pi/2,3\pi/4,\pi$ 得
+$$\left\{ \begin{array}{l} a _ {0} + a _ {1} + a _ {2} = 0 \\ a _ {0} + \frac {\sqrt {2}}{2} a _ {1} + \frac {\sqrt {2}}{2} b _ {1} + b _ {2} = 0 \\ a _ {0} + b _ {1} - a _ {2} = 0 \\ a _ {0} - \frac {\sqrt {2}}{2} a _ {1} + \frac {\sqrt {2}}{2} b _ {1} - b _ {2} = 0 \\ a _ {0} - a _ {1} + a _ {2} = 0 \end{array} \right.$$
+[第 166 页]
+解得 $a_{0}=a_{1}=a_{2}=b_{1}=b_{2}=0$ 。从而 $S_{1}$ 线性无关(也可以用Fourier分析的理论证明 $S_{1}$ 线性无关).
+由于 $S_{2} = \{1, \cos x, \sin x, \sin^{2}x, \sin 2x\}$ 与 $S_{1}$ 等价，因此，$S_{2}$ 也是一个极大无关组.
+例5.6.7. 设线性空间 $V$ 的向量组 $S$ 含 $m$ 个向量, 且其秩为 $r$. 在 $S$ 中任取 $s$ 个向量组成向量组 $T$. 证明: $\operatorname{rank}(T) \geq r + s - m$.
+证明. 若 $r + s - m \leq 0$, 结论显然成立. 下设 $r + s - m > 0$. 设 $S_{1}$ 为 $S$ 的极大无关组, 则 $T$ 至少含 $s - (m - r) = r + s - m$ 个 $S_{1}$ 中的向量, 这 $r + s - m$ 个向量线性无关. 因此, $\operatorname{rank}(T) \geq r + s - m$.
+下面我们引进线性空间的基、坐标与维数的概念.
+定义5.6.9. 设V是数域F上的线性空间. S是V中一组线性无关向量. 如果V中任何向量都能表示成S的线性组合, 则称S为V的一组基. 若S是有限的, 则称V为有限维线性空间, S中元素的个数称为线性空间V的维数, 记为 $\dim V$ . 不是有限维的线性空间称为无限维线性空间, 其维数为无穷大. 设基 $S=\{\alpha_{1},\alpha_{2},\ldots,\alpha_{n}\}$ 是有限的, 则任意向量 $\alpha\in V$ 可以唯一地表示成S的线性组合
+$$\alpha = \lambda_ {1} \alpha_ {1} + \lambda_ {2} \alpha_ {2} + \dots + \lambda_ {n} \alpha_ {n}.\tag{5.21}$$
+称 $(\lambda_{1},\lambda_{2},\ldots,\lambda_{n})$ 为向量 $\alpha$ 在基S下的坐标.
+除非特别申明, 本书只考虑有限维线性空间. 有限维的线性空间一定可以由一组向量生成.
+(5.21)可以写成向量形式
+$$\alpha = (\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}) \left( \begin{array}{c} \lambda_ {1} \\ \lambda_ {2} \\ \vdots \\ \lambda_ {n} \end{array} \right).\tag{5.22}$$
+注意, 上式完全是一个形式上的记号, 因为 $(\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n})$ 可能没有实质上的意义, 但运算规律跟矩阵运算相同.
+定理5.6.7. 设 $V$ 是数域 $F$ 上的有限维线性空间. 则存在线性无关向量组 $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n} \in V$ 使得 $V = \langle \alpha_{1}, \alpha_{2}, \ldots, \alpha_{n} \rangle$.
+证明. 同定理 5.4.1 的证明一样.
+[第 167 页]
+§5.7 子空间运算*
+显然, 基实际上是空间作为向量组的极大无关组. 而空间 $V$ 的维数实际上是 $V$ 作为向量组的秩. 关于线性空间的维数与基有下列结论.
+定理5.6.8. 设 $V$ 是数域 $F$ 上的 $n$ 维线性空间. 则有
+1. V中任意 $n+1$ 个向量线性相关.
+2. V中任意n个线性无关向量为一组基.
+3. 设 $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{r} \in V$ 是 $r(r < n)$ 个线性无关的向量，则存在 $V$ 中的向量 $\alpha_{r+1}, \ldots, \alpha_{n}$ 使得 $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n}$ 构成 $V$ 的一组基。称 $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n}$ 为线性无关组 $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{r}$ 的一组扩充基。
+线性空间的基与坐标的变换, 同数组空间完全类似, 不再赘述.
+例5.6.8. 设C是例5.6.4中定义的复数构成的线性空间. 求它的一组基与维数.
+解. 首先证明 $\{1, i\}$ 是 $\mathbf{C}$ 的一组基. 实际上, 设有实数 $a, b$ 使得 $a + bi = 0$, 则必有 $a = b = 0$, 即 $\{1, i\}$ 在 $\mathbf{R}$ 上线性无关. 另一方面, 任何复数都可以写成 $\{1, i\}$ 在 $\mathbf{R}$ 上的线性组合 $a + bi$. 因此, $\{1, i\}$ 构成 $\mathbf{C}$ 的一组基. 从而 $\dim \mathbf{C} = 2$.
+如果数域 $F = \mathbf{C}$, 则任何非零数复数都是 $\mathbf{C}$ 的一个基, 从而其维数为1.
+例5.6.9. 考虑例5.6.4中 $m \times n$ 阶矩阵构成的线性空间 $F^{m \times n}$. 求 $F^{m \times n}$ 的一组基与维数. 解. 用 $E_{ij} \in F^{m \times n}$ 表示 $(i, j)$ 元素为1, 其余元素为零的矩阵. 先证 $E_{ij}, i = 1, 2, \ldots, m, j = 1, 2, \ldots, n$ 线性无关. 由
+$$\sum_ {i = 1} ^ {m} \sum_ {j = 1} ^ {n} \lambda_ {i j} E _ {i j} = (\lambda_ {i j}) _ {m \times n} = 0$$
+知 $\lambda_{ij}=0, i=1,2,\ldots,m, j=1,2,\ldots,n,$ 从而 $\{E_{ij}\}$ 线性无关. 另一方面, 任何矩阵 $A=(a_{ij})\in F^{m\times n}$ 可以写成 $\{E_{ij}\}$ 的线性组合
+$$A = \sum_ {i = 1} ^ {m} \sum_ {j = 1} ^ {n} a _ {i j} E _ {i j}.$$
+因此, $\{E_{ij}\}$ 构成 $F^{m \times n}$ 的一组基, 并且 $\dim F^{m \times n} = mn$.
+§5.7 子空间运算*
+本节我们讨论一般线性空间的子空间的运算, 如求交, 求和等.
+[第 168 页]
+§5.7.1 子空间的交*
+设 $W_{1}, W_{2}$ 是数域F上的线性空间V的子空间. 我们要问, $W_{1}$ 与 $W_{2}$ 的交集还是不是子空间? 如果是的话, 如何求它的基与维数?
+对于三维几何空间, 两个过原点的平面对应两个子空间, 它们的交集是过原点的直线或平面, 因而也对应子空间. 这个观察对一般线性空间也成立.
+定理5.7.1. 设 $W_{1}, W_{2}$ 是数域 $F$ 上的线性空间 $V$ 的子空间, 则 $W_{1}$ 与 $W_{2}$ 的交 $W_{1} \cap W_{2}$ 也是 $V$ 的子空间.
+证明. 设 $\alpha, \beta \in W_1 \cap W_2$，则 $\alpha, \beta \in W_1$ 且 $\alpha, \beta \in W_2$。由于 $W_1, W_2$ 是子空间，$\alpha + \beta \in W_1$ 且 $\alpha + \beta \in W_2$。因此，$\alpha + \beta \in W_1 \cap W_2$。
+另一方面, 若 $\lambda \in F$, $\alpha \in W_1 \cap W_2$, 则 $\lambda \alpha \in W_1$ 且 $\lambda \alpha \in W_2$. 因而 $\lambda \alpha \in W_1 \cap W_2$. 这表明 $W_1 \cap W_2$ 是 $V$ 的子空间.
+上述定理的结论可以推广到任意多个子空间的情形, 即任意个子空间的交为子空间.
+例5.7.1. 设 $V = F^4$ ， $W_{1} = \langle \alpha_{1},\alpha_{2},\alpha_{3}\rangle$ ， $W_{2} = \langle \beta_{1},\beta_{2}\rangle$ .其中 $\alpha_{1} = (1,2,1,0)$ ， $\alpha_{2} = (-1,1,1,1),\alpha_{3} = (0,3,2,1),\beta_{1} = (2, - 1,0,1),\beta_{2} = (1, - 1,3,7)$ .求 $W_{1}\cap W_{2}$
+$$\alpha \in W _ {1} \cap W _ {2}$$
+$$\alpha = x _ {1} \alpha_ {1} + x _ {2} \alpha_ {2} + x _ {3} \alpha_ {3} = y _ {1} \beta_ {1} + y _ {2} \beta_ {2}.$$
+上式是关于 $x_{1},x_{2},x_{3},y_{1},y_{2}$ 的线性方程组, 解得 $(y_{1},y_{2})=(3,-1)t,t$ 为任意参数. 于是 $\alpha=y_{1}\beta_{1}+y_{2}\beta_{2}=(5,-2,-3,-4)t$ . 因此, $W_{1}\cap W_{2}=\langle\alpha\rangle$ , 这里 $\alpha=(5,-2,-3,-4)$ . □
+§5.7.2 子空间的和*
+接下来, 我们讨论子空间的和. 设 $W_{1}, W_{2}$ 是 $V$ 的子空间, $W_{1} \cup W_{2}$ 是不是子空间? 从三维几何空间观察, 结论是否定的. 例如, 过原点的两条不同直线的并不能对应子空间, 包含这两条直线的子空间至少要包含这两条直线所在的平面. 一般地, 要想构造包含 $W_{1} \cup W_{2}$ 的子空间 $W$, $W$ 必须包含 $W_{1}$ 中的任何向量 $\alpha_{1}$ 与 $W_{2}$ 中的任何向量 $\alpha_{2}$ 的和. 恰巧, 由 $W_{1}$ 中的任何向量 $\alpha_{1}$ 与 $W_{2}$ 中的任何向量 $\alpha_{2}$ 的和构成的集合是子空间.
+定理5.7.2. 设 $W_{1}, W_{2}$ 是线性空间V的子空间. $W_{1}$ 与 $W_{2}$ 的和
+$$W _ {1} + W _ {2} := \left\{\alpha_ {1} + \alpha_ {2} \mid \alpha_ {1} \in W _ {1}, \alpha_ {2} \in W _ {2} \right\}\tag{5.23}$$
+构成V的子空间, 并且它是包含 $W_{1}\cup W_{2}$ 的最小子空间.
+[第 169 页]
+证明. 设 $\alpha := \alpha_{1} + \alpha_{2} \in W_{1} + W_{2}, \beta := \beta_{1} + \beta_{2} \in W_{1} + W_{2}$, 这里 $\alpha_{1}, \beta_{1} \in W_{1}, \alpha_{2}, \beta_{2} \in W_{2}$. 由于 $\alpha_{1} + \beta_{1} \in W_{1}, \alpha_{2} + \beta_{2} \in W_{2}$, 因此 $\alpha + \beta = (\alpha_{1} + \beta_{1}) + (\alpha_{2} + \beta_{2}) \in W_{1} + W_{2}$. 另一方面, 对 $\lambda \in F, \lambda \alpha = \lambda \alpha_{1} + \lambda \alpha_{2} \in W_{1} + W_{2}$. 由于 $W_{1} + W_{2}$ 在加法与数乘下封闭, 因此 $W_{1} + W_{2}$ 是子空间.
+接下来证明 $W_{1}+W_{2}$ 是包含 $W_{1}\cup W_{2}$ 的最小子空间.对任意 $\alpha_{1}\in W_{1},\alpha_{1}=\alpha_{1}+0\in W_{1}+W_{2}$ ，因此 $W_{1}\subset W_{1}+W_{2}$ .同理, $W_{2}\subset W_{1}+W_{2}$ .故 $W_{1}\cup W_{2}\subset W_{1}+W_{2}$ .下设W是包含 $W_{1}\cup W_{2}$ 的任意子空间.则任意 $\alpha_{1}\in W_{1},\alpha_{2}\in W_{2},\alpha_{1},\alpha_{2}\in W$ ,从而 $\alpha_{1}+\alpha_{2}\in W$ .这说明 $W_{1}+W_{2}\subset W$ ,即 $W_{1}+W_{2}$ 是包含 $W_{1}\cup W_{2}$ 的最小子空间.☐
+下面, 我们研究 $W_{1}+W_{2}$ 的基与维数.
+定理5.7.3. 设 $\alpha_{1},\ldots ,\alpha_{r}$ 与 $\beta_{1},\ldots ,\beta_{s}$ 是线性空间 $V$ 的两个向量组. 则有
+$$\langle \alpha_ {1}, \dots , \alpha_ {r} \rangle + \langle \beta_ {1}, \dots , \beta_ {s} \rangle = \langle \alpha_ {1}, \dots , \alpha_ {r}, \beta_ {1}, \dots , \beta_ {s} \rangle .$$
+证明. 由生成子空间及子空间和的定义, 结论显然(请读者完成).
+例5.7.2. 设 $V, W_{1}$ 与 $W_{2}$ 如例5.7.1所示. 求 $W_{1} + W_{2}$ 的一组基与维数.
+解. 由定理 5.7.3, $W_{1} + W_{2} = \langle \alpha_{1},\alpha_{2},\alpha_{3},\beta_{1},\beta_{2}\rangle$。 易算得 $\alpha_{1},\alpha_{2},\alpha_{3},\beta_{1},\beta_{2}$ 的一个极大无关组 $\alpha_{1},\alpha_{2},\beta_{1}$, 因而 $W_{1} + W_{2} = \langle \alpha_{1},\alpha_{2},\beta_{1}\rangle$, 且 $\alpha_{1},\alpha_{2},\beta_{1}$ 为 $W_{1} + W_{2}$ 的一组基. 因此, $\dim (W_1 + W_2) = 3$.
+关于子空间的和的维数有下面的结论.
+定理5.7.4. (维数公式) 设 $W_{1}, W_{2}$ 是线性空间V的子空间. 则
+$$\dim (W _ {1} + W _ {2}) = \dim W _ {1} + \dim W _ {2} - \dim (W _ {1} \cap W _ {2}).\tag{5.24}$$
+证明. 设 $\dim W_1 = r$, $\dim W_2 = s$, $\dim (W_1 \cap W_2) = t$. 再设 $\alpha_1, \alpha_2, \ldots, \alpha_t$ 是 $W_1 \cap W_2$ 的一组基, 则它可以分别扩充为 $W_1$ 与 $W_2$ 的一组基
+$$\begin{array}{c} \alpha_ {1}, \ldots , \alpha_ {t}, \beta_ {1}, \ldots , \beta_ {r - t}, \\ \alpha_ {1}, \ldots , \alpha_ {t}, \gamma_ {1}, \ldots , \gamma_ {s - t} \end{array}$$
+于是
+$$W _ {1} + W _ {2} = \left\langle \alpha_ {1}, \dots , \alpha_ {t}, \beta_ {1}, \dots , \beta_ {r - t}, \gamma_ {1}, \dots , \gamma_ {s - t} \right\rangle .$$
+如果 $\alpha_{1},\ldots ,\alpha_{t},\beta_{1},\ldots ,\beta_{r - t},\gamma_{1},\ldots ,\gamma_{s - t}$ 线性无关，则它构成 $W_{1} + W_{2}$ 的一组基，则有 $\dim (W_1 + W_2) = t + (r - t) + (s - t) = r + s - t,$ 从而定理得证.
+下证 $\alpha_{1},\ldots,\alpha_{t},\beta_{1},\ldots,\beta_{r-t},\gamma_{1},\ldots,\gamma_{s-t}$ 线性无关.
+[第 170 页]
+$$\text { 设 } \lambda_ {1} \alpha_ {1} + \dots + \lambda_ {t} \alpha_ {t} + \mu_ {1} \beta_ {1} + \dots + \mu_ {r - t} \beta_ {r - t} + v _ {1} \gamma_ {1} + \dots + v _ {s - t} \gamma_ {s - t} = 0. \text { 则 }$$
+$$\lambda_ {1} \alpha_ {1} + \dots + \lambda_ {t} \alpha_ {t} + \mu_ {1} \beta_ {1} + \dots + \mu_ {r - t} \beta_ {r - t} = - v _ {1} \gamma_ {1} - \dots - v _ {s - t} \gamma_ {s - t} \in W _ {1} \cap W _ {2}.$$
+故存在常数 $\delta_{1},\ldots,\delta_{t}$ 使得
+$$- v _ {1} \gamma_ {1} - \dots - v _ {s - t} \gamma_ {s - t} = \delta_ {1} \alpha_ {1} + \dots + \delta_ {t} \alpha_ {t}.$$
+移项得
+$$\nu_ {1} \gamma_ {1} + \dots + \nu_ {s - t} \gamma_ {s - t} + \delta_ {1} \alpha_ {1} + \dots + \delta_ {t} \alpha_ {t} = 0.$$
+由于 $\alpha_{1},\ldots ,\alpha_{t},\gamma_{1},\ldots ,\gamma_{s - t}$ 线性无关，必有 $v_{1} = \dots = v_{s - t} = 0,$ 进而有
+$$\lambda_ {1} \alpha_ {1} + \dots + \lambda_ {t} \alpha_ {t} + \mu_ {1} \beta_ {1} + \dots + \mu_ {r - t} \beta_ {r - t} = 0.$$
+再由 $\alpha_{1},\ldots ,\alpha_{t},\beta_{1},\ldots ,\beta_{r - t}$ 的线性无关性得 $\lambda_1 = \dots = \lambda_t = \mu_1 = \dots = \mu_{r - t} = 0.$ 因此，$\alpha_{1},\ldots ,\alpha_{t},\beta_{1},\ldots ,\beta_{r - t},\gamma_{1},\ldots ,\gamma_{s - t}$ 线性无关.定理证毕. □
+推论5.7.1. 设 $W_{1}, W_{2}$ 是线性空间V的子空间, 则
+$$\dim (W _ {1} + W _ {2}) = \dim W _ {1} + \dim W _ {2} \Leftrightarrow W _ {1} \cap W _ {2} = 0.$$
+我们回头看例 5.7.2, 由于  $\dim W_{1}=2$ ,  $\dim W_{2}=2$ ,  $\dim(W_{1}\cap W_{2})=1$ ,  $\dim(W_{1}+W_{2})=3$ , 因此符合上述定理的结论.
+§5.7.3 子空间的直和*
+设V是三维几何空间, $W_{1}$ 与 $W_{2}$ 分别是过原点的平面与直线,且直线不位于平面之内.显然, $V=W_{1}+W_{2}$ ,并且任何向量 $\alpha\in V,\alpha$ 可以唯一地分解为 $\alpha=\alpha_{1}+\alpha_{2}$ ,这里 $\alpha_{1}\in W_{1},\alpha_{2}\in W_{2}$ .此时,称和式 $W_{1}+W_{2}$ 为直和.由此引出
+定义5.7.1. 设 $W_{1}, W_{2}$ 是数域F上的线性空间V的子空间. 如果任意 $\alpha \in W_{1} + W_{2}$ 可以唯一地写成
+$$\alpha = \alpha_ {1} + \alpha_ {2}, \quad \alpha_ {1} \in W _ {1}, \alpha_ {2} \in W _ {2}.$$
+则称和式 $W_{1}+W_{2}$ 为直和,记为 $W_{1}\oplus W_{2}$ .如果 $V=W_{1}\oplus W_{2}$ ,则称 $W_{1}$ 是 $W_{2}$ 的补空间.此时, $W_{2}$ 也是 $W_{1}$ 的补空间.
+关于子空间的直和有以下等价表示
+定理5.7.5. 设 $W_{1}, W_{2}$ 是线性空间V的子空间. 则下列命题等价
+1.  $W_{1} + W_{2}$  为直和;
+[第 171 页]
+§5.7 子空间运算*
+2.  $W_{1} \cap W_{2} = 0;$
+3. $\dim (W_1 + W_2) = \dim W_1 + \dim W_2;$
+4. 设  $\alpha_{1},\ldots,\alpha_{r}$  是  $W_{1}$  的一组基， $\beta_{1},\ldots,\beta_{s}$  是  $W_{2}$  的一组基，则  $\alpha_{1},\ldots,\alpha_{r},\beta_{1},\ldots,\beta_{s}$  构成  $W_{1}+W_{2}$  的一组基.
+证明.⇒3. 若 $W_{1}\cap W_{2}\neq0$ ，任取非零向量 $\beta\in W_{1}\cap W_{2}$ ，则向量 $\alpha\in W_{1}+W_{2}$ 有两种不同的表示 $\alpha=\alpha_{1}+\alpha_{2}=(\alpha_{1}+\beta)+(\alpha_{2}-\beta)$ ，矛盾.因此 $W_{1}\cap W_{2}=0$ .
+$3 \Rightarrow 2$. 设 $\alpha \in W_1 + W_2$ 有两种不同的表示 $\alpha = \alpha_1 + \alpha_2 = \beta_1 + \beta_2$, 这里 $\alpha_1, \beta_1 \in W_1, \alpha_2, \beta_2 \in W_2, \alpha_1 \neq \beta_1, \alpha_2 \neq \beta_2$. 于是 $0 \neq \alpha_1 - \beta_1 = \beta_2 - \alpha_2 \in W_1 \cap W_2$. 故 $W_1 \cap W_2 \neq 0$, 矛盾. $3 \Leftrightarrow 4$. 由推论5.7.1立即得到.
+$4 \Rightarrow 5$ . 设  $\alpha_{1}, \ldots, \alpha_{r}$  是  $W_{1}$  的基,  $\beta_{1}, \ldots, \beta_{s}$  是  $W_{2}$  的基. 则有
+$$W _ {1} + W _ {2} = \left\langle \alpha_ {1}, \dots , \alpha_ {r}, \beta_ {1}, \dots , \beta_ {s} \right\rangle .$$
+由 $\dim(W_{1}+W_{2})=\dim W_{1}+\dim W_{2}$ 有, $\alpha_{1},\ldots,\alpha_{r},\beta_{1},\ldots,\beta_{s}$ 构成 $W_{1}+W_{2}$ 的一组基. $5\Rightarrow4$ . 结论显然.
+定理证毕.
+例5.7.3. 设 $V = F^{n \times n}$ 是数域 $F$ 上所有 $n$ 阶方阵按矩阵的加法与数乘构成的线性空间，$W_1$ 是所有 $n$ 阶对称矩阵的全体，$W_2$ 是所有 $n$ 阶反对称方阵全体。证明：$W_1, W_2$ 是 $V$ 的子空间，且 $V = W_1 \oplus W_2$。
+证明. 由于对称方阵在矩阵加法与数乘运算下封闭, 因此 $W_{1}$ 是V的子空间. 类似地, $W_{2}$ 也是V的子空间.
+对任意 $A \in V, A = \frac{1}{2}(A + A^T) + \frac{1}{2}(A - A^T) \in W_1 + W_2$. 因此 $V = W_1 + W_2$. 另一方面，对任意 $A \in W_1 \cap W_2$ 有 $A = A^T = -A^T$，从而 $A = 0$. 因此 $W_1 \cap W_2 = 0$.
+综上所述, $V=W_{1}\oplus W_{2}$ .
+习题四
+1. 设 $\mathbf{a}_1 = (1,2, - 1)$, $\mathbf{a}_2 = (2,0,3)$, $\mathbf{a}_3 = (2,1,0)$ 是三维几何空间中的三个向量. 能否将其中某一个向量写成其它两个向量的线性组合? 这三个向量是否共面?
+2. 设 $\mathbf{a}_1 = (0,1, - 2),\mathbf{a}_2 = (2,1,3),\mathbf{a}_3 = (4,5,0)$ 是三维几何空间中的三个向量. 能否将其中某一个向量写成其它两个向量的线性组合? 这三个向量是否共面?
+[第 172 页]
+3. 在 $F^{4}$ 中, 判断向量b能否写成 $a_{1}, a_{2}, a_{3}$ 的线性组合. 若能, 请写出一种表示方式.
+$$\begin{array}{l l} (1) & \mathbf {a} _ {1} = (- 1, 3, 0, - 5), \mathbf {a} _ {2} = (2, 0, 7, - 3), \\ & \mathbf {a} _ {3} = (- 4, 1, - 2, 6), \mathbf {b} = (8, 3, - 1, - 2 5). \end{array}$$
+$$\begin{array}{l l} (2) & \mathbf {a} _ {1} = (3, - 5, 2, - 4) ^ {T}, \mathbf {a} _ {2} = (- 1, 7, - 3, 6) ^ {T}, \\ & \mathbf {a} _ {3} = (3, 1 1, - 5, 1 0) ^ {T}, \mathbf {b} = (2, - 3 0, 1 3, - 2 6) ^ {T}. \end{array}$$
+4. 设 $\mathbf{a}_1 = (1,0,0,0), \mathbf{a}_2 = (1,1,0,0), \mathbf{a}_3 = (1,1,1,0), \mathbf{a}_4 = (1,1,1,1)$. 证明: $F^4$ 中任何向量可以写成 $\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_3, \mathbf{a}_4$ 的线性组合, 且表示唯一.
+5. 设 $\mathbf{P}_i = (x_i, y_i, z_i)$, $i = 1, 2, 3, 4$ 是三维几何空间中的点. 证明: $\mathbf{P}_i$, $i = 1, 2, 3, 4$ 共面的条件是
+$$\left| \begin{array}{c c c c} x _ {1} & y _ {1} & z _ {1} & 1 \\ x _ {2} & y _ {2} & z _ {2} & 1 \\ x _ {3} & y _ {3} & z _ {3} & 1 \\ x _ {4} & y _ {4} & z _ {4} & 1 \end{array} \right| = 0.$$
+6. 设 $\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_3, \mathbf{a}_4$ 是三维几何空间中的四个向量. 证明它们必线性相关.
+7. 设 $\mathbf{b}_1, \mathbf{b}_2, \ldots, \mathbf{b}_s$ 中每一个向量是 $n$ 维数组向量 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_r$ 的线性组合。证明: $\mathbf{b}_1, \mathbf{b}_2, \ldots, \mathbf{b}_s$ 的任何线性组合都是 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_r$ 的线性组合。
+8. 证明: 对线性方程组做初等变换后得到的线性方程组中的每一个方程都是原方程组的线性组合.
+9. 判别下列线性方程组是否线性相关
+(1)
+$$\left\{ \begin{array}{l} - x _ {1} + 2 x _ {2} + 3 x _ {3} = 4 \\ 5 x _ {1} - x _ {3} = - 1 \\ 8 x _ {1} - 6 x _ {2} - 1 0 x _ {3} = - 1 3 \end{array} \right.$$
+(2)
+$$\left\{ \begin{array}{l} 2 x _ {1} + 3 x _ {2} + x _ {3} + 5 x _ {4} = 2 \\ 3 x _ {1} + 2 x _ {2} + 4 x _ {3} + 2 x _ {4} = 3 \\ x _ {1} + x _ {2} + 2 x _ {3} + 4 x _ {4} = 1 \end{array} \right.$$
+10. 判断下列向量组是否线性相关
+(1) $\mathbf{a}_1 = (1,1,1),\mathbf{a}_2 = (1, - 2,3),\mathbf{a}_3 = (1,4,9);$
+(2) $\mathbf{a}_1 = (3,1,2, - 4),\mathbf{a}_2 = (1,0,5,2),\mathbf{a}_3 = (-1,2,0,3);$
+(3)  $\mathbf{a}_{1}=(-2,1,0,3),\mathbf{a}_{2}=(1,-3,2,4),\mathbf{a}_{3}=(3,0,2,-1),\mathbf{a}_{4}=(2,-2,4,6);$
+(4) $\mathbf{a}_1 = (1, - 1,0,0),\mathbf{a}_2 = (0,1, - 1,0),\mathbf{a}_3 = (0,0,1, - 1),\mathbf{a}_4 = (-1,0,0,1).$
+[第 173 页]
+11. 证明: 任何一个经过以下两个平面
+$$A _ {1} x + B _ {1} y + C _ {1} z + D _ {1} = 0, \quad A _ {2} x + B _ {2} y + C _ {2} z + D _ {2} = 0$$
+交线的平面的方程能写成:
+$$\lambda \left(A _ {1} x + B _ {1} y + C _ {1} z + D _ {1}\right) + \mu \left(A _ {2} x + B _ {2} y + C _ {2} z + D _ {2}\right) = 0.$$
+其中 $\lambda,\mu$ 为不全为零的常数.
+12. 下列说法是否正确? 为什么?
+(1) 若  $a_{1}, a_{2}, \ldots, a_{s} (s \geq 2)$  线性相关, 则其中每一个向量都可以表示成其它向量的线性组合.
+(2) 如果向量组的任何不是它本身的子向量组都线性无关, 则该向量组也线性无关.
+(3) 若向量组线性无关, 则它的任何子向量组都线性无关.
+(4) $F^n$ 的 $n + 1$ 个向量组成的向量组必线性相关.
+(5) 设  $a_{1}, a_{2}, \ldots, a_{s}$  线性无关，则  $a_{1} + a_{2}, a_{2} + a_{3}, \ldots, a_{s} + a_{1}$  必线性无关.
+(6) 设  $a_{1}, a_{2}, \ldots, a_{s}$  线性相关，则  $a_{1} + a_{2}, a_{2} + a_{3}, \ldots, a_{s} + a_{1}$  必线性相关.
+(7) 设  $a_{1}, a_{2}, \ldots, a_{s} \in F^{n}$  线性无关, 则它们的加长向量组也必线性无关.
+(8) 设  $a_{1}, a_{2}, \ldots, a_{s} \in F^{n}$  线性相关, 则它们的加长向量组也必线性相关.
+13. 若向量组 $a_{1},a_{2},\ldots,a_{n}\in F^{n}$ 线性无关, 而 $a_{1},a_{2},\ldots,a_{n},b$ 线性相关, 则b可以表示成 $a_{1},a_{2},\ldots,a_{n}$ 的线性组合, 且表示唯一.
+14. 证明向量表示基本定理: 设 $a_{1}, a_{2}, \ldots, a_{n} \in F^{n}$ 线性无关, 则任意向量 $b \in F^{n}$ 可以表示为 $a_{1}, a_{2}, \ldots, a_{n}$ 的线性组合, 且表示唯一.
+15. 证明: 非零向量组 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_s$ 线性无关的充要条件是, 每个 $\mathbf{a}_i (1 < i \leq s)$ 都不能用它前面的向量线性表示.
+16. 设向量组  $a_{1}, a_{2}, \ldots, a_{s}$  线性无关,  $b = \lambda_{1}a_{1} + \ldots + \lambda_{s}a_{s}$ . 如  $\lambda_{i} \neq 0$ , 则用 b 代替  $a_{i}$  后, 向量组  $a_{1}, \ldots, a_{i-1}, b, a_{i+1}, \ldots, a_{s}$  线性无关.
+17. 设向量组 $a_{1},a_{2},\ldots,a_{r}$ 线性无关，且 $a_{1},a_{2},\ldots,a_{r}$ 可以由向量组 $b_{1},b_{2},\ldots,b_{r}$ 线性表示，则 $b_{1},b_{2},\ldots,b_{r}$ 也线性无关.
+18. 证明: 向量组等价具有自身性、对称性与传递性.
+[第 174 页]
+19. 求下列向量组的极大无关组与秩
+(1)  $\mathbf{a}_{1}=(3,-2,0),\mathbf{a}_{2}=(27,-18,0),\mathbf{a}_{3}=(-1,5,8).$ 
+(2)  $\mathbf{a}_{1}=(1,-1,2,4),\mathbf{a}_{2}=(0,3,1,2),\mathbf{a}_{3}=(3,0,7,14),\mathbf{a}_{4}=(1,-1,2,0),$ $\mathbf{a}_{5}=(2,1,5,6).$ 
+(3)  $\mathbf{a}_{1}=(0,1,2,3),\mathbf{a}_{2}=(1,2,3,4),\mathbf{a}_{3}=(3,4,5,6),\mathbf{a}_{4}=(4,3,2,1),$ $\mathbf{a}_{5}=(6,5,4,3).$
+20. 证明： $a_{i_{1}},a_{i_{2}},\cdots,a_{i_{r}}$ 是 $a_{1},a_{2},\cdots,a_{m}$ 的极大无关组，当且仅当 $\langle a_{1},a_{2},\cdots,a_{m}\rangle=\langle a_{i_{1}},a_{i_{2}},\cdots,a_{i_{r}}\rangle$ 且 $a_{i_{1}},a_{i_{2}},\cdots,a_{i_{r}}$ 线性无关.
+21. 证明: 若向量 $\mathbf{b}$ 可以由向量组 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_m$ 线性表示, 则 $\mathbf{b}$ 可以由 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_m$ 的极大无关组表示.
+22. 设向量组 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_m$ 的秩为 $r$, 则其中任何 $r$ 个线性无关的向量构成 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_m$ 的极大无关组.
+23. 设向量组 $a_{1},a_{2},\ldots,a_{m}$ 的秩为r,如 $a_{1},a_{2},\ldots,a_{m}$ 可以由它的r个向量线性表示,则这r个向量构成 $a_{1},a_{2},\ldots,a_{m}$ 的极大无关组.
+24. 证明定理 5.3.5 的 1, 2, 4.
+25. 求下列矩阵的秩, 并求出它的行空间、列空间及零空间的一组基.
+(1)
+$$\left( \begin{array}{c c c c} 3 & - 2 & 0 & 1 \\ - 1 & - 3 & 2 & 0 \\ 2 & 0 & - 4 & 5 \\ 4 & 1 & - 2 & 1 \end{array} \right)\tag{2}$$
+$$\left( \begin{array}{c c c c} 3 & 6 & 1 & 5 \\ 1 & 4 & - 1 & 3 \\ - 1 & - 1 0 & 5 & - 7 \\ 4 & - 2 & 8 & 0 \end{array} \right)$$
+26. 证明: 线性方程组(5.4)有解, 当且仅当 $b \in \langle a_{1}, a_{2}, \cdots, a_{m} \rangle$, 当且仅当 $\langle a_{1}, a_{2}, \cdots, a_{m} \rangle = \langle a_{1}, a_{2}, \cdots, a_{m}, b \rangle$.
+27. 证明: $\operatorname{rank}(\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_r, \mathbf{b}_1, \mathbf{b}_2, \ldots, \mathbf{b}_s) \leq \operatorname{rank}(\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_r) + \operatorname{rank}(\mathbf{b}_1, \mathbf{b}_2, \ldots, \mathbf{b}_s)$.
+28. 证明: $n$ 阶方阵 $A$ 可逆 $\Leftrightarrow \operatorname{rank}(A) = n \Leftrightarrow A$ 的行向量线性无关 $\Leftrightarrow A$ 的列向量线性无关.
+29. 设矩阵 $A \in F^{m \times n}$ 的秩为 $r$，则 $A$ 的不等于零的 $r$ 阶子式所在行(列)构成 $A$ 的行(列)向量的极大无关组.
+[第 175 页]
+§5.7 子空间运算*
+30. 设A,B是同阶矩阵. 证明:  $\operatorname{rank}(A+B) \leq \operatorname{rank}(A) + \operatorname{rank}(B)$ .
+31. 设 $a_{1},a_{2},\ldots,a_{n}$ 是 $F^{n}$ 的基, 向量组 $b_{1},b_{2},\ldots,b_{n}$ 与 $a_{1},a_{2},\ldots,a_{n}$ 有关系式
+$$\left(\mathbf {b} _ {1}, \mathbf {b} _ {2}, \dots , \mathbf {b} _ {n}\right) = \left(\mathbf {a} _ {1}, \mathbf {a} _ {2}, \dots , \mathbf {a} _ {n}\right) T.$$
+证明:  $b_{1}, b_{2}, \ldots, b_{n}$  为  $F^{n}$  的基当且仅当 T 为可逆方阵.
+32. 证明定理 5.4.2.
+33. 证明定理 5.4.3.
+34. 以向量组 $\mathbf{a}_1 = (3,1,0)$, $\mathbf{a}_2 = (6,3,2)$, $\mathbf{a}_3 = (1,3,5)$ 为基, 求 $\beta = (2, -1,2)$ 的坐标.
+35. 设 $\mathbf{a}_{1}=(3,2,-1,4),\mathbf{a}_{2}=(2,3,0,-1)$ .
+(1) 将 $a_{1}, a_{2}$ 扩充为 $R^{4}$ 的一组基;
+(2) 给出标准基在该组基下的表示;
+(3) 求 $\beta = (1, 3, 4, -2)$ 在该组基下的坐标.
+36. 将三维几何空间中的直角坐标系 $[O; \mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3]$ 绕单位向量 $\mathbf{e} = \frac{1}{\sqrt{3}} (1, 1, 1)$ 逆时针旋转 $\theta$ 角, 求新坐标与原坐标之间的关系.
+37. 设 $a_{1},a_{2},\ldots,a_{s}$ 为非齐次线性方程组Ax=b的一组线性无关解, $\lambda_{1},\lambda_{2},\ldots,\lambda_{s}$ 为常数.给出 $\lambda_{1}a_{1}+\lambda_{2}a_{2}+\ldots+\lambda_{s}a_{s}$ 为该线性方程组的解的充要条件.
+38. 给出三个平面 $a_{i}x + b_{i}y + c_{i}z = d_{i}, i = 1,2,3$ 相交于一条直线的充要条件.
+39. 求下列齐次线性方程组的基础解系与通解
+(1)
+$$\left\{ \begin{array}{l} x _ {1} - 3 x _ {2} + x _ {3} - 2 x _ {4} = 0 \\ - 5 x _ {1} + x _ {2} - 2 x _ {3} + 3 x _ {4} = 0 \\ - x _ {1} - 1 1 x _ {2} + 2 x _ {3} - 5 x _ {4} = 0 \\ 3 x _ {1} + 5 x _ {2} + x _ {4} = 0 \end{array} \right. \left\{ \begin{array}{l} x _ {1} + x _ {2} + x _ {3} + x _ {4} - 4 x _ {5} = 0 \\ x _ {1} - 2 x _ {2} + 3 x _ {3} - 4 x _ {4} + 2 x _ {5} = 0 \\ - x _ {1} + 3 x _ {2} - 5 x _ {3} + 7 x _ {4} - 4 x _ {5} = 0 \\ x _ {1} + 2 x _ {2} - x _ {3} + 4 x _ {4} - 6 x _ {5} = 0 \end{array} \right.\tag{2}$$
+[第 176 页]
+40. 已知 $F^5$ 中向量 $\mathbf{a}_1 = (1,2,3,2,1)^T$ 及 $\mathbf{a}_2 = (1,3,2,1,2)^T$, 求找一个齐次线性方程组使得 $\mathbf{a}_1$ 与 $\mathbf{a}_2$ 为该方程组的基础解系.
+41. 判断下列集合关于规定的运算是否构成线性空间
+(1) V 是所有实数对  $(x, y)$  的集合, 数域 F = R. 定义
+$$(x _ {1}, y _ {1}) + (x _ {2}, y _ {2}) = (x _ {1} + x _ {2}, y _ {1} + y _ {2}), \quad \lambda (x, y) = (x, y).$$
+(2) $V$ 是所有满足 $f(-1) = 0$ 的实函数的集合, 数域 $F = \mathbf{R}$. 定义加法为函数的加法, 数乘为数与函数的乘法.
+(3) $V$ 是所有满足 $f(0) \neq 0$ 的实函数的集合, 数域 $F = \mathbf{R}$. 定义加法为函数的加法, 数乘为数与函数的乘法.
+(4) $V$ 是数域 $F$ 上所有 $n$ 阶可逆方阵的全体, 加法为矩阵的加法, 数乘为矩阵的数乘.
+42. 设V是所有实函数全体在实数域上构成的线性空间, 判断V中下列函数组是否线性相关.
+(1)  $1, x, \sin x;$
+(2) $1, x, e^{x}$;
+(3)  $1, \cos 2x, \cos^{2} x;$
+(4) $1, x^{2}, (x - 1)^{3}, (x + 1)^{3}$;
+(5)  $\cos x, \cos 2x, \ldots, \cos(nx).$
+43. 证明定理 5.6.1.
+44. 设 $F_{n}[x]$ 是次数小于或等于 $n$ 的多项式全体构成的线性空间.
+(1) 证明: $S = \{1, x - 1, (x - 1)^2, \ldots, (x - 1)^n\}$ 构成 $F^n$ 的一组基;
+(2) 求 $S$ 到基 $T = \{1, x, \ldots, x^n\}$ 的过渡矩阵;
+(3) 求多项式 $p(x)=a_{0}+a_{1}x+\ldots+a_{n}x^{n}\in F_{n}[x]$ 在基S下的坐标.
+45. V 是数域 F 上 n 阶对称方阵的全体, 定义加法为矩阵的加法, 数乘为矩阵的数乘. 证明: V 是线性空间, 并求 V 的一组基及维数.
+[第 177 页]
+§5.7 子空间运算*
+46. 给定矩阵
+$$A = \left( \begin{array}{c c c} 0 & 0 & 1 \\ 1 & 0 & 0 \\ 4 & - 2 & 1 \end{array} \right)$$
+令V是与A乘法可交换的三阶实方阵的全体. 证明: V在矩阵加法与数乘下构成实数域上的线性空间, 并求V的一组基与维数.
+47. $V = F^{n \times n}$ 是数域 $F$ 上所有 $n$ 阶矩阵构成的线性空间, 令 $W$ 是数域 $F$ 上所有满足 $Tr(A) = 0$ 的 $n$ 阶矩阵的全体. 证明: $W$ 是 $V$ 的线性子空间, 并求 $W$ 的一组基与维数.
+48* 证明定理 5.7.3.
+49* 证明:有限维线性空间的任何子空间都有补空间.
+50* 令 $F_{n}[x]$ 是数域F上次数不超过n的多项式全体按多项式的加法与数乘构成的线性空间, $W_{1}$ 是 $F_{n}[x]$ 的偶多项式(满足 $f(-x)=f(x)$ )全体, $W_{2}$ 是 $F_{n}[x]$ 奇多项式(满足 $f(-x)=-f(x)$ )全体.证明: $W_{1},W_{2}$ 是 $F_{n}[x]$ 的子空间,且 $F_{n}[x]=W_{1}\oplus W_{2}$.
+[第 178 页]
+[第 179 页]
+第六章 线性变换
+上一章介绍了线性空间的基本理论. 本章将研究线性空间上的线性变换. 我们首先从数组空间上的线性映射开始研究线性映射的性质, 接着重点介绍矩阵和线性变换的特征值和特征向量, 它们是矩阵与线性变换最重要的几何量, 在科学与工程计算中有广泛的应用. 随后, 我们将研究矩阵在相似关系下的标准形等问题. 特别地, 我们将给出矩阵相似于对角阵的充分必要条件. 最后, 我们将数组空间上的线性变换理论推广到一般线性空间. 作为一个选学内容, 我们还将对矩阵的若当(Jordan标准形理论与计算做一个简单的介绍. 本章将重点关注线性代数的几何理论(变换)与代数理论(矩阵)间的有机结合, 而用代数的方法研究几何问题是线性代数的一个基本思想.
+§6.1 数组空间上的线性映射
+在第二章, 我们介绍矩阵乘法时引进了线性映射的概念. 这里, 我们给出正式的定义.
+定义6.1.1. 设 $\mathcal{A}:\mathbf{x}\in F^n\to \mathbf{y}\in F^m$ 是数组空间 $F^n$ 到 $F^{m}$ 的映射. 如果
+$$\mathbf {y} = A \mathbf {x}\tag{6.1}$$
+其中 $A \in F^{m \times n}$, 则称 $\mathcal{A}$ 为线性映射. 特别地, $F^n$ 到 $F^n$ 上的线性映射称为 $F^n$ 上的线性变换.
+实际上, 线性映射与线性变换的概念在解析几何中早已有之. 例如, 对坐标平面的单位圆 $C := x^{2} + y^{2} - 1 = 0$ 做如下的伸缩变换
+$$x ^ {\prime} = 3 x, \quad y ^ {\prime} = 2 y$$
+得到一个椭圆 $C' := (x')^2 / 9 + (y')^2 / 4 - 1 = 0$ . 上述变换将单位圆沿x轴方向放大3倍, 沿y轴方向放大2倍, 从而得到一个椭圆. 这里, 伸缩变换就是平面上的线性变换.
+再如, 将图形绕坐标原点逆时针旋转  $\theta$  角的图形变换为
+$$x ^ {\prime} = x \cos \theta - y \sin \theta , \quad y ^ {\prime} = x \sin \theta + y \cos \theta .$$
+旋转变换不改变图形的形状, 只改变它的位置, 它也是一种线性变换.
+图形的线性变换不仅可沿坐标轴方向伸缩,而且可以产生错切现象.
+[第 180 页]
+例6.1.1. 考虑坐标平面上的如下变换
+$$x ^ {\prime} = x + 0. 1 y, \quad y ^ {\prime} = 0. 2 x + y.$$
+设 $C_{1}$ 是由边平行于坐标轴的矩形网格, $C_{2}$ 是单位圆 $x^{2}+y^{2}-1=0$ , $C_{3}$ 是正弦曲线 $y=\sin(x)$ . 绘制变换前后的图形, 观察图形的变化.
+图 6.1 图形的线性变换
+我们看到, 图形不仅沿斜线方向发生伸缩变化, 并且产生错切现象. 但上述变换仍保持图形的基本性状不变, 例如, 直线仍变为直线, 平行直线变为平行直线, 圆变为椭圆.
+例6.1.2. 设A为2阶方阵, 则当A分别是
+$$A = \left( \begin{array}{c c} \lambda & \\ & \mu \end{array} \right), \quad \left( \begin{array}{c c} \cos \theta & - \sin \theta \\ \sin \theta & \cos \theta \end{array} \right), \quad \left( \begin{array}{c c} 1 & \\ & - 1 \end{array} \right)$$
+时, 线性变换 (6.1) 分别是平面上的伸缩变换, 旋转变换, 反射变换.
+另一个基本的线性映射是投影变换. 例如, 三维空间中的点 $(x, y, z)$ 到 $xoy$ 平面的投影 $(x, y, 0)$ 就是投影变换.
+例6.1.3. 在三维直角坐标系中, 取定一个向量 $\mathbf{v} = (a, b, c)$, 其中 $c \neq 0$. 则任意点 $\mathbf{P}(x, y, z)$ 沿方向 $\mathbf{v}$ 在 $oxy$ 平面上的平行投影为 $\mathbf{P}'$:
+$$(x ^ {\prime}, y ^ {\prime}, z ^ {\prime}) = (x - a z / c, y - b z / c, 0).$$
+[第 181 页]
+投影变换显然也是一个线性映射.
+将直线变为直线, 且将平行直线变为平行直线, 是线性映射的基本特性. 我们以平面上的线性变换来说明.
+命题6.1.1. 设 $A \in F^{2 \times 2}$ 为可逆方阵. 则线性变换 (6.1) 将平面上的直线变为直线, 平行直线变为平行直线.
+证明. 设 $l$ 是由 $\mathbf{P}_1, \mathbf{P}_2(\mathbf{P}_1 \neq \mathbf{P}_2)$ 决定的直线, $\mathbf{P}_1, \mathbf{P}_2$ 的坐标分别为 $\mathbf{X}_1, \mathbf{X}_2$. 经过线性变换 (6.1), $l$ 变为 $l'$, $\mathbf{P}_1, \mathbf{P}_2$ 分别变为 $\mathbf{P}_1', \mathbf{P}_2'$. 则 $\mathbf{P}_1', \mathbf{P}_2'$ 的坐标分别为 $\mathbf{X}_1' = A\mathbf{X}_1$, $\mathbf{X}_2' = A\mathbf{X}_2$. 由于 $A$ 可逆, 显然 $\mathbf{X}_1' \neq \mathbf{X}_2'$, 即 $\mathbf{P}_1' \neq \mathbf{P}_2'$.
+l上任一点P可以表示为 $\mathbf{P}=(1-t)\mathbf{P}_{1}+t\mathbf{P}_{2}, t\in F$ ，其坐标为 $\mathbf{X}=(1-t)\mathbf{X}_{1}+t\mathbf{X}_{2}$ 。则P在线性变换(6.1)下的像 $P'$ 的坐标为
+$$\mathbf {X} ^ {\prime} = A \mathbf {X} = A ((1 - t) \mathbf {X} _ {1} + t \mathbf {X} _ {2}) = (1 - t) A \mathbf {X} _ {1} + t A \mathbf {X} _ {2} = (1 - t) \mathbf {X} _ {1} ^ {\prime} + t \mathbf {X} _ {2} ^ {\prime}.$$
+这表明, $\mathbf{P}' = (1 - t)\mathbf{P}_1' + t\mathbf{P}_2'$, 即 $\mathbf{P}'$ 在直线 $l'$ 上. 因此, 线性变换 (6.1) 将直线变为直线. 设直线 $\mathbf{P}_1\mathbf{P}_2 \parallel \mathbf{P}_3\mathbf{P}_4$, 其中 $\mathbf{P}_i$ 的坐标为 $\mathbf{X}_i$, $i = 1,2,3,4$. $\mathbf{P}_i$ 在线性变换 (6.1) 下的像为 $\mathbf{P}_i'$, 其坐标 $\mathbf{X}_i' = A\mathbf{X}_i$, $i = 1,2,3,4$. 直线 $\mathbf{P}_1\mathbf{P}_2$ 的像为直线 $\mathbf{P}_1'\mathbf{P}_2'$, 直线 $\mathbf{P}_3\mathbf{P}_4$ 的像为直线 $\mathbf{P}_3'\mathbf{P}_4'$. 由 $\mathbf{P}_1\mathbf{P}_2 \parallel \mathbf{P}_3\mathbf{P}_4$, 可设 $\overrightarrow{\mathbf{P}_3\mathbf{P}_4} = \lambda \overrightarrow{\mathbf{P}_1\mathbf{P}_2}$, $\lambda \neq 0$. 则 $\mathbf{X}_4 - \mathbf{X}_3 = \lambda (\mathbf{X}_2 - \mathbf{X}_1)$. 于是 $\overrightarrow{\mathbf{P}_1'\mathbf{P}_2'}$ 的坐标为 $A\mathbf{X}_2 - A\mathbf{X}_1 = A(\mathbf{X}_2 - \mathbf{X}_1)$, $\overrightarrow{\mathbf{P}_3'\mathbf{P}_4'}$ 的坐标为 $A\mathbf{X}_4 - A\mathbf{X}_3 = A(\mathbf{X}_4 - \mathbf{X}_3) = \lambda A(\mathbf{X}_2 - \mathbf{X}_1)$. 从而 $\overrightarrow{\mathbf{P}_1'\mathbf{P}_2'} \parallel \overrightarrow{\mathbf{P}_3'\mathbf{P}_4'}$.
+将直线变为直线, 平行直线变为平行直线这一特性可以由以下关键条件刻画: 设  $x, y \in F^{n}$ , 则
+$$\mathscr {A} (\lambda \mathbf {x} + \mu \mathbf {y}) = \lambda \mathscr {A} \mathbf {x} + \mu \mathscr {A} \mathbf {y}.\tag{6.2}$$
+这里 $\lambda, \mu$ 是任意数. 这条性质为今后将线性映射推广到一般线性空间奠定了基础.
+由性质 (6.2) 可知, 线性映射保持线性组合运算不变, 即
+$$\mathscr {A} \left(\lambda_ {1} \mathbf {x} _ {1} + \lambda_ {2} \mathbf {x} _ {2} + \dots + \lambda_ {k} \mathbf {x} _ {k}\right) = \lambda_ {1} \mathscr {A} \mathbf {x} _ {1} + \lambda_ {2} \mathscr {A} \mathbf {x} _ {2} + \dots + \lambda_ {k} \mathscr {A} \mathbf {x} _ {k}.$$
+由此我们可以得到, 若 $x_{1},x_{2},\ldots,x_{k}$ 线性相关, 则 $A_{x_{1}},A_{x_{2}},\ldots,A_{x_{k}}$ 也线性相关. 反之, 若 $A_{x_{1}},A_{x_{2}},\ldots,A_{x_{k}}$ 线性无关, 则 $x_{1},x_{2},\ldots,x_{k}$ 也线性无关.
+线性映射 (6.1) 将空间  $F^{n}$  映射后的像的集合是一个子空间. 实际上, 我们有
+定理6.1.2. 线性映射 (6.1)的像的集合 $Im(\mathcal{A}) := \{Ax |, x \in F^n\}$ 是 $A$ 的列空间，称为 $\mathcal{A}$ 的像空间。线性映射 (6.1) 的核 $Ker(\mathcal{A}) := \{\mathbf{x} \in F^n | Ax = \mathbf{0}\}$ 为 $F^n$ 的零空间，也称为 $\mathcal{A}$ 的核空间。且 $\dim(Im(\mathcal{A})) = \text{rank}(A)$，$\dim(Ker(\mathcal{A})) = n - \text{rank}(A)$，$\dim(Im(\mathcal{A})) + \dim(Ker(\mathcal{A})) = n$。
+[第 182 页]
+证明. 设 $\mathbf{e}_1, \mathbf{e}_2, \ldots, \mathbf{e}_n \in F^n$ 为单位坐标列向量，$\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_n$ 为 $A$ 的 $n$ 个列向量. 则 $\mathcal{A}\mathbf{e}_i = \mathbf{a}_i, i = 1, 2, \ldots, n$. 于是，对任意 $\mathbf{x} = \sum_{i=1}^{n} x_i \mathbf{e}_i \in F^n$,
+$$\mathcal {A} \mathbf {x} = \sum_ {i = 1} ^ {n} x _ {i} \mathbf {a} _ {i}.$$
+故 $Im(\mathcal{A})$ 是由A的列向量 $a_{1},a_{2},\ldots,a_{n}$ 生成的子空间，即A的列空间. 因此， $\dim(Im(\mathcal{A}))=\operatorname{rank}(A)$ .
+另一方面, $Ker(\mathcal{A})$ 是齐次线性方程组 $Ax = 0$ 的解集, 即 $A$ 的零空间, 其维数为 $n - \operatorname{rank}(A)$. 从而 $\dim(Im(\mathcal{A})) + \dim(Ker(\mathcal{A})) = n$.
+上述定理刻画了矩阵A的秩的几何意义. 简单来说, 矩阵A的秩就是A的列(行)空间的维数.
+推论6.1.1. 用 $\mathcal{A}$ 表示线性映射 (6.1). 则有
+1. $\mathcal{A}$ 是单射 $\Leftrightarrow \operatorname{rank}(A) = n$.
+2. $\mathcal{A}$ 是满射 $\Leftrightarrow \operatorname{rank}(A) = m$.
+3. $\mathcal{A}$ 是双射 $\Leftrightarrow \operatorname{rank}(A) = m = n$, 即 $A$ 为可逆方阵.
+证明. 由定理6.1.2, $\mathcal{A}$ 是单射当且仅当 $Ker(\mathcal{A}) = \{0\}$, 当且仅当 $\operatorname{rank}(A) = n$. $\mathcal{A}$ 是满射当且仅当 $Im(\mathcal{A}) = F^m$, 当且仅当 $\operatorname{rank}(A) = m$. 因此, $\mathcal{A}$ 是双射当且仅当 $\operatorname{rank}(A) = m = n$.
+§6.2 线性变换的特征值与特征向量
+§6.2.1 特征值与特征向量的定义
+上一节介绍的伸缩变换沿两个数轴方向将图形进行拉伸或压缩变形, 这时数轴方向是该变换的两个特殊方向, 即变换前的向量与变换后的向量重合, 这种方向称为线性变换的特征方向或特征向量. 而沿特征方向伸缩的比例就是变换的特征值. 基于上述观察, 我们引进线性变换的特征向量与特征值的概念.
+[第 183 页]
+定义6.2.1. 设 $\mathcal{A}$ 是数组空间 $F^n$ 上的线性变换, 其变换公式为 $\mathbf{y} = A\mathbf{x}$, 这里 $A \in F^{n \times n}$, $\mathbf{x}, \mathbf{y} \in F^n$. 如果存在 $\lambda \in F$ 及非零列向量 $\mathbf{x} \in F^n$, 使得
+$$\mathcal {A} \mathbf {x} = \lambda   \mathbf {x} \qquad (\text {或者} A \mathbf {x} = \lambda   \mathbf {x}),\tag{6.3}$$
+则称  $\lambda$  为线性变换  $\mathcal{A}$  (或者方阵 A) 的一个特征值, 而称 x 为属于特征值  $\lambda$  的一个特征向量.
+由上述定义看出, 特征向量x在线性变换A下保持方向不变(相同或相反), 即 $A x \parallel x$ , 而向量的模长伸缩 $|\lambda|$ 倍. 也就是说, x是线性变换A下保持方向不变的一个特别方向, 而 $\lambda$ 是变换A在该方向的伸缩比. 下面我们看一个具体的例子.
+例6.2.1. 给定矩阵 $A = \begin{pmatrix} 1 & 1 \\ 1 & 3 \end{pmatrix}$, 它确定了坐标平面上的线性变换
+$$\mathscr {A}: F ^ {2} \to F ^ {2}, \quad \mathscr {A} \binom{x}{y} = \left( \begin{array}{c c} 1 & 1 \\ 1 & 3 \end{array} \right) \binom{x}{y}.$$
+求线性变换A的特征值与特征向量. 该线性变换将单位圆变为什么图形?
+解. 设 $\lambda$ 是矩阵 $\mathcal{A}$ 的特征值, $(x,y)^T$ 是对应的特征向量. 则由 $A(x,y)^T = \lambda (x,y)^T$ 有
+$$\left( \begin{array}{c c} 1 - \lambda & 1 \\ 1 & 3 - \lambda \end{array} \right) \binom{x}{y} = \mathbf {0}.$$
+上述线性方程组关于x,y有非零解,故
+$$\left| \begin{array}{c c} 1 - \lambda & 1 \\ 1 & 3 - \lambda \end{array} \right| = 0.$$
+解得 $\lambda_1 = 2 + \sqrt{2}, \lambda_2 = 2 - \sqrt{2}$, 它们是线性变换 $\mathcal{A}$ 的两个特征值. 求得对应的特征向量分别为 $T_1 = (1, 1 + \sqrt{2})^T$, $T_2 = (1, 1 - \sqrt{2})^T$. 故 $\mathcal{A}T_i = \lambda_i T_i$, $i = 1, 2$. 因此, 线性变换 $\mathcal{A}$ 沿 $T_1, T_2$ 保持方向不变, 且在 $T_1, T_2$ 方向的伸缩比分别为 $2 + \sqrt{2}, 2 - \sqrt{2}$. 于是, $\mathcal{A}$ 将单位圆 $C$ 变为椭圆 $C'$. 椭圆 $C'$ 长轴方向为 $T_1$, 长半轴长度为 $2 + \sqrt{2}$; $C'$ 短轴方向为 $T_2$, 短半轴长度为 $2 - \sqrt{2}$.
+显然, 数组空间上的线性变换 $\mathcal{A}$ 与方阵 $A$ 的特征值与特征向量是一样的, 因此下面我们只讨论矩阵 $A$ 的特征值与特征向量. 对应于给特征值, 特征向量不唯一. 实际上, 如果 $\mathbf{x}$ 为属于 $\lambda$ 的特征向量, 则对任意非零的 $k \in F$, $k\mathbf{x}$ 也是属于 $\lambda$ 的特征向量.
+[第 184 页]
+图 6.2 线性变换的特征值与特征向量的几何意义
+定理6.2.1. 设 $\lambda \in F$ 是矩阵 $A \in F^{n \times n}$ 的特征值, 则
+$$V _ {A} (\lambda) = \{\mathbf {x} \in F ^ {n} | A \mathbf {x} = \lambda \mathbf {x} \}.$$
+是 $F^n$ 的子空间，称为矩阵 $A$ 的属于特征值 $\lambda$ 的特征子空间，即特征子空间 $V_{A}(\lambda)$ 由 $\lambda$ 的所有特征向量与零向量一起构成.
+证明. 设 $\mathbf{x}, \mathbf{y} \in V_A(\lambda)$, 即 $A\mathbf{x} = \lambda \mathbf{x}, A\mathbf{y} = \lambda \mathbf{y}$. 则对任意 $\mu_1, \mu_2$,
+$$A \left(\mu_ {1} \mathbf {x} + \mu_ {2} \mathbf {y}\right) = \mu_ {1} A \mathbf {x} + \mu_ {2} A \mathbf {y} = \lambda \left(\mu_ {1} \mathbf {x} + \mu_ {2} \mathbf {y}\right).$$
+因此, $\mu_{1}x+\mu_{2}y\in V_{A}(\lambda)$ . 即 $V_{A}(\lambda)$ 为 $F^{n}$ 的子空间.
+§6.2.2 特征值与特征向量的计算
+设  $A = (a_{ij})$  为数域 F 上的一个 n 阶方阵,  $\lambda$  是 A 的特征值, x 是对应的特征向量. 则
+$$(\lambda I - A) \mathbf {x} = \mathbf {0}.\tag{6.4}$$
+上述关于x的线性方程组有非零解,因此
+$$\det (\lambda I - A) = \left| \begin{array}{c c c c} \lambda - a _ {1 1} & - a _ {1 2} & \dots & - a _ {1 n} \\ - a _ {2 1} & \lambda - a _ {2 2} & \dots & - a _ {2 n} \\ \vdots & \vdots & \vdots & \vdots \\ - a _ {n 1} & - a _ {n 2} & \dots & \lambda - a _ {n n} \end{array} \right| = 0.\tag{6.5}$$
+对于给定的 $n$ 阶方阵 $A$, 将行列式 $\operatorname{det}(\lambda I - A)$ 完全展开得到一个以 $\lambda$ 为变量的 $n$ 次首项系数为1的多项式.
+[第 185 页]
+定义6.2.2. 设A为n阶方阵, 称行列式  $\det(\lambda I - A)$  为矩阵 A 的特征多项式, 记为  $p_{A}(\lambda)$ .
+由上面的分析, $\lambda$ 为矩阵 $A$ 的特征值当且仅当 $\lambda$ 为 $A$ 的特征多项式的根. 但是, 数域 $F$ 上的多项式在数域 $F$ 中并不一定有根, 例如实系数多项式 $x^{2} + 1$ 在实数域中没有实根. 为了确保特征值的存在性, 在本章剩下的各节中, 除非特别声明, 我们总假设 $F = \mathbb{C}$. 由代数基本定理知, 任何一个非常数的复系数多项式都有复根, 因此复数域 $\mathbb{C}$ 上的任意一个 $n$ 阶方阵恰有 $n$ 个特征值 (可能有相同的). 求出特征值 $\lambda$ 后, 求解线性方程组(6.4)即可求得对应 $\lambda$ 的特征向量.
+复数域 $\mathbb{C}$ 上的方阵 $A$ 的特征值和特征向量的算法可归纳如下
+(1) 计算特征多项式 $p_A(\lambda) = \det(\lambda I - A)$. 设
+$$p _ {A} (\lambda) = \left(\lambda - \lambda_ {1}\right) ^ {n _ {1}} \left(\lambda - \lambda_ {2}\right) ^ {n _ {2}} \dots \left(\lambda - \lambda_ {s}\right) ^ {n _ {s}},$$
+其中  $\lambda_{i}\in\mathbb{C},n_{i}\geq1(i=1,2,\cdots,s)$  且  $n_{1}+n_{2}+\cdots+n_{s}=n.$  则  $\lambda_{1},\lambda_{2},\cdots,\lambda_{s}$  为 A 的全部不同的特征值, 其重数分别为  $n_{1},n_{2},\cdots,n_{s}.$
+(2) 对每个特征值  $\lambda_{i}$ ，求解方程组
+$$\left(\lambda_ {i} I - A\right) \mathbf {x} = 0.$$
+设  $x_{i1}, x_{i2}, \cdots, x_{im_{i}}$  为它的一个基础解系, 则所有的非零线性组合
+$$c _ {1} \mathbf {x} _ {i 1} + c _ {2} \mathbf {x} _ {i 2} + \dots + c _ {m _ {i}} \mathbf {x} _ {i m _ {i}}$$
+为 A 的属于  $\lambda_{i}$  的所有特征向量.
+例6.2.2. 求矩阵A的全部特征值和特征向量, 这里
+$$A = \left( \begin{array}{c c c} 3 & - 1 & - 2 \\ 2 & 0 & - 2 \\ 2 & - 1 & - 1 \end{array} \right).$$
+解. $A$ 的特征多项式为
+$$p _ {A} (\lambda) = \det (\lambda I - A) = \left| \begin{array}{c c c} \lambda - 3 & 1 & 2 \\ - 2 & \lambda & 2 \\ - 2 & 1 & \lambda + 1 \end{array} \right| = \lambda (\lambda - 1) ^ {2}.$$
+由  $p_{A}(\lambda)=\lambda(\lambda-1)^{2}=0,$  得到 A 的全部特征值为  $\lambda_{1}=0, \lambda_{2}=\lambda_{3}=1.$  下面求各个特征值对应的特征向量.
+[第 186 页]
+对于  $\lambda_{1}=0$ , 解线性方程组  $(0I-A)X=0$ , 即解
+$$\left( \begin{array}{c c c} - 3 & 1 & 2 \\ - 2 & 0 & 2 \\ - 2 & 1 & 1 \end{array} \right) \left( \begin{array}{c} x _ {1} \\ x _ {2} \\ x _ {3} \end{array} \right) = \left( \begin{array}{c} 0 \\ 0 \\ 0 \end{array} \right)$$
+得特征值 0 对应的特征向量为  $c_{1}(1,1,1)^{T}$  ( $c_{1} \neq 0$ ).
+对于  $\lambda_{2}=\lambda_{3}=1$ ，解方程组
+$$\left( \begin{array}{c c c} - 2 & 1 & 2 \\ - 2 & 1 & 2 \\ - 2 & 1 & 2 \end{array} \right) \left( \begin{array}{c} x _ {1} \\ x _ {2} \\ x _ {3} \end{array} \right) = \left( \begin{array}{c} 0 \\ 0 \\ 0 \end{array} \right)$$
+得特征值 1 对应的特征向量为  $c_{2}(1,2,0)^{T} + c_{3}(0,-2,1)^{T}$  ( $c_{2}, c_{3}$  不同时为零). ☐
+例6.2.3. 设  $\lambda$  为 n 阶方阵 A 的一个特征值, 证明:
+(1)  $\lambda^{k}$  为  $A^{k}$  的特征值, 其中 k 为正整数;
+(2) $\lambda$ 为 $A^T$ 的特征值;
+(3) 若  $\lambda \neq 0$ , 则  $\frac{1}{\lambda} \det(A)$  为 A 的伴随方阵  $A^{*}$  的特征值.
+证明. (1) 设 $A\mathbf{x} = \lambda \mathbf{x}$, 则
+$$A ^ {k} \mathbf {x} = A ^ {k - 1} (A \mathbf {x}) = A ^ {k - 1} (\lambda \mathbf {x}) = \lambda A ^ {k - 1} \mathbf {x} = \dots = \lambda^ {k} \mathbf {x}.$$
+(2) 由于 $\operatorname{det}(\lambda I - A) = 0$, 转置后得 $\operatorname{det}(\lambda I - A^T) = \operatorname{det}(\lambda I - A)^T = 0$, 所以 $\lambda$ 为 $A^T$ 的特征值.
+(3) 因为 $AA^{*} = \det(A)I$, 由 $\det(\lambda I - A) = 0$ 知 $\det(A^{*})\det(\lambda I - A) = 0$, 即 $\det(\lambda A^{*} - A^{*}A) = 0$. 所以 $\det(A^{*} - \frac{1}{\lambda}\det(A)I) = 0$, 从而 $\frac{1}{\lambda}\det(A)$ 为 $A^{*}$ 的特征值.
+特征值是矩阵非常重要的量. 下面我们给出特征值的几个主要结论.
+设 $A = (a_{ij})$ 为 $\mathbb{C}$ 上的一个 $n$ 阶方阵, 记
+$$p _ {A} (\lambda) = \det (\lambda I - A) = \lambda^ {n} + \sigma_ {1} \lambda^ {n - 1} + \dots + \sigma_ {n - 1} \lambda + \sigma_ {n}.$$
+取  $\lambda=0,$  可得  $\sigma_{n}=(-1)^{n}\det(A)$ . 从行列式的完全展开式可以看出, 除了主对角线上 n 个元素的乘积, 其它乘积项中  $\lambda$  的次数不超过 n-2, 因此  $\lambda^{n-1}$  项只能出现在  $(\lambda-a_{11})(\lambda-a_{22})\cdots(\lambda-a_{nn})$  中, 从而  $\sigma_{1}=\sum_{i=1}^{n}a_{ii}$ .
+[第 187 页]
+§6.3 矩阵的相似
+另一方面, 假设 A 的 n 个特征值为  $\lambda_{1}, \lambda_{2}, \cdots, \lambda_{n}$  (可能有相同的), 则
+$$p _ {A} (\lambda) = \left(\lambda - \lambda_ {1}\right) \left(\lambda - \lambda_ {2}\right) \dots \left(\lambda - \lambda_ {n}\right).$$
+对比上面两式, 我们得到下面的命题.
+命题6.2.2. 设  $A = (a_{ij})$  为 C 上的一个 n 阶方阵,  $\lambda_{1}, \lambda_{2}, \cdots, \lambda_{n}$  为 A 的 n 个特征值. 则
+(1)  $Tr(A)=\sum_{i=1}^{n}\lambda_{i},$
+(2)  $\det(A)=\lambda_{1}\lambda_{2}\cdots\lambda_{n}.$
+推论6.2.1. $n$ 阶方阵可逆当且仅当它的 $n$ 个特征值都不为零.
+我们给一个例子说明上述命题的应用.
+例6.2.4. 设 n 阶方阵 A 的 n 个特征值分别为  $\lambda_{1}, \lambda_{2}, \cdots, \lambda_{n}$ ，求  $I + A$  的特征值及  $\det(I + A)$ .
+解. 由于 $\operatorname{det}(\lambda I - A) = \prod_{i=1}^{n} (\lambda - \lambda_i)$, 因此
+$$\det (\lambda I - (I + A)) = \det ((\lambda - 1) I - A) = \prod_ {i = 1} ^ {n} (\lambda - 1 - \lambda_ {i}).$$
+所以  $I+A$  的 n 个特征值为  $1+\lambda_{1},1+\lambda_{2},\cdots,1+\lambda_{n}$ ，从而  $\det(I+A)=\prod_{i=1}^{n}(1+\lambda_{i})$ 。☐
+§6.3.1 矩阵相似的定义
+设A为n阶复方阵，其n个特征值为 $\lambda_{1},\lambda_{2},\ldots,\lambda_{n}$ ，它们对于的特征向量分别为 $x_{1},x_{2},\ldots,x_{n}$ 。假设这n个特征向量线性无关，令矩阵 $P=(x_{1},\ldots,x_{n})$ ，则P为可逆矩阵。由 $Ax_{i}=\lambda_{i}x_{i},i=1,2,\ldots,n$ 可得
+$$\begin{array}{c} A P = A (\mathbf {x} _ {1}, \ldots , \mathbf {x} _ {n}) = (A \mathbf {x} _ {1}, \ldots , A \mathbf {x} _ {n}) = (\lambda_ {1} \mathbf {x} _ {1}, \ldots , \lambda_ {n} \mathbf {x} _ {n}) \\ = (\mathbf {x} _ {1}, \ldots , \mathbf {x} _ {n}) \operatorname{diag} (\lambda_ {1}, \ldots , \lambda_ {n}) = P \operatorname{diag} (\lambda_ {1}, \ldots , \lambda_ {n}), \end{array}$$
+从而
+$$A = P \operatorname{diag} (\lambda_ {1}, \dots , \lambda_ {n}) P ^ {- 1}.\tag{6.6}$$
+此时我们称矩阵A与对角 $\mathrm{diag}(\lambda_{1},\ldots,\lambda_{n})$ 阵相似.
+[第 188 页]
+定义6.3.1. 设 $A, B \in F^{n \times n}$. 若存在可逆方阵 $T \in F^{n \times n}$ 满足 $B = T^{-1}AT$, 则称方阵 $A$ 与 $B$ (在数域 $F$ 上) 相似.
+矩阵相似是一种重要的等价关系. 容易验证, 相似矩阵满足以下性质
+(1) (反身性) A 与 A 相似;
+(2) (对称性) 若 A 与 B 相似, 则 B 与 A 相似;
+(3) (传递性) 若 A 与 B 相似, B 与 C 相似, 则 A 与 C 相似.
+由于相似关系为等价关系, 可以将 n 阶方阵按相似关系进行分类: 将相互之间相似的方阵归成一类. 两个类要么是一样的, 要么就不相交. 每个类称之为一个相似类, 该类中的每个元素都称为一个代表元.
+类似于矩阵相抵关系,研究矩阵相似关系需要解决以下两个根本问题
+(1) 两个矩阵属于同一个相似类的条件是什么?
+(2) 每个相似类中, 最简单的矩阵具有什么形式?
+第一个问题即是要判定两个矩阵是否相似的问题, 而第二个问题就是所谓的相似标准形问题, 它等价于在空间中找到一组适当的基, 使得给定的线性变换在该基下的矩阵具有最简单的形式.
+不同于矩阵相抵的情形, 回答矩阵相似的上述问题要困难许多, 我们将在本章以后各节将对上述问题做初步解答.
+相似矩阵具有相同的重要基本量. 例如, 若 A 与 B 相似, 则 A 与 B 的行列式与秩均相等. 实际上, 它们的特征值(从而迹)也相同. 我们称这些量为相似不变量.
+命题6.3.1. 相似的矩阵具有相同的特征多项式和特征值.
+证明. 设 $B = P^{-1}AP$, 其中 $T$ 为可逆方阵. 则
+$$\det (\lambda I - B) = \det (\lambda I - P ^ {- 1} A P) = \det (P ^ {- 1} (\lambda I - A) P) = \det (\lambda I - A).$$
+因此 A 和 B 有相同的特征多项式, 从而有相同的特征值, 并且它们的迹也相同. □
+例6.3.1. 已知矩阵A与B相似, 求 x 和 y. 这里
+$$A = \left( \begin{array}{c c c} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & x \end{array} \right), \qquad B = \left( \begin{array}{c c c} y & 0 & 0 \\ 0 & - 1 & 0 \\ 0 & 0 & 1 \end{array} \right).$$
+[第 189 页]
+解. 相似的方阵有相同的特征多项式, 所以  $\det(\lambda I - A) = \det(\lambda I - B)$ , 即
+$$(\lambda - 1) (\lambda (\lambda - x) - 1) = (\lambda - y) (\lambda + 1) (\lambda - 1).$$
+比较系数可得 x=0,y=1.
+另一个解法是利用相似的矩阵具有相同的行列式和迹, 可以得到 -1 = -y 且  $1 + x = y$ , 从而 x = 0, y = 1.
+§6.3.2 矩阵相似于对角阵的条件
+如果一个方阵相似于对角阵, 则称该方阵可对角化, 也称相应的线性变换可对角化. 下面的例子表明, 并不是每个方阵都可对角化.
+例6.3.2. 证明: 2 阶方阵 $A = \begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix}$ 不能相似于对角阵.
+证明. 假设 A 能够相似于对角阵 B. 由于 A 的两个特征值都是 2, 而特征值是相似不变量, 因此 B 的两个特征值也都是 2, 所以  $B = 2I_{2}$ . 由 A 相似于 B 知, 存在 2 阶可逆方阵 T, 使得
+$$A = T ^ {- 1} B T = T ^ {- 1} (2 I _ {2}) T = 2 I _ {2}.$$
+这显然是矛盾的, 因此 A 不可能相似于对角阵.
+下面我们给出一个矩阵相似于对角阵的条件.
+定理6.3.2. 数域 $F$ 上的 $n$ 阶方阵 $A$ 相似于对角阵的充分必要条件是, $A$ 有 $n$ 个线性无关的特征向量.
+证明. 充分性. 由 (6.6), 若设 $A$ 有 $n$ 个线性无关的特征向量, 则 $A$ 相似于对角阵.
+必要性. 设存在可逆方阵 P, 使得
+$$P ^ {- 1} A P = \operatorname{diag} \left(\lambda_ {1}, \lambda_ {2}, \dots , \lambda_ {n}\right).$$
+记  $P=(P_{1},P_{2},\cdots,P_{n})$ ，其中  $P_{i}\in F^{n}(i=1,2,\cdots,n)$  为矩阵 P 的第 i 列，则
+$$\begin{array}{l} (A P _ {1}, A P _ {2}, \dots , A P _ {n}) = (P _ {1}, P _ {2}, \dots , P _ {n}) \operatorname{diag} (\lambda_ {1}, \lambda_ {2}, \dots , \lambda_ {n}) \\ = (\lambda_ {1} P _ {1}, \lambda_ {2} P _ {2}, \dots , \lambda_ {n} P _ {n}). \end{array}$$
+因此  $AP_{i} = \lambda_{i}P_{i} i = 1, 2, \cdots, n.$  所以  $P_{1}, P_{2}, \cdots, P_{n}$  为 A 的 n 个特征向量. 由于这 n 个向量构成的矩阵 T 是可逆的, 它们是线性无关的. ☐
+[第 190 页]
+若矩阵 A 相似于对角阵, 则该对角阵的 n 个主对角线元素恰为 A 的 n 个特征值, 因此如果不计主对角线上元素的先后次序, 该对角阵是唯一的.
+例6.3.3. 在例 6.2.2 中, 矩阵 A 有三个线性无关特征向量:
+$$T _ {1} = \left( \begin{array}{c} 1 \\ 1 \\ 1 \end{array} \right), T _ {2} = \left( \begin{array}{c} 1 \\ 2 \\ 0 \end{array} \right) T _ {3} = \left( \begin{array}{c} 0 \\ - 2 \\ 1 \end{array} \right),$$
+且  $AT_{1}=0,AT_{2}=T_{2},AT_{3}=T_{3}$ . 因此, A 相似于对角阵. 若令  $T=(T_{1},T_{2},T_{3})$ , 则有
+$$T ^ {- 1} A T = \left( \begin{array}{c c c} 0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right).$$
+下面我们给出矩阵可对角化的进一步条件,为此先介绍一个引理.
+引理6.3.1. 设 $A$ 为数域 $F$ 上的 $n$ 阶方阵, 则属于 $A$ 的不同特征值的特征向量是线性无关的.
+证明. 设  $\lambda_{1}, \lambda_{2}, \cdots, \lambda_{k}$  为 A 的互不相同的特征值,  $x_{1}, x_{2}, \cdots, x_{k}$  为相应于它们的特征向量. 对 k 用数学归纳法证明. 当 k = 1 时,  $x_{1} \neq 0$ , 它是线性无关的. 假设 k - 1 时命题成立, 下面证明命题对 k 成立.
+假设
+$$\mu_ {1} \mathbf {x} _ {1} + \mu_ {2} \mathbf {x} _ {2} + \dots + \mu_ {k} \mathbf {x} _ {k} = \mathbf {0}\tag{6.7}$$
+用  $\lambda_{k}$  乘 (6.7) 式两端, 得
+$$\mu_ {1} \lambda_ {k} \mathbf {x} _ {1} + \mu_ {2} \lambda_ {k} \mathbf {x} _ {2} + \dots + \mu_ {k} \lambda_ {k} \mathbf {x} _ {k} = \mathbf {0}$$
+用 A 左乘 (6.7) 式, 得
+$$\mu_ {1} \lambda_ {1} \mathbf {x} _ {1} + \mu_ {2} \lambda_ {2} \mathbf {x} _ {2} + \dots + \mu_ {k} \lambda_ {k} \mathbf {x} _ {k} = \mathbf {0}$$
+前两式相减得
+$$\mu_ {1} \left(\lambda_ {k} - \lambda_ {1}\right) \mathbf {x} _ {1} + \mu_ {2} \left(\lambda_ {k} - \lambda_ {2}\right) \mathbf {x} _ {2} + \dots + \mu_ {k - 1} \left(\lambda_ {k} - \lambda_ {k - 1}\right) \mathbf {x} _ {k - 1} = \mathbf {0}.$$
+由归纳假设, $x_{1},x_{2},\cdots,x_{k-1}$ 线性无关.因此
+$$\mu_ {j} \left(\lambda_ {k} - \lambda_ {j}\right) = 0, \quad j = 1, 2, \dots , k - 1,$$
+由于  $\lambda_{k}-\lambda_{j}\neq0$ ，我们得到  $\mu_{1}=\mu_{2}=\ldots=\mu_{k-1}=0$ 。再由 (6.7) 知  $\mu_{k}x_{k}=0$ 。因为  $x_{k}\neq0$ ，所以  $\mu_{k}=0$ 。这就证明了  $x_{1},x_{2},\cdots,x_{k}$  线性无关。
+[第 191 页]
+由定理 6.3.2 及引理 6.3.1, 立即可得
+推论6.3.1. 如果矩阵 A 的 n 个特征值两两不同, 则 A 相似于对角阵.
+证明. 由引理 6.3.1 知, A 有 n 个线性无关的特征向量. 再由定理 6.3.2 知推论成立. □
+例6.3.4. 设方阵 A 相似于对角阵, 求 x 和 y 应满足的条件, 这里
+$$A = \left( \begin{array}{c c c} 0 & 0 & x \\ 1 & 1 & y \\ 1 & 0 & 0 \end{array} \right).$$
+解. 由于
+$$| \lambda I - A | = \left| \begin{array}{c c c} \lambda & 0 & - x \\ - 1 & \lambda - 1 & - y \\ - 1 & 0 & \lambda \end{array} \right| = (\lambda - 1) (\lambda^ {2} - x),$$
+当 $x \neq 0,1$ 时, $A$ 有三个不同的特征值, 由推论6.3.1知, 此时 $A$ 可对角化.
+当 $x = 1$ 时, $A$ 有特征值 $\lambda_1 = \lambda_2 = 1$, $\lambda_3 = -1$. 对应 $\lambda_1 = \lambda_2 = 1$ 的特征向量为: 当 $y \neq -1$ 时, $T_1 = (0,1,0)^T$; 当 $y = -1$ 时, $T_1 = (1,0,1)^T$, $T_2 = (1,1,1)^T$. 对应 $\lambda_3 = -1$ 的特征向量为: $T_3 = (1,(y - 1) / 2, - 1)^T$. 因此, 当 $y = -1$ 时, 得到三个线性无关特征向量 $T_1, T_2, T_3$, 从而 $A$ 可以对角化.
+当 $x = 0$ 时, $A$ 有特征值 $\lambda_{1} = \lambda_{2} = 0$, $\lambda_{3} = 1$. 对应特征值 $\lambda_{1} = \lambda_{2} = 0$, 特征向量 $T_{1} = (0, -y, 1)^{T}$. 对应特征值 $\lambda_{3} = 1$, 特征向量 $T_{2} = (0, 1, 0)^{T}$. 由于只有两个线性无关特征向量, 故此时 $A$ 不相似于对角阵.
+综上所述, A 可对角化的条件是  $x \neq 0, 1$  或者 x = 1 且 y = -1.
+例6.3.5. 设 n 阶方阵 A 满足  $\mathrm{rank}(A+I)+\mathrm{rank}(A-I)=n,$  证明 A 可对角化.
+证明. 设  $\operatorname{rank}(A+I)=r$ , 则方程组  $(A+I)X=0$  的解空间是 n-r 维的, 它是 A 的特征值 -1 对应的特征子空间. 取  $X_{r+1},\cdots,X_{n}$  为它的一组基.
+由条件知  $\operatorname{rank}(A-I)=n-r$ ，所以  $(A-I)X=0$  的解空间是 r 维的，它是 A 的特征值 1 对应的特征子空间。取  $x_{1},x_{2},\cdots,x_{r}$  为它的一组基。
+下证 $x_{1},x_{2},\ldots,x_{n}$ 线性无关.实际上,设
+$$c _ {1} \mathbf {x} _ {1} + c _ {2} \mathbf {x} _ {2} + \dots + c _ {n} \mathbf {x} _ {n} = \mathbf {0},$$
+其中 $c_{1}, c_{2}, \ldots, c_{n}$ 为常数. 上式两边作用 $A$ 得
+$$c _ {1} \mathbf {x} _ {1} + \ldots + c _ {r} \mathbf {x} _ {r} - c _ {r + 1} \mathbf {x} _ {r + 1} - \ldots - c _ {n} \mathbf {x} _ {n} = \mathbf {0}.$$
+[第 192 页]
+于是
+$$c _ {1} \mathbf {x} _ {1} + \ldots + c _ {r} \mathbf {x} _ {r} = c _ {r + 1} \mathbf {x} _ {r + 1} + \ldots + c _ {n} \mathbf {x} _ {n} = \mathbf {0}.$$
+由于 $x_{1},\ldots,x_{r},x_{r+1},\ldots,x_{n}$ 分别线性无关,因此, $c_{1}=\ldots=c_{r+1}=\ldots=c_{n}=0$ ,即 $x_{1},x_{2},\ldots,x_{n}$ 线性无关.于是A可对角化.
+实际上, 令  $P = (\mathbf{x}_{1}, \cdots, \mathbf{x}_{r}, \mathbf{x}_{r+1}, \cdots, \mathbf{x}_{n})$ , 则 P 可逆, 且
+$$A P = A (\mathbf {x} _ {1}, \dots , \mathbf {x} _ {r}, \mathbf {x} _ {r + 1}, \dots , \mathbf {x} _ {n}) = P \left( \begin{array}{c c} I _ {r} & 0 \\ 0 & - I _ {n - r} \end{array} \right).$$
+所以 $A = P\left( \begin{array}{cc}I_r & 0\\ 0 & -I_{n - r} \end{array} \right)P^{-1}.$
+§6.3.3 相似于上三角阵
+虽然不是每个复方阵都可以相似于对角阵, 但我们可以证明它总可以相似于一个上三角阵.
+定理6.3.3. 任何一个 $n$ 阶复方阵 $A$ 都可以相似于一个上三角阵, 且该上三角阵的主对角线上的元素都是 $A$ 的特征值.
+证明. 对方阵 A 的阶数 n 用数学归纳法. 当 n=1 时, 命题显然成立. 假设命题对 n-1 阶方阵成立, 现在考虑 n 阶方阵 A. 设  $\lambda_{1}$  为 A 的一个特征值,  $x_{1}$  为属于  $\lambda_{1}$  的一个特征向量. 将  $x_{1}$  扩充为  $C^{n}$  的一组基  $x_{1}, x_{2}, \cdots, x_{n}$ . 令  $P_{1} = (x_{1}, x_{2}, \cdots, x_{n})$ , 则  $P_{1}$  为 n 阶可逆方阵. 由  $A x_{1} = \lambda_{1} x_{1}$  知
+$$A P _ {1} = A (\mathbf {x} _ {1}, \mathbf {x} _ {2}, \dots , \mathbf {x} _ {n}) = (\lambda_ {1} \mathbf {x} _ {1}, A \mathbf {x} _ {2}, \dots , A \mathbf {x} _ {n}) = (\mathbf {x} _ {1}, \mathbf {x} _ {2}, \dots , \mathbf {x} _ {n}) \left( \begin{array}{c c} \lambda_ {1} & * \\ 0 & A _ {1} \end{array} \right).$$
+其中  $A_{1}$  为一个  $(n-1)$  阶方阵. 所以  $P_{1}^{-1}AP_{1}=\begin{pmatrix}\lambda_{1}&*\\0&A_{1}\end{pmatrix}.$
+根据归纳假设, 存在 n-1 阶可逆方阵  $P_{2}$ , 使得  $P_{2}^{-1}A_{1}P_{2}$  为上三角阵. 令  $P = P_{1}\begin{pmatrix}1 & 0 \\ 0 & P_{2}\end{pmatrix}$ , 则
+$$\begin{array}{r l} P ^ {- 1} A P & = \left( \begin{array}{c c} 1 & 0 \\ 0 & P _ {2} ^ {- 1} \end{array} \right) (P _ {1} ^ {- 1} A P _ {1}) \left( \begin{array}{c c} 1 & 0 \\ 0 & P _ {2} \end{array} \right) \\ & = \left( \begin{array}{c c} 1 & 0 \\ 0 & P _ {2} ^ {- 1} \end{array} \right) \left( \begin{array}{c c} \lambda_ {1} & * \\ 0 & A _ {1} \end{array} \right) \left( \begin{array}{c c} 1 & 0 \\ 0 & P _ {2} \end{array} \right) \\ & = \left( \begin{array}{c c} \lambda_ {1} & * \\ 0 & P _ {2} ^ {- 1} A _ {1} P _ {2} \end{array} \right) \end{array}$$
+[第 193 页]
+由于  $P_{2}^{-1}A_{1}P_{2}$  为上三角阵,  $P^{-1}AP$  为上三角阵. 因为上三角阵的主对角线元素都是它的特征值, 而特征值是相似不变量, 所以  $P^{-1}AP$  的主对角线元素都是 A 的特征值. □
+在上述定理证明中, 矩阵  $P_{1}, P_{2}$  的选取方法不是唯一的, 最后得到的上三角阵也不是唯一的.
+例6.3.6. 设 2 阶方阵 A 满足  $A^{2}=0$ , 证明 A=0 或者 A 相似于  $\begin{pmatrix}0&1\\0&0\end{pmatrix}$ .
+证明. 设 $\lambda$ 为 $A$ 的一个特征值, $A\mathbf{x} = \lambda \mathbf{x}$. 则 $0 = A^2\mathbf{x} = \lambda^2\mathbf{x}$. 由于 $\mathbf{x}$ 是非零向量, 所以有 $\lambda = 0$, 即 $A$ 的两个特征值都是 0. 由定理 6.3.3 知, $A$ 相似于上三角矩阵 $\begin{pmatrix} 0 & a \\ 0 & 0 \end{pmatrix}$. 若 $a = 0$, 则 $A = 0$. 否则利用初等变换很容易将其进一步相似于 $\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$. 例如取 $P = \begin{pmatrix} a^{-1} & 0 \\ 0 & 1 \end{pmatrix}$, 则 $P\begin{pmatrix} 0 & a \\ 0 & 0 \end{pmatrix} P^{-1} = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$.
+例6.3.7. 设 $A \in \mathbb{C}^{2 \times 2}$. 证明: $A^2 - Tr(A)A + \det(A)I_2 = 0$.
+证明. 一种直接的证明方法是令 $A = (a_{ij})$, 将 $A$ 的表达式代入等式验证等式成立. 实际上, 我们可以利用定理6.3.3将证明简化. 由定理6.3.3, 存在上三角矩阵 $B = \begin{pmatrix} b_{11} & b_{12} \\ 0 & b_{22} \end{pmatrix}$ 及二阶可逆方阵 $P$ 使得 $A = PBP^{-1}$. 于是
+$$A ^ {2} - \operatorname{Tr} (A) A + \det (A) I _ {2} = P B ^ {2} P ^ {- 1} - \operatorname{Tr} (B) P B P ^ {- 1} + \det (B) I _ {2} = P \left(B ^ {2} - \operatorname{Tr} (B) B + \det (B) I _ {2}\right) P ^ {- 1}$$
+这样只需要证:  $B^{2}-Tr(B)B+\det(B)I_{2}=0$ . 注意到,
+$$p _ {B} (\lambda) = \lambda^ {2} - T r (B) \lambda + \det (B) = (\lambda - b _ {1 1}) (\lambda - b _ {2 2}),$$
+于是我们需要证明: $p_{B}(B)=(B-b_{11}I_{2})(B-b_{22}I_{2})=0.$  由于
+$$p _ {B} (B) = (B - b _ {1 1} I _ {2}) (B - b _ {2 2} I _ {2}) = \left( \begin{array}{c c} 0 & b _ {1 2} \\ 0 & b _ {2 2} - b _ {1 1} \end{array} \right) \left( \begin{array}{c c} b _ {1 1} - b _ {2 2} & b _ {1 2} \\ 0 & 0 \end{array} \right) = 0.$$
+因此, $A^{2}-Tr(A)A+\det(A)I_{2}=0.$
+§6.4 一般空间上的线性变换
+本节我们将数组空间上的线性变换理论推广到一般线性空间上.
+[第 194 页]
+§6.4.1 线性变换的定义
+从第一节我们知道, 线性映射的关键特性是保持线性组合的不变性, 即(6.2)式成立. 据此, 我们给出一般线性空间上线性映射的定义.
+定义6.4.1. 设 $V, V'$ 为数域 $F$ 上的两个线性空间, 若映射 $\mathcal{A}: V \to V'$ 满足: 对任意 $\alpha, \beta \in V, \lambda \in F$, 都有
+$$\mathscr {A} (\lambda + \beta) = \mathscr {A} (\alpha) + \mathscr {A} (\beta)\tag{6.8}$$
+$$\mathscr {A} (\lambda \alpha) = \lambda \mathscr {A} (\alpha)\tag{6.9}$$
+则称 $\mathcal{A}$ 为从线性空间 $V$ 到线性空间 $V'$ 的线性映射. 特别地, 如果 $V' = V$, 则称 $\mathcal{A}$ 为线性空间 $V$ 上的一个线性变换.
+本书只讨论线性变换,但关于线性变换的很多结论对线性映射同样成立.我们先给出几个一般线性空间上线性变换的例子.
+例6.4.1. 把每个向量映为自身的变换
+$$\mathscr {E}: \mathscr {E} (x) = x, \quad x \in V.$$
+是线性变换, 称为单位变换或恒等变换.
+把空间的每个向量都映为零向量的变换  $\mathcal{O}:\mathcal{O}(x)=0,x\in V$  也是一个线性变换, 称为零变换.
+例6.4.2. 设 $P_{n}[x]$ 是次数不超过n的多项式全体, A 为微分算子
+$$\mathscr {A} (p (x)) = \frac {\mathrm{d}}{\mathrm{d} x} p (x).$$
+由求导法则知 A 为线性变换.
+例6.4.3. 用 $C[a, b]$ 表示闭区间 $[a, b]$ 上所有实值连续函数构成的集合. 映射 $\mathcal{A}: C[a, b] \to C[a, b]$ 定义为: 对每个 $f \in C[a, b]$,
+$$\mathscr {A} (f) (x) = \int_ {a} ^ {b} K (x, t) f (t) \mathrm{d} t,$$
+其中 $K(x,t)$ 是给定的 $[a,b]\times [a,b]$ 上的实值连续函数.由积分的性质知 $\mathcal{A}$ 为线性变换.
+例6.4.4. 设 $V$ 是区间 $[a, b]$ 上的函数构成的线性空间. 映射 $\mathcal{A}: V \to V$ 定义为: 对任意 $f(x) \in V$,
+$$\mathscr {A}: \quad f (x) \mapsto (1 - x) f (a) + x f (b).$$
+[第 195 页]
+则A是线性变换.
+下面介绍线性变换的简单性质.
+定理6.4.1. 设 $V$ 是数域 $F$ 上的线性空间, $\mathcal{A}$ 是 $V$ 上的线性变换. $\mathcal{A}$ 具有以下性质
+(1) $\mathcal{A}(\theta) = \theta$;
+(2) $\mathcal{A}(-\alpha) = -\mathcal{A}(\alpha), \alpha \in V.$
+(3)  $\mathcal{A}(\lambda_{1}\alpha_{1}+\lambda_{2}\alpha_{2}+\cdots+\lambda_{n}\alpha_{n})=\lambda_{1}\mathcal{A}(\alpha_{1})+\lambda_{2}\mathcal{A}(\alpha_{2})+\cdots+\lambda_{n}\mathcal{A}(\alpha_{n}).$
+(4) 设  $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n}$  为线性空间 V 的一组基, 若  $\alpha = \lambda_{1}\alpha_{1} + \lambda_{2}\alpha_{2} + \cdots + \lambda_{n}\alpha_{n}$ , 则
+$$\mathscr {A} (\alpha) = \lambda_ {1} \mathscr {A} (\alpha_ {1}) + \lambda_ {2} \mathscr {A} (\alpha_ {2}) + \dots + \lambda_ {n} \mathscr {A} (\alpha_ {n}).$$
+(5) 若  $\alpha_{1},\alpha_{2},\cdots,\alpha_{m}$  为 V 中线性相关的向量, 则  $\mathcal{A}(\alpha_{1}),\mathcal{A}(\alpha_{2}),\cdots,\mathcal{A}(\alpha_{m})$  也线性相关.
+证明. (1)-(4)请读者自己完成. 下面我们证性质(5).
+设  $\alpha_{1},\alpha_{2},\cdots,\alpha_{m}$  线性相关,则存在不全为零的  $\lambda_{1},\lambda_{2},\cdots,\lambda_{m}\in F$ ,使得
+$$\lambda_ {1} \alpha_ {1} + \lambda_ {2} \alpha_ {2} + \dots + \lambda_ {m} \alpha_ {m} = 0.$$
+两边用线性变换 $\mathcal{A}$ 作用后得到
+$$\begin{array}{l} \lambda_ {1} \mathcal {A} (\alpha_ {1}) + \lambda_ {2} \mathcal {A} (\alpha_ {2}) + \dots + \lambda_ {m} \mathcal {A} (\alpha_ {m}) \\ = \mathcal {A} (\lambda_ {1} \alpha_ {1} + \lambda_ {2} \alpha_ {2} + \dots + \lambda_ {m} \alpha_ {m}) = \mathcal {A} (0) = 0. \end{array}$$
+因此  $\mathcal{A}(\alpha_{1}),\mathcal{A}(\alpha_{2}),\cdots,\mathcal{A}(\alpha_{m})$  线性相关.
+性质(4)说明, 如果知道线性变换 A 在一组基下的像给定, 则每个向量的像也就唯一确定了. 性质(5)则表明, 线性相关的向量组经过线性变换后, 仍保持线性相关性. 特别地, 将它应用到三维几何空间就意味着线性变换把共线的向量映为共线的向量, 把共面的向量映为共面的向量.
+定理6.4.2. 设 $\mathcal{A}$ 是线性空间 $V$ 上的线性变换. $\mathcal{A}$ 的像的全体 $Im(\mathcal{A}) := \{A\alpha |, \alpha \in V\}$ 是 $V$ 的子空间, 称为 $\mathcal{A}$ 的像空间. $\mathcal{A}$ 的核 $Ker(\mathcal{A}) := \{\alpha \in V | A\alpha = \theta\}$ 也为 $V$ 的子空间, 称为 $\mathcal{A}$ 的核空间.
+[第 196 页]
+证明. 设 $\alpha, \beta \in Im(\mathcal{A})$, 则存在 $\tilde{\alpha}, \tilde{\beta} \in V$ 使得 $\alpha = \mathcal{A}\tilde{\alpha}, \beta = \mathcal{A}\tilde{\beta}$. 于是对 $\lambda, \mu \in F$,
+$$\lambda \alpha + \mu \beta = \mathscr {A} (\lambda \tilde {\alpha} + \mu \tilde {\beta}) \in I m (\mathscr {A}),$$
+从而 $Im(\mathcal{A})$ 是V的子空间.
+另一方面, 设  $\alpha, \beta \in Ker(\mathcal{A})$ , 则  $A\alpha = \theta, A\beta = \theta$ . 于是
+$$\mathscr {A} (\lambda \alpha + \mu \beta) = \lambda \mathscr {A} \alpha + \mu \mathscr {A} \beta = \theta ,$$
+即 $\lambda\alpha+\mu\beta\in Ker(\mathcal{A})$ . 故 $Ker(\mathcal{A})$ 为V的子空间.
+§6.4.2 线性变换在一组基下的矩阵
+设A是线性空间V上的线性变换,  $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n}$  是V的一组基. 显然,  $\mathcal{A}(\alpha_{i})$  可以唯一地表示为这组基的线性组合, 即存在  $a_{ij} \in F(i, j = 1, 2, \cdots, n)$  满足
+$$\left\{ \begin{array}{l} \mathcal {A} (\alpha_ {1}) = a _ {1 1} \alpha_ {1} + a _ {2 1} \alpha_ {2} + \dots + a _ {n 1} \alpha_ {n} \\ \mathcal {A} (\alpha_ {2}) = a _ {1 2} \alpha_ {1} + a _ {2 2} \alpha_ {2} + \dots + a _ {n 2} \alpha_ {n} \\ \dots \dots \\ \mathcal {A} (\alpha_ {n}) = a _ {1 n} \alpha_ {1} + a _ {2 n} \alpha_ {2} + \dots + a _ {n n} \alpha_ {n} \end{array} \right.$$
+记 $\mathcal{A}(\alpha_{1},\alpha_{2},\cdots,\alpha_{n})=(\mathcal{A}(\alpha_{1}),\mathcal{A}(\alpha_{2}),\cdots,\mathcal{A}(\alpha_{n}))$ ，则上式可以改写成
+$$\mathscr {A} \left(\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}\right) = \left(\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}\right) A,\tag{6.10}$$
+其中矩阵 $A=(a_{ij})_{n\times n}$ 称为线性变换A在基 $\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$ 下的矩阵.注意(6.10)式右端的 $(\alpha_{1},\alpha_{2},\cdots,\alpha_{n})$ 并非通常意义下由数构成的向量,但将 $\alpha_{i}$ 视为向量元素,右端的向量与矩阵的乘法仍然是有意义的.特别地,当 $V=F^{n}$ 且 $\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$ 为列向量时,可以将 $(\alpha_{1},\alpha_{2},\cdots,\alpha_{n})$ 及 $\mathcal{A}(\alpha_{1},\alpha_{2},\cdots,\alpha_{n})$ 视为n阶方阵.另一方面,注意矩阵A是由变换A及基 $\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$ 唯一确定的,它的第j列为 $\mathcal{A}(\alpha_{j})$ 在基 $\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$ 下的坐标.
+例6.4.5. 线性变换 (6.1) 在自然基 $e_{1}, e_{2}, \ldots, e_{n}$ 下的矩阵正好是A，这是因为 $Ae_{i}$ 就是A的第i列。也就是说，线性变换在自然基下的矩阵就是定义(6.1)中的矩阵A。
+例6.4.6. 设 $F^3$ 的线性变换 $\mathcal{A}$ 将
+$$\alpha_ {1} = (2, 3, 5) ^ {T}, \quad \alpha_ {2} = (0, 1, 2) ^ {T}, \quad \alpha_ {3} = (1, 0, 0) ^ {T}$$
+分别变换为
+$$\beta_ {1} = (1, 2, 0) ^ {T}, \quad \beta_ {2} = (2, 4, - 1) ^ {T}, \quad \beta_ {3} = (3, 0, 5) ^ {T}.$$
+求
+[第 197 页]
+§6.4 一般空间上的线性变换
+(1) $\mathcal{A}$ 在基 $\alpha_{1},\alpha_{2},\alpha_{3}$ 下的矩阵;
+(2) $\mathcal{A}$ 在自然基下的矩阵.
+解. (1) 设 $\mathcal{A}$ 在基 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 下的矩阵矩阵为 $A$, 由定义知
+$$\left(\beta_ {1}, \beta_ {2}, \beta_ {3}\right) = \left(\alpha_ {1}, \alpha_ {2}, \alpha_ {3}\right) A.$$
+所以
+$$\begin{array}{l} A = (\alpha_ {1}, \alpha_ {2}, \alpha_ {3}) ^ {- 1} (\beta_ {1}, \beta_ {2}, \beta_ {3}) \\ = \left( \begin{array}{c c c} 2 & 0 & 1 \\ 3 & 1 & 0 \\ 5 & 2 & 0 \end{array} \right) ^ {- 1} \left( \begin{array}{c c c} 1 & 2 & 3 \\ 2 & 4 & 0 \\ 0 & - 1 & 5 \end{array} \right) = \left( \begin{array}{c c c} 4 & 9 & - 5 \\ - 1 0 & - 2 3 & 1 5 \\ - 7 & - 1 6 & 1 3 \end{array} \right). \end{array}$$
+(2) 设变换 $\mathcal{A}$ 在自然基下的矩阵为 $B$, 由例 6.4.5 知 $\beta_{i} = B\alpha_{i}, i = 1,2,3$. 因此 $(\beta_{1}, \beta_{2}, \beta_{3}) = B(\alpha_{1}, \alpha_{2}, \alpha_{3})$, 从而
+$$\begin{array}{l} B = (\beta_ {1}, \beta_ {2}, \beta_ {3}) (\alpha_ {1}, \alpha_ {2}, \alpha_ {3}) ^ {- 1} \\ = \left( \begin{array}{c c c} 1 & 2 & 3 \\ 2 & 4 & 0 \\ 0 & - 1 & 5 \end{array} \right) \left( \begin{array}{c c c} 0 & 2 & - 1 \\ 0 & - 5 & 3 \\ 1 & - 4 & 2 \end{array} \right) = \left( \begin{array}{c c c} 3 & - 2 0 & 1 1 \\ 0 & - 1 6 & 1 0 \\ 5 & - 1 5 & 7 \end{array} \right). \end{array}$$
+□
+例6.4.7. 设线性空间 $V = F^{2 \times 2}$, $\mathcal{A}$ 是 $V$ 上的线性变换
+$$\mathscr {A} (M) = A M, \quad \forall M \in V$$
+其中 $A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$. 求线性变换 $\mathcal{A}$ 在基
+$$e _ {1} = \left( \begin{array}{c c} 1 & 0 \\ 0 & 0 \end{array} \right), e _ {2} = \left( \begin{array}{c c} 0 & 1 \\ 0 & 0 \end{array} \right), e _ {3} = \left( \begin{array}{c c} 0 & 0 \\ 1 & 0 \end{array} \right), e _ {4} = \left( \begin{array}{c c} 0 & 0 \\ 0 & 1 \end{array} \right)$$
+下的矩阵  $\tilde{A}$ .
+解.
+$$\mathscr {A} (e _ {1}) = \left( \begin{array}{c c} 1 & 2 \\ 3 & 4 \end{array} \right) \left( \begin{array}{c c} 1 & 0 \\ 0 & 0 \end{array} \right) = \left( \begin{array}{c c} 1 & 0 \\ 3 & 0 \end{array} \right) = 1   e _ {1} + 0   e _ {2} + 3   e _ {3} + 0   e _ {4},$$
+[第 198 页]
+所以矩阵  $\tilde{A}$  的第一列为  $(1,0,3,0)^{T}$ . 类似可求得  $\tilde{A}$  的其他列, 得到
+$$\tilde {A} = \left( \begin{array}{c c c c} 1 & 0 & 2 & 0 \\ 0 & 1 & 0 & 2 \\ 3 & 0 & 4 & 0 \\ 0 & 3 & 0 & 4 \end{array} \right).$$
+上例中的变换 $\mathcal{A}$ 虽然是通过左乘矩阵 $A$ 得到, 但 $\mathcal{A}$ 在基本基下的矩阵 $\tilde{A} \neq A$, 它们的阶数甚至都不相同. 读者应注意它与例6.4.5的区别.
+固定线性空间V的一组基 $(\alpha_{1},\alpha_{2},\cdots,\alpha_{n})$ ，则通过关系式(6.10)，V上的线性变换A与一个n阶方阵A建立了一一对应关系。这样可以通过研究矩阵A来研究线性变换A。
+定理6.4.3. 设线性空间V上的线性变换A在基 $\{\alpha_{1},\alpha_{2},\cdots,\alpha_{n}\}$ 下的矩阵为A.  $\beta=\mathcal{A}\alpha,\alpha,\beta\in V$ . 若 $\alpha,\beta$ 在基 $\{\alpha_{1},\alpha_{2},\cdots,\alpha_{n}\}$ 下的坐标分别为x, $y\in F^{n}$ , 则
+$$\mathbf {y} = A \mathbf {x}.\tag{6.11}$$
+证明：设 $\mathbf{x} = (x_{1},x_{2},\dots ,x_{n})^{T},\mathbf{y} = (y_{1},y_{2},\dots ,y_{n})^{T}$ .则
+$$\begin{array}{r l} \beta = \mathcal {A} (\alpha) & = \mathcal {A} (x _ {1} \alpha_ {1} + x _ {2} \alpha_ {2} + \dots + x _ {n} \alpha_ {n}) \\ & = x _ {1} \mathcal {A} (\alpha_ {1}) + x _ {2} \mathcal {A} (\alpha_ {2}) + \dots + x _ {n} \mathcal {A} (\alpha_ {n}) \\ & = \big (\mathcal {A} (\alpha_ {1}), \mathcal {A} (\alpha_ {2}), \dots , \mathcal {A} (\alpha_ {n}) \big) \mathbf {x} \\ & = \big ((\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}) A \big) \mathbf {x} \\ & = (\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}) (A \mathbf {x}) \end{array}$$
+由于一个向量在一组基下的坐标是唯一的,我们立即得到(6.11)式.
+上述定理表明, $\beta = \mathcal{A}\alpha$ 的矩阵形式就是 $\mathbf{y} = A\mathbf{x}!$
+例6.4.8. 设 $\mathcal{A}$ 是 $\mathbb{R}^2$ 上绕坐标原点逆时针旋转 $\theta$ 角的线性变换, $\mathbf{e}_1, \mathbf{e}_2$ 是 $\mathbb{R}^2$ 的单位坐标向量. 则
+$$\mathcal {A} (\mathbf {e} _ {1}, \mathbf {e} _ {2}) = (\mathbf {e} _ {1}, \mathbf {e} _ {2}) \left( \begin{array}{c c} \cos (\theta) & - \sin (\theta) \\ \sin (\theta) & \cos (\theta) \end{array} \right)$$
+[第 199 页]
+于是由定理 6.4.3, 点 $P = (x, y)^T$ 经 $\mathscr{A}$ 变换后的点 $P' = (x', y')^T$ 的坐标为
+$$\binom{x ^ {\prime}}{y ^ {\prime}} = \left( \begin{array}{c c} \cos (\theta) & - \sin (\theta) \\ \sin (\theta) & \cos (\theta) \end{array} \right) \binom{x}{y}.$$
+特别注意此例与第四章例 5.4.5 的联系与区别.
+在第四章中, 我们研究过基变换与坐标变换, 得到了坐标变换公式(5.14). 它与定理 6.4.3 中的的坐标变换公式有何区别呢? 实际上, 坐标变换公式(5.14) 表示的是坐标系做了改变, 同一个向量在新坐标系与旧坐标系下的坐标之间的关系. 而 (6.11) 表示的是, 坐标系不变, 但向量做了线性变换, 变换前后的向量的坐标之间的关系.
+下面我们研究线性变换的像空间与核空间的结构.
+定理6.4.4. 设线性空间V上的线性变换A在基 $\{\alpha_{1},\alpha_{2},\cdots,\alpha_{n}\}$ 下的矩阵为A. 则
+1.  $Im(\mathcal{A}) = \{ (\alpha_{1}, \alpha_{2}, \cdots, \alpha_{n}) \mathbf{y} | \mathbf{y} \in C(A) \}$ ,  $Ker(\mathcal{A}) = \{ (\alpha_{1}, \alpha_{2}, \cdots, \alpha_{n}) \mathbf{x} | \mathbf{x} \in N(A) \}$ . 其中  $C(A), N(A)$  分别为矩阵 A 的列空间与零空间.
+$$2. \dim (I m \mathscr {A}) = r (A), \dim (K e r \mathscr {A}) = n - r (A), \dim (I m (\mathscr {A})) + \dim (K e r I m (\mathscr {A})) = n.$$
+证明. 我们只对像空间证明有关结论, 核空间的结论类似证明.
+1. 对任意  $\alpha = (\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n})\mathbf{x} \in V$ ，其中  $x \in F^{n}$ ，由定理 6.4.3，
+$$\mathcal {A} \alpha = (\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}) A \mathbf {x}.$$
+由于 $y=Ax\in C(A)$ ，所以
+$$\mathscr {A} \boldsymbol {\alpha} = (\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}) \mathbf {y} \in \left\{\left(\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}\right) \mathbf {y} | \mathbf {y} \in C (A) \right\},$$
+故而 $Im(\mathcal{A})\subset\{(\alpha_{1},\alpha_{2},\cdots,\alpha_{n})\mathbf{y}|\mathbf{y}\in C(A)\}.$
+另一方面, 对任意  $\mathbf{y} \in C(A)$ , 存在  $x \in F^{n}$  使得 y = Ax, 故
+$$\left(\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}\right) \mathbf {y} = \left(\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}\right) A \mathbf {x} = \mathscr {A} \left(\left(\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}\right) \mathbf {x}\right) \in I m (\mathscr {A}).$$
+因此,  $\{(\alpha_{1},\alpha_{2},\cdots,\alpha_{n})\mathbf{y}|\mathbf{y}\in C(A)\}\subset Im(\mathcal{A})$ , 进而 $Im(\mathcal{A})=\{(\alpha_{1},\alpha_{2},\cdots,\alpha_{n})\mathbf{y}|\mathbf{y}\in C(A)\}$ .
+[第 200 页]
+2. 不妨设 $A_{1}, A_{2}, \ldots, A_{r}$ 为 $C(A)$ 的一组基, 下证 $(\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n})A_{i}, i = 1, 2, \ldots, r$ 为 $Im\mathcal{A}$ 的一组基, 从而 $\dim(Im\mathcal{A}) = \dim C(A) = r(A)$.
+首先，由于 $A_{1}, A_{2}, \ldots, A_{r}$ 为 $C(A)$ 的一组基，对任意 $\mathbf{y} \in C(A)$，$(\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n})\mathbf{y}$ 都可以由 $(\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n})A_{i}, i = 1, 2, \ldots, r$ 线性表示.
+其次，我们要说明 $(\alpha_{1},\alpha_{2},\ldots ,\alpha_{n})A_{i}, i = 1,2,\dots,r$ 线性无关．实际上，设 $\sum_{i = 1}^{r}x_{i}(\alpha_{1},\alpha_{2},\dots,\alpha_{n})A_{i} = \theta$ ，则
+$$\sum_ {i = 1} ^ {r} x _ {i} \left(\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}\right) A _ {i} = \left(\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}\right) \sum_ {i = 1} ^ {r} x _ {i} A _ {i} = \left(\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}\right) \tilde {A} \tilde {\mathbf {x}} = \theta ,$$
+这里 $\tilde{A}=(A_{1},A_{2},\ldots,A_{r}),\tilde{\mathbf{x}}=(x_{1},x_{2},\ldots,x_{r})^{T}$ . 于是 $A\tilde{\mathbf{x}}=0$ . 由于 $A_{1},A_{2},\ldots,A_{r}$ 线性无关, 故 $\tilde{\mathbf{x}}=0$ . 从而 $(\alpha_{1},\alpha_{2},\ldots,\alpha_{n})A_{i}, i=1,2,\ldots,r$ 线性无关, 进而构成ImA的一组基.
+定理证毕.
+上述定理表明了, 线性变换 $\mathcal{A}$ 的像空间与矩阵 $A$ 的列空间对应, $\mathcal{A}$ 的核空间与 $A$ 的零空间对应.
+推论6.4.1. 设线性空间V上的线性变换A在基 $\{\alpha_{1},\alpha_{2},\cdots,\alpha_{n}\}$ 下的矩阵为A. 则A可逆当且仅当矩阵A可逆.
+证明. 由定理6.4.4, 线性变换 $\mathcal{A}$ 可逆当且仅当 $Ker(\mathcal{A}) = \{\theta\}$ 且 $Im(\mathcal{A}) = V$, 当且仅当 $\operatorname{rank}(A) = n$, 当且仅当 $A$ 可逆.
+下面我们研究一个线性变换在不同基下的矩阵之间的关系.
+定理6.4.5. 设线性空间V上的线性变换 $\mathscr{A}$ 在 $V$ 的两组基 $\alpha_{1},\alpha_{2},\dots ,\alpha_{n}$ 和$\beta_{1},\beta_{2},\dots ,\beta_{n}$ 下的矩阵分别为 $A$ 和 $B$ .设基 $\alpha_{1},\alpha_{2},\dots ,\alpha_{n}$ 到基 $\beta_{1},\beta_{2},\dots ,\beta_{n}$ 的过渡矩阵为 $T,$ 即 $(\beta_{1},\beta_{2},\dots ,\beta_{n}) = (\alpha_{1},\alpha_{2},\dots ,\alpha_{n})T.$ 则
+$$B = T ^ {- 1} A T.$$
+即矩阵A与B相似.
+证明. 已知
+$$\mathscr {A} \left(\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}\right) = \left(\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}\right) A$$
+$$\mathscr {A} \left(\beta_ {1}, \beta_ {2}, \dots , \beta_ {n}\right) = \left(\beta_ {1}, \beta_ {2}, \dots , \beta_ {n}\right) B$$
+$$\left(\beta_ {1}, \beta_ {2}, \dots , \beta_ {n}\right) = \left(\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}\right) T$$
+[第 201 页]
+§6.4 一般空间上的线性变换
+于是
+$$\begin{array}{l} \mathscr {A} (\beta_ {1}, \beta_ {2}, \dots , \beta_ {n}) = \mathscr {A} ((\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}) T) = \mathscr {A} (\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}) T \\ = (\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}) A T = (\beta_ {1}, \beta_ {2}, \dots , \beta_ {n}) (T ^ {- 1} A T) \end{array}$$
+由于线性变换 A 在基  $\beta_{1}, \beta_{2}, \cdots, \beta_{n}$  下的矩阵是唯一的, 所以有
+$$B = T ^ {- 1} A T.$$
+定理 6.4.5 指出, 一个线性变换在不同基下的矩阵是彼此相似的. 那么反过来, 彼此相似的方阵, 是否是同一个线性变换在不同基下对应的矩阵呢? 回答是肯定的. 事实上, 设 A 为线性变换 A 在基  $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{n}$  下的矩阵. 若 B 与 A 相似, 即存在可逆方阵 T, 使得  $B = T^{-1}AT$ . 令  $(\beta_{1}, \beta_{2}, \cdots, \beta_{n}) = (\alpha_{1}, \alpha_{2}, \cdots, \alpha_{n})T$ , 则  $\beta_{1}, \beta_{2}, \cdots, \beta_{n}$  也是 V 的一组基, 且不难验证 A 在这组基下的矩阵为 B.
+由于一个线性空间上的线性变换的性质与该空间的基的选取没有关系, 通过上面的分析我们看出, n 维线性空间上的线性变换与 n 阶方阵的相似类之间建立了一一对应关系. 因此, 通过矩阵研究线性变换的性质时, 只有所有相似矩阵都具有的性质, 才能反映线性变换的性质. 例如, 矩阵的相似不变量对应线性变换的量. 由此我们可以定义线性变换 A 的行列式  $\det(\mathcal{A})$  、秩  $\operatorname{rank}(\mathcal{A})$  、迹  $Tr(\mathcal{A})$  以及特征值, 等.
+例6.4.9. 设 $\mathcal{A}: F^3 \to F^3$ 为例6.4.6中的线性变换. 求 $\mathcal{A}$ 在基
+$$\gamma_ {1} = (1, 0, 1) ^ {T}, \quad \gamma_ {2} = (2, 1, 2) ^ {T}, \quad \gamma_ {3} = (- 2, 0, - 1) ^ {T}$$
+下的矩阵.
+解: 在例 6.4.6 中, 我们已求得 A 在基  $\alpha_{1}, \alpha_{2}, \alpha_{3}$  下的矩阵为
+$$B = \left( \begin{array}{c c c} 4 & 9 & - 5 \\ - 1 0 & - 2 3 & 1 5 \\ - 7 & - 1 6 & 1 3 \end{array} \right).$$
+设基  $\alpha_{1}, \alpha_{2}, \alpha_{3}$  到基  $\gamma_{1}, \gamma_{2}, \gamma_{3}$  的过渡矩阵为 T，则
+$$(\alpha_ {1}, \alpha_ {2}, \alpha_ {3}) T = (\gamma_ {1}, \gamma_ {2}, \gamma_ {3}).$$
+所以
+$$T = (\alpha_ {1}, \alpha_ {2}, \alpha_ {3}) ^ {- 1} (\gamma_ {1}, \gamma_ {2}, \gamma_ {3}) = \left( \begin{array}{c c c} - 1 & 0 & 1 \\ 3 & 1 & - 3 \\ 3 & 2 & - 4 \end{array} \right).$$
+[第 202 页]
+由定理 6.4.5 知变换 A 在基  $\gamma_{1}, \gamma_{2}, \gamma_{3}$  下的矩阵
+$$\begin{array}{l} C = T ^ {- 1} B T = \left( \begin{array}{c c c} 2 & 2 & - 1 \\ 3 & 1 & 0 \\ 3 & 2 & - 1 \end{array} \right) \left( \begin{array}{c c c} 4 & 9 & - 5 \\ - 1 0 & - 2 3 & 1 5 \\ - 7 & - 1 6 & 1 3 \end{array} \right) \left( \begin{array}{c c c} - 1 & 0 & 1 \\ 3 & 1 & - 3 \\ 3 & 2 & - 4 \end{array} \right) \\ = \left( \begin{array}{c c c} - 1 0 & 2 & 3 \\ 1 0 & 4 & - 1 0 \\ - 2 & 1 & 0 \end{array} \right). \end{array}$$
+如果利用例 6.4.6 中 A 在自然基下的矩阵 A 来求矩阵 C, 则计算更为简单, 因为从自然基到  $\gamma_{1}, \gamma_{2}, \gamma_{3}$  的过渡矩阵就是  $(\gamma_{1}, \gamma_{2}, \gamma_{3})$ .
+§6.4.3 线性变换的特征值与特征向量
+在第§5.3节, 我们定义了矩阵的特征值与特征向量的概念. 这个概念可以推广到任意线性变换上.
+定义6.4.2. 设 $V$ 是数域 $F$ 上 $n$ 维线性空间, $\mathcal{A}$ 为 $V$ 上的线性变换. 如果存在 $\lambda \in F$ 及非零向量 $\alpha \in V$ 满足 $\mathcal{A}\alpha = \lambda \alpha$, 则称 $\lambda$ 为线性变换 $\mathcal{A}$ 的一个特征值, $\alpha$ 称为属于特征值 $\lambda$ 的一个特征向量. 称所有对应特征值 $\lambda$ 的特征向量全体(包括零向量)
+$$V _ {\mathscr {A}} (\lambda) = \{\alpha \in V | \mathscr {A} \alpha = \lambda \alpha \},$$
+为属于特征值  $\lambda$  的特征子空间.
+下面的命题揭示了线性变换的特征向量与其对应的矩阵的特征向量之间的关系.
+命题6.4.6. 设V是数域F上n维线性空间,  $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{n}$  是V的一组基. 线性变换A:  $V \rightarrow V$  在基  $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{n}$  下的矩阵为 A. 则
+(1) 线性变换A与矩阵A有相同的特征值;
+(2) 设  $\lambda$  为 A 的一个特征值, 则
+$$V _ {\mathscr {A}} (\lambda) = \left\{\left(\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}\right) \mathbf {x}: \mathbf {x} \in V _ {A} (\lambda) \right\}.$$
+证明. (1) 设  $\lambda$  为 A 的特征值,  $\alpha$  为 A 的属于  $\lambda$  的特征向量. 令  $\alpha = (\alpha_{1}, \alpha_{2}, \cdots, \alpha_{n})\mathbf{x}$ . 由于
+$$\mathcal {A} \boldsymbol {\alpha} = \mathcal {A} (\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}) \mathbf {x} = (\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}) A \mathbf {x},$$
+[第 203 页]
+所以 $\mathcal{A}\alpha=\lambda\alpha$ 蕴含了 $A\mathbf{x}=\lambda\mathbf{x}$ .
+反过来，假设 $\lambda$ 为矩阵A的特征值，x为A的属于 $\lambda$ 的特征向量。令 $\alpha = (\alpha_{1},\alpha_{2},\cdots,\alpha_{n})\mathbf{x}$ 。类似上面的讨论，由 $A\mathbf{x} = \lambda\mathbf{x}$ 可以推出 $A\alpha = \lambda\alpha$ 。所以线性变换A与矩阵A具有完全相同的特征值。
+(2) 由(1)的证明过程可知结论正确.
+利用命题 6.4.6, 有关线性变换的特征值与特征向量计算问题可以转化为矩阵的特征值与特征向量计算问题. 这也是将几何问题转化为代数问题的实例之一.
+例6.4.10. 设 $A = \begin{pmatrix} 1 & 1 \\ 0 & 2 \end{pmatrix}, V = F^{2 \times 2}$ 为线性空间, 定义 $V$ 上的线性变换 $\mathcal{A}: \mathcal{A}M = AM$, $M \in V$. 求 $\mathcal{A}$ 的特征值和特征向量.
+解. 取 $V$ 的一组基
+$$e _ {1} = \left( \begin{array}{c c} 1 & 0 \\ 0 & 0 \end{array} \right), e _ {2} = \left( \begin{array}{c c} 0 & 1 \\ 0 & 0 \end{array} \right), e _ {3} = \left( \begin{array}{c c} 0 & 0 \\ 1 & 0 \end{array} \right), e _ {4} = \left( \begin{array}{c c} 0 & 0 \\ 0 & 1 \end{array} \right).$$
+类似于例 6.4.7, 线性变换 A 在基  $e_{1}, e_{2}, e_{3}, e_{4}$  下的矩阵
+$$\tilde {A} = \left( \begin{array}{c c c c} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \\ 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & 2 \end{array} \right).$$
+$\tilde{A}$ 的特征多项式 $p_{\tilde{A}}(\lambda) = (\lambda - 1)^2 (\lambda - 2)^2$, 所以 $\mathcal{A}$ 的特征值为 $\lambda_1 = 1, \lambda_2 = 2$, 重数均为 2.
+对于 $\lambda = 1$ ，解 $(I - \tilde{A})\mathbf{x} = 0$ 得到两个线性无关解 $\mathbf{x}_1 = (1,0,0,0)^T$ 和 $\mathbf{x}_2 = (0,1,0,0)^T$ 。由于 $(e_1,e_2,e_3,e_4)\mathbf{x}_1 = e_1,(e_1,e_2,e_3,e_4)\mathbf{x}_2 = e_2,\mathcal{A}$ 的属于特征值1的所有特征向量为 $c_{1}e_{1} + c_{2}e_{2},(c_{1},c_{2}$ 不全为0).
+对于 $\lambda = 2$ ，解 $(2I - \tilde{A})\mathbf{x} = 0$ 得到两个线性无关解 $\mathbf{x}_3 = (1,0,1,0)^T$ 和 $\mathbf{x}_4 = (0,1,0,1)^T$ 。由于 $(e_1,e_2,e_3,e_4)\mathbf{x}_3 = e_1 + e_3,$ $(e_1,e_2,e_3,e_4)\mathbf{x}_4 = e_2 + e_4,$ $\mathcal{A}$ 的属于特征值2的所有特征向量为 $c_{3}(e_{1} + e_{3}) + c_{4}(e_{2} + e_{4}),(c_{3},c_{4}$ 不全为0). □
+设线性空间V上的线性变换A在一组基 $\{\alpha_{1},\ldots,\alpha_{n}\}$ 下的矩阵为A. 由于相似矩阵具有相同的特征多项式与特征向量, 因此可以定义线性变换A的特征多项式 $p_{\mathcal{A}}(\lambda)=p_{A}(\lambda)$ , 行列式 $\det(\mathcal{A})=\det(A)$ , 秩 $\operatorname{rank}(\mathcal{A})=\operatorname{rank}(A)$ , 迹 $Tr(\mathcal{A})=Tr(A)$ .
+关于线性变换的下述结论都是显然的,请读者自己证明.
+[第 204 页]
+命题6.4.7. 线性变换A可逆当且仅当A的特征值都不为零.
+命题6.4.8. $n$ 维线性空间上的线性变换 $\mathcal{A}$ 可对角化当且仅当 $\mathcal{A}$ 有 $n$ 个线性无关特征向量.
+命题6.4.9. 若线性变换A的特征值都不相等, 则A可对角化.
+§6.5 若当标准形简介*
+在上节中我们给出了矩阵相似于对角阵的条件. 本节中, 我们将简单介绍任意矩阵在相似关系下的标准形-若当标准形. 我们将介绍计算若当标准形的方法及其应用.
+在例 6.3.2 中, 我们证明了矩阵  $\begin{pmatrix}2 & 1 \\ 0 & 2\end{pmatrix}$  不能相似于对角阵. 这个矩阵只有一个重数为 2 特征值 2, 它在相似关系下已经是最简单的形式了, 称为一个若当块. 一般地, 我们有
+定义6.5.1. 设  $\lambda$  是任意复数, m 是任意正整数, 形如
+$$\left( \begin{array}{c c c c c} \lambda & 1 & 0 & \dots & 0 \\ & \lambda & 1 & \ddots & \vdots \\ & & \ddots & \ddots & 0 \\ & & & \lambda & 1 \\ & & & & \lambda \end{array} \right)$$
+的 m 阶方阵称为若当块, 记作  $J_{m}(\lambda)$ , 其中 m 表示它的阶数,  $\lambda$  是它的对角线元, 也是它的特征值. 因此  $J_{m}(\lambda)$  也称为特征值为  $\lambda$  的 m 阶若当块.
+如果一个方阵是准对角阵,并且每个对角块都是若当块,则称之为若当形矩阵.注意一个若当形矩阵的某些若当块可能具有相同的特征值.例如矩阵
+$$\operatorname{diag} \left(J _ {4} (2), J _ {3} (2), J _ {1} (2), J _ {3} (5)\right)$$
+是一个若当形矩阵.
+定理6.5.1. 任何一个复方阵 $A$ 都相似于一个若当形矩阵 $J$, 它的每个若当块的特征值都是 $A$ 的特征值. 如果不计若当块的排列顺序, 则 $J$ 是唯一的.
+由上面的定理知, 每个复矩阵都相似于唯一的一个若当形矩阵, 若当形矩阵可以作为相似等价类的代表元, 所以若当形矩阵通常也称为若当标准形.
+定理 6.5.1 的证明超过了本书的范围, 我们在此略过. 下面我们介绍如何计算一个矩阵的若当标准形.
+[第 205 页]
+例6.5.1. 设 5 阶复方阵 A 有一个重数为 5 的特征值  $\lambda$ , 若 A 的若当标准形 J 有两个若当块, 那么 J 具有什么样的形式?
+解. 由于 J 有两个若当块, 如果不计若当块在对角线上的排列顺序, 则有
+$$J = J _ {1} = \operatorname{diag} (J _ {4} (\lambda), \lambda) \quad \text {或者} \quad J = J _ {2} = \operatorname{diag} (J _ {3} (\lambda), J _ {2} (\lambda)).$$
+注意, $J_{1}$ 和 $J_{2}$ 是不相似的.因为如果 $J_{1}$ 与 $J_{2}$ 相似,则 $J_{1}-\lambda I$ 与 $J_{2}-\lambda I$ 相似,从而 $(J_{1}-\lambda I)^{2}$ 与 $(J_{2}-\lambda I)^{2}$ 相似.但是, $\operatorname{rank}(J_{1}-\lambda I)^{2}=2$,而 $\operatorname{rank}(J_{2}-\lambda I)^{2}=1$,矛盾.
+事实上, 如果考虑所有可能的若当块的个数, 方阵 A 的若当标准形共有 7 种形式, 而且这 7 个若当标准形是两两不相似的, 请读者自行验证. □
+在上例中,为说明两个若当形矩阵不相似,我们需计算 $(J-\lambda I)^{k}$ 的秩.而 $J-\lambda I$ 的每个若当块的特征值都是零,因此弄清楚 $(J_{m}(0))^{k}$ 的秩十分必要.不难计算得
+$$(J _ {m} (0)) ^ {2} = \left( \begin{array}{c c c c c} 0 & 0 & 1 & \dots & 0 \\ & 0 & 0 & \ddots & \vdots \\ & & \ddots & \ddots & 1 \\ & & & 0 & 0 \\ & & & & 0 \end{array} \right), \quad \dots ,$$
+$$(J _ {m} (0)) ^ {m - 1} = \left( \begin{array}{c c c c c} 0 & 0 & 0 & \dots & 1 \\ & 0 & 0 & \ddots & \vdots \\ & & \ddots & \ddots & 0 \\ & & & 0 & 0 \\ & & & & 0 \end{array} \right), \quad (J _ {m} (0)) ^ {m} = 0$$
+从计算结果可以看出, $k(k \leq m)$  每增加 1, $(J_{m}(0))^{k}$  中 1 的列就向右上方移动一位, 矩阵的秩减少一.因此我们得到下面的等式
+$$\operatorname{rank} (J _ {m} (0) ^ {k}) = \left\{ \begin{array}{l l} m - k & \quad k \leq m \\ 0 & \quad k > m \end{array} \right.$$
+实际上, 我们一开始并不知道若当标准形 $J$, 如何计算 $(J - \lambda I)^k$ 的秩呢? 注意到 $A$ 与 $J$ 相似, 则对任意 $k \geq 1$, $(A - \lambda I)^k$ 与 $(J - \lambda I)^k$ 相似(请读者验证), 从而有 $\operatorname{rank}(J - \lambda I)^k = \operatorname{rank}(A - \lambda I)^k$. 因此, 我们只需要计算 $(A - \lambda I)^k$ 的秩就可以了.
+例6.5.2. 求方阵
+$$A = \left( \begin{array}{c c c} 3 & - 2 & 1 \\ 2 & - 2 & 2 \\ 3 & - 6 & 5 \end{array} \right)$$
+[第 206 页]
+的若当标准形.
+解. 矩阵 $A$ 的特征多项式为
+$$p _ {A} (\lambda) = | \lambda I - A | = (\lambda - 2) ^ {3}.$$
+由于 A 只有一个 3 重的特征值  $\lambda_{1}=2, A$  的若当标准形只能是以下三者之一
+$$J _ {1} = \left( \begin{array}{c c c} 2 & & \\ & 2 & \\ & & 2 \end{array} \right), \quad J _ {2} = \left( \begin{array}{c c c} 2 & 1 & \\ & 2 & \\ & & 2 \end{array} \right), \quad J _ {3} = \left( \begin{array}{c c c} 2 & 1 & \\ & 2 & 1 \\ & & 2 \end{array} \right).$$
+但是
+$$\operatorname{rank} (J - 2 I) = \operatorname{rank} (A - 2 I) = \operatorname{rank} \left( \begin{array}{c c c} 1 & - 2 & 1 \\ 2 & - 4 & 2 \\ 3 & - 6 & 3 \end{array} \right) = 1,$$
+故 A 的若当标准形为  $J_{2}$ .
+□
+例6.5.3. 求矩阵
+$$A = \left( \begin{array}{c c c c c} - 2 & 4 & 1 & 0 & 2 \\ - 4 & 6 & 1 & - 1 & 0 \\ 0 & 0 & 3 & 0 & 0 \\ 0 & 0 & 2 & 3 & 0 \\ 0 & 0 & 1 & 0 & 3 \end{array} \right)$$
+的若当标准形.
+解. 矩阵 $A$ 的特征多项式
+$$p _ {A} (\lambda) = | \lambda I - A | = (\lambda - 2) ^ {2} (\lambda - 3) ^ {3}.$$
+对于特征值  $\lambda_{1}=2$ ，对应的若当块可能为下列二者之一
+$$J _ {1 1} = \left( \begin{array}{c c} 2 & 0 \\ 0 & 2 \end{array} \right), \quad J _ {1 2} = \left( \begin{array}{c c} 2 & 1 \\ 0 & 2 \end{array} \right).$$
+对于特征值  $\lambda_{2}=3$ ，对应的若当块可能为下列三者之一
+$$J _ {2 1} = \left( \begin{array}{c c c} 3 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 3 \end{array} \right), \quad J _ {2 2} = \left( \begin{array}{c c c} 3 & 1 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 3 \end{array} \right), \quad J _ {3 2} = \left( \begin{array}{c c c} 3 & 1 & 0 \\ 0 & 3 & 1 \\ 0 & 0 & 3 \end{array} \right).$$
+[第 207 页]
+§6.5 若当标准形简介*
+方阵A的若当标准形为 $J=\mathrm{diag}(J_{1i},J_{2j}), i=1,2,j=1,2,3$ 六种情形之一. 由 $\mathrm{rank}(J-2I)=\mathrm{rank}(A-2I)=4$ 以及 $\mathrm{rank}(J-3I)=\mathrm{rank}(A-3I)=3$ 知, A 的若当标准形为
+$$J = \operatorname{diag} (J _ {1 2}, J _ {2 2}) = \left( \begin{array}{c c c c c} 2 & 1 & & & \\ 0 & 2 & & & \\ & & 3 & 1 & \\ & & 0 & 3 & \\ & & & & 3 \end{array} \right).$$
+现在我们考察任意方阵若当标准形的计算问题.设n阶方阵A的特征多项式为
+$$p _ {A} (\lambda) = \left(\lambda - \lambda_ {1}\right) ^ {n _ {1}} \left(\lambda - \lambda_ {2}\right) ^ {n _ {2}} \dots \left(\lambda - \lambda_ {s}\right) ^ {n _ {s}}, \quad \sum_ {i = 1} ^ {s} n _ {i} = n,$$
+其中 $\lambda_{1},\ldots,\lambda_{s}$ 为互不相等的特征值.记
+$$r _ {k} ^ {i} = \operatorname{rank} \left(A - \lambda_ {i} I\right) ^ {k}, \quad k \geq 0, \quad \text {其中约定} r _ {0} = n.$$
+记A的若当标准形为J.我们考察特征值为 $\lambda_{i}$ 的若当块中,各阶若当块的个数,设p阶若当块个数为 $\delta_{p}^{i}$ .则 $\sum_{p=1}^{n_{i}}p\delta_{p}^{i}=n_{i}$ ,以及有
+$$r _ {1} ^ {i} = \operatorname{rank} (A - \lambda_ {i} I) = \operatorname{rank} (J - \lambda_ {i} I) = n - n _ {i} + \sum_ {p = 2} ^ {n _ {i}} (p - 1) \delta_ {p} ^ {i}.$$
+一般地
+$$r _ {k} ^ {i} = \operatorname{rank} (A - \lambda_ {i} I) ^ {k} = \operatorname{rank} (J - \lambda_ {i} I) ^ {k} = n - n _ {i} + \sum_ {p = k + 1} ^ {n _ {i}} (p - k) \delta_ {p} ^ {i}, \quad k = 1, 2, \dots , n _ {i}.$$
+由此
+$$d _ {k} ^ {i} := r _ {k - 1} ^ {i} - r _ {k} ^ {i} = \sum_ {p = k} ^ {n _ {i}} \delta_ {p} ^ {i}.$$
+进而J中特征值为 $\lambda_{i}$ 的k阶若当块的个数为
+$$\delta_ {k} ^ {i} = d _ {k} ^ {i} - d _ {k + 1} ^ {i}.$$
+例6.5.4. 重新考察例6.5.3. 矩阵 $A$ 有一个二重特征值2和一个三重特征值3.
+对于特征值  $\lambda_{1}=2$ , 计算可得
+$$r _ {0} ^ {1} = 5, r _ {1} ^ {1} = \operatorname{rank} (A - 2 I) = 4, r _ {2} ^ {1} = \operatorname{rank} (A - 2 I) ^ {2} = 3, r _ {3} ^ {1} = \operatorname{rank} (A - 2 I) ^ {3} = 3.$$
+[第 208 页]
+因此
+$$d _ {1} ^ {1} = r _ {0} ^ {1} - r _ {1} ^ {1} = 1, \quad d _ {2} ^ {1} = r _ {1} ^ {1} - r _ {2} ^ {1} = 1, \quad d _ {3} ^ {1} = r _ {2} ^ {1} - r _ {3} ^ {3} = 0.$$
+所以
+$$\delta_ {1} ^ {1} = d _ {1} ^ {1} - d _ {2} ^ {1} = 0, \quad \delta_ {2} ^ {1} = d _ {2} ^ {1} - d _ {3} ^ {1} = 1.$$
+即 A 的特征值为 2 的若当块只有如下一个 2 阶的若当块  $\begin{pmatrix}2 & 1 \\ 0 & 2\end{pmatrix}$ .
+对于特征值  $\lambda_{2}=3$ , 计算可得
+$$r _ {0} = 5 ^ {2}, r _ {1} ^ {2} = \operatorname{rank} (A - 3 I) = 3, r _ {2} ^ {2} = \operatorname{rank} (A - 3 I) ^ {2} = 2, r _ {3} ^ {2} = \operatorname{rank} (A - 2 I) ^ {3} = 2.$$
+因此
+$$d _ {1} ^ {2} = r _ {0} ^ {2} - r _ {1} ^ {2} = 2, \quad d _ {2} ^ {2} = r _ {1} ^ {2} - r _ {2} ^ {2} = 1, \quad d _ {3} ^ {2} = r _ {2} ^ {2} - r _ {3} ^ {2} = 0.$$
+所以
+$$\delta_ {1} ^ {2} = d _ {1} ^ {2} - d _ {2} ^ {2} = 1, \quad \delta_ {2} ^ {2} = d _ {2} ^ {2} - d _ {3} ^ {2} = 1.$$
+即 $A$ 的特征值为3的若当块有一个2阶的和一个1阶的
+$$\left( \begin{array}{c c} 3 & 1 \\ 0 & 3 \end{array} \right)\tag{3}$$
+所以 $A$ 的若当标准形为
+$$\left( \begin{array}{c c c c c} 2 & 1 & & & \\ 0 & 2 & & & \\ & & 3 & 1 & \\ & & 0 & 3 & \\ & & & & 3 \end{array} \right).$$
+例6.5.5. 设
+$$A = \left( \begin{array}{c c c} 3 & - 2 & 1 \\ 2 & - 2 & 2 \\ 3 & - 6 & 5 \end{array} \right)$$
+求可逆矩阵 T, 使得  $T^{-1}AT$  为 A 的若当标准形.
+解. 在例 6.5.2 中, 我们已计算 A 的若当标准形为
+$$J = \left( \begin{array}{c c c} 2 & 1 \\ & 2 \\ & & 2 \end{array} \right).$$
+[第 209 页]
+§6.5 若当标准形简介*
+求过渡矩阵 T, 就是解矩阵方程 AT = TJ. 如果将 T 中元素看成未知数, 则上述矩阵方阵转化为 9 个未知数的线性方程组. 从理论上讲, 任何一个 n 阶方阵与它的若当标准形间的过渡矩阵都可以这样求出: 解含  $n^{2}$  个未知数的线性方程组. 尽管当阶数 n 比较小时, 这个方法是可行的, 但是当 n 很大时, 这样做计算量很大, 不如我们下面将要采用的方法简单.
+设  $T = (T_{1}, T_{2}, T_{3})$ ，其中  $T_{1}, T_{2}, T_{3}$  为列向量。则
+$$A \left(T _ {1}, T _ {2}, T _ {3}\right) = \left(T _ {1}, T _ {2}, T _ {3}\right) \left( \begin{array}{c c c} 2 & 1 \\ & 2 \\ & & 2 \end{array} \right)$$
+所以
+$$A T _ {1} = 2 T _ {1}, A T _ {2} = T _ {1} + 2 T _ {2}, A T _ {3} = 2 T _ {3}.$$
+即
+$$\left\{ \begin{array}{l} (A - 2 I) T _ {1} = 0 \\ (A - 2 I) T _ {2} = T _ {1} \\ (A - 2 I) T _ {3} = 0 \end{array} \right.$$
+由前两式得
+$$(A - 2 I) ^ {2} T _ {2} = 0.$$
+由于 $(A - 2I)^{2} = 0$ ，故 $T_{2}$ 可取任何一个满足 $(A - 2I)T_{2}\neq 0$ 的向量，不妨取 $T_{2} = (1,0,0)^{T}$ .代入第二个式得 $T_{1} = (1,2,3)^{T}$ .再解第三式，注意 $T_{3}$ 要与 $T_{1},T_{2}$ 线性无关,例如取 $T_{3} = (-1,0,1)^{T}$ .于是得到过渡矩阵
+$$T = \left( \begin{array}{c c c} 1 & 1 & - 1 \\ 2 & 0 & 0 \\ 3 & 0 & - 1 \end{array} \right).$$
+注意, 我们是先通过第四个式子求出  $T_{2}$ , 再代入第一个式子解得  $T_{1}$ . 那么请读者思考是否可以先通过第一个式子解得  $T_{1}$ , 再代入第二式解  $T_{2}$  呢?
+下面我们来看若当标准形的两个应用.
+例6.5.6. 证明: n阶方阵A满足 $A^{2}=A$ 的充要条件是A相似于准对角阵 $\mathrm{diag}(I_{r},0)$ ，这里 $r=\mathrm{rank}(A)$ .
+[第 210 页]
+证明. 充分性. 假设 $A$ 相似于 $\operatorname{diag}(I_r, 0)$, 即存在可逆方阵 $T$ 使得 $A = T \operatorname{diag}(I_r, 0) T^{-1}$. 则易验证, $A^2 = A$.
+必要性.设方阵A满足 $A^{2}=A$ , A的若当标准形为J, 则 $J^{2}=J$ .设 $J_{i}$ 是J的特征值为 $\lambda_{i}$ 的若当块, 则 $J_{i}^{2}=J_{i}$ .由此, $\lambda_{i}^{2}=\lambda_{i}$ , 即 $\lambda_{i}=0$ 或 $\lambda_{i}=1$ , 且 $J_{i}$ 必为1阶若当块.从而, $J=\mathrm{diag}(I_{r},0)$ .
+例6.5.7. 设 x, y, z 都是 t 的函数, 求解常微分方程组
+$$\left\{ \begin{array}{l} \frac {\mathrm{d} x}{\mathrm{d} t} = 3 x - 2 y + z \\ \frac {\mathrm{d} y}{\mathrm{d} t} = 2 x - 2 y + 2 z \\ \frac {\mathrm{d} z}{\mathrm{d} t} = 3 x - 6 y + 5 z \end{array} \right.$$
+解. 原方程组可写成
+$$\frac {\mathrm{d}}{\mathrm{d} t} \left( \begin{array}{c} x \\ y \\ z \end{array} \right) = \left( \begin{array}{c c c} 3 & - 2 & 1 \\ 2 & - 2 & 2 \\ 3 & - 6 & 5 \end{array} \right) \left( \begin{array}{c} x \\ y \\ z \end{array} \right),$$
+或
+$$\frac {\mathrm{d} \mathbf {x}}{\mathrm{d} t} = A \mathbf {x},$$
+其中  $\mathbf{x}=(x(t),y(t),z(t))$ ，矩阵 A 恰为例 6.5.2 中的矩阵。设 T 为例 6.5.2 中的过渡矩阵，作线性代换  $\mathbf{x}=T\mathbf{x}^{*}$ ，其中  $\mathbf{x}^{*}=(x^{*}(t),y^{*}(t),z^{*}(t))$ ，则  $T\frac{d\mathbf{x}^{*}}{dt}=AT\mathbf{x}^{*}$ ，即
+$$\frac {\mathrm{d} \mathbf {x} ^ {*}}{\mathrm{d} t} = T ^ {- 1} A T \mathbf {x} ^ {*}.$$
+写出相应的方程组, 就是
+$$\left\{ \begin{array}{l} \frac {\mathrm{d} x ^ {*}}{\mathrm{d} t} = 2 x ^ {*} + y ^ {*} \\ \frac {\mathrm{d} y ^ {*}}{\mathrm{d} t} = 2 y ^ {*} \\ \frac {\mathrm{d} z ^ {*}}{\mathrm{d} t} = 2 z ^ {*} \end{array} \right.$$
+解此方程组得
+$$z ^ {*} = c _ {1} e ^ {2 t}, y ^ {*} = c _ {2} e ^ {2 t}, x ^ {*} = (c _ {2} t + c _ {3}) e ^ {2 t}.$$
+再利用 $\mathbf{x} = T\mathbf{x}^*$ ，即
+$$\left( \begin{array}{c} x \\ y \\ z \end{array} \right) = \left( \begin{array}{c c c} 1 & 1 & - 1 \\ 2 & 0 & 0 \\ 3 & 0 & - 1 \end{array} \right) \left( \begin{array}{c} x ^ {*} \\ y ^ {*} \\ z ^ {*} \end{array} \right),$$
+[第 211 页]
+§6.5 若当标准形简介*
+得到通解是
+$$\left\{ \begin{array}{l} x (t) = (c _ {2} t + c _ {2} + c _ {3} - c _ {1}) e ^ {2 t} \\ y (t) = (2 c _ {2} t + 2 c _ {3}) e ^ {2 t} \\ z (t) = (3 c _ {2} t + 3 c _ {3} + c _ {1}) e ^ {2 t} \end{array} \right.$$
+其中  $c_{1}, c_{2}, c_{3}$  为任意常数.
+这个例子告诉我们, 利用若当标准形, 可完全解决常系数线性微分方程组的求解问题.
+习题五
+1. 判断下面所定义的变换A,哪些是线性的,哪些不是线性的.
+(1) 在 $\mathbb{R}^2$ 中, $\mathcal{A}(x,y)^T = (x + y,x^2)^T$;
+(2) 在 $\mathbb{R}^3$ 中, $\mathcal{A}(x,y,z)^T = (3x - 2y + z,0,x + 2y)^T$;
+(3) 在 $\mathbb{R}^3$ 中, $\mathcal{A}(x,y,z)^T = (x - y,z,x + 1)^T$.
+2. 给定  $R^{2}$  上的线性变换  $\mathcal{A}(x,y)^{T}=(2x-y,x+y)^{T}$ . 绘制图形, 观察 A 将四边形网格变成什么图形? 将单位圆变为什么图形?
+3. 在平面直角坐标系中, 求关于直线  $\sin(\theta)x - \cos(\theta)y = 0$  的对称变换.
+4. 求  $R^{2}$  中如下线性变换 A: A 沿方向  $(2,1)$  拉伸 2 倍, 沿方向  $(1,-2)$  压缩 2 倍.
+5. 证明: $\mathbb{R}^2$ 上的可逆线性变换可以分解为关于坐标轴的伸缩、反射及旋转变换的复合.
+6. 在三维几何空间的直角坐标系中, 求关于平面 $x + 2y + 3z = 0$ 的对称变换.
+7. 在三维几何空间的直角坐标系中, 求关于直线 z = 2y = 3x 的对称变换.
+8. 在三维几何空间的直角坐标系中, 求绕单位向量 $\mathbf{e} = (1, -1, 1)^T$ 逆时针旋转 $30^\circ$ 角的变换.
+9. 求  $R^{3}$  中如下线性变换 A: A 沿方向  $(1,1,0)$  拉伸 2 倍, 沿方向  $(1,-1,1)$  压缩 2 倍, 沿方向  $(1,-1,-2)$  拉伸 3 倍.
+10. 证明:三维几何空间中的可逆线性变换将平面变为平面,平行平面变为平行平面.
+[第 212 页]
+11. 给定 $\mathbb{R}^3$ 中的线性变换 $\mathcal{A}(x,y,z)^T = (2x + y - z,x + 2y + z,4x + 5y + z)^T$. 求 $\mathcal{A}$ 的像空间与核空间的维数及一组基.
+12. 证明: 从高维数组空间到低维数组空间的投影变换不是可逆变换.
+13. 求下列矩阵的全部特征值和特征向量
+(1)
+$$\left( \begin{array}{c c} 0 & a \\ - a & 0 \end{array} \right)$$
+(2)
+$$\left( \begin{array}{c c} \cos \theta & - \sin \theta \\ \sin \theta & \cos \theta \end{array} \right)$$
+(3)
+$$\left( \begin{array}{c c c} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{array} \right);$$
+(4)
+$$\left( \begin{array}{c c c} 3 & - 2 & 1 \\ 2 & - 2 & 2 \\ 3 & - 6 & 5 \end{array} \right)$$
+(5)
+$$\left( \begin{array}{c c c} 2 & 1 & 1 \\ 1 & 2 & 1 \\ 1 & 1 & 2 \end{array} \right);$$
+(6)
+$$\left( \begin{array}{c c c c} 1 & 1 & 1 & 1 \\ 1 & 1 & - 1 & - 1 \\ 1 & - 1 & 1 & - 1 \\ 1 & 1 & - 1 & 1 \end{array} \right)$$
+14. 给定 $\mathbb{R}^2$ 上的线性变换 $\mathcal{A}(x, y)^T = (3x + 2y, 2x + y)^T$. $\mathcal{A}$ 将单位圆 $C$ 映射为椭圆 $C'$. 求椭圆 $C'$ 的长短半轴方向与长度, 以及椭圆的面积.
+15. 设 $A$ 是可逆方阵. 证明: 若 $\lambda$ 是 $A$ 的一个特征值, 则 $\lambda^{-1}$ 是 $A^{-1}$ 的特征值, 且对应的特征向量相同.
+16. 设 A 为方阵,  $f(\lambda)$  为多项式. 证明: 如果  $\lambda_{0}$  是 A 的特征值, 则  $f(\lambda_{0})$  是  $f(A)$  的特征值; 且如果 x 是属于  $\lambda_{0}$  的特征向量, 则 x 也是矩阵  $f(A)$  的属于特征值  $f(\lambda_{0})$  的特征向量.
+17. 设三阶方阵 $A$ 的特征多项式为 $p_A(\lambda) = (\lambda - 1)^2 (\lambda - 2)$. 求方阵 $3A + 2I$ 的特征值与行列式.
+18. (1) 若  $A^{2}=I$ ，证明: A 的特征值只能是  $\pm1$ ;
+(2) 设 n 阶实方阵 A 满足  $A^{T} = -A$ ，证明 A 的特征值为零或纯虚数.
+19. 设  $\lambda_{1}, \lambda_{2}$  是方阵 A 的两个不同的特征值,  $x_{1}, x_{2}$  是分别属于  $\lambda_{1}, \lambda_{2}$  的特征向量. 证明:  $x_{1} + x_{2}$  不是 A 的特征向量.
+20. 设 n 阶方阵  $A = (a_{ij})$  的全部特征值为  $\lambda_{i} (i = 1, 2, \cdots, n)$ ，证明
+$$\sum_ {i = 1} ^ {n} \lambda_ {i} ^ {2} = \sum_ {i, j = 1} ^ {n} a _ {i j} a _ {j i}.$$
+[第 213 页]
+§6.5 若当标准形简介*
+21. 判断以下矩阵A,B是否相似?请说明理由.
+$$A = \left( \begin{array}{c c c} 1 & 2 & 3 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right),$$
+$$B = \left( \begin{array}{c c c} 1 & 2 & 0 \\ 0 & 1 & 3 \\ 0 & 0 & 1 \end{array} \right);\tag{2}$$
+$$A = \left( \begin{array}{c c c c} 1 & 2 & 0 & 0 \\ 0 & 1 & 3 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array} \right),$$
+$$B = \left( \begin{array}{c c c c} 1 & 2 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 0 & 1 \end{array} \right).$$
+22. 求三阶可逆方阵 $P$ 使得 $P\left( \begin{array}{lll}1 & 0 & 0\\ 0 & 2 & 0\\ 0 & 0 & 3 \end{array} \right)P^{-1} = \left( \begin{array}{lll}3 & 0 & 0\\ 0 & 1 & 0\\ 0 & 0 & 2 \end{array} \right).$
+23. 设A,B为同阶方阵,且A可逆.证明;A与B相似.
+24. 设A与B相似, C与D相似. 证明:  $\mathrm{diag}(A,C)$ 与 $\mathrm{diag}(B,D)$ 相似. 反之是否成立?
+25. 设方阵 A 与 B 相似, 证明:
+(1) 对每个正整数 $k, A^k$ 相似于 $B^k$;
+(2) 对每个多项式 $f, f(A)$ 相似于 $f(B)$.
+26. 设矩阵 $A = \begin{pmatrix} 0 & 0 & 1 \\ x & 1 & y \\ 1 & 0 & 0 \end{pmatrix}$ 有三个线性无关的特征向量, 求 $x$ 和 $y$ 应满足的条件.
+27. 设矩阵 $A$ 与 $B$ 相似, 其中
+$$A = \left( \begin{array}{c c c} - 2 & 0 & 0 \\ 2 & x & 2 \\ 3 & 1 & 1 \end{array} \right), \quad B = \left( \begin{array}{c c c} - 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & y \end{array} \right).$$
+(1) 求 $x$ 和 $y$ 的值;
+(2) 求可逆矩阵 T, 使得  $T^{-1}AT = B$ .
+28. 设 n 阶方阵  $A \neq 0$ , 满足  $A^{m} = 0$ , 其中  $m \geq 2$  为正整数.
+(1) 求 A 的特征值;
+(2) 证明: A 不能相似于对角阵;
+[第 214 页]
+(3) 证明: $|I+A|=1$.
+29. 判断下列矩阵 A 是否可对角化? 若可以, 试求变换矩阵 T, 使得  $T^{-1}AT$  为对角阵.
+(1)  $A = \begin{pmatrix} -2 & 0 & 0 \\ 3 & 1 & 1 \\ 2 & 2 & 0 \end{pmatrix};$ 
+(2)  $A = \begin{pmatrix} 1 & -1 & 1 \\ 2 & 4 & -2 \\ -3 & -3 & 5 \end{pmatrix};$ 
+(3)  $A = \begin{pmatrix} 3 & 0 & 1 \\ 4 & -2 & -8 \\ -4 & 0 & -1 \end{pmatrix};$ 
+(4)  $A = \begin{pmatrix} 2 & 1 & 1 \\ 1 & 2 & 1 \\ 1 & 1 & 2 \end{pmatrix}.$
+30. 设 $A, B$ 均为 $n$ 阶方阵, $A$ 有 $n$ 个互异的特征值且 $AB = BA$. 证明 $B$ 相似于对角阵.
+31. 设 $n$ 阶方阵 $A$ 满足 $A^2 = I$, 证明 $A$ 相似于 $\begin{pmatrix} I_r & 0 \\ 0 & -I_{n-r} \end{pmatrix}$, 其中 $0 \leq r \leq n$.
+32. 设 A 为 3 阶实方阵, 若 A 不实相似于上三角阵, 问 A 是否一定复相似于对角阵?
+33. 设n阶复方阵A的全部特征值为 $\lambda_{1},\lambda_{2},\ldots,\lambda_{n},f(\lambda)$ 为多项式.证明: $f(A)$ 的全部特征值为 $f(\lambda_{1}),f(\lambda_{2}),\ldots,f(\lambda_{n})$ ,由此 $\det(f(A))=f(\lambda_{1})f(\lambda_{2})\cdots f(l_{n})$ .
+34. 设三阶方阵 $A$ 的特征多项式为 $p_A(\lambda) = (\lambda - 1)^2 (\lambda - 2)$. 求多项式矩阵 $A^3 - 2A + 3I$ 的特征值与行列式.
+35. 判断下面所定义的变换, 哪些是线性的, 哪些不是线性的.
+(3) 取定  $A, B \in M_{n}(F)$ ，对每个  $\mathbf{x} \in M_{n}(F)$ ， $\mathcal{A}(\mathbf{x}) = A\mathbf{x} - \mathbf{x}B;$
+(4) 在线性空间 V 中,  $\mathcal{A}(x)=\alpha$ , 其中  $\alpha$  为 V 中的一个固定的向量.
+36. 求下列线性变换在所指定的基下的矩阵
+(1) 在  $F_{n}[x]$  中,  $\mathcal{A}(P(x)) = P'(x)$ , 在基  $e_{0} = 1, e_{1} = x, \cdots, e_{n-1} = \frac{x^{n-1}}{(n-1)!}$  下;
+(2) 以四个线性无关的函数
+$$\alpha_ {1} = e ^ {a x} \cos b x$$
+$$\alpha_ {2} = e ^ {a x} \sin b x$$
+$$\alpha_ {3} = x e ^ {a x} \cos b x$$
+$$\alpha_ {4} = x e ^ {a x} \sin b x$$
+为基的四维空间中, 线性变换为微分变换;
+[第 215 页]
+(3) 给定 2 阶实方阵 A, 求 2 阶实方阵构成的线性空间上的线性变换  $\mathcal{A}(\mathbf{x}) = A\mathbf{x} - \mathbf{x}A$  在基
+$$e _ {1} = \left( \begin{array}{c c} 1 & 0 \\ 0 & 0 \end{array} \right), e _ {2} = \left( \begin{array}{c c} 0 & 1 \\ 0 & 0 \end{array} \right), e _ {3} = \left( \begin{array}{c c} 0 & 0 \\ 1 & 0 \end{array} \right), e _ {4} = \left( \begin{array}{c c} 0 & 0 \\ 0 & 1 \end{array} \right).$$
+下的矩阵.
+37. 在 $\mathbb{R}^3$ 中定义线性变换
+$$\mathscr {A} (x, y, z) ^ {T} = (x + 2 y, x - 3 z, 2 y - z) ^ {T}.$$
+求 $\mathcal{A}$ 在基 $\mathbf{e}_1 = (1,0,0)^T, \mathbf{e}_2 = (0,1,0)^T, \mathbf{e}_3 = (0,0,1)^T$ 下的矩阵.
+38. 设 $\mathbb{R}^3$ 中的线性变换 $\mathcal{A}$ 将
+$$\alpha_ {1} = (0, 0, 1) ^ {T}, \quad \alpha_ {2} = (0, 1, 1) ^ {T}, \quad \alpha_ {3} = (1, 1, 1) ^ {T}$$
+变换到
+$$\beta_ {1} = (2, 3, 5) ^ {T}, \quad \beta_ {2} = (1, 0, 0) ^ {T}, \quad \beta_ {3} = (0, 1, - 1) ^ {T}.$$
+求 A 在自然基和  $\alpha_{1}, \alpha_{2}, \alpha_{3}$  下的矩阵.
+39. 设线性变换 $\mathcal{A}$ 在基 $\alpha_{1} = (1, - 1),\alpha_{2} = (1,1)$ 下的矩阵为 $\left( \begin{array}{ll}2 & 3\\ 0 & 1 \end{array} \right)$ ，求 $\mathcal{A}$ 在基$\beta_{1} = (2,0),\beta_{2} = (-1,1)$ 下的矩阵.
+40. 设 $\mathcal{A}$ 在基 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 下的矩阵为
+$$A = \left( \begin{array}{c c c} 1 & 2 & 3 \\ - 1 & 0 & 3 \\ 2 & 1 & 5 \end{array} \right),$$
+求 $\mathcal{A}$ 在基 $\beta_{1},\beta_{2},\beta_{3}$ 下的矩阵:
+(1) $\beta_{1} = \alpha_{3},\beta_{2} = \alpha_{1},\beta_{3} = \alpha_{2};$
+(2) $\beta_{1} = \alpha_{1},\beta_{2} = \alpha_{2} + \alpha_{3},\beta_{3} = \alpha_{2} - \alpha_{3}.$
+41. 在 $\mathbb{R}^3$ 中给定两组基:
+$$\alpha_ {1} = (1, 0, 1) ^ {T}, \quad \alpha_ {2} = (2, 1, 0) ^ {T}, \quad \alpha_ {3} = (1, 1, 1) ^ {T};$$
+$$\beta_ {1} = (2, 3, 1) ^ {T}, \quad \beta_ {2} = (7, 9, 5) ^ {T}, \quad \beta_ {3} = (3, 4, 3) ^ {T}.$$
+定义线性变换  $\mathcal{A}(\alpha_{i})=\beta_{i}(i=1,2,3)$ .
+[第 216 页]
+(1) 求 A 在基  $\alpha_{1}, \alpha_{2}, \alpha_{3}$  下的矩阵;
+(2) 求 $\mathcal{A}$ 在基 $\beta_{1}, \beta_{2}, \beta_{3}$ 下的矩阵.
+42. 设 $V$ 为 $n$ 维线性空间, $\mathcal{A}: V \to V$ 为线性变换. 若存在 $\alpha \in V$, 使得 $\mathcal{A}^{n-1} \alpha \neq 0$, 但是 $\mathcal{A}^n(\alpha) = 0$, 证明: $\mathcal{A}$ 在某组基下的矩阵为
+$$\left( \begin{array}{c c c c c} 0 & 1 & 0 & \dots & 0 \\ & 0 & 1 & \ddots & \vdots \\ & & \ddots & \ddots & 0 \\ & & & 0 & 1 \\ & & & & 0 \end{array} \right)$$
+43. 设  $\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$  为线性空间 V 的一组基, 证明: 对于任意  $\beta_{1},\beta_{2},\cdots,\beta_{n}\in V$ , 存在线性变换 A, 使得  $\mathcal{A}(\alpha_{i})=\beta_{i}(i=1,2,\cdots,n)$ .
+44. 设 V 为次数不超过 2 的多项式构成的线性空间, 线性变换  $\mathscr{A}: V \to V$  满足
+$$\mathscr {A} (1) = x ^ {2} + x + 3, \quad \mathscr {A} (x) = 2 x + 1, \quad \mathscr {A} (x ^ {2}) = 2 x ^ {2} + 3.$$
+求 A 的特征值和特征向量.
+45. 设 $V = F^{n \times n}$.
+(1) 证明: $V$ 的变换 $\mathcal{A}: \mathbf{x} \to \mathbf{x}^T$ 是线性变换;
+(2) 求 $\mathcal{A}$ 的特征值与特征向量. $\mathcal{A}$ 是否可对角化?
+46* 求下列矩阵的若当标准形
+(1)
+$$\left( \begin{array}{c c c} 2 & - 2 & 3 \\ 1 & 1 & 1 \\ 1 & 3 & - 1 \end{array} \right)$$
+(2)
+$$\left( \begin{array}{c c c} 4 & - 9 & - 4 \\ 6 & - 1 2 & - 5 \\ - 7 & 1 3 & 5 \end{array} \right)$$
+(3)
+$$\left( \begin{array}{c c c c} 1 & 2 & 3 & 4 \\ 0 & 1 & 2 & 3 \\ 0 & 0 & 1 & 2 \\ 0 & 0 & 0 & 1 \end{array} \right)\tag{4}$$
+$$\left( \begin{array}{c c c c c c} 0 & 1 & 0 & \dots & 0 & 0 \\ 0 & 0 & 1 & \dots & 0 & 0 \\ \dots & \dots & \dots & \dots & \dots & \dots \\ 0 & 0 & 0 & \dots & 0 & 1 \\ 1 & 0 & 0 & \dots & 0 & 0 \end{array} \right) _ {n \times n}$$
+47* 设 $A = \begin{pmatrix} 2 & -2 & 3 \\ 10 & -4 & 5 \\ 5 & -4 & 6 \end{pmatrix}$, 求方阵 $T$, 使 $T^{-1}AT$ 为若当标准形.
+[第 217 页]
+§6.5 若当标准形简介*
+48* 设方阵A满足 $A^{2}=A$ .用矩阵的若当标准型证明: $Tr(A)=\operatorname{rank}(A)$ .
+$$\left\{ \begin{array}{l} \frac {\mathrm{d} x}{\mathrm{d} t} = 2 x - 2 y + 3 z \\ \frac {\mathrm{d} y}{\mathrm{d} t} = 1 0 x - 4 y + 5 z \\ \frac {\mathrm{d} z}{\mathrm{d} t} = 5 x - 4 y + 6 z \end{array} \right.$$
+49* 设 $x = x(t), y = y(t), z = z(t)$, 求解常微分方程组
+[第 218 页]
+[第 219 页]
+第七章 内积空间及变换
+在第四章我们引进了线性空间的概念. 作为线性空间的一个具体模型-三维几何空间 $\mathbb{R}^3$, 其中向量的长度、夹角等几何性质在线性空间中没有得到反映. 而这种反映向量之间的度量等几何性质的空间在物理和几何等许多问题中具有十分重要的作用. 因此, 本章的主要目的是在线性空间中引入内积形成具有度量的线性空间-内积空间. 我们主要考虑两个数域上的内积空间: 在实数域上的内积线性空间-欧几里得(Euclid)空间及复数域上的内积空间-酉空间. 我们先介绍欧几里得空间(简称欧氏空间), 特别地, 我们从数组空间上的内积空间开始介绍.
+§7.1 数组内积空间的定义与性质
+从解析几何中我们知道, 对于 $R^{3}$ 中任意两个向量a和b, 设 $|a|$ 和 $|b|$ 分别是它们的长度, $\theta$ 是它们之间的夹角, 则其内积(有时又称为数量积或点乘)定义为
+$$(\mathbf {a}, \mathbf {b}) = | \mathbf {a} | | \mathbf {b} | \cos \theta .\tag{7.1}$$
+反之, 向量a的长度以及向量a和b之间的夹角也可由内积表示
+$$| \mathbf {a} | = \sqrt {(\mathbf {a} , \mathbf {a})},\tag{7.2}$$
+$$\theta = \arccos \frac {(\mathbf {a} , \mathbf {b})}{\sqrt {(\mathbf {a} , \mathbf {a}) (\mathbf {b} , \mathbf {b})}}.\tag{7.3}$$
+因此, 在一般线性空间中, 如果我们定义好了内积, 则向量之间的长度和夹角也就可以由内积来定义, 从而可以引进度量. 下面, 我们先在实数域 $\mathbb{R}$ 上的 $n$ 维数组空间 $\mathbb{R}^n$ 中引入内积.
+定义7.1.1. 设 $\mathbb{R}^n$ 是实数域 $\mathbb{R}$ 上的 $n$ 维数组空间. 对任意(列)向量 $\mathbf{a}, \mathbf{b} \in \mathbb{R}^n$, 定义它们的内积为
+$$(\mathbf {a}, \mathbf {b}) := \mathbf {a} ^ {T} G \mathbf {b}\tag{7.4}$$
+其中 $G \in \mathbb{R}^{n \times n}$ 称为度量矩阵, 它是满足对任意 $\mathbf{0} \neq \mathbf{a} \in \mathbb{R}^n$, $\mathbf{a}^T G\mathbf{a} > 0$ 的 $n$ 阶实对称方阵, 称为实对称正定方阵. 定义了内积 (7.4) 的数组空间 $\mathbb{R}^n$ 称为欧几里得(Euclid)空间, 简称欧氏空间.
+我们看几个例子.
+例7.1.1. 取度量矩阵 $G$ 为 $n$ 阶单位阵. 则对任意 $\mathbf{0} \neq \mathbf{a} \in \mathbb{R}^n$, $\mathbf{a}^T G\mathbf{a} = \mathbf{a}^T\mathbf{a} > 0$, 故单位阵是实正定方阵. 这时内积定义为
+$$(\mathbf {a}, \mathbf {b}) = a _ {1} b _ {1} + a _ {2} b _ {2} + \dots + a _ {n} b _ {n} = \mathbf {a} ^ {T} \mathbf {b},\tag{7.5}$$
+[第 220 页]
+这里 $\mathbf{a}=(a_{1},a_{2},\ldots,a_{n})^{T}\in\mathbb{R}^{n},\mathbf{b}=(b_{1},b_{2},\ldots,b_{n})^{T}\in\mathbb{R}^{n}$ . 我们称该内积为标准内积.
+例7.1.2. 令 $G=\mathrm{diag}(\lambda_{1},\lambda_{2},\ldots,\lambda_{n})$ ，这里 $\lambda_{i}>0, i=1,2,\ldots,n$ 。对于 $\mathbf{a}=(a_{1},a_{2},\ldots,a_{n})^{T}\neq\mathbf{0}$
+$$\mathbf {a} ^ {T} G \mathbf {a} = \lambda_ {1} a _ {1} ^ {2} + \lambda_ {2} a _ {2} ^ {2} + \dots + \lambda_ {n} a _ {n} ^ {2} > 0.$$
+因此, G 是对称正定方阵. 这时内积为
+$$(\mathbf {a}, \mathbf {b}) = \lambda_ {1} a _ {1} b _ {1} + \lambda_ {2} a _ {2} b _ {2} + \dots + \lambda_ {n} a _ {n} b _ {n}.$$
+例7.1.3. 在 $\mathbb{R}^2$ 中, 取 $G = \begin{pmatrix} 1 & 1 \\ 1 & 2 \end{pmatrix}$. 由于对于 $\mathbf{a} = (a_1, a_2)^T \neq \mathbf{0}$,
+$$\mathbf {a} ^ {T} G \mathbf {a} = a _ {1} ^ {2} + 2 a _ {1} a _ {2} + 2 a _ {2} ^ {2} > 0,$$
+因此G是对称正定方阵. 这时内积为
+$$(\mathbf {a}, \mathbf {b}) = a _ {1} b _ {1} + a _ {1} b _ {2} + a _ {2} b _ {1} + 2 a _ {2} b _ {2}.$$
+本章中,除非特别申明,欧氏空间 $R^{n}$ 中的内积均指标准内积.
+同三维几何空间向量的内积一样, 欧氏空间的内积满足以下性质:
+(1) 对称性: 即对任意两个向量  $a, b \in R^{n}$ , 有
+$$(\mathbf {a}, \mathbf {b}) = (\mathbf {b}, \mathbf {a})\tag{7.6}$$
+(2) 线性性: 即对任意一个实数  $\lambda$  和任意三个向量  $a, b, c \in R^{n}$ ，有
+$$(\lambda \mathbf {a}, \mathbf {b}) = \lambda (\mathbf {a}, \mathbf {b})\tag{7.7}$$
+$$(\mathbf {a} + \mathbf {b}, \mathbf {c}) = (\mathbf {a}, \mathbf {c}) + (\mathbf {b}, \mathbf {c})\tag{7.8}$$
+(3) 正定性: 即对于任意一个向量 $\mathbf{a} \in \mathbb{R}^n$, 都有 $(\mathbf{a}, \mathbf{a}) \geq 0$, 且等号成立当且仅当 $\mathbf{a} = \mathbf{0}$.
+由上述性质, 很易容得到: 对任意实数  $\lambda_{i}, \mu_{j}$  和任意向量  $a_{i}, b_{j} \in R^{n}$ , 有
+$$\left(\sum_ {i = 1} ^ {l} \lambda_ {i} \mathbf {a} _ {i}, \sum_ {j = 1} ^ {m} \mu_ {j} \mathbf {b} _ {j}\right) = \sum_ {i = 1} ^ {l} \sum_ {j = 1} ^ {m} \lambda_ {i} \mu_ {j} (\mathbf {a} _ {i}, \mathbf {b} _ {j}).\tag{7.9}$$
+特别地
+$$(\mathbf {a}, \mathbf {0}) = 0.$$
+读者可以自己验证上述性质.
+定义了内积, 我们就可以定义向量长度.
+[第 221 页]
+定义7.1.2. 设 $\mathbf{a} \in \mathbb{R}^n$, 称
+$$| \mathbf {a} | = \sqrt {(\mathbf {a} , \mathbf {a})}\tag{7.10}$$
+为向量a的长度或模.
+显然, $|\mathbf{a}| = 0$ 的充分必要条件是 $\mathbf{a}$ 为零向量. 当 $|\mathbf{a}| = 1$ 时, 称 $\mathbf{a}$ 为单位向量. 对于任意一个非零向量 $\mathbf{a}$, 向量 $\frac{1}{|\mathbf{a}|}\mathbf{a}$ 为单位向量. 因此通过这样的方式可以把任何一个非零向量“压缩”(或“放大”)为一个单位向量, 这个过程称为向量的单位化.
+为了定义向量之间的夹角, 我们先引入下面的
+定理7.1.1. [Cauchy-Schwarz不等式] 对两个任意向量 $\mathbf{a}, \mathbf{b} \in \mathbb{R}^n$，均有
+$$| (\mathbf {a}, \mathbf {b}) | \leq | \mathbf {a} | \cdot | \mathbf {b} |.\tag{7.11}$$
+等号成立当且仅当a与b线性相关.
+证明. 如果a或者b有一个为零向量, 则结论显然成立. 否则对任意实数 $\lambda$ , 有
+$$0 \leq (\lambda \mathbf {a} + \mathbf {b}, \lambda \mathbf {a} + \mathbf {b}) = (\mathbf {a}, \mathbf {a}) \lambda^ {2} + 2 (\mathbf {a}, \mathbf {b}) \lambda + (\mathbf {b}, \mathbf {b}).$$
+上式右端是 $\lambda$ 的二次多项式, 其值总是非负的, 故其判别式满足
+$$4 (\mathbf {a}, \mathbf {b}) ^ {2} - 4 (\mathbf {a}, \mathbf {a}) (\mathbf {b}, \mathbf {b}) \leq 0.$$
+由此知不等式(7.11)成立.
+当不等式(7.11)中的等号成立时, 令  $\lambda = -(\mathbf{a}, \mathbf{b}) / (\mathbf{a}, \mathbf{a})$ , 则
+$$(\lambda \mathbf {a} + \mathbf {b}, \lambda \mathbf {a} + \mathbf {b}) = (\mathbf {a}, \mathbf {a}) \lambda^ {2} + 2 (\mathbf {a}, \mathbf {b}) \lambda + (\mathbf {b}, \mathbf {b}) = 0.$$
+从而 $\lambda \mathbf{a} + \mathbf{b} = 0$ ，即 $\mathbf{a}$ 与 $\mathbf{b}$ 线性相关. 反之，从 $\mathbf{a}$ 与 $\mathbf{b}$ 线性相关, 易知等式成立. □
+将Cauchy-Schwarz不等式应用于标准内积(7.5)即得著名的Cauchy不等式:
+$$\left(a _ {1} b _ {1} + a _ {2} b _ {2} + \dots + a _ {n} b _ {n}\right) ^ {2} \leq \left(a _ {1} ^ {2} + a _ {2} ^ {2} + \dots + a _ {n} ^ {2}\right) \left(b _ {1} ^ {2} + b _ {2} ^ {2} + \dots + b _ {n} ^ {2}\right).$$
+由Cauchy-Schwarz不等式, 我们可进一步证明下列关于长度的三角不等式
+$$| \mathbf {a} + \mathbf {b} | \leq | \mathbf {a} | + | \mathbf {b} |.\tag{7.12}$$
+实际上，
+$$\begin{array}{c} | \mathbf {a} + \mathbf {b} | ^ {2} = (\mathbf {a} + \mathbf {b}, \mathbf {a} + \mathbf {b}) = (\mathbf {a}, \mathbf {a}) + 2 (\mathbf {a}, \mathbf {b}) + (\mathbf {b}, \mathbf {b}) \\ \leq | \mathbf {a} | ^ {2} + 2 | \mathbf {a} | | \mathbf {b} | + | \mathbf {b} | ^ {2} = (| \mathbf {a} | + | \mathbf {b} |) ^ {2} \end{array}$$
+[第 222 页]
+因此，
+$$| \mathbf {a} + \mathbf {b} | \leq | \mathbf {a} | + | \mathbf {b} |.$$
+利用长度可给出欧氏空间中任意两个向量a和b之间的“距离”：
+$$d (\mathbf {a}, \mathbf {b}) = | \mathbf {a} - \mathbf {b} |.$$
+读者不难验证, 向量之间的距离满足
+- 对称性: $d(\mathbf{a}, \mathbf{b}) = d(\mathbf{b}, \mathbf{a})$;
+- 正定性: $d(\mathbf{a}, \mathbf{b}) \geq 0$, 等号成立当且仅当 $\mathbf{a} = \mathbf{b}$;
+- 三角不等式: $d(\mathbf{a}, \mathbf{b}) \leq d(\mathbf{a}, \mathbf{c}) + d(\mathbf{c}, \mathbf{b})$.
+由Cauchy-Schwarz不等式还可以得到
+$$- 1 \leq \frac {(\mathbf {a} , \mathbf {b})}{| \mathbf {a} | | \mathbf {b} |} \leq 1.$$
+由此可以定义两向量的夹角.
+定义7.1.3. 对于 $\mathbb{R}^n$ 中两个非零向量a和b, 定义它们之间的夹角为
+$$\theta = \arccos \frac {(\mathbf {a} , \mathbf {b})}{| \mathbf {a} | | \mathbf {b} |}.\tag{7.13}$$
+特别地, 当 $(\mathbf{a},\mathbf{b})=0$ 时, 称向量a和b正交或垂直, 记作 $a\perp b$ .
+对于标准内积, 向量a的长度为
+$$| \mathbf {a} | = \sqrt {a _ {1} ^ {2} + a _ {2} ^ {2} + \cdots + a _ {n} ^ {2}},\tag{7.14}$$
+两个向量 $\mathbf{a}$ 与 $\mathbf{b}$ 的夹角为
+$$\theta = \arccos \frac {a _ {1} b _ {1} + a _ {2} b _ {2} + \cdots + a _ {n} b _ {n}}{\sqrt {a _ {1} ^ {2} + a _ {2} ^ {2} + \cdots + a _ {n} ^ {2}} \sqrt {b _ {1} ^ {2} + b _ {2} ^ {2} + \cdots + b _ {n} ^ {2}}}.\tag{7.15}$$
+由于通过内积可以引进向量的长度及向量之间的夹角, 因此, 欧氏空间不但具有线性运算结构, 同时也具有了几何结构.
+对于相互垂直的向量,我们有下面的勾股定理
+命题7.1.2. 设 $\mathbf{a}, \mathbf{b} \in \mathbb{R}^n$, 则 $\mathbf{a} \perp \mathbf{b}$ 当且仅当
+$$\left| \mathbf {a} + \mathbf {b} \right| ^ {2} = \left| \mathbf {a} \right| ^ {2} + \left| \mathbf {b} \right| ^ {2}.$$
+[第 223 页]
+§7.2 标准正交基
+证明. 由于
+$$\left| \mathbf {a} + \mathbf {b} \right| ^ {2} = (\mathbf {a} + \mathbf {b}, \mathbf {a} + \mathbf {b}) = (\mathbf {a}, \mathbf {a}) + 2 (\mathbf {a}, \mathbf {b}) + (\mathbf {b}, \mathbf {b}) = | \mathbf {a} | ^ {2} + | \mathbf {b} | ^ {2} + 2 (\mathbf {a}, \mathbf {b}),$$
+命题结论显然.
+最后, 我们提一下欧氏空间的子空间. 设 $W \subset \mathbb{R}^n$ 是 $\mathbb{R}^n$ 的线性子空间. 作为欧氏空间 $\mathbb{R}^n$, 其内积自然也作用在 $W$ 上. 因此, 赋予了内积的线性子空间 $W$ 也成为一个欧氏空间, 称为欧氏空间 $\mathbb{R}^n$ 的子空间.
+正如三维几何空间中有正交标架, 在欧氏空间中也可以定义类似的正交标架-正交基.
+定义7.2.1. 在 $n$ 维欧氏空间 $\mathbb{R}^n$ 中, 一组两两正交的非零向量称为正交向量组. 由正交向量组构成的基称为正交基. 由单位向量组构成的正交基称为标准正交基.
+由定义, 向量组 $a_{1}, \ldots, a_{n}$ 构成n维欧氏空间 $R^{n}$ 的一组标准正交基当且仅当
+$$\left(\mathbf {a} _ {i}, \mathbf {a} _ {j}\right) = \delta_ {i j}, \quad i, j = 1, 2, \dots , n.\tag{7.16}$$
+显然, $\mathbb{R}^n$ 中的单位坐标向量组 $\mathbf{e}_i, i = 1,2,\dots,n$ 在标准内积之下是标准正交基. 标准正交基是三维几何空间中单位直角坐标系的推广.
+命题7.2.1. 设 $a_{1},a_{2},\cdots,a_{r}$ 为欧氏空间 $R^{n}$ 中的正交向量组, 则 $a_{1},a_{2},\cdots,a_{r}$ 线性无关.
+证明. 设存在实数 $\lambda_{1},\lambda_{2},\ldots,\lambda_{r}$ 满足
+$$\lambda_ {1} \mathbf {a} _ {1} + \lambda_ {2} \mathbf {a} _ {2} + \dots + \lambda_ {r} \mathbf {a} _ {r} = \mathbf {0},$$
+对任意 $1 \leq i \leq r$, 两边分别与 $\mathbf{a}_i$ 作内积得
+$$\lambda_ {i} | \mathbf {a} _ {i} | ^ {2} = 0.$$
+因为 $a_{i}$ 是非零向量, 所以 $\lambda_{i}=0$ , 即向量组 $a_{1},a_{2},\ldots,a_{r}$ 线性无关.
+上述命题表明, $R^{n}$ 中的n个正交向量组构成 $R^{n}$ 的一组基.
+n维欧氏空间的标准正交基总是存在的. 实际上, 从任意一组基出发, 我们可以构造出一组标准正交基, 其过程称为Schmidt正交化.
+[第 224 页]
+定理7.2.2. [Schmidt正交化] 从 $n$ 维欧氏空间 $\mathbb{R}^n$ 的任意一组基出发, 可以构造一组标准正交基.
+证明. 设 $a_{1},a_{2},\ldots,a_{n}$ 是欧氏空间 $R^{n}$ 的一组基. 首先将 $a_{1}$ 归一化, 令
+$$\mathbf {u} _ {1} = \frac {\mathbf {a} _ {1}}{| \mathbf {a} _ {1} |},$$
+则有 $(\mathbf{u}_1, \mathbf{u}_1) = 1$ 且 $\langle \mathbf{a}_1 \rangle = \langle \mathbf{u}_1 \rangle$. 然后在 $\mathbf{u}_1$ 与 $\mathbf{a}_2$ 所张成的子空间中找出一个与 $\mathbf{u}_1$ 正交的向量.
+上图启发我们这样的向量为 $a_{2}$ 减去 $a_{2}$ 在 $u_{1}$ 上的投影, 其代数表示为
+$$\mathbf {b} _ {2} = \mathbf {a} _ {2} - (\mathbf {a} _ {2}, \mathbf {u} _ {1}) \mathbf {u} _ {1}$$
+不难验证, $(\mathbf{b}_{2},\mathbf{u}_{1})=0$ 且 $b_{2}\neq0$ . 将 $b_{2}$ 归一化得
+$$\mathbf {u} _ {2} = \frac {\mathbf {b} _ {2}}{| \mathbf {b} _ {2} |}.$$
+显然, $(\mathbf{u}_1,\mathbf{u}_2) = 0,(\mathbf{u}_2,\mathbf{u}_2) = 1$ 且 $\langle \mathbf{a}_1,\mathbf{a}_2\rangle = \langle \mathbf{u}_1,\mathbf{u}_2\rangle .$
+继续上面的过程，假设从 $a_{1},a_{2},\ldots,a_{k-1}$ 已经构造出了单位化的正交向量组 $u_{1},u_{2},\ldots,u_{k-1}$ ，且 $\langle u_{1},u_{2},\ldots,u_{k-1}\rangle=\langle a_{1},a_{2},\ldots,a_{k-1}\rangle$ 。我们再从 $a_{k}$ 和 $u_{1},u_{2},\ldots,u_{k-1}$ 所张成的子空间中挑选一个与 $u_{1},u_{2},\ldots,u_{k-1}$ 都正交的向量 $b_{k}$ 如下
+$$\mathbf {b} _ {k} = \mathbf {a} _ {k} - \sum_ {i = 1} ^ {k - 1} (\mathbf {a} _ {k}, \mathbf {u} _ {i}) \mathbf {u} _ {i}.$$
+显然它一定非零, 否则就有
+$$\mathbf {a} _ {k} = \sum_ {i = 1} ^ {k - 1} (\mathbf {a} _ {k}, \mathbf {u} _ {i}) \mathbf {u} _ {i},$$
+即 $a_{k}$ 是 $u_{1},u_{2},\ldots,u_{k-1}$ 的线性组合，从而也是 $a_{1},a_{2},\ldots,a_{k-1}$ 的线性组合，这与 $a_{1},a_{2},\ldots,a_{k}$ 线性无关矛盾.
+另一方面
+$$\left(\mathbf {b} _ {k}, \mathbf {u} _ {j}\right) = \left(\mathbf {a} _ {k}, \mathbf {u} _ {j}\right) - \sum_ {i = 1} ^ {k - 1} \left(\mathbf {a} _ {k}, \mathbf {u} _ {i}\right) \left(\mathbf {u} _ {i}, \mathbf {u} _ {j}\right) = 0, \quad j = 1, 2, \dots , k - 1,$$
+[第 225 页]
+故 $b_{k}$ 与所有 $u_{1},u_{2},\ldots,u_{k-1}$ 正交. 将 $b_{k}$ 归一化得到一个与所有 $u_{1},u_{2},\ldots,u_{k-1}$ 都正交的单位向量
+$$\mathbf {u} _ {k} = \frac {\mathbf {b} _ {k}}{| \mathbf {b} _ {k} |}.$$
+容易验证,
+$$\left\langle \mathbf {u} _ {1}, \mathbf {u} _ {2}, \dots , \mathbf {u} _ {k} \right\rangle = \left\langle \mathbf {a} _ {1}, \mathbf {a} _ {2}, \dots , \mathbf {a} _ {k} \right\rangle .$$
+将上述过程一直进行到 $k = n$ ，这样就得到了一组标准正交基 $\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n$.
+下面我们举一例说明上述正交化过程.
+例7.2.1. 把下列向量按标准内积化为标准正交基
+$$\alpha_ {1} = (1, 1, 0, 0) ^ {T}, \alpha_ {2} = (1, 0, 1, 0) ^ {T}, \alpha_ {3} = (- 1, 0, 0, 1) ^ {T}, \alpha_ {4} = (1, - 1, - 1, 1) ^ {T}.$$
+解. 先把 $\mathbf{a}_1$ 归一化得
+$$\mathbf {u} _ {1} = \frac {1}{\sqrt {2}} (1, 1, 0, 0) ^ {T}.$$
+令
+$$\mathbf {b} _ {2} = \mathbf {a} _ {2} - (\mathbf {a} _ {2}, \mathbf {u} _ {1}) \mathbf {u} _ {1} = \frac {1}{2} (1, - 1, 2, 0) ^ {T},$$
+再归一化得
+$$\mathbf {u} _ {2} = \frac {1}{\sqrt {6}} (1, - 1, 2, 0) ^ {T}.$$
+继续正交化 $a_{3},a_{4}$ 得
+$$\mathbf {b} _ {3} = \mathbf {a} _ {3} - (\mathbf {a} _ {3}, \mathbf {u} _ {1}) \mathbf {u} _ {1} - (\mathbf {a} _ {3}, \mathbf {u} _ {2}) \mathbf {u} _ {2} = \frac {1}{3} (- 1, 1, 1, 3) ^ {T}, \quad \mathbf {u} _ {3} = \frac {1}{\sqrt {1 2}} (- 1, 1, 1, 3) ^ {T},$$
+$$\mathbf {b} _ {4} = \mathbf {a} _ {4} - \sum_ {i = 1} ^ {3} (\mathbf {a} _ {4}, \mathbf {u} _ {i}) \mathbf {u} _ {i} = (1, - 1, - 1, 1) ^ {T}, \quad \mathbf {u} _ {4} = \frac {1}{2} (1, - 1, - 1, 1) ^ {T}.$$
+则 $u_{1},u_{2},u_{3},u_{4}$ 即为一组标准正交基.
+在Schmidt正交化过程中, 注意到
+$$\mathbf {a} _ {k} = \sum_ {i = 1} ^ {k} (\mathbf {a} _ {k}, \mathbf {u} _ {i}) \mathbf {u} _ {i}, \quad k = 1, 2, \dots , n.$$
+因此
+$$(\mathbf {a} _ {1}, \mathbf {a} _ {2}, \ldots , \mathbf {a} _ {n}) = (\mathbf {u} _ {1}, \mathbf {u} _ {2}, \ldots , \mathbf {u} _ {n}) \left( \begin{array}{c c c c} (\mathbf {a} _ {1}, \mathbf {u} _ {1}) & (\mathbf {a} _ {2}, \mathbf {u} _ {1}) & \dots & (\mathbf {a} _ {n}, \mathbf {u} _ {1}) \\ 0 & (\mathbf {a} _ {2}, \mathbf {u} _ {2}) & \dots & (\mathbf {a} _ {n}, \mathbf {u} _ {2}) \\ \vdots & \vdots & \vdots & \vdots \\ 0 & 0 & \dots & (\mathbf {a} _ {n}, \mathbf {u} _ {n}) \end{array} \right).\tag{7.17}$$
+[第 226 页]
+其中假设 $a_{i},u_{i}$ 均为列向量形式,则上式即为
+$$A = Q R,\tag{7.18}$$
+其中A是一个n阶可逆实方阵, Q是一个任意两列都正交的单位向量构成的方阵, R是一个上三角阵, 其对角元为正. 称上式为矩阵A的QR分解.
+容易验证
+$$Q ^ {T} Q = \left( \begin{array}{c} \mathbf {u} _ {1} ^ {T} \\ \vdots \\ \mathbf {u} _ {n} ^ {T} \end{array} \right) (\mathbf {u} _ {1}, \ldots , \mathbf {u} _ {n}) = \left( \begin{array}{c c c} (\mathbf {u} _ {1}, \mathbf {u} _ {1}) & \dots & (\mathbf {u} _ {1}, \mathbf {u} _ {n}) \\ \vdots & \vdots & \vdots \\ (\mathbf {u} _ {n}, \mathbf {u} _ {1}) & \dots & (\mathbf {u} _ {n}, \mathbf {u} _ {n}) \end{array} \right) = I.\tag{7.19}$$
+因此, $Q^{T}Q=I=QQ^{T}$ .
+定义7.2.2. 称满足
+$$Q Q ^ {T} = Q ^ {T} Q = I\tag{7.20}$$
+的实方阵Q为正交方阵.
+由前面的讨论, 下面的结论显然.
+定理7.2.3. $n$ 阶实方阵 $Q$ 为正交矩阵当且仅当 $Q$ 的行(或列)向量构成 $\mathbb{R}^n$ 的一组标准正交基.
+证明. 设 $Q$ 的列为 $\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n$. 由 (7.19), $Q^T Q = I$ 当且仅当 $(\mathbf{u}_i, \mathbf{u}_j) = \delta_{ij}, i = 1, 2, \ldots, n$, 当且仅当 $\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n$ 构成 $\mathbb{R}^n$ 的标准正交基. 同理, $QQ^T = I$ 当且仅当 $Q$ 的行向量构成 $\mathbb{R}^n$ 的标准正交基.
+例如, 旋转矩阵就是正交矩阵. 再如
+$$Q = \left( \begin{array}{c c c} \frac {1}{\sqrt {3}} & \frac {1}{\sqrt {6}} & \frac {1}{\sqrt {2}} \\ \frac {1}{\sqrt {3}} & \frac {1}{\sqrt {6}} & - \frac {1}{\sqrt {2}} \\ \frac {1}{\sqrt {3}} & - \frac {2}{\sqrt {6}} & 0 \end{array} \right)$$
+是正交矩阵.
+定理7.2.4. 正交矩阵有下列性质:
+(1) 单位阵是正交方阵.
+(2) A, B 为同阶正交方阵, 则 AB 也为正交方阵.
+(3) 设 $A$ 是正交方阵, 则 $A^T = A^{-1}$ 也是正交方阵.
+[第 227 页]
+(4) 正交方阵的行列式的值为1或-1.
+(5) 正交方阵的特征值的模长为1.
+证明. 我们只证(5), 其它几条留给读者自己证明.
+设 $A\mathbf{x} = \lambda \mathbf{x}$, 两边转置得 $\mathbf{x}^T A^T = \lambda \mathbf{x}^T$. 两边取复共轭, 由于 $A$ 为实矩阵, 我们有 $\bar{\mathbf{x}}^T A^T = \bar{\lambda} \bar{\mathbf{x}}^T$. 因此 $\bar{\mathbf{x}}^T A^T A\mathbf{x} = \bar{\lambda} \bar{\mathbf{x}}^T \cdot \lambda \mathbf{x} = |\lambda|^2 \bar{\mathbf{x}}^T \mathbf{x}$. 从而 $\bar{\mathbf{x}}^T \mathbf{x} = |\lambda|^2 \bar{\mathbf{x}}^T \mathbf{x}$.
+若记  $\mathbf{x}=(x_{1},x_{2},\cdots,x_{n})^{T}$ ，则  $\bar{\mathbf{x}}^{T}\mathbf{x}=\sum_{i=1}^{n}|x_{i}|^{2}>0$ ，因为特征向量不是零向量。所以  $|\lambda|^{2}=1$ ，即  $|\lambda|=1$ 。
+有了标准正交基, 任意向量在其下的坐标可以通过内积方便获得.
+命题7.2.5. 设 $u_{1},\ldots,u_{n}$ 为 $R^{n}$ 的一组标准正交基, 则任意 $a\in R^{n}$,
+$$\mathbf {a} = (\mathbf {a}, \mathbf {u} _ {1}) \mathbf {u} _ {1} + (\mathbf {a}, \mathbf {u} _ {2}) \mathbf {u} _ {2} + \dots + (\mathbf {a}, \mathbf {u} _ {n}) \mathbf {u} _ {n}.\tag{7.21}$$
+证明. 设
+$$\mathbf {a} = c _ {1} \mathbf {u} _ {1} + c _ {2} \mathbf {u} _ {2} + \dots + c _ {n} \mathbf {u} _ {n},$$
+将上式两边与 $u_{i}$ 做内积, 由 $u_{1},\ldots,u_{n}$ 的单位正交性得,
+$$(\mathbf {a}, \mathbf {u} _ {i}) = c _ {1} (\mathbf {u} _ {1}, \mathbf {u} _ {i}) + \dots + c _ {i} (\mathbf {u} _ {i}, \mathbf {u} _ {i}) + \dots + (\mathbf {u} _ {n}, \mathbf {u} _ {i}) = c _ {i}.$$
+命题得证.
+下面研究正交子空间.
+定义7.2.3. 设 $W_{1}, W_{2}$ 是欧氏空间 $\mathbb{R}^n$ 的子空间. 对向量 $\mathbf{a} \in \mathbb{R}^n$, 若 $\mathbf{a} \perp \mathbf{b}$ 对任意 $\mathbf{b} \in W_{1}$ 成立, 则称 $\mathbf{a}$ 与子空间 $W_{1}$ 正交, 记为 $\mathbf{a} \perp W_{1}$. 若对任意 $\mathbf{a} \in W_{1}, \mathbf{b} \in W_{2}$ 都有 $\mathbf{a} \perp \mathbf{b}$, 则称 $W_{1}$ 与 $W_{2}$ 正交, 记为 $W_{1} \perp W_{2}$.
+定义7.2.4. 设 $W_{1}, W_{2}$ 是欧氏空间 $\mathbb{R}^n$ 的子空间. 则向量集合
+$$W _ {1} + W _ {2} := \left\{\mathbf {a} + \mathbf {b} \mid \mathbf {a} \in W _ {1}, \mathbf {b} \in W _ {2} \right\}$$
+也是 $R^{n}$ 的子空间(请读者自行验证), 我们称之为子空间 $W_{1}$ 与 $W_{2}$ 的和. 如果 $W_{1}, W_{2}$ 还满足 $W_{1} \cap W_{2} = \{0\}$, 则称和 $W_{1} + W_{2}$ 为直和, 记为 $W_{1} \oplus W_{2}$.
+定理7.2.6. 设 $W$ 是欧氏空间 $\mathbb{R}^n$ 的子空间, 则向量集合
+$$W ^ {\perp} := \left\{\mathbf {a} \in \mathbb {R} ^ {n} \mid \mathbf {a} \perp W \right\}$$
+是 $R^{n}$ 的子空间, 且有 $R^{n}=W\oplus W^{\perp}$ . 称 $W^{\perp}$ 为W的正交补空间.
+[第 228 页]
+证明. 先证 $W^{\perp}$ 是子空间. 实际上, 设 $\mathbf{a}, \mathbf{b} \in W^{\perp}$ 及 $\lambda, \mu \in \mathbb{R}$, 则对任意 $\mathbf{c} \in W$, $(\mathbf{a}, \mathbf{c}) = 0$, $(\mathbf{b}, \mathbf{c}) = 0$. 于是
+$$(\lambda \mathbf {a} + \mu \mathbf {b}, \mathbf {c}) = \lambda (\mathbf {a}, \mathbf {c}) + \mu (\mathbf {b}, \mathbf {c}) = 0,$$
+即 $\lambda \mathbf{a} + \mu \mathbf{b}\in W^{\perp}$ .因此， $W^{\perp}$ 为子空间
+接下来证明, $W \cap W^{\perp} = 0$. 实际上, 设 $\mathbf{a} \in W \cap W^{\perp}$, 则 $(\mathbf{a}, \mathbf{a}) = 0$, 从而 $\mathbf{a} = 0$. 此即, $W \cap W^{\perp} = 0$.
+最后说明，$\mathbb{R}^n = W \oplus W^\perp$。为此设 $\mathbf{a}_1, \ldots, \mathbf{a}_r$ 为 $W$ 的一组基。对任意 $\mathbf{x} \in W^\perp$，则有 $(\mathbf{a}_i, \mathbf{x}) = \mathbf{a}_i^T \mathbf{x} = 0, i = 1, 2, \ldots, r$。即
+$$\left( \begin{array}{c} \mathbf {a} _ {1} ^ {T} \\ \vdots \\ \mathbf {a} _ {r} ^ {T} \end{array} \right) \mathbf {x} = 0.$$
+$W^{\perp}$ 即上述线性方程组的解集, 因此是一个 $n - r$ 维的子空间. 设 $\mathbf{a}_{r+1}, \ldots, \mathbf{a}_n$ 为 $W^{\perp}$ 的一组基, 下面我们证明 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_n$ 为 $\mathbb{R}^n$ 的一组基, 从而 $\mathbb{R}^n = W \oplus W^{\perp}$. 实际上, 假设
+$$\lambda_ {1} \mathbf {a} _ {1} + \dots + \lambda_ {r} \mathbf {a} _ {r} + \dots + \lambda_ {n} \mathbf {a} _ {n} = \mathbf {0}.$$
+则
+$$\lambda_ {1} \mathbf {a} _ {1} + \dots + \lambda_ {r} \mathbf {a} _ {r} = - \lambda_ {r + 1} \mathbf {a} _ {r + 1} - \dots - \lambda_ {n} \mathbf {a} _ {n} \in W \cap W ^ {\perp} = \{\mathbf {0} \},$$
+故
+$$\lambda_ {1} \mathbf {a} _ {1} + \ldots + \lambda_ {r} \mathbf {a} _ {r} = \mathbf {0}, \quad - \lambda_ {r + 1} \mathbf {a} _ {r + 1} - \ldots - \lambda_ {n} \mathbf {a} _ {n} = \mathbf {0}.$$
+从而 $\lambda_{i} = 0, i = 1,2,\dots,n$, 即 $\mathbf{a}_1, \mathbf{a}_2, \dots, \mathbf{a}_n$ 线性无关. 因而 $\mathbf{a}_1, \mathbf{a}_2, \dots, \mathbf{a}_n$ 为 $\mathbb{R}^n$ 的一组基.
+例7.2.2. 设 $\mathbf{a} = (1,0,1,0)^T$, $\mathbf{b} = (0,1,0,1)^T$, $W = \langle \mathbf{a}, \mathbf{b} \rangle \subset \mathbb{R}^4$. 求 $W^\perp$ 的一组基.
+解. 设 $\mathbf{x} = (x_{1}, x_{2}, x_{3}, x_{4})^{T} \in W^{\perp}$. 则由 $\mathbf{a} \cdot \mathbf{x} = 0, \mathbf{b} \cdot \mathbf{x} = 0$ 得
+$$\left\{ \begin{array}{l} x _ {1} + x _ {3} = 0 \\ x _ {2} + x _ {4} = 0 \end{array} \right.$$
+以求得上述线性方程组的两个线性无关解为 $\mathbf{x} = (1,0, - 1,0)^T$ 及 $(0,1,0, - 1)^T$ ，它们构成 $W^{\perp}$ 的一组基. □
+接下来研究向量在子空间上的正交投影.
+定义7.2.5. 设 $W$ 是欧氏空间 $\mathbb{R}^n$ 的子空间, $\mathbf{x} \in \mathbb{R}^n$. 如果向量 $\mathbf{y} \in W$ 满足 $\mathbf{x} - \mathbf{y} \perp W$, 则称 $\mathbf{y}$ 为向量 $\mathbf{x}$ 在 $W$ 上的正交投影, 记为 $\mathbf{y} = P\mathbf{x}$.
+[第 229 页]
+图 7.1 向量的正交投影
+图 7.1 给出了向量在子空间投影的例子. 显然, 若  $x \in W$ , 则  $P_{x} = x$ .
+定理7.2.7. 设 $W$ 是欧氏空间 $\mathbb{R}^n$ 的子空间, $\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_r$ 是 $W$ 的一组标准正交基. 则下列结论成立:
+1. 对任意 $\mathbf{x} \in \mathbb{R}^n$, $\mathbf{x}$ 在 $W$ 上的正交投影存在唯一, 且
+$$P \mathbf {x} = (\mathbf {x}, \mathbf {u} _ {1}) \mathbf {u} _ {1} + (\mathbf {x}, \mathbf {u} _ {2}) \mathbf {u} _ {2} + \dots + (\mathbf {x}, \mathbf {u} _ {r}) \mathbf {u} _ {r}.\tag{7.22}$$
+2. 对任意 $y \in W$ ,
+$$| \mathbf {x} - \mathbf {y} | \geq | \mathbf {x} - P \mathbf {x} |.$$
+等号成立当且仅当 $\mathbf{y} = P\mathbf{x}$
+证明. 1. 先证投影的唯一性. 设 $\mathbf{y}_1, \mathbf{y}_2 \in W$ 是 $\mathbf{x}$ 在 $W$ 上的正交投影, 则 $\mathbf{x} - \mathbf{y}_1 \perp W$,
+$\mathbf{x} - \mathbf{y}_2 \perp W$. 于是 $\mathbf{y}_1 - \mathbf{y}_2 = (\mathbf{x} - \mathbf{y}_2) - (\mathbf{x} - \mathbf{y}_1) \perp W$. 而 $\mathbf{y}_1 - \mathbf{y}_2 \in W$, 故 $\mathbf{y}_1 = \mathbf{y}_2$.
+设 $P_{x}=c_{1}u_{1}+c_{2}u_{2}+\ldots+c_{r}u_{r}$ . 由 $x-Px\perp W$ , 故
+$$(\mathbf {x} - P \mathbf {x}, \mathbf {u} _ {i}) = 0, \quad i = 1, 2, \dots , r.$$
+即
+$$(\mathbf {x}, \mathbf {u} _ {i}) = (P \mathbf {x}, \mathbf {u} _ {i}) = c _ {i}.$$
+因此
+$$P \mathbf {x} = (\mathbf {x}, \mathbf {u} _ {1}) \mathbf {u} _ {1} + (\mathbf {x}, \mathbf {u} _ {2}) \mathbf {u} _ {2} + \dots + (\mathbf {x}, \mathbf {u} _ {r}) \mathbf {u} _ {r}.$$
+[第 230 页]
+- 由勾股定理,
+$$\left| \mathbf {x} - \mathbf {y} \right| ^ {2} = \left| (\mathbf {x} - P \mathbf {x}) + (P \mathbf {x} - \mathbf {y}) \right| ^ {2} = \left| \mathbf {x} - P \mathbf {x} \right| ^ {2} + \left| P \mathbf {x} - \mathbf {y} \right| ^ {2} \geq \left| \mathbf {x} - P \mathbf {x} \right| ^ {2}.$$
+上式等号成立当且仅当 $y = Px$.
+上述定理表明, 对任意向量  $x \in R^{n}$ , x 在子空间 W 上的正交投影 Px 就是 x 与 W 中距离最小的向量.
+下面我们给一个例子.
+例7.2.3. 设 $W = \langle (1,1,0), (1,0,-1) \rangle$ 是欧氏空间 $R^3$ 的子空间. 求向量(2,1,3)在W上的正交投影.
+解法一. 将向量组 $(1,1,0),(1,0,-1)$ 正交化得 $\mathbf{u}_1 = \frac{1}{\sqrt{2}} (1,1,0),\mathbf{u}_2 = \frac{1}{\sqrt{6}} (1,-1,-2)$. 它们构成 $W$ 的一组标准正交基. 于是向量 $\mathbf{x} = (2,1,3)$ 在 $W$ 上的正交投影为
+$$P \mathbf {x} = (\mathbf {x}, \mathbf {u} _ {1}) \mathbf {u} _ {1} + (\mathbf {x}, \mathbf {u} _ {2}) \mathbf {u} _ {2} = \frac {3}{2} (1, 1, 0) - \frac {5}{6} (1, - 1, - 2) = \frac {1}{3} (2, 7, 5).$$
+解法二. 令 $\mathbf{a}_1 = (1,1,0), \mathbf{a}_2 = (1,0,-1)$. 设向量 $\mathbf{x} = (2,1,3)$ 在 $W$ 上的正交投影为 $P\mathbf{x} = c_1\mathbf{a}_1 + c_2\mathbf{a}_2$, 这里 $c_1, c_2$ 为待定常数. 则由 $\mathbf{x} - P\mathbf{x} \perp W$ 得
+$$\left(\mathbf {x} - c _ {1} \mathbf {a} _ {1} + c _ {2} \mathbf {a} _ {2}, \mathbf {a} _ {1}\right) = 0, \quad \left(\mathbf {x} - c _ {1} \mathbf {a} _ {1} + c _ {2} \mathbf {a} _ {2}, \mathbf {a} _ {2}\right) = 0.$$
+上式即
+$$\left\{ \begin{array}{l} (\mathbf {a} _ {1}, \mathbf {a} _ {1}) c _ {1} + (\mathbf {a} _ {1}, \mathbf {a} _ {2}) c _ {2} = (\mathbf {x}, \mathbf {a} _ {1}) \\ (\mathbf {a} _ {2}, \mathbf {a} _ {1}) c _ {1} + (\mathbf {a} _ {2}, \mathbf {a} _ {2}) c _ {2} = (\mathbf {x}, \mathbf {a} _ {2}) \end{array} \right.$$
+将 $a_{1},a_{2},x$ 代入上式解得 $c_{1}=\frac{7}{3},c_{2}=-\frac{5}{3}$ .因此,向量 $x=(2,1,3)$ 在W上的正交投影为
+$$P \mathbf {x} = c _ {1} \mathbf {a} _ {1} + c _ {2} \mathbf {a} _ {2} = \frac {7}{3} (1, 1, 0) - \frac {5}{3} (1, 0, - 1) = \frac {1}{3} (2, 7, 5).$$
+例7.2.4. 设 $A \in \mathbb{R}^{m \times n}$, $\mathbf{b} \in \mathbb{R}^m$, 且 $A$ 列满秩. 求线性方程组 $A\mathbf{x} = \mathbf{b}$ 的最小二乘解, 即求 $\mathbf{x} \in \mathbb{R}^n$ 使得 $|A\mathbf{x} - \mathbf{b}|$ 达到最小.
+[第 231 页]
+解. 若线性方程组 $A\mathbf{x} = \mathbf{b}$ 有解 $\mathbf{x}$, 则 $\mathbf{x}$ 显然是该线性方程组的最小二乘解. 下设线性方程组 $A\mathbf{x} = \mathbf{b}$ 无解, 即 $\mathbf{b} \notin C(A)$, 这里 $C(A)$ 是矩阵 $A$ 的列空间. 若 $|A\mathbf{x} - \mathbf{b}|$ 达到最小, 由定理7.2.7及 $A\mathbf{x} \in C(A)$ 知, $A\mathbf{x}$ 正是 $\mathbf{b}$ 在 $C(A)$ 上的正交投影, 即 $A\mathbf{x} - \mathbf{b} \perp C(A)$. 于是 $A^T(A\mathbf{x} - \mathbf{b}) = 0$. 即
+$$(A ^ {T} A) \mathbf {x} = A ^ {T} \mathbf {b}.$$
+由于A列满秩, $r(A^{T}A)=r(A)=n$ . 从而上述线性方程组有唯一解 $\mathbf{x}=(A^{T}A)^{-1}A^{T}\mathbf{b}$ . 它就是线性方程组 $A\mathbf{x}=\mathbf{b}$ 的最小二乘解. □
+§7.3 $\mathbb{R}^n$ 上的线性变换
+由于有了内积, 欧氏空间既保留了线性空间的代数性质, 又具有几何性质. 本节我们感兴趣的是那些与度量密切相关的线性变换. 我们主要讨论两类变换-正交变换与对称变换.
+§7.3.1 正交变换
+定义了标准内积的 $n$ 维欧氏空间 $\mathbb{R}^n$ 上的正交变换就是由正交方阵定义的线性变换. 本节中, $n$ 维欧氏空间 $\mathbb{R}^n$ 均指定义了标准内积的实数组空间.
+定义7.3.1. $n$ 维欧氏空间 $\mathbb{R}^n$ 上的正交变换定义为 $\mathcal{A}: \mathbf{x} \to A\mathbf{x}$, 这里 $\mathbf{x} \in \mathbb{R}^n$, $A$ 为 $n$ 阶正交矩阵.
+例如, 平面上的旋转变换就是由矩阵 $A=\begin{pmatrix}\cos(\theta)&-\sin(\theta)\\\sin(\theta)&\cos(\theta)\end{pmatrix}$ 定义的正交变换.
+正交变换有以下等价说法.
+定理7.3.1. 设 $\mathcal{A}:\mathbf{x}\to A\mathbf{x}$ 是 $n$ 维欧氏空间 $\mathbb{R}^n$ 上的线性变换. 则下列命题等价：
+1. $\mathcal{A}$ 是正交变换;
+2. 对任意 $\mathbf{x} \in \mathbb{R}^n$, $|\mathcal{A}\mathbf{x}| = |\mathbf{x}|$;
+3. 对任意 $\mathbf{x}, \mathbf{y} \in \mathbb{R}^n$, $(\mathcal{A}\mathbf{x}, \mathcal{A}\mathbf{y}) = (\mathbf{x}, \mathbf{y})$.
+4. $\mathcal{A}$ 将一组标准正交基变为另一组标准正交基.
+5. A在任一组标准正交基下的矩阵为正交方阵.
+[第 232 页]
+Proof. $1 \Rightarrow 2$. 由于
+$$\left| \mathscr {A} \mathbf {x} \right| ^ {2} = \left(\mathscr {A} \mathbf {x}, \mathscr {A} \mathbf {x}\right) = (A \mathbf {x}) ^ {T} A \mathbf {x} = \mathbf {x} ^ {T} A ^ {T} A \mathbf {x} = \mathbf {x} ^ {T} \mathbf {x} = (\mathbf {x}, \mathbf {x}) = | \mathbf {x} | ^ {2}$$
+故 $|\mathcal{A}\mathbf{x}| = |\mathbf{x}|$
+$2 \Rightarrow 3.$ 一方面,
+$$\begin{array}{l} | \mathcal {A} (\mathbf {x} + \mathbf {y}) | ^ {2} = (\mathcal {A} (\mathbf {x} + \mathbf {y}), \mathcal {A} (\mathbf {x} + \mathbf {y})) \\ = (\mathcal {A} \mathbf {x}, \mathcal {A} \mathbf {x}) + 2 (\mathcal {A} \mathbf {x}, \mathcal {A} \mathbf {y}) + (\mathcal {A} \mathbf {y}, \mathcal {A} \mathbf {y}) \\ = | \mathcal {A} \mathbf {x} | ^ {2} + 2 (\mathcal {A} \mathbf {x}, \mathcal {A} \mathbf {y}) + | \mathcal {A} \mathbf {y} | ^ {2}, \end{array}$$
+另一方面，
+$$\begin{array}{l} | \mathbf {x} + \mathbf {y} | ^ {2} = (\mathbf {x} + \mathbf {y}, \mathbf {x} + \mathbf {y}) = (\mathbf {x}, \mathbf {x}) + 2 (\mathbf {x}, \mathbf {y}) + (\mathbf {y}, \mathbf {y}) \\ = | \mathbf {x} | ^ {2} + 2 (\mathbf {x}, \mathbf {y}) + | \mathbf {y} | ^ {2}, \end{array}$$
+由 $\mathcal{A}(\mathbf{x} + \mathbf{y})| = |\mathbf{x} + \mathbf{y}|, \mathcal{A}\mathbf{x}| = |\mathbf{x}|, \mathcal{A}\mathbf{y}| = |\mathbf{y}|$ 知，
+$$(\mathscr {A} \mathbf {x}, \mathscr {A} \mathbf {y}) = (\mathbf {x}, \mathbf {y}).$$
+$3 \Rightarrow 4$. 设 $\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n$ 是 $\mathbb{R}^n$ 的一组标准正交基, 则由
+$$(\mathscr {A} \mathbf {u} _ {i}, \mathscr {A} \mathbf {u} _ {j}) = (\mathbf {u} _ {i}, \mathbf {u} _ {j}) = \delta_ {i j}$$
+知,  $A u_{i}, i = 1, 2, \ldots, n$  也为  $R^{n}$  的一组标准正交基.
+$4 \Rightarrow 5.$
+设 $u_{1},u_{2},\ldots,u_{n}$ 是 $R^{n}$ 的任一组(列)标准正交基, A在该组基下的矩阵为 $\tilde{A}$ . 则
+$$(\mathscr {A} \mathbf {u} _ {1}, \mathscr {A} \mathbf {u} _ {2}, \dots , \mathscr {A} \mathbf {u} _ {n}) = \mathscr {A} (\mathbf {u} _ {1}, \mathbf {u} _ {2}, \dots , \mathbf {u} _ {n}) = (\mathbf {u} _ {1}, \mathbf {u} _ {2}, \dots , \mathbf {u} _ {n}) \tilde {A}.$$
+由于 $\mathcal{A}\mathbf{u}_1, \mathcal{A}\mathbf{u}_2, \ldots, \mathcal{A}\mathbf{u}_n$ 也是一组标准正交基, 故 $(\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n)$ 与 $(\mathcal{A}\mathbf{u}_1, \mathcal{A}\mathbf{u}_2, \ldots, \mathcal{A}\mathbf{u}_n)$ 均为正交方阵. 从而
+$$\tilde {A} = \left( \begin{array}{c c c c} \mathcal {A} \mathbf {u} _ {1} & \mathcal {A} \mathbf {u} _ {2} & \ldots & \mathcal {A} \mathbf {u} _ {n} \end{array} \right) \left( \begin{array}{c c c c} \mathbf {u} _ {1} & \mathbf {u} _ {2} & \ldots & \mathbf {u} _ {n} \end{array} \right) ^ {- 1}$$
+也为正交方阵.
+$5 \Rightarrow 1$.
+$\mathbb{R}^n$ 的单位坐标向量为一组标准正交基, 因此 $\mathcal{A}$ 在单位坐标向量下的矩阵 $A$ 也是正交方阵, 从而 $\mathcal{A}$ 是正交变换.
+由上述定理知道, 正交变换就是保持度量(内积、长度与夹角)都不变的变换, 也就是一种刚体变换, 如旋转变换, 反射变换等.
+[第 233 页]
+定理7.3.2. 正交变换有下列性质:
+1. 恒同变换是正交变换;
+2. 两个正交变换的复合是正交变换;
+3. 正交变换的逆变换是正交变换;
+4. 正交变换的行列式的值为1或-1;
+5. 正交变换的特征值的模长为1.
+正交变换的性质由正交矩阵决定,请读者自己完成上述定理的证明.
+下面我们具体看看二维与三维欧氏空间中的正交变换.
+例7.3.1. 确定 $\mathbb{R}^2$ 上的正交变换.
+解. 设 $\mathcal{A}$ 是 $\mathbb{R}^2$ 上的正交变换: $\mathbf{x} \to A\mathbf{x}$, 其中 $A$ 为二阶正交方阵. 显然,
+$$A = \left( \begin{array}{c c} {\cos (\theta)} & {- \sin (\theta)} \\ {\sin (\theta)} & {\cos (\theta)} \end{array} \right) \quad \text {或} \quad A = \left( \begin{array}{c c} {\cos (\theta)} & {\sin (\theta)} \\ {\sin (\theta)} & {- \cos (\theta)} \end{array} \right)$$
+当 $A = \begin{pmatrix} \cos (\theta) & -\sin (\theta)\\ \sin (\theta) & \cos (\theta) \end{pmatrix}$ 时， $\mathcal{A}$ 是平面旋转变换.此时， $\operatorname *{det}(\mathcal{A}) = 1$ ，且 $\mathcal{A}$ 的特征值为 $\cos (\theta)\pm \sin (\theta)$
+当 $A=\begin{pmatrix}\cos(\theta)&\sin(\theta)\\\sin(\theta)&-\cos(\theta)\end{pmatrix}$ 时, $\det(\mathcal{A})=-1,\mathcal{A}$ 的特征值为±1.容易验证,对任意a,变换 $\mathcal{A}$ 将 $(a,0)$ 变为 $(a\cos(\theta),a\sin(\theta))$ ,并将 $(a\cos(\theta),a\sin(\theta))$ 变为 $(a,0)$ .因此, $\mathcal{A}$ 是关于过原点且与x轴正向夹角为 $\theta/2$ 的直线l的反射变换.
+设 $\mathcal{A}$ 为正交变换. 若 $\operatorname{det}(\mathcal{A}) = 1$, 则称 $\mathcal{A}$ 为第一类正交变换; 若 $\operatorname{det}(\mathcal{A}) = -1$, 则称 $\mathcal{A}$ 为第二类正交变换.
+例7.3.2. 设 $\mathcal{A}$ 为 $\mathbb{R}^3$ 上的第一类正交变换. 证明: $\mathcal{A}$ 是绕过原点的某直线的旋转变换.
+证明. 设线性变换 $\mathcal{A}$ 为 $\mathbf{x} \to A\mathbf{x}$, 其中 $A$ 为三阶正交方阵. 设 $\mathcal{A}$ 的三个特征值分别为 $\lambda_1, \lambda_2, \lambda_3$. 由于 $\mathcal{A}$ 是第一类正交变换, 故 $\operatorname{det}(\mathcal{A}) = \lambda_1\lambda_2\lambda_3 = 1$. 下面证明, $\lambda_1, \lambda_2, \lambda_3$ 至少有一个为 1.
+实际上, 由于三次实系数多项式必有实根, 因此 $\lambda_{i}, i = 1,2,3$ 中至少有一个为实数. 我们考虑两种情况:
+[第 234 页]
+1. $\lambda_{i}, i = 1,2,3$ 均为实数. 由于 $|\lambda_{i}| = 1, i = 1,2,3$ 且 $\lambda_{1}\lambda_{2}\lambda_{3} = 1$, 因此至少有一个 $\lambda_{i}$ 为1, 不妨设 $\lambda_{1} = 1$. 否则, $\lambda_{1}\lambda_{2}\lambda_{3} = -1$.
+2. $\lambda_{1}$ 为实数, $\lambda_{2},\lambda_{3}$ 为一对共轭复数, 则 $\lambda_{2}\lambda_{3} = 1$. 从而, $\lambda_{1} = 1$.
+设 $x_{1}$ 是对应特征值 $\lambda_{1}=1$ 的特征向量, 即 $A x_{1}=x_{1}$ . 于是 A 就是绕 $x_{1}$ 的旋转变换.
+§7.3.2 对称变换
+接下来我们讨论对称变换. $\mathbb{R}^n$ 上的对称变换就是由对称方阵定义的变换.
+定义7.3.2. $n$ 维欧氏空间 $\mathbb{R}^n$ 上的对称变换定义为 $\mathcal{A}: \mathbf{x} \to A\mathbf{x}$, 这里 $\mathbf{x} \in \mathbb{R}^n$, $A$ 为 $n$ 阶实对称方阵.
+对称变换有下列等价说法.
+定理7.3.3. 设 $\mathcal{A}:\mathbf{x}\to A\mathbf{x}$ 是 $n$ 维欧氏空间 $\mathbb{R}^n$ 上的线性变换. 则下列命题等价：
+1. $\mathcal{A}$ 是对称变换;
+2. 对任意 $x,y\in R^{n},(\mathscr{A}x,y)=(x,\mathscr{A}y);$
+3. A在任一组标准正交基下的矩阵是实对称方阵.
+证明. :  $1 \Rightarrow 2$ . 对任意  $x, y \in R^{n}$ ,
+$$(\mathscr {A} \mathbf {x}, \mathbf {y}) = (A \mathbf {x}) ^ {T} \mathbf {y} = \mathbf {x} ^ {T} A ^ {T} \mathbf {y} = \mathbf {x} ^ {T} A \mathbf {y} = (\mathbf {x}, \mathscr {A} \mathbf {y}).$$
+$2 \Rightarrow 3$. 设 $\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n$ 为 $\mathbb{R}^n$ 的一组(列)标准正交基, $\mathcal{A}$ 在该组基下的矩阵为 $\tilde{A} = (\tilde{a}_{ij})_{n \times n}$. 则
+$$(\mathscr {A} \mathbf {u} _ {1}, \mathscr {A} \mathbf {u} _ {2}, \dots , \mathscr {A} \mathbf {u} _ {n}) = \mathscr {A} (\mathbf {u} _ {1}, \mathbf {u} _ {2}, \dots , \mathbf {u} _ {n}) = (\mathbf {u} _ {1}, \mathbf {u} _ {2}, \dots , \mathbf {u} _ {n}) \tilde {A},$$
+于是
+$$\tilde {A} = \left( \begin{array}{c} \mathbf {u} _ {1} ^ {T} \\ \vdots \\ \mathbf {u} _ {n} ^ {T} \end{array} \right) (\mathcal {A} \mathbf {u} _ {1}, \mathcal {A} \mathbf {u} _ {2}, \ldots , \mathcal {A} \mathbf {u} _ {n}) = \left( \begin{array}{c c c c} (\mathbf {u} _ {1}, \mathcal {A} \mathbf {u} _ {1}) & (\mathbf {u} _ {1}, \mathcal {A} \mathbf {u} _ {2}) & \dots & (\mathbf {u} _ {1}, \mathcal {A} \mathbf {u} _ {n}) \\ (\mathbf {u} _ {2}, \mathcal {A} \mathbf {u} _ {1}) & (\mathbf {u} _ {2}, \mathcal {A} \mathbf {u} _ {2}) & \dots & (\mathbf {u} _ {2}, \mathcal {A} \mathbf {u} _ {n}) \\ \vdots & \vdots & \vdots & \vdots \\ (\mathbf {u} _ {n}, \mathcal {A} \mathbf {u} _ {1}) & (\mathbf {u} _ {n}, \mathcal {A} \mathbf {u} _ {2}) & \dots & (\mathbf {u} _ {n}, \mathcal {A} \mathbf {u} _ {n}) \end{array} \right)$$
+由 $(\mathcal{A}\mathbf{u}_{i},\mathbf{u}_{j})=(\mathbf{u}_{i},\mathcal{A}\mathbf{u}_{j})$ 即知, $\tilde{A}$ 为对称方阵.
+$3 \Rightarrow 1.$
+$\mathbb{R}^n$ 的单位坐标向量为一组标准正交基, 因此 $\mathcal{A}$ 在单位坐标向量下的矩阵 $A$ 也是实对称方阵, 从而 $\mathcal{A}$ 是对称变换.
+[第 235 页]
+接下来我们看看对称变换的特性. 为此, 先证明两个预备结论.
+命题7.3.4. 实对称方阵的特征值均为实数.
+证明. 设 $A$ 为 $n$ 阶实对称方阵, $\lambda$ 是 $A$ 的特征值, $\mathbf{x}$ 是对应特征向量, 则 $A\mathbf{x} = \lambda \mathbf{x}$. 对该式两边做共轭转置得 $\bar{\mathbf{x}}^T A = \bar{\lambda} \bar{\mathbf{x}}^T$. 对前一式两边左乘 $\bar{\mathbf{x}}^T$, 对后一式两边右乘 $\mathbf{x}$ 得
+$$\bar {\mathbf {x}} ^ {T} A \mathbf {x} = \lambda \bar {\mathbf {x}} ^ {T} \mathbf {x}, \quad \bar {\mathbf {x}} ^ {T} A \mathbf {x} = \bar {\lambda} \bar {\mathbf {x}} ^ {T} \mathbf {x}.$$
+于是 $(\bar{\lambda} - \lambda)\bar{\mathbf{x}}^T\mathbf{x} = 0$。设 $\mathbf{x} = (x_1, x_2, \ldots, x_n)^T \neq \mathbf{0}$，则 $\bar{\mathbf{x}}^T\mathbf{x} = \sum_{i=1}^{n} |x_i|^2 > 0$。从而 $\bar{\lambda} = \lambda$，即 $\lambda$ 为实数。
+命题7.3.5. 实对称方阵的不同特征值对应的特征向量彼此正交.
+证明. 设 $A$ 为 $n$ 阶实对称方阵, $\lambda_1, \lambda_2$ 是 $A$ 的两个不相同的实特征值, $\mathbf{x}_1, \mathbf{x}_2$ 是对应的特征向量, 即
+$$A \mathbf {x} _ {1} = \lambda_ {1} \mathbf {x} _ {1}, \quad A \mathbf {x} _ {2} = \lambda_ {2} \mathbf {x} _ {2}.$$
+于是
+$$\lambda_ {1} \left(\mathbf {x} _ {1}, \mathbf {x} _ {2}\right) = \left(A \mathbf {x} _ {1}, \mathbf {x} _ {2}\right) = \left(\mathbf {x} _ {1}, A \mathbf {x} _ {2}\right) = \lambda_ {2} \left(\mathbf {x} _ {1}, \mathbf {x} _ {2}\right).$$
+因为 $\lambda_{1}\neq\lambda_{2}$ ，所以 $(\mathbf{x}_{1},\mathbf{x}_{2})=0$ ，即 $x_{1}$ 和 $x_{2}$ 相互正交.
+有了上面的预备知识,我们可以证明实对称方阵的以下重要结论.
+定理7.3.6. 对于任意 $n$ 阶实对称阵 $A$, 存在一个 $n$ 阶正交阵 $T$, 使得 $T^{-1}AT = \mathrm{diag}(\lambda_1, \lambda_2, \ldots, \lambda_n)$. 这里 $\lambda_1, \lambda_2, \ldots, \lambda_n$ 是 $A$ 的特征值.
+证明. 对矩阵A的阶数n用数学归纳法. 当n=1时, 结论显然成立. 现假设n-1时结论成立. 现在看n的情形, 由命题7.3.4知A的特征值都是实数, 设 $\lambda_{1}$ 是A的一个特征值. $x_{1}$ 是属于 $\lambda_{1}$ 的单位特征向量. 则由Schmidt正交化可知, 可以将 $x_{1}$ 扩充成 $F^{n}$ 的一组标准正交基 $x_{1}, x_{2}, \cdots, x_{n}$ .
+令 $T_{n}=(\mathbf{x}_{1},\mathbf{x}_{2},\cdots,\mathbf{x}_{n})$ ，则 $T_{n}$ 是一个正交矩阵。注意到A是对称阵，则 $T_{n}^{-1}AT_{n}$ 是对称的。利用 $A\mathbf{x}_{1}=\lambda_{1}\mathbf{x}_{1}$ 以及 $x_{1}$ 与 $x_{i}(2\leq i\leq n)$ 的正交性有
+$$T _ {n} ^ {- 1} A T _ {n} = (\mathbf {x} _ {1}, \ldots , \mathbf {x} _ {n}) ^ {T} (\lambda_ {1} \mathbf {x} _ {1}, A \mathbf {x} _ {2}, \dots , A \mathbf {x} _ {n}) = \left( \begin{array}{c c} \lambda_ {1} & 0 \\ 0 & A _ {n - 1} \end{array} \right),$$
+其中 $A_{n-1}$ 是n-1阶实对称阵，由归纳假设，存在n-1阶正交阵 $T_{n-1}$ ，使得 $T_{n-1}^{-1}A_{n-1}T_{n-1}=\mathrm{diag}\left(\lambda_{2},\lambda_{3},\cdots,\lambda_{n}\right)$ .
+[第 236 页]
+令 $T=T_{n}\begin{pmatrix}1&0\\0&T_{n-1}\end{pmatrix}$ ，显然T仍然是正交阵，且有
+$$\begin{array}{l} T ^ {- 1} A T = \left( \begin{array}{c c} 1 & 0 \\ 0 & T _ {n - 1} \end{array} \right) ^ {- 1} T _ {n} ^ {- 1} A T _ {n} \left( \begin{array}{c c} 1 & 0 \\ 0 & T _ {n - 1} \end{array} \right) = \left( \begin{array}{c c} 1 & 0 \\ 0 & T _ {n - 1} ^ {- 1} \end{array} \right) \left( \begin{array}{c c} \lambda_ {1} & 0 \\ 0 & A _ {n - 1} \end{array} \right) \left( \begin{array}{c c} 1 & 0 \\ 0 & T _ {n - 1} \end{array} \right) \\ = \left( \begin{array}{c c} \lambda_ {1} & 0 \\ 0 & T _ {n - 1} ^ {- 1} A _ {n - 1} T _ {n - 1} \end{array} \right) = \operatorname{diag} (\lambda_ {1}, \lambda_ {2}, \dots , \lambda_ {n}). \end{array}$$
+定理证毕.
+下面我们以一个具体实例说明对称方阵对角化的方法.
+例7.3.3. 设 $A = \begin{pmatrix} 1 & 2 & 2 \\ 2 & 1 & 2 \\ 2 & 2 & 1 \end{pmatrix}$, 求正交阵 $T$, 使 $T^{-1}AT$ 为对角阵.
+解. 矩阵A的特征多项式为
+$$p _ {A} (\lambda) = \det (\lambda I - A) = \left| \begin{array}{c c c} \lambda - 1 & - 2 & - 2 \\ - 2 & \lambda - 1 & - 2 \\ - 2 & - 2 & \lambda - 1 \end{array} \right| = (\lambda - 5) (\lambda + 1) ^ {2}.$$
+故A的特征值为 $\lambda_{1}=5,\lambda_{2}=-1$ (二重).
+对于 $\lambda_{1}=5,$ 求解
+$(5I-A)\mathbf{x}=0$ 
+得特征向量 $\mathbf{x}_{1}=(1,1,1)^{T}$ ，把它单位化得 $e_{1}=\frac{1}{\sqrt{3}}(1,1,1)^{T}$ .
+对于 $\lambda_{2}=-1$ ,求解
+$$(- I - A) \mathbf {x} = 0$$
+得特征向量 $\mathbf{x}_{2}=(-1,1,0)^{T},\mathbf{x}_{3}=(-1,0,1)^{T}$ . 把它们标准正交化得 $e_{2}=\frac{1}{\sqrt{2}}(-1,1,0)^{T}$ ,
+ $e_{3}=\frac{1}{\sqrt{6}}(-1,-1,2)^{T}.$ 
+令
+$$T = (\mathbf {e} _ {1}, \mathbf {e} _ {2}, \mathbf {e} _ {3}) = \left( \begin{array}{c c c} 1 / \sqrt {3} & - 1 / \sqrt {2} & - 1 / \sqrt {6} \\ 1 / \sqrt {3} & 1 / \sqrt {2} & - 1 / \sqrt {6} \\ 1 / \sqrt {3} & 0 & 2 / \sqrt {6} \end{array} \right),$$
+则T为一个正交矩阵,且有
+$$T ^ {- 1} A T = \left( \begin{array}{c c c} 5 & & \\ & - 1 & \\ & & - 1 \end{array} \right).$$
+[第 237 页]
+由定理 7.3.6, 我们即可得到对称变换的主要特性.
+定理7.3.7. 设 $\mathcal{A}$ 是欧氏空间 $\mathbb{R}^n$ 上的对称变换. 则
+1. $\mathcal{A}$ 的特征值均为实数;
+2. A的不同特征值对应的特征向量彼此正交;
+3. 存在 $\mathbb{R}^n$ 的一组标准正交基 $\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n$，使得 $\mathcal{A}$ 在这组基下的矩阵为 $\mathrm{diag}(\lambda_1, \lambda_2, \ldots, \lambda_n)$，这里 $\lambda_1, \lambda_2, \ldots, \lambda_n$ 为 $\mathcal{A}$ 的特征值。
+证明. 结论1,2是命题7.3.4与7.3.5的显然推论. 下面我们证结论3.
+设A由实对称方阵A定义:  $x \rightarrow Ax$ . 则A在自然基 $e_{1}, e_{2}, \ldots, e_{n}$ 下的矩阵为A, 即
+$$\mathscr {A} \left(\mathbf {e} _ {1}, \mathbf {e} _ {2}, \dots , \mathbf {e} _ {n}\right) = \left(\mathbf {e} _ {1}, \mathbf {e} _ {2}, \dots , \mathbf {e} _ {n}\right) A.$$
+由定理 7.3.6 知, 存在正交方阵 T 使得  $A = T \Lambda T^{-1}$ , 其中  $\Lambda = \text{diag}(\lambda_1, \lambda_2, \ldots, \lambda_n)$ . 于是
+$$\mathscr {A} ((\mathbf {e} _ {1}, \mathbf {e} _ {2}, \dots , \mathbf {e} _ {n}) T) = (\mathbf {e} _ {1}, \mathbf {e} _ {2}, \dots , \mathbf {e} _ {n}) T \Lambda .$$
+令 $(\mathbf{u}_{1},\mathbf{u}_{2},\ldots,\mathbf{u}_{n})=(\mathbf{e}_{1},\mathbf{e}_{2},\ldots,\mathbf{e}_{n})T$ ．由于T是正交方阵，则 $u_{1},u_{2},\ldots,u_{n}$ 是 $R^{n}$ 的一组标准正交基，且有
+$$\mathscr {A} \left(\mathbf {u} _ {1}, \mathbf {u} _ {2}, \dots , \mathbf {u} _ {n}\right) = \left(\mathbf {u} _ {1}, \mathbf {u} _ {2}, \dots , \mathbf {u} _ {n}\right) \Lambda .$$
+上述定理表明,  $A u_{i} = \lambda_{i} u_{i}, i = 1, 2, \ldots, n.$  也就是说, 对称变换就是沿 n 个互相正交的特征方向的伸缩 (若  $\lambda_{i} > 0$ ) 加反射 (若  $\lambda_{i} < 0$ ).
+§7.4 一般的欧氏空间
+本节我们将数组内积空间的结果推广到一般的线性空间上.
+§7.4.1 一般欧氏空间的定义与性质
+设V是实数域R上的线性空间, 如果我们在V上引进内积就可以得到一般的欧氏空间. 同数组空间 $R^{n}$ 不同, 我们无法直接在一般线性空间V上给出内积的公式表示, 我们只能根据内积所具有的性质来定义内积.
+定义7.4.1. 设V是实数域R上的线性空间, 如果V中任意两个向量 $\alpha$ 和 $\beta$ 都按某一法则对应于一个实数, 记作 $(\alpha, \beta)$ , 且满足
+[第 238 页]
+(1) 对称性: 即对任意两个向量  $\alpha, \beta \in V$ , 有
+$$(\alpha , \beta) = (\beta , \alpha)\tag{7.23}$$
+(2) 线性性: 即对任意一个实数  $\lambda$  和任意三个向量  $\alpha, \beta, \gamma \in V$ , 有
+$$(\lambda \alpha , \beta) = \lambda (\alpha , \beta)\tag{7.24}$$
+$$(\alpha + \beta , \gamma) = (\alpha , \gamma) + (\beta , \gamma)\tag{7.25}$$
+(3) 正定性: 即对于任意一个向量  $\alpha \in V$ , 有  $(\alpha, \alpha) \geq 0$ , 等号成立当且仅当  $\alpha = \theta$ .
+则称 $(\alpha,\beta)$ 为向量 $\alpha$ 和 $\beta$ 的内积, 定义了内积的实数域R上的线性空间V称为欧几里得(Euclid)空间, 简称欧氏空间.
+显然, 一般的欧氏空间是 $\mathbb{R}^n$ 的推广. 但由于两者内积性质完全一样, 因此 $\mathbb{R}^n$ 上的有关理论都可以平行推广到一般欧氏空间上. 下面, 我们直接叙述有关结论.
+定理7.4.1. [Cauchy-Schwarz不等式] 设 $V$ 是欧氏空间, $(\cdot, \cdot)$ 是 $V$ 的内积, 则对 $V$ 中的任意两个向量 $\alpha$ 和 $\beta$, 有
+$$| (\alpha , \beta) | \leq \sqrt {(\alpha , \alpha) (\beta , \beta)}.\tag{7.26}$$
+定义7.4.2. 设V是欧氏空间, $(\cdot,\cdot)$ 是V的内积,对于任意的 $\alpha\in V$ ,称
+$$| \alpha | = \sqrt {(\alpha , \alpha)}\tag{7.27}$$
+称为 $\alpha$ 的长度或模. 若 $|\alpha| = 1$, 则称 $\alpha$ 为单位向量. 对于欧氏空间 $V$ 中两个非零向量 $\alpha$ 和 $\beta$, 定义它们之间的夹角为
+$$\theta = \arccos \frac {(\alpha , \beta)}{| \alpha | | \beta |}.\tag{7.28}$$
+特别, 当 $(\alpha,\beta)=0$ 时, 称向量 $\alpha$ 和 $\beta$ 正交或垂直, 记作 $\alpha\perp\beta$ .
+一般欧氏空间中同样有勾股定理
+$$| \alpha + \beta | ^ {2} = | \alpha | ^ {2} + | \beta | ^ {2} \Leftrightarrow (\alpha , \beta) = 0.\tag{7.29}$$
+此外, 利用Cauchy-Schwarz不等式可以证明下列三角不等式
+$$| \alpha + \beta | \leq | \alpha | + | \beta |.\tag{7.30}$$
+下面我们给出几个一般欧氏空间的具体例子.
+[第 239 页]
+例7.4.1. 对于实数域上任何一个 $n$ 维线性空间 $V$, 取定 $V$ 的一组基 $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n}$. 对任意向量
+$$\alpha = a _ {1} \alpha_ {1} + a _ {2} \alpha_ {2} + \dots + a _ {n} \alpha_ {n}, \quad \beta = b _ {1} \alpha_ {1} + b _ {2} \alpha_ {2} + \dots + b _ {n} \alpha_ {n},$$
+定义它们的内积如下
+$$(\alpha , \beta) = a _ {1} b _ {1} + a _ {2} b _ {2} + \dots + a _ {n} b _ {n}.$$
+容易验证, 上述定义满足内积的三条基本性质. 在上述内积下, $V$ 成为一个欧氏空间.
+上述例子说明, 实数域上n维线性空间V的内积是一定存在的, 从而可以构造相应的欧氏空间.
+例7.4.2. 设 $C[a, b]$ 是闭区间 $[a, b]$ 上实的连续函数的全体, 它是实数域上的线性空间. 对于任意的 $f, g \in C[a, b]$, 定义
+$$(f, g) = \int_ {a} ^ {b} f (x) g (x) d x.$$
+容易验证, 它满足内积定义中的(1)和(2). 如果
+$$(f, f) = \int_ {a} ^ {b} f ^ {2} (x) d x = 0,$$
+则由连续函数的性质可知 $f \equiv 0$ ，所以(3)也满足。因此， $(f,g)$ 定义了 $C[a,b]$ 上的内积。对应的Cauchy-Schwarz不等式为
+$$\left| \int_ {a} ^ {b} f (x) g (x) d x \right| \leq \sqrt {\int_ {a} ^ {b} f ^ {2} (x) d x} \sqrt {\int_ {a} ^ {b} g ^ {2} (x) d x}.$$
+§7.4.2 标准正交基
+一般欧氏空间的内积并没有一个具体公式．但当我们给定空间的一组基 $\alpha_{1},\alpha_{2},\ldots ,\alpha_{n}$ 后，内积可以用矩阵形式表示.实际上，设
+$$\alpha = \sum_ {i = 1} ^ {n} x _ {i} \alpha_ {i}, \quad \beta = \sum_ {i = 1} ^ {n} y _ {i} \alpha_ {i},$$
+则
+$$(\alpha , \beta) = \sum_ {i = 1} ^ {n} \sum_ {j = 1} ^ {n} x _ {i} y _ {j} (\alpha_ {i}, \alpha_ {j}) = \mathbf {x} ^ {T} G \mathbf {y},\tag{7.31}$$
+其中 $\mathbf{x}=(x_{1},x_{2},\ldots,x_{n})^{T},\mathbf{y}=(y_{1},y_{2},\ldots,y_{n})^{T},G=((\alpha_{i},\alpha_{j}))_{n\times n}$ 是度量矩阵，也称为Gram阵．由内积的正定性知，G是实对称正定方阵．注意到，上式与欧氏空间 $R^{n}$ 的内积定义(7.4)一致.
+[第 240 页]
+特别地, 当 $G = I$, 即 $(\alpha_{i}, \alpha_{j}) = \delta_{ij}$ 时,
+$$(\alpha , \beta) = \mathbf {x} ^ {T} \mathbf {y}.\tag{7.32}$$
+定义7.4.3. 设 $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n}$ 为欧氏空间 $V$ 的一组基, 若 $(\alpha_{i}, \alpha_{j}) = \delta_{ij}, i, j = 1, 2, \ldots, n$, 则称 $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n}$ 为 $V$ 的一组标准正交基.
+定理7.4.2. (Schmidt正交化) 从 $n$ 维欧氏空间 $V$ 的任意一组基 $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n}$ 出发, 可以构造一组标准正交基 $\beta_{1}, \beta_{2}, \ldots, \beta_{n}$ 使得 $\{\alpha_{1}, \ldots, \alpha_{k}\} \sim \{\beta_{1}, \ldots, \beta_{k}\}, k = 1, 2, \ldots, n$.
+定义7.4.4. 设 $W_{1}, W_{2}$ 是欧氏空间V的子空间. 对向量 $\alpha \in V$, 若 $\alpha \perp \beta$ 对任意 $\beta \in W_{1}$ 成立, 则称 $\alpha$ 与子空间 $W_{1}$ 正交, 记为 $\alpha \perp W_{1}$. 若对任意 $\alpha \in W_{1}, \beta \in W_{2}$ 都有 $\alpha \perp \beta$, 则称 $W_{1}$ 与 $W_{2}$ 正交, 记为 $W_{1} \perp W_{2}$.
+定理7.4.3. 设W是欧氏空间V的子空间, 则向量集合
+$$W ^ {\perp} := \{\alpha \in V | \alpha \perp W \}$$
+是V的子空间, 且有 $V=W\oplus W^{\perp}$ . 称 $W^{\perp}$ 为W的正交补空间.
+定义7.4.5. 设W是欧氏空间V的子空间,  $\alpha \in V$ . 如果向量 $\beta \in W$ 满足 $\alpha - \beta \perp W$ , 则称 $\beta$ 为向量 $\alpha$ 在W上的正交投影, 记为 $\beta = P\alpha$ .
+定理7.4.4. 设 $W$ 是欧氏空间 $V$ 的子空间, $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{r}$ 是 $W$ 的一组标准正交基. 则下列结论成立:
+1. 对任意 $\alpha \in V, \alpha$ 在 $W$ 上的正交投影存在唯一, 且
+$$P \alpha = (\alpha , \alpha_ {1}) \alpha_ {1} + (\alpha , \alpha_ {2}) \alpha_ {2} + \dots + (\alpha , \alpha_ {r}) \alpha_ {r}.$$
+2. 设  $\alpha \in V$ . 则对任意  $\beta \in W$ ,
+$$| \alpha - \beta | \geq | \alpha - P \alpha |.$$
+等号成立当且仅当 $\beta = P\alpha$
+例7.4.3. 设 $C[-\pi, \pi]$ 是例 7.4.2 中定义的欧氏空间. 令 $W = \langle 1, \cos x, \sin x, \ldots, \cos(nx), \sin(nx) \rangle$ 为 $C[-\pi, \pi]$ 的子空间. 容易验证,
+$$\frac {1}{\sqrt {2 \pi}}, \frac {1}{\sqrt {\pi}} \cos x, \frac {1}{\sqrt {2 \pi}} \sin x, \dots , \frac {1}{\sqrt {2 \pi}} \cos (n x), \frac {1}{\sqrt {2 \pi}} \sin (n x)$$
+[第 241 页]
+为W的一组标准正交基. 因此,  $f(x) \in C[-\pi, \pi]$  在子空间W上的正交投影为
+$$\frac {a _ {0}}{2} + a _ {1} \cos (x) + b _ {1} \sin (x) + \dots + a _ {n} \cos (n x) + b _ {n} \sin (n x),$$
+其中
+$$a _ {k} = \frac {1}{\pi} (f (x), \cos (k x)) = \frac {1}{\pi} \int_ {- \pi} ^ {\pi} f (x) \cos (k x) d x, \quad b _ {k} = \frac {1}{\pi} (f (x), \sin (k x)) = \frac {1}{\pi} \int_ {- \pi} ^ {\pi} f (x) \sin (k x) d x.$$
+$k=1,2,\ldots,n.$  这正式 $f(x)$ 的Fourier级数的前n项的和.
+§7.4.3 正交变换与对称变换
+接下来, 我们研究一般欧氏空间上的正交变换与对称变换. 这个时候, 我们是从变换的本质特征来定义.
+定义7.4.6. 设V是一个n维的欧氏空间, A是V上的一个线性变换, 如果A保持V的内积不变, 即对于任意的两个向量 $\alpha, \beta \in V$ 都有
+$$(\mathscr {A} \alpha , \mathscr {A} \beta) = (\alpha , \beta).\tag{7.33}$$
+则称A是V内的正交变换.
+定理7.4.5. 设 $V$ 是一个 $n$ 维的欧氏空间, $\mathcal{A}$ 是 $V$ 上的一个线性变换, 则下列命题等价:
+1. $\mathcal{A}$ 为正交变换;
+2. A保持任意向量的模长不变;
+3. $\mathcal{A}$ 将标准正交基变换为标准正交基;
+4. A在任一组标准正交基下的矩阵为正交矩阵.
+证明. $1 \Leftrightarrow 2$ 及 $1 \Rightarrow 3$ 与定理7.3.1的证明一样. 我们仅证明 $3 \Rightarrow 4$ 及 $4 \Rightarrow 1$.
+$3 \Rightarrow 4.$ 设 $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n}$ 是欧氏空间V的标准正交基, A在该组基下的矩阵为 $A = (a_{ij}), A$ 的列分别为 $A_{1}, A_{2}, \ldots, A_{n}$. 则
+$$(\mathscr {A} \alpha_ {1}, \mathscr {A} \alpha_ {2}, \dots , \mathscr {A} \alpha_ {n}) = (\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}) A$$
+或
+$$\mathscr {A} \alpha_ {j} = (\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}) A _ {j} = \sum_ {i = 1} ^ {n} a _ {i j} \alpha_ {i}, \quad j = 1, 2, \dots , n$$
+[第 242 页]
+于是
+$$\delta_ {i j} = (\mathcal {A} \boldsymbol {\alpha} _ {i}, \mathcal {A} \boldsymbol {\alpha} _ {j}) = \left(\sum_ {l = 1} ^ {n} a _ {l i} \boldsymbol {\alpha} _ {l}, \sum_ {k = 1} ^ {n} a _ {k j} \boldsymbol {\alpha} _ {k}\right) = \sum_ {l, k = 1} ^ {n} a _ {l i} a _ {k j} \delta_ {l k} = \sum_ {k = 1} ^ {n} a _ {k i} a _ {k j} = A _ {i} ^ {T} A _ {j},$$
+即A是正交方阵.
+$4 \Rightarrow 1$ . 设  $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n}$  是 V 的一组标准正交基, A 在该组基下的矩阵 A 正交. 则
+$$(\mathcal {A} \alpha_ {i}, \mathcal {A} \alpha_ {j}) = A _ {i} ^ {T} A _ {j} = \delta_ {i j}, \qquad i, j = 1, 2, \ldots , n$$
+于是对V中任意两个向量
+$$\alpha = \sum_ {i = 1} ^ {n} a _ {i} \alpha_ {i}, \quad \beta = \sum_ {i = 1} ^ {n} b _ {i} \alpha_ {i}$$
+有
+$$\begin{array}{l} (\mathscr {A} \alpha , \mathscr {A} \beta) = \left(\mathscr {A} \left(\sum_ {i = 1} ^ {n} a _ {i} \alpha_ {i}\right), \mathscr {A} \left(\sum_ {i = 1} ^ {n} b _ {i} \alpha_ {i}\right)\right) = \sum_ {i, j = 1} ^ {n} a _ {i} b _ {j} (\mathscr {A} \alpha_ {i}, \mathscr {A} \alpha_ {j}) \\ = \sum_ {i, j = 1} ^ {n} a _ {i} b _ {j} \delta_ {i j} = \sum_ {i = 1} ^ {n} a _ {i} b _ {i} = (\alpha , \beta). \end{array}$$
+即A是正交变换.
+一般欧氏空间上的正交变换具有 $\mathbb{R}^n$ 上的正交变换一样的性质, 详见定理7.3.2.
+设 $\mathcal{A}$ 是欧氏空间 $V$ 上的正交变换, 则 $\operatorname{det}(\mathcal{A}) = \pm 1$. 若 $\operatorname{det}(\mathcal{A}) = 1$, 则称 $\mathcal{A}$ 为第一类正交变换; 若 $\operatorname{det}(\mathcal{A}) = -1$, 则称 $\mathcal{A}$ 为第二类正交变换;
+命题7.4.6. 设 $\mathcal{A}$ 是欧氏空间 $V$ 上的第一类正交变换, 且 $V$ 的维数为奇数. 则 $\mathcal{A}$ 一定有特征值1.
+证明. 由于 $\mathcal{A}$ 是第一类正交变换, 所以它的所有特征值乘积为1. 因为 $V$ 的维数为奇数, 故 $p_{\mathcal{A}}(\lambda)$ 为奇数次多项式, 从而必有实根. 另一方面, 由于 $p_{\mathcal{A}}(\lambda)$ 的复根成对共轭出现, 且任一对共轭复根 $\mu, \bar{\mu}$ 的乘积为 $\mu \bar{\mu} = |\mu|^2 = 1$, 故 $p_{\mathcal{A}}(\lambda)$ 一定有奇数个实根, 且其乘积为1. 从而必有一个特征值为1.
+接下来介绍对称变换.
+定义7.4.7. 设V是n维欧氏空间, A是V上的线性变换. 如果A满足
+$$(\alpha , \mathscr {A} \beta) = (\mathscr {A} \alpha , \beta)\tag{7.34}$$
+对V中任意两个向量 $\alpha$ 和 $\beta$ 成立,则称A是V上的对称变换.
+[第 243 页]
+定理7.4.7. 设 $\mathcal{A}$ 是欧氏空间上的线性变换, 则 $\mathcal{A}$ 是对称变换的充分必要条件是 $\mathcal{A}$ 在任何一组标准正交基下的矩阵 $A$ 是实对称方阵.
+证明. 设 $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n}$ 是 $V$ 中的标准正交基, $A = (a_{ij})$ 是对称变换 $\mathcal{A}$ 在这组基下的矩阵, 即
+$$(\mathcal {A} \alpha_ {1}, \mathcal {A} \alpha_ {2}, \ldots , \mathcal {A} \alpha_ {n}) = (\alpha_ {1}, \alpha_ {2}, \ldots , \alpha_ {n}) A$$
+或写成
+$$\mathscr {A} \alpha_ {j} = a _ {1 j} \alpha_ {1} + \dots + a _ {n j} \alpha_ {n} = \sum_ {i = 1} ^ {n} a _ {k j} \alpha_ {k}.$$
+因此，
+$$\left(\alpha_ {i}, \mathscr {A} \alpha_ {j}\right) = \left(\alpha_ {i}, \sum_ {k = 1} ^ {n} a _ {k j} \alpha_ {k}\right) = \sum_ {k = 1} ^ {n} a _ {k j} \left(\alpha_ {i}, \alpha_ {k}\right) = a _ {i j},$$
+$$(\mathscr {A} \alpha_ {i}, \alpha_ {j}) = (\sum_ {k = 1} ^ {n} a _ {k i} \alpha_ {k}, \alpha_ {j}) = \sum_ {k = 1} ^ {n} a _ {k i} (\alpha_ {k}, \alpha_ {j}) = a _ {j i}.$$
+以上两式相等得 $a_{ij}=a_{ji}$ .
+反之, 如果 $\mathcal{A}$ 在标准正交基下的矩阵 $A = (a_{ij})$ 满足 $a_{ij} = a_{ji}$, 则
+$$(\alpha_ {i}, \mathscr {A} \alpha_ {j}) = (\mathscr {A} \alpha_ {i}, \alpha_ {j}).$$
+因此,对于任意两个向量
+$$\alpha = \sum_ {i = 1} ^ {n} a _ {i} \alpha_ {i}, \quad \beta = \sum_ {j = 1} ^ {n} b _ {j} \alpha_ {j}$$
+有
+$$(\alpha , \mathscr {A} \beta) = \sum_ {i, j = 1} ^ {n} a _ {i} b _ {j} (\alpha_ {i}, \mathscr {A} \alpha_ {j}) = \sum_ {i, j = 1} ^ {n} a _ {i} b _ {j} (\mathscr {A} \alpha_ {i}, \alpha_ {j}) = (\mathscr {A} \alpha , \beta).$$
+即A是对称变换.
+定理7.4.8. 设 $\mathcal{A}$ 是欧氏空间 $V$ 上的对称变换, 则 $\mathcal{A}$ 的特征值均为实数, 且不同特征值对应的特征向量相互正交.
+证明. 由定理 7.4.7, A 在一组标准正交基下的矩阵为实对称方阵, 从而其特征值为实数. 不同特征值对应特征向量的正交性的证明同命题 7.3.5. □
+定理7.4.9. 设 $\mathcal{A}$ 是 $n$ 维欧氏空间 $V$ 上的对称变换，则存在 $V$ 的一组标准正交基 $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n}$ 使得 $\mathcal{A} \alpha_{i} = \lambda_{i} \alpha_{i}, i = 1, 2, \ldots, n$. 这里 $\lambda_{1}, \lambda_{2}, \ldots, \lambda_{n}$ 为 $\mathcal{A}$ 的特征值.
+[第 244 页]
+证明. 设 $\beta_{1}, \beta_{2}, \ldots, \beta_{n}$ 是 $V$ 的一组标准正交基，$\mathcal{A}$ 在该组基下的矩阵为实对称方阵，记为 $A$。由定理，存在可逆方阵 $T$ 使得 $A = T \operatorname{diag}(\lambda_{1}, \lambda_{2}, \ldots, \lambda_{n}) T^{-1}$。记 $(\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n}) = (\beta_{1}, \beta_{2}, \ldots, \beta_{n}) T$，则
+$$\begin{array}{l} \mathscr {A} (\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}) = \mathscr {A} ((\beta_ {1}, \beta_ {2}, \dots , \beta_ {n}) T) \\ = \mathscr {A} (\beta_ {1}, \beta_ {2}, \dots , \beta_ {n}) T = (\beta_ {1}, \beta_ {2}, \dots , \beta_ {n}) A T \\ = (\beta_ {1}, \beta_ {2}, \dots , \beta_ {n}) T \operatorname{diag} (\lambda_ {1}, \lambda_ {2}, \dots , \lambda_ {n}) \\ = (\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}) \operatorname{diag} (\lambda_ {1}, \lambda_ {2}, \dots , \lambda_ {n}). \end{array}$$
+因此, $\mathscr{A}\alpha_{i}=\lambda_{i}\alpha_{i},i=1,2,\ldots,n.$
+§7.5 酉空间*
+欧几里得空间是实数域上的线性空间装配上内积(或者说度量)后形成的.自然会问,可否将这些结果推广到复数域上的线性空间,形成一种复数域上的度量空间?答案是可行的.
+§7.5.1 酉空间的基本概念*
+设 $\mathbb{C}^n$ 为复数域 $\mathbb{C}$ 上的 $n$ 维数组空间. 如何在 $\mathbb{C}^n$ 上引进内积使得其具有度量? 一个自然的想法是用 $\mathbb{R}^n$ 一样的内积, 即对 $\mathbf{a} = (a_1, a_2, \ldots, a_n)^T$, $\mathbf{b} = (b_1, b_2, \ldots, b_n)^T \in \mathbb{C}^n$, 定义
+$$(\mathbf {a}, \mathbf {b}) = a _ {1} b _ {1} + a _ {2} b _ {2} + \dots + a _ {n} b _ {n}.$$
+则 $(\mathbf{a},\mathbf{a})=\sum_{i=1}^{n}a_{i}^{2}$ . 此时, 我们不能保证 $(\mathbf{a},\mathbf{a})\geq0$ , 从而无法定义a的范数. 因此, 欧氏空间的内积定义不适合推广到复数域上的线性空间. 但如果我们对上述内积公式做一点修改, 就可以保证 $(\mathbf{a},\mathbf{a})\geq0$ . 事实上, 我们引入内积
+$$(\mathbf {a}, \mathbf {b}) = \bar {a} _ {1} b _ {1} + \bar {a} _ {2} b _ {2} + \dots + \bar {a} _ {n} b _ {n} = \mathbf {a} ^ {*} \mathbf {b},\tag{7.35}$$
+这里 $\mathbf{a}^{*}=\bar{\mathbf{a}}^{T}=(\bar{a}_{1},\bar{a}_{2},\ldots,\bar{a}_{n})$ 表示向量a的共轭转置. 则 $(\mathbf{a},\mathbf{a})=\sum_{i=1}^{n}|a_{i}|^{2}\geq0$ . 更一般地, 我们可以定义两个向量的内积
+$$(\mathbf {a}, \mathbf {b}) = \mathbf {a} ^ {*} H \mathbf {b},\tag{7.36}$$
+其中方阵 $H \in C^{n \times n}$ 满足:
+(1) H 是 Hermite 方阵, 即  $H^{*} = H$ . 这里  $H^{*}$  表示 H 的共轭转置  $\bar{H}^{T}$ .
+(2) H 正定, 即对任意  $x \in C^{n}, x^{*}Hx \geq 0$ , 且等号成立当且仅当 x = 0.
+[第 245 页]
+定义7.5.1. 定义了内积 (7.36) 的数组空间 $\mathbb{C}^n$ 称为酉空间.
+显然内积(7.35)是内积(7.36)的特殊情形(H=I). 我们称(7.35)为标准内积. 如无特别说明, 酉空间 $C^{n}$ 中的内积都指标准内积.
+§7.5.2 酉空间的基本性质*
+酉空间的内积性质与欧氏空间内积的性质有相似性,但也有些不同.
+定理7.5.1. 酉空间内积具有以下性质
+(1) 共轭对称性: 即对任意两个向量  $a, b \in V$ , 有
+$$(\mathbf {a}, \mathbf {b}) = \overline {{(\mathbf {b} , \mathbf {a})}}.\tag{7.37}$$
+(2) 共轭线性: 即对任意一个复数  $\lambda$  和任意三个向量  $a, b, c \in V$ ，有
+$$(\mathbf {a}, \lambda \mathbf {b}) = \lambda (\mathbf {a}, \mathbf {b}), \quad (\mathbf {a}, \mathbf {b} + \mathbf {c}) = (\mathbf {a}, \mathbf {b}) + (\mathbf {a}, \mathbf {c})\tag{7.38}$$
+$$(\lambda \mathbf {a}, \mathbf {b}) = \bar {\lambda} (\mathbf {a}, \mathbf {b}), \quad (\mathbf {a} + \mathbf {b}, \mathbf {c}) = (\mathbf {a}, \mathbf {c}) + (\mathbf {b}, \mathbf {c}).\tag{7.39}$$
+(3) 正定性: 即对于任意一个向量  $a \in V$ , 有  $(\mathbf{a}, \mathbf{a}) \geq 0$ , 等号成立当且仅当 a = 0.
+证明. 请读者自己完成证明.
+内积的共轭线性表明, 内积关于第二个变量是线性的, 但关于第一个变量不是线性的, 而是所谓的共轭线性的, 即有
+$$\begin{array}{l} (\lambda_ {1} \mathbf {a} + \lambda_ {2} \mathbf {b}, \mathbf {c}) = \overline {{\lambda_ {1}}} (\mathbf {a}, \mathbf {c}) + \overline {{\lambda_ {2}}} (\mathbf {b}, \mathbf {c}), \\ (\mathbf {a}, \lambda_ {1} \mathbf {b} + \lambda_ {2} \mathbf {c}) = \lambda_ {1} (\mathbf {a}, \mathbf {b}) + \lambda_ {2} (\mathbf {a}, \mathbf {c}). \end{array}$$
+一般地, 我们有
+$$\left(\sum_ {i = 1} ^ {k} \lambda_ {i} \mathbf {a} _ {i}, \sum_ {j = 1} ^ {m} \mu_ {j} \mathbf {b} _ {j}\right) = \sum_ {i = 1} ^ {k} \sum_ {j = 1} ^ {m} \overline {{\lambda_ {i}}} \mu_ {j} (\mathbf {a} _ {i}, \mathbf {b} _ {j}).\tag{7.40}$$
+类似欧氏空间,有了内积就可以定义酉空间中向量的长度或模.
+定义7.5.2. 向量a的长度(模)定义为
+$$| \mathbf {a} | = \sqrt {(\mathbf {a} , \mathbf {a})}.\tag{7.41}$$
+[第 246 页]
+然而对于酉空间, 由于任何两个向量之间的内积(a,b)不再是一个实数, 所以无法定义两个向量之间的夹角. 这是酉空间和欧氏空间之间的一个重要区别! 尽管如此, 我们仍然可以定义酉空间中向量之间的“正交”或者“垂直”的概念.
+定义7.5.3. 酉空间中两个向量a和b满足 $(\mathbf{a},\mathbf{b})=0$ ，则称a与b相互正交或垂直，记为 $a\perp b$ .
+再次强调, 这里的 “正交” 或者 “垂直”, 仅仅是指内积等于零, 而不是夹角等于 $90^{\circ}$, 因为这里没有夹角的概念. 但欧氏空间中凡涉及正交性的结果均可移植到酉空间中. 例如, 可以考虑子空间的相互正交性以及子空间的正交补空间.
+定理7.5.2. 设 $\mathbb{C}^n$ 是 $n$ 维酉空间, 则
+(1) $\mathbb{C}^n$ 中两两正交的一组非零向量一定是线性无关的；
+(2)  $C^{n}$  中存在标准正交基, 即存在一组基  $u_{1}, u_{2}, \ldots, u_{n}$ , 满足
+$$(\mathbf {u} _ {i}, \mathbf {u} _ {j}) = \delta_ {i j}, \quad i, j = 1, 2, \dots , n$$
+(3) 从酉空间中任何一组基出发, 可以通过Schmidt正交化过程, 得到一组标准正交基.
+读者可以自行完成上述定理的证明.下面, 我们用一个例子说明酉空间的Schmidt正交化过程. 该正交化方法与欧氏空间向量组的正交化完全一样, 只是在内积的计算时要注意用酉空间的内积而不是欧氏空间的内积.
+例7.5.1. 将 $\mathbb{C}^3$ 的一组基 $\mathbf{a}_1 = (1, i, 1)$, $\mathbf{a}_2 = (-1, 0, 1)$ 与 $\mathbf{a}_3 = (0, 1, i)$ 单位正交化.
+解. 首先将 $\mathbf{a}_1$ 单位化得
+$$\mathbf {u} _ {1} = \frac {\mathbf {a} _ {1}}{| \mathbf {a} _ {1} |} = \frac {1}{\sqrt {3}} (1, i, 1).$$
+令 $\mathbf{b}_{2}=\mathbf{a}_{2}-(\mathbf{a}_{2},\mathbf{u}_{1})\mathbf{u}_{1}=(-1,0,1)$ ，则 $(\mathbf{b}_{2},\mathbf{u}_{1})=0$ 。将 $b_{2}$ 单位化得
+$$\mathbf {u} _ {2} = \frac {\mathbf {b} _ {2}}{| \mathbf {b} _ {2} |} = \frac {1}{\sqrt {2}} (- 1, 0, 1).$$
+令 $\mathbf{b}_3 = \mathbf{a}_3 - (\mathbf{a}_3, \mathbf{u}_1) \mathbf{u}_1 - (\mathbf{a}_3, \mathbf{u}_2) \mathbf{u}_2 = \frac{1}{2} (i, 2, i)$, 则 $(\mathbf{b}_3, \mathbf{u}_1) = (\mathbf{b}_3, \mathbf{u}_2) = 0$. 将 $\mathbf{b}_3$ 正交化得
+$$\mathbf {u} _ {3} = \frac {\mathbf {b} _ {3}}{| \mathbf {b} _ {3} |} = \frac {1}{\sqrt {6}} (i, 2, i).$$
+则  $u_{1}, u_{2}, u_{3}$  为  $C^{3}$  的一组标准正交基.
+[第 247 页]
+§7.5 酉空间*
+根据 7.5.2 定理, 设  $u_{1}, u_{2}, \ldots, u_{n}$  是酉空间 V 内的一组标准正交基, 对于 V 内任意两个向量 a, b
+$$\mathbf {a} = a _ {1} \mathbf {u} _ {1} + a _ {2} \mathbf {u} _ {2} + \dots + a _ {n} \mathbf {u} _ {n}, \quad \mathbf {b} = b _ {1} \mathbf {u} _ {1} + b _ {2} \mathbf {u} _ {2} + \dots + b _ {n} \mathbf {u} _ {n},$$
+有
+$$\begin{array}{c} (\mathbf {a}, \mathbf {b}) = \left(\sum_ {i = 1} ^ {n} a _ {i} \mathbf {u} _ {i}, \sum_ {j = 1} ^ {n} b _ {j} \mathbf {u} _ {j}\right) = \sum_ {i = 1} ^ {n} \sum_ {j = 1} ^ {n} \overline {{a}} _ {i} b _ {j} (\mathbf {u} _ {i}, \mathbf {u} _ {j}) \\ = \sum_ {i = 1} ^ {n} \sum_ {j = 1} ^ {n} \delta_ {i j} \overline {{a}} _ {i} b _ {j} = \sum_ {i = 1} ^ {n} \overline {{a}} _ {i} b _ {i}. \end{array}$$
+也就是说,在酉空间的一组标准正交基下,内积的表示与标准内积是一致的.
+定义7.5.4. 设 $W_{1}, W_{2}$ 是酉空间 $C^{n}$ 的子空间. 对向量 $x \in C^{n}$, 若 $x \perp y$ 对任意 $y \in W_{1}$ 成立, 则称x与子空间 $W_{1}$ 正交, 记为 $x \perp W_{1}$. 若对任意 $x \in W_{1}, y \in W_{2}$ 都有 $x \perp y$, 则称 $W_{1}$ 与 $W_{2}$ 正交, 记为 $W_{1} \perp W_{2}$.
+定理7.5.3. 设 $W$ 是欧氏空间 $\mathbb{C}^n$ 的子空间, 则向量集合
+$$W ^ {\perp} := \left\{\mathbf {a} \in \mathbb {C} ^ {n} | \mathbf {a} \perp W \right\}$$
+是 $C^{n}$ 的子空间, 且有 $C^{n}=W\oplus W^{\perp}$ . 称 $W^{\perp}$ 为W的正交补空间.
+定义7.5.5. 设 $W$ 是欧氏空间 $\mathbb{C}^n$ 的子空间, $\mathbf{x} \in \mathbb{C}^n$. 如果向量 $\mathbf{y} \in W$ 满足 $\mathbf{x} - \mathbf{y} \perp W$, 则称 $\mathbf{y}$ 为向量 $\mathbf{x}$ 在 $W$ 上的正交投影, 记为 $\mathbf{y} = P\mathbf{x}$.
+定理7.5.4. 设 $W$ 是欧氏空间 $\mathbb{C}^n$ 的子空间, $\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_r$ 是 $W$ 的一组标准正交基. 则下列结论成立:
+1. 对任意 $\mathbf{x} \in \mathbb{C}^n$, $\mathbf{x}$ 在 $W$ 上的正交投影存在唯一, 且
+$$P \mathbf {x} = (\mathbf {x}, \mathbf {u} _ {1}) \mathbf {u} _ {1} + (\mathbf {x}, \mathbf {u} _ {2}) \mathbf {u} _ {2} + \dots + (\mathbf {x}, \mathbf {u} _ {r}) \mathbf {u} _ {r}.$$
+2. 对任意 $y \in W$ ,
+$$| \mathbf {x} - \mathbf {y} | \geq | \mathbf {x} - P \mathbf {x} |.$$
+等号成立当且仅当 $\mathbf{y} = P\mathbf{x}$
+下表就一些重要性质给出了欧氏空间和酉空间之间的对比.
+[第 248 页]
+类比于欧氏空间中的正交变换和对称变换, 下面将讨论酉空间中的两类重要变换, 即酉变换和Hermite变换.
+§7.5.3 酉矩阵与酉变换*
+酉矩阵就是正交方阵在复数域上的推广, 因此它的性质及证明与正交方阵类似.
+定义7.5.6. 设U是一个n阶复矩阵, 如果它满足
+$$U ^ {*} U = U U ^ {*} = I,\tag{7.42}$$
+则称 $U$ 为酉矩阵.
+[第 249 页]
+二阶酉矩阵的一般形式如下
+$$A = \left( \begin{array}{c c} a & b \\ - \overline {{b}} e ^ {i \theta} & \overline {{a}} e ^ {i \theta} \end{array} \right), \quad | a | ^ {2} + | b | ^ {2} = 1$$
+定理7.5.5. $n$ 阶复方阵 $U$ 是酉矩阵当且仅当 $U$ 的行(或列)向量构成 $\mathbb{C}^n$ 的一组标准正交基.
+定理7.5.6. 酉矩阵有下列性质:
+(1) 单位阵是酉方阵.
+(2) A, B 为同阶酉方阵, 则 AB 也为酉方阵.
+(3) 设 $A$ 是西方阵, 则 $\bar{A}, A^T$ 与 $A^{-1}$ 也是西方阵.
+(4) 酉方阵的行列式的模长为1.
+(5) 酉方阵的特征值的模长为1.
+有了酉矩阵就可以定义 $\mathbb{C}^n$ 上的酉变换.
+定义7.5.7. 设 $\mathcal{U}$ 是酉空间 $\mathbb{C}^n$ 上的一个线性变换: $\mathbf{x} \to U\mathbf{x}, \mathbf{x} \in \mathbb{C}^n$. 若 $U$ 是酉矩阵, 则称 $\mathcal{U}$ 为酉变换.
+定理7.5.7. 设 $\mathcal{U}$ 是酉空间 $\mathbb{C}^n$ 上的线性变换, 则下列命题等价
+(1) $\mathcal{U}$ 是酉变换;
+(2) $\mathcal{U}$ 保持内积不变, 对任意 $\mathbf{x},\mathbf{y}\in \mathbb{C}^n$ ， $(\mathcal{U}\mathbf{x},\mathcal{U}\mathbf{y}) = (\mathbf{x},\mathbf{y});$
+(3) $\mathcal{U}$ 保持向量的模长不变, 即对任意的 $\mathbf{x} \in V$, 有 $|\mathcal{U}\mathbf{x}| = |\mathbf{x}|$;
+(4) $\mathcal{U}$ 把酉空间的标准正交基变为标准正交基；
+(5) $\mathcal{U}$ 在标准正交基下的矩阵是酉矩阵.
+定理7.5.8. 设 $U(\mathbb{C}^n)$ 是 $n$ 维酉空间 $\mathbb{C}^n$ 中所有酉变换的全体所形成的集合, 则
+(1) 单位变换 $\mathcal{E} \in U(\mathbb{C}^n)$;
+(2) 如果 $\mathcal{U}_1, \mathcal{U}_2 \in U(\mathbb{C}^n)$, 则 $\mathcal{U}_1 \circ \mathcal{U}_2 \in U(\mathbb{C}^n)$;
+(3) 如果 $\mathcal{U} \in U(\mathbb{C}^n)$, 则 $\mathcal{U}^{-1} \in U(\mathbb{C}^n)$.
+[第 250 页]
+即 $U(\mathbb{C}^{n})$ 在变换的乘法和逆运算之下是封闭的.
+定理7.5.9. 酉方阵均酉相似于对角阵. 即设 $A \in \mathbb{C}^{n \times n}$ 为酉方阵, 则存在酉方阵 $U$ 使得 $U^{-1}AU = \mathrm{diag}(e^{i\theta_1}, e^{i\theta_2}, \ldots, e^{i\theta_n})$, 这里 $e^{i\theta_1}, e^{i\theta_2}, \ldots, e^{i\theta_n}$ 为 $A$ 的特征值.
+定理7.5.10. 设 $\mathcal{U}$ 是酉空间 $\mathbb{C}^n$ 上的线性变换，则存在 $\mathbb{C}^n$ 的一组标准正交基 $\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n$ 使得 $\mathcal{U}(\mathbf{u}_j) = \lambda_j \mathbf{u}_j, j = 12, \ldots, n,$ 这里 $\lambda_j = e^{i\theta_j}, j = 1, 2, \ldots n$ 是 $\mathcal{U}$ 的特征值.
+上述两个定理的证明超出本书范围, 感兴趣的读者可参阅[17].
+§7.5.4 Hermite矩阵与Hermite变换*
+Hermite矩阵是实对称方阵在复数域上的推广.
+定义7.5.8. n阶复方阵H称为Hermite矩阵, 如果H满足 $H^{*}=H$ .
+例如, $H=\begin{pmatrix}1&1+i\\1-i&-1\end{pmatrix}$ 就是Hermite阵. Hermite阵有以下性质.
+命题7.5.11. Hermite方阵的特征值均为实数.
+命题7.5.12. Hermite方阵的不同特征值对应的特征向量彼此正交.
+上述两个命题的证明同命题 7.3.4, 7.3.5 的证明一样. 利用上述命题即可以得到
+定理7.5.13. 设H是一个Hermite矩阵, 则H酉相似于实对角阵, 即存在酉矩阵U使得
+$$U ^ {- 1} H U = \operatorname{diag} (\lambda_ {1}, \lambda_ {2}, \dots , \lambda_ {n}),$$
+其中 $\lambda_{i}(i=1,2,\ldots,n)$ 是H的特征值.
+上述定理的证明同定理 7.3.6 的证明类似.
+例7.5.2. 将Hermite阵
+$$H = \left( \begin{array}{c c c} 0 & i & 1 \\ - i & 0 & 0 \\ 1 & 0 & 0 \end{array} \right)$$
+酉相似对角化.
+[第 251 页]
+§7.5 酉空间*
+解. H 的特征多项式为  $P_{H}(\lambda) = \lambda (\lambda^{2} - 2)$ ，故特征值为  $\lambda_{1} = 0, \lambda_{2} = \sqrt{2}, \lambda_{2} = -\sqrt{2}$ .
+直接计算，对应 $\lambda_{1} = 0$ 的单位特征向量为 $\mathbf{u}_1 = \frac{1}{\sqrt{2}} (0,1, - i)^T$；对应 $\lambda_{2} = \sqrt{2}$ 的单位特征向量为 $\mathbf{u}_2 = \frac{1}{2} (\sqrt{2}, - i,1)^T$；对应 $\lambda_{3} = -\sqrt{2}$ 的单位特征向量为 $\mathbf{u}_3 = \frac{1}{2} (\sqrt{2},i, - 1)^T$.
+令
+$$U = (\mathbf {u} _ {1}, \mathbf {u} _ {2}, \mathbf {u} _ {3}) = \frac {1}{2} \left( \begin{array}{c c c} 0 & \sqrt {2} & \sqrt {2} \\ \sqrt {2} & - i & i \\ - \sqrt {2} i & 1 & - 1 \end{array} \right),$$
+则有
+$$U ^ {- 1} H U = \operatorname{diag} (0, \sqrt {2}, - \sqrt {2}).$$
+□
+下面我们介绍Hermite变换.
+定义7.5.9. 设 $\mathcal{H}$ 是 $\mathbb{C}^n$ 上的线性变换: $\mathbf{x} \to H\mathbf{x}, \mathbf{x} \in \mathbb{C}^n$. 若 $H$ 是 Hermite 矩阵, 则称 $\mathcal{H}$ 为 Hermite 变换.
+定理7.5.14. 设 $\mathcal{H}$ 是 $n$ 维酉空间 $\mathbb{C}^n$ 上的线性变换. 则下列命题等价:
+1. $\mathcal{H}$ 是Hermite变换;
+2. 对任意 $x,y\in\mathbb{C}^{n},(\mathscr{H}x,y)=(x,\mathscr{H}y);$
+3. $\mathcal{H}$ 在任一组标准正交基下的矩阵是Hermite方阵.
+证明. $1 \Rightarrow 2$.
+$$(\mathcal {H} \mathbf {x}, \mathbf {y}) = (H \mathbf {x}) ^ {*} \mathbf {y} = \mathbf {x} ^ {*} H ^ {*} \mathbf {y} = \mathbf {x} H \mathbf {y} = (\mathbf {x}, \mathcal {H} \mathbf {x}).$$
+$2 \Rightarrow 3$.
+设Hermite变换 $\mathcal{H}$ 在酉空间的一组标准正交基 $\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n$ 下的矩阵为 $H = (h_{ij})$, 即
+$$\mathcal {H} \mathbf {u} _ {j} = \sum_ {k = 1} ^ {n} h _ {k j} \mathbf {u} _ {k}, \quad j = 1, 2, \dots , n$$
+则一方面有
+$$\left(\mathbf {u} _ {i}, \mathscr {H} \mathbf {u} _ {j}\right) = \left(\mathbf {u} _ {i}, \sum_ {k = 1} ^ {n} h _ {k j} \mathbf {u} _ {k}\right) = \sum_ {k = 1} ^ {n} h _ {k j} \left(\mathbf {u} _ {i}, \mathbf {u} _ {k}\right) = h _ {i j},$$
+另一方面有
+$$(\mathcal {H} \mathbf {u} _ {i}, \mathbf {u} _ {j}) = (\sum_ {k = 1} ^ {n} h _ {k i} \mathbf {u} _ {k}, \mathbf {u} _ {j}) = \sum_ {k = 1} ^ {n} \overline {{h _ {k i}}} (\mathbf {u} _ {k}, \mathbf {u} _ {j}) = \overline {{h _ {j i}}}.$$
+[第 252 页]
+由 $(\mathbf{u}_{i},\mathcal{H}\mathbf{u}_{j})=(\mathcal{H}\mathbf{u}_{i},\mathbf{u}_{j})$ 得 $h_{ij}=\overline{h_{ji}},i,j=1,2,\ldots,n.$ 于是 $H=H^{*}.$ $3 \Rightarrow 1.$
+由于自然基为 $C^{n}$ 的一组标准正交基，变换H在自然基下的矩阵H为Hermite阵,从而H为Hermite变换.
+定理7.5.15. 设 $\mathcal{H}$ 是酉空间 $\mathbb{C}^n$ 上的Hermite变换. 则
+1. H的特征值均为实数;
+2. H的不同特征值对应的特征向量相互正交;
+3. 存在 $\mathbb{C}^n$ 的一组标准正交基 $\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n$ 使得 $\mathcal{H}\mathbf{u}_i = \lambda_i\mathbf{u}_i, i = 1, 2, \ldots, n,$ 这里 $\lambda_1, \lambda_2, \ldots, \lambda_n$ 是 $\mathcal{H}$ 的特征值.
+最后我们简单提一下如何将酉空间从 $\mathbb{C}^n$ 推广到一般线性空间. 类似于一般欧氏空间, 一般酉空间中的内积需要用性质定义.
+定义7.5.10. 设V是复数域上的线性空间, 如果V内任意两个向量 $\alpha$ 和 $\beta$ 都按某一法则对应于一个复数, 记作 $(\alpha, \beta)$ , 且满足
+(1) 共轭对称性: 即对任意两个向量  $\alpha, \beta \in V$ , 有
+$$(\alpha , \beta) = \overline {{(\beta , \alpha)}}.\tag{7.43}$$
+(2) 共轭线性: 即对任意一个复数  $\lambda$  和任意三个向量  $\alpha, \beta, \gamma \in V$ , 有
+$$(\alpha , \lambda \beta) = \lambda (\alpha , \beta), \quad (\alpha , \beta + \gamma) = (\alpha , \beta) + (\alpha , \gamma)\tag{7.44}$$
+$$(\lambda \alpha , \beta) = \overline {{\lambda}} (\alpha , \beta), \quad (\alpha + \beta , \gamma) = (\alpha , \gamma) + (\beta , \gamma)\tag{7.45}$$
+(3) 正定性: 即对于任意一个向量  $\alpha \in V$ , 有  $(\alpha, \alpha) \geq 0$ , 等号成立当且仅当  $\alpha = 0$ .
+则称 $(\alpha,\beta)$ 为 $\alpha$ 和 $\beta$ 的内积,定义了内积的复数域C上的线性空间V称为酉空间.
+我们给出一个一般酉空间的例子.
+例7.5.3. 用 $C[a, b]$ 表示区间 $[a, b]$ 上连续复函数全体构成的线性空间. 在 $C[a, b]$ 上定义内积
+$$(f (x), g (x)) := \int_ {a} ^ {b} \overline {{f (x)}} g (x) d x$$
+[第 253 页]
+容易验证, 上述内积满足共轭对称性及共轭线性性. 另一方面,
+$$(f (x), f (x)) = \int_ {a} ^ {b} | f (x) | ^ {2} d x \geq 0,$$
+且等号成立当且仅当 $f(x)=0$ 。因此，上述内积满足正定性。从而C[a,b]构成一个酉空间。
+设 $\alpha_{1},\alpha_{2},\ldots ,\alpha_{n}$ 是酉空间 $V$ 的一组基，对任意向量 $\alpha = x_{1}\alpha_{1} + x_{2}\alpha_{2} + \dots +x_{n}\alpha_{n},$ $\beta = y_{1}\alpha_{1} + y_{2}\alpha +\ldots +y_{n}\alpha_{n},$
+$$(\alpha , \beta) = (\sum_ {i = 1} ^ {n} x _ {i} \alpha_ {i}, \sum_ {j = 1} ^ {n} y _ {j} \alpha_ {j}) = \sum_ {i = 1} ^ {n} \sum_ {j = 1} ^ {n} \bar {x} _ {i} y _ {j} (\alpha_ {i}, \alpha_ {j}) = \mathbf {x} ^ {*} H \mathbf {y},\tag{7.46}$$
+其中 $\mathbf{x} = (x_{1}, x_{2}, \ldots, x_{n})^{T}$, $\mathbf{y} = (y_{1}, y_{2}, \ldots, y_{n})^{T}$, $H = ((\alpha_{i}, \alpha_{j}))$. 因此, 给定一组基后, 酉空间中的内积表示与 (7.36)式是一致的.
+由于一般酉空间中的内积与 $\mathbb{C}^n$ 的内积性质一样, 有关结论也基本一样, 在此不再赘叙.
+习题六
+1. 已知 $\alpha_{1} = (1,2, - 1,1)$, $\alpha_{2} = (2,3,1, - 1)$, $\alpha_{3} = (-1, - 1, - 2,2)$.
+(1) 求  $\alpha_{1}, \alpha_{2}, \alpha_{3}$  的长度及彼此间的夹角.
+(2) 求与  $\alpha_{1}, \alpha_{2}, \alpha_{3}$  都正交的向量.
+2. 设 $\mathbf{x}, \mathbf{y}, \mathbf{z}$ 是欧氏空间 $\mathbb{R}^n$ 中的向量, 证明以下不等式:
+(1) $|\mathbf{x} - \mathbf{y}| \geq |\mathbf{x}| - |\mathbf{y}|$;
+(2) $|\mathbf{x} - \mathbf{y}| + |\mathbf{y} - \mathbf{z}| \geq |\mathbf{x} - \mathbf{z}|$.
+3. 设 $\mathbf{x}, \mathbf{y}$ 是欧氏空间 $\mathbb{R}^n$ 的两个向量, 它们之间的夹角为 $\theta$. 证明:
+(1) (余弦定理) $|\mathbf{x} - \mathbf{y}|^2 = |\mathbf{x}|^2 + |\mathbf{y}|^2 - 2|\mathbf{x}||\mathbf{y}|\cos \theta$.
+(2) (平行四边形定理) $|\mathbf{x} + \mathbf{y}|^2 + |\mathbf{x} - \mathbf{y}|^2 = 2(|\mathbf{x}|^2 + |\mathbf{y}|^2)$.
+(3) (菱形对角线定理) 若 $|\mathbf{x}| = |\mathbf{y}|$, 则 $(\mathbf{x} + \mathbf{y}) \perp (\mathbf{x} - \mathbf{y})$.
+4. 设 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_n$ 为 $\mathbb{R}^n$ 的一组基，$\mathbf{a} \in \mathbb{R}^{\mathbf{n}}$。证明：$\mathbf{a} = \mathbf{0}$ 当且仅当 $(\mathbf{a}, \mathbf{a}_i) = 0, i = 1, 2, \ldots, n$.
+5. 用Schmidt正交化方法构造标准正交向量组:
+[第 254 页]
+(1)  $(0,0,1)$ ,  $(0,1,1)$ ,  $(1,1,1)$ ;
+(2) $(1,1,1,2),(1,1,-5,3),(3,2,8,-7).$
+6. 设在 $\mathbb{R}^3$ 中, 基 $\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_3$ 的度量矩阵是
+$$\left( \begin{array}{c c c} 1 & 0 & - 1 \\ 0 & 2 & 0 \\ - 1 & 0 & 2 \end{array} \right)$$
+试求 $\mathbb{R}^3$ 中由 $\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_3$ 表示的一组标准正交基.
+7. 证明: n 维向量空间中任一个正交向量组都能扩充成一组正交基.
+8. 验证下列各组向量是正交的, 并添加向量改造为标准正交基:
+(1) $(2,1,2),(1,2,-2);$
+(2) $(1,1,1,2),(1,2,3,-3)$.
+9. 如 $\mathbf{b}$ 与 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_n$ 都正交, 证明: $\mathbf{b}$ 与 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_n$ 的任意线性组合也正交.
+10. 设 $\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3$ 是 $\mathbb{R}^3$ 的一组标准正交基. 令
+$$\begin{array}{l} \mathbf {a} _ {1} = \frac {1}{3} (2 \mathbf {e} _ {1} + 2 \mathbf {e} _ {2} - \mathbf {e} _ {3}), \\ \mathbf {a} _ {2} = \frac {1}{3} (2 \mathbf {e} _ {1} - \mathbf {e} _ {2} + 2 \mathbf {e} _ {3}), \\ \mathbf {a} _ {3} = \frac {1}{3} (\mathbf {e} _ {1} - 2 \mathbf {e} _ {2} - 2 \mathbf {e} _ {3}), \end{array}$$
+证明: $a_{1},a_{2},a_{3}$ 也是 $R^{3}$ 的一组标准正交基.
+11. 设 $\mathbf{e}_1, \mathbf{e}_2, \ldots, \mathbf{e}_n$ 是 $\mathbb{R}^n$ 的标准正交基，$\mathbf{x}_1, \mathbf{x}_2, \ldots, \mathbf{x}_k$ 是 $\mathbb{R}^n$ 中任意 $k$ 个向量，试证：$\mathbf{x}_1, \mathbf{x}_2, \ldots, \mathbf{x}_k$ 两两正交的充分必要条件是
+$$\sum_ {s = 1} ^ {n} \left(\mathbf {x} _ {i}, \mathbf {e} _ {s}\right) \left(\mathbf {x} _ {j}, \mathbf {e} _ {s}\right) = 0, \quad i, j = 1, 2, \dots , k, i \neq j$$
+12. 设 $\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_n$ 是 $\mathbb{R}^n$ 的标准正交基. 证明:
+(1) 对任意 $\mathbf{a}, \mathbf{b} \in \mathbb{R}^n$, $(\mathbf{a}, \mathbf{b}) = \sum_{i=1}^{n} (\mathbf{a}, \mathbf{a}_i)(\mathbf{b}, \mathbf{a}_i)$.
+(2) 对任意 $\mathbf{a} \in \mathbb{R}^n$, $|\mathbf{a}|^2 = \sum_{i=1}^{n} (\mathbf{a}, \mathbf{a}_i)^2$.
+[第 255 页]
+§7.5 酉空间*
+13. 证明二阶正交矩阵必取下面两种形式之一:
+$$\left( \begin{array}{c c} \cos \theta & \sin \theta \\ - \sin \theta & \cos \theta \end{array} \right), \quad \left( \begin{array}{c c} \cos \theta & \sin \theta \\ \sin \theta & - \cos \theta \end{array} \right), \qquad - \pi \leq \theta <   \pi$$
+14. 写出所有3阶正交矩阵, 它的元素是0或1.
+15. 如果一个正交阵中每个元素都是 $\frac{1}{4}$ 或 $-\frac{1}{4}$, 这个正交阵是几阶的?
+16. 若 $\mathbf{a}$ 是 $\mathbb{R}^n$ 的单位向量, 证明: $Q = I_n - 2\mathbf{a}\mathbf{a}^T$ 是一个正交阵. 当 $\mathbf{a} = \frac{1}{\sqrt{3}} (\mathbf{1}, \mathbf{1}, \mathbf{1})^{\mathrm{T}}$ 时, 具体求出 $Q$.
+17. 在什么条件下, 对角矩阵是正交矩阵?
+18. 设A,B都为n阶正交阵,证明:
+(1) A的伴随矩阵 $A^{*}$ 也是正交阵;
+(2) $AB$ 也为正交阵;
+(3) $A^{-1}$ 也为正交阵.
+(4) $A$ 的行列式为1或-1.
+19. 给定三阶矩阵 $A = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 2 \\ 2 & 0 & 1 \end{pmatrix}$. 求 $A$ 的QR分解.
+20. 设 $W$ 是由 $(1,1,0)$, $(1,-2,1)$ 生成的 $\mathbb{R}^3$ 的子空间.
+(1) 求 $W$ 的一组标准正交基.
+(2) 求 $W^{\perp}$ 的标准正交基.
+(3) 求向量 $(0,0,2)$ 在 $W$ 的正交投影.
+21. 在三维空间直角坐标系中, 已知点 $A, B, C, D$ 的坐标分别是 $(1, 1, 0)$, $(3, 1, 2)$, $(0, 1, 3)$, $(2, 2, 4)$. 求四面体的顶点 $A$ 到底面 $BCD$ 的高.
+22. 求线性方程组
+$$\left\{ \begin{array}{l} 2 x - y = 1 \\ x + 2 y = 1 \\ x + y = 1 \end{array} \right.$$
+的最小二乘解.
+[第 256 页]
+23. 证明: 三维空间中绕过原点的某条直线的旋转变换是正交变换.
+24. 设 $\mathbf{a}$ 为 $\mathbb{R}^n$ 中的单位向量. 定义线性变换: $\mathcal{A}\mathbf{b} = \mathbf{b} - 2(\mathbf{a},\mathbf{b})\mathbf{a}$. 证明: $\mathcal{A}$ 为正交变换, 并找 $\mathbb{R}^n$ 的一组标准正交基, 使得 $\mathcal{A}$ 在该组基下的矩阵为对角阵.
+25. 证明: 第五章习题4,9给出的线性变换是对称变换.
+26. 设
+$$A = \left( \begin{array}{c c c} 1 & - 2 & 0 \\ - 2 & 2 & - 2 \\ 0 & - 2 & 3 \end{array} \right),$$
+求正交矩阵P, 使 $P^{-1}AP$ 为对角阵. 由此求 $A^{k}, k$ 是自然数.
+27. 证明:下列三个条件中只要有二个成立,另一个也必成立.
+(1)A是对称的；(2)A是正交的；(3) $A^{2}=I$ .
+28. 求正交阵 $T$, 使 $T^{-1} A T$ 为对角矩阵
+$$(1) A = \left( \begin{array}{c c} 2 & 1 \\ 1 & 2 \end{array} \right)$$
+$$(2) A = \left( \begin{array}{c c c} 0 & - 1 & - 1 \\ - 1 & 0 & - 1 \\ - 1 & - 1 & 0 \end{array} \right)$$
+$$(3) A = \left( \begin{array}{c c c} 1 & 2 & 4 \\ 2 & - 2 & 2 \\ 4 & 2 & 1 \end{array} \right)$$
+$$(4) A = \left( \begin{array}{c c c} 3 & - 2 & 0 \\ - 2 & 2 & - 2 \\ 0 & - 2 & 1 \end{array} \right)$$
+29. 设 $A$ 为 $n$ 阶实对称方阵，且 $A^2 = A$. 证明：存在正交方阵 $T$ 使得 $T^{-1}AT = \mathrm{diag}(I_r, O)$. 这里 $r = \mathrm{rank}(A)$.
+30. 设 $A$ 为 $n$ 阶实对称方阵. 证明: $\max_{\mathbf{0} \neq \mathbf{x} \in \mathbb{R}^n} \frac{\mathbf{x}^T A \mathbf{x}}{\mathbf{x}^T \mathbf{x}} = \lambda_{\max}$, 这里 $\lambda_{\max}$ 是 $A$ 的最大特征值.
+31* 设 $V$ 是 $n$ 阶实方阵全体构成的线性空间. 对 $A, B \in V$, 定义 $(A, B) = Tr(AB^T)$.
+(1) 证明: $(A, B)$ 构成内积, 从而 $V$ 在该内积下成为欧氏空间.
+(2) 设 $A=(a_{ij})_{n\times n}\in V$ , 求A的模长.
+(3) 基本矩阵 $E_{ij}$ 是否构成V的一组标准正交基? 请说明理由.
+32 设 $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n}$ 是 $n$ 维欧氏空间 $V$ 的一组向量. 定义其Gram矩阵 $G = ((\alpha_{i}, \alpha_{j})) \in \mathbb{R}^{n \times n}$.
+(1) 证明: $\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n}$ 构成 $V$ 的一组基当且仅当 $\operatorname{det}(G) \neq 0$.
+[第 257 页]
+(2) 设 $\alpha_{i}$ 在一组标准正交基下的坐标为 $\mathbf{x}_i, i = 1,2,\ldots,n$. 记 $X = (\mathbf{x}_1,\dots ,\mathbf{x}_n)\in$ $\mathbb{R}^{n\times n}$. 则 $\operatorname *{det}(G) = \operatorname *{det}(X)^2$.
+33 设 $\mathbb{R}_n[x]$ 是次数不超过 $n$ 次的实系数多项式全体构在内积 $(f(x), g(x)) = \int_{-1}^{1} f(x) g(x) dx$ 下的欧氏空间. 令
+$$P _ {0} (x) = 1, P _ {1} (x) = x, P _ {n} (x) = \frac {2 n + 1}{n + 1} x P _ {n - 1} (x) - \frac {n}{n + 1} P _ {n - 2} (x), \quad n \geq 2.$$
+证明: $P_0(x), P_1(x), \ldots, P_n(x)$ 是 $\mathbb{R}_n[x]$ 的一组正交基. 称 $P_n(x)$ 为 Legendre 多项式.
+34 设 $\mathbb{R}_n[x]$ 是次数不超过 $n$ 次的实系数多项式全体构在内积 $(f(x), g(x)) = \int_{-1}^{1} \frac{f(x)g(x)}{\sqrt{1 - x^2}} dx$ 下的欧氏空间. 令
+$$T _ {0} (x) = 1, T _ {1} (x) = x, T _ {n} (x) = 2 x T _ {n - 1} (x) - T _ {n - 2} (x), \quad n \geq 2.$$
+证明: $T_{0}(x), T_{1}(x), \ldots, T_{n}(x)$ 是 $\mathbb{R}_{n}[x]$ 的一组标准正交基. 称 $T_{n}(x)$ 为 Chebyshev 多项式.
+35* 验证
+(1) $A = \left( \begin{array}{ccc} - (\frac{1}{2} +\frac{\sqrt{2}}{4})i & \frac{1}{2} i & -(\frac{1}{2} -\frac{\sqrt{2}}{4})i\\ \frac{1}{2} i & \frac{\sqrt{2}}{2} i & -\frac{1}{2} i\\ (\frac{1}{2} -\frac{\sqrt{2}}{4})i & \frac{1}{2} i & (\frac{1}{2} +\frac{\sqrt{2}}{4})i \end{array} \right)$ 为酉阵；
+(2) $B = \left( \begin{array}{ccc}1 & 1 + i & i\\ 1 - i & 2 & -i\\ -i & i & 0 \end{array} \right)$ 为Hermite阵.
+36* 证明:酉变换的特征值的模等于1.
+37* 证明:
+(1) 酉阵的不同特征值所对应的特征向量是两两正交的;
+(2) Hermite阵的不同特征值所对应的特征向量是两两正交的.
+38* 证明:
+(1) 设A为可逆Hermite阵, 则 $A^{-1}$ 也为Hermite阵;
+(2) 设 $A, B$ 都是 $n$ 阶Hermite阵, 那么 $AB$ 也是Hermite阵的充分必要条件是 $AB = BA$.
+39* 设A为Hermite阵, 证明:
+[第 258 页]
+(1)  $I \pm iA$  为可逆阵;
+(2) $I+iA$ 与I-iA乘法可交换;
+(3) $U = (I + iA)(I - iA)^{-1}$ 为酉阵.
+40* 若 $AA^{H}=0$ , 证明:A=0.
+41* 设 $U$ 为酉阵, 且 $U^{-1}AU = B$, 证明:
+$$\operatorname{tr} (A ^ {H} A) = \operatorname{tr} (B ^ {H} B).$$
+42* 已知Hermite阵
+$$H = \left( \begin{array}{c c c} 0 & - i & 1 \\ i & 0 & i \\ 1 & - i & 0 \end{array} \right)$$
+求酉方阵U使得 $U^{-1}HU$ 为对角阵.
+[第 259 页]
+第八章 实二次型
+在各种工程与实际应用中,广泛地存在处理多元二次多项式的问题.例如,数据拟合的最小二乘法导致一个多元二次多项式的极小值问题.再如,二次曲线(或二次曲面)的分类问题就是要确定多元二次方程所决定的几何图形的类型与形状.还有其它许多问题,如多元二次多项式的正性(非负性)的判别,等等.幸运地,线性代数的工具对上述这些问题给出了一个简单有效的处理方法.
+要处理多元二次多项式, 关键是要处理其二次项. 其二次项的全体组成一个二次齐次多项式, 我们称之为二次型. 本章的目的就是要利用线性代数的工具研究二次型的基本理论、性质、简化及其应用. 本章只讨论系数为实数的二次型—实二次型.
+§8.1 二次型的矩阵表示
+定义8.1.1. 在实数域上, 一个含 $n$ 个变元 $x_{1}, x_{2}, \ldots, x_{n}$ 的二次型 $Q(x_{1}, x_{2}, \ldots, x_{n})$ 是一个齐次的二次多项式
+$$Q (x _ {1}, x _ {2}, \dots , x _ {n}) = \sum_ {i = 1} ^ {n} \sum_ {j = 1} ^ {n} a _ {i j} x _ {i} x _ {j}.\tag{8.1}$$
+这里 $a_{ji}=a_{ij},i,j=1,\ldots,n$ 为实系数.利用矩阵乘法运算,上式可以表示成
+$$Q (x _ {1}, x _ {2}, \dots , x _ {n}) = \mathbf {x} ^ {T} A \mathbf {x},\tag{8.2}$$
+这里A为n阶实对称方阵
+$$A = \left( \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ a _ {2 1} & a _ {2 2} & \dots & a _ {2 n} \\ \vdots & \vdots & \dots & \vdots \\ a _ {n 1} & a _ {n 2} & \dots & a _ {n n} \end{array} \right)$$
+而x为n维列向量
+$$\mathbf {x} = (x _ {1}, x _ {2}, \ldots , x _ {n}) ^ {T}.$$
+称实对称矩阵A为二次型 $Q(x_{1},x_{2},\ldots,x_{n})$ 的矩阵,A的秩称为二次型的秩.
+每一个二次型通过(8.2)与一个实对称矩阵建立了一一对应关系, 而这正是利用矩阵研究二次型的基础.例如,
+$$Q (x _ {1}, x _ {2}, x _ {3}) = x _ {1} x _ {2} + x _ {2} x _ {3} + x _ {1} x _ {3} = (x _ {1}, x _ {2}, x _ {3}) \left( \begin{array}{c c c} 0 & \frac {1}{2} & \frac {1}{2} \\ \frac {1}{2} & 0 & \frac {1}{2} \\ \frac {1}{2} & \frac {1}{2} & 0 \end{array} \right) \left( \begin{array}{c} x _ {1} \\ x _ {2} \\ x _ {3} \end{array} \right)$$
+[第 260 页]
+对应的实对称矩阵就是
+$$A = \left( \begin{array}{c c c} 0 & \frac {1}{2} & \frac {1}{2} \\ \frac {1}{2} & 0 & \frac {1}{2} \\ \frac {1}{2} & \frac {1}{2} & 0 \end{array} \right),$$
+而一个只含平方项的二次型
+$$Q (x _ {1}, \dots , x _ {n}) = \lambda_ {1} x _ {1} ^ {2} + \lambda_ {2} x _ {2} ^ {2} + \dots + \lambda_ {n} x _ {n} ^ {2}$$
+对应的实对称矩阵是对角矩阵
+$$A = \operatorname{diag} (\lambda_ {1}, \lambda_ {2}, \dots , \lambda_ {n}) = \left( \begin{array}{c c c c} \lambda_ {1} & 0 & \dots & 0 \\ 0 & \lambda_ {2} & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & \lambda_ {n} \end{array} \right).$$
+二次型的一个基本问题是, 如何对变量做可逆(非退化)的线性变换, 使得变换后的二次型尽量简单. 具体来说, 给定二次型 $Q(\mathbf{x}) = \mathbf{x}^T A\mathbf{x}$, 对变量x做可逆线性变换 $x = P y$, 其中P是可逆矩阵, 则变换后的二次型为
+$$\tilde {Q} \left(y _ {1}, y _ {2}, \dots , y _ {n}\right) := \tilde {Q} (\mathbf {y}) = Q (\mathbf {x}) | _ {\mathbf {x} = P \mathbf {y}} = \left(P \mathbf {y}\right) ^ {T} A (P \mathbf {y}) = \mathbf {y} ^ {T} \left(P ^ {T} A P\right) \mathbf {y} := \mathbf {y} ^ {T} B \mathbf {y},\tag{8.3}$$
+这里 $B=P^{T}AP$ . 我们的目标是, 对给定的对称矩阵A, 找合适的可逆方阵P使得 $B=P^{T}AP$ 尽量简单.
+显然矩阵B也是对称的.而矩阵 $B=P^{T}AP$ 给出了变换前后二次型对应矩阵之间的关系,这种关系就是所谓的相合关系.
+定义8.1.2. 对于实数域上两个n阶矩阵A,B, 如果存在一个可逆的实矩阵P使得
+$$B = P ^ {T} A P,\tag{8.4}$$
+则称A和B是相合的,或者说B相合于A,矩阵P称为相合变换矩阵.
+注意到矩阵之间的相合关系是一种等价关系, 即它具有性质
+(1) 反身性:  $A = I^{T}AI$ , 这里 I 是 n 阶单位矩阵, 即自身与自身相合;
+(2) 对称性: 如果  $B = P^{T}AP$ , 则  $A = (P^{-1})^{T}BP^{-1}$ , 即如果 B 相合于 A, 则 A 相合于 B;
+(3) 传递性: 如果 $C = Q^{T}BQ, B = P^{T}AP$, 则 $C = (PQ)^{T}A(PQ)$, 即如果 $C$ 相合于 $B, B$ 相合于 $A$, 则 $C$ 相合于 $A$.
+[第 261 页]
+根据矩阵之间相合这种等价关系, 可以将所有n阶实对称矩阵进行分类, 即同一类中的矩阵是彼此相合的, 不同类的矩阵之间彼此不相合. 关于矩阵相合, 我们有以下基本问题
+1. 两个矩阵相合的充要条件是什么?
+2. 在每一个相合类中, 找到一个最简单的矩阵作为代表元, 即所谓的相合标准形.
+由于实对称矩阵与实二次型之间是一一对应的, 因此, 实对称矩阵在相合下的分类与化简, 对应了二次型的分类与化简.
+§8.2 二次型的标准形
+给定一个二次型, 我们希望做一个可逆线性变换使得变换使得变换后的二次型尽量简单. 这里尽量简单的意思是, 二次型中尽量不要出现交叉项, 只有平方项. 下面介绍二次型简化的配平方法. 我们以两个例子来说明.
+例8.2.1. 化三元的二次型 $Q(x_{1},x_{2},x_{3})=2x_{1}^{2}+x_{1}x_{2}+x_{3}^{2}$ 为尽量简单的形式.
+解. 对变量 $x_{1}$ 配方得
+$$Q (x _ {1}, x _ {2}, x _ {3}) = 2 (x _ {1} + \frac {1}{4} x _ {2}) ^ {2} - \frac {1}{8} x _ {2} ^ {2} + x _ {3} ^ {2}.$$
+令
+$$\left\{ \begin{array}{l l} y _ {1} = x _ {1} + \frac {1}{4} x _ {2} \\ y _ {2} = x _ {2} \\ y _ {3} = x _ {3} \end{array} \right. \quad \text {或} \quad \left\{ \begin{array}{l l} x _ {1} = y _ {1} - \frac {1}{4} y _ {2} \\ x _ {2} = y _ {2} \\ x _ {3} = y _ {3} \end{array} \right.$$
+便有
+$$\tilde {Q} (y _ {1}, y _ {2}, y _ {3}) = Q (x _ {1}, x _ {2}, x _ {3}) \Big | _ {\mathbf {x} = P \mathbf {y}} = 2 y _ {1} ^ {2} - \frac {1}{8} y _ {2} ^ {2} + y _ {3} ^ {2}.$$
+用矩阵语言表述就是, 矩阵
+$$A = \left( \begin{array}{c c c} 2 & \frac {1}{2} & 0 \\ \frac {1}{2} & 0 & 0 \\ 0 & 0 & 1 \end{array} \right)$$
+经过相合变换阵
+$$P = \left( \begin{array}{c c c} 1 & - \frac {1}{4} & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right)$$
+[第 262 页]
+做相合变换得到对角阵
+$$P ^ {T} A P = \left( \begin{array}{c c c} 2 & 0 & 0 \\ 0 & - \frac {1}{8} & 0 \\ 0 & 0 & 1 \end{array} \right).$$
+□
+上述例子中,化简后的二次型 $\tilde{Q}(y_{1},y_{2},y_{3})$ 没有交叉项.
+例8.2.2. 化三元的二次型 $Q(x_{1},x_{2},x_{3})=2x_{1}x_{2}-6x_{2}x_{3}+2x_{1}x_{3}$ 为尽量简单的形式.
+解. 做非退化变换
+$$\left\{ \begin{array}{l} x _ {1} = y _ {1} + y _ {2} \\ x _ {2} = y _ {1} - y _ {2} \\ x _ {3} = y _ {3} \end{array} \right.$$
+得
+$$Q (x _ {1}, x _ {2}, x _ {3}) = \tilde {Q} (y _ {1}, y _ {2}, y _ {3}) = 2 y _ {1} ^ {2} - 2 y _ {2} ^ {2} - 4 y _ {1} y _ {3} + 8 y _ {2} y _ {3}.$$
+从而消去 $x_{1}$ 和 $x_{2}$ 的交叉项.再利用配方消去其他的交叉项,即令
+$$\left\{ \begin{array}{l} y _ {1} = z _ {1} + z _ {3} \\ y _ {2} = z _ {2} + 2 z _ {3} \\ y _ {3} = z _ {3} \end{array} \right.$$
+则
+$$Q (x _ {1}, x _ {2}, x _ {3}) = 2 z _ {1} ^ {2} - 2 z _ {2} ^ {2} + 6 z _ {3} ^ {2}.$$
+综合两次变换得
+$$\mathbf {x} = P \mathbf {z}, \quad P = \left( \begin{array}{c c c} 1 & 1 & 3 \\ 1 & - 1 & - 1 \\ 0 & 0 & 1 \end{array} \right)$$
+满足
+$$P ^ {T} A P = \left( \begin{array}{c c c} 2 & 0 & 0 \\ 0 & - 2 & 0 \\ 0 & 0 & 6 \end{array} \right),$$
+其中
+$$A = \left( \begin{array}{c c c} 0 & 1 & 1 \\ 1 & 0 & - 3 \\ 1 & - 3 & 0 \end{array} \right).$$
+[第 263 页]
+上述例子并不是特例. 实际上我们有
+定理8.2.1. 任何一个由(8.1)式定义的实二次型 $Q(x_{1},x_{2},\ldots,x_{n})$ 均可通过配平方法找到可逆变换 $x=P_{y}$ ，将它化为
+$$\tilde {Q} (y _ {1}, y _ {2}, \dots , y _ {n}) := Q (x _ {1}, x _ {2}, \dots , x _ {n}) \Big | _ {\mathbf {x} = P \mathbf {y}} = \mu_ {1} y _ {1} ^ {2} + \mu_ {2} y _ {2} ^ {2} + \dots + \mu_ {n} y _ {n} ^ {2}.\tag{8.5}$$
+称 $\tilde{Q}(y_{1},\ldots,y_{n})$ 为二次型 $Q(x_{1},\ldots,x_{n})$ 的标准型.
+证明(配平方法). 对变量的个数作归纳法. 对于 $n = 1$, $Q(x_{1}) = a_{11}x_{1}^{2}$, 结论是显然的. 假设定理对 $n - 1$ 元的二次型成立, 则对于 $n$ 元的情形, 分三种情形讨论.
+(1) $a_{11} \neq 0$. 如果 $a_{11} = 0$, 但存在某个 $a_{ii} \neq 0$, 只需将 $x_{1}$ 和 $x_{i}$ 对换, 使二次型成为上述形式即可. 这时
+$$\begin{array}{l} Q (x _ {1}, \ldots , x _ {n}) = a _ {1 1} x _ {1} ^ {2} + 2 \sum_ {j = 2} ^ {n} a _ {1 j} x _ {1} x _ {j} + \sum_ {i, j = 2} ^ {n} a _ {i j} x _ {i} x _ {j} \\ \qquad = a _ {1 1} \left(x _ {1} + \sum_ {j = 2} ^ {n} a _ {1 j} a _ {1 1} ^ {- 1} x _ {j}\right) ^ {2} - a _ {1 1} ^ {- 1} \left(\sum_ {j = 2} ^ {n} a _ {1 j} x _ {j}\right) ^ {2} + \sum_ {i, j = 2} ^ {n} a _ {i j} x _ {i} x _ {j} \\ \qquad = a _ {1 1} \left(x _ {1} + \sum_ {j = 2} ^ {n} a _ {1 j} a _ {1 1} ^ {- 1} x _ {j}\right) ^ {2} + \sum_ {i, j = 2} ^ {n} b _ {i j} x _ {i} x _ {j}. \end{array}$$
+上式中
+$$\sum_ {i, j = 2} ^ {n} b _ {i j} x _ {i} x _ {j} = - a _ {1 1} ^ {- 1} \left(\sum_ {j = 2} ^ {n} a _ {1 j} x _ {j}\right) ^ {2} + \sum_ {i, j = 2} ^ {n} a _ {i j} x _ {i} x _ {j}$$
+是一个含 $n - 1$ 个变元 $x_{2}, x_{3}, \ldots, x_{n}$ 的实二次型. 令
+$$\left\{ \begin{array}{l l} y _ {1} = x _ {1} + \sum_ {j = 2} ^ {n} a _ {1 j} a _ {1 1} ^ {- 1} x _ {j} \\ y _ {2} = x _ {2} \\ \dots \dots \\ y _ {n} = x _ {n} \end{array} \right. \quad \text {或} \quad \left\{ \begin{array}{l l} x _ {1} = y _ {1} - \sum_ {j = 2} ^ {n} a _ {1 j} a _ {1 1} ^ {- 1} y _ {j} \\ x _ {2} = y _ {2} \\ \dots \dots \\ x _ {n} = y _ {n} \end{array} \right.$$
+其对应的变换矩阵是
+$$S = \left( \begin{array}{c c c c} 1 & - a _ {1 2} a _ {1 1} ^ {- 1} & \dots & - a _ {1 n} a _ {1 1} ^ {- 1} \\ 0 & 1 & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & 1 \end{array} \right).$$
+[第 264 页]
+经过变换x = S y, 原二次型化为
+$$Q (x _ {1}, \dots , x _ {n}) = a _ {1 1} y _ {1} ^ {2} + \sum_ {i, j = 2} ^ {n} b _ {i j} y _ {i} y _ {j}.$$
+由归纳假设, 对于 $n - 1$ 个元的二次型 $\sum_{i,j=2}^{n} b_{ij} y_i y_j$, 存在一个可逆的线性变换 $\mathbf{y} = T \mathbf{z}$ 使得
+$$\sum_ {i, j = 2} ^ {n} b _ {i j} y _ {i} y _ {j} = \sum_ {i = 2} ^ {n} \mu_ {i} z _ {i} ^ {2}.$$
+令 $z_{1}=y_{1},\mu_{1}=1$ ，则原二次型化为标准形 $\sum_{i=1}^{n}\mu_{i}z_{i}^{2}$ .相应的变换为x=Pz,这里
+$$P = S \left( \begin{array}{c c} 1 & 0 \\ 0 & T \end{array} \right).$$
+(2) 如果所有的 $a_{ii}=0, i=1,2,\ldots,n$ ，但至少有一个 $a_{1j}\neq0, j>1$ 。不妨设 $a_{12}\neq0$ ，令
+$$\left\{ \begin{array}{l} x _ {1} = y _ {1} - y _ {2} \\ x _ {2} = y _ {1} + y _ {2} \\ x _ {3} = y _ {3} \\ \dots \dots \\ x _ {n} = y _ {n} \end{array} \right.$$
+它是可逆的线性变换,对应的变换矩阵为
+$$P = \left( \begin{array}{c c c c c} 1 & - 1 & 0 & \dots & 0 \\ 1 & 1 & 0 & \dots & 0 \\ 0 & 0 & 1 & \dots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & 0 & \dots & 1 \end{array} \right)$$
+于是
+$$\begin{array}{c} Q (x _ {1}, \ldots , x _ {n}) = 2 a _ {1 2} x _ {1} x _ {2} + \dots = 2 a _ {1 2} (y _ {1} ^ {2} - y _ {2} ^ {2}) + \dots \\ = 2 a _ {1 2} y _ {1} ^ {2} - 2 a _ {1 2} y _ {2} ^ {2} + \dots \end{array}$$
+化为关于变元 $y_{1},y_{2},\ldots,y_{n}$ 的二次型，且平方项 $y_{1}^{2}$ 的系数不为零，从而化成情形(1).
+[第 265 页]
+(3) 如果对所有的 $a_{ii}=0, i=1,2,\ldots,n$ 及 $a_{1j}=0, j=1,2,\ldots,n$ ，则由对称性，得 $a_{j1}=0, j=1,2,\ldots,n$ 。因此二次型简化为
+$$Q (x _ {1}, \dots , x _ {n}) = \sum_ {i, j = 2} ^ {n} a _ {i j} x _ {i} x _ {j}.$$
+这是一个含有 $n - 1$ 个变元的二次型, 由归纳假设, 它经过线性变换可以化为标准形.
+总之, 对于任一种形式的实二次型都存在可逆的线性变换将其化为标准形. □
+上述结论可以用矩阵语言表示如下.
+定理8.2.2. 每一个实对称矩阵 $A$ 都相合于对角阵. 具体来说, 存在初等矩阵 $P_{1}, P_{2}, \ldots, P_{r}$, 使得
+$$P _ {r} ^ {T} P _ {r - 1} ^ {T} \dots P _ {1} ^ {T} A P _ {1} P _ {2} \dots P _ {r} = \operatorname{diag} (\mu_ {1}, \mu_ {2}, \dots , \mu_ {n}).\tag{8.6}$$
+这里 $\mu_{1},\mu_{2},\ldots,\mu_{n}$ 为实数.
+证明. 由定理8.2.1, 结论显然. 下面我们用矩阵语言将证明重叙.
+对矩阵A的阶数n进行归纳.当n=1时,结论是显然的.假设对于n-1阶对称矩阵,定理已成立,则对n阶对称矩阵 $A=(a_{ij})_{n\times n}$ ,分如下情形讨论
+(1) 如果 $a_{11} \neq 0$, 做“把第1列乘 $-a_{i1} a_{11}^{-1}$ 加到第 $i$ 列”的初等变换, 同时做“把第1行乘 $-a_{i1} a_{11}^{-1}$ 加到第 $i$ 行”的初等变换 $(i = 2,3,\dots,n)$, 由于 $A$ 是对称矩阵, 经过上述变换, 矩阵 $A$ 化为 $\mathrm{diag}(a_{11}, A_{n-1})$, 即存在可逆矩阵 $P_1$ 使得
+$$P _ {1} ^ {T} A P _ {1} = \left( \begin{array}{c c} a _ {1 1} & 0 \\ 0 & A _ {n - 1} \end{array} \right).$$
+这里 $A_{n-1}$ 是一个n-1阶的实对称矩阵.根据归纳假设, $A_{n-1}$ 可用相合初等变换阵化成对角矩阵,即存在可逆方阵 $P_{2}$ 使得 $P_{2}^{T}A_{n-1}P_{2}=\Lambda,\Lambda$ 为对角阵.令 $P=P_{1}\mathrm{diag}(1,P_{2})$ ,则
+$$P ^ {T} A P = \left( \begin{array}{c c} a _ {1 1} & 0 \\ 0 & \Lambda \end{array} \right).$$
+(2) 当 $a_{11}=0$ 时, 如果有一个 $a_{ii}\neq0,i=2,3,\ldots,n$ , 则只要把A的第一行与第i行互换, 再把第1列和第i列互换, 就成第一种情形. 这个过程就是对A作相合变换 $S_{1i}AS_{1i}$ .
+[第 266 页]
+(3) 当 $a_{ii}=0, i=1,2,\ldots,n$ 时, 即A的所有对角线上的元素都等于零, 则第一行的其他元素至少有一个不等于零. 不妨设 $a_{i1}\neq0$ , 则做初等相合变换
+$$T _ {1 i} (1) A T _ {1 i} (1) ^ {T} = \left( \begin{array}{c c} 2 a _ {i 1} & C \\ C ^ {T} & A _ {n - 1} \end{array} \right),$$
+于是问题又归结到第一种情形.这样就完成了定理的证明.
+□
+由定理 8.2.2 可知, 对矩阵施行一个初等行变换, 同时要对矩阵作一次相应的列变换, 以保证每次变换后得到的矩阵和原矩阵相合. 为了求得变换矩阵 P, 须将每次所作的变换保留下来. 具体作法是, 将单位阵放在待变换矩阵下面, 构成  $2n \times n$  矩阵  $(A, I)^{T}$ , 对该矩阵每作一次列变换, 同时仅对 A 作一次相应的行变换, 即
+$$\binom {A} {I} \frac {\text {对} A \text {作成对的初等行列变换}}{\text {对} I \text {只作初等列变换}} \binom {P ^ {T} A P} {P}$$
+当 $P^{T}AP$ 是对角阵时, I 就成了 P. 当然, 也可对矩阵 $(A,I)$ 实施类似的变换, 但对 I 只做行变换.
+例8.2.3. 用初等变换法将二次型
+$$Q (x _ {1}, x _ {2}, x _ {3}) = x _ {1} ^ {2} - x _ {2} ^ {2} + x _ {3} ^ {2} + 4 x _ {1} x _ {3} + 2 x _ {2} x _ {3}$$
+化成标准形.
+解. 二次型 $Q$ 的矩阵是
+$$A = \left( \begin{array}{c c c} 1 & 0 & 2 \\ 0 & - 1 & 1 \\ 2 & 1 & 1 \end{array} \right).$$
+对A做初等相合变换化为对角阵
+$$\binom {A} {I} = \left(\begin{array}{c c c}1&0&2\\0&- 1&1\\2&1&1\\1&0&0\\0&1&0\\0&0&1\end{array}\right) \xrightarrow {- 2 c _ {1} \rightarrow c _ {3}} \left(\begin{array}{c c c}1&0&0\\0&- 1&1\\2&1&- 3\\1&0&- 2\\0&1&0\\0&0&1\end{array}\right) \xrightarrow {- 2 r _ {1} \rightarrow r _ {3}} \left(\begin{array}{c c c}1&0&0\\0&- 1&1\\0&1&- 3\\1&0&- 2\\0&1&0\\0&0&1\end{array}\right)$$
+[第 267 页]
+§8.2 二次型的标准形
+$$\xrightarrow {c _ {2} \rightarrow c _ {3}} \left(\begin{array}{c c c}1&0&0\\0&- 1&0\\0&1&- 2\\1&0&- 2\\0&1&1\\0&0&1\end{array}\right) \xrightarrow {r _ {2} \rightarrow r _ {3}} \left(\begin{array}{c c c}1&0&0\\0&- 1&0\\0&0&- 2\\1&0&- 2\\0&1&1\\0&0&1\end{array}\right)$$
+于是原二次型的标准型为
+$$\tilde {Q} (y _ {1}, y _ {2}, y _ {3}) = y _ {1} ^ {2} - y _ {2} ^ {2} - 2 y _ {3} ^ {2}.$$
+相应的变换矩阵为
+$$P = \left( \begin{array}{c c c} 1 & 0 & - 2 \\ 0 & 1 & 1 \\ 0 & 0 & 1 \end{array} \right).$$
+□
+例8.2.4. 用初等变换法将二次型
+$$Q (x _ {1}, x _ {2}, x _ {3}) = 2 x _ {1} x _ {2} + 4 x _ {1} x _ {3}$$
+化成标准形.
+解. 二次型的矩阵
+$$A = \left( \begin{array}{c c c} 0 & 1 & 2 \\ 1 & 0 & 0 \\ 2 & 0 & 0 \end{array} \right).$$
+将A的第二列加到第一列, 再将第二行加到第一行, 就可使矩阵的第一行第一列的元素变为非零. 我们用行的形式来记录 $P^{T}$ .
+$$\begin{array}{l} (A, I) = \left( \begin{array}{c c c c c c} 0 & 1 & 2 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 & 1 & 0 \\ 2 & 0 & 0 & 0 & 0 & 1 \end{array} \right) \longrightarrow \left( \begin{array}{c c c c c c} 1 & 1 & 2 & 1 & 1 & 0 \\ 1 & 0 & 0 & 0 & 1 & 0 \\ 2 & 0 & 0 & 0 & 0 & 1 \end{array} \right) \longrightarrow \left( \begin{array}{c c c c c c} 2 & 1 & 2 & 1 & 1 & 0 \\ 1 & 0 & 0 & 0 & 1 & 0 \\ 2 & 0 & 0 & 0 & 0 & 1 \end{array} \right) \\ \longrightarrow \left( \begin{array}{c c c c c c} 2 & 1 & 2 & 1 & 1 & 0 \\ 0 & - \frac {1}{2} & - 1 & - \frac {1}{2} & \frac {1}{2} & 0 \\ 0 & - 1 & - 2 & - 1 & - 1 & 1 \end{array} \right) \longrightarrow \left( \begin{array}{c c c c c c} 2 & 0 & 0 & 1 & 1 & 0 \\ 0 & - \frac {1}{2} & - 1 & - \frac {1}{2} & \frac {1}{2} & 0 \\ 0 & - 1 & - 2 & - 1 & - 1 & 1 \end{array} \right) \\ \longrightarrow \left( \begin{array}{c c c c c c} 2 & 0 & 0 & 1 & 1 & 0 \\ 0 & - \frac {1}{2} & - 1 & - \frac {1}{2} & \frac {1}{2} & 0 \\ 0 & 0 & 0 & - & - 2 & 1 \end{array} \right) \longrightarrow \left( \begin{array}{c c c c c c} 2 & 0 & 0 & 1 & 1 & 0 \\ 0 & - \frac {1}{2} & 0 & - \frac {1}{2} & \frac {1}{2} & 0 \\ 0 & 0 & 0 & 0 & - 2 & 1 \end{array} \right) = (D, P ^ {T}). \end{array}$$
+[第 268 页]
+令
+$$P = \left( \begin{array}{c c c} 1 & - \frac {1}{2} & 0 \\ 1 & \frac {1}{2} & - 2 \\ 0 & 0 & 1 \end{array} \right),$$
+作可逆线性替换x = Py, 则
+$$Q (x _ {1}, x _ {2}, x _ {3}) = \mathbf {y} ^ {T} \operatorname{diag} (2, - \frac {1}{2}, 0) \mathbf {y} = 2 y _ {1} ^ {2} - \frac {1}{2} y _ {2} ^ {2}.$$
+除了配方法与初等变换方法之外, 上一章的定理 7.3.6实际上给出了实对称方阵正交相合于对角阵的方法.
+定理8.2.3. 设A为n阶实对称方阵, 则存在正交方阵P使得
+$$P ^ {T} A P = \operatorname{diag} (\lambda_ {1}, \lambda_ {2}, \dots , \lambda_ {n}),$$
+这里 $\lambda_{1},\lambda_{2},\ldots,\lambda_{n}$ 是A的特征值.
+证明. 由于 $P$ 为正交阵, 故 $P^{-1} = P^T$. 由定理7.3.6, 结论显然.
+§8.3 相合不变量与分类
+在上节中, 我们我们证明了实二次型可以化为标准形, 或者等价地, 实对称矩阵可以通过一系列初等变换使之相合于实对角矩阵. 但二次型的标准型不是唯一的. 实际上, 设
+$$\tilde {Q} \left(y _ {1}, y _ {2}, \dots , y _ {n}\right) = \mu_ {1} y _ {1} ^ {2} + \mu_ {2} y _ {2} ^ {2} + \dots + \mu_ {n} y _ {n} ^ {2}$$
+是二次型 $Q(x_{1},x_{2},\ldots ,x_{n})$ 的标准型.做可逆变换
+$$y _ {1} = c _ {1} z _ {1}, y _ {2} = c _ {2} z _ {2}, \dots , y _ {n} = c _ {n} z _ {n}, \quad c _ {i} \neq 0, i = 1, 2, \dots , n$$
+得到新的二次型标准型
+$$\tilde {\tilde {Q}} (z _ {1}, z _ {2}, \dots , z _ {n}) = \mu_ {1} c _ {1} ^ {2} z _ {1} ^ {2} + \mu_ {2} c _ {2} ^ {2} z _ {2} ^ {2} + \dots + \mu_ {n} c _ {n} ^ {2} z _ {n} ^ {2}.$$
+由于 $c_{i}, i=1,2,\ldots,n$ 的任意性, 因此二次型的标准型不唯一, 或者说一个实矩阵通过不同的相合变换可以化为不同的对角矩阵. 正是如此, 我们要进一步研究刻画二次型在可逆线性变换下本质的性质.
+[第 269 页]
+定理8.3.1. 设A是一个n阶实对称矩阵, 则存在可逆矩阵P, 使得
+$$P ^ {T} A P = \left( \begin{array}{c c c} I _ {r} & & \\ & - I _ {s} & \\ & & 0 \end{array} \right), \quad \operatorname{rank} A = r + s \leq n\tag{8.7}$$
+其中，r 是标准形中正项的项数，s 是负项的项数。上式右边的对角矩阵称为矩阵 A 的规范形。等价地，给定实二次型  $Q(x_{1}, x_{2}, \ldots, x_{n})$ ，存在可逆方阵 P 使得
+$$Q (x _ {1}, x _ {2}, \dots , x _ {n}) \Big | _ {\mathbf {x} = P \mathbf {y}} = y _ {1} ^ {2} + \dots + y _ {r} ^ {2} - y _ {r + 1} ^ {2} - \dots - y _ {r + s} ^ {2}.\tag{8.8}$$
+上式称为二次型 $Q(x_{1},x_{2},\ldots,x_{n})$ 的规范形.
+证明. 从定理8.2.2知, 存在可逆矩阵 $P_{1}$ 使得 $P_{1}^{T}AP_{1}$ 是对角矩阵. 将对角矩阵中的对角元分成三类: 正的、负的和零. 不妨设
+$$P _ {1} ^ {T} A P _ {1} = \operatorname{diag} \left(\mu_ {1}, \dots , \mu_ {r}, - \mu_ {r + 1}, \dots , - \mu_ {r + s}, 0, \dots , 0\right),$$
+这里 $\mu_{i}>0,i=1,2,\ldots,r+s,$ 否则可通过初等相合变换将对角线上的元素调整至上述情形.令
+$$P _ {2} = \operatorname{diag} \left(\frac {1}{\sqrt {\mu_ {1}}}, \dots , \frac {1}{\sqrt {\mu_ {r}}}, \frac {1}{\sqrt {\mu_ {r + 1}}}, \dots , \frac {1}{\sqrt {\mu_ {r + s}}}, 1, \dots , 1\right),$$
+则 $P=P_{1}P_{2}$ 满足
+$$P ^ {T} A P = (P _ {1} P _ {2}) ^ {T} A P _ {1} P _ {2} = P _ {2} ^ {T} (P _ {1} ^ {T} A P _ {1}) P _ {2} = \left( \begin{array}{c c c} I _ {r} & & \\ & - I _ {s} & \\ & & 0 \end{array} \right).$$
+显然, 相合变换不改变矩阵A的秩, 即实对称矩阵(二次型)的秩是相合变换下的不变量, 因此 $\operatorname{rank} A = r + s$ . 不仅如此, 我们还可以证明, 定理8.3.1中的量r和s, 即二次型的标准形中的正项数和负项数也是相合意义下的不变量.
+定理8.3.2. 实二次型
+$$Q (x _ {1}, \ldots , x _ {n}) = \mathbf {x} ^ {T} A \mathbf {x}$$
+的规范形中正项数 $r$ 和负项数 $s$ 是由二次型 $Q(x_{1},\ldots ,x_{n})$ 唯一确定的, 或者说是由实对称矩阵 $A$ 唯一确定的.
+[第 270 页]
+证明. 假如有两种不同的可逆变换 $\mathbf{x} = P_{1}\mathbf{y}$ 和 $\mathbf{x} = P_{2}\mathbf{z}$, 使得二次型化为下列两种规范形
+$$Q (x _ {1}, \dots , x _ {n}) \Big | _ {\mathbf {x} = P _ {1} \mathbf {y}} = y _ {1} ^ {2} + \dots + y _ {r} ^ {2} - y _ {r + 1} ^ {2} - \dots - y _ {r + s} ^ {2}$$
+和
+$$Q (x _ {1}, \ldots , x _ {n}) \Big | _ {\mathbf {x} = P _ {2} \mathbf {z}} = z _ {1} ^ {2} + \dots + z _ {p} ^ {2} - z _ {p + 1} ^ {2} - \dots - z _ {p + q} ^ {2}.$$
+这里 $r+s=p+q=\operatorname{rank}A.$ 假设 $r\neq p,$ 不妨设r<p. 记 $P_{1}^{-1}=(b_{ij})_{n\times n},P_{2}^{-1}=(c_{ij})_{n\times n}.$ 令
+$$\begin{array}{c} y _ {1} = b _ {1 1} x _ {1} + b _ {1 2} x _ {2} + \dots + b _ {1 n} x _ {n} = 0 \\ \dots \dots \\ y _ {r} = b _ {r 1} x _ {1} + b _ {r 2} x _ {2} + \dots + b _ {r n} x _ {n} = 0 \\ z _ {p + 1} = c _ {p + 1, 1} x _ {1} + c _ {p + 1, 2} x _ {2} + \dots + c _ {p + 1, n} x _ {n} = 0 \\ \dots \dots \\ z _ {n} = c _ {n 1} x _ {1} + c _ {n 2} x _ {2} + \dots + c _ {n n} x _ {n} = 0 \end{array}$$
+则得到一个关于 $n$ 个变量 $x_{1},\ldots ,x_{n}$ 的齐次线性方程组.方程组中方程的个数是 $r+$ $(n - p) = n - (p - r) <   n,$ 因此有非零解 $\mathbf{x} = (x_1,x_2,\dots ,x_n)^T.$ 这个解对应的
+$$\mathbf {y} = P _ {1} ^ {- 1} \mathbf {x} = (0, \dots , 0, y _ {r + 1}, \dots , y _ {n}) ^ {T}, \quad \mathbf {z} = P _ {2} ^ {- 1} \mathbf {x} = (z _ {1}, \dots , z _ {p}, 0, \dots , 0) ^ {T}.$$
+显然, $y_{r+1},\ldots,y_{r+s},\ldots,y_{n}$ 不全为零； $z_{1},\ldots,z_{p}$ 也不全为零.于是有
+$$\begin{array}{l} Q (x _ {1}, \ldots , x _ {n}) \Big | _ {X = P _ {1} Y} = - y _ {r + 1} ^ {2} - \dots - y _ {r + s} ^ {2} \leq 0, \\ Q (x _ {1}, \ldots , x _ {n}) \Big | _ {X = P _ {2} Z} = z _ {1} ^ {2} + \dots + z _ {p} ^ {2} > 0. \end{array}$$
+上面两个式子是相互矛盾的.因此r=p,从而有s=q.定理证毕.
+我们称定理8.3.2为惯性定理, r 为正惯性指数, s 为负惯性指数. 它们的和就是二次型的秩(即对应的实对称矩阵 A 的秩  $r + s = \operatorname{rank} A$ ). 它们的差  $r - s = r - (\operatorname{rank} A - r) = 2r - \operatorname{rank} A$  称为二次型(或矩阵 A)的符号差.
+定理8.3.2说明, 在相合意义下, 两个实二次型(实对称矩阵)是否属于同一个等价类取决于实二次型(实对称矩阵)的秩以及正惯性指数. 只有秩与正惯性指数相等的实二次型(实对称矩阵)才是相互等价的, 它们等价于同一个规范形. 这就是实二次型(实对称矩阵)的分类.
+[第 271 页]
+§8.4 二次曲线与曲面的分类
+二次型的标准型及分类的一个直接应用是将二次曲线与曲面化为标准形，并由此给出二次曲线与曲面的分类.
+给定平面二次曲线的方程
+$$a _ {1 1} x ^ {2} + 2 a _ {1 2} x y + a _ {2 2} y ^ {2} + 2 b _ {1} x + 2 b _ {2} y + c = 0.\tag{8.9}$$
+为判别它表示的曲线类型, 我们先将它化为标准型.为此, 首先要消去方程中的交叉项xy. 考察方程的二次项
+$$a _ {1 1} x ^ {2} + 2 a _ {1 2} x y + a _ {2 2} y ^ {2} = (x, y) \left( \begin{array}{c c} a _ {1 1} & a _ {1 2} \\ a _ {1 2} & a _ {2 2} \end{array} \right) \binom{x}{y} := (x, y) A \binom{x}{y}.$$
+只要找到二阶正交矩阵P使 $P^{T}AP$ 为对角阵 $\mathrm{diag}(\lambda_{1},\lambda_{2})$ ，则变换
+$$\binom{x}{y} = P \binom{x ^ {\prime}}{y ^ {\prime}}$$
+将原方程的交叉项消去,而且可以保持曲线的形状.
+注意到二阶正交矩阵可以具有形式
+$$P = \left( \begin{array}{c c} \cos \theta & - \sin \theta \\ \sin \theta & \cos \theta \end{array} \right)$$
+因此, 我们只需要做旋转变换
+$$\binom{x}{y} = \left( \begin{array}{c c} \cos \theta & - \sin \theta \\ \sin \theta & \cos \theta \end{array} \right) \binom{x ^ {\prime}}{y ^ {\prime}}$$
+就可以消去方程中的xy项. 将上式代入原方程得交叉项系数的一半为
+$$(a _ {2 2} - a _ {1 1}) \sin \theta \cos \theta + a _ {1 2} (\cos^ {2} \theta - \sin^ {2} \theta).$$
+令上式为零得
+$$\cot 2 \theta = \frac {a _ {1 1} - a _ {2 2}}{2 a _ {1 2}}.$$
+这样原方程变为
+$$\lambda_ {1} (x ^ {\prime}) ^ {2} + \lambda_ {2} (y ^ {\prime}) ^ {2} + 2 b _ {1} ^ {\prime} x ^ {\prime} + 2 b _ {2} ^ {\prime} y ^ {\prime} + c ^ {\prime} = 0.$$
+其中 $\lambda_{1},\lambda_{2}$ 是方阵A的特征值.
+[第 272 页]
+$\lambda_{1},\lambda_{2}$ 中至少有一个非零.不妨设 $\lambda_{1}\neq0$ .作坐标轴的平移
+$$\tilde {x} = x ^ {\prime} + b _ {1} / \lambda_ {1}, \quad \tilde {y} = y ^ {\prime} + b _ {2} / \lambda_ {2}$$
+(若 $\lambda_{2}=0$ , 则令 $\tilde{y}=y'$ ). 最后原方程化为标准形式
+1. 椭圆型 $(\lambda_{1}\lambda_{2} > 0)$
+$$\lambda_ {1} \tilde {x} ^ {2} + \lambda_ {2} \tilde {y} ^ {2} + \lambda_ {3} = 0.$$
+2. 双曲型 $(\lambda_{1}\lambda_{2} < 0)$
+$$\lambda_ {1} \tilde {x} ^ {2} + \lambda_ {2} \tilde {y} ^ {2} + \lambda_ {3} = 0.$$
+3. 抛物形 $(\lambda_{1} \neq 0, \lambda_{2} = 0, \tilde{b}_{2}, \tilde{c}$ 中至少一个为零.)
+$$\lambda_ {1} \tilde {x} ^ {2} + 2 \tilde {b} _ {2} \tilde {y} + \tilde {c} = 0.$$
+对于二次曲面, 我们类似处理. 给定二次曲面的方程
+$$a _ {1 1} x ^ {2} + a _ {2 2} y ^ {2} + a _ {3 3} z ^ {2} + 2 a _ {1 2} x y + 2 a _ {1 3} x z + 2 a _ {2 3} y z + 2 b _ {1} x + 2 b _ {2} y + 2 b _ {3} z + c = 0.\tag{8.10}$$
+记
+$$A = \left( \begin{array}{c c c} a _ {1 1} & a _ {1 2} & a _ {1 3} \\ a _ {1 2} & a _ {2 2} & a _ {2 3} \\ a _ {1 3} & a _ {2 3} & a _ {3 3} \end{array} \right)$$
+我们找正交阵P使 $P^{T}AP$ 为对角阵 $\mathrm{diag}(\lambda_{1},\lambda_{2},\lambda_{3})$ ，其中 $\lambda_{1},\lambda_{2},\lambda_{3}$ 为A的特征值。于是正交变换
+$$\left( \begin{array}{c} x \\ y \\ z \end{array} \right) = P \left( \begin{array}{c} x ^ {\prime} \\ y ^ {\prime} \\ z ^ {\prime} \end{array} \right)$$
+将原方程的所有交叉项消去. 即原方程变为
+$$\lambda_ {1} (x ^ {\prime}) ^ {2} + \lambda_ {2} (y ^ {\prime}) ^ {2} + \lambda_ {3} (z ^ {\prime}) ^ {2} + 2 b _ {1} ^ {\prime} x ^ {\prime} + 2 b _ {2} ^ {\prime} y ^ {\prime} + 2 b _ {3} ^ {\prime} z ^ {\prime} + c ^ {\prime} = 0.$$
+在作坐标轴的平移后, 原方程可以化成标准形式
+- 椭球面型 $(\lambda_{1},\lambda_{2},\lambda_{3} > 0)$
+$$\lambda_ {1} \tilde {x} ^ {2} + \lambda_ {2} \tilde {y} ^ {2} + \lambda_ {3} \tilde {z} ^ {2} + \lambda_ {4} = 0.$$
+[第 273 页]
+§8.4 二次曲线与曲面的分类
+- 双曲面型 $(\lambda_1, \lambda_2, \lambda_3$ 不同号, $\lambda_4 \neq 0)$.
+$$\lambda_ {1} \tilde {x} ^ {2} + \lambda_ {2} \tilde {y} ^ {2} + \lambda_ {3} \tilde {z} ^ {2} + \lambda_ {4} = 0.$$
+- 抛物型 $(\lambda_1, \lambda_2, \lambda_3$ 中有两个非零, 一个为零, $\tilde{b}_3 \neq 0)$.
+$$\lambda_ {1} \tilde {x} ^ {2} + \lambda_ {2} \tilde {y} ^ {2} + 2 \tilde {b} _ {3} \tilde {z} = 0.$$
+- 锥面 $(\lambda_1, \lambda_2, \lambda_3$ 不同号).
+$$\lambda_ {1} \tilde {x} ^ {2} + \lambda_ {2} \tilde {y} ^ {2} + \lambda_ {3} \tilde {z} ^ {2} = 0.$$
+- 柱面 $(\lambda_1, \lambda_2, \lambda_3$ 中至少一个为零, $\tilde{b}_2, \tilde{c}$ 至少有一为零).
+$$\lambda_ {1} \tilde {x} ^ {2} + \lambda_ {2} \tilde {y} ^ {2} + 2 \tilde {b} _ {2} \tilde {y} + \tilde {c} = 0.$$
+下面我们给出两个实例.
+例8.4.1. 确定以下二次曲线的类型、形状与位置.
+$$4 x ^ {2} + 8 x y + 4 y ^ {2} + 1 3 x + 3 y + 4 = 0.$$
+解. 我们先做坐标系的旋转变换使得曲线方程中的交叉项 $xy$ 消失. 设将坐标系逆时针旋转 $\theta$ 角, 其中 $\theta$ 满足
+$$\operatorname{ctg} 2 \theta = (4 - 4) / 1 6 = 0.$$
+取 $\theta=\frac{\pi}{4}$ ，得坐标变换公式
+$$\binom{x}{y} = \left( \begin{array}{c c} \frac {\sqrt {2}}{2} & - \frac {\sqrt {2}}{2} \\ \frac {\sqrt {2}}{2} & \frac {\sqrt {2}}{2} \end{array} \right) \binom{x ^ {\prime}}{y ^ {\prime}}$$
+将上式代入原方程得
+$$8 (x ^ {\prime}) ^ {2} + 8 \sqrt {2} x ^ {\prime} - 5 \sqrt {2} y ^ {\prime} + 4 = 0.$$
+配方得
+$$8 \left(x ^ {\prime} + \frac {\sqrt {2}}{2}\right) ^ {2} - 5 \sqrt {2} y ^ {\prime} = 0.$$
+作移轴
+$$\tilde {x} = x ^ {\prime} + \frac {\sqrt {2}}{2}, \quad \tilde {y} = y ^ {\prime},$$
+[第 274 页]
+则原方程化为
+$$\tilde {y} = \frac {4 \sqrt {2}}{5} \tilde {x} ^ {2}.$$
+因此,所求二次曲线为抛物线,开口朝y'轴,焦参数 $p=\frac{5\sqrt{2}}{16}$ .
+总的坐标变换公式为
+$$\binom{x}{y} = \left( \begin{array}{c c} \frac {\sqrt {2}}{2} & - \frac {\sqrt {2}}{2} \\ \frac {\sqrt {2}}{2} & \frac {\sqrt {2}}{2} \end{array} \right) \binom{\tilde {x} - \frac {\sqrt {2}}{2}}{\tilde {y}}$$
+例8.4.2. 给定二次曲面在直角坐标系下的方程
+$$x ^ {2} + 4 y ^ {2} + z ^ {2} - 4 x y - 8 x z - 4 y z - 1 = 0,$$
+将它化为标准方程, 并指出这是什么二次曲面.
+解. 将给定方程写成矩阵形式
+$$(x, y, z) \left( \begin{array}{c c c} 1 & - 2 & - 4 \\ - 2 & 4 & - 2 \\ - 4 & - 2 & 1 \end{array} \right) \left( \begin{array}{c} x \\ y \\ z \end{array} \right) - 1 = 0.$$
+可以找到正交矩阵
+$$P = \left( \begin{array}{c c c} \frac {\sqrt {5}}{5} & \frac {4 \sqrt {5}}{1 5} & \frac {2}{3} \\ - \frac {2 \sqrt {5}}{5} & \frac {2 \sqrt {5}}{1 5} & \frac {1}{3} \\ 0 & - \frac {\sqrt {5}}{3} & \frac {2}{3} \end{array} \right)$$
+使得 $P^T AP = \mathrm{diag}(5,5, - 4)$ .作正交变换 $(x,y,z) = (\tilde{x},\tilde{y},\tilde{z})P^{T}$ ，则原方程化为标准形式
+$$5 \tilde {x} ^ {2} + 5 \tilde {y} ^ {2} - 4 \tilde {z} ^ {2} = 1.$$
+它表示一个单叶双曲面.
+§8.5 正定二次型
+在第六章中, 我们指出由内积确定的度量矩阵 $G$ 具有性质: 对任意非零向量 $\mathbf{x} \in \mathbb{R}^n$, $\mathbf{x}^T G\mathbf{x} > 0$. 具有这种性质的矩阵称为正定方阵, 相应的二次型 $\mathbf{x}^T G\mathbf{x}$ 称为正定的二次型.
+[第 275 页]
+定义8.5.1. $n$ 元实二次型
+$$Q (x _ {1}, x _ {2}, \dots , x _ {n}) = \sum_ {i, j = 1} ^ {n} a _ {i j} x _ {i} x _ {j} = \mathbf {x} ^ {T} A \mathbf {x}$$
+称为是正定二次型, 如果对任意非零向量  $x \in R^{n}$ ,
+$$Q (x _ {1}, x _ {2}, \dots , x _ {n}) > 0.$$
+正定的二次型对应的矩阵A称为正定矩阵.矩阵A正定简记为A>0.
+设正定二次型 $Q(x_{1},x_{2},\ldots,x_{n})$ 的正负惯性指数分别为r与s，即存在可逆变换x=Py使得
+$$Q (x _ {1}, x _ {2}, \dots , x _ {n}) \Big | _ {\mathbf {x} = P \mathbf {y}} = y _ {1} ^ {2} + \dots + y _ {r} ^ {2} - y _ {r + 1} ^ {2} - \dots - y _ {r + s} ^ {2}.$$
+下面我们说明, s = 0 且 r = n, 即
+$$Q (x _ {1}, x _ {2}, \dots , x _ {n}) \Big | _ {\mathbf {x} = P \mathbf {y}} = y _ {1} ^ {2} + y _ {2} ^ {2} + \dots + y _ {n} ^ {2},$$
+或者说A相合于单位阵.
+实际上, 如果 r < n, 取  $\mathbf{x} = P(0, \ldots, 0, 1)^{T}$ , 则
+$$Q (x _ {1}, x _ {2}, \dots , x _ {n}) = y _ {1} ^ {2} + \dots + y _ {r} ^ {2} - y _ {r + 1} ^ {2} - \dots - y _ {r + s} ^ {2} \leq 0,$$
+这与 $Q$ 的正定性矛盾!
+上面的结论反过来也成立, 即若 r = n, 则二次型  $Q(x_{1}, x_{2}, \ldots, x_{n})$  正定. 这是因为对任意非零向量 x,  $y = P^{-1}x$  也非零, 从而  $Q(x_{1}, x_{2}, \ldots, x_{n}) = y_{1}^{2} + y_{2}^{2} + \ldots + y_{n}^{2} > 0$ . 因此, 我们有
+定理8.5.1. $n$ 元实二次型
+$$Q (x _ {1}, x _ {2}, \dots , x _ {n}) = \mathbf {x} ^ {T} A \mathbf {x}$$
+正定的充要条件是, $Q$ 的正惯性指数为 $n$. 等价地, 实对称方阵 $A$ 正定的充要条件是 $A$ 相合于单位阵.
+由于二次型与实对称方阵一一对应,下面我们仅研究实对称方阵的正定问题.
+正定矩阵有以下性质
+定理8.5.2. 设A为n阶实对称方阵.
+[第 276 页]
+1 设 $P$ 为 $n$ 阶实可逆方阵, $B = P^T AP$. 则 $B > 0$ 当且仅当 $A > 0$.
+2 设 $A = \mathrm{diag}(\lambda_1, \lambda_2, \ldots, \lambda_n)$. 则 $A > 0$ 当且仅当 $\lambda_i > 0, i = 1, 2, \ldots, n$.
+3 若 $A > 0$, 则 $\operatorname{det}(A) > 0$.
+证明. 1. 若 $A > 0$, 则对任意实向量 $\mathbf{x} \neq \mathbf{0}$, $\mathbf{x}^T A \mathbf{x} > 0$. 由于 $P \mathbf{x} \neq \mathbf{0}$, 于是 $\mathbf{x}^T (P^T A P) \mathbf{x} = (P \mathbf{x})^T A (P \mathbf{x}) > 0$, 即 $B > 0$. 反之亦然.
+2. 若 $A > 0$, 取 $\mathbf{x} = \mathbf{e}_i$, 这里 $\mathbf{e}_i$ 为单位坐标向量, 则 $\mathbf{x}^T A \mathbf{x} = \lambda_i > 0$. 反之, 设 $\lambda_i > 0$, $i = 1, 2, \ldots, n$. 则对任意 $\mathbf{x} = (x_1, x_2, \ldots, x_n) \neq \mathbf{0}$,
+$$\mathbf {x} ^ {T} A \mathbf {x} = \lambda_ {1} x _ {1} ^ {2} + \lambda_ {2} x _ {2} ^ {2} + \dots + \lambda_ {n} x _ {n} ^ {2} > 0.$$
+即A正定.
+3. 由定理8.5.1, 存在可逆方阵 $P$ 使得 $P^{T}AP = I$. 两边取行列式得 $\operatorname{det}(P)^{2}\operatorname{det}(A) = 1$. 从而 $\operatorname{det}(A) > 0$.
+下面,我们给出矩阵正定的若干等价条件.
+定理8.5.3. 设A为n阶实对称矩阵, 则下列命题等价
+1. A正定.
+2. A的特征值均为正.
+3. 存在可逆方阵 P 使得  $A = P^{T}P$ .
+4. A的各阶顺序主子式均为正, 即
+$$a _ {1 1} > 0, \quad \left| \begin{array}{l l} a _ {1 1} & a _ {1 2} \\ a _ {2 1} & a _ {2 2} \end{array} \right| > 0, \quad \dots , \quad \left| \begin{array}{c c c} a _ {1 1} & \dots & a _ {1 n} \\ \vdots & \dots & \vdots \\ a _ {n 1} & \dots & a _ {n n} \end{array} \right| = \det A > 0.\tag{8.11}$$
+证明. $1 \Leftrightarrow 2$.
+由定理 8.2.3, 存在正交阵 P 使得
+$$P ^ {T} A P = \operatorname{diag} (\lambda_ {1}, \lambda_ {2}, \dots , \lambda_ {n}),$$
+其中 $\lambda_{1},\lambda_{2},\ldots,\lambda_{n}$ 为A的特征值.由定理8.5.5,
+$$A > 0 \Leftrightarrow P ^ {T} A P > 0 \Leftrightarrow \operatorname{diag} \left(\lambda_ {1}, \lambda_ {2}, \dots , \lambda_ {n}\right) > 0 \Leftrightarrow \lambda_ {i} > 0, i = 1, 2, \dots , n.$$
+[第 277 页]
+$1 \Leftrightarrow 3$.
+由定理 8.5.1, A 正定当且仅当存在可逆方阵 Q 使得  $Q^{T}AQ = I$ , 当且仅当  $A = (Q^{-1})^{T}(Q^{-1})$ , 当且仅当存在可逆阵 P 使得  $A = P^{T}P$ .
+$1 \Leftrightarrow 4.$
+先证 $1 \Rightarrow 4$。设A正定，则二次型 $Q(x_{1}, x_{2}, \ldots, x_{n}) = \mathbf{x}^{T} A \mathbf{x}$ 正定。令 $x_{r+1} = x_{r+2} = \cdots = x_{n} = 0$，则
+$$Q _ {r} \left(x _ {1}, x _ {2}, \dots , x _ {r}\right) = Q \left(x _ {1}, x _ {2}, \dots , x _ {r}, 0, \dots , 0\right) = \sum_ {i, j = 1} ^ {r} a _ {i j} x _ {i} x _ {j}$$
+是一个r变元的二次型.对于任意不全为零的 $x_{1},x_{2},\ldots,x_{r}$ ，有
+$$Q _ {1} (x _ {1}, x _ {2}, \dots , x _ {r}) > 0.$$
+所以 $Q_{1}(x_{1},x_{2},\ldots,x_{r})$ 是一个正定的二次型, 其对应的矩阵 $A_{r}$ 也正定. 由定理8.5.5, $\det(A_{r})>0$. 而 $\det(A_{r})$ 正是A的第r阶顺序主子式.
+再证 $4 \Rightarrow 1$ . 对实对称矩阵的阶数n作归纳法. 当n = 1时, 结论显然成立. 假设当n - 1时充分性成立, 由于对称矩阵
+$$A _ {n - 1} = \left( \begin{array}{c c c} a _ {1 1} & \dots & a _ {1, n - 1} \\ \vdots & \dots & \vdots \\ a _ {n - 1, 1} & \dots & a _ {n - 1, n - 1} \end{array} \right)$$
+的各阶顺序主子式均大于零,根据归纳假设,矩阵 $A_{n-1}$ 是正定的.因此存在可逆矩阵 $P_{n-1}$ 使得
+$$P _ {n - 1} ^ {T} A _ {n - 1} P _ {n - 1} = I _ {n - 1}.$$
+对于n阶对称矩阵A作如下分块
+$$A = \left( \begin{array}{c c} A _ {n - 1} & C \\ C ^ {T} & a _ {n n} \end{array} \right),$$
+其中 $C=(a_{1n},a_{2n},\ldots,a_{n-1,n})^{T}$ .令
+$$R = \left( \begin{array}{c c} P _ {n - 1} & - A _ {n - 1} ^ {- 1} C \\ 0 & 1 \end{array} \right)$$
+则R可逆,且
+$$\begin{array}{c} R ^ {T} A R = \left( \begin{array}{c c} P _ {n - 1} ^ {T} & 0 \\ - C ^ {T} A _ {n - 1} ^ {- 1} & 1 \end{array} \right) \left( \begin{array}{c c} A _ {n - 1} & C \\ C ^ {T} & a _ {n n} \end{array} \right) \left( \begin{array}{c c} P _ {n - 1} & - A _ {n - 1} ^ {- 1} C \\ 0 & 1 \end{array} \right) \\ = \left( \begin{array}{c c} I _ {n - 1} & 0 \\ 0 & a _ {n n} - C ^ {T} A _ {n - 1} ^ {- 1} C \end{array} \right) \end{array}$$
+[第 278 页]
+记 $a=a_{nn}-C^{T}A_{n-1}^{-1}C$ ，在上式两边取行列式得
+$$\det (A) \det (R) ^ {2} = a.$$
+由 $\det(A)>0$ 知a>0. 令
+$$P = R \left( \begin{array}{c c} I _ {n - 1} & 0 \\ 0 & \frac {1}{\sqrt {a}} \end{array} \right)$$
+便有
+$$P ^ {T} A P = I _ {n}.$$
+所以A是正定矩阵.定理证毕.
+□
+下面我们给几个例子.
+例8.5.1. 证明: 对任意实数x,y,
+$$f (x, y) = x ^ {2} + 2 x y + 2 y ^ {2} + 2 x + 6 y + 6 > 0.$$
+证明. 考虑二次型
+$$Q (x, y, z) = x ^ {2} + 2 y ^ {2} + 6 z ^ {3} + 2 x y + 2 x z + 6 y z,$$
+其对应的矩阵为
+$$A = \left( \begin{array}{c c c} 1 & 1 & 1 \\ 1 & 2 & 3 \\ 1 & 3 & 6 \end{array} \right)$$
+而顺序主子式满足
+$$1 > 0, \quad \left| \begin{array}{c c} 1 & 1 \\ 1 & 2 \end{array} \right| = 1 > 0, \quad \left| \begin{array}{c c c} 1 & 1 & 1 \\ 1 & 2 & 3 \\ 1 & 3 & 6 \end{array} \right| = 1 > 0,$$
+所以 $Q(x,y,z)$ 正定. 于是 $f(x,y)=Q(x,y,1)>0$ .
+□
+例8.5.2. 三维欧氏空间 $R^{3}$ 中, 是否存在向量 $a_{1}, a_{2}, a_{3}$ 满足
+$$(\mathbf {a} _ {1}, \mathbf {a} _ {1}) = 4, \quad (\mathbf {a} _ {2}, \mathbf {a} _ {2}) = 9, \quad (\mathbf {a} _ {3}, \mathbf {a} _ {3}) = 4,$$
+$$\left(\mathbf {a} _ {1}, \mathbf {a} _ {2}\right) = 9 / 2, \quad \left(\mathbf {a} _ {1}, \mathbf {a} _ {3}\right) = - 1 / 2, \quad \left(\mathbf {a} _ {2}, \mathbf {a} _ {3}\right) = 9 / 2.$$
+[第 279 页]
+解. 假设存在向量 $\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_3$ 满足上述条件, 令 $\mathbf{a} = x\mathbf{a}_1 + y\mathbf{a}_2 + z\mathbf{a}_3$. 则对任意实数 $x, y, z$,
+$$\begin{array}{l} (\mathbf {a}, \mathbf {a}) = (\mathbf {a} _ {1}, \mathbf {a} _ {1}) x ^ {2} + (\mathbf {a} _ {2}, \mathbf {a} _ {2}) y ^ {2} + (\mathbf {a} _ {3}, \mathbf {a} _ {3}) z ^ {2} + 2 (\mathbf {a} _ {1}, \mathbf {a} _ {2}) x y + 2 (\mathbf {a} _ {1}, \mathbf {a} _ {3}) x z + 2 (\mathbf {a} _ {2}, \mathbf {a} _ {3}) y z \\ = 4 x ^ {2} + 9 y ^ {2} + 4 z ^ {2} + 9 x y - x z + 9 y z \geq 0. \end{array}$$
+记上述二次型为 $Q(x,y,z)$ ，其对应的矩阵为 $A=\begin{pmatrix}4&9/2&-1/2\\9/2&9&9/2\\-1/2&9/2&4\end{pmatrix}$ . 由于 $\det(A)=-81/2<0$ ，因此A不正定。这与上述不等式矛盾！因此，满足条件的向量组 $a_{1},a_{2},a_{3}$ 不存在. □
+例8.5.3. 给定实二次型 $Q(x,y,z)=\lambda(x^{2}+y^{2}+z^{2})-2xy-2yz-2zx$ .  $\lambda$ 为何值时,  $Q(x,y,z)$ 正定?
+解. $Q(x,y,z)$ 对应的矩阵为
+$$A = \left( \begin{array}{c c c} \lambda & - 1 & - 1 \\ - 1 & \lambda & - 1 \\ - 1 & - 1 & \lambda \end{array} \right)$$
+则 $Q(x,y,z)$ 正定当且仅当
+$$\lambda > 0, \quad \left( \begin{array}{c c} \lambda & - 1 \\ - 1 & \lambda \end{array} \right) = \lambda^ {2} - 1, \quad \det (A) = (\lambda - 1) ^ {2} (\lambda + 2) > 0.$$
+因此, $Q(x,y,z)$ 正定当且仅当 $\lambda>1$ .
+例8.5.4. 设向量组 $a_{1},a_{2},\ldots,a_{m}\in R^{n}$ . 则方阵 $G=((\mathbf{a}_{i},\mathbf{a}_{j})_{m\times m}$ 正定当且仅当 $a_{1},a_{2},\ldots,a_{m}$ 线性无关.
+证明.：对任意 $\mathbf{x} = (x_{1},x_{2},\dots ,x_{m})\in \mathbb{R}^{m}$
+$$\mathbf {x} ^ {T} G \mathbf {x} = \left(\sum_ {i = 1} ^ {m} x _ {i} \mathbf {a} _ {i}, \sum_ {i = 1} ^ {m} x _ {i} \mathbf {a} _ {i}\right) \geq 0.$$
+并且 $x^{T}Gx>0$ 当且仅当 $\sum_{i=1}^{m}x_{i}a_{i}\neq0$ . 因此G正定, 当且仅当向量组 $a_{1},a_{2},\ldots,a_{m}$ 线性无关. □
+由于二次型的秩和正惯性指数是相合不变量, 我们可以根据它们对二次型进行分类. 正定二次型就是其中重要的一类. 另一类重要的二次型是半正定二次型.
+[第 280 页]
+定义8.5.2. $n$ 元实二次型
+$$Q \left(x _ {1}, x _ {2}, \dots , x _ {n}\right) = \sum_ {i, j = 1} ^ {n} a _ {i j} x _ {i} x _ {j} = \mathbf {x} ^ {T} A \mathbf {x}$$
+称为是半正定二次型, 如果对任意向量  $x \in R^{n}$ ,
+$$Q (x _ {1}, x _ {2}, \dots , x _ {n}) \geq 0.$$
+半正定的二次型对应的矩阵A称为半正定矩阵.矩阵A半正定简记为 $A\geq0$ .
+同正定二次型(矩阵)类似, 容易证明下列结论.
+定理8.5.4. $n$ 元实二次型
+$$Q (x _ {1}, x _ {2}, \ldots , x _ {n}) = \mathbf {x} ^ {T} A \mathbf {x}$$
+半正定的充要条件是, $Q$ 的负惯性指数为0.等价地, 实对称方阵A半正定的充要条件是A相合于 $\mathrm{diag}(I_r,0)$, 这里 $r$ 是矩阵A的秩.
+半正定矩阵有以下性质
+定理8.5.5. 设A为n阶实对称方阵.
+1 设 P 为 n 阶实可逆方阵,  $B = P^{T}AP$ . 则  $B \geq 0$  当且仅当  $A \geq 0$ .
+2 设 $A = \mathrm{diag}(\lambda_1, \lambda_2, \ldots, \lambda_n)$. 则 $A \geq 0$ 当且仅当 $\lambda_i \geq 0, i = 1, 2, \ldots, n$.
+3 若 $A \geq 0$, 则 $\operatorname{det}(A) \geq 0$.
+定理8.5.6. 设A为n阶实对称矩阵, 则下列命题等价
+1. A半正定.
+2. A的特征值均为非负.
+3. 存在实方阵 $P$ 使得 $A = P^T P$.
+4. A的各阶主子式均为非负.
+注意在上面的等价命题4中, 同正定矩阵不同, “A的各阶顺序主子式” 变成了 “A的各阶主子式”.
+例8.5.5. 设A,B,C为三角形ABC的三个内角.证明:对任意实数x,y,z,
+$$x ^ {2} + y ^ {2} + z ^ {2} \geq 2 x y \cos (A) + 2 y z \cos (B) + 2 z x \cos (C).$$
+[第 281 页]
+证明. 只需证明二次型
+$$Q (x, y, z) = x ^ {2} + y ^ {2} + z ^ {2} - 2 x y \cos (A) - 2 x z \cos (B) - 2 y z \cos (C)$$
+半正定.实际上,二次型 $Q(x,y,z)$ 对应的矩阵为
+$$A = \left( \begin{array}{c c c} 1 & - \cos (A) & - \cos (B) \\ - \cos (A) & 1 & - \cos (C) \\ - \cos (B) & - \cos (C) & 1 \end{array} \right).$$
+A的各阶主子式为
+$$\begin{array}{l} 1 > 0, \quad \left| \begin{array}{c c} 1 & - \cos (A) \\ - \cos (A) & 1 \end{array} \right| = \sin^ {2} (A) \geq 0, \\ \left| \begin{array}{c c} 1 & - \cos (B) \\ - \cos (B) & 1 \end{array} \right| = \sin^ {2} (B) \geq 0, \quad \left| \begin{array}{c c} 1 & - \cos (C) \\ - \cos (C) & 1 \end{array} \right| = \sin^ {2} (C) \geq 0, \\ \det (A) = 1 - \cos^ {2} A - \cos^ {2} B - \cos^ {2} C - 2 \cos (A) \cos (B) \cos (C) = 0. \end{array}$$
+因此, A 半正定, 从而  $Q(x,y,z) \geq 0$ .
+除了正定与半正定二次型(矩阵), 还可以定义负定、半负定二次型(矩阵). 简单来说,  $Q(\mathbf{x})$  负定当且仅当  $-Q(\mathbf{x})$  正定;  $Q(\mathbf{x})$  半负定当且仅当  $-Q(\mathbf{x})$  半正定. 因此, 负定与半负定二次型(矩阵)都可以化为正定与半正定二次型(矩阵)处理. 总结起来, 对于 n 个变元的二次型  $Q(x_{1}, x_{2}, \ldots, x_{n}) = \mathbf{x}^{T} A \mathbf{x}$ , 它可以分为以下类别
+(1) 正定二次型: r = n.
+(2) 半正定二次型: s = 0, r < n, 其规范形为
+$$y _ {1} ^ {2} + y _ {2} ^ {2} + \dots + y _ {r} ^ {2}, \quad r \leq n$$
+或者说对任意的变元 $x_{1},x_{2},\ldots,x_{n},Q(x_{1},x_{2},\ldots,x_{n})\geq0$ . 半正定二次型的矩阵称为半正定矩阵, 简记为 $A\geq0$ . 半正定矩阵相合于对角阵 $J=\mathrm{diag}(I_{r},0)$ .
+(3) 负定二次型: r = 0, s = n, 其规范形是
+$$- y _ {1} ^ {2} - y _ {2} ^ {2} - \dots - y _ {n} ^ {2}.$$
+或者说对任意的不全为零的 $x_{1},x_{2},\ldots,x_{n}$ ，有 $Q(x_{1},x_{2},\ldots,x_{n})<0$ 。负定二次型的矩阵称为负定矩阵，简记为A<0，它相合于负的单位矩阵。
+[第 282 页]
+(4) 半负定二次型: r = 0, s < n, 其规范形为
+$$- y _ {1} ^ {2} - y _ {2} ^ {2} - \dots - y _ {s} ^ {2}, \quad s <   n,$$
+或者说对任意的 $x_{1}, x_{2}, \ldots, x_{n}$, 有 $Q(x_{1}, x_{2}, \ldots, x_{n}) \leq 0$. 半负定二次型的矩阵称为半负定矩阵, 简记为 $A \leq 0$. 它相合于对角阵 $J = \mathrm{diag}(-I_{s}, 0)$.
+(5) 除上述4类之外, 其它实二次型都称为不定型.
+作为正定与半正定矩阵的两个重要应用, 我们给出矩阵的奇异值分解与多元函数达到极小(极大)的一个充分条件.
+定理8.5.7. (矩阵的奇异值分解) 设 $A \in \mathbb{R}^{m \times n}$, 则存在 $m$ 阶正交阵 $U$ 及 $n$ 阶正交阵 $V$ 使得
+$$A = U \left( \begin{array}{c c} \Lambda & O \\ O & O \end{array} \right) V,\tag{8.12}$$
+其中  $\Lambda=\mathrm{diag}(\sigma_{1},\sigma_{2},\ldots,\sigma_{r}),\sigma_{1}\geq\sigma_{2}\geq\ldots\geq\sigma_{r}>0$  称为矩阵 A 的奇异值.
+证明. 显然 $AA^{T} \geq 0$ . 于是存在m阶正交阵U使得
+$$A A ^ {T} = U \operatorname{diag} (\sigma_ {1} ^ {2}, \dots , \sigma_ {r} ^ {2}, 0, \dots , 0) U ^ {T}$$
+其中 $\sigma_{1} \geq \sigma_{2} \geq \ldots \geq \sigma_{r} > 0$. 令 $B = U^{-1}A$, 则
+$$B B ^ {T} = \mathrm{diag} (\sigma_ {1} ^ {2}, \dots , \sigma_ {r} ^ {2}, 0, \dots , 0).$$
+记 $B=(\mathbf{b}_{1}^{T},\mathbf{b}_{2}^{T},\ldots,\mathbf{b}_{m}^{T})^{T}$ ，则有
+$$\left(\mathbf {b} _ {i}, \mathbf {b} _ {j}\right) = 0, \quad 1 \leq i \neq j \leq r, \quad \left| \mathbf {b} _ {i} \right| = \sigma_ {i}, \quad 1 \leq i \leq r, \quad \mathbf {b} _ {i} = \mathbf {0}, \quad r + 1 \leq i \leq m.$$
+令 $\mathbf{c}_i = \frac{1}{\sigma_i}\mathbf{b}_i, i = 1,2,\dots,r$，则 $\mathbf{c}_i, i = 1,2,\dots,r$ 为 $\mathbb{R}^n$ 的标准正交向量组，将它们扩充为 $\mathbb{R}^n$ 的一组标准正交基 $\mathbf{c}_i, i = 1,2,\dots,n$。令 $V = (\mathbf{c}_1^T, \dots, \mathbf{c}_n^T)^T$。则
+$$B = \left( \begin{array}{c c} \Lambda & O \\ O & O \end{array} \right) V.$$
+因此
+$$A = U \left( \begin{array}{c c} \Lambda & O \\ O & O \end{array} \right) V.$$
+特别注意,  $\sigma_{1},\ldots,\sigma_{r}$  是  $AA^{T}$  的非零特征值的平方根.
+[第 283 页]
+如果用 $u_{i}$ 表示矩阵U的列向量, $i=1,2,\ldots,m$, 用 $v_{i}^{T}$ 表示矩阵V的行向量, $i=1,2,\ldots,n$. 则公式(8.12)可以改写为
+$$A = \sigma_ {1} \mathbf {u} _ {1} \mathbf {v} _ {1} ^ {T} + \sigma_ {2} \mathbf {u} _ {2} \mathbf {v} _ {2} ^ {T} + \dots + \sigma_ {r} \mathbf {u} _ {r} \mathbf {v} _ {r} ^ {T}.\tag{8.13}$$
+在实际应用中, 当  $\sigma_{s+1}, \ldots, \sigma_{r} (s < r)$  比较小时, 我们可以用矩阵
+$$B = \sigma_ {1} \mathbf {u} _ {1} \mathbf {v} _ {1} ^ {T} + \sigma_ {2} \mathbf {u} _ {2} \mathbf {v} _ {2} ^ {T} + \dots + \sigma_ {s} \mathbf {u} _ {s} \mathbf {v} _ {s} ^ {T}$$
+给出矩阵A的一个良好的低秩逼近. 这一结论在实际中有广泛的应用.
+例8.5.6. (多元函数的极值) 设 $\Omega \subset \mathbb{R}^n$ 是有界区域, $\mathbf{x}^0 = (x_1^0, \ldots, x_n^0)$ 是 $\Omega$ 内一点, $f(\mathbf{x}) \in C^2(\Omega)$, $\mathbf{x} = (x_1, \ldots, x_n)$. 且 $\frac{\partial f}{\partial x_i}(\mathbf{x}^0) = 0, i = 1, 2, \ldots, n$, $H(\mathbf{x}^0) = \left(\frac{\partial^2 f}{\partial x_i \partial x_j}(\mathbf{x}^0)\right)_{n \times n} > 0$. 则 $f(\mathbf{x})$ 在 $\mathbf{x}^0$ 取极小值.
+证明. 由Taylor展开,
+$$\begin{array}{l} f (\mathbf {x}) = f (\mathbf {x} ^ {0}) + \nabla f (\mathbf {x} ^ {0}) \cdot (\mathbf {x} - \mathbf {x} ^ {0}) + \frac {1}{2} \sum_ {i = 1} ^ {n} \sum_ {j = 1} ^ {n} \frac {\partial^ {2} f}{\partial x _ {i} \partial x _ {j}} (\mathbf {x} ^ {0}) (x _ {i} - x _ {i} ^ {0}) (x _ {j} - x _ {j} ^ {0}) + o (| | \mathbf {x} - \mathbf {x} ^ {0} | | ^ {2}) \\ = f (\mathbf {x} ^ {0}) + \frac {1}{2} (\mathbf {x} - \mathbf {x} ^ {0}) ^ {T} H (\mathbf {x} ^ {0}) (\mathbf {x} - \mathbf {x} ^ {0}) + o (| | \mathbf {x} - \mathbf {x} ^ {0} | | ^ {2}) \end{array}$$
+由 $H(\mathbf{x}^{0})>0$ 知, 存在正交方阵P使得
+$$P ^ {T} H (\mathbf {x} ^ {0}) P = \operatorname{diag} \left(\lambda_ {1}, \lambda_ {2}, \dots , \lambda_ {n}\right),$$
+其中 $\lambda_1 \geq \lambda_2 \geq \ldots \geq \lambda_n > 0$. 令 $\mathbf{x} - \mathbf{x}^0 = P\mathbf{y}$, 则 $||\mathbf{x} - \mathbf{x}^0|| = ||\mathbf{y}||$. 于是
+$$\begin{array}{l} (\mathbf {x} - \mathbf {x} ^ {0}) ^ {T} H (\mathbf {x} ^ {0}) (\mathbf {x} - \mathbf {x} ^ {0}) = \mathbf {y} ^ {T} \operatorname{diag} (\lambda_ {1}, \lambda_ {2}, \ldots , \lambda_ {n}) \mathbf {y} \\ = \lambda_ {1} y _ {1} ^ {2} + \lambda_ {2} y _ {2} ^ {2} + \ldots + \lambda_ {n} y _ {n} ^ {2} \geq \lambda_ {n} (y _ {1} ^ {2} + y _ {2} ^ {2} + \ldots + y _ {n} ^ {2}) \\ = \lambda_ {n} | | \mathbf {y} | | ^ {2} = \lambda_ {n} | | \mathbf {x} - \mathbf {x} ^ {0} | | ^ {2}. \end{array}$$
+这样
+$$f (\mathbf {x}) \geq f (\mathbf {x} ^ {0}) + \frac {\lambda_ {n}}{2} | | \mathbf {x} - \mathbf {x} ^ {0} | | ^ {2} + o (| | \mathbf {x} - \mathbf {x} ^ {0} | | ^ {2}).$$
+因此, 存在  $\delta > 0$  使得  $\left|\left|\mathbf{x} - \mathbf{x}^{0}\right|\right| < \delta$  时,  $f(\mathbf{x}) \geq f(\mathbf{x}^{0})$ , 即  $f(\mathbf{x})$  在  $x = x^{0}$  达到极小.
+类似可证, 当 $H(\mathbf{x}^{0})<0$ 时, $f(\mathbf{x})$ 在 $x=x^{0}$ 达到极大.
+习题七
+1. 将下列二次型表示成矩阵形式
+[第 284 页]
+$$Q (x _ {1}, x _ {2}, x _ {3}) = - x _ {1} ^ {2} + x _ {2} ^ {2} + 2 x _ {3} ^ {2} + 4 x _ {1} x _ {2} + 3 x _ {1} x _ {3} + 4 x _ {2} x _ {3}; \tag {1}$$
+$$Q (x _ {1}, x _ {2}, x _ {3}) = 2 x _ {1} ^ {2} + 2 x _ {1} x _ {2} - x _ {2} x _ {3}; \tag {2}$$
+$$Q (x _ {1}, x _ {2}, x _ {3}, x _ {4}) = x _ {1} x _ {2} + 3 x _ {1} x _ {3} + 5 x _ {1} x _ {4} + 6 x _ {2} x _ {3} + 7 x _ {2} x _ {4} + 1 0 x _ {3} x _ {4}; \tag {3}$$
+$$(4) Q (x _ {1}, x _ {2}, \dots , x _ {n}) = \sum_ {i = 1} ^ {n - 2} (x _ {i} - x _ {i + 2}) ^ {2}.$$
+2. 写出下列对称矩阵对应的二次型
+$$\begin{array}{l} (1) A = \left( \begin{array}{c c c} 1 & 3 & 5 \\ 3 & 2 & 6 \\ 5 & 6 & 4 \end{array} \right) \quad (2) A = \left( \begin{array}{c c c} a & b & 0 \\ b & a & b \\ 0 & b & a \end{array} \right) \\ (3) A = \left( \begin{array}{c c c c} 0 & - 1 & 2 & - 3 \\ - 1 & 0 & 3 & - 2 \\ 2 & 3 & 0 & 2 \\ - 3 & - 2 & 2 & 0 \end{array} \right) \end{array}$$
+3. 用配方法将下列二次型化为标准形, 并求相应的可逆线性变换
+$$(1) Q = x _ {1} ^ {2} + x _ {2} ^ {2} + x _ {3} ^ {2} + x _ {1} x _ {2} + x _ {1} x _ {3} + x _ {2} x _ {3}$$
+$$(2) Q = x _ {1} ^ {2} + x _ {2} x _ {3}$$
+$$(3) Q = x _ {1} x _ {2} + x _ {2} x _ {3} + x _ {3} x _ {4} + x _ {4} x _ {1}$$
+$$(4) Q = x _ {1} ^ {2} + 5 x _ {2} ^ {2} - 4 x _ {3} ^ {2} + 2 x _ {1} x _ {2} - 4 x _ {2} x _ {3}$$
+4. 用初等变换法将下列二次型化成标准形, 并求相应的可逆线性变换
+$$(1) Q = \mathbf {x} ^ {T} \left( \begin{array}{c c c} 2 & 1 & 1 \\ 1 & 3 & 2 \\ 1 & 2 & 1 \end{array} \right) \mathbf {x} \qquad (2) Q = \mathbf {x} ^ {T} \left( \begin{array}{c c c} 0 & - 1 & 0 \\ - 1 & 1 & 1 \\ 0 & 1 & 1 \end{array} \right) \mathbf {x}$$
+$$(3) Q = \mathbf {x} ^ {T} \left( \begin{array}{c c c} 0 & 1 & 1 \\ 1 & 0 & - 1 \\ 1 & - 1 & 0 \end{array} \right) \mathbf {x} \quad (4) Q = \mathbf {x} ^ {T} \left( \begin{array}{c c c c} 0 & \frac {1}{2} & 0 & \frac {1}{2} \\ \frac {1}{2} & 0 & \frac {1}{2} & 0 \\ 0 & \frac {1}{2} & 0 & \frac {1}{2} \\ \frac {1}{2} & 0 & \frac {1}{2} & 0 \end{array} \right) \mathbf {x}$$
+5. 求正交变换化下列实二次型为标准形
+$$Q = x _ {1} ^ {2} + 4 x _ {2} ^ {2} + 4 x _ {3} ^ {2} - 4 x _ {1} x _ {2} + 4 x _ {1} x _ {3} - 8 x _ {2} x _ {3}$$
+$$Q = x _ {1} ^ {2} + 7 x _ {2} ^ {2} + x _ {3} ^ {2} + 8 x _ {1} x _ {2} + 8 x _ {2} x _ {3} - 1 6 x _ {1} x _ {3}$$
+$$(3) Q = 6 x _ {1} x _ {2} + 6 x _ {1} x _ {3} + 6 x _ {2} x _ {3}$$
+$$(4) Q = 2 x _ {1} x _ {2} - 2 x _ {3} x _ {4}$$
+6. 试证: 在实数域上, 对称矩阵  $\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}$  和  $\begin{pmatrix}1 & 0 \\ 0 & -1\end{pmatrix}$  不相合.
+[第 285 页]
+7. 证明: 秩等于 r 的对称矩阵可以表成 r 个秩等于 1 的对称矩阵之和.
+8. 设A是一个n阶方阵, 证明:
+(1)A是反对称阵, 当且仅当对任一个n维向量X, 有 $x^{T}Ax=0$ ;
+(2)如果A为对称阵,且对任一个n维向量x,有 $x^{T}Ax=0$ ,那么A=0.
+9. 求习题5中二次型的规范形.
+10. 设A是n阶实对称阵, 且 $A^{2}=I$ , 求A的相合规范形.
+11. 确定以下二次曲线的类型、形状与位置.
+$$3 x ^ {2} + 4 x y + 2 y ^ {2} + 8 x + 4 y + 6 = 0; \tag {1}$$
+$$x ^ {2} + x y - 2 y ^ {2} - 1 1 x - y + 2 8 = 0; \tag {2}$$
+$$4 x ^ {2} - 4 x y + y ^ {2} - 2 x - 1 4 y + 7 = 0. \tag {3}$$
+12. 将二次方程化为最简形式, 并判断曲面类型.
+$$(1) 4 x ^ {2} - 6 y ^ {2} - 6 z ^ {2} - 4 y z - 4 x + 4 y + 4 z - 5 = 0.$$
+$$(2) x ^ {2} - \frac {4}{3} y ^ {2} + \frac {4}{3} z ^ {2} - \frac {1 6}{3} \sqrt {2} y z + 4 x + \frac {8}{3} \sqrt {3} z - 1 = 0.$$
+13. 在三维空间直角坐标系中, 给定曲面方程
+$$2 x ^ {2} + 4 y ^ {2} + 5 z ^ {2} - 2 x y + 4 x z + 6 y z - 2 0 = 0.$$
+利用正交变换将其化为标准型. 该方程表示什么曲面?
+14. 判断下列二次型是否是正定二次型
+$$\begin{array}{l} (1) Q (x _ {1}, x _ {2}, x _ {3}) = x _ {1} ^ {2} + 2 x _ {2} ^ {2} + 4 x _ {3} ^ {2} + 2 x _ {1} x _ {2} - 4 x _ {2} x _ {3}; \\ (2) Q (x _ {1}, x _ {2}, x _ {3}) = - 5 x _ {1} ^ {2} - 6 x _ {2} ^ {2} - 4 x _ {3} ^ {2} + 4 x _ {1} x _ {2} + 4 x _ {1} x _ {3}; \\ (3) Q (x _ {1}, x _ {2}, x _ {3}) = 7 x _ {1} ^ {2} + x _ {2} ^ {2} + x _ {3} ^ {2} - 2 x _ {1} x _ {2} - 4 x _ {1} x _ {3}; \\ (4) Q (x _ {1}, x _ {2}, x _ {3}) = x _ {1} ^ {2} + 5 x _ {2} ^ {2} + 9 x _ {3} ^ {2} + 4 x _ {1} x _ {2} - 6 x _ {2} x _ {3} + x _ {1} x _ {3}. \end{array}$$
+15. 判断下列矩阵是否是正定矩阵
+$$\left( \begin{array}{c c c} 2 & \frac {1}{2} & 2 \\ \frac {1}{2} & 2 & - 2 \\ 2 & - 2 & 4 \end{array} \right)$$
+(2)
+$$\left( \begin{array}{c c c} 1 & - 1 & 1 \\ - 1 & 2 & 0 \\ 1 & 0 & 1 \end{array} \right)$$
+16. 问参数t满足什么条件时, 下列二次型正定?
+$$Q (x _ {1}, x _ {2}, x _ {3}) = 2 x _ {1} ^ {2} + x _ {2} ^ {2} + x _ {3} ^ {2} + 2 x _ {1} x _ {2} + t x _ {1} x _ {3}$$
+$$(2) Q (x _ {1}, x _ {2}, x _ {3}) = x _ {1} ^ {2} + 2 x _ {2} ^ {2} + 3 x _ {3} ^ {2} + t x _ {1} x _ {2} + t x _ {1} x _ {3} + x _ {2} x _ {3}$$
+[第 286 页]
+17. 证明: 对任意实数 $x, y$, 二元二次多项式 $f(x, y) = 2x^{2} + 3y^{2} + 4z^{2} - 2xy + 2xz - 6yz$ 恒大于零.
+18. 设 $Q = ax_{1}^{2} + bx_{2}^{2} + ax_{3}^{2} + 2cx_{1}x_{3}$，问 $a, b, c$ 满足什么条件时，$Q$ 为正定？
+19. 试证:二次型 $Q(x_{1},x_{2},\ldots,x_{n})=\mathbf{x}^{T}A\mathbf{x}$ 负定的充分必要条件是A的奇数阶顺序主子式全小于零,偶数阶顺序主子式全大于零.
+20. 设有 $n$ 元实二次型
+$$Q \left(x _ {1}, x _ {2}, \dots , x _ {n}\right) = \left(x _ {1} + a _ {1} x _ {2}\right) ^ {2} + \left(x _ {2} + a _ {2} x _ {3}\right) ^ {2} + \dots + \left(x _ {n - 1} + a _ {n - 1} x _ {n}\right) ^ {2} + \left(x _ {n} + a _ {n} x _ {1}\right) ^ {2}$$
+其中 $a_{i}(i=1,\cdots,n)$ 为实数,试问:当 $a_{1},\cdots,a_{n}$ 满足何种条件时, $Q(x_{1},\cdots,x_{n})$ 为正定二次型?
+21. 在 $Q = \lambda (x^{2} + y^{2} + z^{2}) + 2xy + 2xz - 2yz$ 中, 问
+(1)哪些 $\lambda$ 的值使得Q为正定?
+(2)哪些 $\lambda$ 的值使得 $Q$ 为负定?
+(3)当 $\lambda = 2$ 和 $\lambda = -1$ 时, $Q$ 为什么类型?
+22. 设A为n阶实对称阵, 证明: 若A正定, 则对任意正整数k,  $A^{k}$ 为正定.
+23. 设A为n阶可逆实对称阵, 证明:
+(1) 若 $A$ 正定, 则 $A^{-1}$ 亦正定.
+(2) 若 $A$ 正定, 则 $A$ 的伴随矩阵 $A^{*}$ 也是正定矩阵.
+24. 设A为n阶实对称矩阵, 若 $A^{2}=I$ , 证明 $A+I$ 为正定矩阵或半正定矩阵.
+25. 设A,B是两个n阶实对称正定矩阵,证明:
+(1) $A+B$ 亦正定；(2)AB正定的充分必要条件是AB=BA.
+26. 设A,B均为n阶实对称阵, 其中A为正定阵, 证明: 当实数t充分大后,  $tA+B$ 亦正定.
+27. A是实对称正定矩阵, 证明: 存在下三角阵P, 使得 $A = PP^{T}$ . 进一步证明, 存在下三角阵L, 其对角线元素均为1, 以及对角阵D, 其对角元均为正使得 $A = LDL^{T}$ .
+28. 设 $A$ 为 $n$ 阶实对称阵, 且 $A > 0$. 求证: $\operatorname{det}(A) \leq \left(\frac{1}{n} Tr(A)\right)^n$.
+29. 证明: 若 $A = (a_{ij})$ 是 $n$ 阶正定矩阵, 则 $\operatorname{det}(A) \leq a_{11}a_{22} \cdots a_{nn}$.
+30. 设A为n阶实对称方阵, 证明下列命题等价
+[第 287 页]
+(1) $A$ 为半正定方阵.
+(2) $A = P^{T}P$, 其中 $P$ 为 $n$ 阶实方阵.
+(3) $A$ 的各阶主子式皆非负.
+31. 在二次型 $Q = x^{T} A x$ 中, 实对称阵 $A = (\alpha_{ij})_{n \times n}$, 若
+$$\left| \begin{array}{c c c} a _ {1 1} & \dots & a _ {1 k} \\ \dots & \dots & \dots \\ a _ {k 1} & \dots & a _ {k k} \end{array} \right| > 0, \quad k = 1, 2, \dots , n - 1, \quad \det A = 0$$
+证明:Q为半正定.
+32. 设 $A \in \mathbb{R}^{m \times n}$, $A = U\begin{pmatrix} \Lambda & O \\ O & O \end{pmatrix} V$ 是 $A$ 的奇异值分解, 如定理 8.5.7 所述. 令 $A^{+} = V^{T}\begin{pmatrix} \Lambda^{-1} & O \\ O & O \end{pmatrix} U^{T}$, 称 $A^{+}$为矩阵 $A$ 的广义逆. 证明:
+$$A A ^ {+} A = A, \quad A ^ {+} A A ^ {+} = A ^ {+}, \quad (A A ^ {+}) ^ {*} = A A ^ {+}, \quad (A ^ {+} A) ^ {*} = A ^ {+} A.$$
+33. 设 $A \in \mathbb{R}^{m \times n}$. 证明: $|A| := \max_{\mathbf{x} \neq \mathbf{0}} \frac{|A\mathbf{x}|}{|\mathbf{x}|} = \sigma_{\max}$, 这里 $\sigma_{\max}$ 是矩阵 $A$ 的最大奇异值. 称 $|A|$ 为矩阵 $A$ 的谱范数.
+[第 288 页]
+[第 289 页]
+参考文献
+[1] 代数学引论, 许以超编著, 上海科学技术出版社, 1966年5月第1版.
+[2] 高等数学引论(余篇), 华罗庚著, 科学出版社, 1984年7月第1版, 2009年4月高等教育出版社重印(王元校).
+[3] 线性代数, 李炯生、查建国编著, 中国科学技术大学出版社, 1989年4月第1版, 2010年1月第2版.
+[4] 高等代数, 刘昌堃、叶世源、叶家琛编, 同济大学出版社, 1995年4月第1版.
+[5] 解析几何, 丘维声编, 北京大学出版社, 1996年10月第2版.
+[6] 高等代数教程(上、下), 王萼芳编著, 清华大学出版社, 1997年4月第1版.
+[7] 线性代数简明教程, 陈龙玄、钟立敏编, 中国科学技术大学出版社, 1989年2月第1版, 1997年9月修订版.
+[8] 高等代数与解析几何(上、下), 陈志杰主编, 高等教育出版社, 2000年6月第1版.
+[9] 简明线性代数, 丘维声编著, 北京大学出版社, 2002年2月第1版.
+[10] 高等代数(上、下), 丘维声编著, 高等教育出版社, 2002年7月第2版.
+[11] 高等代数学, 张贤科、许甫华编著, 清华大学出版社, 2004年7月第2版.
+[12] 微积分(上、下), 谢盛刚、李娟、陈秋桂编, 科学出版社, 2005年1月第1版.
+[13] 线性代数及其应用(原书第2版),(美)David C.Lay著,刘深泉、洪毅、马东魁、郭国雄、刘勇平译,机械工业出版社,2005年8月.
+[14] 线性代数, 李尚志编著, 高等教育出版社, 2006年5月第1版.
+[15] 高等代数与解析几何(上、下), 孟道骥著, 科学出版社, 2007年1月第2版.
+[16] 高等代数简明教程(上、下), 蓝以中编著, 北京大学出版社, 2007年7月第2版.
+[17] 解析几何简明教程, 吴光磊、田畴编, 高等教育出版社, 2008年3月第2版.

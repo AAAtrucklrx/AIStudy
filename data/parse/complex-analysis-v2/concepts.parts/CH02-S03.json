@@ -1,0 +1,117 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH02-S03",
+    "text_sha256": "a0b527429bc2c75a2957de6162f3e8dea1bcdb4cb75663d3f8d4bd7aedb46a71",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "a0b527429bc2c75a2957de6162f3e8dea1bcdb4cb75663d3f8d4bd7aedb46a71",
+    "source": "original_text",
+    "source_path": "original_text/ch02_s03.md"
+  },
+  "unit": {
+    "unit_id": "CH02-S03",
+    "level": "section",
+    "chapter": "CH02",
+    "section": "CH02-S03",
+    "title": "导数和解析函数的概念",
+    "anchor": "2.3"
+  },
+  "concepts": [
+    {
+      "name": "导数（可微）",
+      "type": "definition",
+      "formal": "设 $w = f(z)$ 在 $z$ 点的某邻域 $U$ 内有定义，$z + \\Delta z \\in U$. 如果极限 $$\\lim _ {\\Delta z \\rightarrow 0} \\frac {f (z + \\Delta z) - f (z)}{\\Delta z}$$ 存在，就称函数 $f(z)$ 在 $z$ 点可微，而且这个极限称为 $f(z)$ 在 $z$ 点的导数或微商.记为 $$f ^ {\\prime} (z), \\quad {\\frac {\\mathrm{d} f}{\\mathrm{d} z}} \\quad {\\text {或}} \\quad {\\frac {\\mathrm{d} w}{\\mathrm{d} z}}.$$ $$f ^ {\\prime} (z) = \\lim _ {\\Delta z \\rightarrow 0} \\frac {f (z + \\Delta z) - f (z)}{\\Delta z}.\\tag{2.1}$$",
+      "source_quote": "定义5 设 $w = f(z)$ 在 $z$ 点的某邻域 $U$ 内有定义，$z + \\Delta z \\in U$. 如果极限 $$\\lim _ {\\Delta z \\rightarrow 0} \\frac {f (z + \\Delta z) - f (z)}{\\Delta z}$$ 存在，就称函数 $f(z)$ 在 $z$ 点可微，而且这个极限称为 $f(z)$ 在 $z$ 点的导数或微商."
+    },
+    {
+      "name": "解析函数",
+      "type": "definition",
+      "formal": "如果 $f(z)$ 在区域 $D$ 内的每一点可微，则称 $f(z)$ 在 $D$ 内解析，或者说 $f(z)$ 是 $D$ 内的解析函数；如果 $f(z)$ 在点 $z_0$ 的某个邻域内可微，则称 $f(z)$ 在点 $z_0$ 解析.",
+      "source_quote": "定义6 如果 $f(z)$ 在区域 $D$ 内的每一点可微，则称 $f(z)$ 在 $D$ 内解析，或者说 $f(z)$ 是 $D$ 内的解析函数；如果 $f(z)$ 在点 $z_0$ 的某个邻域内可微，则称 $f(z)$ 在点 $z_0$ 解析."
+    },
+    {
+      "name": "奇点",
+      "type": "definition",
+      "formal": "如果 $f(z)$ 在点 $z_0$ 不解析，则 $z_0$ 称为 $f(z)$ 的奇点.",
+      "source_quote": "如果 $f(z)$ 在点 $z_0$ 不解析，则 $z_0$ 称为 $f(z)$ 的奇点."
+    },
+    {
+      "name": "可微必连续",
+      "type": "theorem",
+      "formal": "若 $f(z)$ 在点 $z$ 可微，则在此点连续.",
+      "source_quote": "这就证得，若 $f(z)$ 在点 $z$ 可微，则在此点连续."
+    },
+    {
+      "name": "和（差）的求导法则",
+      "type": "law",
+      "formal": "$[f(z)\\pm g(z)]' = f'(z)\\pm g'(z).$",
+      "source_quote": "1) $[f(z)\\pm g(z)]' = f'(z)\\pm g'(z).$"
+    },
+    {
+      "name": "乘积的求导法则",
+      "type": "law",
+      "formal": "$[f(z)g(z)]' = f'(z)g(z) + f(z)g'(z)$",
+      "source_quote": "2) $[f(z)g(z)]' = f'(z)g(z) + f(z)g'(z)$."
+    },
+    {
+      "name": "商的求导法则",
+      "type": "law",
+      "formal": "$\\left[\\frac{f(z)}{g(z)}\\right]' = \\frac{1}{g^2(z)} [g(z)f'(z) - f(z)g'(z)], g(z) \\neq 0.$",
+      "source_quote": "3) $\\left[\\frac{f(z)}{g(z)}\\right]' = \\frac{1}{g^2(z)} [g(z)f'(z) - f(z)g'(z)], g(z) \\neq 0.$"
+    },
+    {
+      "name": "复合函数的求导法则",
+      "type": "law",
+      "formal": "$\\{f[g(z)]\\}^{\\prime} = f^{\\prime}(w)g^{\\prime}(z)$，其中, $w = g(z)$.",
+      "source_quote": "4) $\\{f[g(z)]\\}^{\\prime} = f^{\\prime}(w)g^{\\prime}(z)$, 其中, $w = g(z)$."
+    },
+    {
+      "name": "反函数的求导法则",
+      "type": "law",
+      "formal": "$f^{\\prime}(z) = \\frac{1}{\\varphi^{\\prime}(w)}$，其中，$w = f(z)$ 与 $z = \\varphi(w)$ 是两个互为反函数的单值函数，且 $\\varphi^{\\prime}(w) \\neq 0$.",
+      "source_quote": "5) $f^{\\prime}(z) = \\frac{1}{\\varphi^{\\prime}(w)}$，其中，$w = f(z)$ 与 $z = \\varphi(w)$ 是两个互为反函数的单值函数，且 $\\varphi^{\\prime}(w) \\neq 0$."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 9,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "它有许多完美的性质",
+      "二项式定理",
+      "因此关于微商运算的基本法则",
+      "现将几个求导法则",
+      "数学分析中许多概念和定理",
+      "些特殊的性质",
+      "也正是由于这些特殊的性质"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "导数（可微）",
+    "解析函数",
+    "奇点",
+    "可微必连续",
+    "和（差）的求导法则",
+    "乘积的求导法则",
+    "商的求导法则",
+    "复合函数的求导法则",
+    "反函数的求导法则"
+  ]
+}

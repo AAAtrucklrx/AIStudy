@@ -1,0 +1,1590 @@
+{
+  "_meta": {
+    "file_type": "exercises",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.exercises",
+    "field_notes": {
+      "entries[]": "一条习题或一条答案；**只搬不改**，text 逐行等于 document.md",
+      "entries[].kind": "exercise=习题 / answer=答案（**答案可以没有**）",
+      "entries[].placement": "习题所在位置：section=节后 / chapter=章后 / book=全书之后（由**发现到的位置**决定，不预设）",
+      "entries[].answer_of": "答案指向哪道题；按 (章, 题号) 配对，**配不上就是 null**",
+      "entries[].source_lines": "在 document.md 里的行号区间（可逐字节复核）",
+      "segments": "这次发现到的习题/答案区段（页码区间）",
+      "统计": "数量账：习题多少、答案多少、配上的多少"
+    },
+    "note": "这一层**先不用**：不生成教案、不抽概念、不进交付页"
+  },
+  "书": "",
+  "segments": [
+    {
+      "region": "exercise",
+      "start_line": 377,
+      "end_line": 439,
+      "start_page": 26,
+      "end_page": 29
+    },
+    {
+      "region": "exercise",
+      "start_line": 3935,
+      "end_line": 3951,
+      "start_page": 225,
+      "end_page": 227
+    },
+    {
+      "region": "answer",
+      "start_line": 3952,
+      "end_line": 4182,
+      "start_page": 227,
+      "end_page": 239
+    }
+  ],
+  "entries": [
+    {
+      "id": "EX-0001",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "1",
+      "page": 26,
+      "source_lines": [
+        377,
+        379
+      ],
+      "text": "1. 用三角式及指数式表示下列复数，并求辐角的一般值：\n(1) $z = 2 - 2\\mathrm{i}$; (2) $z = -\\sqrt{3}\\mathrm{i}$;\n(3) $z = -\\frac{1}{2} - \\sqrt{3}\\mathrm{i}$; (4) $z = 1 - \\cos\\theta + \\mathrm{i}\\sin\\theta$.",
+      "answer_of": "AN-0023",
+      "has_answer": true
+    },
+    {
+      "id": "EX-0002",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "2",
+      "page": 26,
+      "source_lines": [
+        380,
+        381
+      ],
+      "text": "2. 解下列方程：\n(1) $z^{3}=-1+i\\sqrt{3};$  (2) $z^{3}=-i;$  (3) $z^{4}=-1.$",
+      "answer_of": "AN-0024",
+      "has_answer": true
+    },
+    {
+      "id": "EX-0003",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "3",
+      "page": 26,
+      "source_lines": [
+        382,
+        382
+      ],
+      "text": "3. 如果 $\\omega$ 是1的立方根中的一个复根，求证 $1 + \\omega + \\omega^2 = 0$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0004",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "4",
+      "page": 26,
+      "source_lines": [
+        383,
+        383
+      ],
+      "text": "4. 设  $x + iy = \\sqrt{a + bi}$ ，求 x, y，这里要求用 a, b 的代数式表示 x, y.",
+      "answer_of": "AN-0025",
+      "has_answer": true
+    },
+    {
+      "id": "EX-0005",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "5",
+      "page": 26,
+      "source_lines": [
+        384,
+        386
+      ],
+      "text": "5. 利用复数的指数式，证明以下等式：\n$$\\sum_ {k = 1} ^ {n} \\cos k \\theta = - \\frac {1}{2} + \\frac {\\sin \\left(n + \\frac {1}{2}\\right) \\theta}{2 \\sin \\frac {1}{2} \\theta}; \\tag {1}$$\n$$\\sum_ {k = 1} ^ {n} \\sin k \\theta = \\frac {1}{2} \\cot \\frac {\\theta}{2} - \\frac {\\cos \\left(n + \\frac {1}{2}\\right) \\theta}{2 \\sin \\frac {1}{2} \\theta}, 0 <   \\theta <   \\pi .$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0006",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "6",
+      "page": 26,
+      "source_lines": [
+        387,
+        387
+      ],
+      "text": "6. 证明 $|z_1 + z_2|^2 + |z_1 - z_2|^2 = 2(|z_1|^2 + |z_2|^2)$，并说明其几何意义。",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0007",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "7",
+      "page": 26,
+      "source_lines": [
+        388,
+        389
+      ],
+      "text": "7. (1) 如果 $|z| = 1$，证明 $\\left|\\frac{z - a}{1 - az}\\right| = 1$.\n(2) 如果 $|z| < 1, |a| < 1$，证明 $\\left|\\frac{z - a}{1 - az}\\right| < 1$.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0008",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "8",
+      "page": 26,
+      "source_lines": [
+        390,
+        394
+      ],
+      "text": "8.（1）证明\n$$\\left| z _ {1} + z _ {2} + \\dots + z _ {n} \\right| \\geqslant \\left| z _ {1} \\right| - \\left| z _ {2} \\right| - \\dots - \\left| z _ {n} \\right|.$$\n(2) 设  $0 < a_{0} \\leqslant a_{1} \\leqslant \\cdots \\leqslant a_{n}$ ，证明：方程\n$$p _ {n} (z) = a _ {0} z ^ {n} + a _ {1} z ^ {n - 1} + \\dots + a _ {n - 1} z + a _ {n} = 0$$\n在圆 $|z| < 1$ 内无根.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0009",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "9",
+      "page": 26,
+      "source_lines": [
+        395,
+        399
+      ],
+      "text": "9. 证明下列三条件之任一，都是三点 $z_{1}, z_{2}, z_{3}$ 共线的充要条件：\n(1) $\\frac{z_{1}-z_{2}}{z_{2}-z_{3}}=$ 实数；(2) $\\bar{z}_{1}z_{2}+\\bar{z}_{2}z_{3}+\\bar{z}_{3}z_{1}=$ 实数；\n(3) 存在不全为零的实数  $\\lambda_{1}, \\lambda_{2}, \\lambda_{3}$ ，使\n[第 27 页]\n$$\\left\\{ \\begin{array}{l} \\lambda_ {1} + \\lambda_ {2} + \\lambda_ {3} = 0 \\\\ \\lambda_ {1} z _ {1} + \\lambda_ {2} z _ {2} + \\lambda_ {3} z _ {3} = 0. \\end{array} \\right.$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0010",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "10",
+      "page": 27,
+      "source_lines": [
+        400,
+        401
+      ],
+      "text": "10. 证明：四点共圆共线的充要条件是\n$$\\frac {z _ {1} - z _ {3}}{z _ {2} - z _ {3}}: \\frac {z _ {1} - z _ {4}}{z _ {2} - z _ {4}} = \\text {实数}.$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0011",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "11",
+      "page": 27,
+      "source_lines": [
+        402,
+        402
+      ],
+      "text": "11. 如果 $|z_1| = |z_2| = |z_3| = 1$，且 $z_1 + z_2 + z_3 = 0$，证明 $z_1, z_2, z_3$ 构成一内接于单位圆的内接正三角形.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0012",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "12",
+      "page": 27,
+      "source_lines": [
+        403,
+        403
+      ],
+      "text": "12. 设 $z_{1}, z_{2}$ 是两复数，如果 $z_{1} + z_{2}$ 和 $z_{1}z_{2}$ 都是实数，证明 $z_{1}$ 和 $z_{2}$ 或者都是实数，或者是一对共轭复数.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0013",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "13",
+      "page": 27,
+      "source_lines": [
+        404,
+        404
+      ],
+      "text": "13. 设 $a, b$ 是正方形的两个顶点，求在所有可能情况下其他的两个顶点.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0014",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "14",
+      "page": 27,
+      "source_lines": [
+        405,
+        408
+      ],
+      "text": "14. 下面复数列是否有极限? 如果有的话求出其极限值; 如果没有, 则说明理由:\n(1) $\\frac{3+4i}{6},\\left(\\frac{3+4i}{6}\\right)^{2},\\cdots,\\left(\\frac{3+4i}{6}\\right)^{n},\\cdots.$\n(2) $1,\\frac{i}{2},-\\frac{1}{3},-\\frac{i}{4},\\frac{1}{5},\\frac{i}{6},-\\frac{1}{7},-\\frac{i}{8},\\cdots.$\n(3) 1, i, -1, -i, 1, i, -1, -i, ….",
+      "answer_of": "AN-0026",
+      "has_answer": true
+    },
+    {
+      "id": "EX-0015",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "15",
+      "page": 27,
+      "source_lines": [
+        409,
+        412
+      ],
+      "text": "15. 设 $z_{n} \\to z_{0}, \\arg z$ 表示主值，证明：\n(1) $\\bar{z}_n \\to \\bar{z}_0$.\n(2) 当  $z_{0} \\neq 0$  及负数时， $\\arg z_{n} \\rightarrow \\arg z_{0}$ ，又问当  $z_{0} = 0$  及负数时结论如何？\n(3) 当  $z_{0} = \\infty$  时，上述结论是否成立？",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0016",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "16",
+      "page": 27,
+      "source_lines": [
+        413,
+        418
+      ],
+      "text": "16. 求满足下列关系的点 $z$ 是什么曲线并作图：\n(1) $|z - a| = |z - b|$;\n(2) $|z - a| + |z - b| = R, R > |b - a|$;\n(以上 a, b 为复常数, R 为正实常数)\n(3) $\\operatorname{Re} \\frac{1}{z} = \\alpha$; (4) $\\arg \\frac{z - 1}{z + 1} = \\alpha$;\n(5) $\\left|\\frac{z-1}{z+1}\\right|=\\alpha,\\alpha$ 为实常数.",
+      "answer_of": "AN-0027",
+      "has_answer": true
+    },
+    {
+      "id": "EX-0017",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-babb955580",
+      "number": "17",
+      "page": 27,
+      "source_lines": [
+        419,
+        426
+      ],
+      "text": "17. 试在复平面上画出满足下列关系的点集的图形, 其中哪些关系确定的点集是区域? 它们的边界是什么?\n(1) Rez < 2; (2) Imz ≥ 3;\n(3) $|\\arg z| < \\frac{\\pi}{4}$; (4) $\\frac{\\pi}{4} < \\arg z < \\frac{\\pi}{3}$ 且 $1 < |z| < 2$;\n[第 28 页]\n(5)  $0 < \\arg(z - i) < \\frac{\\pi}{6}$ ;\n(6) $2 < |z + 1| < 3$ 且 $-2 < \\mathrm{Re}z \\leqslant \\frac{3}{2}$;\n(7) $|z| > 2$ 且 $|z - 2| < 2$; (8) $\\operatorname{Im} z > 1$ 且 $|z| < 2$;\n(9) $y_{1}<\\mathrm{Im}z\\leqslant y_{2};$ (10) $\\left|\\frac{z-1}{z+1}\\right|>1.$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0018",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-babb955580",
+      "number": "18",
+      "page": 28,
+      "source_lines": [
+        427,
+        428
+      ],
+      "text": "18. 证明复平面上的直线方程可以写成\n$a\\bar{z}+\\bar{a}z=C,\\quad a\\neq0$ 是复常数，C是实常数.",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0019",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-babb955580",
+      "number": "19",
+      "page": 28,
+      "source_lines": [
+        429,
+        433
+      ],
+      "text": "19. 求下列方程（t 为实参数）所给出的曲线：\n(1) $z = (1 + \\mathrm{i})t, -\\infty < t < +\\infty$\n(2) $z = a\\cos t + i b\\sin t, 0 \\leqslant t \\leqslant 2\\pi, a > 0, b > 0$\n(3) $z = t + \\frac{\\mathrm{i}}{t}, t \\neq 0$\n(4) $z = t^2 + \\frac{\\mathrm{i}}{t^2}, t > 0$",
+      "answer_of": "AN-0028",
+      "has_answer": true
+    },
+    {
+      "id": "EX-0020",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第1章",
+      "unit_id": "U-babb955580",
+      "number": "20",
+      "page": 28,
+      "source_lines": [
+        434,
+        439
+      ],
+      "text": "20. 试写出方程 $x^{2} + 2x + y^{2} = 1$ 的复数形式.\n新華和\nPDG\n• 19 •\n[第 29 页]\n第2章 复变数函数",
+      "answer_of": "AN-0029",
+      "has_answer": true
+    },
+    {
+      "id": "EX-0021",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第9章",
+      "unit_id": null,
+      "number": "9",
+      "page": 226,
+      "source_lines": [
+        3946,
+        3947
+      ],
+      "text": "9. 证明方程 $\\frac{\\mathrm{d}^2y}{\\mathrm{d}t^2} + \\omega^2 y = f(t)$ 在初始条件 $y(0) = y'(0) = 0$ 下的解是\n$$y (t) = \\frac {1}{\\omega} \\int_ {0} ^ {t} f (u) \\sin \\omega (t - u) d u.$$",
+      "answer_of": null,
+      "has_answer": false
+    },
+    {
+      "id": "EX-0022",
+      "kind": "exercise",
+      "placement": "section",
+      "chapter": "第9章",
+      "unit_id": null,
+      "number": "10",
+      "page": 226,
+      "source_lines": [
+        3948,
+        3951
+      ],
+      "text": "10. 解积分方程\n$$f (t) = a \\sin b t + c \\int_ {0} ^ {t} \\sin b (t - u) f (u) d u, \\quad b > c > 0.$$\n[第 227 页]\n习题参考答案",
+      "answer_of": "AN-0096",
+      "has_answer": true
+    },
+    {
+      "id": "AN-0023",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "1",
+      "page": 227,
+      "source_lines": [
+        3953,
+        3957
+      ],
+      "text": "1. (1) $2\\sqrt{2}\\mathrm{e}^{-\\frac{\\pi}{4}}; \\operatorname{Arg} z = -\\frac{\\pi}{4} + 2k\\pi, k = 0, \\pm 1, \\pm 2, \\dots;$\n(2) $\\sqrt{3}e^{-\\frac{\\pi}{2}i};\\mathrm{Arg}z=-\\frac{\\pi}{2}+2k\\pi,k=0,\\pm1,\\pm2,\\cdots;$\n$$\\frac {\\sqrt {1 3}}{2} \\mathrm{e} ^ {i (- x + \\arctan 2 / 5)}; \\operatorname{Arg} z = (2 k - 1) \\pi + \\arctan 2 \\sqrt {3}, k = 0, \\pm 1, \\pm 2, \\dots ;$$\n(4) 若  $\\theta = 2k\\pi, k$  是某一整数，则 z = 0，辐角无意义；若  $\\theta = \\theta_{0} + 2n\\pi, n$  是某一整数，且  $0 < \\theta_{0} < 2\\pi.$  则  $z = 2\\sin\\frac{\\theta_{0}}{2}\\mathrm{e}^{(\\frac{\\theta}{2}-\\frac{\\theta}{2})i}$ ,\n$$\\operatorname{Arg} z = \\frac {\\pi - \\theta_ {0}}{2} + 2 k \\pi , \\quad k = 0, \\pm 1, \\pm 2, \\dots .$$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0024",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "2",
+      "page": 227,
+      "source_lines": [
+        3958,
+        3961
+      ],
+      "text": "2. (1) $\\sqrt[3]{2}\\left[\\cos\\frac{\\frac{2\\pi}{3}+2k\\pi}{3}+\\mathrm{i}\\sin\\frac{\\frac{2\\pi}{3}+2k\\pi}{3}\\right], k=0,1,2;$\n$$\\cos \\frac {- \\frac {\\pi}{2} + 2 k \\pi}{3} + \\mathrm{isin} \\frac {- \\frac {\\pi}{2} + 2 k \\pi}{3}, k = 0, 1, 2; \\tag {2}$$\n$$z = \\cos \\frac {\\pi + 2 k \\pi}{4} + \\mathrm{isin} \\frac {\\pi + 2 k \\pi}{4}, k = 0, 1, 2, 3. \\tag {3}$$\n即 $z_{1} = \\frac{\\sqrt{2}}{2}(1 + \\mathrm{i}), z_{2} = \\frac{\\sqrt{2}}{2}(-1 + \\mathrm{i}), z_{3} = -\\frac{\\sqrt{2}}{2}(1 + \\mathrm{i}), z_{4} = \\frac{\\sqrt{2}}{2}(1 - \\mathrm{i}).$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0025",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "4",
+      "page": 227,
+      "source_lines": [
+        3962,
+        3965
+      ],
+      "text": "4. $x = \\pm \\sqrt{\\frac{\\sqrt{a^2 + b^2} + a}{2}}$ ， $y = \\pm \\sqrt{\\frac{\\sqrt{a^2 + b^2} - a}{2}}.$\nx, y 的符号决定于 b. 若 b > 0，则应取同号；若 b < 0，则应取异号.\n[第 228 页]\n$$1 3. \\left\\{ \\begin{array}{l} a + \\mathrm{i} (b - a) \\\\ b + \\mathrm{i} (b - a) \\end{array} ; \\quad \\left\\{ \\begin{array}{l} a - \\mathrm{i} (b - a) \\\\ b - \\mathrm{i} (b - a) \\end{array} ; \\quad \\left\\{ \\begin{array}{l} a + \\frac {b - a}{\\sqrt {2}} \\exp \\left(- \\frac {\\pi}{4} \\mathrm{i}\\right) \\\\ a + \\frac {b - a}{\\sqrt {2}} \\exp \\left(\\frac {\\pi}{4} \\mathrm{i}\\right). \\end{array} \\right. \\right. \\right.$$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0026",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "14",
+      "page": 228,
+      "source_lines": [
+        3966,
+        3966
+      ],
+      "text": "14. (1) 0; (2) 0; (3) 无极限.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0027",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "16",
+      "page": 228,
+      "source_lines": [
+        3967,
+        3971
+      ],
+      "text": "16.（1）点 $a, b$ 连线的垂直平分线；\n(2) 焦点为 a, b 的椭圆；\n(3) 是与 $Oy$ 轴相切于原点的圆族及 $Oy$ 轴（均不包括原点）；\n(4) 是经过 $(\\pm1,0)$ 的圆族及Ox轴(均不包括点 $(1,0)$ 和 $(-1,0)$ );\n(5) 是以点 $(\\pm1,0)$ 为对称点的圆族及Oy轴.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0028",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "19",
+      "page": 228,
+      "source_lines": [
+        3972,
+        3972
+      ],
+      "text": "19. (1) $y = x$; (2) $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$; (3) $y = \\frac{1}{x}$; (4) $y = \\frac{1}{x}$ 的一支.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0029",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第1章",
+      "unit_id": null,
+      "number": "20",
+      "page": 228,
+      "source_lines": [
+        3973,
+        3973
+      ],
+      "text": "20. $z\\dot{z} + z + \\dot{z} = 1$，即 $|z + 1| = \\sqrt{2}$.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0030",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第2章",
+      "unit_id": null,
+      "number": "1",
+      "page": 228,
+      "source_lines": [
+        3975,
+        3977
+      ],
+      "text": "1.（1）以点 $\\left(\\frac{1}{2},0\\right)$ 为心， $\\frac{1}{2}$ 为半径的圆周；（2） $u$ 轴；\n(3) 直线 u = -v; (4) 以原点为心,  $\\frac{1}{2}$  为半径的圆周;\n(5) 以 $\\left(-\\frac{1}{4},0\\right)$ 为心， $\\frac{\\sqrt{5}}{4}$ 为半径的圆周.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0031",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第2章",
+      "unit_id": null,
+      "number": "5",
+      "page": 228,
+      "source_lines": [
+        3978,
+        3978
+      ],
+      "text": "5.（1）在全平面不解析；（2） $z \\geqslant 1$ 解析.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0032",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第2章",
+      "unit_id": null,
+      "number": "6",
+      "page": 228,
+      "source_lines": [
+        3979,
+        3981
+      ],
+      "text": "6. (1) $3z^{2}$;\n(2)  $e^{x}(x\\cos y - y\\sin y + \\cos y) \\div ie^{x}(y\\cos y + x\\sin y + \\sin y)$ ;\n(3) - (sinxcoshy + icosxsinhy).",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0033",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第2章",
+      "unit_id": null,
+      "number": "11",
+      "page": 228,
+      "source_lines": [
+        3982,
+        3983
+      ],
+      "text": "11. (1) $z \\neq 1, 2, \\frac{3 - 2z}{(z^2 - 3z + 2)^2}$;\n$$z \\neq \\sqrt [ 3 ]{a} \\left(\\cos \\frac {\\pi + 2 k \\pi}{3} + \\mathrm{i} \\sin \\frac {\\pi + 2 k \\pi}{3}\\right), k = 0, 1, 2, \\frac {- 3 z ^ {2}}{(z ^ {3} + a) ^ {2}}. \\tag {2}$$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0034",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第2章",
+      "unit_id": null,
+      "number": "13",
+      "page": 228,
+      "source_lines": [
+        3984,
+        3984
+      ],
+      "text": "13. $\\sqrt{z} = \\sqrt{|z|}\\exp \\left(\\frac{\\mathrm{iarg}z}{2}\\right),\\frac{\\pi}{2} -2\\pi <  \\arg z <   \\frac{\\pi}{2};$ 在左沿 $\\sqrt{\\mathrm{i}} = -\\frac{\\sqrt{2}}{2}(1 + \\mathrm{i})$ ，在右沿 $\\sqrt{\\mathrm{i}} = \\frac{\\sqrt{2}}{2} (1 + \\mathrm{i});w(-1) = -\\mathrm{i},w^{\\prime}(-1) = \\frac{\\mathrm{i}}{2}.$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0035",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第2章",
+      "unit_id": null,
+      "number": "14",
+      "page": 228,
+      "source_lines": [
+        3985,
+        3987
+      ],
+      "text": "14. 在 $z = 0$ 取正值的分支为 $w_{0} = |(1 - z^{2})(1 - k^{2}z^{2})|^{\\frac{1}{2}}\\mathrm{e}^{\\frac{\\theta_{1} + \\theta_{2}}{2}}$，其中，$\\theta_{1} = \\arg (1 -$\n[第 229 页]\n$z^2), \\theta_2 = \\arg (1 - k^2 z^2)$ 都取主值.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0036",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第2章",
+      "unit_id": null,
+      "number": "15",
+      "page": 229,
+      "source_lines": [
+        3988,
+        3988
+      ],
+      "text": "15. $w(-1) = \\sqrt[4]{8} e^{\\frac{3}{4} i}, w'(-1) = -\\frac{5}{8}\\sqrt[4]{8} e^{\\frac{3}{4} i}$.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0037",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第2章",
+      "unit_id": null,
+      "number": "16",
+      "page": 229,
+      "source_lines": [
+        3989,
+        3989
+      ],
+      "text": "16.（1）不存在；（2）不存在；（3）不存在.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0038",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第2章",
+      "unit_id": null,
+      "number": "17",
+      "page": 229,
+      "source_lines": [
+        3990,
+        3990
+      ],
+      "text": "17. 沿所有射线方向都有 $z + \\mathrm{e}^z \\to \\infty$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0039",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第2章",
+      "unit_id": null,
+      "number": "18",
+      "page": 229,
+      "source_lines": [
+        3991,
+        3992
+      ],
+      "text": "18. (1) $\\left(2k + \\frac{1}{2}\\right)\\pi - \\ln (2 + \\sqrt{3})$; (2) $\\mathrm{i}\\left(k + \\frac{1}{2}\\right)\\pi$;\n(3)  $\\ln |A| + i(\\arg A + 2k\\pi), k = 0, \\pm 1, \\pm 2, \\cdots.$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0040",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第2章",
+      "unit_id": null,
+      "number": "19",
+      "page": 229,
+      "source_lines": [
+        3993,
+        3995
+      ],
+      "text": "19. (1) $z \\neq \\mathrm{i}(2k + 1)\\pi, k = 0, \\pm 1, \\pm 2, \\dots, \\frac{-\\mathrm{e}^z}{(1 + \\mathrm{e}^z)^2}$;\n(2) $z \\neq \\left(2k + \\frac{1}{2}\\right)\\pi - \\ln (2 + \\sqrt{3}), k = 0, \\pm 1, \\cdots; \\frac{-\\cos z}{(\\sin z - 2)^2};$\n(3) $z \\neq 1, \\exp \\left(\\frac{1}{z - 1}\\right)\\left[1 - \\frac{z}{(z - 1)^2}\\right]$.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0041",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第2章",
+      "unit_id": null,
+      "number": "21",
+      "page": 229,
+      "source_lines": [
+        3996,
+        3997
+      ],
+      "text": "21. Resinz = sinxcoshy, Imsinz = cosxsinh y,\n| sinz | =  $\\sqrt{\\sin^{2}x + \\sinh^{2}y}$ .",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0042",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第2章",
+      "unit_id": null,
+      "number": "22",
+      "page": 229,
+      "source_lines": [
+        3998,
+        3998
+      ],
+      "text": "22. 实轴及直线族:  $Rez = n\\pi, n = 0, \\pm 1, \\pm 2, \\cdots$ .",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0043",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第2章",
+      "unit_id": null,
+      "number": "23",
+      "page": 229,
+      "source_lines": [
+        3999,
+        4000
+      ],
+      "text": "23. 本题各答案中 $k = 0, \\pm 1, \\pm 2, \\cdots$ $\\mathrm{i}(2k + 1)\\pi, \\mathrm{i}\\pi, \\mathrm{i}(2k + \\frac{1}{2})\\pi, \\mathrm{i}\\frac{1}{2}$, $\\int_{\\ln}\\sqrt{13} + \\mathrm{i}\\left[\\arctan\\left(-\\frac{2}{3}\\right) + 2k\\pi\\right], \\ln\\sqrt{13} + \\mathrm{i}\\left[\\pi + \\arctan\\left(-\\frac{3}{2}\\right)\\right]$, $\\exp(\\mathrm{i}/\\sqrt{2} 2k\\pi), \\exp(\\sqrt{2}\\ln 2 + \\mathrm{i}(2k + 1)\\pi)] \\exp(\\sqrt{2}\\ln 2 + \\mathrm{i}(2k + 1)\\pi)], \\exp(-2k\\pi + \\mathrm{i}\\ln 2), \\exp\\left[\\ln 5 - \\arctan\\left(-\\frac{4}{3}\\right) - 2k\\pi\\right] + \\mathrm{i}\\left[\\ln 5 + \\arctan\\left(-\\frac{4}{3}\\right) + 2k\\pi\\right]$, $\\cosh 1\\cos 2 - \\mathrm{i}\\sinh 1\\sin 2, \\mathrm{i}\\sinh 2, \\frac{8 + \\mathrm{i}15}{17}, \\frac{\\sinh 4 - \\mathrm{i}\\sin 2}{2(\\sinh 4^2 + \\sin 1)}$, $\\left[2k\\pi - \\mathrm{i}\\ln(\\sqrt{2} - 1) - 2k\\pi - \\mathrm{i}\\ln(2 \\pm \\sqrt{3}), (2k + 1)\\pi - \\mathrm{i}\\ln(\\sqrt{2} + 1), (k + \\frac{1}{2})\\pi - \\frac{1}{2}\\arctan\\frac{1}{2} + \\frac{1}{4}\\ln 5,\\left[\\ln(\\sqrt{5} + 2) + \\mathrm{i}(2k + \\frac{1}{2})\\pi\\right], \\ln(\\sqrt{5} - 2) + \\mathrm{i}(2k - \\frac{1}{2})\\pi.$\n[第 230 页]",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0044",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第2章",
+      "unit_id": null,
+      "number": "24",
+      "page": 230,
+      "source_lines": [
+        4001,
+        4001
+      ],
+      "text": "24. $a^{bc} = \\exp (bc\\mathrm{Ln}a),(a^b)^c = \\exp (bc\\mathrm{Ln}a + \\mathrm{i}2ck\\pi)$ .当 $C$ 是整数时，二者相等",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0045",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第3章",
+      "unit_id": null,
+      "number": "1",
+      "page": 230,
+      "source_lines": [
+        4003,
+        4003
+      ],
+      "text": "1. (1) $8 + \\mathrm{i}3\\pi$ (2) $8 - \\mathrm{i}3\\pi$ (3) $-\\mathrm{i}6\\pi$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0046",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第3章",
+      "unit_id": null,
+      "number": "2",
+      "page": 230,
+      "source_lines": [
+        4004,
+        4004
+      ],
+      "text": "2. (1) i; (2) 2i; (3) 2i.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0047",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第3章",
+      "unit_id": null,
+      "number": "6",
+      "page": 230,
+      "source_lines": [
+        4005,
+        4005
+      ],
+      "text": "6. (1)  $2\\cosh1$ ; (2)  $1 + i_{1}$ ; (3) -2.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0048",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第3章",
+      "unit_id": null,
+      "number": "9",
+      "page": 230,
+      "source_lines": [
+        4006,
+        4006
+      ],
+      "text": "9.  $2\\pi i$ .",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0049",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第3章",
+      "unit_id": null,
+      "number": "10",
+      "page": 230,
+      "source_lines": [
+        4007,
+        4007
+      ],
+      "text": "10. (1) $\\pi e^{i}$; (2) $-\\pi e^{-i}$; (3) $i2\\pi \\sin 1$.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0050",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第3章",
+      "unit_id": null,
+      "number": "11",
+      "page": 230,
+      "source_lines": [
+        4008,
+        4008
+      ],
+      "text": "11.0.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0051",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第3章",
+      "unit_id": null,
+      "number": "12",
+      "page": 230,
+      "source_lines": [
+        4009,
+        4009
+      ],
+      "text": "12. (1) $\\frac{\\pi}{5}$; (2) 0.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0052",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第3章",
+      "unit_id": null,
+      "number": "14",
+      "page": 230,
+      "source_lines": [
+        4010,
+        4010
+      ],
+      "text": "14.  $\\frac{\\pi}{2}$ .",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0053",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "1",
+      "page": 230,
+      "source_lines": [
+        4012,
+        4012
+      ],
+      "text": "1. c = -3a, b = -3d.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0054",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "3",
+      "page": 230,
+      "source_lines": [
+        4013,
+        4014
+      ],
+      "text": "3.（1）不是调和函数；\n(2) $f(u)=au+b,a,b$ 是任意常数.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0055",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第4章",
+      "unit_id": null,
+      "number": "4",
+      "page": 230,
+      "source_lines": [
+        4015,
+        4015
+      ],
+      "text": "4. (1) $f(z) = z^3 (1 + 2\\mathrm{i})$; (2) $f(z) = z\\mathrm{e}^z$; (3) $f(z) = \\frac{z + 2}{z + 1}$.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0056",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "3",
+      "page": 230,
+      "source_lines": [
+        4017,
+        4027
+      ],
+      "text": "3. (1) $\\sum_{n=0}^{\\infty}\\left(1 + \\frac{1}{n!}\\right)z^n, |z| < 1$;\n(2) $\\sum_{n=0}^{\\infty} \\frac{(1+n-n^{2})\\cos\\frac{n\\pi}{2}-n\\sin\\frac{n\\pi}{2}}{n!} z^{n}, |z|<\\infty;$\n(3) $\\sum_{n=0}^{\\infty} (-1)^{n} \\frac{z^{2n}}{n!}, |z| < \\infty$;\n(4) $\\sum_{n=0}^{\\infty} 2^{\\frac{n}{2}} \\frac{\\cos \\frac{n\\pi}{4}}{n!} z^{n}, |z| < \\infty;$\n(5) $\\sum_{n=0}^{\\infty}\\left(1 - \\frac{1}{2^{n+1}}\\right)z^n, |z| < 1,$\n[第 231 页]\n(6) $\\frac{1}{2}\\sum_{n=1}^{\\infty}(-1)^{n-1}2^{2n}z^{2n}/(2n)!, |z|<\\infty;$\n(7) $z + \\frac{1}{3} z^3 + \\cdots, |z| < \\pi/2;$\n(8) $\\sum_{n=1}^{\\infty} nz^n, |z| < 1$;\n(9) $\\sum_{n=0}^{\\infty} \\frac{z^{2n+1}}{(2n+1) \\cdot n!}, |z| < \\infty$.\n(10) $\\sum_{n=0}^{\\infty} \\frac{(-1)^n}{(2n+1) \\cdot (2n+1)!} z^{2n+1}, |z| < \\infty.$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0057",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "9",
+      "page": 231,
+      "source_lines": [
+        4028,
+        4030
+      ],
+      "text": "9. (1) $m + n$ 级零点.\n(2) 当 $m > n$ 时, 有 $n$ 级零点; 当 $m = n$ 时, 有不低于 $n$ 级的零点.\n(3) 当 m > n 时，有 m - n 级零点；当 m = n 时是可去奇点.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0058",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "10",
+      "page": 231,
+      "source_lines": [
+        4031,
+        4031
+      ],
+      "text": "10. (1) $\\sum_{n = -2}^{\\infty} z^n$; (2) $\\sum_{n = -\\infty}^{2} \\frac{z^n}{(2 - n)!}$.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0059",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "11",
+      "page": 231,
+      "source_lines": [
+        4032,
+        4038
+      ],
+      "text": "11. (1)  $\\frac{1}{b-a}\\sum_{n=0}^{n}\\left(\\frac{a^{n+1}}{b^{n+1}}\\right)^{z^{n}}$ ;\n(2)  $\\frac{1}{a-b}\\left(\\sum_{n=0}^{n}\\frac{z^{n}}{b^{n+1}}+\\sum_{n=1}^{n}\\frac{a^{n-1}}{z^{n}}\\right)$ ;\n(3)  $\\frac{1}{a-b}\\sum_{n=1}^{\\infty}(a^{n-1}-b^{n-1})/z^{n}$ ;\n(4)  $-\\sum_{n=1}^{n}(z-a)^{n}/(b-a)^{n+2}$ ;\n(5)  $\\sum_{n=m}^{z}(b-a)^{-x-2}(z-a)^{*}$ ;\n(6)  $-\\sum_{n=1}^{n}(z-b)^{n}/(a-b)^{n+2}$ ;\n(7)  $\\sum_{n=m}^{z}(z-b)^{n}/(a-b)^{n+2}$ .",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0060",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "12",
+      "page": 231,
+      "source_lines": [
+        4039,
+        4043
+      ],
+      "text": "12. 设 $a = a_1$，若 $a_1$ 为可去奇点，展开式为 $\\sum_{n=0}^{\\infty} c_n (z - a_1)^n, |z - a_1| < r$；若 $a_1$ 为 $m$ 级极点，展开式为 $\\sum_{n=m}^{+\\infty} c_n (z - a_1)^n, c_{-m} \\neq 0, 0 < |z - a_1| < r$；若 $a_1$ 为本性奇点，展开式为 $\\sum_{n=m}^{+\\infty} c_n (z - a)^n, c_{-n}, n > 0$ 中有无穷多个不为 0，$0 < |z - a_1| < r$;\n[第 232 页]\n以上 $r = \\min (|a_1 - a_2|, |a_1 - a_3|)$; 当 $a = a_2, a_3$ 或 $\\infty$ 时类似讨论.\n例如，若 $z = \\infty$ 是可去奇点，有 $\\sum_{n = -\\infty}^{0}c_n z^n$；若 $z = \\infty$ 是 $m$ 级极点，有 $\\sum_{n = -\\infty}^{m}c_n z^n$ 且 $c_m \\neq 0$；若 $z = \\infty$ 是本性奇点，有 $\\sum_{n = -\\infty}^{+\\infty}c_n z^n$，且 $c_n, n > 0$ 有无穷多个不为零，都有 $r = |a_3| < |z|$.\n(2) $f(z)$ 可在 $a$ 点附近展成幂级数，$\\sum_{n=0}^{\\infty} a_n (z - a)^n$，收敛半径 $R = \\min(|a - a_1|, |a - a_2|, |a - a_3|)$.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0061",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "13",
+      "page": 232,
+      "source_lines": [
+        4044,
+        4053
+      ],
+      "text": "13. (1) 2i, -2i 均为一级极点.\n(2) $\\left(n+\\frac{1}{2}\\right)\\pi,n=0,\\pm1,\\pm2,\\cdots$ 均为一级极点.\n(3) 1, 本性奇点.\n(4) $2k\\pi i,k=0,\\pm1,\\pm2,\\cdots$ 均为一级极点.\n(5) 0, 本性奇点.\n(6) 1, 本性奇点; 0, 可去奇点;  $2k\\pi i, k = \\pm 1, \\pm 2, \\cdots$  均为一级极点.\n(7) 3, 二级极点; 0, 一级极点; -1, 三级极点.\n$$z _ {n} = 2 n \\pi + a \\text {及} z _ {n} ^ {\\prime} = (2 n + 1) \\pi - a, n = 0, \\pm 1, \\pm 2, \\dots$$\n① 若  $a \\neq m\\pi + \\frac{\\pi}{2}, m = 0, \\pm 1, \\pm 2, \\cdots, z_{n}$  及  $z_{n}^{\\prime}$  都是一级极点；② 若  $a = m\\pi + \\frac{\\pi}{2}, z_{n}$  及  $z_{n}^{\\prime}$  都是二级极点；\n(9) 分两种情况: ① 若 n > 2, 0 是  $(n - 2)$  级极点; ② 有  $n \\leqslant 2$ , 0 是可去奇点.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0062",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第5章",
+      "unit_id": null,
+      "number": "14",
+      "page": 232,
+      "source_lines": [
+        4054,
+        4055
+      ],
+      "text": "14.（1）可去奇点；（2）本性奇点；（3）可去奇点；（4）本性奇点；（5）三级极点；\n(6) 可去奇点；(7) 可去奇点；(8) 非孤立奇点；(9) 本性奇点.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0063",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "1",
+      "page": 232,
+      "source_lines": [
+        4057,
+        4066
+      ],
+      "text": "1. (1) 在 $z = i$ 的留数是 $\\cosh 1$;\n(2) 在  $z_{k} = \\exp\\left[\\frac{\\mathrm{i}(2k+1)\\pi}{2n}\\right]$  的留数是  $\\frac{1}{2n}\\exp\\left[\\frac{\\mathrm{i}(2k+1)\\pi}{2n}\\right]$ ， $k = 0, 1, 2, \\cdots, 2n - 1;$\n(3) 在  $z_{k}=2k\\pi i, k=0, \\pm1, \\pm2, \\cdots$  的留数是 1;\n(4) 在 z = 0 的留数是 -4/3;\n(5) 在 z = i 及 -i 的留数分别是 -3i/16 及 3i/16;\n[第 233 页]\n(6) 在 z = 1 的留数是  $\\frac{(2n)!}{(n-1)!(n+1)!}$ ;\n(7) 在  $z = z_{1}$  的留数是  $\\frac{(-1)^{m-1}n(n+1)\\cdots(n+m-2)}{(m-1)!(z_{1}-z_{2})^{m+n-1}}$ ,\n在  $z = z_{2}$  的留数是  $\\frac{(-1)^{n-1}m(m+1)\\cdots(m+n-2)}{(n-1)!(z_{2}-z_{1})^{m+n-1}}$ ;\n(8) 在 z = 0 的留数是 n；在 z = -1 的留数是 -n。",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0064",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "2",
+      "page": 233,
+      "source_lines": [
+        4067,
+        4067
+      ],
+      "text": "2. (3) - cosh1; 0; -1; -1.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0065",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "3",
+      "page": 233,
+      "source_lines": [
+        4068,
+        4068
+      ],
+      "text": "3. (1) $-\\frac{1}{2}\\pi i;$ (2) $-\\frac{\\sqrt{2}}{2}\\pi i;$ (3) $0_{1}$ (4) $0_{1}$ (5) $\\frac{3}{64}\\pi i.$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0066",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "4",
+      "page": 233,
+      "source_lines": [
+        4069,
+        4070
+      ],
+      "text": "4. (1) $\\frac{2\\pi}{\\sqrt{a^2 - 1}}$. (2) $|r| < 1$ 时, $0; |r| > 1$ 时, $\\frac{2\\pi}{r}$.\n(3) $\\frac{\\pi}{2a\\sqrt{1+a^{2}}}$ . (4) a>0 时, $\\pi i$ ; a<0 时, $-\\pi i$ .",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0067",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "5",
+      "page": 233,
+      "source_lines": [
+        4071,
+        4071
+      ],
+      "text": "5. (1) $\\frac{\\pi}{2a}$; (2) $\\frac{\\pi}{ab(a + b)}$; (3) $\\frac{\\sqrt{2}}{2}\\pi$.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0068",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "6",
+      "page": 233,
+      "source_lines": [
+        4072,
+        4072
+      ],
+      "text": "6. (1) $\\frac{\\pi}{2} e^{-ab}$; (2) $\\frac{\\pi}{2b^2}(1 - e^{-ab})$; (3) $\\pi(e^{-a} - \\frac{1}{2})$; (4) $\\frac{\\pi}{5} (\\cos 1 - e^{-2})$; (5) $\\pi(b - a)$; (6) $\\frac{\\pi}{2}$; (7) $\\frac{1}{8}$.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0069",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "7",
+      "page": 233,
+      "source_lines": [
+        4073,
+        4074
+      ],
+      "text": "7. (1) 当 $p \\neq 1$ 时, $\\frac{\\pi(1 - p)}{4\\cos\\frac{p\\pi}{2}}$; 当 $p = 1$ 时, $1/2$; (2) $-1/2$;\n(3) $\\frac{\\pi}{8|a|} (\\pi^2 + 4\\ln^2 |a|)$.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0070",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "8",
+      "page": 233,
+      "source_lines": [
+        4075,
+        4075
+      ],
+      "text": "8. (1) 无; (2) 5; (3) 1; (4) n.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0071",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第6章",
+      "unit_id": null,
+      "number": "10",
+      "page": 233,
+      "source_lines": [
+        4076,
+        4076
+      ],
+      "text": "10.4.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0072",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "2",
+      "page": 233,
+      "source_lines": [
+        4078,
+        4078
+      ],
+      "text": "2. (1) 不存在；(2) 不存在；(3) 不存在；(4) 存在， $f(z)=\\frac{1}{1+z}$ .",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0073",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第7章",
+      "unit_id": null,
+      "number": "5",
+      "page": 233,
+      "source_lines": [
+        4079,
+        4079
+      ],
+      "text": "5.  $e^{-\\frac{i\\pi}{2}}\\Gamma(s)$ .",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0074",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "1",
+      "page": 233,
+      "source_lines": [
+        4081,
+        4082
+      ],
+      "text": "1. (1) 0,3; (2) $0, \\frac{3}{4}$; (3) $\\frac{\\pi}{2}, 6$; (4) $-\\frac{\\pi}{3}, 12$.\n[第 234 页]",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0075",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "4",
+      "page": 234,
+      "source_lines": [
+        4083,
+        4083
+      ],
+      "text": "4. $\\frac{8}{3}$ .",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0076",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "5",
+      "page": 234,
+      "source_lines": [
+        4084,
+        4084
+      ],
+      "text": "5. 缺了半圆的半条形.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0077",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "6",
+      "page": 234,
+      "source_lines": [
+        4085,
+        4085
+      ],
+      "text": "6. (1) $w = \\frac{z + 2 + i}{z + 2 - i}$; (2) $w = \\frac{i z + 2 + i}{z + 1}$; (3) $w = \\frac{1 - i}{2} (z + 1)$.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0078",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "7",
+      "page": 234,
+      "source_lines": [
+        4086,
+        4086
+      ],
+      "text": "7.  $w = \\frac{z - i}{z + i}.$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0079",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "8",
+      "page": 234,
+      "source_lines": [
+        4087,
+        4087
+      ],
+      "text": "8.  $w = \\frac{2z - 1}{2 - z}.$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0080",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "9",
+      "page": 234,
+      "source_lines": [
+        4088,
+        4088
+      ],
+      "text": "9.  $\\frac{w - \\bar{a}}{w - a} = i \\frac{z - a}{z - \\bar{a}}.$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0081",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "10",
+      "page": 234,
+      "source_lines": [
+        4089,
+        4092
+      ],
+      "text": "10. 结果不唯一, 下面给出的是一个解答.\n(1) $w = -\\left[\\frac{z - (-\\sqrt{3} + \\mathrm{i})}{z - (\\sqrt{3} + \\mathrm{i})}\\right]^3$; (2) $w = -\\left[\\frac{z - \\sqrt{2} - \\mathrm{i}\\sqrt{2}}{z - \\sqrt{2} + \\mathrm{i}\\sqrt{2}}\\right]^4$;\n(3) $w = \\left(\\frac{2z - \\sqrt{3} + \\mathrm{i}}{2z + \\sqrt{3} + \\mathrm{i}}\\right)^{3 / 2}$; (4) $w = \\exp \\left(\\frac{2}{3}\\pi \\mathrm{i}\\frac{z - 4}{z - 2}\\right)$;\n(5)  $w = \\exp\\left(2\\pi i \\frac{z}{z - 2}\\right)$ .",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0082",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "11",
+      "page": 234,
+      "source_lines": [
+        4093,
+        4095
+      ],
+      "text": "11. (1) (不唯一) $w = \\frac{(\\zeta + 1)^2 - \\mathrm{i}(\\zeta - 1)^2}{(\\zeta + 1)^2 + \\mathrm{i}(\\zeta - 1)^2}$, 其中 $\\zeta = z^{n/a}$;\n(2) $w = \\frac{1}{\\pi} \\ln \\left( i \\frac{1 + z}{1 - z} \\right)$; (3) $w = \\frac{2z^2 + 1}{1 - z^2}$;\n(4) (不唯一) $w = \\left[\\frac{\\sqrt{z} + 1}{\\sqrt{z} - 1}\\right]^2$; (5) (不唯一) $w = \\sqrt{z^4 + 4}$.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0083",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "12",
+      "page": 234,
+      "source_lines": [
+        4096,
+        4111
+      ],
+      "text": "12. 解答不唯一.\n(1) 令 $z(1) = \\infty, z(\\infty) = -h - \\mathrm{i}H, z(-a) = \\infty, z(0) = 0$，则 $z = A\\int_{0}^{w} \\frac{\\sqrt{w}}{(w + a)(w - 1)} \\mathrm{d}w$，其中 $a = \\frac{H^2}{h^2}$，$A = \\frac{H^2 + h^2}{\\pi hi}$.\n(2) 令 $z(-a) = \\infty, z(-1) = -h_3 + (h_1 - h_2)\\mathrm{i}, z(-b) = \\infty, z(0) = 0,$\n$z(\\infty) = \\infty$ ，则 $z = A\\int_{0}^{\\infty}\\frac{\\sqrt{w(w + 1)}}{(w + a)(w + b)} \\mathrm{d}w$ ，故有\n$$z (- 1) = - h _ {3} + \\mathrm{i} (h _ {1} - h _ {2}) = A \\int_ {0} ^ {- 1} \\frac {\\sqrt {w (w + 1)}}{(a + w) (b + w)} \\mathrm{d} w.$$\n[第 235 页]\n令 $w = -t$ ，得\n$$- h _ {1} + h _ {2} + \\mathrm{i} (- h _ {3}) = \\frac {A}{a - b} [ \\mathrm{J} (b) - \\mathrm{J} (a) ],$$\n其中， $J(u) = \\int_{0}^{1} \\frac{t^{\\frac{1}{2}}(1-t)^{\\frac{1}{2}}}{u-t} dt$ ，在区域  $0 \\leqslant t \\leqslant 1, -\\infty < u < t$  上被积函数连续可微，故对参数 u 可在积分号下求导数，有\n$$J ^ {\\prime \\prime} (u) = 2 \\int_ {0} ^ {1} \\frac {t ^ {\\frac {3}{2} - 1} (1 - t) ^ {\\frac {3}{2} - 1}}{(u - t) ^ {3}} d t = \\frac {\\pi}{4 [ u (u - 1) ] ^ {3 / 2}},$$\n这里应用到7.2节中B函数的性质5).再对它关于 $u$ 积分导出\n$$\\mathrm{J} (u) = u \\pi - \\pi \\sqrt {u (u - 1)} - \\frac {\\pi}{2}.$$\n令 $u = a$ 与 $b$ 得\n$$- h _ {1} + h _ {2} + \\mathrm{i} (- h _ {3}) = \\frac {A \\pi}{a - b} [ \\sqrt {a (a - 1)} + (b - a) + \\mathrm{i} (- \\sqrt {b (1 - b)}) ].$$\n若取 A 为实数, a 及 b 就由下列关系确定:\n$$\\frac {\\sqrt {a (a - 1)}}{a - b} = \\frac {h _ {2}}{h _ {1}}, \\quad \\frac {\\sqrt {b (1 - b)}}{a - b}, \\quad \\text {且} A = \\frac {h _ {1}}{\\pi}.$$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0084",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "14",
+      "page": 235,
+      "source_lines": [
+        4112,
+        4112
+      ],
+      "text": "14. 在原点放置电荷 $2q$，在 $z_{1}, z_{2}, z_{3}$ 及 $z_{4}$ 各放置电荷 $-q$ 的电场，其中，$z_{i}, i = 1, 2, 3, 4$ 是 $1 + z^{4} = 0$ 的四个根。",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0085",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "15",
+      "page": 235,
+      "source_lines": [
+        4113,
+        4113
+      ],
+      "text": "15. $w = \\frac{2v_0}{\\pi}\\ln \\frac{\\sqrt{z - a} + \\sqrt{z + a}}{\\sqrt{z - a} - \\sqrt{z + a}} - v_0\\mathrm{i}.$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0086",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "16",
+      "page": 235,
+      "source_lines": [
+        4114,
+        4114
+      ],
+      "text": "16.  $w = \\frac{2}{\\pi} \\ln \\frac{z^{2} - 1}{z^{2} + 1}.$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0087",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "17",
+      "page": 235,
+      "source_lines": [
+        4115,
+        4115
+      ],
+      "text": "17. $w = \\frac{\\mathrm{i}}{\\ln 2}\\ln \\frac{4z + 1}{z + 4}.$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0088",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第8章",
+      "unit_id": null,
+      "number": "18",
+      "page": 235,
+      "source_lines": [
+        4116,
+        4116
+      ],
+      "text": "18. $w = \\frac{\\mathrm{i}}{\\ln(2 + \\sqrt{3})}\\ln (z + \\sqrt{z^2 - 1}).$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0089",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第9章",
+      "unit_id": null,
+      "number": "1",
+      "page": 235,
+      "source_lines": [
+        4118,
+        4135
+      ],
+      "text": "1. (1) $\\frac{1}{p^2 + 4} + \\frac{p}{p^2 + 9}$; (2) $\\frac{5}{(p + 2)(p - 3)}$;\n(3) $\\frac{-a}{p(p-a)}$ ;\n(4) $\\frac{p}{(p-a)(p-b)}$ ;\n(5) $\\frac{1}{b^2 - a^2}\\left(\\frac{p}{p^2 + a^2} -\\frac{b}{p^2 + b^2}\\right)$;\n(6) $\\frac{1}{p^{2}(p^{2}+a^{2})}$\n[第 236 页]\n(7) $\\frac{5}{(p + 2)^2 + 5^2}$;\n(8) $\\frac{p+3-4i}{(p+3)^{2}+4^{2}};$\n(9) $\\frac{1}{(p-5)^{2}};$\n(10) $\\frac{p}{p^2 - \\omega^2}$;\n(11) $\\frac{(p + a)\\cos\\varphi - \\omega\\sin\\varphi}{(p + a)^2 + \\omega^2}$;\n(12) $\\frac{p^2\\omega}{(p + a)^2 + \\omega^2} -\\omega ;$\n(13) $\\frac{2}{(p - 1)^3}$;\n(14) $\\frac{1}{p(p - 2)^2}$;\n(15) $\\frac{6}{(p^2 - 9)(p^2 + 4)}$;\n(16) $\\frac{n!}{(p+a)^{n+1}\\left[(p+a)^{2}+\\omega^{2}\\right]}$\n(17) $e^{-\\varphi p}\\frac{p}{p^{2}+\\omega^{2}}$\n(18)  $\\frac{p\\cos\\omega\\varphi - \\omega\\sin\\omega\\varphi}{p^{2} + \\omega^{2}}e^{-2pq}.$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0090",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第9章",
+      "unit_id": null,
+      "number": "2",
+      "page": 236,
+      "source_lines": [
+        4136,
+        4140
+      ],
+      "text": "2. (1) $\\frac{\\omega\\cos\\omega\\varphi - p\\sin\\omega\\varphi}{p^2 + \\omega^2}$;\n(2) $\\frac{\\omega\\cos\\varphi - p\\sin\\varphi}{p^2 + \\omega^2}$;\n(3) $\\frac{\\omega\\cos\\omega\\varphi + p\\sin\\omega\\varphi}{p^2 + \\omega^2}\\mathrm{e}^{-\\varphi t}$;\n(4) $\\frac{\\omega}{p^{2}+\\omega^{2}}e^{-i\\varphi}.$\n图略.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0091",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第9章",
+      "unit_id": null,
+      "number": "3",
+      "page": 236,
+      "source_lines": [
+        4141,
+        4146
+      ],
+      "text": "3. (1) $(t - T)h(t - T), \\frac{1}{p^2}\\mathrm{e}^{-pT}$;\n(2) $-Eh(t - T), -\\frac{E}{p} e^{-pT}$;\n(3) $Eh(t - t_1) - Eh[t - (t_1 + \\tau_1)] + Eh(t - t_2) - Eh[t - (t_2 + \\tau_2)],$ $\\frac{E}{p} [e^{-t_1p} - e^{-(t_1 + \\tau_1p)} + e^{-t_2p} - e^{-(t_2 + t_2)p}];$\n$$E h (t) - \\frac {1}{4} E h (t - T) - \\frac {1}{4} E h (t - 2 T) - \\frac {1}{4} E h (t - 3 T) - \\frac {1}{4} E h (t - 4 T).$$\n$$\\frac {E}{4 p} \\left(4 - e ^ {- p T} - e ^ {- 2 p T} - e ^ {- 3 p T} - e ^ {- 4 p T}\\right)$$\n(5) $\\frac{E}{T} th(t) - \\frac{E}{T} th(t - T), \\frac{E}{Tp^2}[1 - e^{-pT}(1 + pT)].$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0092",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第9章",
+      "unit_id": null,
+      "number": "4",
+      "page": 236,
+      "source_lines": [
+        4147,
+        4148
+      ],
+      "text": "4. 图略.\n(1) $\\frac{1}{p^2} - \\frac{\\mathrm{e}^{-p}}{p(1 - \\mathrm{e}^{-p})}$; (2) $\\frac{1}{p(1 - \\mathrm{e}^{-p})} - \\frac{1}{p^2}$.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0093",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第9章",
+      "unit_id": null,
+      "number": "5",
+      "page": 236,
+      "source_lines": [
+        4149,
+        4154
+      ],
+      "text": "5. (1) $-\\frac{2E}{T} t + E$，周期为 $T$，$\\frac{E}{p}\\left(\\frac{1 + e^{-pT}}{1 - e^{-pT}}\\right) - \\frac{2E}{p^2 T}$\n(2) $A\\left[h(t)-h\\left(t-\\frac{\\pi}{\\omega}\\right)\\right]\\sin\\omega t$ ，周期为 $\\frac{2\\pi}{\\omega}$ ， $\\frac{A\\omega}{(p^{2}+\\omega^{2})(1-\\mathrm{e}^{-np/w})}$\n[第 237 页]\n(3) $\\left\\{\\begin{aligned}-\\frac{0.4E}{T}t+E,&0\\leqslant t\\leqslant\\frac{T}{2}\\\\ \\frac{0.4E}{T}t-0.4E,&\\frac{T}{2}<t\\leqslant T,\\end{aligned}\\right.$  周期为T,\n$\\frac{1}{1 - \\mathrm{e}^{-pT}}\\left[\\frac{E}{p}(1 - \\mathrm{e}^{-pT / 2}) + \\frac{0.4E}{Tp^2} (2\\mathrm{e}^{-Tp / 2} - \\mathrm{e}^{-Tp} - 1)\\right];$\n(4) $\\left\\{\\begin{aligned}E\\sin\\frac{2\\pi}{\\tau}t,\\quad&0\\leqslant t\\leqslant\\tau\\\\ 0,\\quad&\\tau<t\\leqslant T,\\end{aligned}\\right.$ 周期为T, $\\frac{\\frac{2\\pi E}{\\tau}}{p^{2}+\\left(\\frac{2\\pi}{\\tau}\\right)^{2}}\\cdot\\frac{1-e^{-pr}}{1-e^{-pT}}.$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0094",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第9章",
+      "unit_id": null,
+      "number": "7",
+      "page": 237,
+      "source_lines": [
+        4155,
+        4168
+      ],
+      "text": "7. (1) $\\frac{1}{2} (\\mathbf{e}^{-t} - \\mathbf{e}^{-3t})$; (2) $\\mathrm{e}^{-t} - \\cos t$;\n(3)  $e^{-2t}\\cos t$ ;\n(4)  $\\frac{1}{a}(1 - e^{-at})$ ;\n$$\\frac {1}{2} - \\mathrm{e} ^ {t} + \\frac {1}{2} \\mathrm{e} ^ {2 t}$$\n(6) $\\frac{1}{2}\\left(\\sin t - \\frac{\\sqrt{3}}{3}\\sin \\sqrt{3}t\\right)$;\n(7) $-\\frac{1}{2} + \\frac{\\mathrm{e}^{2t}}{10} + \\frac{2}{5}\\cos t - \\frac{1}{5}\\sin t;$ (8) $\\frac{1}{4} +\\left(\\frac{t}{2} -\\frac{1}{4}\\right)\\mathrm{e}^{2t};$\n(9) $\\frac{\\mathrm{e}^{-t}}{3} (2 - 2\\cos \\sqrt{3} t + \\sqrt{3}\\sin \\sqrt{3} t)$; (10) $\\frac{1}{5} (\\cosh t - \\cos 2t)$;\n(11) $-1 + \\mathrm{e}^{t}\\left(1 - t + \\frac{1}{2} t^{2}\\right)$; (12) $\\sin \\frac{a}{\\sqrt{2}} t \\cdot \\sinh \\frac{a}{\\sqrt{2}} t$;\n(13) $\\cos \\frac{a}{\\sqrt{2}} t \\cdot \\cosh \\frac{a}{\\sqrt{2}} t$;\n(14) $\\frac{t^{3}}{6}e^{-t}$ ;\n(15) $\\frac{t}{2}\\mathrm{e}^{t}\\sin t;$ (16) $\\left(3\\cos at + \\frac{4}{a}\\sin at\\right)\\mathrm{e}^{-t};$\n(17) $\\left[\\cos (t - 1) + 2\\sin (t - 1)\\right]h(t - 1)$;\n(18) $\\left[e^{-(t-10)}-\\cos(t-10)\\right]h(t-10)$ ;\n(19) $h(t) - h(t - 3)$; (20) $\\sum_{n=0}^{+\\infty}\\cos(t - n\\pi)h(t - n\\pi)$.",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0095",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第9章",
+      "unit_id": null,
+      "number": "8",
+      "page": 237,
+      "source_lines": [
+        4169,
+        4177
+      ],
+      "text": "8. (1) $t - 1 + \\mathrm{e}^{-t}$; (2) $1 - \\mathrm{e}^{t} + t\\mathrm{e}^{t}$;\n(3) $\\frac{1}{a - b} (\\mathbf{e}^{at} - \\mathbf{e}^{bc})$ (4) $\\frac{1}{6} t^3\\mathbf{e}^t;$\n(5)  $-\\cos2t - 2\\sin t;$\n(6)  $\\sinh t - t - \\sinh(t - 1) \\cdot h(t - 1) + (t - 1)h(t - 1);$\n(7)  $t^{3}e^{-t}$ ;\n[第 238 页]\n$$\\left\\{ \\begin{array}{l} x (t) = t ^ {2} + \\frac {3}{2} t + \\frac {1}{4} + \\left(b - \\frac {1}{4}\\right) e ^ {2 t} + (a - b) t e ^ {2 t} \\\\ y (t) = \\frac {1}{2} t + \\frac {1}{4} + \\left(a - \\frac {1}{4}\\right) e ^ {2 t} + (a - b) t e ^ {2 t}; \\end{array} \\right.\\tag{8}$$\n$$\\left\\{ \\begin{array}{l} x (t) = \\frac {2}{3} \\sin t + \\frac {1}{3} (1 - \\cos t) \\\\ y (t) = \\frac {1}{3} (\\sin t + \\cos t) + \\frac {2}{3}; \\end{array} \\right. \\tag {9}$$\n$$\\left\\{ \\begin{array}{l} x (t) = \\frac {1}{2} t + \\frac {1}{4} t ^ {2} \\\\ y (t) = \\frac {1}{2} t + \\frac {1}{4} t ^ {2} \\\\ z (t) = \\frac {1}{2} t - \\frac {1}{4} t ^ {2}. \\end{array} \\right. \\tag {10}$$",
+      "answer_of": null,
+      "has_answer": true
+    },
+    {
+      "id": "AN-0096",
+      "kind": "answer",
+      "placement": "book",
+      "chapter": "第9章",
+      "unit_id": null,
+      "number": "10",
+      "page": 238,
+      "source_lines": [
+        4178,
+        4182
+      ],
+      "text": "10. $\\frac{ab}{\\sqrt{b^2 - bc}}\\sin (\\sqrt{b^2 - bc} t)$\n[第 239 页]\n中国科学技术大学精品教材“十一五”国家重点图书中国科学院指定考研参考书\n定价: 25.00 元\n上架建议：数学类",
+      "answer_of": null,
+      "has_answer": true
+    }
+  ],
+  "统计": {
+    "习题": 22,
+    "答案": 74,
+    "有答案的题": 8,
+    "内联题干": 0,
+    "位置分布": {
+      "section": 22,
+      "chapter": 0,
+      "book": 74
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH06-S02-SS04",
+    "text_sha256": "345eadbdb45338ccc9d0b68e126b51d4216272a74fb3fd3a639279bf83d884f4",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "345eadbdb45338ccc9d0b68e126b51d4216272a74fb3fd3a639279bf83d884f4",
+    "source": "original_text",
+    "source_path": "original_text/ch06_s02_ss04.md"
+  },
+  "unit": {
+    "unit_id": "CH06-S02-SS04",
+    "level": "subsection",
+    "chapter": "CH06",
+    "section": "CH06-S02",
+    "title": "杂例",
+    "anchor": "6.2.4"
+  },
+  "concepts": [
+    {
+      "name": "留数定理",
+      "type": "theorem",
+      "formal": "由留数定理, 得",
+      "source_quote": "由留数定理, 得"
+    },
+    {
+      "name": "约当引理",
+      "type": "proposition",
+      "formal": "由约当引理，有 $\\lim_{R\\to +\\infty}\\int_{C_R}\\frac{\\mathrm{e}^{\\mathrm{i}z}}{z}\\mathrm{d}z = 0$",
+      "source_quote": "由约当引理，有 $\\lim_{R\\to +\\infty}\\int_{C_R}\\frac{\\mathrm{e}^{\\mathrm{i}z}}{z}\\mathrm{d}z = 0$"
+    },
+    {
+      "name": "弗雷涅积分",
+      "type": "definition",
+      "formal": "这个积分称为弗雷涅(Fresnel)积分",
+      "source_quote": "这个积分称为弗雷涅(Fresnel)积分,在光学中有它的应用."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 3,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "留数定理",
+    "约当引理",
+    "弗雷涅积分"
+  ]
+}

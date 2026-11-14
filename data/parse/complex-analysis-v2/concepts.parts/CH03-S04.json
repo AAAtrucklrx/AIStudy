@@ -1,0 +1,101 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH03-S04",
+    "text_sha256": "7cd186910ad54bdee1ce281445e9d30f3f250e012d7a57efa1897e38041b350a",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "7cd186910ad54bdee1ce281445e9d30f3f250e012d7a57efa1897e38041b350a",
+    "source": "original_text",
+    "source_path": "original_text/ch03_s04.md"
+  },
+  "unit": {
+    "unit_id": "CH03-S04",
+    "level": "section",
+    "chapter": "CH03",
+    "section": "CH03-S04",
+    "title": "柯西积分公式",
+    "anchor": "3.4"
+  },
+  "concepts": [
+    {
+      "name": "柯西积分定理（柯西定理）",
+      "type": "theorem",
+      "formal": "柯西积分定理是整个解析函数理论的基础。",
+      "source_quote": "柯西积分定理是整个解析函数理论的基础"
+    },
+    {
+      "name": "定理3的推论",
+      "type": "corollary",
+      "formal": "因此由定理 3 的推论，得",
+      "source_quote": "因此由定理 3 的推论，得"
+    },
+    {
+      "name": "定理5",
+      "type": "theorem",
+      "formal": "设函数 $f(z)$ 在闭路(或复闭路) $C$ 及其所围区域 $D$ 内解析，则对 $D$ 内任一点 $z$，有 $$f (z) = \\frac {1}{2 \\pi i} \\int_ {C} \\frac {f (\\zeta)}{\\zeta - z} d \\zeta .$$",
+      "source_quote": "定理5 设函数 $f(z)$ 在闭路(或复闭路) $C$ 及其所围区域 $D$ 内解析，则对 $D$ 内任一点 $z$，有"
+    },
+    {
+      "name": "柯西积分公式",
+      "type": "formula",
+      "formal": "$$f (z) = \\frac {1}{2 \\pi i} \\int_ {C} \\frac {f (\\zeta)}{\\zeta - z} d \\zeta .$$",
+      "source_quote": "这个公式叫做柯西积分公式."
+    },
+    {
+      "name": "长大不等式",
+      "type": "formula",
+      "formal": "从而由长大不等式，得",
+      "source_quote": "从而由长大不等式，得"
+    },
+    {
+      "name": "定理6",
+      "type": "theorem",
+      "formal": "在定理5的条件下，对 $D$ 内任一点 $z, f(z)$ 有任意阶导数，且 $$f ^ {(n)} (z) = \\frac {n !}{2 \\pi i} \\int_ {C} \\frac {f (\\zeta)}{(\\zeta - z) ^ {n + 1}} d \\zeta .$$",
+      "source_quote": "定理6 在定理5的条件下，对 $D$ 内任一点 $z, f(z)$ 有任意阶导数，且"
+    },
+    {
+      "name": "柯西公式",
+      "type": "formula",
+      "formal": "$$f ^ {(n)} (z) = \\frac {n !}{2 \\pi i} \\int_ {C} \\frac {f (\\zeta)}{(\\zeta - z) ^ {n + 1}} d \\zeta .$$",
+      "source_quote": "这个公式也叫柯西公式."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 7,
+    "漏掉的具名结论": [
+      "定理5",
+      "定理6"
+    ],
+    "完整": false,
+    "完整说明": "有漏项",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "因此由定理",
+      "么通过这个公式"
+    ],
+    "记号缺口": []
+  },
+  "named_results": [
+    "柯西积分定理（柯西定理）",
+    "定理3的推论",
+    "定理5",
+    "柯西积分公式",
+    "长大不等式",
+    "定理6",
+    "柯西公式"
+  ]
+}

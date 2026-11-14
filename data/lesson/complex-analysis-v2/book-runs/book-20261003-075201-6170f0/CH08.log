@@ -1,0 +1,56 @@
+=== CH08：10 个单元 ===
+    CH08
+    CH08-S01
+    CH08-S02
+    CH08-S03
+    CH08-S04
+    CH08-S04-SS01
+    CH08-S04-SS02
+    CH08-S04-SS03
+    CH08-S05
+    CH08-S06
+
+计划：
+    CH08               概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH08-S01           概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH08-S02           概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH08-S03           概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH08-S04           概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH08-S04-SS01      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH08-S04-SS02      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH08-S04-SS03      概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH08-S05           概念有    教案要生成    模型要生成    回路最多 1 轮
+    CH08-S06           概念有    教案要生成    模型要生成    回路最多 1 轮
+
+估价（按实测单价，粗算）：概念 ~10k/节、教案 ~25~70k/节（看原文长度）、模型 ~10~20k/节、回路 ~80~120k/节（K=2）
+run_id：book-20261003-075201-6170f0/CH08（本趟账目只算这一趟，并行下不会串账）
+
+===== CH08 保形变换及其应用 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH08 --quiet --temperature 0 --seed 42
+    模型：CH08: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH08 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH08 --fix-anchors
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH08 --max-rounds 1 --discover-runs 1
+    → 字数 815｜倍数 4.82｜套话 0｜详解 0｜硬问题 0｜本步 85,977 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH08 新增 ['CH08']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH08 --only CH08
+
+===== CH08-S01 导数的几何意义 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH08-S01 --quiet --temperature 0 --seed 42
+    模型：CH08-S01: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH08-S01 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH08-S01 --fix-anchors
+    · 教案有 6 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH08-S01: 《旋转角》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，最好再给…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH08-S01 --max-rounds 1 --discover-runs 1
+    · 还有 5 条**非篇幅**硬问题 → 不动它，交给回路的补丁模式（下次跑会带上）：CH08-S01: 《旋转角》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最简特例，…
+    → 字数 1742｜倍数 1.83｜套话 0｜详解 6｜硬问题 5｜本步 218,105 token
+  范围记录：/home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH08 新增 ['CH08-S01']
+    $ python -m blocks.render.cli build --parse data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --out /home/aaatrucklrx/桌面/AI教学/AIforStudy/delivery/整本/CH08 --only CH08,CH08-S01
+
+===== CH08-S02 保形变换的概念 =====
+    $ python -m blocks.lesson.cli run data/parse/complex-analysis-v2 --out data/lesson/complex-analysis-v2 --only CH08-S02 --quiet --temperature 0 --seed 42
+    模型：CH08-S02: 还没有模型 → 重跑
+    $ python -m blocks.model.cli run --lessons data/lesson/complex-analysis-v2 --out data/lesson/complex-analysis-v2/models --only CH08-S02 --quiet --max-tokens 48000
+    $ python -m blocks.lesson.cli revalidate data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --only CH08-S02 --fix-anchors
+    · 教案有 11 条非篇幅硬问题 → 交给回路的补丁模式（最小改动）：CH08-S02: 《单叶函数导数处处不为零》只给了 1 个例子 —— 至少 2 个**不同情况**的简单例子（含一个最…
+    $ python /home/aaatrucklrx/桌面/AI教学/AIforStudy/tools/audit_loop.py data/parse/complex-analysis-v2 --lessons data/lesson/complex-analysis-v2 --audit data/audit/complex-analysis-v2 --only CH08-S02 --max-rounds 1 --discover-runs 1

@@ -1,0 +1,123 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH02-S05-SS08",
+    "text_sha256": "1cabff3340633e6a3bbec55b2d59b7289dcdeb5f34c9cda0867cffeec2e9fc01",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "1cabff3340633e6a3bbec55b2d59b7289dcdeb5f34c9cda0867cffeec2e9fc01",
+    "source": "original_text",
+    "source_path": "original_text/ch02_s05_ss08.md"
+  },
+  "unit": {
+    "unit_id": "CH02-S05-SS08",
+    "level": "subsection",
+    "chapter": "CH02",
+    "section": "CH02-S05",
+    "title": "反三角函数",
+    "anchor": "2.5.8"
+  },
+  "concepts": [
+    {
+      "name": "反正弦函数",
+      "type": "definition",
+      "formal": "如果 $z = \\sin w$, 则 $w$ 称为 $z$ 的反正弦函数, 记作 $w = \\operatorname{Arcsin} z$",
+      "source_quote": "如果 $z = \\sin w$, 则 $w$ 称为 $z$ 的反正弦函数, 记作 $w = \\operatorname{Arcsin} z$"
+    },
+    {
+      "name": "反余弦函数",
+      "type": "definition",
+      "formal": "如果 $z = \\cos w$, 则 $w$ 称为 $z$ 的反余弦函数, 记作 $w = \\operatorname{Arccos} z$",
+      "source_quote": "如果 $z = \\cos w$, 则 $w$ 称为 $z$ 的反余弦函数, 记作 $w = \\operatorname{Arccos} z$"
+    },
+    {
+      "name": "反正弦函数表达式",
+      "type": "formula",
+      "formal": "$w = \\operatorname{Arcsin} z = - \\mathrm{iLn} (\\mathrm{i} z + \\sqrt {1 - z ^ {2}}).$",
+      "source_quote": "$w = \\operatorname{Arcsin} z = - \\mathrm{iLn} (\\mathrm{i} z + \\sqrt {1 - z ^ {2}}).$"
+    },
+    {
+      "name": "反余弦函数表达式",
+      "type": "formula",
+      "formal": "$\\mathrm{Arccosz} = - \\mathrm{iLn} (z + \\sqrt {z ^ {2} - 1}),$",
+      "source_quote": "$\\mathrm{Arccosz} = - \\mathrm{iLn} (z + \\sqrt {z ^ {2} - 1}),$"
+    },
+    {
+      "name": "反正切函数表达式",
+      "type": "formula",
+      "formal": "$\\mathrm{Arctanz} = - \\frac {\\mathrm{i}}{2} \\mathrm{Ln} \\frac {1 + \\mathrm{i} z}{1 - \\mathrm{i} z},$",
+      "source_quote": "$\\mathrm{Arctanz} = - \\frac {\\mathrm{i}}{2} \\mathrm{Ln} \\frac {1 + \\mathrm{i} z}{1 - \\mathrm{i} z},$"
+    },
+    {
+      "name": "反余切函数表达式",
+      "type": "formula",
+      "formal": "$\\mathrm{Arccotz} = \\frac {\\mathrm{i}}{2} \\mathrm{Ln} \\frac {z - \\mathrm{i}}{z + \\mathrm{i}},$",
+      "source_quote": "$\\mathrm{Arccotz} = \\frac {\\mathrm{i}}{2} \\mathrm{Ln} \\frac {z - \\mathrm{i}}{z + \\mathrm{i}},$"
+    },
+    {
+      "name": "反双曲正弦函数表达式",
+      "type": "formula",
+      "formal": "$\\mathrm{Arsinhz} = \\mathrm{Ln} (z + \\sqrt {z ^ {2} + 1}),$",
+      "source_quote": "$\\mathrm{Arsinhz} = \\mathrm{Ln} (z + \\sqrt {z ^ {2} + 1}),$"
+    },
+    {
+      "name": "反双曲余弦函数表达式",
+      "type": "formula",
+      "formal": "$\\mathrm{Arcoshz} = \\mathrm{Ln} (z + \\sqrt {z ^ {2} - 1}),$",
+      "source_quote": "$\\mathrm{Arcoshz} = \\mathrm{Ln} (z + \\sqrt {z ^ {2} - 1}),$"
+    },
+    {
+      "name": "反双曲正切函数表达式",
+      "type": "formula",
+      "formal": "$\\mathrm{Artanhz} = \\frac {1}{2} \\mathrm{Ln} \\frac {1 + z}{1 - z},$",
+      "source_quote": "$\\mathrm{Artanhz} = \\frac {1}{2} \\mathrm{Ln} \\frac {1 + z}{1 - z},$"
+    },
+    {
+      "name": "反双曲余切函数表达式",
+      "type": "formula",
+      "formal": "$\\mathrm{Arcothz} = \\frac {1}{2} \\mathrm{Ln} \\frac {z + 1}{z - 1}.$",
+      "source_quote": "$\\mathrm{Arcothz} = \\frac {1}{2} \\mathrm{Ln} \\frac {z + 1}{z - 1}.$"
+    },
+    {
+      "name": "Arcsinz 的无穷多值性",
+      "type": "property",
+      "formal": "Arcsinz是无穷多值函数.",
+      "source_quote": "由于平方根和对数函数的多值性，Arcsinz是无穷多值函数."
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 11,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [],
+    "记号缺口": []
+  },
+  "named_results": [
+    "反正弦函数",
+    "反余弦函数",
+    "反正弦函数表达式",
+    "反余弦函数表达式",
+    "反正切函数表达式",
+    "反余切函数表达式",
+    "反双曲正弦函数表达式",
+    "反双曲余弦函数表达式",
+    "反双曲正切函数表达式",
+    "反双曲余切函数表达式",
+    "Arcsinz 的无穷多值性"
+  ]
+}

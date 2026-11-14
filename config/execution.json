@@ -1,0 +1,57 @@
+{
+  "_meta": {
+    "file_type": "execution_policy",
+    "schema_version": "2.0",
+    "generator": "aiforstudy.pipeline.execution_control",
+    "field_notes": {
+      "release.parallelism": "模型调用总并发=正文类+媒体API；同时也是任务节点线程数",
+      "release.content_parallelism": "正文类（生成/审核/返修/语法纠正等非figures调用）上限；正文有跨节依赖，故适度",
+      "release.media_api_parallelism": "媒体代码生成与媒体审核调用上限；只依赖本节已审核正文",
+      "media_resource_parallelism": "同节内同时处理的媒体资源数",
+      "render.max_concurrent_workers": "Manim隔离渲染进程数；每路cpu_cores核/memory_bytes内存",
+      "decided": "2026-10-16 用户确认：正文6、媒体API12、同节4、Manim6、总18（tmp/intent-policy-20261016/剩余规则-确认记录.md 第6条）"
+    }
+  },
+  "policy_version": 2,
+  "parallelism": 2,
+  "media_resource_parallelism": 4,
+  "api_deadline_seconds": 1000,
+  "connect_timeout_seconds": 15,
+  "cancel_grace_seconds": 10,
+  "drain_seconds": 30,
+  "heartbeat_seconds": 5,
+  "content_repair_rounds_per_object": 2,
+  "evidence_repairs_per_verdict": 1,
+  "attempt_limits": {
+    "transport": 2
+  },
+  "render": {
+    "draft_seconds": 120,
+    "final_seconds": 300,
+    "cpu_cores": 2,
+    "memory_bytes": 2147483648,
+    "output_bytes": 134217728,
+    "max_concurrent_workers": 6
+  },
+  "profiles": {
+    "release": {
+      "parallelism": 18,
+      "allow_real_services": true,
+      "release_ready_possible": true,
+      "api_deadline_seconds": null,
+      "content_parallelism": 6,
+      "media_api_parallelism": 12
+    },
+    "replay": {
+      "parallelism": 1,
+      "allow_real_services": false,
+      "release_ready_possible": false
+    },
+    "smoke": {
+      "parallelism": 1,
+      "allow_real_services": false,
+      "release_ready_possible": false
+    }
+  },
+  "call_timeout_seconds": 900
+}

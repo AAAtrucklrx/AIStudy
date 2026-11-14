@@ -1,0 +1,135 @@
+{
+  "schema_version": "SupportDisplayCorrectionMapV1",
+  "policy": "VERIFIED-SUPPORT-DISPLAY-ERRATA-V3",
+  "corrections": [
+    {
+      "id": "SUPPORT-C0256-INVERSE-RATIO-V1",
+      "origin_unit_id": "CH05-S02",
+      "concept_id": "C-0256",
+      "anchor": "reader-b2d1feb0c361060b4b8d",
+      "source": "data/parse/complex-analysis-v2/original_text/ch05_s02.md",
+      "exact_original_markdown": "如果$$\\lim _ {n \\to + \\infty} \\left| \\frac {a _ {n - 1}}{a _ {n}} \\right| = r \\quad \\text {或} \\quad \\lim _ {n \\to + \\infty} \\sqrt [ n ]{| a _ {n} |} = r,$$则复幂级数(5.5)的收敛半径 R = 1/r.",
+      "corrected_markdown": "若相邻系数最终非零，且下列极限存在，则达朗贝尔公式为\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n-1}}{a_n}\\right|=r\\quad\\Longrightarrow\\quad R=r.$$\n\n约定 $r=0$ 时 $R=0$，$r=+\\infty$ 时 $R=+\\infty$。若用根值极限，则另记为 $L$，柯西公式为\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=L\\quad\\Longrightarrow\\quad R=\\frac1L.$$\n\n根值公式约定 $1/0=+\\infty$、$1/(+\\infty)=0$；相邻系数缺项或比值无定义时，不直接使用相邻比值公式。",
+      "reason": "Inverse adjacent coefficient ratio gives R=r, while the root criterion gives R=1/L; these cannot share one conclusion R=1/r.",
+      "verified_counterexample": "a_n=1/n!: |a_(n-1)/a_n|=n→∞, so R=∞; old reciprocal would give R=0.",
+      "selector": "CONCEPT/C-0256 with origin CH05-S02 and exact text signature; related projected blocks by logical owner and pointer."
+    },
+    {
+      "id": "SUPPORT-C0175-CANONICAL-V1",
+      "concept_id": "C-0175",
+      "origin_unit_id": "CH02-S05-SS06",
+      "label": "双曲函数的解析性",
+      "before_variants": [
+        "双曲正弦函数和双曲余弦函数都是全平面的解析函数，而双曲正切函数及双曲余切函数，则是分别除去 $z = n\\pi \\mathrm{i}$ 及 $z = (n + 1 / 2)\\pi \\mathrm{i}, n = 0, \\pm 1, \\pm 2, \\dots$ 的全平面上的解析函数"
+      ],
+      "after": "双曲正弦 $\\sinh z$ 与双曲余弦 $\\cosh z$ 是整函数。双曲正切 $\\tanh z=\\sinh z/\\cosh z$ 的极点为 $z=(n+1/2)\\pi\\mathrm i$；双曲余切 $\\coth z=\\cosh z/\\sinh z$ 的极点为 $z=n\\pi\\mathrm i$，其中 $n\\in\\mathbb Z$。各商在除去各自这组极点的全平面解析。",
+      "reason": "tanh denominator cosh vanishes at (n+1/2)πi; coth denominator sinh vanishes at nπi."
+    },
+    {
+      "id": "SUPPORT-C0522-CANONICAL-V1",
+      "concept_id": "C-0522",
+      "origin_unit_id": "CH02-S05-SS07",
+      "label": "正整数次幂的单值性",
+      "before_variants": [
+        "当 $\\alpha$ 为正整数 $n$ 时，$z ^ {n} = \\exp [ n (\\ln | z | + \\operatorname{iarg} z) ] = | z | ^ {n} \\exp (\\operatorname{iarg} z)$，与通常幂函数一致，是一个单值函数."
+      ],
+      "after": "当 $n$ 为正整数、$z\\ne0$ 时，选任一辐角 $\\theta$，有 $z^n=\\exp[n(\\ln|z|+\\mathrm i\\theta)]=|z|^n e^{\\mathrm in\\theta}$。将 $\\theta$ 改成 $\\theta+2k\\pi$ 不改变结果，所以与通常整数幂一致，是单值函数；在 $z=0$ 补定义 $0^n=0$。极式中的角度必须乘以 $n$，例如 $\\mathrm i^2=e^{\\mathrm i\\pi}=-1$。",
+      "reason": "Integer power multiplies the argument by n; i² must equal -1."
+    },
+    {
+      "id": "SUPPORT-C0219-CANONICAL-V1",
+      "concept_id": "C-0219",
+      "origin_unit_id": "CH03-S05",
+      "label": "柯西不等式",
+      "before_variants": [
+        "设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$",
+        "设 $f(z)$ 在区域 $D$ 内解析，以 $D$ 内任一点 $z$ 为圆心，作一个包含在 $D$ 内的圆周 $C: |\\zeta - z| = R$，设 $M(R)$ 是 $|f(z)|$ 在 $C$ 上的最大值，则\n$$\\mid f ^ {(n)} (z) \\mid \\leqslant \\frac {n ! M (R)}{R ^ {n}}.$$"
+      ],
+      "after": "设 $f$ 在开区域 $D$ 内解析，且以 $a$ 为圆心、半径 $R>0$ 的整个闭圆盘 $\\{\\zeta:|\\zeta-a|\\le R\\}$ 包含于 $D$。记 $M(R)=\\max_{|\\zeta-a|=R}|f(\\zeta)|$，则对每个非负整数 $n$ 有 $$|f^{(n)}(a)|\\le\\frac{n!M(R)}{R^n}.$$ 只要求圆周在 $D$ 内不够；闭圆盘内部也不能有函数的奇点。",
+      "reason": "The Cauchy derivative estimate requires the full closed disk inside the analytic domain; a circle may enclose an excluded singularity."
+    },
+    {
+      "id": "SUPPORT-C0796-CANONICAL-V1",
+      "concept_id": "C-0796",
+      "origin_unit_id": "CH09-S03-SS03",
+      "label": "概率积分（误差函数）",
+      "before_variants": [
+        "由积分 $\\frac{2}{\\sqrt{\\pi}}\\int_0^n\\mathrm{e}^{-x^2}\\mathrm{d}x$ 所定义的函数，也是一类重要的特殊函数，它称为概率积分或误差函数，记为 $\\operatorname {erf}(x)$ ，于是$$\\mathbf {L} ^ {- 1} \\left[ \\frac {\\sqrt {a}}{p (p + a)} \\right] = \\operatorname{erf} (\\sqrt {a t}) \\quad (\\text {附表2中公式53}).$$"
+      ],
+      "after": "对实数 $x$，误差函数定义为 $\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_0^x e^{-u^2}\\,\\mathrm du$。当 $a>0$、$t\\ge0$ 时，其拉普拉斯变换关系为 $$\\mathcal L^{-1}\\!\\left[\\frac{\\sqrt a}{p\\sqrt{p+a}}\\right](t)=\\operatorname{erf}(\\sqrt{at}),\\qquad\\operatorname{Re}p>0.$$ 在右半平面取与正实轴正平方根一致的解析平方根；分母中是 $p\\sqrt{p+a}$，不能写成 $p(p+a)$。",
+      "reason": "L[erf(sqrt(at))]=sqrt(a)/(p sqrt(p+a)), as follows by transforming its derivative."
+    },
+    {
+      "id": "SUPPORT-CH05-S05-FINITE-PRODUCT-LIMIT-V1",
+      "finding": "ch04-06/F06",
+      "unit_id": "CH05-S05",
+      "group": "annotations",
+      "owner_id": "PITFALL-LIMIT-FINITE",
+      "json_pointer": "/annotations/3/markdown",
+      "anchor": "reader-883a9fe4d23b5a962319",
+      "before": "在证明 $g/f$ 以 $a$ 为本性奇点时，若反设 $K=g/f$ 的极限有限，记为 $L$，则 $g=fK$ 在 $a$ 的极限是 $f(a)L$。当 $f(a)\\ne0$（即 $f$ 在 $a$ 是解析点且不为零）时，这个极限是 $f(a)L\\ne0$，不是 $0$；只有 $f(a)=0$（即 $f$ 以 $a$ 为零点，$n\\ge1$）时才为 $0$。无论哪种情形，极限都有限，仍由可去奇点判别推论推出 $a$ 是 $g$ 的可去奇点，矛盾。",
+      "after": "在证明 $g/f$ 以 $a$ 为本性奇点时，若反设 $K=g/f$ 的极限有限，记为 $L$，则 $g=fK$ 在 $a$ 的极限是 $f(a)L$。这个极限可能为 $0$，也可能非零；即使 $f(a)\\ne0$，仍可能因 $L=0$ 而为 $0$。无论哪种情形，极限都有限，仍由可去奇点判别推论推出 $a$ 是 $g$ 的可去奇点，矛盾。",
+      "reason": "The actual block assumes a finite quotient limit L, which can be zero. Only finiteness of f(a)L is needed for the contradiction."
+    },
+    {
+      "id": "SUPPORT-CH05-S05-POLE-ORDER-SIGN-V1",
+      "finding": "ch04-06/F07",
+      "unit_id": "CH05-S05",
+      "group": "annotations",
+      "owner_id": "INTUITION-BALANCE",
+      "json_pointer": "/annotations/6/markdown",
+      "anchor": "reader-38ce81abd87cce98b33f",
+      "before": "罗朗展开的主要部分是负次幂项。没有负次幂项是“没有层”，对应可去奇点；有限多个负次幂项是“有限层”，对应极点，极点阶数等于最低负次幂的幂次；无限多个负次幂项是“无限层”，对应本性奇点。",
+      "after": "罗朗展开的主要部分是负次幂项。没有负次幂项是“没有层”，对应可去奇点；有限多个非零负次幂项是“有限层”，对应极点。最低负次幂的指数为 $-m$ 时，极点阶数为正整数 $m$，即该负指数的绝对值；无限多个非零负次幂项是“无限层”，对应本性奇点。",
+      "reason": "For z^(-3), the lowest exponent is -3 while the pole order is the positive integer 3."
+    },
+    {
+      "id": "SUPPORT-CH06-S03-OPEN-AXIS-WINDING-V1",
+      "finding": "ch04-06/F10",
+      "unit_id": "CH06-S03",
+      "group": "annotations",
+      "owner_id": "LEFT-HALF-PITFALL",
+      "json_pointer": "/annotations/6/markdown",
+      "anchor": "reader-825f87b76bd66d6b4b08",
+      "before": "定理7要求多项式在虚轴上无零点。若虚轴上有零点，沿虚轴的辐角变化可能没有定义或需要绕行，定理不能直接使用。另外，$k$ 可以是半整数，因为 $\\Delta \\arg P(\\mathrm{i}y)$ 只要求是 $2\\pi$ 的整数倍中的 $2k\\pi$，而它可以是 $\\pi$ 的奇数倍，所以 $k=\\frac12$ 是允许的。",
+      "after": "定理7要求多项式在虚轴上无零点。若虚轴上有零点，沿虚轴的辐角变化可能没有定义或需要绕行，定理不能直接使用。虚轴从 $-\\infty$ 到 $+\\infty$ 是一条开放路径，因此其像的连续辐角增量不必是 $2\\pi$ 的整数倍。写作 $\\Delta\\arg P(\\mathrm iy)=2k\\pi$ 时，$k$ 可以是半整数；例如增量为 $\\pi$ 就对应 $k=1/2$。与左半大圆的增量合起来，整个闭路的总增量才按整圈计数。",
+      "reason": "The imaginary-axis path is open; only the completed closed contour has an integral winding number."
+    },
+    {
+      "id": "SUPPORT-CH08-S06-POISSON-Y-V1",
+      "finding": "second-pass/verified-legacy",
+      "unit_id": "CH08-S06",
+      "group": "annotations",
+      "owner_id": "EXAMPLE15-COEFFICIENT",
+      "json_pointer": "/annotations/5/markdown",
+      "anchor": "reader-20516fd9897631e28cf9",
+      "before": "用上半平面狄氏问题公式时，前面的系数是 $1/\\pi$，即\n$$u(x,y)=\\frac1\\pi\\left[v_2\\int_{-\\infty}^{0}\\frac{\\mathrm{d}t}{(t-x)^2+y^2}+v_1\\int_0^{+\\infty}\\frac{\\mathrm{d}t}{(t-x)^2+y^2}\\right].$$\n不要把 $1/\\pi$ 误写成 $v/\\pi$ 或丢掉。",
+      "after": "用上半平面狄利克雷问题公式时，取 $y>0$，泊松核为 $y/((t-x)^2+y^2)$，归一化系数为 $1/\\pi$。因此 $$u(x,y)=\\frac1\\pi\\left[v_2\\int_{-\\infty}^{0}\\frac{y\\,\\mathrm dt}{(t-x)^2+y^2}+v_1\\int_0^{\\infty}\\frac{y\\,\\mathrm dt}{(t-x)^2+y^2}\\right].$$ 不能漏掉核分子中的 $y$；若把 $y$ 提到积分号外，整体系数就写成 $y/\\pi$。例如 $v_1=v_2=1$ 时，积分应给出恒定解 $u=1$。",
+      "reason": "The upper half-plane Poisson kernel must contain y so constant boundary data stays constant."
+    },
+    {
+      "id": "SUPPORT-CH08-ANGLE-MODULO-V1",
+      "finding": "second-pass/verified-legacy",
+      "unit_id": "CH08",
+      "group": "annotations",
+      "owner_id": "NOTE-NONZERO-DERIVATIVE",
+      "json_pointer": "/annotations/0/markdown",
+      "anchor": "reader-1d3c3a7cc52a7eefa21f",
+      "before": "把 $f(z_0+h)$ 写成 $f(z_0)+f'(z_0)h+$ 更高次项之后，决定小尺度形状的是一次项。若 $f'(z_0)=0$，这一项为零，起作用的变成更高次项，形状会被“张开”或“压扁”，而不是被旋转加均匀放大，局部保角性也就失去了。\n\n典型例子是 $f(z)=z^n$（$n\\ge 2$）在 $z_0=0$ 处：$f'(0)=0$。用 $z=r\\mathrm{e}^{\\mathrm{i}\\theta}$ 得 $z^n=r^n\\mathrm{e}^{\\mathrm{i}n\\theta}$，两条辐角为 $\\theta_1,\\theta_2$ 的射线被映成辐角为 $n\\theta_1,n\\theta_2$ 的射线，方向角之差由 $\\theta_2-\\theta_1$ 变为 $n(\\theta_2-\\theta_1)$。由于两条射线的夹角总取不超过 $\\pi$ 的较小角，只有原夹角不超过 $\\pi/n$ 时，像的实际夹角才恰好是原来的 $n$ 倍；原夹角更大时，像的实际夹角要取 $|n(\\theta_2-\\theta_1)|$ 与 $2\\pi-|n(\\theta_2-\\theta_1)|$ 中的较小者，可能反而变小甚至为 0。例如 $n=2$ 时，夹角 $\\frac{\\pi}{4}$ 的两条射线变成夹角 $\\frac{\\pi}{2}$ 的两条射线；而夹角 $\\pi$ 的两条射线（辐角 $0$ 与 $\\pi$）的像辐角为 $0$ 与 $2\\pi$，实际是同一条射线，夹角为 $0$。所以讨论整体保形变换时，必须把导数为零的点排除在外。",
+      "after": "把 $f(z_0+h)$ 写成 $f(z_0)+f'(z_0)h+$ 更高次项之后，决定小尺度形状的是一次项。若 $f'(z_0)=0$，这一项为零，起作用的变成更高次项，形状会被“张开”或“压扁”，而不是被旋转加均匀放大，局部保角性也就失去了。\n\n典型例子是 $f(z)=z^n$（$n\\ge 2$）在 $z_0=0$ 处：$f'(0)=0$。用 $z=r\\mathrm{e}^{\\mathrm{i}\\theta}$ 得 $z^n=r^n\\mathrm{e}^{\\mathrm{i}n\\theta}$，两条辐角为 $\\theta_1,\\theta_2$ 的射线被映成辐角为 $n\\theta_1,n\\theta_2$ 的射线，方向角之差由 $\\theta_2-\\theta_1$ 变为 $n(\\theta_2-\\theta_1)$。由于两条射线的夹角总取不超过 $\\pi$ 的较小角，只有原夹角不超过 $\\pi/n$ 时，像的实际夹角才恰好是原来的 $n$ 倍；原夹角更大时，要先将方向角之差按 $2\\pi$ 取模：令 $\\delta=n(\\theta_2-\\theta_1)\\bmod 2\\pi\\in[0,2\\pi)$，再取实际夹角 $\\min(\\delta,2\\pi-\\delta)$。这样夹角总在 $[0,\\pi]$ 内，可能反而变小甚至为 $0$；例如 $n=3$、原方向角差为 $\\pi$ 时，先得 $3\\pi\\bmod2\\pi=\\pi$，实际夹角仍为 $\\pi$，不能得到负角。例如 $n=2$ 时，夹角 $\\frac{\\pi}{4}$ 的两条射线变成夹角 $\\frac{\\pi}{2}$ 的两条射线；而夹角 $\\pi$ 的两条射线（辐角 $0$ 与 $\\pi$）的像辐角为 $0$ 与 $2\\pi$，实际是同一条射线，夹角为 $0$。所以讨论整体保形变换时，必须把导数为零的点排除在外。",
+      "reason": "A multiplied angle must be reduced modulo 2π before choosing its smaller nonnegative angle."
+    },
+    {
+      "id": "SUPPORT-CH06-ABSOLUTE-TWO-TAILS-V1",
+      "finding": "second-pass/verified-legacy",
+      "unit_id": "CH06-S02-SS02",
+      "group": "annotations",
+      "owner_id": "DERIVE-ABSOLUTE-CONVERGENCE",
+      "json_pointer": "/annotations/8/markdown",
+      "anchor": "reader-c241684990503822ff44",
+      "before": "当 $\\deg Q\\geqslant\\deg P+2$ 时，$|R(x)|\\leqslant C/x^2$（$|x|$ 充分大）。于是\n$$\\int_{-\\infty}^{+\\infty}|R(x)|\\,\\mathrm{d}x\\leqslant C\\int_{1}^{+\\infty}\\frac{\\mathrm{d}x}{x^2}<\\infty,$$\n所以 $\\int_{-\\infty}^{+\\infty}R(x)\\,\\mathrm{d}x$ 绝对收敛。绝对收敛的广义积分满足\n$$\\int_{-\\infty}^{+\\infty}R(x)\\,\\mathrm{d}x=\\lim_{R\\to\\infty}\\int_{-R}^{R}R(x)\\,\\mathrm{d}x,$$\n因为左右两侧的无穷积分各自收敛，可以把对称区间拆成 $[-R,0]$ 和 $[0,R]$ 分别取极限。",
+      "after": "设有理函数 $R=P/Q$ 在实轴上无极点，且 $\\deg Q\\ge\\deg P+2$。存在 $A\\ge1$、$C>0$，使 $|x|\\ge A$ 时 $|R(x)|\\le C/x^2$；在紧区间 $[-A,A]$ 上，$R$ 连续，故其中绝对值积分有限。因此 $$\\begin{aligned}\\int_{-\\infty}^{\\infty}|R(x)|\\,\\mathrm dx&\\le\\int_{-A}^{A}|R(x)|\\,\\mathrm dx+2C\\int_A^{\\infty}\\frac{\\mathrm dx}{x^2}\\\\&=\\int_{-A}^{A}|R(x)|\\,\\mathrm dx+\\frac{2C}{A}<\\infty.\\end{aligned}$$ 这份估计分别保留中央有限区间和左右两条尾部。由左右无穷积分各自收敛，才能用对称截断表示普通广义积分：$$\\int_{-\\infty}^{\\infty}R(x)\\,\\mathrm dx=\\lim_{T\\to\\infty}\\int_{-T}^{T}R(x)\\,\\mathrm dx.$$",
+      "reason": "The large-|x| bound controls two tails only; the finite middle interval must be included."
+    }
+  ]
+}

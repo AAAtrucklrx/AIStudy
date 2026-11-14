@@ -1,0 +1,113 @@
+{
+  "_meta": {
+    "file_type": "concepts_part",
+    "schema_version": "1.0",
+    "generator": "aiforstudy.parse.concepts",
+    "unit_id": "CH02-S05-SS03",
+    "text_sha256": "9366e89d316344f45e317c1c490d8d2cc1bd65f7b380fc8388a6ecce311520fd",
+    "prompt_sha256": "32f5f77d727b7278fd59c7fad2dc8390ea72670aa58474fb1c808ecc4cfa14a4",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "field_notes": {
+      "concepts[].type": "definition / theorem / law / property / proposition / corollary / formula",
+      "concepts[]": "只识别：name/type/formal/source_quote；解释与配图由教案阶段产出",
+      "concepts[].formal": "原文里的严格表述（逐字）",
+      "concepts[].source_quote": "抽取依据的原文片段",
+      "coverage": "原文里带编号的条目清点：一共几个、漏了哪几个（漏了会自动重跑一次）"
+    },
+    "source_sha256": "9366e89d316344f45e317c1c490d8d2cc1bd65f7b380fc8388a6ecce311520fd",
+    "source": "original_text",
+    "source_path": "original_text/ch02_s05_ss03.md"
+  },
+  "unit": {
+    "unit_id": "CH02-S05-SS03",
+    "level": "subsection",
+    "chapter": "CH02",
+    "section": "CH02-S05",
+    "title": "指数函数",
+    "anchor": "2.5.3"
+  },
+  "concepts": [
+    {
+      "name": "复指数函数",
+      "type": "definition",
+      "formal": "定义复指数函数为 $$\\mathrm{e} ^ {x} = \\mathrm{e} ^ {x + \\mathrm{i} y} = \\mathrm{e} ^ {x} (\\cos y + \\mathrm{i} \\sin y)$$",
+      "source_quote": "定义复指数函数为 $$\\mathrm{e} ^ {x} = \\mathrm{e} ^ {x + \\mathrm{i} y} = \\mathrm{e} ^ {x} (\\cos y + \\mathrm{i} \\sin y)$$"
+    },
+    {
+      "name": "e^z不为零",
+      "type": "property",
+      "formal": "对任何复数 $z, \\mathrm{e}^z \\neq 0$，这是因为 $|\\mathrm{e}^z| = \\mathrm{e}^x \\neq 0$.",
+      "source_quote": "1) 对任何复数 $z, \\mathrm{e}^z \\neq 0$，这是因为 $|\\mathrm{e}^z| = \\mathrm{e}^x \\neq 0$."
+    },
+    {
+      "name": "e^z的极限不存在",
+      "type": "property",
+      "formal": "$\\lim_{z\\to\\infty}e^{z}$ 不存在(有限或无限).",
+      "source_quote": "2)  $\\lim_{z\\to\\infty}e^{z}$  不存在(有限或无限)."
+    },
+    {
+      "name": "加法公式",
+      "type": "formula",
+      "formal": "$e^{z_{1}}\\cdot e^{z_{2}}=e^{z_{1}+z_{2}}$",
+      "source_quote": "3）加法公式： $e^{z_{1}}\\cdot e^{z_{2}}=e^{z_{1}+z_{2}}$"
+    },
+    {
+      "name": "周期性",
+      "type": "property",
+      "formal": "$\\mathrm{e} ^ {x + 2 k m i} = \\mathrm{e} ^ {x} \\cdot \\mathrm{e} ^ {2 k m i} = \\mathrm{e} ^ {x}, k = 0, \\pm 1, \\pm 2, \\dots .$ 这就是说， $e^{x}$ 是一个以 $2\\pi i$ 为周期的函数",
+      "source_quote": "这就是说， $e^{x}$  是一个以  $2\\pi i$  为周期的函数，这个性质是实变量指数函数  $e^{x}$  所没有的。"
+    },
+    {
+      "name": "指数函数相等条件",
+      "type": "property",
+      "formal": "如果 $e^{z_{1}} = e^{z_{2}}$，则 $z_{1} = z_{2} + 2k\\pi i$，其中，k 为任一整数.",
+      "source_quote": "5) 如果  $e^{z_{1}} = e^{z_{2}}$ ，则  $z_{1} = z_{2} + 2k\\pi i$ ，其中，k 为任一整数."
+    },
+    {
+      "name": "单叶性区域的充要条件",
+      "type": "corollary",
+      "formal": "区域 D 是 $w = e^{z}$ 的单叶性区域的充要条件是: D 内不得含有任何两个满足条件 $z_{1} = z_{2} + 2k\\pi i$ 的点 $z_{1}$ 和 $z_{2}$ .",
+      "source_quote": "由性质 5) 可见, 区域 D 是  $w = e^{z}$  的单叶性区域的充要条件是: D 内不得含有任何两个满足条件  $z_{1} = z_{2} + 2k\\pi i$  的点  $z_{1}$  和  $z_{2}$ ."
+    },
+    {
+      "name": "指数函数的解析性与导数",
+      "type": "property",
+      "formal": "指数函数在全平面上解析，且 $(\\mathbf{e}^t)' = \\mathbf{e}^t$",
+      "source_quote": "2.4节例6中，已指出指数函数在全平面上解析，且 $(\\mathbf{e}^t)' = \\mathbf{e}^t$"
+    }
+  ],
+  "note": "",
+  "coverage": {
+    "编号条目": 0,
+    "漏掉的条目": [],
+    "具名结论": 8,
+    "漏掉的具名结论": [],
+    "完整": true,
+    "完整说明": "全部覆盖",
+    "引用的他节条目": [],
+    "待确认的具名候选": [
+      "具有的一些基本性质",
+      "乘法性质",
+      "指数函数还有如下的一些性质",
+      "内的映照性质"
+    ],
+    "记号缺口": [
+      {
+        "key": "线性无关",
+        "hint": "要说明「线性无关 = 只有全取 0 的系数才能把它们凑成零向量」",
+        "weak": true
+      }
+    ]
+  },
+  "named_results": [
+    "复指数函数",
+    "e^z不为零",
+    "e^z的极限不存在",
+    "加法公式",
+    "周期性",
+    "指数函数相等条件",
+    "单叶性区域的充要条件",
+    "指数函数的解析性与导数"
+  ]
+}
