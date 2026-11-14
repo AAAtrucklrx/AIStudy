@@ -1,4 +1,5 @@
 """Counterexamples use hand-derived answers, never the rendering evaluator."""
+import sys
 import threading
 import time
 import pytest
@@ -143,7 +144,7 @@ def test_cancel_and_real_worker_timeout_return_unknown_and_leave_no_children():
 @pytest.mark.parametrize('outcome', ['pass', 'cancelled', 'timeout'])
 def test_large_valid_model_progresses_after_delayed_worker_read_and_reaps(monkeypatch, outcome):
     """An actual blocked pipe must resume writing and deliver EOF to the CAS worker."""
-    import fcntl
+    import os
     import json
     import subprocess
     import sys
@@ -157,6 +158,20 @@ def test_large_valid_model_progresses_after_delayed_worker_read_and_reaps(monkey
     )
     model = api().parse_math_model(data)
     model_bytes = json.dumps(model.as_dict()).encode()
+    # Measure a real pipe without Linux-only F_GETPIPE_SZ.
+    read_fd, write_fd = os.pipe()
+    pipe_capacity = 0
+    try:
+        os.set_blocking(write_fd, False)
+        while True:
+            try:
+                pipe_capacity += os.write(write_fd, b'x' * 65536)
+            except BlockingIOError:
+                break
+    finally:
+        os.close(read_fd)
+        os.close(write_fd)
+    assert len(model_bytes) > pipe_capacity
     original = subprocess.Popen
     children = []
     timers = []
@@ -170,10 +185,10 @@ print(json.dumps(_worker(json.loads(sys.stdin.read()))))
 '''
 
     def spawn(args, **kwargs):
-        assert args[-1] == '--worker'
+        if args[-1] != '--worker':
+            return original(args, **kwargs)
         child = original([sys.executable, '-c', source], **kwargs)
         children.append(child)
-        assert len(model_bytes) > fcntl.fcntl(child.stdin.fileno(), fcntl.F_GETPIPE_SZ)
         if outcome == 'cancelled':
             timer = threading.Timer(.05, cancelled.set)
             timers.append(timer)
@@ -340,6 +355,8 @@ module._worker(json.loads(sys.stdin.read()))
     assert result.returncode == -signal.SIGXCPU
 
 
+@pytest.mark.skipif(sys.platform == 'darwin',
+                    reason='kernel RLIMIT_AS probe; Darwin host enforcement is tested in test_math_resource_limits')
 def test_worker_memory_limit_returns_unknown_instead_of_pass():
     import json
     import os

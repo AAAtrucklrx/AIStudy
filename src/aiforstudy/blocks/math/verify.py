@@ -31,6 +31,28 @@ class _VerificationCancelled(Exception):
     """Stop local pipe I/O while retaining the verifier's unknown result contract."""
 
 
+class _WorkerResourceLimit(Exception):
+    def __init__(self, reason_code: str):
+        self.reason_code = reason_code
+
+
+def _darwin_group_rss_bytes(pgid: int, *, timeout: float) -> int:
+    """Host census in bytes; failures must never silently remove the RSS guard.
+
+    macOS rejects finite RLIMIT_AS. Sample the isolated worker group via ps,
+    excluding zombies. This is a sampled resident-memory limit, not a virtual
+    address-space ceiling: brief allocation spikes between samples can escape.
+    """
+    result = subprocess.run(['/bin/ps', '-axo', 'pgid=,rss=,stat='],
+                            capture_output=True, text=True, check=True, timeout=timeout)
+    total = 0
+    for line in result.stdout.splitlines():
+        group, rss, state = line.split()
+        if int(group) == pgid and not state.startswith(('Z', 'X')):
+            total += int(rss) * 1024
+    return total
+
+
 def _object_ids(claim: dict) -> tuple[str, ...]:
     return tuple(sorted({value for key, value in claim.items()
                          if key in {'math_object_id', 'lhs_object_id', 'rhs_object_id',
@@ -148,9 +170,25 @@ def verify_math(model: MathModelV1 | dict, claims=None, *, limits=None, cancel=N
                                 stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                                 env=env, start_new_session=True)
 
+        peak_rss = 0
+
         def checkpoint():
+            nonlocal peak_rss
             if _cancelled(cancel):
                 raise _VerificationCancelled()
+            if sys.platform == 'darwin':
+                remaining = deadline - time.monotonic()
+                if remaining <= 0:
+                    raise TimeoutError()
+                try:
+                    rss = _darwin_group_rss_bytes(proc.pid, timeout=min(.2, remaining))
+                except (OSError, ValueError, subprocess.SubprocessError) as exc:
+                    if time.monotonic() >= deadline:
+                        raise TimeoutError() from exc
+                    raise _WorkerResourceLimit('resource_monitor_failure') from exc
+                peak_rss = max(peak_rss, rss)
+                if rss > limits.memory_mib * 1024 * 1024:
+                    raise _WorkerResourceLimit('memory_limit')
 
         try:
             stdout, stderr = communicate_bounded(proc, payload, deadline=deadline,
@@ -162,6 +200,11 @@ def verify_math(model: MathModelV1 | dict, claims=None, *, limits=None, cancel=N
                           'evidence': {'worker_diagnostic': stderr.decode('utf-8', errors='replace')[-1000:]}}
             else:
                 result = json.loads(stdout)
+        except _WorkerResourceLimit as exc:
+            result = {'status': 'unknown', 'reason_code': exc.reason_code,
+                      'reason': ('worker resident memory limit reached' if exc.reason_code == 'memory_limit'
+                                 else 'worker memory monitor unavailable'),
+                      'method': 'none', 'evidence': {}}
         except (_VerificationCancelled, TimeoutError) as exc:
             reason = 'cancelled' if isinstance(exc, _VerificationCancelled) else 'timeout'
             result = {'status': 'unknown', 'reason_code': reason,
@@ -179,6 +222,8 @@ def verify_math(model: MathModelV1 | dict, claims=None, *, limits=None, cancel=N
                 for stream in (proc.stdin, proc.stdout, proc.stderr):
                     if stream is not None:
                         stream.close()
+        if sys.platform == 'darwin':
+            result['evidence'].update(memory_policy='host-process-group-rss', peak_rss_bytes=peak_rss)
         checks.append(_make_check(claim, result['status'], result['reason_code'], result['reason'],
                                   result['method'], dict(provenance, **result['evidence'])))
     status = 'fail' if any(item.status == 'fail' for item in checks) else 'pass' if all(item.status == 'pass' for item in checks) else 'unknown'
@@ -588,7 +633,10 @@ def _worker(payload):
     import resource
     limits = VerificationLimits(**payload['limits'])
     resource.setrlimit(resource.RLIMIT_CPU, (limits.cpu_seconds, limits.cpu_seconds + 1))
-    resource.setrlimit(resource.RLIMIT_AS, (limits.memory_mib * 1024 * 1024,) * 2)
+    # Darwin is supervised by the parent's bounded RSS checkpoint; Linux keeps
+    # the kernel virtual-address-space ceiling in addition to the other guards.
+    if sys.platform != 'darwin':
+        resource.setrlimit(resource.RLIMIT_AS, (limits.memory_mib * 1024 * 1024,) * 2)
     resource.setrlimit(resource.RLIMIT_FSIZE, (0, 0))
     import sympy as sp
     # Preload trusted CAS paths before the worker loses file access.
