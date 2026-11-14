@@ -4,7 +4,7 @@
 
 ## 已完成与边界
 
-- 通修合辑物理第4–23页共20页均渲染并逐页查看；13场（含1补考）238个原子任务记录，其中228个任务分类、10个待核/冲突记录。独立空格、a/b、i/ii、重复印刷题号均以附加操作标记区分，不伪造原卷印刷题号。记录绑定场次、SHA-256、物理页和题号；原题在不可变PDF中，候选精确转写为null，标注与解答独立。**这不是238道精确转写或完整数学验算。**
+- 通修合辑物理第4–23页共20页均渲染并逐页查看；13场（含1补考）238个原子任务记录，其中227个任务分类、11个待核/冲突记录。独立空格、a/b、i/ii、重复印刷题号均以附加操作标记区分，不伪造原卷印刷题号。记录绑定场次、SHA-256、物理页和题号；原题在不可变PDF中，候选精确转写为null，标注与解答独立。**这不是238道精确转写或完整数学验算。**
 - 保留2019 A原资料标错题3(3)，2025 A3(1)内点映到开单位圆边界的资料条件冲突；均不参与自动评分。另将2024 A1(4)实部与归一化不相容、1(5)印刷x²分母，以及2020 B第2题环域含极点等保守隔离。其余待核包括尚未配置原子模板或未推导的证明；不擅改原题，不归责教师。
 - 129道教材顶层题号全部可定位，布置状态unknown。**只将17个实际看过原页的教材小任务与模板关联**，其余仍标待核。教材4.1、5.3(1)、6.1(1)、9.7(5)附本项目独立推导结果，四项符号检查通过；不是教材答案转录。考试原题解答仍未验算，不自动判分。
 - 44个模板（含pending占位）记录知识点、方法、具体操作、必要域/条件。卡片每次只计一个模板，实际题目条件仍以原PDF为准；不把整章或所有知识当一张卡。
@@ -28,7 +28,7 @@
 
 ## 验证
 
-- `PYTHONPATH=src ROOT/.venv-linux/bin/python -m pytest tests/test_exam_analysis.py tests/test_course_library.py -q`：50 passed。包括课程/时间隔离、固定预算、两个共同基础模板、数据来源/页码、重复ID、全部六折目标变动不影响预测、未知分值与题族、真实旧Reader资产复制和缓存身份，以及四项独立数学检查。
+- `PYTHONPATH=src ROOT/.venv-linux/bin/python -m pytest tests/test_exam_analysis.py tests/test_course_library.py -q`：52 passed。包括课程/时间隔离、固定预算、两个共同基础模板、数据来源/页码、重复ID、全部六折目标变动不影响预测、未知分值与题族、真实旧Reader资产复制和缓存身份，以及四项独立数学检查。
 - `EXAM_TEST_PYTHON=ROOT/.venv-linux/bin/python node --test tests/ui/course_library.test.cjs tests/ui/exam_analysis.test.cjs`：5 passed。
 - CLI二次运行JSON与回执逐字节一致（cmp通过）。
 - Playwright使用独立无头Edge上下文，未接个人profile；桌面1280×900和移动390×844均查看截图，无水平溢出；12道复习任务、18行比较结果、259条安全本地PDF页链接。
@@ -38,3 +38,13 @@
 生产真值：`data/parse/complex-analysis-v2/course-library/exam-annotations.json`，随资料库携带并计入准备/渲染缓存身份；不会把工作区外文件混进Reader允许路径。`core/exam_analysis.py`为确定性分析，`tools/exam_analysis.py`可导出。`core/course_library.py`只接optional annotation projection。`course-library.js/css`负责既有资料弹窗内展示，不改其他Agent渲染/视频资产。
 
 证据目录：ROOT/research/2026-11-15/exam-analysis/，包含annotations.json、real-backtest.json、freeze-receipts.json、validation.json及3张Reader截图。源PDF未修改。主Agent需要正常重建最终Reader，才能让现有输出页面载入新增projection；源码及独立真实catalog浏览器验证已经完成。
+
+## 独立审查修复 round 1
+
+- 对两个Important发现先加RED回归：条件冲突仍分类、分析模块编辑不改变render/delivery身份，均如预期失败；修复后GREEN。
+- `pipeline/runtime_dependencies.py`的READER闭包新增精确组件`core/exam_analysis.py`。真实Runner身份回归在复制运行时中修改recency_decay，render/delivery的摘要均变化，且变化键只有此模块；lesson身份保持不变。没有扩大到整个仓库哈希。
+- `general-A-2021-2022-final:3(2)`保留物理第9页原题，标记pending/condition_conflict：D内解析与D内极点冲突，且未排除其他零点却只计a。未补写题意、未归责教师，不参与排序和自动评分。
+- 更新后238任务中227项分类、11项待核，17/129教材范围不变。实际比较旧/新六折全部指标一致（该模板没有被选入卡片）；A四折训练哈希全部更新，B折不受影响。annotations/hash、回执、回顾JSON与UI证据均重新生成。
+- 最终针对性测试52 Python +5 Node通过；真实CLI二次输出逐字节一致。桌面/移动隔离Edge再次验证12卡、18行、259源链接，无横向溢出。
+
+协调记录：实现者完成修复与验证后，提交交接阶段连续两次工具会话返回Bad Request。协调者仅修正报告正文当前计数并提交已完成的五项变更；未另改实现或重跑已通过的套件。

@@ -73,3 +73,34 @@ def test_every_fold_is_immune_to_future_and_target_changes(corpus):
    if q['session_id'] not in ids:
     q['annotation']['template_id']='power';q['points']=100;q['family_id']='spoof';q['solution']={'answer':'target answer'}
   for method,p in f['predictions'].items():assert select(changed,s,ids,method)==p
+
+def test_reviewed_argument_condition_conflict_is_quarantined(corpus):
+ c,a=corpus
+ q=next(q for q in a['questions'] if q['id']=='general-A-2021-2022-final:3(2)')
+ assert q['pdf_page']==9
+ assert q['annotation']['status']=='pending'
+ assert q['annotation']['issue_type']=='condition_conflict'
+ assert q['annotation']['template_id']=='pending'
+ assert not q['automatic_grading']
+ assert q['solution'] is None and q['candidate_transcription'] is None
+ assert sum(q['annotation']['status']=='pending' for q in a['questions'])==11
+
+def test_analysis_edit_invalidates_only_declared_reader_consumers(tmp_path,monkeypatch):
+ from aiforstudy.pipeline.runner import Runner
+ from aiforstudy.pipeline import stage_io
+ from aiforstudy.core.digest import digest_of
+ from support.runtime_tree import copy_runtime
+ package,adapters=tmp_path/'package',tmp_path/'adapters'
+ copy_runtime(package,adapters)
+ runner=object.__new__(Runner)
+ monkeypatch.setattr(runner,'_runtime_package_root',lambda:package)
+ monkeypatch.setattr(stage_io,'_repo_root',lambda:adapters)
+ monkeypatch.setattr(runner,'_runtime_identity',lambda:{'python':{},'dependencies':{}})
+ before={s:runner._stage_runtime_identity(s) for s in ['render','delivery','lesson']}
+ p=package/'core/exam_analysis.py'
+ p.write_text(p.read_text().replace("'recency_decay': 0.75", "'recency_decay': 0.5"))
+ after={s:runner._stage_runtime_identity(s) for s in before}
+ for stage in ['render','delivery']:
+  assert digest_of(after[stage])!=digest_of(before[stage])
+  assert {k for k,v in before[stage]['package'].items() if after[stage]['package'][k]!=v}=={'core/exam_analysis.py'}
+ assert after['lesson']==before['lesson']

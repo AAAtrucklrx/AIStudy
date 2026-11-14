@@ -22,7 +22,7 @@ CONTENT = ('core/source_boundaries.py','core/video_evidence.py','core/course_lib
            'pipeline/content_stages.py','pipeline/content_revalidation.py','resources/teaching_profiles.json') + MATH + AUDIT
 MEDIA = ('blocks/media','core/resource_files.py','pipeline/media_stages.py','pipeline/media.py','pipeline/resource_binding.py',
          'pipeline/media_review_recovery.py','blocks/figures','blocks/visual','providers/capabilities.py') + MATH + AUDIT
-READER = ('blocks/render','core/source_materials.py')
+READER = ('blocks/render','core/source_materials.py','core/exam_analysis.py')
 LIBRARY_ADAPTER_COMPONENTS = ('blocks/figures/__init__.py','blocks/figures/library.py',
     'blocks/figures/spec.py','blocks/figures/spec_extra.py','blocks/figures/verify_svg.py','blocks/figures/backends')
 INTERACTION_ADAPTER_COMPONENTS = ('blocks/model/__init__.py','blocks/model/model_generate.py',

@@ -2149,9 +2149,10 @@
       "candidate_transcription": null,
       "transcription_status": "not_transcribed_use_original_pdf",
       "annotation": {
-        "template_id": "argument",
-        "status": "visual_task_classification",
-        "note": "已查看原页的题号与任务；精确公式以原PDF为准，未完整验算。"
+        "template_id": "pending",
+        "status": "pending",
+        "issue_type": "condition_conflict",
+        "note": "资料条件冲突：题设称f在D内解析，同时称D内围道内部的b是极点；且仅排除其他奇点，未排除除a以外的零点，但所给对数导数积分等式只计a与b。保留原PDF，不猜测应补充或更改的条件；不用于排序与评分。"
       },
       "points": null,
       "solution": null,

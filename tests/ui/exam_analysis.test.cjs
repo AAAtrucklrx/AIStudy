@@ -5,7 +5,7 @@ test('real study projection preserves separate courses, fixed budget and source 
  const doc=new JSDOM(lib.renderStudy(c)).window.document;
  assert.equal(doc.querySelectorAll('ol li').length,12);assert.equal(doc.querySelectorAll('tbody tr').length,18);
  assert.match(doc.body.textContent,/复变函数A/);assert.match(doc.body.textContent,/复变函数B/);
- assert.match(doc.body.textContent,/strict_asof 不成立/);assert.match(doc.body.textContent,/资料条件冲突/);
+ assert.match(doc.body.textContent,/strict_asof 不成立/);assert.match(doc.body.textContent,/资料条件冲突/);assert.match(doc.body.textContent,/未排除除a以外的零点/);assert.equal(c.exam_study.questions.filter(q=>q.annotation.status==='pending').length,11);
  for(const a of doc.querySelectorAll('a'))assert.match(a.getAttribute('href'),/^assets\/source\/[a-f0-9]{64}\.pdf#page=\d+$/);
  assert.match(doc.body.textContent,/120分钟/);assert.match(doc.body.textContent,/分值覆盖：未知/);
 });
