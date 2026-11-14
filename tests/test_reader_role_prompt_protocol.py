@@ -62,3 +62,23 @@ def test_balanced_optional_proof_keeps_substantive_audit(role):
     if role == 'reviewer':
         assert '只有实际提供的证明或演算缺步' in system
         assert '错误原句或公式' in system
+
+
+@pytest.mark.parametrize('mode', ['balanced', 'json_only', 'full'])
+@pytest.mark.parametrize('role', ['author', 'repair', 'reviewer'])
+def test_production_messages_do_not_require_optional_theorem_proofs(mode, role):
+    """Role assets must not override the shared optional-proof delivery contract."""
+    _, source = teaching_case()
+    with review_mode(mode):
+        system = build_content_messages(role, source, load_content_policy())[0]['content']
+    assert '正式证明和完整例题可选' in system
+    for mandatory in ['定理须完整展开证明', '定理必须完整展开每一步证明',
+                      '保存完整条件、结论、含义与证明']:
+        assert mandatory not in system, (mode, role, mandatory)
+    for retained in ['必要条件', '可迁移', '主线']:
+        assert retained in system, (mode, role, retained)
+    if mode != 'balanced' and role in {'author', 'repair'}:
+        assert '实际提供的定理证明须完整展开每一步推导及依据' in system
+    if mode != 'balanced' and role == 'author':
+        assert '保存完整条件、结论、含义与用途' in system
+        assert '若提供正式证明，将完整证明保存于同一对象' in system
