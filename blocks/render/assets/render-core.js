@@ -17,6 +17,26 @@
 })(typeof globalThis !== "undefined" ? globalThis : this, function (readerMarkdown,studyMath) {
   "use strict";
 
+  // Synchronous SHA-256 for the host's presentation binding (UTF-8 JSON).
+  function presentationHash(text) {
+    var bytes=Array.from(new TextEncoder().encode(text)), bit=bytes.length*8;
+    bytes.push(128); while(bytes.length%64!==56) bytes.push(0);
+    var hi=Math.floor(bit/4294967296),lo=bit>>>0;
+    for(var n=3;n>=0;n--)bytes.push((hi>>>(n*8))&255);
+    for(var n=3;n>=0;n--)bytes.push((lo>>>(n*8))&255);
+    var h=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19], k=[],i=2;
+    while(k.length<64){var prime=true;for(var d=2;d*d<=i;d++)if(i%d===0){prime=false;break;}if(prime)k.push((Math.pow(i,1/3)%1*4294967296)>>>0);i++;}
+    function rr(x,n){return (x>>>n)|(x<<(32-n));}
+    for(var off=0;off<bytes.length;off+=64){var w=[];
+      for(i=0;i<16;i++)w[i]=((bytes[off+4*i]<<24)|(bytes[off+4*i+1]<<16)|(bytes[off+4*i+2]<<8)|bytes[off+4*i+3])>>>0;
+      for(i=16;i<64;i++){var x=w[i-15],y=w[i-2];w[i]=(w[i-16]+(rr(x,7)^rr(x,18)^(x>>>3))+w[i-7]+(rr(y,17)^rr(y,19)^(y>>>10)))>>>0;}
+      var a=h[0],b=h[1],c=h[2],d=h[3],e=h[4],f=h[5],g=h[6],z=h[7];
+      for(i=0;i<64;i++){var t1=(z+(rr(e,6)^rr(e,11)^rr(e,25))+((e&f)^(~e&g))+k[i]+w[i])>>>0,t2=((rr(a,2)^rr(a,13)^rr(a,22))+((a&b)^(a&c)^(b&c)))>>>0;z=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b;b=a;a=(t1+t2)>>>0;}
+      h=[(h[0]+a)>>>0,(h[1]+b)>>>0,(h[2]+c)>>>0,(h[3]+d)>>>0,(h[4]+e)>>>0,(h[5]+f)>>>0,(h[6]+g)>>>0,(h[7]+z)>>>0];
+    }
+    return 'sha256:'+h.map(function(v){return v.toString(16).padStart(8,'0');}).join('');
+  }
+
   // CONCEPT / FIGURE 带「|显示文字」，NOTE 不带（它是个上标小标记，内容在下面的批注区）
   var REF = /\[\[(CONCEPT|FIGURE|NOTE|DIAGRAM|MODEL|EXPLAIN|EXAMPLE|MEDIA)\s*:\s*([^\]|]*?)\s*(?:\|\s*([^\]]*?)\s*)?\]\]/g;
   var SLOT = "\u0000";
@@ -1033,7 +1053,16 @@
 
     // V4 consumes the same frozen blocks as review; there are no field aliases here.
     function readerDocumentHtml(document, region, media, layout, presentation) {
-      readerPresentation = presentation || null;
+      readerPresentation = null;
+      if (presentation) {
+        var binding=[document.unit_id,document.content_hash].concat(document.blocks.map(function(b){return ['block_id','json_pointer','raw_text','markdown','visible_text','anchor','group','owner_id','field_label'].map(function(k){return String(b[k]===undefined?'':b[k]);}).concat([(b.source_map||[]).map(String),(b.marker_spans||[]).map(function(span){return ['visible_start','visible_end','raw_start','raw_end'].map(function(k){return String(span[k]===undefined?'':span[k]);});})]);}));
+        if(presentation.schema_version!=='TeachingPresentationV1' || presentation.content_hash!==document.content_hash || !layout || presentation.reader_document_hash!==layout.reader_document_hash || presentation.binding_hash!==presentationHash(JSON.stringify(binding))) throw new Error('Stale teaching presentation');
+        var known={};document.blocks.forEach(function(field){readerMarkdown.parseReaderField(field.markdown,{marked:marked,field:field}).blocks.forEach(function(b){known[b.block_id]=b;});});
+        Object.keys(presentation.roles||{}).forEach(function(id){if(!known[id] || !['main','proof','worked_example'].includes(presentation.roles[id])) throw new Error('Invalid teaching presentation role');});
+        var seenRegions={};(presentation.regions||[]).forEach(function(r){var b=known[r.block_id];if(seenRegions[r.block_id] || !b||b.field_id!==r.reader_block_id||b.target_pointer!==r.reader_pointer||b.source_start_cp!==r.source_start_cp||b.source_end_cp!==r.source_end_cp||presentation.roles[r.block_id]!==r.reader_role)throw new Error('Invalid teaching presentation region');seenRegions[r.block_id]=true;});
+        if(Object.keys(presentation.roles||{}).length!==(presentation.regions||[]).length) throw new Error('Incomplete teaching presentation regions');
+        readerPresentation=presentation;
+      }
       readerMedia = media || [];
       readerLayout = layout || null;
       if (!document || document.schema_version !== "ReaderDocumentV1") {

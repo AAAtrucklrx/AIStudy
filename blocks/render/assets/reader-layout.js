@@ -565,7 +565,7 @@
     all.forEach(bodySteps);
     all=all.concat(placeExamples(root,all,unitId||unit.unit_id||'unit',all.length));
     root.querySelectorAll('.reader-proof-step').forEach(stepHeading);
-    if(!(unit.teaching_presentation && Object.keys(unit.teaching_presentation.roles||{}).some(function(k){return unit.teaching_presentation.roles[k]!=='main';}))) projectDisclosures(root);
+    projectDisclosures(root);
     all.forEach(function(topic){compare(topic);});
     // Long authored equalities get their own visual line. The formula nodes,
     // source text, and mathematical relationships remain exactly the same.

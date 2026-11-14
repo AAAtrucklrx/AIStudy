@@ -261,22 +261,24 @@
     var activeRole='';
     parsed.blocks.forEach(function(block,index){
       var role=(options.teachingRoles||{})[block.block_id]||'main';
+      var target=references.starts[index];
+      if(target && activeRole && activeRole!=='main'){out.push('</details>');activeRole='';}
+      if (target) out.push('<section class="reader-numbered-reference" data-reader-reference="'+escapeHtml(target.label)+'" id="'+target.anchor+'">');
       if(role!==activeRole){
-        if(activeRole && activeRole!=='main') out.push('</details>');
-        if(role!=='main') out.push('<details class="reader-teaching-disclosure" data-teaching-role="'+escapeHtml(role)+'"><summary>'+(role==='proof'?'展开证明':'展开例题')+'</summary>');
+        if(activeRole && activeRole!=='main')out.push('</details>');
+        if(role!=='main')out.push('<details class="reader-teaching-disclosure" data-teaching-role="'+escapeHtml(role)+'"><summary>'+(role==='proof'?'展开证明':'展开例题')+'</summary>');
         activeRole=role;
       }
       at(block,'before');
-      var target=references.starts[index];
-      if (target) out.push('<section class="reader-numbered-reference" data-reader-reference="'+escapeHtml(target.label)+'" id="'+target.anchor+'">');
       var token=options.bareMath===false?linkNumberedTokens([parsed.tokens[block.token_index]],references,index)[0]:bareMathTokens(linkNumberedTokens([parsed.tokens[block.token_index]],references,index),true,bare,barePrefix)[0], group=[token];group.links=parsed.links;
       var html=options.inline&&token.tokens ? marked.Parser.parseInline(token.tokens,opts) : marked.parser(group,opts);
       parsed.math.concat(bare).forEach(function(item){html=html.split(item.slot).join(renderMath(item));});
       out.push(html);
-      (references.ends[index]||[]).forEach(function(){out.push('</section>');});
       at(block,'after');
+      if((references.ends[index]||[]).length && activeRole && activeRole!=='main'){out.push('</details>');activeRole='';}
+      (references.ends[index]||[]).forEach(function(){out.push('</section>');});
     });
-    if(activeRole && activeRole!=='main') out.push('</details>');
+    if(activeRole && activeRole!=='main')out.push('</details>');
     if(consumed.size!==(mounts||[]).length) throw new Error('Reader mount has no matching syntax block');
     return out.join('');
   }

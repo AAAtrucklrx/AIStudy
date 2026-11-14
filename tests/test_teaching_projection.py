@@ -62,3 +62,12 @@ def test_omitted_role_defaults_to_main():
     del c['teaching_evidence'][0]['reader_role']
     r._data['content_hash'] = content_digest(c)
     assert compile_teaching_presentation(c, r)['claim_main_blocks']['c'] == ['b:0']
+
+
+def test_worked_example_has_separate_main_claim_locator():
+    c, r = fixture()
+    c['teaching_evidence'][1]['reader_role'] = 'worked_example'
+    r._data['content_hash'] = content_digest(c)
+    projection = compile_teaching_presentation(c, r)
+    assert list(projection['roles'].values()) == ['main', 'worked_example']
+    assert projection['claim_main_blocks']['c'] == ['b:0']
