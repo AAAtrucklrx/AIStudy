@@ -482,6 +482,15 @@
   function foldBodyExamples(root) {
     root.querySelectorAll('[data-reader-topic-kind="example"]').forEach(function(topic) {
       if(topic.querySelector(':scope > .reader-example-disclosure'))return;
+      // A topic made only for one structured example already has its owner
+      // disclosure. Reuse it rather than adding a second control around it.
+      var substantive=Array.prototype.filter.call(topic.children,function(node){return !node.matches('.reader-topic-title');});
+      if(substantive.length===1&&substantive[0].matches('details.reader-structured-example[data-reader-group="examples"]')) {
+        var owner=substantive[0],heading=topic.querySelector(':scope > .reader-topic-title');
+        owner.classList.add('reader-example-disclosure');owner.setAttribute('data-reader-disclosure','example');
+        if(heading){var ownerSummary=owner.querySelector(':scope > summary');ownerSummary.textContent='';ownerSummary.appendChild(heading);}
+        return;
+      }
       var title=topic.querySelector(':scope > .reader-topic-title'),details=disclosure(topic.ownerDocument,'example',topic.getAttribute('data-reader-topic-title')||'例题');
       var summary=details.querySelector('summary');
       if(title){summary.textContent='';summary.appendChild(title);}

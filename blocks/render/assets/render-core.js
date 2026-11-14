@@ -927,7 +927,7 @@
         mounts.forEach(function(m){(m.edge==='before'?before:after).push(readerMountHtml(m));});
         mounts=[];
       }
-      var content = readerMarkdown.renderReaderField(parsed,mounts,readerMountHtml,{inline:tag==='h1',bareMath:!!katex,mathHtml:mathHtml,teachingRoles:(readerPresentation||{}).roles});
+      var content = readerMarkdown.renderReaderField(parsed,mounts,readerMountHtml,{inline:tag==='h1',bareMath:!!katex,mathHtml:mathHtml,teachingRoles:(readerPresentation||{}).roles,disclosureRole:block.group==='examples'?'worked_example':''});
       return before.join('')+'<' + tag + ' class="reader-block markdown" data-reader-pointer="' + escapeHtml(block.json_pointer) +
         '" data-reader-block="' + escapeHtml(block.block_id) + '"' + step + (extra || "") + '>' +
         (block.group === "title" ? "" : '<span class="reader-field-label">' + escapeHtml(block.field_label) + '</span>') +

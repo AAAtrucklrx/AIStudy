@@ -259,14 +259,21 @@
     var references=numberedReferences(parsed);
     var bare=[], barePrefix='\uE000READERBARE', labelField=LABEL_FIELD.test((parsed.field||{}).json_pointer||'');
     var activeRole='';
+    function roleTag(role){return role===options.disclosureRole?'div':'details';}
+    function closeRole(){out.push('</'+roleTag(activeRole)+'>');}
     parsed.blocks.forEach(function(block,index){
       var role=(options.teachingRoles||{})[block.block_id]||'main';
       var target=references.starts[index];
-      if(target && activeRole && activeRole!=='main'){out.push('</details>');activeRole='';}
+      if(target && activeRole && activeRole!=='main'){closeRole();activeRole='';}
       if (target) out.push('<section class="reader-numbered-reference" data-reader-reference="'+escapeHtml(target.label)+'" id="'+target.anchor+'">');
       if(role!==activeRole){
-        if(activeRole && activeRole!=='main')out.push('</details>');
-        if(role!=='main')out.push('<details class="reader-teaching-disclosure" data-teaching-role="'+escapeHtml(role)+'"><summary>'+(role==='proof'?'展开证明':'展开例题')+'</summary>');
+        if(activeRole && activeRole!=='main')closeRole();
+        if(role!=='main') {
+          // The containing structured example owns this same semantic role.
+          // Keep the role boundary and its mounts, without a second disclosure.
+          var inherited=role===options.disclosureRole;
+          out.push('<'+roleTag(role)+' class="'+(inherited?'reader-teaching-region':'reader-teaching-disclosure')+'" data-teaching-role="'+escapeHtml(role)+'">'+(inherited?'':'<summary>'+(role==='proof'?'展开证明':'展开例题')+'</summary>'));
+        }
         activeRole=role;
       }
       at(block,'before');
@@ -277,10 +284,10 @@
         html=html.replace(/^(\s*<[A-Za-z][A-Za-z0-9-]*)/, '$1 data-teaching-main=""');
       out.push(html);
       at(block,'after');
-      if((references.ends[index]||[]).length && activeRole && activeRole!=='main'){out.push('</details>');activeRole='';}
+      if((references.ends[index]||[]).length && activeRole && activeRole!=='main'){closeRole();activeRole='';}
       (references.ends[index]||[]).forEach(function(){out.push('</section>');});
     });
-    if(activeRole && activeRole!=='main')out.push('</details>');
+    if(activeRole && activeRole!=='main')closeRole();
     if(consumed.size!==(mounts||[]).length) throw new Error('Reader mount has no matching syntax block');
     return out.join('');
   }
