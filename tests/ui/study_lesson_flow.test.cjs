@@ -116,7 +116,8 @@ test('proof-contained media never escapes its disclosure into the desktop rail',
  assert.ok(root.querySelector('[data-teaching-id="P"]').closest('details.reader-proof:not([open])'));
  assert.equal(root.querySelectorAll('.lesson-media-rail .teaching-block').length,1);
  assert.equal(root.querySelector('[data-teaching-id="P"] .study-visual'),null);
+ let refreshes=0;root.__studyController={refresh(){refreshes++;}};
  const proof=root.querySelector('details.reader-proof');proof.open=true;proof.dispatchEvent(new dom.window.Event('toggle'));
- assert.ok(root.querySelector('[data-teaching-id="P"] .study-visual'));
+ assert.ok(root.querySelector('[data-teaching-id="P"] .study-visual'));assert.ok(refreshes>0);
  assert.ok(root.querySelector('[data-teaching-id="P"]').closest('details.reader-proof'));
 });

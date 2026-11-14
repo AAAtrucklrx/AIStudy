@@ -116,6 +116,7 @@
           disposers.push(w.DSHAnimations.mountAnimations(stage,payload,{compact:true,title:plan.title}));report.media++;
         }
       }catch(error){report.errors.push(id+': '+error.message);stage.appendChild(node(doc,'p','teaching-unavailable','这段图解暂时无法显示。'));}
+      if(root.__studyController)root.__studyController.refresh();
       }
       ancestors.forEach(function(d){d.addEventListener('toggle',mountWhenOpen);disposers.push(function(){d.removeEventListener('toggle',mountWhenOpen);});});mountWhenOpen();
       // The next authored paragraph interprets the observation. It deliberately
