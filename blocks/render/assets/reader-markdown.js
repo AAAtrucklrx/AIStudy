@@ -283,9 +283,14 @@
       if(role==='main' && Object.prototype.hasOwnProperty.call(options.teachingRoles||{},block.block_id))
         html=html.replace(/^(\s*<[A-Za-z][A-Za-z0-9-]*)/, '$1 data-teaching-main=""');
       out.push(html);
-      at(block,'after');
+      // Optional regions own their media, including the last proof paragraph.
+      // Ordinary after slots stay outside the numbered reference boundary so
+      // opening a definition window does not also clone adjacent media.
+      var optionalAfter=activeRole && activeRole!=='main';
+      if(optionalAfter)at(block,'after');
       if((references.ends[index]||[]).length && activeRole && activeRole!=='main'){closeRole();activeRole='';}
       (references.ends[index]||[]).forEach(function(){out.push('</section>');});
+      if(!optionalAfter)at(block,'after');
     });
     if(activeRole && activeRole!=='main')closeRole();
     if(consumed.size!==(mounts||[]).length) throw new Error('Reader mount has no matching syntax block');

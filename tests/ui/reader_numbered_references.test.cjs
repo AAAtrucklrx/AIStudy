@@ -88,9 +88,15 @@ test('numbered definition decoration preserves frozen source positions and media
   const definition=parsed.blocks.find(b=>raw.slice(b.source_start_cp,b.source_end_cp).includes('原段'));
   assert.ok(definition);
   const mount={mount_id:'m',resolved_block_id:definition.block_id,edge:'after',order_at_anchor:0};
-  const html=parser.renderReaderField(parsed,[mount],()=>'<aside data-mount-id="m"></aside>');
-  assert.equal((html.match(/data-mount-id="m"/g)||[]).length,1);
-  assert.match(html,/<\/section><aside data-mount-id="m">/);
+  for(const teachingRoles of [{}, {[definition.block_id]:'main'}]) {
+    const html=parser.renderReaderField(parsed,[mount],()=>'<aside data-mount-id="m"></aside>',{teachingRoles});
+    assert.equal((html.match(/data-mount-id="m"/g)||[]).length,1);
+    assert.match(html,/<\/section><aside data-mount-id="m">/);
+    const dom=new JSDOM(html);t.after(()=>dom.window.close());
+    const slot=dom.window.document.querySelector('[data-mount-id="m"]');
+    assert.equal(slot.closest('.reader-numbered-reference'),null,'ordinary after media is not copied into the definition reference window');
+    assert.equal(slot.previousElementSibling.dataset.readerReference,'性质2');
+  }
 });
 
 test('unbraced conjugate subscript survives JSON, Markdown and KaTeX', t => {

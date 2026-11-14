@@ -34,3 +34,19 @@ Evidence in independent preview directory:
 ## Remaining boundary
 
 The old numbered body-example alternative expansion behavior is unchanged and tested. This task fixes same-owner standalone structured topics and same-owner explicit role regions; it does not flatten distinct example collections or optional supports. Actual media acceptance remains with live-generation owner.
+
+## Broader regression follow-up
+
+Parent's final tracked Node run found two failures (`ROOT/research/2026-11-15/final-verification/node.log`, 306 pass / 2 fail / 1 skip). They had different causes:
+
+1. **Real renderer regression:** ordinary numbered-definition `after` mounts were globally moved inside the reference section by the earlier proof-media containment change. A numbered reference window owns its definition/proof range, not arbitrary subsequent media. Restored ordinary/default-main and explicit-main after slots to after `</section>`; only active optional roles emit their after mount before closing their role/numbered section. Explicit proof media therefore remains inside the closed proof. Kept the original regex expectation, added DOM ownership assertions for both omitted and explicit main, and retained the existing proof-end media test unchanged.
+2. **Old interaction assumption:** the uniform test typed radius 1 to switch domains. Current controls explicitly distinguish entire open disk and a fixed closed disk whose radius is capped at .99. Updated only the test to click `uniform-mode-open`, verify jump disabled/no finite N, then `uniform-mode-closed`, verifying remembered .99 radius, reenabled controls, and N=299. Added assertion that typing 1 in closed mode clamps to .99 rather than silently changing the domain. No study-visuals production or mathematical code changes.
+
+Follow-up RED/GREEN:
+- Original two files: 17 tests, 15 pass / 2 fail (local log `/tmp/task7d-followup-red.log`).
+- After correcting the obsolete uniform interaction and strengthening reference ownership assertions, before renderer fix: 17 tests, 16 pass / 1 fail (`/tmp/task7d-followup-test-red.log`). Remaining failure was the unchanged numbered-section regex.
+- After conditional renderer boundary fix: `node --test tests/ui/reader_numbered_references.test.cjs tests/ui/study_uniform.test.cjs tests/ui/teaching_projection.test.cjs tests/ui/reader_book_interactions.test.cjs`: 49 pass, 0 fail / skip. Includes proof media containment and reference-window cloning/lifecycle.
+- All 41 tracked `tests/ui/*.test.cjs`: 304 pass, 0 fail, 1 skip, exit 0. Durable output `ROOT/research/2026-11-15/final-verification/node-task7d-followup.log`.
+- Remaining tracked Node file `examples/text-led-multiplication/lesson-player.test.cjs`: 4 pass, 0 fail / skip. Together all 42 tracked Node files yield **308 pass, 0 fail, 1 skip**.
+- Python structured-example and teaching-projection integration files: **15 pass** again after the boundary fix.
+- `git diff --check` clean. No source/prompt/compiler/raw/media modifications. This follow-up is a distinct commit for scope review.
