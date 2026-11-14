@@ -12,9 +12,12 @@ from tools.upgrade_study_reader import _narrate_row
 
 
 def current_clock_steps(steps):
+    """Reset active trim evidence; older generations remain historical only."""
     result=deepcopy(steps)
     for step in result:
-        step['prior_clock_lineage']={k:step.pop(k) for k in ('source_start','source_end') if k in step}
+        historical=('source_start','source_end','input_motion_duration',
+                    'motion_lineage','prior_clock_lineage')
+        step['prior_clock_lineage']={k:step.pop(k) for k in historical if k in step}
     return result
 
 

@@ -76,3 +76,34 @@ seconds (combined 171.466665 seconds). Total new movie duration is 707.099994 se
 
 Technical validation does not certify naturalness, pronunciation, mathematical
 meaning or pedagogical quality. No synthetic `spoken_review` approval was added.
+
+## Review fix round 1 — inherited trimming evidence (P2)
+
+Confirmed the review reproduction: revoicing an already-produced step with current
+window `[0,15]` and inherited `input_motion_duration=3` kept that active duration
+when receipt proof was absent or mismatched. The compositor would therefore trim
+to 3 seconds despite the full-window fallback explanation.
+
+`current_clock_steps` now clears both active `input_motion_duration` and
+`motion_lineage` before any current proof is established. Their values, old
+source interval, and any older `prior_clock_lineage` are retained exclusively
+inside the new historical `prior_clock_lineage`. Current start/end and the input
+object are unchanged. `proven_motion_steps` may then install a new active duration
+only after its existing hash/clock/compositor-contract checks succeed.
+
+Exact RED command: `PYTHONPATH=src <project-root>/.venv-linux/bin/python -m pytest tests/test_local_narration.py -k repeated_revoice -q`.
+Result: 3 failures, 6 deselected, in 0.07s; log
+`.sdd/task-5-fix-round-1-red.log`. Missing and mismatched proof preserved the stale
+active duration; the fresh-proof case exposed loss of historical metadata.
+
+Exact GREEN command: `PYTHONPATH=src <project-root>/.venv-linux/bin/python -m pytest tests/test_local_narration.py tests/test_narration.py tests/test_narration_providers.py tests/test_natural_narration.py tests/test_revoice_textbook_lessons.py -q`.
+Result: 107 passed in 3.07s; log `.sdd/task-5-fix-round-1-green.log`. The new
+parameterized regression confirms absent/mismatched proof retains the complete
+15-second interval, while fresh recognized evidence activates its newly proven
+5-second motion interval instead of the inherited 3-second value. Both proof and
+older lineage remain historical, and the input is not mutated.
+
+A current read of original D confirmed all 57 input steps lack inherited
+`input_motion_duration`, `motion_lineage`, and `prior_clock_lineage`. This fix
+therefore leaves the actual original-D transformation and all 12/57 production
+artifacts unchanged; no synthesis or media regeneration was needed.

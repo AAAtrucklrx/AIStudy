@@ -92,3 +92,37 @@ def test_actual_second_retime_short_and_long_pcm_preserves_motion_and_boundaries
             x=frame_at(before,source_at);y=frame_at(after,new_at)
             assert np.abs(x.astype(float)-y.astype(float)).mean()<5
     assert result['video_timing']['video_packets_or_frames']==33
+
+
+@pytest.mark.parametrize('proof', ['missing', 'mismatched', 'fresh'])
+def test_repeated_revoice_discards_inherited_trim_until_fresh_proof(tmp_path, proof):
+    from tools.revoice_wholebook import proven_motion_steps
+    from aiforstudy.blocks.media.local_narration import digest
+    video=tmp_path/'current.mp4';video.write_bytes(b'current-video')
+    inherited={'step_id':'S1','start':0,'end':15,'source_start':0,'source_end':5,
+               'input_motion_duration':3,'motion_lineage':{'basis':'older generation proof'},
+               'prior_clock_lineage':{'source_start':9,'source_end':12}}
+    original=deepcopy(inherited)
+    receipt_path=tmp_path/'prior.json'
+    if proof!='missing':
+        receipt_path.write_text(json.dumps({
+            'timing':'original motion followed by final-frame hold; complete decoded voice',
+            'producer_version':'host-narration-1.2-neural',
+            'output_hashes':{'prior.mp4':digest(video) if proof=='fresh' else 'different-video'},
+            'steps':[inherited]}))
+    try:
+        actual=proven_motion_steps([inherited],video,receipt_path)[0]
+    except (FileNotFoundError,ValueError):
+        actual=current_clock_steps([inherited])[0]
+    # Only a freshly checked receipt may reactivate trimming for this input.
+    if proof=='fresh':
+        assert actual['input_motion_duration']==5
+        assert actual['motion_lineage']['current_motion_window']==[0,5]
+    else:
+        assert 'input_motion_duration' not in actual
+        assert 'motion_lineage' not in actual
+        assert actual.get('input_motion_duration',actual['end']-actual['start'])==15
+    assert actual['prior_clock_lineage']['input_motion_duration']==3
+    assert actual['prior_clock_lineage']['motion_lineage']==original['motion_lineage']
+    assert actual['prior_clock_lineage']['prior_clock_lineage']==original['prior_clock_lineage']
+    assert inherited==original
