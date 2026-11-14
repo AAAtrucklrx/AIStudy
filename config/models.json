@@ -5,17 +5,16 @@
     "generator": "aiforstudy.providers.llm",
     "field_notes": {
       "roles": "角色名 → 实际调用参数。代码里按**角色**取参数，不散落写死模型名（否则换模型要改 N 处）",
-      "api_key_ref": "**只是引用**，不是密钥。`env:NAME` 表示从环境变量或 .secrets/ 读；密钥不回传浏览器、不写日志、不进本文件",
+      "api_key_ref": "仅 API 路由使用引用，不是密钥：自定义 env:NAME 只取对应环境变量；标准 env:DEEPSEEK_API_KEY 保持环境变量→.secrets/deepseek.env 的既有顺序。账户路由不需要此字段。",
       "effort": "思考强度由传输器映射为 DeepSeek 顶层 reasoning_effort；none/off 表示关闭思考",
       "max_tokens": "单次请求的输出额度上限。**思考与输出共用这一份额度**（实测：CH08-S03/S06 曾因'思考占满额度'失败）",
       "length_retry_max_tokens": "可选的明确截断重试容量上界；仅 finish_reason=length 时使用，保持同一逻辑请求与持久尝试次数，不代表服务模型的总能力上限",
-      "为什么要有这个文件": "方案 §3：config/ 放'模型角色'；§6：服务能力必须显式，不能靠环境里恰好装了什么"
+      "为什么要有这个文件": "方案 §3：config/ 放'模型角色'；§6：服务能力必须显式，不能靠环境里恰好装了什么",
+      "provider": "deepseek-account 通过本机已登录 Harness 的受支持账户SDK；deepseek 为 API；local-compatible 为显式本地服务。角色可独立覆盖。",
+      "base_url": "仅 deepseek/local-compatible HTTP 路由使用；账户目的地由官方SDK确定，不通过自填URL转发登录凭据。"
     }
   },
-  "provider": "deepseek",
-  "base_url": "https://api.deepseek.com",
-  "api_key_ref": "env:DEEPSEEK_API_KEY",
-  "secrets_file": ".secrets/deepseek.env",
+  "provider": "deepseek-account",
   "roles": {
     "concepts": {
       "model": "deepseek-flash",

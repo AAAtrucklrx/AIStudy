@@ -184,7 +184,7 @@ def test_cloud_role_reference_overrides_top_level_reference(tmp_path, monkeypatc
 @pytest.mark.parametrize('env_present', [False, True])
 def test_original_model_config_preserves_standard_secret_file_and_environment_priority(tmp_path, monkeypatch, env_present):
     from pathlib import Path
-    config = json.loads((Path(__file__).parents[1]/'config/models.json').read_text())
+    config = json.loads((Path(__file__).parent/'fixtures/legacy-models-http.json').read_text())
     assert config['api_key_ref'] == 'env:DEEPSEEK_API_KEY'
     secrets = tmp_path/'.secrets'
     secrets.mkdir()
