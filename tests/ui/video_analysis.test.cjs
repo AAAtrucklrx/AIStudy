@@ -55,7 +55,7 @@ async function reader() {
   const w = dom.window;
   const result = {job_id:'job-1',title:'视频讲义',duration:80,
     source:{path:'source.mp4',playback:{video_src:'playback.mp4',audio:{src:'speech.mp3',data_base64:'SUQz',mime:'audio/mpeg'}}},
-    sections:[{id:'s1',title:'复数',start:20,end:40,markdown:'# 复数\n\n<img src=x onerror=alert(1)>\n\n公式 $z=x+iy$。',evidence_ids:['asr-1']}],
+    sections:[{id:'s1',title:'复数',start:20,end:40,markdown:'# 复数\n\n<img src=x onerror=alert(1)>\n\n公式 $z=x+iy$。[asr-1]',evidence_ids:['asr-1']}],
     transcript:{segments:[{id:'asr-1',start:20,end:40,text:'原始转写 <script>bad()</script>',quality_warnings:['尾段可能截断']}],coverage:{full_duration:true}},
     frames:[{id:'frame-1',path:'frames/001.jpg',start:30,end:31,sampled_time:30,text:'原始 OCR',visual_text:'模型画面理解',explanation:'本帧说明复数的几何意义',ocr_quality_warnings:['文字置信度低'],uncertainties:['板书不清晰']}],
     formulas:[{latex:'z=x+iy',source_ids:['frame-1'],uncertainty:'符号待核实'}],uncertainties:[],coverage:{frame_sampling_seconds:30},provenance:{asr:'local'},review:{state:'completed',decision:'issues_found',issues:[{severity:'error',description:'指数负号与原始转写冲突',source_ids:['asr-1'],suggestion:'回看片段核对指数'}],limitations:['仅做文本交叉检查'],automatic_approval:false}};
@@ -75,6 +75,10 @@ async function reader() {
   w.document.querySelector('#transcript [data-start]').click();
   assert.equal(w.document.querySelector('#source-video').currentTime,20);
   assert.match(w.document.querySelector('#player-status').textContent,/00:20/);
+  const inlineSource=w.document.querySelector('#lesson p [data-evidence-id="asr-1"]');
+  assert.ok(inlineSource,'正文引用应直接跳回原片');inlineSource.click();
+  assert.equal(w.document.querySelector('#source-video').currentTime,20);
+  assert.doesNotMatch(w.document.querySelector('#lesson').textContent,/asr-1/,'来源编号不挤进正文');
   assert.ok(formulaCalls.some(c=>c.latex==='z=x+iy' && c.opts.trust===false));
   assert.match(w.document.querySelector('#frames').textContent,/原始 OCR/);
   assert.match(w.document.querySelector('#frames').textContent,/本帧说明复数的几何意义/);

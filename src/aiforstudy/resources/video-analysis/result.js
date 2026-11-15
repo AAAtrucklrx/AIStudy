@@ -22,13 +22,14 @@
     const button=el('button',label||(clock(start)+(Number(end)>Number(start)?'–'+clock(end):'')),'time-link');
     button.type='button';button.dataset.start=String(start);button.onclick=()=>seek(start);return button;
   }
-  function refs(ids){const group=el('div',undefined,'evidence-links');(ids||[]).forEach(id=>{const row=evidence.get(String(id));if(row)group.append(timeButton(row.start,row.end,'来源 '+id+' · '+clock(row.start)));else group.append(el('span','未定位来源：'+id,'muted'));});return group;}
+  function sourceButton(id){const row=evidence.get(String(id));if(!row){const missing=el('span','[来源待定位]','muted');missing.title=String(id);return missing;}const button=timeButton(row.start,row.end,(String(id).startsWith('frame-')?'画面 ':'语音 ')+clock(row.start));button.dataset.evidenceId=String(id);button.title='来源编号：'+id;return button;}
+  function refs(ids,collapse=false){const group=el(collapse?'details':'div',undefined,'evidence-links');if(collapse)group.append(el('summary','查看本节 '+(ids||[]).length+' 处来源'));(ids||[]).forEach(id=>group.append(sourceButton(id)));return group;}
   function math(latex,display=false){const node=el('span',undefined,display?'math-display':'math-inline');try{if(!window.katex)throw new Error('公式渲染器未加载');window.katex.render(latex,node,{displayMode:display,throwOnError:true,trust:false,strict:'warn',maxExpand:1000,maxSize:20});}catch(_){node.textContent=latex;node.classList.add('formula-error');node.title='公式未能渲染，保留原始 LaTeX 供核对';}return node;}
   // A deliberately small DOM-only Markdown renderer. HTML and URLs remain text;
   // only trusted local evidence controls create links, and KaTeX has trust:false.
   function inline(node,text){
-    const pattern=/\$\$([\s\S]+?)\$\$|\\\[([\s\S]+?)\\\]|\\\(([\s\S]+?)\\\)|\$([^$\n]+?)\$|\*\*([^*]+)\*\*|`([^`]+)`/g;
-    let match,last=0;while((match=pattern.exec(text))){node.append(document.createTextNode(text.slice(last,match.index)));if(match[1]!==undefined||match[2]!==undefined)node.append(math(match[1]??match[2],true));else if(match[3]!==undefined||match[4]!==undefined)node.append(math(match[3]??match[4]));else if(match[5]!==undefined)node.append(el('strong',match[5]));else node.append(el('code',match[6]));last=pattern.lastIndex;}node.append(document.createTextNode(text.slice(last)));
+    const pattern=/\$\$([\s\S]+?)\$\$|\\\[([\s\S]+?)\\\]|\\\(([\s\S]+?)\\\)|\$([^$\n]+?)\$|\*\*([^*]+)\*\*|`([^`]+)`|\[((?:asr|frame)-[A-Za-z0-9_-]+)\]/g;
+    let match,last=0;while((match=pattern.exec(text))){node.append(document.createTextNode(text.slice(last,match.index)));if(match[1]!==undefined||match[2]!==undefined)node.append(math(match[1]??match[2],true));else if(match[3]!==undefined||match[4]!==undefined)node.append(math(match[3]??match[4]));else if(match[5]!==undefined)node.append(el('strong',match[5]));else if(match[6]!==undefined)node.append(el('code',match[6]));else{const link=sourceButton(match[7]);link.classList.add('inline-evidence');node.append(link);}last=pattern.lastIndex;}node.append(document.createTextNode(text.slice(last)));
   }
   function markdown(host,text){
     const lines=String(text||'').replace(/\r\n/g,'\n').split('\n');let paragraph=[],code=null,display=null;
@@ -71,7 +72,7 @@
     playback();
     (result.sections||[]).forEach(section=>{
       const item=el('li');item.append(timeButton(section.start,section.end,clock(section.start)+' '+section.title));$('time-directory').append(item);
-      const article=el('article',undefined,'lesson-section');article.append(el('h2',section.title),timeButton(section.start,section.end));markdown(article,section.markdown);article.append(refs(section.evidence_ids));$('lesson').append(article);
+      const article=el('article',undefined,'lesson-section');article.append(el('h2',section.title),timeButton(section.start,section.end));markdown(article,section.markdown);article.append(refs(section.evidence_ids,true));$('lesson').append(article);
     });
     if(!(result.sections||[]).length)$('lesson').append(el('p','本次没有生成讲义章节，请查看原始记录与任务错误。'));
     (result.transcript?.segments||[]).forEach(segment=>{const row=el('div',undefined,'transcript-row'),text=el('div');text.append(el('p',segment.text));(segment.quality_warnings||[]).forEach(warning=>text.append(el('p','转写提示：'+describe(warning),'muted')));row.append(timeButton(segment.start,segment.end),text);$('transcript').append(row);});
