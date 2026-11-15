@@ -33,3 +33,7 @@ pre { background:color-mix(in srgb,var(--fg) 5%,transparent); padding:12px; bord
 #media-timeline .timeline-group { border:1px solid var(--line); border-radius:8px; padding:10px 14px; margin:8px 0; }
 #media-timeline .timeline-group h3 { margin:0 0 6px; font-size:13.5px; }
 #media-timeline .stage { font-size:12px; margin:3px 0; overflow-wrap:anywhere; }
+/* A separate course workflow, visible before the textbook controls. */
+.video-entry {display:flex;align-items:center;gap:1rem;flex-wrap:wrap;padding:1rem 1.25rem;border:1px solid #b6d9ce;background:#edf8f3;border-radius:12px}
+.video-entry a {font-size:1.15rem;font-weight:700;color:#176451;text-decoration:none}
+.video-entry span {color:#45675c;font-size:.9rem}

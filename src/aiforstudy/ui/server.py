@@ -136,7 +136,17 @@ class ControlServer:
         self.ui_dir = Path(ui_dir) if ui_dir else (Path(__file__).resolve().parent.parent
                                                    / "resources" / "control-ui")
         self._httpd: ThreadingHTTPServer | None = None
+        self._video_service = None
+        self._video_lock = threading.Lock()
         self.mark_interrupted()
+
+    @property
+    def video_service(self):
+        with self._video_lock:
+            if self._video_service is None:
+                from ..core.video_analysis import VideoAnalysisService
+                self._video_service = VideoAnalysisService(self.workspace.root)
+            return self._video_service
 
     # ── 生命周期
     @property
@@ -225,6 +235,11 @@ class ControlServer:
         try:
             path = unquote(urlsplit(handler.path).path)
             query = _query(handler.path)
+            if path.startswith("/api/videos/") and "/artifacts/" in path:
+                parts = path.split("/", 5)
+                target = self.video_service.artifact(parts[3], parts[5]) if len(parts) == 6 and parts[4] == "artifacts" else None
+                self._serve_file(handler, method, target)
+                return
             if path.startswith(("/artifacts/", "/diagnostics/")):
                 self._serve_artifact(handler, method, path)
                 return
@@ -233,11 +248,21 @@ class ControlServer:
                 return
             if method == "POST":
                 self._check_write_origin(handler)
+            if path == "/api/videos/upload" and method == "POST":
+                self._respond(handler, HTTPStatus.CREATED, self._video_upload(handler))
+                return
+            if path.startswith("/api/videos") and method == "POST":
+                if int(handler.headers.get("Content-Length") or 0) > 64 * 1024:
+                    raise ContractError("视频控制请求过大，请通过上传接口发送文件")
             body = self._read_body(handler) if method == "POST" else {}
             status, payload = self.dispatch(method, path, query, body, handler)
         except AifsError as exc:
             status, payload = _status_for(exc), {"error": str(exc),
                                                  "type": type(exc).__name__}
+        except KeyError as exc:
+            status, payload = HTTPStatus.NOT_FOUND, {"error": str(exc)}
+        except (ValueError, RuntimeError) as exc:
+            status, payload = HTTPStatus.BAD_REQUEST, {"error": str(exc)}
         except Exception as exc:                                  # noqa: BLE001
             status = HTTPStatus.INTERNAL_SERVER_ERROR
             payload = {"error": f"{type(exc).__name__}: {exc}"}
@@ -249,6 +274,25 @@ class ControlServer:
         if not match:
             return HTTPStatus.NOT_FOUND, {"error": f"没有这个接口：{path}"}
         name, arg, sub = match.group("name"), match.group("arg"), match.group("sub")
+
+        if name == "videos":
+            service = self.video_service
+            if method == "GET" and not arg:
+                return HTTPStatus.OK, {"jobs": service.list_jobs()}
+            if method == "GET" and arg == "capabilities":
+                return HTTPStatus.OK, {**service.capabilities(), "token": self.token}
+            if method == "POST" and arg == "sample":
+                return HTTPStatus.OK, service.sample()
+            if method == "POST" and not arg:
+                if not isinstance(body.get("source_id"), str) or not body["source_id"].strip():
+                    raise ContractError("请先上传视频或选择已提供的第一讲")
+                if set(body) - {"source_id", "title", "course_id", "force"}:
+                    raise ContractError("视频提交只接受已登记 source_id，不接受文件路径")
+                return HTTPStatus.ACCEPTED, service.submit(body)
+            if method == "GET" and arg and not sub:
+                return HTTPStatus.OK, service.get(arg)
+            if method == "POST" and arg and sub in {"cancel", "resume"}:
+                return HTTPStatus.OK, getattr(service, sub)(arg)
 
         if method == "GET" and name == "books" and not arg:
             return HTTPStatus.OK, self.api_books()
@@ -284,6 +328,21 @@ class ControlServer:
         if method == "GET" and name == "artifacts" and arg:
             return HTTPStatus.OK, self.api_artifact(arg)
         return HTTPStatus.NOT_FOUND, {"error": f"没有这个接口：{method} {path}"}
+
+    def _video_upload(self, handler) -> dict:
+        """Raw request body, bounded and streamed directly into the controlled source store."""
+        if handler.headers.get("Transfer-Encoding"):
+            raise ContractError("上传需要明确的 Content-Length")
+        length = int(handler.headers.get("Content-Length") or 0)
+        limit = int(self.video_service.capabilities().get("max_upload_bytes") or 2 * 1024 ** 3)
+        if not 0 < length <= limit:
+            raise ContractError(f"视频不能为空，且不得超过 {limit} 字节")
+        filename = unquote(handler.headers.get("X-Video-Filename", ""))
+        if (not filename or len(filename) > 240 or filename.startswith(".") or ".." in filename
+                or any(c in filename for c in "/\\\x00\r\n")
+                or Path(filename).suffix.lower() not in {".mp4", ".m4v", ".mov", ".webm", ".mkv", ".avi"}):
+            raise ContractError("视频文件名不合法；请使用不带目录的视频文件名")
+        return self.video_service.register_upload(handler.rfile, length, filename)
 
     # ── 各接口
     def api_books(self) -> dict:
@@ -804,6 +863,12 @@ class ControlServer:
         parts = path.split("/", 5)
         lookup = self._diagnostic_file if path.startswith('/diagnostics/') else self._artifact_file
         target = lookup(*parts[2:]) if len(parts) == 6 else None
+        self._serve_file(handler, method, target)
+
+    def _serve_file(self, handler, method: str, target: Path | None) -> None:
+        if method not in ("GET", "HEAD"):
+            self._respond(handler, HTTPStatus.METHOD_NOT_ALLOWED, {"error": "产物仅支持只读 GET/HEAD"})
+            return
         if target is None:
             self._respond(handler, HTTPStatus.NOT_FOUND, {"error": "产物不存在或未允许访问"})
             return
@@ -899,8 +964,8 @@ class ControlServer:
         return payload
 
     def _serve_static(self, handler, path: str) -> None:
-        rel = "index.html" if path in ("/", "") else path
-        found = self._static(rel)
+        rel = "index.html" if path in ("/", "") else "video.html" if path == "/video" else path
+        found = self._video_static(path) or self._static(rel)
         if found is None:
             self._respond(handler, HTTPStatus.NOT_FOUND, {"error": f"没有这个文件：{path}"})
             return
@@ -912,6 +977,30 @@ class ControlServer:
         handler.send_header("X-Content-Type-Options", "nosniff")
         handler.end_headers()
         self._write_body(handler, blob)
+
+    def _video_static(self, path: str) -> tuple[bytes, str] | None:
+        package = Path(__file__).resolve().parent.parent
+        target = None
+        if path == "/video-result.html":
+            target = package / "resources/video-analysis/index.html"
+        elif path in {"/video-analysis/result.js", "/video-analysis/result.css"}:
+            target = package / "resources" / path.lstrip("/")
+        elif path.startswith("/video-assets/"):
+            rel = path.removeprefix("/video-assets/")
+            if rel == "audible-audio.js":
+                asset = "assets/audible-audio.js"
+            elif rel in {"katex.min.js", "katex.min.css"} or re.fullmatch(r"fonts/[A-Za-z0-9_.-]+\.(?:woff2?|ttf)", rel):
+                asset = "vendor/" + rel
+            else:
+                return None
+            for root in (package / "blocks/render", package.parents[1] / "blocks/render", self.workspace.root / "blocks/render"):
+                candidate = root / asset
+                if candidate.is_file():
+                    target = candidate
+                    break
+        if target and target.is_file():
+            return target.read_bytes(), mimetypes.guess_type(target.name)[0] or "application/octet-stream"
+        return None
 
     def _respond(self, handler, status: int, payload: dict) -> None:
         _assert_no_secrets(payload)
