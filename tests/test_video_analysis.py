@@ -226,3 +226,26 @@ def test_invalid_model_protocol_is_preserved_and_resume_uses_new_tag(tmp_path):
     preserved = json.loads((tmp_path / 'exchanges/lesson-001.output.json').read_text())
     assert preserved['data'] == {'refs': ['bad']}
     assert preserved['validation_error']
+
+
+@pytest.mark.parametrize('field,value', [('formulas', ['bad']), ('formulas', 'bad'), ('uncertainties', 'bad')])
+def test_lesson_rejects_malformed_collections(field, value):
+    from aiforstudy.core.video_analysis import validate_lesson
+    data = {'sections': [{'id': 's', 'title': 'a', 'start': 0, 'end': 1, 'markdown': 'text', 'evidence_ids': ['a']}], 'formulas': [], 'uncertainties': []}
+    data[field] = value
+    with pytest.raises(ValueError):
+        validate_lesson(data, {'a'}, 1)
+
+
+@pytest.mark.parametrize('data', [{'frames': ['bad']}, {'frames': [{'id': 'a', 'visual_text': 'text', 'uncertainties': 'bad'}]}])
+def test_visual_rejects_malformed_collections(data):
+    from aiforstudy.core.video_analysis_models import validate_visual_response
+    with pytest.raises(ValueError):
+        validate_visual_response(data, {'a'})
+
+
+@pytest.mark.parametrize('data', [{'decision': 'issues_found', 'issues': ['bad'], 'limitations': []}, {'decision': 'no_issues_found', 'issues': [], 'limitations': 'bad'}])
+def test_review_rejects_malformed_collections(data):
+    from aiforstudy.core.video_analysis_models import validate_review_response
+    with pytest.raises(ValueError):
+        validate_review_response(data, {'a'})

@@ -17,6 +17,36 @@ from ..providers.gateway import Gateway, CallRequest
 from ..pipeline.execution_control import ExecutionControl, load_policy
 
 
+def validate_visual_response(answer, expected_ids):
+    received = answer.get('frames') if isinstance(answer, dict) else None
+    if not isinstance(received, list) or any(not isinstance(f, dict) or not isinstance(f.get('id'), str) for f in received):
+        raise ValueError('Visual response requires frame objects')
+    if len(received) != len(expected_ids) or {f['id'] for f in received} != expected_ids:
+        raise ValueError('Visual response evidence IDs do not match input frames')
+    for item in received:
+        notes = item.get('uncertainties')
+        if not isinstance(item.get('visual_text'), str) or not isinstance(notes, list) or any(not isinstance(n, str) for n in notes):
+            raise ValueError('Visual response requires text and uncertainty strings')
+        if not isinstance(item.get('explanation', ''), str):
+            raise ValueError('Visual explanation must be text')
+
+
+def validate_review_response(answer, source_ids):
+    if not isinstance(answer, dict) or answer.get('decision') not in {'issues_found', 'no_issues_found'} or not isinstance(answer.get('issues'), list):
+        raise ValueError('Reviewer output schema invalid')
+    notes = answer.get('limitations', [])
+    if not isinstance(notes, list) or any(not isinstance(n, str) for n in notes):
+        raise ValueError('Reviewer limitations must be a list of strings')
+    for issue in answer['issues']:
+        if not isinstance(issue, dict):
+            raise ValueError('Reviewer issues must contain objects')
+        refs = issue.get('source_ids')
+        if not isinstance(refs, list) or any(not isinstance(r, str) or r not in source_ids for r in refs):
+            raise ValueError('Reviewer invented evidence IDs')
+        if not isinstance(issue.get('description'), str) or not isinstance(issue.get('suggestion', ''), str):
+            raise ValueError('Reviewer issue requires text')
+
+
 class VideoModelTransport:
     """Contain real SDK calls in a child inheriting the job flock.
 
@@ -131,11 +161,7 @@ class VideoModelSession:
 严格输出 {"frames":[{"id":"输入frame id原样","visual_text":"忠实转录Markdown","explanation":"本帧在老师讲解推进中的作用，属于解释","uncertainties":["..."]}]}。每个输入id恰好返回一次，不增加id。'''
             data = {'frames': [{k: f[k] for k in ('id', 'start', 'end', 'text')} for f in batch], 'nearby_asr': nearby}
             def validate_visual(answer):
-                received = answer.get('frames') if isinstance(answer, dict) else None
-                if not isinstance(received, list) or len(received) != len(batch) or {f.get('id') for f in received} != {f['id'] for f in batch}:
-                    raise ValueError('Visual response evidence IDs do not match input frames')
-                if any(not isinstance(f.get('visual_text'), str) or not isinstance(f.get('uncertainties'), list) for f in received):
-                    raise ValueError('Visual response missing transcription or uncertainty list')
+                validate_visual_response(answer, {f['id'] for f in batch})
             answer = self.call('source_repair', f'vision-{index // count + 1:03d}', system, data, [str(self.directory / f['path']) for f in batch], validate=validate_visual)
             received = answer.get('frames') if isinstance(answer, dict) else None
             if not isinstance(received, list) or len(received) != len(batch) or {f.get('id') for f in received} != {f['id'] for f in batch}:
@@ -194,12 +220,7 @@ class VideoModelSession:
             data = {'lesson': lesson, 'asr': transcript['segments'],
                     'frames': [{k: f.get(k) for k in ('id', 'start', 'text', 'visual_text', 'uncertainties')} for f in frames]}
             def validate_review(answer):
-                if not isinstance(answer, dict) or answer.get('decision') not in {'issues_found', 'no_issues_found'} or not isinstance(answer.get('issues'), list):
-                    raise ValueError('Reviewer output schema invalid')
-                ids = {s['id'] for s in transcript['segments']} | {f['id'] for f in frames}
-                for issue in answer['issues']:
-                    if not isinstance(issue.get('source_ids'), list) or any(r not in ids for r in issue['source_ids']):
-                        raise ValueError('Reviewer invented evidence IDs')
+                validate_review_response(answer, {s['id'] for s in transcript['segments']} | {f['id'] for f in frames})
             answer = self.call('text_judge', 'review-001', system, data, validate=validate_review)
             if not isinstance(answer, dict) or answer.get('decision') not in {'issues_found', 'no_issues_found'} or not isinstance(answer.get('issues'), list):
                 raise ValueError('Reviewer output schema invalid')

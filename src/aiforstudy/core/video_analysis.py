@@ -70,18 +70,22 @@ def validate_lesson(value, source_ids, duration):
         if not all(type(v) in (float, int) and math.isfinite(v) for v in (start, end)) or not 0 <= start < end <= duration + .1:
             raise ValueError('Invalid section time range')
         refs = section.get('evidence_ids')
-        if not isinstance(refs, list) or not refs or any(r not in source_ids for r in refs):
+        if not isinstance(refs, list) or not refs or any(not isinstance(r, str) or r not in source_ids for r in refs):
             raise ValueError('Invalid evidence source ids')
         inline = re.findall(r'\[((?:frame|asr)-[a-zA-Z0-9-]+)\]', section['markdown'])
         if any(reference not in refs or reference not in source_ids for reference in inline):
             raise ValueError('Invalid inline evidence source ids')
+    if not isinstance(value.get('formulas', []), list):
+        raise ValueError('Invalid formulas list')
     for formula in value.get('formulas', []):
+        if not isinstance(formula, dict):
+            raise ValueError('Invalid formula object')
         refs = formula.get('source_ids')
-        if not isinstance(formula.get('latex'), str) or not isinstance(refs, list) or not refs or any(r not in source_ids for r in refs):
+        if not isinstance(formula.get('latex'), str) or not isinstance(refs, list) or not refs or any(not isinstance(r, str) or r not in source_ids for r in refs):
             raise ValueError('Invalid formula source ids')
         if not isinstance(formula.get('uncertainty', ''), str):
             raise ValueError('Invalid formula uncertainty')
-    if not isinstance(value.get('uncertainties', []), list):
+    if not isinstance(value.get('uncertainties', []), list) or any(not isinstance(x, str) for x in value.get('uncertainties', [])):
         raise ValueError('Invalid uncertainties')
     return value
 
