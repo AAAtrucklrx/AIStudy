@@ -148,3 +148,33 @@ def test_ocr_preserves_source_ids_boxes_and_invalidates_image_cache(worker, tmp_
     frame.write_bytes(b"changed image")
     with pytest.raises(worker.IdentityMismatch):
         worker.run_ocr(manifest, output)
+
+
+def test_cancel_file_stops_asr_after_completed_evidence_and_can_resume(worker, inputs, tmp_path, monkeypatch):
+    wav, output, model = inputs
+    cancel = tmp_path / 'cancel.request'
+    def backend(*args):
+        cancel.touch()
+        return {'text': '已完成窗口', 'generation_tokens': 4}
+    install_backend(monkeypatch, worker, backend)
+    with pytest.raises(worker.WorkerCancelled):
+        worker.run_asr(wav, output, model, cancel_file=cancel)
+    prior=json.loads(output.read_text());assert prior['status']=='cancelled';assert len(prior['segments'])==1
+    cancel.unlink();install_backend(monkeypatch, worker, lambda *args:{'text':'继续识别','generation_tokens':3})
+    resumed=worker.run_asr(wav, output, model, cancel_file=cancel)
+    assert resumed['coverage']['complete'];assert resumed['segments'][0]==prior['segments'][0]
+
+
+def test_cancel_file_stops_ocr_between_frames_without_restarting_finished_work(worker, tmp_path, monkeypatch):
+    frame=tmp_path/'frame.png';frame.write_bytes(b'image fixture');executable=tmp_path/'vision';executable.write_bytes(b'runner')
+    monkeypatch.setenv('AIFORSTUDY_VIDEO_OCR_EXECUTABLE',str(executable))
+    manifest=tmp_path/'frames.json';manifest.write_text(json.dumps({'frames':[{'id':str(i),'path':'frame.png','start':i,'end':i+1} for i in range(3)]}))
+    cancel=tmp_path/'cancel.request';output=tmp_path/'ocr.json'
+    def recognize(*args):
+        cancel.touch();return {'success':True,'observations':[{'text':'原文','confidence':1}]}
+    monkeypatch.setattr(worker,'_recognize_frame',recognize)
+    with pytest.raises(worker.WorkerCancelled):worker.run_ocr(manifest,output,cancel_file=cancel)
+    prior=json.loads(output.read_text());assert prior['status']=='cancelled';assert len(prior['frames'])==1
+    cancel.unlink();monkeypatch.setattr(worker,'_recognize_frame',lambda *args:{'success':True,'observations':[{'text':'继续','confidence':1}]})
+    resumed=worker.run_ocr(manifest,output,cancel_file=cancel)
+    assert len(resumed['frames'])==3;assert resumed['frames'][0]==prior['frames'][0]

@@ -35,6 +35,11 @@ class WorkerCancelled(BaseException):
     """Cancellation must escape recognizer error handling."""
 
 
+def _check_cancel_file(path):
+    if path is not None and Path(path).exists():
+        raise WorkerCancelled()
+
+
 def _digest(value):
     return hashlib.sha256(json.dumps(value, sort_keys=True, ensure_ascii=False,
                                      separators=(",", ":"), allow_nan=False).encode()).hexdigest()
@@ -222,7 +227,8 @@ def _status(items):
     return "completed_with_warnings" if any(item.get("quality_warnings") for item in items) else "completed"
 
 
-def run_asr(input_path, output_path, model_path, chunk_seconds=20, overlap_seconds=2, max_tokens=2048):
+def run_asr(input_path, output_path, model_path, chunk_seconds=20, overlap_seconds=2, max_tokens=2048, *, cancel_file=None):
+    _check_cancel_file(cancel_file)
     input_path, output_path = Path(input_path), Path(output_path)
     with wave.open(str(input_path), "rb") as audio:
         if (audio.getframerate(), audio.getnchannels(), audio.getsampwidth(), audio.getcomptype()) != (16000, 1, 2, "NONE"):
@@ -245,6 +251,7 @@ def run_asr(input_path, output_path, model_path, chunk_seconds=20, overlap_secon
         save()
         try:
             for begin, end in windows:
+                _check_cancel_file(cancel_file)
                 expected = {"id": f"asr-{begin:012d}-{end:012d}", "start": begin / rate, "end": end / rate}
                 cached = _cached(directory, identity, expected)
                 if cached is not None:
@@ -275,6 +282,7 @@ def run_asr(input_path, output_path, model_path, chunk_seconds=20, overlap_secon
                 save()
                 print(json.dumps({"mode": "asr", "completed_windows": len(document["segments"]),
                                   "total_windows": len(windows), "end": end / rate, "status": item["status"]}), flush=True)
+                _check_cancel_file(cancel_file)
             document["status"] = _status(document["segments"])
         except (WorkerCancelled, KeyboardInterrupt):
             document["status"] = "cancelled"
@@ -364,7 +372,8 @@ def _recognize_frame(executable, path):
     return json.loads(_subprocess([str(executable), str(path)]))
 
 
-def run_ocr(input_path, output_path):
+def run_ocr(input_path, output_path, *, cancel_file=None):
+    _check_cancel_file(cancel_file)
     input_path, output_path = Path(input_path), Path(output_path)
     frames = json.loads(input_path.read_text(encoding="utf-8")).get("frames")
     if not isinstance(frames, list) or not frames:
@@ -398,6 +407,7 @@ def run_ocr(input_path, output_path):
     save()
     try:
         for source in sources:
+            _check_cancel_file(cancel_file)
             expected = {key: source[key] for key in ("id", "start", "end")}
             cached = _cached(directory, identity, expected)
             if cached is not None:
@@ -427,6 +437,7 @@ def run_ocr(input_path, output_path):
             document["frames"].append(item)
             save()
             print(json.dumps({"mode": "ocr", "completed_frames": len(document["frames"]), "total_frames": len(frames), "id": source["id"]}), flush=True)
+            _check_cancel_file(cancel_file)
         document["status"] = _status(document["frames"])
     except (WorkerCancelled, KeyboardInterrupt):
         document["status"] = "cancelled"
@@ -448,6 +459,7 @@ def main(argv=None):
     parser.add_argument("--chunk-seconds", type=float, default=20)
     parser.add_argument("--overlap-seconds", type=float, default=2)
     parser.add_argument("--max-tokens", type=int, default=2048)
+    parser.add_argument("--cancel-file", type=Path, help="Cooperative cancellation marker; checked between recognition items")
     args = parser.parse_args(argv)
     if args.mode == "asr" and not args.model:
         parser.error("ASR requires --model or AIFORSTUDY_VIDEO_ASR_MODEL")
@@ -458,8 +470,8 @@ def main(argv=None):
         raise WorkerCancelled()
     previous = signal.signal(signal.SIGTERM, cancel)
     try:
-        result = (run_asr(args.input, args.output, args.model, args.chunk_seconds, args.overlap_seconds, args.max_tokens)
-                  if args.mode == "asr" else run_ocr(args.input, args.output))
+        result = (run_asr(args.input, args.output, args.model, args.chunk_seconds, args.overlap_seconds, args.max_tokens, cancel_file=args.cancel_file)
+                  if args.mode == "asr" else run_ocr(args.input, args.output, cancel_file=args.cancel_file))
         print(json.dumps({"status": result["status"], "output": str(args.output)}), flush=True)
         return 0 if result["status"] in ("completed", "completed_with_warnings") else 1
     except (WorkerCancelled, KeyboardInterrupt):
