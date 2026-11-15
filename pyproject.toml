@@ -27,7 +27,7 @@ package-dir = { "" = "src" }
 where = ["src"]
 
 [tool.setuptools.package-data]
-aiforstudy = ["resources/control-ui/*.html", "resources/control-ui/*.css", "resources/control-ui/*.js", "resources/shelf/*", "checks/*.cjs", "providers/*.cjs", "vendor/normalizer/provenance.json", "resources/*.json", "blocks/media/*.cjs", "blocks/render/*.cjs", "blocks/content/prompts/*.md", "blocks/media/prompts/*.md"]
+aiforstudy = ["resources/control-ui/*.html", "resources/control-ui/*.css", "resources/control-ui/*.js", "resources/video-analysis/*", "resources/shelf/*", "checks/*.cjs", "providers/*.cjs", "vendor/normalizer/provenance.json", "resources/*.json", "blocks/media/*.cjs", "blocks/render/*.cjs", "blocks/content/prompts/*.md", "blocks/media/prompts/*.md"]
 
 [tool.pytest.ini_options]
 # ⚠️ 只加"不递归进哪些目录"，**不动 testpaths / addopts**：
