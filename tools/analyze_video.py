@@ -17,6 +17,8 @@ def main():
     parser.add_argument('--sample', action='store_true')
     parser.add_argument('--resume')
     parser.add_argument('--reconcile', metavar='JOB_ID')
+    parser.add_argument('--retry-revision', metavar='REVISION_ID')
+    parser.add_argument('--review-feedback', type=Path, action='append', default=[])
     parser.add_argument('--title')
     parser.add_argument('--course-id', default='video-course')
     parser.add_argument('--force', action='store_true')
@@ -26,7 +28,8 @@ def main():
     if args.capabilities:
         print(json.dumps(service.capabilities(), ensure_ascii=False, indent=2)); return 0
     if args.reconcile:
-        job = service.reconcile(args.reconcile)
+        feedback = {'documents': [{'filename': path.name, 'text': path.read_text(encoding='utf-8')} for path in args.review_feedback]} if args.review_feedback else None
+        job = service.reconcile(args.reconcile, retry_revision_id=args.retry_revision, review_feedback=feedback)
     elif args.resume:
         job = service.resume(args.resume)
     else:

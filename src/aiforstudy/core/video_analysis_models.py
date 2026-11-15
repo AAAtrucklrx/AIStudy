@@ -101,17 +101,45 @@ class VideoModelSession:
         roles = ('source_repair', 'lesson', 'text_judge')
         return {role: self.config.role(role).as_dict() for role in roles if role in self.config.roles}
 
-    def call(self, role, tag, system, data, images=None, validate=None):
+    def call(self, role, tag, system, data, images=None, validate=None, repair_fields=None):
+        """At most two content attempts, with concrete feedback and preserved raw replies."""
+        from copy import deepcopy
+        import re
         self.token.checkpoint()
-        base_tag = tag
+        base_tag = tag; previous = None; previous_tag = None
         for repair in range(2):
             tag = base_tag if repair == 0 else base_tag + '-repair-1'
             saved = self.directory / 'exchanges' / (tag + '.output.json')
             if not saved.is_file() or not _read(saved).get('validation_error'):
                 break
+            previous, previous_tag = _read(saved), tag
         else:
-            raise ValueError('模型内容协议两次校验失败，原始结果已保留；请新建任务重新分析')
+            raise ValueError('模型内容协议两次校验失败，原始结果与具体错误已保留；请新建修订任务')
         messages = [{'role': 'system', 'content': system}, {'role': 'user', 'content': json.dumps(data, ensure_ascii=False)}]
+        previous_candidate = None; patch_fields = None
+        def errors_for(exc):
+            errors = getattr(exc, 'errors', None)
+            if isinstance(errors, list):
+                return errors
+            match = re.match(r'([A-Za-z_]\w*(?:\[\d+\]|\.\w+)*)[: ]', str(exc))
+            return [{'path': match.group(1) if match else '', 'message': str(exc)}]
+        if previous is not None:
+            previous_candidate = previous.get('validated_data', previous['data'])
+            errors = previous.get('validation_errors') or [{'path': '', 'message': previous['validation_error']}]
+            if validate:
+                try:
+                    validate(previous_candidate)
+                except (ValueError, TypeError, KeyError) as exc:
+                    errors = errors_for(exc)
+            if repair_fields and all(e.get('path', '').split('[')[0].split('.')[0] in repair_fields for e in errors):
+                patch_fields = tuple(repair_fields)
+            feedback = {'validation_errors': errors,
+                'instruction': '修复下列具体协议/来源绑定问题，不改写未被指出的有效内容。不得降低数学或source ID标准。JSON只编码一次，解析后的LaTeX命令前只有一个反斜线；aligned/matrix合法换行保持两个。普通来源说明用note，真正未确定的公式移到uncertainties而非正式formulas。',
+                'response_shape': ('只输出需要替换的顶层字段对象，允许字段为' + ', '.join(patch_fields) + '；省略字段将原样保留。严禁改变sections或covered_section_ids。') if patch_fields else '返回完整修正后的原JSON结构。'}
+            messages += [{'role': 'assistant', 'content': previous['text']},
+                         {'role': 'user', 'content': json.dumps({'protocol_repair': feedback}, ensure_ascii=False)}]
+            write_json_atomic(self.directory / 'exchanges' / (tag + '.feedback.json'),
+                {'repair_of': previous_tag, 'candidate_digest': _digest(previous_candidate), **feedback})
         input_path = self.directory / 'exchanges' / (tag + '.input.json')
         input_record = {'role': role, 'messages': messages, 'images': [str(Path(p).relative_to(self.directory)) for p in (images or [])]}
         if input_path.is_file() and _read(input_path) != input_record:
@@ -119,35 +147,51 @@ class VideoModelSession:
         write_json_atomic(input_path, input_record)
         output = self.directory / 'exchanges' / (tag + '.output.json')
         if output.is_file():
-            preserved = _read(output)
-            if preserved.get('input_digest') != _digest(input_record):
+            record = _read(output)
+            if record.get('input_digest') != _digest(input_record):
                 raise ValueError('Preserved model response identity mismatch')
-            if preserved['ok']:
-                if validate:
-                    try:
-                        validate(preserved['data'])
-                    except (ValueError, TypeError, KeyError) as exc:
-                        preserved['validation_error'] = str(exc); write_json_atomic(output, preserved); raise ValueError(str(exc)) from exc
-                return preserved['data']
-        result = self.gateway.call(CallRequest(role=role, messages=messages, images=tuple(images or ()),
-            stage='video-' + role, unit_key=tag, tag=tag, bucket='content', scope_kind='unit',
-            prompt_version='video-analysis-v1.0', rules_version='source-bound-v1'))
-        # This stores original provider text even if JSON/protocol validation fails.
-        record = dict(result.as_dict(), data=result.payload, text=result.text, input_digest=_digest(input_record), model=self.config.role(role).model)
-        if output.is_file():
-            history = output.with_name(output.stem + '.previous.json')
-            if not history.exists():
-                output.rename(history)
-        write_json_atomic(output, record)
-        self.service._register_artifacts(self.job_id, [str(input_path.relative_to(getattr(self, 'job_directory', self.directory))), str(output.relative_to(getattr(self, 'job_directory', self.directory))), str((self.directory / 'model-calls.jsonl').relative_to(getattr(self, 'job_directory', self.directory)))])
-        if not result.ok:
-            raise RuntimeError('Model call failed: ' + (result.failure_kind or 'unknown') + '; response preserved')
-        if validate:
-            try:
-                validate(result.payload)
-            except (ValueError, TypeError, KeyError) as exc:
-                record['validation_error'] = str(exc); write_json_atomic(output, record); raise ValueError(str(exc)) from exc
-        return result.payload
+            if not record['ok']:
+                record = None
+        else:
+            record = None
+        if record is None:
+            result = self.gateway.call(CallRequest(role=role, messages=messages, images=tuple(images or ()),
+                stage='video-' + role, unit_key=tag, tag=tag, bucket='content', scope_kind='unit',
+                prompt_version='video-analysis-v1.0', rules_version='source-bound-v1'))
+            record = dict(result.as_dict(), data=result.payload, text=result.text, input_digest=_digest(input_record), model=self.config.role(role).model)
+            if previous is not None:
+                record.update(repair_of=previous_tag, repair_fields=list(patch_fields) if patch_fields else None)
+            if output.is_file():
+                history = output.with_name(output.stem + '.previous.json')
+                if not history.exists():
+                    output.rename(history)
+            write_json_atomic(output, record)
+            self.service._register_artifacts(self.job_id, [str(input_path.relative_to(getattr(self, 'job_directory', self.directory))),
+                str(output.relative_to(getattr(self, 'job_directory', self.directory))),
+                str((self.directory / 'model-calls.jsonl').relative_to(getattr(self, 'job_directory', self.directory)))])
+            if not result.ok:
+                raise RuntimeError('Model call failed: ' + (result.failure_kind or 'unknown') + '; response preserved')
+        candidate = record.get('validated_data', record['data'])
+        try:
+            if patch_fields and 'validated_data' not in record:
+                if not isinstance(record['data'], dict):
+                    raise ValueError('Protocol repair must return a field object')
+                for key, value in record['data'].items():
+                    if key not in patch_fields and previous_candidate.get(key) != value:
+                        raise ValueError('Protocol repair changed a locked field: ' + key)
+                candidate = deepcopy(previous_candidate)
+                candidate.update({k: deepcopy(v) for k, v in record['data'].items() if k in patch_fields})
+                record['validated_data'] = candidate
+            if validate:
+                validate(candidate)
+        except (ValueError, TypeError, KeyError) as exc:
+            record.update(validation_error=str(exc), validation_errors=errors_for(exc))
+            write_json_atomic(output, record)
+            # The durable failed record selects a fresh bounded repair tag next.
+            return self.call(role, base_tag, system, data, images=images, validate=validate, repair_fields=repair_fields)
+        if patch_fields:
+            write_json_atomic(output, record)
+        return candidate
 
     def vision(self, frames, transcript, duration):
         count = self.service.config['vision_batch_size']

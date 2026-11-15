@@ -218,8 +218,6 @@ def test_invalid_model_protocol_is_preserved_and_resume_uses_new_tag(tmp_path):
     def validate(data):
         if data['refs'] != ['good']:
             raise ValueError('Invalid source ids')
-    with pytest.raises(ValueError, match='source'):
-        session.call('lesson', 'lesson-001', 'system', {}, validate=validate)
     result = session.call('lesson', 'lesson-001', 'system', {}, validate=validate)
     assert result == {'refs': ['good']}
     assert len(set(tags)) == 2
@@ -249,3 +247,37 @@ def test_review_rejects_malformed_collections(data):
     from aiforstudy.core.video_analysis_models import validate_review_response
     with pytest.raises(ValueError):
         validate_review_response(data, {'a'})
+
+
+def test_protocol_repair_includes_candidate_errors_and_can_patch_selected_fields(tmp_path):
+    from aiforstudy.core.video_analysis_models import VideoModelSession
+    from aiforstudy.providers.gateway import CallResult
+    from aiforstudy.pipeline.services import CancelToken
+    from types import SimpleNamespace
+    session = VideoModelSession.__new__(VideoModelSession)
+    session.directory = tmp_path; (tmp_path / 'exchanges').mkdir()
+    session.token = CancelToken(); session.job_id = 'test'
+    session.service = SimpleNamespace(_register_artifacts=lambda *args: None)
+    session.config = SimpleNamespace(role=lambda role: SimpleNamespace(model='fixture'))
+    requests = []
+    first = {'sections': [{'markdown': 'Preserve this prose'}], 'formulas': [{'latex': 'x=1', 'uncertainty': 'source note'}]}
+    patch = {'formulas': [{'latex': 'x=1', 'uncertainty': '', 'note': 'source note'}]}
+    def respond(request):
+        requests.append(request)
+        payload = first if len(requests) == 1 else patch
+        return CallResult(ok=True, payload=payload, text=json.dumps(payload))
+    session.gateway = SimpleNamespace(call=respond)
+    def validate(data):
+        if data['formulas'][0].get('uncertainty'):
+            raise ValueError('formulas[0].uncertainty: use note for source explanations')
+        assert data['sections'] == first['sections']
+    answer = session.call('lesson', 'repair', 'system', {}, validate=validate, repair_fields=('formulas',))
+    assert answer['sections'] == first['sections']
+    assert answer['formulas'][0]['note'] == 'source note'
+    assert len(requests) == 2
+    assert any(m['role'] == 'assistant' and 'Preserve this prose' in m['content'] for m in requests[1].messages)
+    assert 'formulas[0].uncertainty' in requests[1].messages[-1]['content']
+    output = json.loads((tmp_path / 'exchanges/repair-repair-1.output.json').read_text())
+    assert output['data'] == patch
+    assert output['validated_data'] == answer
+    assert json.loads((tmp_path / 'exchanges/repair.output.json').read_text())['data'] == first

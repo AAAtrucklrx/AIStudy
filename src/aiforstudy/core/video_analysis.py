@@ -376,7 +376,7 @@ class VideoAnalysisService:
         self._launch(job_id)
         return self.get(job_id)
 
-    def reconcile(self, job_id):
+    def reconcile(self, job_id, *, retry_revision_id=None, review_feedback=None):
         """Publish a new derived revision without changing baseline stage receipts."""
         directory = self._jobdir(job_id); self._recover(job_id)
         handle = (directory / 'worker.lock').open('a+b')
@@ -399,7 +399,21 @@ class VideoAnalysisService:
                     raise ValueError('原始导出产物已改变，拒绝混合来源')
             if row.get('active_result_sha256') and _sha(source) != row['active_result_sha256']:
                 raise ValueError('现行修订完整性校验失败')
-            revision_id = uuid.uuid4().hex; output = directory / 'revisions' / revision_id; output.mkdir(parents=True)
+            if retry_revision_id is not None and (not isinstance(retry_revision_id, str) or not ID.fullmatch(retry_revision_id)):
+                raise ValueError('Invalid revision id')
+            revision_id = retry_revision_id or uuid.uuid4().hex
+            output = directory / 'revisions' / revision_id
+            previous_record = None
+            if retry_revision_id:
+                if not (output / 'revision.json').is_file():
+                    raise ValueError('Unknown failed revision')
+                previous_record = _read(output / 'revision.json')
+                if previous_record.get('state') == 'completed' or previous_record.get('parent_result') != relative or previous_record.get('parent_result_sha256') != _sha(source):
+                    raise ValueError('Revision parent changed or revision already completed')
+            else:
+                output.mkdir(parents=True)
+            if review_feedback is not None and not isinstance(review_feedback, (dict, str)):
+                raise ValueError('Review feedback must be text or an object')
             snapshot = self._config_snapshot()
             commit = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=self.workspace_root, capture_output=True, text=True, timeout=10)
             producer = {'git_commit': commit.stdout.strip() if commit.returncode == 0 else None,
@@ -408,8 +422,22 @@ class VideoAnalysisService:
             revision = {'id': revision_id, 'state': 'queued', 'stage': 'reconcile', 'error': None,
                         'parent_result': relative, 'parent_result_sha256': _sha(source),
                         'producer_dependency_digest': producer['dependency_digest']}
-            write_json_atomic(output / 'revision.json', {**revision, 'producer': producer,
-                'baseline_run_identity': row['identity'], 'baseline_dependencies': row['config'].get('dependencies', {})})
+            producers = (previous_record.get('producer_attempts') or [previous_record['producer']]) if previous_record else []
+            prior_attempts = previous_record.get('attempt_history', []) if previous_record else []
+            if previous_record:
+                prior_attempts = prior_attempts + [{key: previous_record.get(key) for key in ('state', 'stage', 'error', 'producer_dependency_digest')}]
+                failure = output / 'failure.log'
+                if failure.is_file():
+                    failure.rename(output / ('failure.attempt-' + str(len(producers)) + '.log'))
+            record = {**(previous_record or {}), **revision, 'producer': producers[0] if producers else producer,
+                'producer_attempts': producers + [producer], 'latest_producer': producer, 'attempt_history': prior_attempts,
+                'baseline_run_identity': row['identity'], 'baseline_dependencies': row['config'].get('dependencies', {})}
+            if review_feedback is not None:
+                feedback_name = 'source-quality-feedback-' + str(len(producers) + 1) + '.json'
+                write_json_atomic(output / feedback_name, {'kind': 'source_checked_revision_feedback',
+                    'not_independent_mathematical_approval': True, 'content': review_feedback})
+                record['source_quality_feedback'] = feedback_name
+            write_json_atomic(output / 'revision.json', record)
             (directory / 'cancel.request').unlink(missing_ok=True)
             token = _FileCancel(directory / 'cancel.request'); self._tokens[job_id] = token
             self._update(job_id, state='queued', stage='reconcile', operation='reconcile', revision=revision, error=None, progress=0)
@@ -440,7 +468,12 @@ class VideoAnalysisService:
                 'parent_result_sha256': revision['parent_result_sha256'], 'frames_digest': _digest(frames),
                 'transcript_digest': _digest(transcript), 'lesson_digest': _digest(lesson)})
             session = VideoModelSession(self, job_id, token, directory=output)
-            corrected = reconcile_lecture(session, lesson, frames, transcript, duration, prefix, review=base.get('review'))
+            prior_review = base.get('review')
+            revision_record = _read(output / 'revision.json')
+            if revision_record.get('source_quality_feedback'):
+                feedback = _read(output / revision_record['source_quality_feedback'])
+                prior_review = {'previous_model_review': prior_review, 'source_quality_feedback': feedback}
+            corrected = reconcile_lecture(session, lesson, frames, transcript, duration, prefix, review=prior_review)
             progress('global_review', .55); token.checkpoint()
             review = re_review_lecture(session, corrected, frames, transcript, duration, prefix)
             progress('export', .9); token.checkpoint()
@@ -450,7 +483,7 @@ class VideoAnalysisService:
             result['review'] = review; result['quality_state'] = 'candidate'; result['production_accepted'] = False
             result['provenance'] = {**base.get('provenance', {}),
                 'recognition_producer': deepcopy(base.get('provenance', {}).get('recognition_producer', base.get('provenance', {}))),
-                'reconciliation_producer': producer, 'parent_result_sha256': revision['parent_result_sha256'],
+                'reconciliation_producer': producer, 'reconciliation_producer_attempts': revision_record.get('producer_attempts', [producer]), 'parent_result_sha256': revision['parent_result_sha256'],
                 'revision_id': revision['id'], 'recognition_reused_without_modification': True}
             relative = output.relative_to(directory).as_posix()
             result['exports'] = {'json': relative + '/result.json', 'markdown': relative + '/lesson.md',

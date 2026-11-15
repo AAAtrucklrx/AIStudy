@@ -33,7 +33,7 @@ def test_reconciliation_uses_all_windows_without_mutating_raw(tmp_path):
     from aiforstudy.core.video_lecture_reconciliation import reconcile_lecture
     lesson, frames, transcript, rewritten = case()
     originals = copy.deepcopy((lesson, frames, transcript)); captured = []
-    def call(role, tag, system, data, validate=None):
+    def call(role, tag, system, data, validate=None, **kwargs):
         captured.append((role, tag, system, data)); validate(rewritten); return rewritten
     session = SimpleNamespace(call=call, directory=tmp_path, identities=lambda: {'lesson': {'model': 'fixture'}})
     result = reconcile_lecture(session, lesson, frames, transcript, 40, 'revision-a')
@@ -62,7 +62,7 @@ def test_reconciliation_rejects_unbound_edits(mutation):
 def test_re_review_has_independent_tag_and_never_approves(tmp_path):
     from aiforstudy.core.video_lecture_reconciliation import re_review_lecture
     lesson, frames, transcript, rewritten = case(); called = []
-    def call(role, tag, system, data, validate=None):
+    def call(role, tag, system, data, validate=None, **kwargs):
         answer = {'decision': 'no_issues_found', 'issues': [], 'limitations': ['Text evidence only']}
         called.append((role, tag, data)); validate(answer); return answer
     session = SimpleNamespace(call=call, directory=tmp_path)
@@ -113,7 +113,21 @@ def test_revision_publishes_new_pointer_preserving_original_results(tmp_path, mo
         assert 'active_result' not in row
         assert row['result']['sections'] == baseline['sections']
         assert (directory / 'result.json').read_bytes() == original_bytes
-        return
+        thread = service._threads.get(job_id)
+        if thread:
+            thread.join(timeout=2)
+        failed_revision = row['revision']['id']; fails = False
+        service.reconcile(job_id, retry_revision_id=failed_revision, review_feedback={'check': 'source-based feedback'})
+        for _ in range(100):
+            row = service.get(job_id)
+            if row['state'] not in {'queued', 'running', 'cancelling'}:
+                break
+            time.sleep(.02)
+        receipt = json.loads((directory / 'revisions' / failed_revision / 'revision.json').read_text())
+        assert len(receipt['producer_attempts']) == 2
+        assert len(receipt['attempt_history']) == 1
+        assert receipt['source_quality_feedback']
+        assert row['revision']['id'] == failed_revision
     assert row['state'] == 'completed', row.get('error')
     assert row['active_result'].startswith('revisions/')
     assert row['result']['sections'][0]['id'] == 'new-1'
@@ -122,3 +136,15 @@ def test_revision_publishes_new_pointer_preserving_original_results(tmp_path, mo
     assert (directory / 'result.json').read_bytes() == original_bytes
     assert (directory / 'lesson.md').read_text() == 'Original markdown'
     assert service.artifact(job_id, row['result']['exports']['markdown']).is_file()
+
+
+def test_reconciliation_reports_all_formula_errors_and_accepts_notes():
+    from aiforstudy.core.video_lecture_reconciliation import reconciliation_errors, validate_reconciliation
+    lesson, frames, transcript, answer = case()
+    answer['formulas'] = [{'latex': 'x=1', 'source_ids': ['frame-1'], 'uncertainty': 'A provenance explanation'},
+                          {'latex': 'y=2', 'source_ids': ['frame-1'], 'uncertainty': 'Unclear source'}]
+    errors = reconciliation_errors(answer, lesson, {'frame-1', 'asr-1'}, 40)
+    assert {e['path'] for e in errors} == {'formulas[0].uncertainty', 'formulas[1].uncertainty'}
+    answer['formulas'] = [{'latex': 'x=1', 'source_ids': ['frame-1'], 'uncertainty': '', 'note': 'A provenance explanation'}]
+    answer['uncertainties'] = ['Second formula remains unclear [frame-1]']
+    assert validate_reconciliation(answer, lesson, {'frame-1', 'asr-1'}, 40) == answer
