@@ -100,6 +100,8 @@
     $('questions').append(el('li',review.state==='source_checked_edits'?'本次按记录中的原片与识别证据作了限定范围的编辑修订；没有逐句逐帧核实全文。':review.state==='not_requested'?'本次未执行独立审核；讲义仍为自动解析候选稿。':'独立审核仅做识别文本交叉检查，不等于逐句逐帧核验或人工批准。'));
     const coverage=el('div',undefined,'coverage-card');coverage.append(el('p','语音覆盖与画面采样分开记录；时间引用为识别窗口，不是逐字时间戳。'),el('pre',JSON.stringify({语音窗口:result.transcript?.coverage,画面及总体覆盖:result.coverage},null,2)));$('coverage').append(coverage);
     $('provenance').textContent=JSON.stringify({语音模型:result.transcript?.identity,来源:result.provenance,审核:result.review},null,2);
+    const initialTime=new URLSearchParams(location.search).get('t');
+    if(initialTime!==null&&Number.isFinite(Number(initialTime))&&Number(initialTime)>=0)seek(Number(initialTime));
   }
   (async()=>{try{
     if(!/^[A-Za-z0-9_-]+$/.test(job))throw new Error('缺少有效任务编号，请返回视频解析页。');

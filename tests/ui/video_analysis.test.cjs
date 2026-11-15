@@ -57,7 +57,7 @@ async function workbench() {
 }
 
 async function reader(state='completed') {
-  const dom = new JSDOM(read('video-analysis/index.html'), {url:'http://127.0.0.1:18916/video-result.html?job=job-1',runScripts:'outside-only'});
+  const dom = new JSDOM(read('video-analysis/index.html'), {url:'http://127.0.0.1:18916/video-result.html?job=job-1&t=25',runScripts:'outside-only'});
   const w = dom.window;
   const result = {job_id:'job-1',title:'视频讲义',duration:80,
     source:{path:'source.mp4',playback:{video_src:'playback.mp4',audio:{src:'speech.mp3',data_base64:'SUQz',mime:'audio/mpeg'}}},
@@ -75,6 +75,7 @@ async function reader(state='completed') {
   const formulaCalls=[];
   w.katex={render:(latex,el,opts)=>{formulaCalls.push({latex,opts}); el.textContent=latex;}};
   w.eval(read('video-analysis/result.js')); await wait();
+  assert.equal(w.document.querySelector('#source-video').currentTime,25,'导出讲义时间链接应定位兼容播放器');
   assert.match(w.document.querySelector('#transcript').textContent, /原始转写 <script>bad\(\)<\/script>/);
   assert.equal(w.document.querySelector('#lesson img'), null, '模型HTML不能成为DOM');
   assert.equal(w.document.querySelector('#lesson script'), null);
