@@ -26,13 +26,23 @@ def component_identity(paths):
 
 def model_role_identity(ctx, role):
     from ...providers import gateway,transport
+    from ...providers.local_compatible import endpoint_identity
     from ...pipeline import gateway_client
+    from ...pipeline.runtime_dependencies import TRANSPORT_COMPONENTS
     config=ctx.workspace.config_json('models.json') if hasattr(ctx.workspace,'config_json') else {}
     provider=getattr(getattr(ctx.services,'providers',None),'llm',None)
-    return {'role':(config.get('roles') or {}).get(role),'provider':config.get('provider'),
-            'endpoint':getattr(provider,'base_url',None) or config.get('base_url'),
+    if callable(getattr(provider,'for_role',None)):
+        provider=provider.for_role(role)
+    selected=getattr(provider,'cache_identity',None)
+    role_config=(config.get('roles') or {}).get(role)
+    settings=role_config or {}
+    endpoint=(selected or {}).get('endpoint') or getattr(provider,'base_url',None) or settings.get('base_url') or config.get('base_url')
+    return {'role':role_config,'provider':(selected or {}).get('provider') or settings.get('provider',config.get('provider')),
+            'endpoint':endpoint_identity(endpoint) if endpoint else None,
+            'transport_identity':selected,
             'transport_type':type(provider).__module__+'.'+type(provider).__qualname__,
             'gateway':file_identity(gateway.__file__),'transport':file_identity(transport.__file__),
+            'transport_components':component_identity(TRANSPORT_COMPONENTS),
             'client':file_identity(gateway_client.__file__)}
 
 def resource_dependencies(ctx,request,capabilities):

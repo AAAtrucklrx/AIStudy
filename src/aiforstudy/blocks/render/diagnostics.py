@@ -623,9 +623,22 @@ def build_reader_snapshot(run_dir: Path, *, unit_ids: list[str], out_dir: Path, 
                 unit_outcomes.append(outcome('missing',[str(exc)]))
         layout=layout_from_reader_media(reader,media,interaction_mounts=interaction_mounts)
         presentation = None
-        if not frozen:
+        declarations = content.get('teaching_evidence') or []
+        explicit_roles = isinstance(declarations,list) and any(
+            isinstance(row,dict) and 'reader_role' in row for row in declarations)
+        # Authored presentation is independent of the legacy review gates.
+        # Limited-mode legacy drafts need no invented teaching plan; current
+        # declarations must either bind to this Reader or report their error.
+        if not frozen or explicit_roles:
             from ..content.teaching_projection import compile_teaching_presentation
-            presentation = compile_teaching_presentation(content, reader)
+            try:
+                presentation = compile_teaching_presentation(content, reader)
+            except (ContractError,KeyError,TypeError,ValueError,AttributeError) as exc:
+                if not frozen:
+                    raise
+                reason='教学展示声明无效：'+str(exc)
+                problems.append({'unit_id':unit,'kind':'teaching_presentation','reason':reason})
+                unit_outcomes.append(outcome('known_error',[reason]))
         data['units'][unit]={'unit_id':unit,'title':content['title'],'reader_document':reader,'reader_layout':layout,
                             'reader_media':media,'teaching_presentation':presentation,'concepts':[],'figures':[],'crumb':'教学正文' if require_complete_units else '诊断预览',
                             'review_outcome':aggregate_outcomes(unit_outcomes),

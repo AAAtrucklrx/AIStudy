@@ -5,11 +5,18 @@ source context, mathematical interpretation and learner profiles belong to conte
 """
 from .graph import PREPARATION_STAGES
 
+# The public provider descriptor cannot substitute for implementation bytes.
+# Include the routing factory and SDK bridge as well as the HTTP worker; these
+# shared components can change both author output and interpretation of review.
+TRANSPORT_COMPONENTS = ('providers/transport.py','providers/http_worker.py',
+    'providers/factory.py','providers/routing.py','providers/local_compatible.py',
+    'providers/dsh_account.py','providers/dsh_bridge.cjs')
+
 COMMON = ('contracts','core/digest.py','core/jsonio.py','core/document_fields.py','pipeline/services.py',
           'core/prompt_assets.py','core/source.py','core/process_io.py','pipeline/execution_control.py',
           'pipeline/stage_io.py','pipeline/work_paths.py','pipeline/graph.py',
           'pipeline/gateway_client.py','providers/gateway.py','providers/llm.py','providers/review_failures.py',
-          'providers/transport.py','providers/http_worker.py','providers/response.py','providers/response_evidence.py')
+          'providers/response.py','providers/response_evidence.py') + TRANSPORT_COMPONENTS
 PREPARATION = ('vendor','pipeline/preparation.py','pipeline/preparation_checks.py','pipeline/snapshot.py',
                'core/identity.py','core/source_materials.py','core/source_boundaries.py',
                'blocks/parse','blocks/concepts','providers/mineru.py','providers/http_exchange.py')
