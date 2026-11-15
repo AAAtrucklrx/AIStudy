@@ -4,6 +4,7 @@
   else {root.DSHStudyLesson=factory();root.DSHStudyLesson.boot(root.document);}
 })(typeof globalThis!=='undefined'?globalThis:this,function(){
   'use strict';
+  var purposeModule=typeof module==='object'&&module.exports?require('./media-purpose.js'):null;
   function node(doc,tag,cls,text){var e=doc.createElement(tag);if(cls)e.className=cls;if(text)e.textContent=text;return e;}
   function rich(host,text){
     var w=host.ownerDocument.defaultView;
@@ -92,6 +93,11 @@
       if(!plan){report.errors.push('未登记的教学标记：'+id);return;}
       var block=node(doc,'section','teaching-block '+(kind==='VISUAL'?'teaching-visual-layout':'teaching-media'));
       block.dataset.teachingId=id;block.dataset.teachingKind=kind;
+      var purposeRows=((options.data||{}).media_purposes||{}).items||[];
+      var purpose=purposeRows.find(function(row){return row.unit_id===options.unitId&&row.id===id;});
+      // Publish learner-facing copy only; plan fields may contain drawing instructions.
+      var purposeRuntime=w.DSHMediaPurpose||purposeModule;
+      if(purpose&&purposeRuntime)disposers.push(purposeRuntime.mount(block,purpose));
       var textLed=kind==='VISUAL'&&plan.presentation==='text-led-figure';
       if(textLed)block.classList.add('teaching-text-led');
       var stage=node(doc,'div','teaching-stage');block.appendChild(stage);marker.replaceWith(block);

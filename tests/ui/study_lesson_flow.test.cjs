@@ -16,11 +16,11 @@ test('only explicit teaching markers mount a figure, between its explanation and
  let calls=0;dom.window.DSHStudyVisuals={createTeachingCard(doc,plan){calls++;const c=doc.createElement('figure');c.className='study-visual';c.dataset.studyScene=plan.kind;return c;}};
  const lesson={body_markdown:'new',visuals:[{id:'V1',kind:'multiply',model_title:'复数乘法',title:'旋转',purpose:'看清乘法',action:'拖动角度',observation:'观察终点',conclusion:'乘法改变模和辐角'}],media:[]};
  const root=dom.window.document.querySelector('main');
- flow.enhance(root,{unit:{study_lesson:lesson},data:{},unitId:'U'});
+ flow.enhance(root,{unit:{study_lesson:lesson},data:{media_purposes:{items:[{unit_id:'U',id:'V1',kind:'visual',purpose_markdown:'看清乘法：拖动角度，观察终点。'}]}},unitId:'U'});
  assert.equal(calls,1);assert.equal(root.querySelectorAll('.study-visual').length,1);
  assert.ok(root.textContent.includes('没有标记的邻域'));
  assert.ok(!root.textContent.includes('[[TEACHING_VISUAL:'));
- assert.ok(!root.querySelector('.teaching-block').textContent.includes('看清乘法'),'author purpose is kept outside the student-facing media');
+ assert.ok(root.querySelector('.teaching-block').textContent.includes('看清乘法'),'every visual exposes its purpose next to the figure');
  assert.equal(root.querySelector('.lesson-sources').open,false);
  flow.enhance(root,{unit:{study_lesson:lesson},data:{},unitId:'U'});assert.equal(calls,1);
 });
