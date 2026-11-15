@@ -1,0 +1,1602 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "unit_id": "CH01-S01-SS01",
+      "id": "CH01-division",
+      "kind": "animation",
+      "title": "除法为什么乘共轭",
+      "purpose_markdown": "这段动画解释复数除法为什么要同乘分母的共轭。跟着展开式看分母中的两个虚交叉项怎样相消，再看分子怎样分成实部和虚部；当分母非零时，留下的 $|z_2|^2$ 是正实数，商便能按两个实分量计算。",
+      "spoken_text": "这段动画解释复数除法为什么要同乘分母的共轭。跟着展开式看分母中的两个虚交叉项怎样相消，再看分子怎样分成实部和虚部；当分母非零时，留下的分母模长的平方是正实数，商便能按两个实分量计算。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH01-S01-SS01/media/0",
+        "plan_sha256": "447a3b2ef26c6346e20aaa049ba11915e860e3189a372be5e69e8a831184859d",
+        "marker": "[[TEACHING_MEDIA:CH01-division]]",
+        "body_excerpt": "2$。因此非零复数与其共轭相乘得到正实数，这正是除法能化成实分母的原因。\n\n加减按分量进行，乘法按分配律展开，再把 $i^2$ 换成 $-1$。于是\n$$\\begin{aligned}\nz_1\\pm z_2&=(x_1\\pm x_2)+i(y_1\\pm y_2),\\\\\nz_1z_2&=(x_1x_2-y_1y_2)\\\\\n&\\quad+i(x_1y_2+x_2y_1).\n\\end{aligned}$$\n若 $z_2\\ne0$，商的可用公式是\n$$\\begin{aligned}\n\\frac{z_1}{z_2}&=\\frac{z_1\\bar z_2}{|z_2|^2},\\\\\n\\operatorname{Re}\\frac{z_1}{z_2}&=\\frac{x_1x_2+y_1y_2}{x_2^2+y_2^2},\\\\\n\\operatorname{Im}\\frac{z_1}{z_2}&=\\frac{x_2y_1-x_1y_2}{x_2^2+y_2^2}.\n\\end{aligned}$$\n分子也必须乘同一共轭才能保持商不变。视频中分母的两个虚交叉项相消，留下平方和；分母非零时这项平方和才允许继续作除法。例如 $1/(1+i)=(1-i)/2$，将结果乘回 $1+i$ 可检查是否还原为 $1$。\n\n[[TEACHING_MEDIA:CH01-division]]\n\n上述运算服从交换律、结合律和分配律：\n$$\\begin{aligned}\nz_1+z_2&=z_2+z_1,&z_1z_2&=z_2z_1,\\\\\n(z_1+z_2)+z_3&=z_1+(z_2+z_3),\\\\\n(z_1z_2)z_3&=z_1(z_2z_3),\\\\\nz_1(z_2+z_3)&=z_1z_2+z_1z_3.\n\\end",
+        "plan_evidence": {
+          "purpose": "解释复数除法如何回到实数分母",
+          "watch_for": "观察分母展开后两个虚交叉项相消，剩下正实数平方和",
+          "conclusion": "只要分母非零，同乘共轭就可分离商的实部与虚部"
+        },
+        "request_id": "MR-b19aff26440d9887378a",
+        "step_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "step_narration": [
+          "复数除法的难点，是分母里含有虚数单位。我们把分子、分母同时乘上分母的共轭，商的值不会改变，却能让分母变成一个实数。",
+          "留意展开之后的两个交叉项。它们互为相反数，恰好抵消，留下实部的平方加上虚部的平方。这也就是分母模长的平方。",
+          "接着展开分子，把不带虚数单位的项放在一起，把带虚数单位的项放在一起。这样，商的实部和虚部就能分别读出来。",
+          "最后，实部和虚部都除以同一个正实数。只要分母复数不为零，它的模平方就大于零，所以这一步除法始终有意义。记住这个方法，比死记展开后的长公式更有用。"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH01-S01-SS02",
+      "id": "conjugate-mirror",
+      "kind": "visual",
+      "title": "共轭点关于实轴的镜像",
+      "purpose_markdown": "用这张图把共轭的符号变化对应到平面上的位置。改变 $x$、$y$，比较两点的坐标与原点连线：横坐标相同、纵坐标相反，两条线段等长；把 $y$ 设为零，两点就在实轴上重合。",
+      "spoken_text": "用这张图把共轭的符号变化对应到平面上的位置。改变实部和虚部，比较两点的坐标与原点连线：横坐标相同、纵坐标相反，两条线段等长；把虚部设为零，两点就在实轴上重合。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH01-S01-SS02/visuals/0",
+        "plan_sha256": "1dd7bc98a4bd27193c3a89827cd458319a5a1b931e2b1a60d8e5ca4902392358",
+        "marker": "[[TEACHING_VISUAL:conjugate-mirror]]",
+        "body_excerpt": "上一节把复数写成 $z=x+iy$，其中 $x,y$ 都是实数：$x=\\operatorname{Re}z$ 是实部，$y=\\operatorname{Im}z$ 是虚部。现在保留 $x$，把 $y$ 换成相反数，所得的复数叫作 $z$ 的共轭，记为\n$$\\bar z=x-iy.$$\n例如 $2+i$ 的共轭是 $2-i$，与图中的初始两点一致。改变的是虚部的符号，实部仍是 $2$；这里的虚部是实数 $1$ 或 $-1$，不是带着 $i$ 的整项。\n\n把 $x+iy$ 画在坐标 $(x,y)$ 处，共轭点就在 $(x,-y)$：横坐标相同、纵坐标相反，所以两点关于实轴对称。改变 $x$ 或 $y$ 后可比较图中的两条原点连线；它们等长，而 $y=0$ 时两点重合。\n\n[[TEACHING_VISUAL:conjugate-mirror]]\n\n再取一次共轭，只把虚部的符号改回来，因此 $\\overline{\\bar z}=z$。图中的实轴镜像保留坐标与距离关系，计算中则直接利用这个二次共轭性质。\n\n为什么这个简单操作有用？因为相加时，$iy$ 与 $-iy$ 抵消，只留下两份实部；相减时，实部抵消，只留下 $2iy$。于是可以从整个复数中分别取出\n$$\\oper",
+        "plan_evidence": {
+          "kind": "conjugate",
+          "presentation": "text-led-figure",
+          "purpose": "把共轭的定义同两点的坐标关系和等距关系对应起来。",
+          "action": "比较原点O到两点的线段；可改变x、y，再检查横坐标、纵坐标以及y为零时的位置。",
+          "observation": "两点横坐标相同、纵坐标互为相反数；到原点等距；y为零时重合。",
+          "conclusion": "共轭保持实部，反转虚部，不改变模；实数是共轭后仍在原位的复数。"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-text-led-figures.js",
+          "blocks/render/assets/text-led-multiplication.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH01-S01-SS03",
+      "id": "geometry-polar",
+      "kind": "visual",
+      "title": "坐标投影、模与辐角",
+      "purpose_markdown": "这张图说明坐标、模和辐角分别记录什么。只改变横坐标，看坐标投影、箭头长度和方向怎样变化，再比较 $(1,1)$ 与 $(-1,-1)$：两点的模与 $y/x$ 相同，方向却相反，所以求辐角还须检查象限。",
+      "spoken_text": "这张图说明坐标、模和辐角分别记录什么。只改变横坐标，看坐标投影、箭头长度和方向怎样变化，再比较坐标一、一与负一、负一：两点的模与纵坐标除以横坐标的值相同，方向却相反，所以求辐角还须检查象限。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH01-S01-SS03/visuals/0",
+        "plan_sha256": "e9abc027b21e3ff9e842ea78090f2f0fd9051a31b35f85c5a4819af33c2d0fc4",
+        "marker": "[[TEACHING_VISUAL:geometry-polar]]",
+        "body_excerpt": "平面，简称复平面。横轴上的点虚部为零，所以横轴叫实轴；纵轴叫虚轴，它上面除原点以外的点代表纯虚数。以后说“点 $3+2i$”，就是指坐标为 $(3,2)$ 的点；按所用字母，也会说 $z$ 平面、$w$ 平面。\n\n同一个 $z$ 还可以表示一个自由向量：它沿实轴、虚轴的有向投影分别为 $x,y$。把箭头平移到别处，只要方向和长度不变，这两个投影就不变，代表的仍是同一个复数。把起点选在原点 $O$ 时，终点正好是点 $z$。因此，点表示“在哪里”，自由向量表示“怎样移动”；选定原点以后，两种表示便接上了。\n\n从 $O$ 指向 $z$ 的箭头有两个几何量。它的长度叫模，记作 $|z|$；由勾股定理，\n$$\nr=|z|=\\sqrt{x^2+y^2}.\n$$\n当 $z\\ne0$ 时，从实轴正向转到这支箭头的角叫辐角：逆时针转记正角，顺时针转记负角。模说明离原点多远，辐角说明朝哪个方向；零的模为 $0$，但零向量没有方向，所以零的辐角无意义。\n\n先看下图中的两条坐标投影。只改变 $x$，保持 $y$ 不动，比较箭头长度和方向怎样变化；再比较 $(1,1)$ 与 $(-1,-1)$。后两个点离原点一样远，$y/x$ 也相同，箭头却指向相反的方向。这个对比会解释：为什么算辐角时还必须检查象限。\n\n[[TEACHING_VISUAL:geometry-polar]]\n\n把箭头转一整圈，会回到同一方向。因此，一个非零复数有无穷多个辐角；选其中任意一个值 $\\varphi$，它的全部辐角为\n$$\n\\operatorname{Arg}z=\\{\\varphi+2k\\pi:k\\in\\mathbb Z\\}.\n$$\n教材也用 $\\arg z$ 表示某个已选定的辐角，并在需要时说明选择。本节接下来用 $\\a",
+        "plan_evidence": {
+          "kind": "polar",
+          "presentation": "text-led-figure",
+          "purpose": "把直角坐标与长度方向建立可观察的对应，暴露只用正切求角的歧义。",
+          "action": "只改x保持y不变；再比较(1,1)与(-1,-1)。",
+          "observation": "投影确定坐标；相反方向可有相同的y/x与相同的模。",
+          "conclusion": "r由两投影确定，辐角还须结合象限，零无方向。"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-text-led-figures.js",
+          "blocks/render/assets/text-led-multiplication.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH01-S01-SS03",
+      "id": "geometry-vectors",
+      "kind": "visual",
+      "title": "首尾相接与直接到达",
+      "purpose_markdown": "这张图把复数加减法变成可以比较的路程。先看两支箭头首尾相接的折线与和向量，再切换同向、一个为零的情形：折线长度不少于直达长度，后两种情形恰好相等；连接两个终点的差向量则表示两点间的距离。",
+      "spoken_text": "这张图把复数加减法变成可以比较的路程。先看两支箭头首尾相接的折线与和向量，再切换同向、一个为零的情形：折线长度不少于直达长度，后两种情形恰好相等；连接两个终点的差向量则表示两点间的距离。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH01-S01-SS03/visuals/1",
+        "plan_sha256": "b30a54c71ddf613fa558c506485d775c29f192832efc1681addcc1891a91aa64",
+        "marker": "[[TEACHING_VISUAL:geometry-vectors]]",
+        "body_excerpt": "方向变为相反的角：若 $\\varphi$ 是 $z\\ne0$ 的一个辐角，$-\\varphi$ 就是 $\\bar z$ 的一个辐角，二者按模 $2\\pi$ 理解。若都取主值，$\\arg z\\ne\\pi$ 时可直接写 $\\arg\\bar z=-\\arg z$；负实数是边界例外，它的共轭仍是自身，两者主值都是 $\\pi$，不能把其中一个写成被区间排除的 $-\\pi$。零与自身共轭、模也相同，但仍不能谈它的辐角。\n\n### 加减法：先把箭头接起来\n\n复数加减时，两个坐标分别加减，正好符合向量法则。求 $z_1+z_2$，可以把 $z_2$ 的箭头平移，让它的起点接到 $z_1$ 的终点；从原起点连到最终终点，得到的就是和。这是三角形法则。也可以让两箭头同起点，以它们为邻边作平行四边形，对角线就是和。求 $z_1-z_2$ 时，把 $z_2$ 反向后再相加；若画成从原点出发的两支箭头，$z_1-z_2$ 就是从点 $z_2$ 指向点 $z_1$ 的箭头。\n\n看下图中“先走 $z_1$，再走 $z_2$”的折线路程，与直接走到 $z_1+z_2$ 的线段。先比较一般位置，再选择同向和一个为零的情形：什么时候两段路连起来没有绕弯？同时看连接两个终点的差向量，区分“和的长度”与“两点的距离”。\n\n[[TEACHING_VISUAL:geometry-vectors]]\n\n先从一支箭头的投影读出第一组估计：\n$$\n|x|=|\\operatorname{Re}z|\\le|z|,\\qquad |y|=|\\operatorname{Im}z|\\le|z|.\n$$\n每个投影的长度都不超过箭头本身。第一式等号要求 $y=0$，第二式等号要求 $x=0$。这里比较的都是非负实数长度。\n\n第二组换一个走法",
+        "plan_evidence": {
+          "kind": "vectors",
+          "presentation": "text-led-figure",
+          "purpose": "让向量加减与三角不等式及其退化等号条件对应。",
+          "action": "比较一般位置、同向、一个为零三种情形，观察和与差向量。",
+          "observation": "折线长度不少于直达长度；同向或零向量时相应三角形退化。",
+          "conclusion": "复数加减遵循三角形或平行四边形法则，长度估计有明确等号条件。"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-text-led-figures.js",
+          "blocks/render/assets/text-led-multiplication.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH01-S01-SS03",
+      "id": "geometry-distance",
+      "kind": "visual",
+      "title": "固定圆心，改变动点",
+      "purpose_markdown": "这张图帮助你把 $|z-z_0|$ 读成两点间的距离，而不是动点自身的模。移动 $z$，比较从固定圆心 $z_0$ 出发的线段与半径：距离小于、等于、大于半径，分别对应圆内、圆周和圆外。",
+      "spoken_text": "这张图帮助你把两个复数之差的模读成两点间的距离，而不是动点自身的模。移动动点，比较从固定圆心出发的线段与半径：距离小于、等于、大于半径，分别对应圆内、圆周和圆外。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH01-S01-SS03/visuals/2",
+        "plan_sha256": "e5ba5e269d2496ba7bfb814729c73b0ca9d21aef5e85c6cda80c8ce876598456",
+        "marker": "[[TEACHING_VISUAL:geometry-distance]]",
+        "body_excerpt": "退化。仅说“三点共线”还不够，因为两支非零箭头反向时也共线，却不满足这里的等号条件；零向量没有辐角，所以必须把“至少一个为零”单独列出。\n\n第五组把首尾相接继续做下去，对任意有限个复数都有\n$$\n\\left|\\sum_{j=1}^{n}z_j\\right|\\le\\sum_{j=1}^{n}|z_j|.\n$$\n多段折线的总长仍不少于起点到终点的直线距离；也可逐次使用第三组并用数学归纳法得到。若要取等号，所有非零项必须同向；全为零时当然也取等号。这些不等式的正式代数证明可在本节折叠的教材原文中查阅。\n\n### 把差的模读成距离\n\n若 $z_1=x_1+iy_1$、$z_2=x_2+iy_2$，差向量的两个投影是 $x_1-x_2$、$y_1-y_2$，所以\n$$\n|z_1-z_2|=\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}.\n$$\n这正是点 $z_1$ 与点 $z_2$ 的距离。特别地，$|z-z_0|$ 表示从固定点 $z_0$ 到动点 $z$ 的距离，减号后面给出的是起点。\n\n在下图中改变动点 $z$，留意从固定点 $z_0$ 到它的线段，再把这段长度与固定半径 $\\rho>0$ 比较。先让点位于圆内，再移到圆周和圆外；观察变的是距离，圆心并没有跟着动点移动。\n\n[[TEACHING_VISUAL:geometry-distance]]\n\n距离固定为 $\\rho$ 的所有点构成圆周，因此，对任意固定复数 $z_0$ 和实数 $\\rho>0$，$|z-z_0|=\\rho$ 表示圆心为 $z_0$、半径为 $\\rho$ 的圆周；$|z-z_0|<\\rho$ 表示圆内，$|z-z_0|>\\rho$ 表示圆外，两个严格不等式都不包括圆周。例如 $|z+1-i|=2",
+        "plan_evidence": {
+          "kind": "distance",
+          "presentation": "text-led-figure",
+          "purpose": "让差的模作为两点距离，并用距离阈值辨认集合。",
+          "action": "改变动点z，使它依次位于圆内、圆周和圆外。",
+          "observation": "线段起于固定圆心，长度相对半径可小于、等于或大于。",
+          "conclusion": "|z-z0|是两点距离，等号给圆周，严格不等号给不含边界的内外点集。"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-text-led-figures.js",
+          "blocks/render/assets/text-led-multiplication.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH01-S01-SS03",
+      "id": "geometry-multiply",
+      "kind": "visual",
+      "title": "乘数控制旋转与伸缩",
+      "purpose_markdown": "这张图说明复数乘法怎样同时改变整个平面的长度和方向。依次播放乘 $i$、乘 $2$、乘 $2i$，比较蓝色原箭头与橙色终点，并看网格一起变化：它们分别对应转直角、长度加倍、两者同时发生；再选除以 $2i$，核对反向旋转与缩短。慢放的中间帧只是展示变化，乘法规定的是原像点与最终像点的对应。",
+      "spoken_text": "这张图说明复数乘法怎样同时改变整个平面的长度和方向。依次播放乘虚数单位、乘二、乘二倍虚数单位，比较蓝色原箭头与橙色终点，并看网格一起变化：它们分别对应转直角、长度加倍、两者同时发生；再选除以二倍虚数单位，核对反向旋转与缩短。慢放的中间帧只是展示变化，乘法规定的是原像点与最终像点的对应。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH01-S01-SS03/visuals/3",
+        "plan_sha256": "0c5e1dc3125e4270d4d05c061ea038d5ec9f59aa41c690f5e3bb586b9e401e3d",
+        "marker": "[[TEACHING_VISUAL:geometry-multiply]]",
+        "body_excerpt": "=\\rho$ 表示圆心为 $z_0$、半径为 $\\rho$ 的圆周；$|z-z_0|<\\rho$ 表示圆内，$|z-z_0|>\\rho$ 表示圆外，两个严格不等式都不包括圆周。例如 $|z+1-i|=2$ 应先读成 $|z-(-1+i)|=2$，再认出圆心是 $-1+i$、半径是 $2$。\n\n### 乘除法：长度与方向怎样改变\n\n加减法用坐标方便，乘除法则用极式方便。设两个复数都非零，写成 $z_1=r_1e^{i\\varphi_1}$、$z_2=r_2e^{i\\varphi_2}$，其中 $r_1,r_2>0$。相乘后，长度因子相乘，指数中的角相加：\n$$\nz_1z_2=r_1r_2e^{i(\\varphi_1+\\varphi_2)},\\qquad |z_1z_2|=|z_1||z_2|.\n$$\n也就是说，乘积的一个辐角是 $\\varphi_1+\\varphi_2$。用三角形式展开时，实部、虚部恰好分别由余弦、正弦的和角公式合并成这个方向。\n\n下图先取原数 $z=1+i$，保留蓝色原箭头。依次选择乘 $i$、乘 $2$、乘 $2i$，播放到终点再比较橙色像箭头：第一种改变哪个量，第二种改变哪个量，第三种又把哪两种变化合在了一起？再看方格和填色正方形，它们也随同一个乘数一起变化。\n\n[[TEACHING_VISUAL:geometry-multiply]]\n\n三个终点分别对应 $i(1+i)=-1+i$、$2(1+i)=2+2i$、$2i(1+i)=-2+2i$：乘 $i$ 逆时针转 $\\pi/2$，长度不变；乘 $2$ 保持方向，长度变成两倍；乘 $2i$ 则转 $\\pi/2$ 并把长度变成两倍。慢放是把变化展开给我们看，中间画面并非都在乘同一个最终乘数，也不表示乘法必须沿",
+        "plan_evidence": {
+          "kind": "multiplication",
+          "presentation": "text-led-figure",
+          "purpose": "把已核验的整体平面乘法变化接到一般模角公式，避免把单点轨迹当作乘法定义。",
+          "action": "使用现有乘以i、2、2i及除以2i的预设按钮比较；可拖动原像点，不声称存在一般乘数滑块。",
+          "observation": "像箭头与网格统一转动和伸缩；末态长度比等于乘数模，转角等于乘数辐角。",
+          "conclusion": "乘法模相乘、辐角相加（模2π）；慢放中间帧是观察手段，并非乘法必须经过的路径。"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-text-led-figures.js",
+          "blocks/render/assets/text-led-multiplication.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH01-S01-SS04",
+      "id": "CH01-roots",
+      "kind": "visual",
+      "title": "德莫弗公式与n次方根",
+      "purpose_markdown": "这张图解释非零复数的 $n$ 次方根为什么恰有 $n$ 个。改变根的次数，比较左侧同一圆上的等角分布与右侧重合的像点：每个根取 $n$ 次幂后都还原为同一个数，根之间的角差则变成整圈。",
+      "spoken_text": "这张图解释非零复数的方根个数为什么恰好等于开方次数。改变根的次数，比较左侧同一圆上的等角分布与右侧重合的像点：每个根再乘方到原来的次数后，都还原为同一个数，根之间的角差则变成整圈。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH01-S01-SS04/visuals/0",
+        "plan_sha256": "5bf65b0e02e42ea1036cf09606052f9b782226f6b1f669958909981431304f06",
+        "marker": "[[TEACHING_VISUAL:CH01-roots]]",
+        "body_excerpt": "^{-n}=1/z^n$ 定义；若 $z=0$，这里只谈正整数幂 $0^n=0$。取 $r=1$，就得到德莫弗公式 $(\\cos\\theta+i\\sin\\theta)^m=\\cos m\\theta+i\\sin m\\theta$：重复乘法只需把角乘以次数。\n\n开方反过来解 $w^n=z$，其中整数 $n\\ge2$。若 $z=re^{i\\theta}\\ne0$，全部不同的根为\n$$w_k=r^{1/n}e^{i(\\theta+2k\\pi)/n},\\qquad k=0,\\ldots,n-1.$$\n模 $r^{1/n}$ 是正实算术根，角度却必须把原数的整圈变化保留下来再除以 $n$。$k$ 增加 $n$ 时位置重复，所以恰有 $n$ 个不同根；换一个原辐角只改排列次序。零的开方单独处理：$w^n=0$ 只有 $w=0$。\n\n这些根同在半径 $r^{1/n}$ 的圆周上，相邻角差 $2\\pi/n$，当 $n\\ge3$ 时是正 $n$ 边形的顶点；$n=2$ 时是同一直径的两个端点。图中改变次数后可核对左侧的等角分布与右侧共同像点：每个根再取 $n$ 次幂，角差成为整圈，于是全都还原到同一个 $z$。加、减、乘、除、乘方和开方合称代数运算；复数中开方不再因负实数而无解，但除法仍须非零分母。\n\n[[TEACHING_VISUAL:CH01-roots]]\n\n教材的 $-8=8e^{i\\pi}$ 有三个立方根：$1+i\\sqrt3$、$-2$、$1-i\\sqrt3$。它们模均为 $2$，方向分别可取 $\\pi/3$、$\\pi$、$5\\pi/3$，同时满足等角分布与立方为 $-8$。只写实根 $-2$ 会漏掉两个允许的复数解；完整的三角值换算留在例题中。\n\n教材中的[例9](#reader-",
+        "plan_evidence": {
+          "kind": "foundation-roots",
+          "params": {},
+          "formula": "w_k=\\rho^{1/n}e^{i(\\theta+2k\\pi)/n},\\quad w_k^n=\\rho e^{i\\theta}",
+          "purpose": "说明开方的多值性和根的等角分布",
+          "action": "改变次数n，比较全部根与共同的n次幂",
+          "observation": "根等角分布在同一圆上，所有像点重合",
+          "conclusion": "模取正算术根，辐角保留整圈后除以n，得到恰好n个不同根"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH01-S01-SS05",
+      "id": "CH01-sequence",
+      "kind": "visual",
+      "title": "复数序列的极限与epsilon圆盘",
+      "purpose_markdown": "这张图用 $z_n=(1+i)/n$ 说明极限中的“足够靠后”是什么意思。先缩小绿色的 $\\varepsilon$ 圆盘，再增大选中序号，看金点何时进入圆内，并核对起始序号的读数；要求的是从此以后的所有项都在圆内，允许早期点留在外面。",
+      "spoken_text": "这张图用一加虚数单位再除以项数的数列，说明极限中的“足够靠后”是什么意思。先缩小绿色的误差圆盘，再增大选中序号，看金点何时进入圆内，并核对起始序号的读数；要求的是从此以后的所有项都在圆内，允许早期点留在外面。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH01-S01-SS05/visuals/0",
+        "plan_sha256": "7b0c2a33e73c4981217dd54e9190138a2afc10f57f9874b65525b64f0328913c",
+        "marker": "[[TEACHING_VISUAL:CH01-sequence]]",
+        "body_excerpt": "一列复数 $z_1,z_2,\\ldots$ 收敛到有限复数 $z_0$，意思是距离 $|z_n-z_0|\\to0$。精确地，任给 $\\varepsilon>0$，存在自然数 $N$，使所有 $n>N$ 均满足 $|z_n-z_0|<\\varepsilon$。先给精度，再找序号；允许有限个早期点在圆外，却不允许后面反复离开。图中的 $z_n=(1+i)/n$ 满足 $|z_n|=\\sqrt2/n$，可取 $N=\\lceil\\sqrt2/\\varepsilon\\rceil$；缩小圆盘时应相应增加所需序号。\n\n[[TEACHING_VISUAL:CH01-sequence]]\n\n写 $z_n=x_n+iy_n$、$z_0=x_0+iy_0$，有\n$$z_n\\to z_0\\iff x_n\\to x_0\\ \\text{且}\\ y_n\\to y_0.$$\n两个坐标误差分别不超过总距离，总距离又不超过两坐标误差之和，所以这是一套等价检验。共轭只反转第二个坐标，故收敛同时给出 $\\bar z_n\\to\\bar z",
+        "plan_evidence": {
+          "kind": "foundation-sequence",
+          "params": {},
+          "formula": "z_n=\\frac{1+i}{n},\\quad |z_n|=\\frac{\\sqrt2}{n}\\to0",
+          "purpose": "说明足够靠后的所有点进入任意小圆盘",
+          "action": "先减小epsilon再增加选中序号n",
+          "observation": "早期点可在圆外，足够靠后的点都在圆内",
+          "conclusion": "收敛要求每个精度都能找到相应起始序号"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH01-S02-SS01",
+      "id": "CH01-neighborhood-types",
+      "kind": "animation",
+      "title": "用同一片点集判断内点外点和边界点",
+      "purpose_markdown": "这段动画帮助你区分内点、外点和边界点的邻域条件。比较三个中心的小圆盘，并留意边界处继续缩小的过程：内点能找到一个圆盘全在集合内，外点能找到一个圆盘全在集合外，边界点的每个小圆盘却同时碰到两边。",
+      "spoken_text": "这段动画帮助你区分内点、外点和边界点的邻域条件。比较三个中心的小圆盘，并留意边界处继续缩小的过程：内点能找到一个圆盘全在集合内，外点能找到一个圆盘全在集合外，边界点的每个小圆盘却同时碰到两边。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH01-S02-SS01/media/0",
+        "plan_sha256": "5712db3947d3dfbcac8ac07f7278c41b5aff490e0381eb39b453ee91152d0c97",
+        "marker": "[[TEACHING_MEDIA:CH01-neighborhood-types]]",
+        "body_excerpt": "要谈“点附近”，先固定中心 $z_0$ 和半径 $\\rho>0$。集合 $B(z_0,\\rho)=\\{z:|z-z_0|<\\rho\\}$ 称为 $z_0$ 的 $\\rho$ 邻域，是不含圆周的开圆盘；中心包含在内，另加 $z\\ne z_0$ 才是去心邻域。半径能缩得任意小，所以邻域可以检查点的局部位置。\n\n对已给点集 $E$，若某个邻域完全包含在 $E$ 中，该点是内点；若某个邻域与 $E$ 完全不交，该点是外点。边界点则无论把邻域取得多小，里面都既有 $E$ 的点，也有其补集的点。前两项只要求“存在一个”，后一项要求“每一个”，所以不能用一张较大的圆盘跨出集合就判它是边界。边界点本身可属于 $E$，也可不属于 $E$。视频中的圆盘缩小动作应与这三个量词条件一起读。\n\n[[TEACHING_MEDIA:CH01-neighborhood-types]]\n\n若 $E$ 的每一点都是内点，称 $E$ 为开集；全体边界点组成边界 $\\partial E$，若 $\\partial E\\subset E$，称 $E$ 为闭集。开圆盘不含自己的圆周，闭圆盘含圆周；有些集合两者都不是，有些集合同时开闭，不能把“非开”直接等同“闭”。若存在有限 $R>0$ 使 $E\\subse",
+        "plan_evidence": {
+          "purpose": "区分存在一个邻域与任意邻域这两种条件",
+          "watch_for": "比较三个中心的小圆盘能否完全放进集合或集合外",
+          "conclusion": "内点和外点各有缓冲邻域，边界点任意小邻域都跨越集合内外"
+        },
+        "request_id": "MR-8fa564b1c0febd422797",
+        "step_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5"
+        ],
+        "step_narration": [
+          "先看区域内部的这个点。只要能找到一个完全包含在区域里的小圆盘，它就是内点。关键是存在这样的邻域，而不是要求所有大小的圆盘都在区域里。",
+          "再看区域外面的点。它和区域之间留着距离，因此可以找到一个完全不与区域相交的小圆盘。这就是外点的判断方法。",
+          "边界上的点不同。这个圆盘里，既有属于区域的点，也有不属于区域的点。我们要考察的，是这种现象在圆盘缩小时会不会消失。",
+          "现在继续缩小圆盘。你会看到，两类点始终出现在边界两侧。无论半径多小，邻域都同时碰到区域和它的补集，所以这个点是边界点。",
+          "把三种情形放在一起比较：内点有一个邻域完全在里面，外点有一个邻域完全在外面；边界点则是每一个邻域里外都有。请特别留意，存在一个和每一个的区别。"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH01-S02-SS02",
+      "id": "CH01-curves",
+      "kind": "visual",
+      "title": "连续曲线与自交的简单曲线判别",
+      "purpose_markdown": "这张图说明闭合曲线为什么未必是简单闭曲线。切换圆与八字形，移动参数看标记点经过的位置：圆只在首尾重复，八字形却在尚未走完一圈时再次经过原点；中途重复到达同一点，正是这里的自交。",
+      "spoken_text": "这张图说明闭合曲线为什么未必是简单闭曲线。切换圆与八字形，移动参数看标记点经过的位置：圆只在首尾重复，八字形却在尚未走完一圈时再次经过原点；中途重复到达同一点，正是这里的自交。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH01-S02-SS02/visuals/0",
+        "plan_sha256": "9454f99176d28a6fc472d0f0cf37b26c7c74eac9e3842e1156ff13c102f952db",
+        "marker": "[[TEACHING_VISUAL:CH01-curves]]",
+        "body_excerpt": "非空开集 $D$ 若任意两点都能用全在 $D$ 内的折线连接，便叫区域。开性保证每点周围有活动空间，连通性排除彼此分离的两片；两个不相交开圆盘的并集是开集，却不是区域。将区域加上其边界得到闭域 $\\bar D=D\\cup\\partial D$，其中横线表示闭包，不是对每个复数取共轭。\n\n连续实函数 $x(t),y(t)$ 在闭区间 $[\\alpha,\\beta]$ 上给出连续曲线 $z(t)=x(t)+iy(t)$。若不同参数对应不同点，唯一允许的重复是两个端点重合，就称简单曲线或约当曲线；再有 $z(\\alpha)=z(\\beta)$，便是简单闭曲线。沿图中圆与八字形分别走一圈，可比较“闭合”和“中途重复经过同一点”：八字形虽然连续闭合，自交点却使它不是简单闭曲线。\n\n[[TEACHING_VISUAL:CH01-curves]]\n\n约当曲线定理说，每条简单闭曲线把平面分成两个互不相交的区域：有界的内区域与无界的外区域，原曲线是两者的共同边界。它把“曲线围住了谁”变成有确定意义的判断；自交曲线不能直接套用这套唯一内外区域的说法。严格证明超出本书范围，但结论将用于积分路径的内部条件。\n\n若区域 $D$ 中每条简单闭曲线的整个内区域都属于 $D$，称 $D$ 单连通",
+        "plan_evidence": {
+          "kind": "curve",
+          "params": {},
+          "formula": "z(t)=\\cos t+i\\sin t\\quad\\text{或}\\quad z(t)=\\sin t+i\\sin2t",
+          "purpose": "区分连续闭合与简单闭合",
+          "action": "先走圆再切换八字形并观察原点是否中途重复到达",
+          "observation": "圆只在首尾重合，八字形在不同中间参数处经过同一点",
+          "conclusion": "简单曲线要求除允许的首尾外没有重复点"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH02-S01",
+      "id": "CH02-injective",
+      "kind": "visual",
+      "title": "单值与一一映照的平方函数",
+      "purpose_markdown": "这张图用平方函数区分“每个输入只有一个输出”与“一一对应”。先在全平面比较 $z$、$-z$ 的像，再切到右半平面：前者两个不同点落在同一个像点上，限制定义域后这对原像只能保留一个，因此是否单叶还取决于定义域。",
+      "spoken_text": "这张图用平方函数区分“每个输入只有一个输出”与“一一对应”。先在全平面比较一个非零复数与它的相反数的像，再切到右半平面：前者两个不同点落在同一个像点上，限制定义域后这对原像只能保留一个，因此是否单叶还取决于定义域。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH02-S01/visuals/0",
+        "plan_sha256": "7b0a5a12f002444dddab55f14f8d5bca7190ef61522821fdf72f43021be463c0",
+        "marker": "[[TEACHING_VISUAL:CH02-injective]]",
+        "body_excerpt": "athbb C$，若每个输入 $z\\in E$ 按规则对应一个复数 $w$，便定义了复变函数 $w=f(z)$；$E$ 是定义域。每个输入只有一个值叫单值，多个值叫多值。例如非零有限 $z$ 的 $\\sqrt[n]{z}$ 有 $n$ 个值，$\\operatorname{Arg}z$ 有无穷多个值。未另作说明时，本书的函数指单值函数。\n\n把 $z=x+iy$、$w=u+iv$ 分开，$w=f(z)$ 等价于两个二元实函数 $u=u(x,y)$、$v=v(x,y)$。它们共同给出像点坐标；例如平方函数为\n$$u=x^2-y^2,\\qquad v=2xy.$$\n因此复数只有一个输入记号，却有两个能同时变化的实坐标，不能只沿实轴理解这个函数。\n\n在两个平面中，$w_0=f(z_0)$ 叫 $z_0$ 的像，$z_0$ 叫 $w_0$ 的原像；像集 $f(E)=\\{f(z):z\\in E\\}$ 是全部输出。单值只管一个输入有多少输出，一一映照还要求 $z_1\\ne z_2$ 必有 $f(z_1)\\ne f(z_2)$。$z^2$ 单值，却把 $z$ 与 $-z$ 映为同一点。图中切换到 $\\operatorname{Re}z>0$ 后，这对非零原像不能同时留下，平方映照才在这个区域一一。\n\n[[TEACHING_VISUAL:CH02-injective]]\n\n非零常数 $a=re^{i\\theta}$ 的乘法 $w=az$ 在整个有限平面一一，逆向只需 $z=w/a$。它先绕原点转过 $\\theta$，再把长度乘 $r$；在扩充平面上补 $\\infty\\mapsto\\infty$ 后仍一一。非零条件不可删：$a=0$ 时所有输入都合到原点，反向无法唯一恢复。\n\n平方映照会把直线弯成",
+        "plan_evidence": {
+          "kind": "foundation-injective",
+          "params": {},
+          "formula": "f(z)=z^2=f(-z),\\quad z\\ne0",
+          "purpose": "区分每点一个像和每像一个原像",
+          "action": "比较全平面与右半平面的平方映照",
+          "observation": "z与负z在全平面共享像，限制后不能同时出现",
+          "conclusion": "一一性依赖定义域，单值性只约束输入对应输出的数目"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH02-S02",
+      "id": "CH02-limits",
+      "kind": "visual",
+      "title": "函数极限的路径与方向检验",
+      "purpose_markdown": "这张图检验靠近同一点时，函数值是否仍受方向影响。切换 $z^2$ 与 $\\bar z/z$，减小距离 $r$ 并改变接近方向：平方的像到原点距离都变为 $r^2$，另一函数在实轴与虚轴方向却分别得到 $1$、$-1$，因此在原点没有极限。",
+      "spoken_text": "这张图检验靠近同一点时，函数值是否仍受方向影响。切换复数的平方与共轭除以原数，减小到原点的距离并改变接近方向：平方的像到原点距离都变为原距离的平方，另一函数在实轴与虚轴方向却分别得到一、负一，因此在原点没有极限。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH02-S02/visuals/0",
+        "plan_sha256": "4f904196eb8f0baa2d125ceea52787864eb2e88c360047ef6d143b386e13c29c",
+        "marker": "[[TEACHING_VISUAL:CH02-limits]]",
+        "body_excerpt": "数列只给一串接近方式，函数极限要同时照顾整个邻近点集。设 $f$ 在 $0<|z-z_0|<\\rho$ 有定义，称 $\\lim_{z\\to z_0}f(z)=w_0$，是指任给 $\\varepsilon>0$，存在 $0<\\delta\\le\\rho$，使\n$$0<|z-z_0|<\\delta\\ \\Longrightarrow\\ |f(z)-w_0|<\\varepsilon.$$\n去心条件暂不使用中心函数值；同一个 $\\delta$ 必须控制圆盘中所有方向与曲线路径，而不是每条路另给一个目标值。\n\n图中对比 $z^2$ 与 $\\bar z/z$ 在零附近的行为。写 $z=re^{i\\theta}$，前者的模为 $r^2$，故取 $\\delta\\le\\sqrt\\varepsilon$ 能统一控制误差；后者等于 $e^{-2i\\theta}$，缩小 $r$ 无法消除方向依赖，实、虚轴给出的值分别为 $1$、$-1$。两条路冲突足以否定极限；有限条路结果相同则尚不能证明极限存在。\n\n[[TEACHING_VISUAL:CH02-limits]]\n\n在点 $z_0$ 连续还要求中心已有定义，并且 $\\lim_{z\\to z_0}f(z)=f(z_0)$；在区域每点都连续，才称区域内连续。对 $f=u+iv$、$z_0=x_0+iy_0$，这等价于二元实函数 $u,v$ 都在 $(x_0,y_0)$ 连续。两分量的误差都要趋零；极限存在但中心补错值，仍会破坏连续性。\n\n连续函数相",
+        "plan_evidence": {
+          "kind": "foundation-limits",
+          "params": {},
+          "formula": "\\frac{\\bar z}{z}=e^{-2i\\theta},\\quad z^2=r^2e^{2i\\theta}",
+          "purpose": "比较有极限与无极限时方向的影响",
+          "action": "切换平方函数和共轭z除以z，减小r并改变方向",
+          "observation": "平方的输出模随r平方趋零，另一函数仍依赖方向",
+          "conclusion": "两条路径结果不同可否定极限；证明极限还需统一控制所有输入"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH02-S03",
+      "id": "CH02-derivative",
+      "kind": "visual",
+      "title": "复导数的一阶近似",
+      "purpose_markdown": "这张图把复导数解释为小邻域里的统一旋转与伸缩。固定非零点 $z_0$，缩小邻域半径，比较绿色的真实平方像与金色的一阶近似：网格越接近，两者差异越小，对应 $h^2$ 这项误差比一阶变化更快缩小。",
+      "spoken_text": "这张图把复导数解释为小邻域里的统一旋转与伸缩。固定一个非零基点，缩小邻域半径，比较绿色的真实平方像与金色的一阶近似：网格越接近，两者差异越小，对应增量平方这项误差比一阶变化更快缩小。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH02-S03/visuals/0",
+        "plan_sha256": "62d8980949b13efcfafbd82e81c4dbf6406925a466ea3039271a80f083d98ac6",
+        "marker": "[[TEACHING_VISUAL:CH02-derivative]]",
+        "body_excerpt": "复导数把输入增量与输出增量比较。若 $f$ 在 $z_0$ 的邻域有定义，且有限极限\n$$f'(z_0)=\\lim_{h\\to0}\\frac{f(z_0+h)-f(z_0)}{h}$$\n存在，就称该点复可微。非零复增量 $h$ 可以从任何方向、沿任何路径趋零，所有差商必须趋于同一个数。导数因而是一种对全部小位移统一有效的复比例。\n\n可微等价于能够写出一阶展开\n$$f(z_0+h)-f(z_0)=f'(z_0)h+o(|h|).$$\n这里余项的模除以 $|h|$ 后趋零。乘以固定复数 $f'(z_0)$ 给统一的局部旋转与伸缩，所以输出增量也趋零，可微必连续。平方函数满足 $f(z_0+h)=z_0^2+2z_0h+h^2$；缩小图中的邻域，真实像与线性像的相对误差随 $|h|$ 缩小。$f'(z_0)=0$ 时一阶项消失，仍可能有更高阶变化。\n\n[[TEACHING_VISUAL:CH02-derivative]]\n\n在区域 $D$ 每点可微，称在 $D$ 内解析；在某点解析，则要求存在该点的一个邻域，里面处处可微。仅一个点可微不能保证邻域。教材把在该点不解析的位置称为奇点；对闭域 $\\bar D$ 说解析，应理解为在包含它的某个开区域中解析，边界周围也须留有空间。\n\n特别地，倒数函数在 $z\\ne0$ 的整个区域解析，且\n$$\\left",
+        "plan_evidence": {
+          "kind": "derivative",
+          "params": {},
+          "formula": "f(z)=z^2,\\quad f(z_0+h)=z_0^2+2z_0h+h^2",
+          "purpose": "解释复导数是统一的局部旋转伸缩",
+          "action": "缩小epsilon并比较真实平方映照和线性近似",
+          "observation": "邻域越小，两种像网格的相对差异越小",
+          "conclusion": "平方函数在一点附近由乘以2z0作一阶近似"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH02-S04",
+      "id": "CH02-cr",
+      "kind": "visual",
+      "title": "柯西黎曼方程的两方向差商",
+      "purpose_markdown": "这张图说明 C-R 方程为什么要协调实部和虚部的变化。改变虚部系数 $c$，比较水平、竖直两个方向的差商极限：在图中的非零检验点，$c=1$ 时两支候选导数一致，偏离这个值时便不一致。此处展示两个方向的检验，解析性的充分条件还须结合正文中的偏导连续等条件。",
+      "spoken_text": "这张图说明柯西黎曼方程为什么要协调实部和虚部的变化。改变虚部系数，比较水平、竖直两个方向的差商极限：在图中的非零检验点，系数为一时两支候选导数一致，偏离这个值时便不一致。此处展示两个方向的检验，解析性的充分条件还须结合正文中的偏导连续等条件。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH02-S04/visuals/0",
+        "plan_sha256": "8292197469041b7942a1da04f95fde0a1fae14a71cc725a5980dc75838440a10",
+        "marker": "[[TEACHING_VISUAL:CH02-cr]]",
+        "body_excerpt": "$ 表示固定 $y$、考察沿 $x$ 方向的变化率，例如 $u_x=\\partial u/\\partial x$；下标 $y$ 则表示固定 $x$，例如 $u_y=\\partial u/\\partial y$。$v_x,v_y$ 同理。沿实方向的候选导数是 $u_x+iv_x$，沿虚方向则是 $v_y-iu_y$；同一复导数迫使\n$$u_x=v_y,\\qquad u_y=-v_x.$$\n这就是柯西—黎曼方程，简称 C–R 方程。完整充要条件还包括：$u,v$ 在该点作为二元实函数都可微。实可微给出全部小位移的统一线性近似，两条等式再保证这个近似正好是一项复乘法；仅有偏导数存在且碰巧相等还不够。\n\n条件满足时，导数可从任一组偏导读出：\n$$\\begin{aligned}\nf'&=u_x+iv_x=v_y+iv_x,\\\\\nf'&=u_x-iu_y=v_y-iu_y.\n\\end{aligned}$$\n例如 $u=x^2-y^2$、$v=2cxy$ 的模型，非零检验点处只有 $c=1$ 才让两个方向协调。图中蓝、绿向量分别是实方向和虚方向的差商：$c=1$ 时重合，表示两方向给出同一个数；改成 $c=-1$ 时，两者等长却方向相反，仍不满足方程。原点可能偶然符合方程，不能由单点推断邻域。\n\n[[TEACHING_VISUAL:CH02-cr]]\n\n把点的条件施加到整个区域，就得到解析性判别：$f$ 在 $D$ 内解析，当且仅当 $u,v$ 在 $D$ 处处实可微，并且两条 C–R 方程处处成立。实际题里偏导数在邻域连续是保证实可微的一种方便充分条件；若任一方程在某点失败，则已足以否定该点复可微。必要条件的反证用法与充分条件的正向用法不能混同。\n\n教材先用 $u=e^x\\cos y$、",
+        "plan_evidence": {
+          "kind": "foundation-cr",
+          "params": {},
+          "formula": "u=x^2-y^2,\\quad v=2cxy,\\quad u_x=v_y,\\ u_y=-v_x\\ (c=1)",
+          "purpose": "理解C-R协调实部和虚部变化",
+          "action": "改变虚部系数c，在非零点比较水平和竖直差商",
+          "observation": "只有协调的参数使两个候选复导数一致",
+          "conclusion": "偏导连续时，两条C-R方程在邻域成立可推出解析"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH02-S05-SS01",
+      "id": "CH02-power",
+      "kind": "visual",
+      "title": "整数幂函数的角度倍增",
+      "purpose_markdown": "这张图说明整数幂为什么会把角度放大，并造成重复覆盖。改变次数 $n$，再移动标记点的辐角，对照左右两侧同色曲线：原像转过 $2\\pi/n$，像就转满一圈，因此选择单叶角域时要限制原角域的张角。",
+      "spoken_text": "这张图说明整数幂为什么会把角度放大，并造成重复覆盖。改变幂的次数，再移动标记点的辐角，对照左右两侧同色曲线：原像转过整圈除以幂次数的角度，像就转满一圈，因此选择单叶角域时要限制原角域的张角。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH02-S05-SS01/visuals/0",
+        "plan_sha256": "266beb86e47e0fd15cb91059fa6fe9c12acd1688b6a54e802aae6ab9f08fcaad",
+        "marker": "[[TEACHING_VISUAL:CH02-power]]",
+        "body_excerpt": "$ 有恰好 $n$ 个原像\n$$z_k=|w|^{1/n}e^{i(\\theta+2k\\pi)/n},\\quad k=0,\\ldots,n-1,$$\n其中 $\\theta$ 是 $w$ 的任一辐角。由求根已知这些原像不同，所以幂函数在全平面无法一一。\n\n对非零 $z_j=r_je^{i\\theta_j}$，同像的充要条件是 $r_1=r_2$ 且 $\\theta_1-\\theta_2\\in(2\\pi/n)\\mathbb Z$。等价地，两个点相差一个 $n$ 次单位根因子；只有非平凡因子才给不同点。因此单叶性要排除的是定义域中同时出现这样的不同点，不能只看导数是否非零。\n\n开角域 $\\alpha<\\arg z<\\beta$，若 $0<\\beta-\\alpha\\le2\\pi/n$，就不含上述冲突，是单叶性区域。映照满足 $|w|=|z|^n$、连续角 $\\arg w=n\\arg z$，所以射线映为射线，半径 $R$ 的圆弧映为半径 $R^n$ 的相应圆弧，像角域为 $n\\alpha<\\arg w<n\\beta$。特别地，$0<\\arg z<\\pi/n$ 映为上半平面。图中比较圆弧的角度倍增，输入转过 $2\\pi/n$ 时输出已转整圈；边界不含在开角域中，张角取等号仍不会让边界像重叠。\n\n[[TEACHING_VISUAL:CH02-power]]\n\n标准角域 $D_0:-\\pi/n<\\arg z<\\pi/n$ 单叶地映成沿负实轴割开的 $w$ 平面；两条边界分别趋向切口下岸与上岸。其反函数为\n$$z=(\\sqrt[n]{w})_0=|w|^{1/n}e^{i\\arg w/n},\\quad -\\pi<\\arg w<\\pi.$$\n这就是主根分支的来源：先规定允许的原像角域，再唯一反解",
+        "plan_evidence": {
+          "kind": "power",
+          "params": {},
+          "formula": "w=z^n=r^ne^{in\\theta},\\quad n\\ge1",
+          "purpose": "解释单叶角域为何限制张角",
+          "action": "改变n，比较同色圆弧从原像到像的角度扩张",
+          "observation": "输入转2pi除以n时输出已经转满一圈",
+          "conclusion": "开角域张角不超过2pi除以n可避免重复覆盖"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH02-S05-SS02",
+      "id": "CH02-root-branch",
+      "kind": "visual",
+      "title": "主值平方根的负实轴两岸",
+      "purpose_markdown": "这张图解释主值平方根为什么要沿负实轴割开。把标记点的辐角分别调到接近 $\\pi$ 与 $-\\pi$，看负实轴上下两岸的像：它们分别靠近正虚轴与负虚轴，因此不能把切口两侧强行接成同一个连续分支。",
+      "spoken_text": "这张图解释主值平方根为什么要沿负实轴割开。把标记点的辐角分别调到接近正派与负派，看负实轴上下两岸的像：它们分别靠近正虚轴与负虚轴，因此不能把切口两侧强行接成同一个连续分支。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH02-S05-SS02/visuals/0",
+        "plan_sha256": "ca5c2d9ff50e6235477aa9dffdb63e931a7d04cbaf4f097cef72ef48abeac5ed",
+        "marker": "[[TEACHING_VISUAL:CH02-root-branch]]",
+        "body_excerpt": "z)e^{2k\\pi i/n}.$$\n第 $k$ 支的像角域为 $(2k-1)\\pi/n<\\arg w<(2k+1)\\pi/n$。固定 $k$ 并连续取角，才固定一支；各点任意挑根一般不能连续。\n\n若单值函数 $f$ 在区域 $D$ 解析，且每点都是多值函数 $F$ 的一个允许值，就叫 $F$ 在 $D$ 的单值解析分支。上面的根分支均解析，满足\n$$w_k'(z)=\\frac1{n\\,w_k(z)^{n-1}}=\\frac{w_k(z)}{nz}.$$\n函数值和导数必须属于同一支。教材例9在正实轴割平面给定立方根的一支满足 $w(i)=-i$，这项初值确定连续选择，得到 $w(-i)=(\\sqrt3-i)/2$、$w'(-i)=(1+i\\sqrt3)/6$；不是在终点重新任挑一个根。\n\n切口两岸的极限一般不同。图中主值平方根在负实数的上、下岸分别趋向正、负虚轴；它在去掉切口的开区域解析，不是在切口上同时取两个值。换成正实轴切口的立方根第一支、$0<\\arg z<2\\pi$，在 $x>0$ 的上岸极限为 $x^{1/3}$，下岸为 $x^{1/3}e^{2\\pi i/3}$。在不含绕零闭曲线的区域可以连贯选根；圆环 $1<|z|<2$ 允许绕零一周，无法选出全域的单值连续根分支。\n\n[[TEACHING_VISUAL:CH02-root-branch]]\n\n复合根式要重新检查换值。设 $a>0$，$F(z)=\\sqrt{z^2-a^2}$ 的支点恰是 $a,-a$：单独绕任一点会变号，同时绕住两点则两个因子的总辐角增量为 $4\\pi$，开平方后正好一整圈，值不变，所以 $\\infty$ 不是支点。沿 $[-a,a]$ 割开后有两个解析分支；任一固定分支 $f$ 均满足\n$$f",
+        "plan_evidence": {
+          "kind": "sqrt",
+          "params": {},
+          "formula": "w=|z|^{1/2}e^{i\\arg z/2},\\quad -\\pi<\\arg z<\\pi",
+          "purpose": "理解支割线两侧的值为什么不能强行相接",
+          "action": "让输入分别靠近负实轴上侧与下侧",
+          "observation": "两岸分别映向正虚轴和负虚轴",
+          "conclusion": "主值平方根在割开平面解析，割线上两侧极限不同"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH02-S05-SS03",
+      "id": "CH02-exp",
+      "kind": "visual",
+      "title": "指数函数的水平线与竖直线",
+      "purpose_markdown": "这张图说明指数函数的实部与虚部怎样分别控制模和方向。对照左右同色网格，看到水平线变为射线、竖直线变为圆弧，再改变标记点虚部：相差 $2\\pi$ 的输入回到同一个像点，这就是虚方向周期的来源。",
+      "spoken_text": "这张图说明指数函数的实部与虚部怎样分别控制模和方向。对照左右同色网格，看到水平线变为射线、竖直线变为圆弧，再改变标记点虚部：虚部相差二派的输入回到同一个像点，这就是虚方向周期的来源。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH02-S05-SS03/visuals/0",
+        "plan_sha256": "58e91f4f5c86ba409f4dfe2c5454f90303638d78eac07dd80165c16461548329",
+        "marker": "[[TEACHING_VISUAL:CH02-exp]]",
+        "body_excerpt": "+z_2}=e^{z_1}e^{z_2}$。新现象是虚方向周期 $e^{z+2k\\pi i}=e^z$，$k\\in\\mathbb Z$，而精确同像条件为\n$$e^{z_1}=e^{z_2}\\iff z_1-z_2\\in2\\pi i\\mathbb Z.$$\n同像先要求实部相同，再要求虚部相差整圈；因此指数单值解析，却在全平面不是一一。\n\n指数在区域单叶的充要条件，是区域里没有两个相差非零 $2k\\pi i$ 的点。高度不超过 $2\\pi$ 的开水平带 $a<\\operatorname{Im}z<b$ 就是一种选择，单叶地映为连续角度范围 $a<\\arg w<b$。水平线的虚部固定，像是射线；竖直线段实部固定，像是半径 $e^x$ 的圆弧。图中按颜色比较这两族线，能看到同一函数怎样把直角网格变成径向网格。\n\n为在小图中同时看见相差一整圈的输入，左图按 $x/a$、$y/(2\\pi)$，右图按 $w/e^a$ 缩放显示，其中 $a>0$ 是“实部范围”控件给出的显示尺度。金点代表 $z$，紫点代表 $z+2\\pi i$；它们在左图相差一个纵向单位，右侧金点与紫环重合，表示两输入的像相同。实际输入和函数值仍列在读数中；改变显示尺度时，应比较实际数值，而不能把不同尺度下的线段长度直接相减。\n\n[[TEACHING_VISUAL:CH02-exp]]\n\n特别地，$-\\pi<\\operatorname{Im}z<\\pi$ 映为负实轴割平面，$0<\\operatorname{Im}z<\\pi$ 映为上半平面。各水平带 $(2k-1)\\pi<\\operatorname{Im}z<(2k+1)\\pi$ 都映为同一个负实轴割平面；上下边界对应两岸，但边界不属于开带。反向恢复输入时，模确定实部，连续",
+        "plan_evidence": {
+          "kind": "exp",
+          "params": {},
+          "formula": "w=e^z=e^x(\\cos y+i\\sin y)",
+          "purpose": "解释实部控制模、虚部控制辐角及周期",
+          "action": "比较横线和竖线的像，沿虚部平移2pi",
+          "observation": "横线成为射线，竖线成为圆弧，整圈平移回到原像值",
+          "conclusion": "指数的重复来自虚部相差2pi，限制水平带可取得单叶映照"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH02-S05-SS04",
+      "id": "CH02-log-branch",
+      "kind": "visual",
+      "title": "对数支割线与辐角区间",
+      "purpose_markdown": "这张图说明选一个对数分支时，为什么还要说明支割线和取角区间。移动粉色支割射线，再缩小两侧采样点的角距离：原像虽然越来越近，对数像的虚部仍相差约 $2\\pi$，所以连续取值必须在割开的区域内进行。",
+      "spoken_text": "这张图说明选一个对数分支时，为什么还要说明支割线和取角区间。移动粉色支割射线，再缩小两侧采样点的角距离：原像虽然越来越近，对数像的虚部仍相差约二派，所以连续取值必须在割开的区域内进行。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH02-S05-SS04/visuals/0",
+        "plan_sha256": "f4567fe4452205d3794b4616707470f68f6262c1759dbdc7a43ff6acb29a1cb5",
+        "marker": "[[TEACHING_VISUAL:CH02-log-branch]]",
+        "body_excerpt": "可以在剩下区域连续选角；给一个点指定主值并不能自动使切口两岸连通。\n\n在 $D=\\mathbb C\\setminus(-\\infty,0]$ 取连续角 $-\\pi<\\theta<\\pi$，全部单值解析分支为\n$$L_k(z)=\\ln|z|+i\\theta+2k\\pi i,\\qquad L_k'(z)=1/z.$$\n其中 $k\\in\\mathbb Z$，$L_k$ 单叶地映 $D$ 到水平带 $(2k-1)\\pi<\\operatorname{Im}w<(2k+1)\\pi$；角域 $a<\\theta<b$ 则映为 $2k\\pi+a<\\operatorname{Im}w<2k\\pi+b$。导数相同是因为各支相差常数，不等于它们的函数值相同。\n\n若切口改成正实轴，就在 $\\mathbb C\\setminus[0,\\infty)$ 取 $0<\\theta<2\\pi$，同样的 $L_k$ 公式给出全部解析支，像带改为 $2k\\pi<\\operatorname{Im}w<2(k+1)\\pi$。图中移动切口角 $\\beta$，比较两岸靠近的输入点与相差约 $2\\pi$ 的像虚部；取角区间同时变为 $\\beta<\\theta<\\beta+2\\pi$。切口改变了哪一边不能跨越，未消除绕零换值的事实。\n\n[[TEACHING_VISUAL:CH02-log-branch]]\n\n教材中的[求对数的全部值与主值](#reader-b450b710d4a5a339af52)、[验证多值法则并检验主值](#reader-76aa815f0ba134e43bf1)保留完整题目与推演，可展开核对。\n\n指数与对数建立后，可以用指数的和差定义三角函数，并逐项检查哪些实数性质仍保留。",
+        "plan_evidence": {
+          "kind": "foundation-branch",
+          "params": {},
+          "formula": "L_\\beta(z)=\\ln|z|+i\\arg_\\beta z,\\quad \\beta<\\arg_\\beta z<\\beta+2\\pi",
+          "purpose": "区分点上主值与割开区域的解析分支",
+          "action": "移动支割线，比较两岸输入与对数像的虚部",
+          "observation": "近邻的两岸点其对数虚部仍相差约2pi",
+          "conclusion": "解析分支必须连同支割线和连续取角区间确定"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH02-S05-SS05",
+      "id": "CH02-trig-identity",
+      "kind": "visual",
+      "title": "三角恒等式中的复平方与模平方",
+      "purpose_markdown": "这张图帮助你理解 $\\cos^2z+\\sin^2z=1$ 为什么不表示两个复三角函数都有界。改变输入的虚部，看两个复平方向量首尾相接：各自的长度可以增大，和向量的终点却仍是实数 $1$；这里相加的是复数平方，不是模长的平方。",
+      "spoken_text": "这张图帮助你理解余弦平方加正弦平方等于一，为什么不表示两个复三角函数都有界。改变输入的虚部，看两个复平方向量首尾相接：各自的长度可以增大，和向量的终点却仍是实数一；这里相加的是复数平方，不是模长的平方。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH02-S05-SS05/visuals/0",
+        "plan_sha256": "6ca827b3016f1be3800829e66bfde8c50c43a615c2601a3cb79f743b49dd68ac",
+        "marker": "[[TEACHING_VISUAL:CH02-trig-identity]]",
+        "body_excerpt": "一确定。\n\n指数的周期使 $\\sin(z+2\\pi)=\\sin z$、$\\cos(z+2\\pi)=\\cos z$，周期沿实方向。全部零点仍在实轴：$\\sin z=0$ 当且仅当 $z=k\\pi$，$\\cos z=0$ 当且仅当 $z=(k+1/2)\\pi$，其中 $k\\in\\mathbb Z$。复域扩大了输入，并没有增加离实轴的零点；用指数方程求解可同时检查模和方向。\n\n进一步定义 $\\tan z=\\sin z/\\cos z$、$\\cot z=\\cos z/\\sin z$。前者删去 $(k+1/2)\\pi$，后者删去 $k\\pi$，其余各点解析；两者周期都是 $\\pi$，且\n$$(\\tan z)'=\\frac1{\\cos^2z},\\qquad(\\cot z)'=-\\frac1{\\sin^2z}.$$\n分子和分母各自在全平面解析（以后称为整函数），并不能保证它们的商也在全平面解析；具体解析域始终由分母零点限制。\n\n三角代数恒等式继续成立，例如 $\\sin(-z)=-\\sin z$、$\\cos(-z)=\\cos z$ 与 $\\cos^2z+\\sin^2z=1$。图中把两个复平方作为向量首尾相加，改变输入虚部后，两支向量可以增长，却仍合到实数 $1$。这里是复数平方，不能替换成模平方。\n\n[[TEACHING_VISUAL:CH02-trig-identity]]\n\n复正弦和复余弦都无界。沿纯虚方向 $z=iy$、$y\\in\\mathbb R$，有\n$$\\cos(iy)=\\frac{e^y+e^{-y}}2,\\qquad\\sin(iy)=i\\frac{e^y-e^{-y}}2.$$\n当 $y\\to+\\infty$ 时两者的模都趋无穷，所以实变量时的 $|\\sin x|\\le1$、$",
+        "plan_evidence": {
+          "kind": "trig-identity",
+          "params": {},
+          "formula": "\\cos^2z+\\sin^2z=1",
+          "purpose": "说明恒等式不等于单个三角函数有界",
+          "action": "改变输入虚部，比较两个复平方向量与它们的和",
+          "observation": "向量长度可增大，但首尾相接的和固定为实数1",
+          "conclusion": "cos平方加sin平方恒为1，不能改成模平方之和"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH02-S05-SS06",
+      "id": "CH02-hyperbolic",
+      "kind": "visual",
+      "title": "双曲函数",
+      "purpose_markdown": "这张图把四种双曲函数的映照放在同一组网格上比较。切换双曲正弦、双曲余弦、双曲正切和双曲余切，并改变网格范围，留意后两种函数在标出的分母零点附近怎样向远处伸展；商的这些点必须从解析域中排除。",
+      "spoken_text": "这张图把四种双曲函数的映照放在同一组网格上比较。切换双曲正弦、双曲余弦、双曲正切和双曲余切，并改变网格范围，留意后两种函数在标出的分母零点附近怎样向远处伸展；商的这些点必须从解析域中排除。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH02-S05-SS06/visuals/0",
+        "plan_sha256": "df65364aa6dddf2208750f28d70eba1f5e56eecc4340a95e339597e7798998f2",
+        "marker": "[[TEACHING_VISUAL:CH02-hyperbolic]]",
+        "body_excerpt": "aligned}$$\n前两式处处有意义，后两式只在各自分母非零处定义。$\\cosh$ 为偶函数，$\\sinh$ 为奇函数，分别对应和与差在输入反号后的变化。\n\n把三角函数的输入换成 $iz$，可得\n$$\\begin{aligned}\n\\sinh z&=-i\\sin(iz),&\\cosh z&=\\cos(iz),\\\\\n\\tanh z&=-i\\tan(iz),&\\coth z&=i\\cot(iz).\n\\end{aligned}$$\n商式在分母非零处成立。这里的 $i$ 将输入方向旋转，使实轴上的增长与另一方向的振荡成为同一复函数的不同截面；不能因名称不同就另造不相容的规则。\n\n$\\sinh z$、$\\cosh z$ 都是整函数，其导数互换：$(\\sinh z)'=\\cosh z$、$(\\cosh z)'=\\sinh z$。分母零点给出 $\\tanh z$ 的排除点 $(k+1/2)\\pi i$，$\\coth z$ 的排除点 $k\\pi i$，其中 $k\\in\\mathbb Z$，不能对调。在各自定义域内，$(\\tanh z)'=1/\\cosh^2z$、$(\\coth z)'=-1/\\sinh^2z$。图中切换四个函数，可以比较商在相应分母零点附近的像延伸；有限显示范围不代表函数有界。\n\n[[TEACHING_VISUAL:CH02-hyperbolic]]\n\n$\\sinh z$ 与 $\\cosh z$ 的周期为 $2\\pi i$，两个商的周期为 $\\pi i$，都沿虚方向。它们保留实双曲恒等式，例如\n$$\\cosh^2z-\\sinh^2z=1,$$\n$$\\begin{aligned}\n\\sinh(z_1\\pm z_2)&=\\sinh z_1\\cosh z_2\\\\\n&\\quad\\p",
+        "plan_evidence": {
+          "kind": "hyperbolic",
+          "params": {},
+          "formula": "\\sinh z=\\frac{e^z-e^{-z}}2,\\quad\\cosh z=\\frac{e^z+e^{-z}}2,\\quad\\tanh z=\\frac{\\sinh z}{\\cosh z},\\quad\\coth z=\\frac{\\cosh z}{\\sinh z}",
+          "purpose": "统一比较双曲函数的周期与分母零点",
+          "action": "切换sinh cosh tanh coth四种模式观察像网格",
+          "observation": "两种商在相应分母零点附近无界，沿虚方向周期重复",
+          "conclusion": "定义中的指数决定周期，商的解析域须排除其分母零点"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH02-S05-SS07",
+      "id": "CH02-general-power-values",
+      "kind": "animation",
+      "title": "一般幂为何有一个有限或无穷多个值",
+      "purpose_markdown": "这段动画解释一般幂的不同值为什么有时重合、有时有限循环、有时不断出现新点。比较指数 $3$、$1/3$、$\\sqrt2$ 时改变对数分支后的像点：它们分别只有一个值、三个循环值和互不重复的值；无穷多值由不重复判据保证，有限画面只列出其中一部分。",
+      "spoken_text": "这段动画解释一般幂的不同值为什么有时重合、有时有限循环、有时不断出现新点。比较指数三、三分之一、根号二时改变对数分支后的像点：它们分别只有一个值、三个循环值和互不重复的值；无穷多值由不重复判据保证，有限画面只列出其中一部分。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH02-S05-SS07/media/0",
+        "plan_sha256": "1e0cf52dfd1d0f571e403c99216511ce42bc52f3b6a1a2be63093a92b8f5bf40",
+        "marker": "[[TEACHING_MEDIA:CH02-general-power-values]]",
+        "body_excerpt": " 的值，全部值为 $w_k=w_0e^{2k\\pi i\\alpha}$。若 $\\alpha=n$ 为正整数，额外因子恒为 $1$，回到通常单值幂 $z^n=|z|^ne^{in\\theta}$；负整数同样单值，但零须排除。若 $\\alpha=m/n$ 为既约有理数、$n\\ge1$，额外因子恰在 $n$ 次后重复，所以非零底数有 $n$ 个值，作为集合满足 $z^{m/n}=\\sqrt[n]{z^m}$。判断有限值数前必须先把分数约分。\n\n若 $\\alpha$ 是无理实数，不同整数间的角差 $2\\pi\\alpha(k_1-k_2)$ 永不成为整圈，因此有无穷多个值。若 $\\alpha=a+ib$ 且 $b\\ne0$，额外因子的模为 $e^{-2k\\pi b}$，不同 $k$ 连模都不同，也必无穷多值。例如\n$$\\begin{aligned}\ni^i&=e^{-\\pi/2-2k\\pi},\\\\\n2^{1+i}&=2e^{-2k\\pi}(\\cos\\ln2+i\\sin\\ln2).\n\\end{aligned}$$\n前者的所有值都是正实数。视频比较整数 $3$、分数 $1/3$ 与无理数 $\\sqrt2$ 时，应核对每次对数增加整圈后有无重复；有限动画只能列有限项，无穷多值来自上述不重复判据。\n\n[[TEACHING_MEDIA:CH02-general-power-values]]\n\n复变函数中 $e^z$ 约定表示单值指数。若把底数 $e$ 当一般幂的底数，则 $\\operatorname{Ln}e=1+2k\\pi i$ 给出另一组对象：指数在 $1+i$ 处只有 $e(\\cos1+i\\sin1)$，一般幂的对应全部值却为 $e^{1-2k\\pi}(\\cos1+i\\sin1)$。同样，",
+        "plan_evidence": {
+          "purpose": "按同一判据比较不同指数的多值性",
+          "watch_for": "观察每次多转一整圈后是否出现新值以及何时闭合",
+          "conclusion": "整数指数重合，有理指数有限循环，无理指数不重复"
+        },
+        "request_id": "MR-90744e16dbe5f48e0d03",
+        "step_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "step_narration": [
+          "这里改变的是对数的分支。指数阿尔法取三时，每换一个分支，结果只会多转三整圈，因此仍回到同一点，幂函数只有一个值。",
+          "阿尔法取三分之一时，每一步转过三分之一圈。我们依次得到三个不同的点，第三步又回到起点。继续改变分支，只会重复这三个值。",
+          "如果阿尔法取根号二，就无法通过有限次转动回到起点。因为任意非零整数乘上根号二仍不是整数，所以不会有两个分支给出相同的值。动画只画有限多个点，不同的值实际上有无穷多个。",
+          "判断两个分支是否给出同一个值，只要看阿尔法乘以分支编号的差，是不是整数。这个条件把三幅图统一起来：整指数得到一个值，分数指数得到有限多个值，无理指数得到无穷多个值。"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH02-S05-SS08",
+      "id": "CH02-arctan",
+      "kind": "visual",
+      "title": "反正切的一个对数分支",
+      "purpose_markdown": "这张图帮助你看清反正切的对数表达式为什么必须选支并排除 $z=\\pm i$。查看这两点附近的原网格与同色像曲线，观察像向远处延伸、切口两侧保持分开；画面只展示一个选定分支，不能把它当成反正切的全部值。",
+      "spoken_text": "这张图帮助你看清反正切的对数表达式为什么必须选支，并排除正负虚数单位这两个输入。查看这两点附近的原网格与同色像曲线，观察像向远处延伸、切口两侧保持分开；画面只展示一个选定分支，不能把它当成反正切的全部值。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH02-S05-SS08/visuals/0",
+        "plan_sha256": "e1bf3d27cb52fb664f05de83a4cffd46a19fe72262532f8206b4c5ecd26a8261",
+        "marker": "[[TEACHING_VISUAL:CH02-arctan]]",
+        "body_excerpt": "正弦定义中的 $e^{iw}$ 当未知数，原关系成为二次方程；其根再取对数，得到\n$$\\operatorname{Arcsin}z=-i\\operatorname{Ln}\\left(iz+\\sqrt{1-z^2}\\right).$$\n根号已经表示两个值，不必再重复加一个正负号；对数取全部值，最终得到无穷多值。若要求解析的一支，根与对数都要在所选区域连续配合，不能独立任挑主值后就断言仍满足同一反函数关系。\n\n其余常用表达式为\n$$\\begin{aligned}\n\\operatorname{Arccos}z&=-i\\operatorname{Ln}(z+\\sqrt{z^2-1}),\\\\\n\\operatorname{Arctan}z&=-\\frac i2\\operatorname{Ln}\\frac{1+iz}{1-iz},\\\\\n\\operatorname{Arccot}z&=\\frac i2\\operatorname{Ln}\\frac{z-i}{z+i}.\n\\end{aligned}$$\n根和对数均按全部值理解；反正切、反余切的有限值要求 $z\\ne\\pm i$。图只画反正切的一个主值支：临近这两点的像向远处伸展，切口两岸分开；不能把图上的一支当作所有反正切值，也不能跨缺口作连续延伸。\n\n[[TEACHING_VISUAL:CH02-arctan]]\n\n反双曲函数也由反解指数得到：\n$$\\begin{aligned}\n\\operatorname{Arsinh}z&=\\operatorname{Ln}(z+\\sqrt{z^2+1}),\\\\\n\\operatorname{Arcosh}z&=\\operatorname{Ln}(z+\\sqrt{z^2-1}),\\\\\n\\operatornam",
+        "plan_evidence": {
+          "kind": "arctan",
+          "params": {},
+          "formula": "w=\\frac{1}{2i}\\operatorname{Log}\\frac{1+iz}{1-iz},\\quad z\\ne\\pm i",
+          "purpose": "说明反三角函数通过对数反解以及排除点",
+          "action": "查看选定分支在正负i附近的网格延伸",
+          "observation": "被排除点附近像向远处延伸，切口两侧分开",
+          "conclusion": "对数表达式需指定分支并排除零与无穷的内部值"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH03-S01",
+      "id": "CH03-parametrization",
+      "kind": "animation",
+      "title": "参数化为什么必须带切向因子",
+      "purpose_markdown": "这段动画解释复积分换成参数积分时，为什么不能漏掉 $z^{\\prime}(t)$。看曲线上动点旁的切向箭头，再跟随公式同时替换函数输入与微分元：$\\mathrm dz=z^{\\prime}(t)\\mathrm dt$ 保留了小位移的方向，弧长只保留长度，二者不能直接互换。",
+      "spoken_text": "这段动画解释复积分换成参数积分时，为什么不能漏掉曲线对参数的导数。看曲线上动点旁的切向箭头，再跟随公式同时替换函数输入与微分元：复微分等于切向量乘参数微分，保留了小位移的方向，弧长只保留长度，二者不能直接互换。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH03-S01/media/0",
+        "plan_sha256": "196a725b3decad6e50ebbf95b70c16e97b4109ad9dc8690347fb785a88b80995",
+        "marker": "[[TEACHING_MEDIA:CH03-parametrization]]",
+        "body_excerpt": "，可分成\n$$\\begin{aligned}\n\\int_Cf(z)\\,dz&=\\int_C(u\\,dx-v\\,dy)\\\\\n&\\quad+i\\int_C(v\\,dx+u\\,dy).\n\\end{aligned}$$\n这正是 $(u+iv)(dx+i\\,dy)$ 的实、虚部，所以连续性已经足够，不要求区域里解析。$dz$ 携带方向，非负弧长 $ds$ 则只记录走过多远，两者不能替换后仍期望同一积分。\n\n若参数 $t$ 从 $a$ 增到 $b$，$z=z(t)$ 沿指定方向走完路径，则\n$$\\int_Cf(z)\\,dz=\\int_a^bf(z(t))z'(t)\\,dt.$$\n逐段光滑的路径分段计算后相加。函数输入与微分元必须同时替换：直线 $z=(1+i)t$、$0\\le t\\le1$ 上，$\\int_C\\operatorname{Re}z\\,dz=(1+i)/2$；圆周 $z=a+Re^{it}$ 则有 $dz=iRe^{it}dt$。圆周这个特例的切向由半径乘 $i$ 得到。演示沿一般曲线 $z(t)$ 前进，短箭头由 $z'(t)$ 给出切向，微分元同时替换为 $dz=z'(t)dt$；应把这段一般曲线演示与前面的圆周公式分别对应。改变走速而不改走向，参数因子会相互补偿，积分不变。\n\n[[TEACHING_MEDIA:CH03-parametrization]]\n\n逆时针绕 $a$、半径 $R>0$ 的圆周有一组基本核积分：对任意整数 $n$，\n$$\\oint_C\\frac{dz}{(z-a)^n}=\\begin{cases}2\\pi i,&n=1,\\\\0,&n\\ne1.\\end{cases}$$\n圆内的 $a$ 不在路径上，所以分母有内点奇异并不妨碍沿圆计算。$n=1$ 时参",
+        "plan_evidence": {
+          "purpose": "把复积分转为实参数定积分并保留方向",
+          "watch_for": "观察切向z撇与小位移同向，以及函数输入和微分的两处替换",
+          "conclusion": "参数化同时改变函数输入与微分，dz的方向由z撇保留"
+        },
+        "request_id": "MR-8112b74d909264a7a39f",
+        "step_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "step_narration": [
+          "参数从起点增加到终点时，曲线上的点也沿规定方向前进。参数化既告诉我们曲线的形状，也告诉我们按什么方向经过这条曲线。",
+          "留意这一点的切向量。参数增加一个很小的量，复数的增量近似等于切向量乘上参数增量。因此，复微分里本身就包含着方向信息。",
+          "把复积分化成参数积分，需要做两处替换。函数里面的变量，要换成曲线上的点；微分也要换成切向量乘参数微分。遗漏任何一处，都会改变积分的意义。",
+          "最后比较复微分和弧长元。弧长元只记录这一小段有多长；复微分还记录它指向哪里。所以一般不能把复微分直接换成它的模。"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH03-S02",
+      "id": "CH03-multiply-connected",
+      "kind": "animation",
+      "title": "带洞区域为什么要计算全部边界",
+      "purpose_markdown": "这段动画解释带洞区域为什么要把全部边界一起计算。先看外圈逆时针、内圈顺时针的箭头，再看辅助割线如何在相邻子区域中各出现两次、方向相反而抵消；最终留下真正的内外边界，因此把各圈都改按逆时针记时，外圈积分等于内圈积分之和。",
+      "spoken_text": "这段动画解释带洞区域为什么要把全部边界一起计算。先看外圈逆时针、内圈顺时针的箭头，再看辅助割线如何在相邻子区域中各出现两次、方向相反而抵消；最终留下真正的内外边界，因此把各圈都改按逆时针记时，外圈积分等于内圈积分之和。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH03-S02/media/0",
+        "plan_sha256": "a044576a3b39d3003a27295c8295aba9dbf7e9a084632537471f13c3ea32a4cd",
+        "marker": "[[TEACHING_MEDIA:CH03-multiply-connected]]",
+        "body_excerpt": " $1/z$ 在单位圆周附近解析，却因原点被排除，绕圆积分仍为 $2\\pi i$；不能省略内部条件。\n\n固定起终点 $z_0,z$，单连通域内解析函数的积分因此与路径无关，可记为 $\\int_{z_0}^zf(\\zeta)\\,d\\zeta$。两条路前一条正走、后一条反走构成闭曲线，其积分为零，表示两条路原来的贡献相同。此时只写端点有意义；一般复积分若还依赖路线，省掉路径会遗漏数据。\n\n有洞区域要把全部边界一起计算。设外边界 $C_0$ 内有互不相交且互在外部的孔边界 $C_1,\\ldots,C_n$，全边界叫复闭路。正方向统一要求行进时区域在左边，所以外边界逆时针、每个孔边界顺时针。若每条 $C_j$ 的名字自身按逆时针记，则区域正向边界写成 $C=C_0+C_1^-+\\cdots+C_n^-$。\n\n若 $f$ 在这个多连通域及全部边界上解析，仍有 $\\oint_Cf\\,dz=0$；把每条边界单独都按逆时针记，等价地写为\n$$\\oint_{C_0}f(z)\\,dz=\\sum_{j=1}^n\\oint_{C_j}f(z)\\,dz.$$\n视频中连接内外边界的辅助线在相邻两块中出现两次、方向相反，合并时抵消，最终留下真正边界。它说明全边界积分为零，不表示外边界或某个孔边界各自必须为零。\n\n[[TEACHING_MEDIA:CH03-multiply-connected]]\n\n设 $a$ 位于正向简单闭路 $C$ 内，对任意整数 $n$，基本核结果推广为\n$$\\oint_C\\frac{dz}{(z-a)^n}=\\begin{cases}2\\pi i,&n=1,\\\\0,&n\\ne1.\\end{cases}$$\n在内部绕 $a$ 画一个小圆，原路径与小圆之间没有奇点，两个同向积分相等，于",
+        "plan_evidence": {
+          "purpose": "解释复闭路方向与辅助线反向抵消",
+          "watch_for": "先比较内外边界箭头，再观察每条辅助线的成对反向积分",
+          "conclusion": "外边界与各洞的边界一起构成零净积分，内外同向记号下外积分等于内积分之和"
+        },
+        "request_id": "MR-e2e593c75fa748b16adc",
+        "step_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6",
+          "S7",
+          "S8",
+          "S9"
+        ],
+        "step_narration": [
+          "先沿整个区域的正向边界走一遍。外圈是逆时针，内圈是顺时针，这样走的时候，区域始终在我们的左手边。内外边界方向不同，是后面符号的来源。",
+          "现在加入辅助割线，把几条边界连接起来。割线只帮助我们分割区域，并没有给原来的边界增加新的积分贡献。为什么没有新增贡献，接下来就能看清。",
+          "割开后，分别考察两个单连通子区域。在每个子区域上应用柯西积分定理，它们各自的正向边界积分都为零，然后再把两条等式相加。",
+          "先只看第一条割线。同一段曲线属于两个子区域的边界，但两次经过它时方向相反。被积函数相同，方向相反，积分就互为相反数。",
+          "另外两条割线也是一样。每条割线都会被经过两次，而且两次方向相反，所以这些辅助边界都将成对抵消。",
+          "把两个子区域的边界积分完整展开，就能直接找到这三组成对的项。它们来自同一条割线上的往返，而不是来自原区域的外边界或内边界。",
+          "现在把三组往返积分分别消去。消去的是人为添加的割线，原来的外边界和各条内边界都保留下来。",
+          "剩下的就是外圈与两条内圈的积分。如果把内圈统一按各自的逆时针方向来记，表达式中就要带减号，因为区域的正向边界实际沿内圈顺时针走。",
+          "最后把两条内圈的箭头都改成逆时针。此时外边界的积分，等于两条内边界积分之和。看公式的同时核对方向，就不容易在这里多写或漏写一个负号。"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH03-S03",
+      "id": "CH03-log-primitive",
+      "kind": "animation",
+      "title": "对数原函数为何随绕行增加整圈贡献",
+      "purpose_markdown": "这段动画说明对 $1/z$ 积分时，为什么仅知道起点和终点还不够。比较端点相同、绕原点圈数不同的路径，并跟随闭路积分的变化：每多绕逆时针一圈就增加 $2\\pi i$，反向则减少同样的量，这正是全局单值对数原函数遇到的障碍。",
+      "spoken_text": "这段动画说明对一除以复变量积分时，为什么仅知道起点和终点还不够。比较端点相同、绕原点圈数不同的路径，并跟随闭路积分的变化：每多绕逆时针一圈就增加二派乘虚数单位，反向则减少同样的量，这正是全局单值对数原函数遇到的障碍。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH03-S03/media/0",
+        "plan_sha256": "8198dcad415b07f47e672f1927e9f596744fab27b64e250460c7d1a67e8764c4",
+        "marker": "[[TEACHING_MEDIA:CH03-log-primitive]]",
+        "body_excerpt": "z_1}\\zeta^n\\,d\\zeta=\\frac{z_1^{n+1}-z_0^{n+1}}{n+1}.$$\n$n<0$ 时路径须避开零，原函数是同一个单值整数幂；$n=-1$ 必须另看对数。另有 $\\int_a^b\\cos z\\,dz=\\sin b-\\sin a$，因为正弦在全平面是可用的原函数。这些计算只剩端点代入，完整演算留在例题中。\n\n在多连通域内，两条同端点路径若围出的闭域仍在 $f$ 的解析范围，积分仍相等；若中间有洞或奇点，就不能凭柯西定理断言相等。多连通也不自动禁止原函数，例如圆环中的 $2z$ 仍有 $z^2$；真正的障碍是被积函数沿某个闭曲线留下非零积分。\n\n$1/z$ 把这个障碍说得最清楚。在允许选定对数解析支 $L$、同时含 $1$ 和 $z$ 的割平面上，\n$$\\int_1^z\\frac{d\\zeta}{\\zeta}=L(z)-L(1).$$\n若 $L(1)=0$，结果就是 $L(z)$。相对固定参考路径多绕原点正向 $k$ 圈，积分增加 $2k\\pi i$；不限定路径类别时得到全部 $\\operatorname{Ln}z=\\ln z+2k\\pi i$。视频中比较同终点而相差一圈的路径，这一圈的额外贡献阻止 $1/z$ 在整个穿孔平面拥有全局单值原函数。\n\n[[TEACHING_MEDIA:CH03-log-primitive]]\n\n教材中的[变上限积分是原函数](#reader-d71d6381af7340e321a8)、[用牛顿－莱布尼兹公式算两个积分](#reader-5eccf0b02e531c0cd2a5)、[$1/z$ 的变上限积分是多值的](#reader-9f4e41e646713848d9a7)保留完整题目与推演，可展开核对。\n\n原",
+        "plan_evidence": {
+          "purpose": "连接全局原函数与对数分支的限制",
+          "watch_for": "比较同起终点的路径所围闭路以及正反绕行增加的积分",
+          "conclusion": "1除以z多绕净一圈就改变2pi i，割开区域才能固定单值原函数"
+        },
+        "request_id": "MR-c5c7fdbb5e099f70ce37",
+        "step_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6",
+          "S7"
+        ],
+        "step_narration": [
+          "先比较两条端点相同的路径。其中一条直接从一走到终点，另一条多绕原点一周。对一除以复变量积分，端点相同还不足以保证积分值相同。",
+          "沿新路径走过去，再沿原路径反向走回来，就得到一条闭路。因此，两条路径积分的差，正好等于这条闭路上的积分。",
+          "这条闭路和单位圆都逆时针绕原点一周。它们之间没有新的奇点，闭路积分可以转到单位圆上计算，结果是二派乘虚数单位。",
+          "把基准路径上的积分记作对数的一个选定值。新路径多绕一周，就在这个值上增加二派乘虚数单位。这是绕行带来的增量。",
+          "如果再多绕一周，增量还会再加一次。因此多绕两周，就比基准值多出四派乘虚数单位，终点虽然没变，积分仍然改变了。",
+          "顺时针绕行时，增量的符号反过来。相对基准路径顺时针多绕一周，积分就减少二派乘虚数单位。",
+          "一般来说，和基准路径相比多绕的净圈数是多少，就增加多少个二派乘虚数单位。这个整数记录的路径信息，正是复对数多值性的来源。"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH03-S04",
+      "id": "CH03-cauchy",
+      "kind": "visual",
+      "title": "柯西公式积分读出函数值",
+      "purpose_markdown": "这张图说明柯西积分公式怎样从边界积分读出内部函数值。移动取值点 $a$，比较右侧归一化积分累计终点与金色的 $a^2$：点在积分圆内时两者重合，点在圆外时积分为零；若点落在路径上，普通曲线积分的条件就失效。",
+      "spoken_text": "这张图说明柯西积分公式怎样从边界积分读出内部函数值。移动取值点，比较右侧归一化积分累计终点与金色的取值点平方：点在积分圆内时两者重合，点在圆外时积分为零；若点落在路径上，普通曲线积分的条件就失效。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH03-S04/visuals/0",
+        "plan_sha256": "f4d5e5218d64f03143fbb53e3e502b15286d4ad936f8ff6c21c9fa4e287bdefb",
+        "marker": "[[TEACHING_VISUAL:CH03-cauchy]]",
+        "body_excerpt": "柯西积分定理说解析函数本身闭路积分为零，加入一个特定核却能读出值。设 $f$ 在正向闭路或正向复闭路 $C$ 及其所围区域 $D$ 上解析，固定 $a\\in D$，则\n$$f(a)=\\frac1{2\\pi i}\\oint_C\\frac{f(\\zeta)}{\\zeta-a}\\,d\\zeta.$$\n$a$ 是读值点，$\\zeta$ 是边界上移动的变量；两者角色不同。这里把权重 $1/(\\zeta-a)$ 称为核；它在 $a$ 故意有一个奇异点，所以不能把被积函数当成整个内部解析而判零。将外路换成绕 $a$ 的小圆后，$f(\\zeta)$ 接近 $f(a)$，基本核的一圈贡献便留下所需的函数值。\n\n图中固定 $f(\\zeta)=\\zeta^2$，移动点 $a$，比较右侧归一化积分累计终点与 $a^2$。点在圆外时核在圆内解析，积分变为零，不能用它读外点值；点落在路径上则普通曲线积分的条件失效。数值累计只核对这个示例，靠近路径时还会受到采样精度影响。\n\n[[TEACHING_VISUAL:CH03-cauchy]]\n\n公式只使用边界上的 $f(\\zeta)$，却恢复每个内部点的 $f(a)$，因此在这些解析条件下，完整边界值唯一确定内部。两个函数若在区域及边界符合上述条件，且边界上处处相同，内部也处处相同。这里是整条边界的数据，不能替换成几个样点或一幅有限分辨率的图。\n\n同一边界还决定全部导数：对 $n=0,1,2,\\ldots$，\n$$f^{(",
+        "plan_evidence": {
+          "kind": "cauchy",
+          "params": {},
+          "formula": "\\frac1{2\\pi i}\\oint_{|\\zeta|=R}\\frac{\\zeta^2}{\\zeta-a}\\,d\\zeta=a^2,\\quad |a|<R",
+          "purpose": "把核积分与内部取值的关系具体化",
+          "action": "固定平方函数，移动取值点a并比较积分累计终点与a平方",
+          "observation": "点在圆内时归一化积分读出a平方，圆外为零",
+          "conclusion": "柯西公式必须检查取值点在内且其余部分在闭域解析"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH03-S05",
+      "id": "CH03-maximum",
+      "kind": "visual",
+      "title": "最大模原理的多项式圆盘",
+      "purpose_markdown": "这张图用多项式 $z^n+c$ 说明最大模原理所限制的是哪里出现最高值。改变次数和实常数，比较模曲面内部与圆盘边缘：最高处始终在边界；这是具体函数的观察，使用一般定理仍须确认解析性、非恒定性和边界连续性。",
+      "spoken_text": "这张图用复数的整数幂加一个常数的多项式，说明最大模原理所限制的是哪里出现最高值。改变次数和实常数，比较模曲面内部与圆盘边缘：最高处始终在边界；这是具体函数的观察，使用一般定理仍须确认解析性、非恒定性和边界连续性。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH01-03.json",
+        "plan_pointer": "/units/CH03-S05/visuals/0",
+        "plan_sha256": "1a598f68fc073957939e34a2920c68607af4d46f6c7b82105b7a27ee89731f0f",
+        "marker": "[[TEACHING_VISUAL:CH03-maximum]]",
+        "body_excerpt": "ds=R\\,d\\theta$ 是实弧长微分，$2\\pi R$ 是周长。平均的是复函数值本身，不是模；方向相消仍参与平均，因此不能改成圆心模等于周边模的平均。\n\n把平均值和积分公式用于 $f(z)=e^z$，可直接使用教材中的两个积分结果：\n$$\\oint_{|z|=1}\\frac{e^z}{z}\\,\\mathrm dz=2\\pi i,\\qquad\\int_0^\\pi e^{\\cos\\theta}\\cos(\\sin\\theta)\\,\\mathrm d\\theta=\\pi.$$\n第二个看似复杂的实积分，来自单位圆上复指数的实部；把表达式认成解析函数的圆周平均，比直接寻找实变量原函数更有效。完整换元和取实部过程保留在[对应例题](#reader-682c68b2f5b30f119239)中。\n\n非恒定解析函数的模不能在区域内部取得局部最大值。若区域 $D$ 有界，$f$ 在 $D$ 解析、闭域 $\\bar D$ 连续，则连续性保证最大模存在，而它只能在边界取得。内部若已达到周围的最大长度，平均值还要恢复该点，周围值就受到相等约束，迫使函数成为常数。图用 $f(z)=z^n+c$ 的模曲面核对边缘最高处，改变次数与实常数后可比较；它只是具体函数，不能替代一般定理的解析、非恒定与边界条件。\n\n[[TEACHING_VISUAL:CH03-maximum]]\n\n设整个闭圆盘 $|\\zeta-a|\\le R$ 在解析范围内，令 $M(R)=\\max_{|\\zeta-a|=R}|f(\\zeta)|$，高阶导数公式结合长大不等式给出柯西不等式\n$$|f^{(n)}(a)|\\le\\frac{n!M(R)}{R^n},\\qquad n\\ge1.$$\n特别地 $|f'(a)|\\le M(R)/R$。",
+        "plan_evidence": {
+          "kind": "maximum",
+          "params": {},
+          "formula": "f(z)=z^n+c,\\quad\\max_{|z|\\le R}|f(z)|=R^n+|c|",
+          "purpose": "解释边界值对内部模的约束",
+          "action": "改变多项式次数与常数，比较模曲面最高处的位置",
+          "observation": "非恒定代表函数的最大模始终在闭圆盘边缘",
+          "conclusion": "特定图像说明一般原理，使用原理仍须解析和边界连续等条件"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH04-S01",
+      "id": "CH04-harmonic",
+      "kind": "visual",
+      "title": "实部与共轭调和函数的两族等值线",
+      "purpose_markdown": "这张图把调和性和共轭等值线的正交关系分开核对。保持俯视，改变正系数与两族等值参数，看金色、紫色曲线在非原点交点处的直角，同时核对 $u_{xx}+u_{yy}=2c-2c=0$；原点梯度为零，不能套用普通交点的正交结论。",
+      "spoken_text": "这张图把调和性和共轭等值线的正交关系分开核对。保持俯视，改变正系数与两族等值参数，看金色、紫色曲线在非原点交点处的直角，同时核对两个方向的二阶偏导，一个是二倍系数，一个是负二倍系数，相加为零；原点梯度为零，不能套用普通交点的正交结论。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH04-06.json",
+        "plan_pointer": "/units/CH04-S01/visuals/0",
+        "plan_sha256": "11bf82cc9eab1517ee270946c76cd69b225eb38614f0953bc05dac43364caa9f",
+        "marker": "[[TEACHING_VISUAL:CH04-harmonic]]",
+        "body_excerpt": "函数，组合 $u+\\mathrm i v$ 解析。因此每个解析函数的实部、虚部都是共轭调和的；反过来只检验两者各自调和还不够，必须核对它们之间的偏导联系。“共轭”在这里指配对关系。\n\n当交点处 $f'(z)\\ne0$，等值线（函数取同一常数值的点连成的曲线）$u=K_1$ 与 $v=K_2$ 的切线互相垂直：C-R 使法向量 $\\nabla u$ 与 $\\nabla v$ 垂直，导数非零保证这些法向量不消失。在[例1（$z^2$ 的共轭调和函数与等值曲线）](#reader-f1bcd15721b354574c2c)中，$u=x^2-y^2$、$v=2xy$ 给出两族双曲线；原点处 $f'=0$，不能在那里直接引用正交结论。\n\n右侧默认从正上方看两族等值线，这样同一坐标平面上的直角不会被倾斜视角压扁。调节正系数 $c$，公式中的 $u_{xx}=2c$、$u_{yy}=-2c$ 仍相抵；若还想看 $u=c(x^2-y^2)$ 的鞍面高度，可展开“视角设置”改变俯仰。\n\n图中金色与紫色的两族曲线分别是 $u=c(x^2-y^2)$ 与 $v=2cxy$ 的等值线，投影放在同一坐标平面。改变两族的等值参数，比较非临界交点处的切线：两方向垂直；原点的梯度为零，不能把它当作普通正交交点。\n\n[[TEACHING_VISUAL:CH04-harmonic]]\n\n现在给定实部 $u$，C-R 已经规定需要补出的偏导：$v_x=-u_y$、$v_y=u_x$。若 $u$ 在单连通区域 $D$ 内调和，固定基点 $(x_0,y_0)$，则\n$$v(x,y)=\\int_{(x_0,y_0)}^{(x,y)}\\bigl(-u_y\\,\\mathrm dx+u_x\\,\\mathrm dy\\bigr)",
+        "plan_evidence": {
+          "kind": "harmonic",
+          "params": {},
+          "formula": "u=c(x^2-y^2),\\quad u_{xx}+u_{yy}=2c-2c=0",
+          "purpose": "比较共轭调和等值线的正交关系及二阶偏导抵消",
+          "action": "改变正系数 $c$ 与两族等值参数，观察非临界交点",
+          "observation": "金色 $u$ 与紫色 $v$ 等值线在同一平面呈现非临界交点处的直角",
+          "conclusion": "调和性由二阶偏导相抵判断；正交性还要求 C-R 联系及交点导数非零"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH04-S02",
+      "id": "CH04-poisson",
+      "kind": "visual",
+      "title": "泊松公式的圆盘边界值",
+      "purpose_markdown": "这张图说明圆周上的起伏怎样决定圆盘内部的调和函数。固定边界模式，减小内点半径，再增大模式次数，比较泊松积分与 $r^n\\cos(n\\varphi)$ 的读数：两种算法一致，而较高次的边界起伏向内部衰减得更快。",
+      "spoken_text": "这张图说明圆周上的起伏怎样决定圆盘内部的调和函数。固定边界模式，减小内点半径，再增大模式次数，比较泊松积分与公式计算的读数：公式是半径的恩次方，乘以恩倍方向角的余弦，两种算法一致，而较高次的边界起伏向内部衰减得更快。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH04-06.json",
+        "plan_pointer": "/units/CH04-S02/visuals/0",
+        "plan_sha256": "f3a835a4386bb4baca2a437f3cde779af5d7719746104d3136115cba96070b9a",
+        "marker": "[[TEACHING_VISUAL:CH04-poisson]]",
+        "body_excerpt": "fbfea)。\n\n偏离圆心后，近处边界应占更多权重。设 $z=a+re^{\\mathrm i\\varphi}$、$0\\le r<R$，记边界数据为 $g(\\theta)=u(a+Re^{\\mathrm i\\theta})$，泊松积分公式写成\n$$u(a+re^{\\mathrm i\\varphi})=\\frac1{2\\pi}\\int_0^{2\\pi}g(\\theta)\\frac{R^2-r^2}{R^2-2Rr\\cos(\\theta-\\varphi)+r^2}\\,\\mathrm d\\theta.$$\n这里 $u$ 仍须在闭圆盘的邻近区域调和。分式称泊松核，它在内部为正，归一化后权重总和为 $1$；$r=0$ 时核为 $1$，回到等权平均。内点方向 $\\varphi$ 固定，积分变量 $\\theta$ 扫过边界，两者不能混用。\n\n在单位圆的右图中固定边界数据 $g(\\theta)=\\cos(n\\theta)$，比较数值泊松积分与 $r^n\\cos(n\\varphi)$ 的读数。先固定 $n$ 向圆心移动，再增大 $n$：前者让幅度按 $r^n$ 减弱，后者让较高频的边界起伏更快向内部衰减。这里比较的是明确的一组边界数据；泊松核不能直接在 $r=1$ 的奇异表达式上代值，边界要取极限。\n\n[[TEACHING_VISUAL:CH04-poisson]]\n\n给定区域 $D$、边界 $C=\\partial D$ 及连续数据 $g$，寻找 $u\\in C(\\overline D)$ 满足\n$$\\Delta u=0\\quad(z\\in D),\\qquad u|_C=g,$$\n就是狄利克雷问题。圆盘的泊松公式给出具体构造；一般区域不能仅凭“指定了边界”就宣称解存在，还要另做存在性分析。\n\n若",
+        "plan_evidence": {
+          "kind": "foundation-poisson",
+          "params": {},
+          "formula": "u(1,t)=\\cos(nt),\\quad u(r,\\varphi)=r^n\\cos(n\\varphi),\\quad 0\\le r<1",
+          "purpose": "比较 $r^n\\cos(n\\varphi)$ 与泊松积分数值",
+          "action": "先减小内点半径 $r$，再增大边界次数 $n$",
+          "observation": "两种读数一致，高次边界模式向内衰减更快",
+          "conclusion": "明确边界数据 $\\cos(n\\theta)$ 决定对应圆盘调和延拓"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH05-S01-SS02",
+      "id": "CH05-U",
+      "kind": "visual",
+      "title": "同一个N能否覆盖全部点",
+      "purpose_markdown": "这张图检验同一个项数能否让所有点的误差同时达标。先设 $b=0.99$、$\\varepsilon=0.05$，跳到 $n=299$ 核对统一界 $b^n<\\varepsilon$，再把 $b$ 改为 $1$：整个开圆中，误差仍能任意接近 $1$，因此闭小圆上的统一控制不能直接扩大到整个开圆。",
+      "spoken_text": "这张图检验同一个项数能否让所有点的误差同时达标。先设圆盘半径零点九九、误差阈值零点零五，跳到第二百九十九项，核对半径的相应次幂已严格小于阈值，再把半径改为一：整个开圆中，误差仍能任意接近一，因此闭小圆上的统一控制不能直接扩大到整个开圆。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH04-06.json",
+        "plan_pointer": "/units/CH05-S01-SS02/visuals/0",
+        "plan_sha256": "4615876aeb455e0c754a5c042e53ebb6d1ccd8692313b230a532b94c1bf1b4b0",
+        "marker": "[[TEACHING_VISUAL:CH05-U]]",
+        "body_excerpt": "=1/2$，因而不存在覆盖全部点的统一项数。\n\n视频的固定 $n=8$ 画面中，蓝线是沿实轴的误差剖面，绿色点 $z=2^{-1/8}$ 的高度恰为 $1/2$，橙色带表示要求误差严格小于 $1/2$。比较绿色点与带的上边界，再看靠近两端仍穿出带外的曲线：固定八项还不能管住全部点。对任意其他 $n$，同样的公式给出新的反例点；对开圆，$|z|=1$ 不包含在集合里，上确界为 $1$，意思是 $1$ 是所有误差的最小上界：内点误差能任意接近 $1$，却不取到 $1$。\n\n[[TEACHING_MEDIA:CH05-NONUNIFORM]]\n\n再把交互图设成闭小圆 $b=0.99$、阈值 $\\varepsilon=0.05$，查看统一界 $b^n$，并用跳转按钮到 $n=299$：这时 $0.99^{299}<0.05$，而 $n=298$ 仍不满足严格不等式。一般地，$0<b<1$、$0<\\varepsilon<1$ 时所需最小整数为\n$$N=\\left\\lfloor\\frac{\\ln\\varepsilon}{\\ln b}\\right\\rfloor+1.$$\n严格小于决定这个取整方式；改回 $b=1$ 时，图切换为整个开圆 $|z|<1$，不包含圆周；此时不存在这样的有限统一项数。\n\n[[TEACHING_VISUAL:CH05-U]]\n\n统一误差让有限和的性质可以传给极限：若每个 $f_k$ 在区域 $D$ 连续，并且级数在 $D$ 一致收敛，则和函数连续。若各项在有限长分段光滑曲线 $C$ 上连续，并在 $C$ 一致收敛，则\n$$\\int_C f(z)\\,\\mathrm dz=\\sum_{k=1}^{\\infty}\\int_C f_k(z)\\,\\mathrm dz.$$\n误",
+        "plan_evidence": {
+          "kind": "uniform",
+          "params": {
+            "terms": 8,
+            "bound": 1,
+            "epsilon": 0.5
+          },
+          "formula": "S_n(z)=z^n;\\quad |z|<1",
+          "purpose": "比较开圆与闭小圆的统一误差",
+          "action": "设固定闭小圆 $b=0.99$、$\\varepsilon=0.05$ 后跳至 $n=299$，再对照 $b=1$ 的整个开圆模式",
+          "observation": "闭小圆为 $b^n$；开圆上确界为 $1$ 且不取到",
+          "conclusion": "量词中的同一个 $N$ 只能在固定闭小圆上得到"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH05-S01-SS02",
+      "id": "CH05-NONUNIFORM",
+      "kind": "animation",
+      "title": "固定八项的坏点与统一误差带",
+      "purpose_markdown": "这段动画展示“每个固定点最终变好”为什么不等于“所有点同时变好”。在固定八项的画面中，比较绿色点的高度与橙色误差带上边界：它恰为 $1/2$，没有满足严格小于的要求，靠近两端的曲线还在带外；正文用同一构造为每个项数找到新的反例点。",
+      "spoken_text": "这段动画展示“每个固定点最终变好”为什么不等于“所有点同时变好”。在固定八项的画面中，比较绿色点的高度与橙色误差带上边界：它恰为二分之一，没有满足严格小于的要求，靠近两端的曲线还在带外；正文用同一构造为每个项数找到新的反例点。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH04-06.json",
+        "plan_pointer": "/units/CH05-S01-SS02/media/0",
+        "plan_sha256": "68b01d794353dac456c12696bb9b57cf79561b303d30077a127965bb22555478",
+        "marker": "[[TEACHING_MEDIA:CH05-NONUNIFORM]]",
+        "body_excerpt": "r-a0aeb64f37b0923a8118)与[例5](#reader-c1ffb8d4c469b983f89f)使用望远镜级数 $z+(z^2-z)+(z^3-z^2)+\\cdots$，“望远镜”指相邻的正负项依次相消，只留下最后的 $z^n$，所以部分和恰为 $z^n$。在 $|z|<1$ 中它逐点趋于 $0$；每个固定闭小圆 $|z|\\le b<1$ 上，首项 $z$ 单独用 $|z|\\le b$ 控制，再用 $|z^k-z^{k-1}|\\le(1+b)b^{k-1}$ 控制从 $k=2$ 起的后续项，可得绝对一致收敛。但整个开圆上，每个 $n$ 都能另取 $z_n=2^{-1/n}<1$ 使 $|z_n|^n=1/2$，因而不存在覆盖全部点的统一项数。\n\n视频的固定 $n=8$ 画面中，蓝线是沿实轴的误差剖面，绿色点 $z=2^{-1/8}$ 的高度恰为 $1/2$，橙色带表示要求误差严格小于 $1/2$。比较绿色点与带的上边界，再看靠近两端仍穿出带外的曲线：固定八项还不能管住全部点。对任意其他 $n$，同样的公式给出新的反例点；对开圆，$|z|=1$ 不包含在集合里，上确界为 $1$，意思是 $1$ 是所有误差的最小上界：内点误差能任意接近 $1$，却不取到 $1$。\n\n[[TEACHING_MEDIA:CH05-NONUNIFORM]]\n\n再把交互图设成闭小圆 $b=0.99$、阈值 $\\varepsilon=0.05$，查看统一界 $b^n$，并用跳转按钮到 $n=299$：这时 $0.99^{299}<0.05$，而 $n=298$ 仍不满足严格不等式。一般地，$0<b<1$、$0<\\varepsilon<1$ 时所需最小整数为\n$$N=\\left\\lflo",
+        "plan_evidence": {
+          "purpose": "比较绿色坏点与严格误差阈值带的边界",
+          "watch_for": "固定八项画面中绿色点恰在上边界，两端曲线仍穿出带外",
+          "conclusion": "固定八项的反例由同一构造推广到任意项数，数学公式见正文"
+        },
+        "request_id": "MR-2fc4ad49b6be9910049e",
+        "step_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "step_narration": [
+          "项数增加时，每个固定内点的误差趋于零。但是靠近边界，总还能找到误差很大的点。固定点变好，并不等于所有点同时变好。",
+          "把项数固定为八。取二的负八分之一次幂这个圆内点，它的八次幂仍等于二分之一。项数再大，也能用相同办法找到一个新的坏点。",
+          "一致收敛要求从某个统一项数开始，所有点的误差同时小于二分之一。边界附近的曲线始终穿出阈值带，说明这个要求没有达到。"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH05-S04",
+      "id": "CH05-L",
+      "kind": "visual",
+      "title": "同一函数为何有两组罗朗展开",
+      "purpose_markdown": "这张图解释同一个函数为什么会有两组不同的罗朗展开。把采样半径从 $0.6$ 调到 $1.4$，再增加截断阶数，比较部分和与原函数的像曲线：内侧使用以 $z$ 为小参数的展开，外侧改用 $1/z$；半径为 $1$ 时圆经过奇点，不能沿整圆使用这两份展开。",
+      "spoken_text": "这张图解释同一个函数为什么会有两组不同的罗朗展开。把采样半径从零点六调到一点四，再增加截断阶数，比较部分和与原函数的像曲线：内侧使用以复变量为小参数的展开，外侧改用它的倒数；半径为一时圆经过奇点，不能沿整圆使用这两份展开。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH04-06.json",
+        "plan_pointer": "/units/CH05-S04/visuals/0",
+        "plan_sha256": "69c71fc40cb37a9a73fadf7d83cc5bea55614d871fe5ebdcb161e608fd3ec22e",
+        "marker": "[[TEACHING_VISUAL:CH05-L]]",
+        "body_excerpt": "{f(\\zeta)}{(\\zeta-a)^{n+1}}\\,\\mathrm d\\zeta,\\qquad n\\in\\mathbb Z.$$\n$C$ 必须位于圆环中、正向绕 $a$ 一次，系数与这样的闭路如何弯曲无关。唯一性固定的是中心和圆环；跨过另一个奇点换了圆环，系数就可以改变。\n\n为何积分能抽出单个系数？对正向绕 $a$ 一次且避开它的闭路，以及任意整数 $n$，\n$$\\int_C\\frac{\\mathrm dz}{(z-a)^n}=\\begin{cases}2\\pi\\mathrm i,&n=1,\\\\0,&n\\ne1.\\end{cases}$$\n在展开式两边乘上合适的整数幂再积分，只留下要找的系数。下一章留数正是直接读取负一次幂的这项选择作用。\n\n右图采用 $f(z)=1/[z(z-1)]$，与教材例题的中心不同。分别在 $0<|z|<1$ 和 $|z|>1$ 使用\n$$-\\frac1z-1-z-\\cdots,\\qquad \\frac1{z^2}+\\frac1{z^3}+\\cdots.$$\n把采样半径从 $0.6$ 改到 $1.4$，比较有限部分和与原函数的像曲线：换用的几何比从 $z$ 变成 $1/z$。恰在半径 $1$ 时采样圆经过奇点，任何一份都不能作为该整圆上的收敛展开。\n\n[[TEACHING_VISUAL:CH05-L]]\n\n教材[例12](#reader-ffd4e4fccbef001c6ee9)对 $1/[(z-1)(z-2)]$ 也先部分分式，再按区域选择小参数，得到\n$$\\begin{aligned}f(z)&=-\\sum_{n=-1}^{\\infty}(z-1)^n,&&0<|z-1|<1,\\\\f(z)&=\\sum_{n=2}^{\\infty}\\frac",
+        "plan_evidence": {
+          "kind": "laurent",
+          "params": {
+            "terms": 8,
+            "radius": 0.6
+          },
+          "formula": "f(z)=1/[z(z-1)]",
+          "purpose": "核对 $1/[z(z-1)]$ 的内外两份展开范围",
+          "action": "把采样半径从 $0.6$ 调到 $1.4$",
+          "observation": "小参数从 $z$ 切换为 $1/z$",
+          "conclusion": "中心与有效圆环是展开式的一部分"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH05-S05",
+      "id": "CH05-E",
+      "kind": "visual",
+      "title": "沿不同方向靠近本性奇点",
+      "purpose_markdown": "这张图用 $e^{1/z}$ 说明本性奇点附近为什么没有统一的有限或无穷极限。改变接近方向，再缩小采样范围，看正实轴方向增长、负实轴方向衰减的差别；超出视野的曲线会被截去，不能因为屏幕大小有限就判断函数有界。",
+      "spoken_text": "这张图用以自然常数为底、以复变量倒数为指数的函数，说明本性奇点附近为什么没有统一的有限或无穷极限。改变接近方向，再缩小采样范围，看正实轴方向增长、负实轴方向衰减的差别；超出视野的曲线会被截去，不能因为屏幕大小有限就判断函数有界。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH04-06.json",
+        "plan_pointer": "/units/CH05-S05/visuals/0",
+        "plan_sha256": "cc2b39204f9851510cbe543955acd7ebec45a27e49cc108d0b45ed74d112770a",
+        "marker": "[[TEACHING_VISUAL:CH05-E]]",
+        "body_excerpt": "er-4401895b8cab034562aa)的 $\\sin z$ 抵消一个原点零因子，使原点实际为单极点，另两点 $1,-1$ 分别为二、三阶极点。\n\n极点也可由极限识别：在 $a$ 已知孤立的前提下，$a$ 是极点当且仅当 $|f(z)|\\to\\infty$。这要求所有复方向的趋近，不能仅看一条曲线上发散。“趋于无穷”说的是模离开任何有限界，复函数的相位仍可变化。\n\n若主要部分有无限多个非零负次幂，就是本性奇点；等价地，孤立中心既无有限极限，也无无穷极限。$e^{1/z}$ 沿正实轴趋近原点时增长，沿负实轴则趋于 $0$，两种结果排除统一极限；其展开确有无限负次幂。[例16](#reader-40485690e656cc1093f1)的 $\\cos(1/(z+\\mathrm i))$ 在 $-\\mathrm i$ 也有同样的无限主要部分判别。\n\n右图用 $e^{1/z}$ 比较趋近方向：在 $z=re^{\\mathrm i\\theta}$ 上，模为 $e^{\\cos\\theta/r}$。固定 $r$ 后改变 $\\theta$，再减小 $r$，正实轴方向增长、负实轴方向衰减；虚轴方向模为 $1$，相位却不断振荡。画面会截掉超出视野的部分，有限视野中的曲线长度不能代表函数有界。\n\n[[TEACHING_VISUAL:CH05-E]]\n\n本性行为不能被非零的有限阶因子消掉：若 $a$ 是 $g$ 的孤立本性奇点，$f$ 在 $a$ 解析或有极点且邻域不恒零，则 $fg$、$g/f$ 仍以 $a$ 为本性奇点。若还要讨论 $1/g$ 或 $f/g$，必须先保证 $g$ 在一个去心邻域无零点，从而这些商在那里解析；满足此前提时它们也有本性奇点。[例17](#reader-bb57",
+        "plan_evidence": {
+          "kind": "essential",
+          "params": {
+            "extent": 0.6,
+            "phase": 0
+          },
+          "formula": "f(z)=e^{1/z}",
+          "purpose": "核对 $|e^{1/z}|=e^{\\cos\\theta/r}$ 的方向差异",
+          "action": "改变接近方向，再减小采样尺度",
+          "observation": "正实轴增长、负实轴衰减，图上越界部分被截去",
+          "conclusion": "有限图幅不能用来判断函数有界"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH06-S01",
+      "id": "CH06-R",
+      "kind": "visual",
+      "title": "路径究竟包围了哪个奇点",
+      "purpose_markdown": "这张图帮助你在用留数定理前判断哪些奇点真正位于路径内部。移动实轴上的极点 $a$，对照它与圆的位置和积分读数：严格在圆内时为 $2\\pi i$，圆外时为零；落到圆周上时普通积分无定义，不能把它当作两种结果之间的过渡值。",
+      "spoken_text": "这张图帮助你在用留数定理前判断哪些奇点真正位于路径内部。移动实轴上的极点，对照它与圆的位置和积分读数：严格在圆内时为二派乘虚数单位，圆外时为零；落到圆周上时普通积分无定义，不能把它当作两种结果之间的过渡值。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH04-06.json",
+        "plan_pointer": "/units/CH06-S01/visuals/0",
+        "plan_sha256": "325e4c60dbec5bf80ecef3e78d35eb22fc9bea04efa1c513c5333c81e94164b1",
+        "marker": "[[TEACHING_VISUAL:CH06-R]]",
+        "body_excerpt": "包围 $a$ 一次。定义\n$$\\operatorname{Res}(f,a)=\\frac1{2\\pi\\mathrm i}\\int_C f(z)\\,\\mathrm dz.$$\n只要闭路始终留在这份去心邻域并保持绕行，形状改变不改积分；所以留数描述的是函数和奇点，积分等于 $2\\pi\\mathrm i$ 乘这个局部贡献。\n\n若正向简单闭路 $C$ 上及内部，$f$ 除有限个孤立奇点 $a_1,\\ldots,a_n$ 外解析，留数定理给出\n$$\\int_C f(z)\\,\\mathrm dz=2\\pi\\mathrm i\\sum_{k=1}^n\\operatorname{Res}(f,a_k).$$\n只计严格在内部的奇点，路径上的奇点不能列入后照算；反向绕行使整体变号。切开挖掉小圆后的解析区域，整体积分被分成各个奇点周围的小圈积分，这是局部贡献可以相加的原因。\n\n右图固定 $f(z)=1/(z-a)$，正向圆的半径为 $R$。移动实轴参数 $a$，先比较 $|a|<R$ 与 $|a|>R$ 的读数，再靠近 $|a|=R$：前两种分别为 $2\\pi\\mathrm i$ 与 $0$，临界位置函数在路径上未定义，不能把它当成中间积分值。图中只展示一个单极点，这足以解释“哪些奇点属于内部”的选择。\n\n[[TEACHING_VISUAL:CH06-R]]\n\n局部罗朗展开 $f(z)=\\sum_{n=-\\infty}^{\\infty}a_n(z-a)^n$ 中，只有负一次幂绕圈积分非零，因此\n$$\\operatorname{Res}(f,a)=a_{-1}.$$\n可去奇点的留数为零，反过来留数为零不代表可去：$(z-a)^{-2}$ 有极点，$e^{1/(z-a)^2}$ 有本性奇点，但都没有负一",
+        "plan_evidence": {
+          "kind": "contour",
+          "params": {
+            "radius": 1.2,
+            "pole": 0.4,
+            "phase": 1
+          },
+          "formula": "f(z)=1/(z-a);\\quad z=Re^{\\mathrm it}",
+          "purpose": "核对极点处于圆内、圆外及路径上的区别",
+          "action": "移动实轴极点 $a$，对照 $|a|$ 与 $R$",
+          "observation": "内为 $2\\pi\\mathrm i$、外为 $0$、路径上无定义",
+          "conclusion": "留数和只计严格内部奇点"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH06-S02-SS01",
+      "id": "CH06-D",
+      "kind": "visual",
+      "title": "单位圆代换中的微分元",
+      "purpose_markdown": "这张图解释单位圆代换中 $\\mathrm dz=iz\\,\\mathrm d\\theta$ 的 $i$ 为什么不能省。移动角参数并减小角增量，比较蓝色半径、金色切向与粉色错误径向：短弦逐渐贴近切线，而乘 $i$ 正是把半径转过直角、保留正确运动方向。",
+      "spoken_text": "这张图解释单位圆代换中的复微分为什么不能省掉虚数单位。移动角参数并减小角增量，比较蓝色半径、金色切向与粉色错误径向：短弦逐渐贴近切线，而乘虚数单位正是把半径转过直角、保留正确运动方向。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH04-06.json",
+        "plan_pointer": "/units/CH06-S02-SS01/visuals/0",
+        "plan_sha256": "f2618d5510b7ae218d6a9fd9b970c6bc0494f23684055c026847dada4c1a3920",
+        "marker": "[[TEACHING_VISUAL:CH06-D]]",
+        "body_excerpt": "令 $z=e^{\\mathrm i\\theta}$，周期参数正好沿单位圆逆时针一周，同时替换\n$$\\cos\\theta=\\frac{z+z^{-1}}2,\\quad\\sin\\theta=\\frac{z-z^{-1}}{2\\mathrm i},\\quad\\mathrm d\\theta=\\frac{\\mathrm dz}{\\mathrm iz}.$$\n于是\n$$\\int_0^{2\\pi}R(\\cos\\theta,\\sin\\theta)\\,\\mathrm d\\theta=\\int_{|z|=1}\\frac1{\\mathrm iz}R\\!\\left(\\frac{z+z^{-1}}2,\\frac{z-z^{-1}}{2\\mathrm i}\\right)\\,\\mathrm dz.$$\n右侧整个式子整理为有理函数且圆周无极点后，才按圆内奇点用留数。\n\n右图沿圆移动角参数，比较蓝色半径与金色切向。$\\mathrm dz/\\mathrm d\\theta=\\mathrm iz$ 的 $\\mathrm i$ 负责转向，$z$ 含方向与长度；粉色径向是漏掉转向因子的对照。减小角增量时，短弦更贴近切向，但微分元中的 $1/(\\mathrm iz)$ 始终不能省。代换后的额外 $1/z$ 也须加入极点判别。\n\n[[TEACHING_VISUAL:CH06-D]]\n\n[例5](#reader-85b72aa49f433c037eca)给出泊松型积分，条件 $0<p<1$ 使变换后的单极点 $p$ 在圆内、$1/p$ 在圆外，因此\n$$\\int_0^{2\\pi}\\frac{\\mathrm d\\theta}{1-2p\\cos\\theta+p^2}=\\frac{2\\pi}{1-p^2}.$$\n若极点落到单位圆上",
+        "plan_evidence": {
+          "kind": "circle-differential",
+          "params": {
+            "radius": 1,
+            "angle": 1.2,
+            "delta": 0.1
+          },
+          "formula": "z=Re^{\\mathrm i\\theta};\\quad dz=\\mathrm iz\\,d\\theta",
+          "purpose": "比较微分中的径向与切向",
+          "action": "移动角参数并减小角增量",
+          "observation": "金色切向为 $\\mathrm iz$；粉色是漏掉旋转的径向",
+          "conclusion": "微分元 $\\mathrm d\\theta=\\mathrm dz/(\\mathrm iz)$ 与三角代换同时保留"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH06-S02-SS02",
+      "id": "CH06-A",
+      "kind": "visual",
+      "title": "弧长增长会抵消多少衰减",
+      "purpose_markdown": "这张图说明被积函数变小，为什么还不足以保证大圆弧积分趋于零。分别取 $q=1$、$q=2$ 并增大半径，比较绿色实际积分与金色长大上界 $\\pi R^{1-q}$：前者在 $q=1$ 时不消失，$q=2$ 时则随半径增大衰减；左侧半圆经过归一化，图上大小不代表实际弧长。",
+      "spoken_text": "这张图说明被积函数变小，为什么还不足以保证大圆弧积分趋于零。分别把衰减次数取一、取二并增大半径，比较绿色实际积分与金色长大上界：实际积分在次数为一时不消失，次数为二时则随半径增大衰减；左侧半圆经过归一化，图上大小不代表实际弧长。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH04-06.json",
+        "plan_pointer": "/units/CH06-S02-SS02/visuals/0",
+        "plan_sha256": "f743b37dbddaf422a053acd7cf1cec46cbc0835f5365bac8b8e252e7f93aeaa6",
+        "marker": "[[TEACHING_VISUAL:CH06-A]]",
+        "body_excerpt": "thrm dx+\\int_{c+r}^bf(x)\\,\\mathrm dx\\right].$$\n同一个 $r$ 让两侧可能发生对称抵消，这不是原普通积分收敛的证明。多个瑕点要各自作局部对称截断。\n\n大弧消失指沿大圆弧的积分趋于零，并不指圆弧长度变短；判断靠的是积分估计。若 $f$ 在充分大的 $C_T:z=Te^{\\mathrm i\\theta}$、$\\alpha\\le\\theta\\le\\beta$ 上连续，且 $zf(z)\\to0$ 在这些弧上一致成立，则\n$$\\left|\\int_{C_T}f(z)\\,\\mathrm dz\\right|\\le(\\beta-\\alpha)\\sup_{C_T}|zf(z)|\\longrightarrow0.$$\n有理函数分母次数至少高两次时自动满足。弧长随 $T$ 增长，单说 $f(z)\\to0$ 并不够。\n\n右图用 $f(z)=z^{-q}$ 单独展示这份竞争：左侧是按 $z/T$ 归一化显示的半圆，右侧绿色是实际积分向量，金色是长大界 $\\pi T^{1-q}$。保持 $q=1$ 增大 $T$，上界不变，实际积分为 $\\pi\\mathrm i$；改成 $q=2$，界随 $1/T$ 下降。图的作用是核对弧长增长与衰减次数，并不是绘出任意有理函数。\n\n[[TEACHING_VISUAL:CH06-A]]\n\n让半径足够大以包围严格上半平面的全部极点 $a_k$，然后使大弧积分趋零，便得到\n$$\\int_{-\\infty}^{\\infty}R(x)\\,\\mathrm dx=2\\pi\\mathrm i\\sum_{\\operatorname{Im}a_k>0}\\operatorname{Res}(R,a_k).$$\n这里仍带着实轴无极点、次数差至少两次",
+        "plan_evidence": {
+          "kind": "arc-decay",
+          "params": {
+            "radius": 3,
+            "degree": 2
+          },
+          "formula": "f(z)=z^{-q};\\quad ML=\\pi R^{1-q}",
+          "purpose": "比较大弧的实际积分与长大上界",
+          "action": "分别固定 $q=1,2$ 并增加半径",
+          "observation": "绿色积分向量与金色 $\\pi R^{1-q}$ 界并列，左图半圆归一化",
+          "conclusion": "积分消失要抵消弧长增长"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH06-S03",
+      "id": "CH06-N",
+      "kind": "visual",
+      "title": "边界像曲线怎样数零点",
+      "purpose_markdown": "这张图把零点数减极点数，转成边界像曲线绕原点的圈数。先令分母次数为零，再移动常数 $a$ 穿过 $R^m$，比较左右两侧原圆与像曲线：像穿过原点时，边界上出现零点，计数条件失效；加入分母后还要扣除真实极点的重数，$a=0$ 时须先约去共同因子。",
+      "spoken_text": "这张图把零点数减极点数，转成边界像曲线绕原点的圈数。先令分母次数为零，再移动常数，让它穿过半径的分子次数幂，比较左右两侧原圆与像曲线：像穿过原点时，边界上出现零点，计数条件失效；加入分母后还要扣除真实极点的重数，常数为零时须先约去共同因子。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH04-06.json",
+        "plan_pointer": "/units/CH06-S03/visuals/0",
+        "plan_sha256": "a088a643e03f18e1984d221e39b4bbd7e9fe1a31cc69998fb55e46aebc89a158",
+        "marker": "[[TEACHING_VISUAL:CH06-N]]",
+        "body_excerpt": "按重数分别计为 $N,P$，则\n$$\\frac1{2\\pi\\mathrm i}\\int_C\\frac{f'(z)}{f(z)}\\,\\mathrm dz=N-P.$$\n边界无零极点保证沿路的商有定义；内部若有本性奇点，也就不满足这条只按零极点计数的条件。\n\n令 $w=f(z)$，沿 $C$ 一周时，像曲线不穿过 $w=0$。因为 $\\mathrm dw=f'(z)\\mathrm dz$，积分成为 $\\int\\mathrm dw/w$：模的对数绕行后回到起值，余下连续辐角的总变化。因此辐角原理为\n$$N-P=\\frac1{2\\pi}\\Delta_C\\arg f(z).$$\n必须沿整条曲线连续追踪角度，起终点的主辐角相减会丢掉所有整圈。[辐角原理示例](#reader-8bb62cbc81bdf9a6ca50)在 $|z|=3$ 内有两个单零点、一个三阶极点，所以总变化为 $-2\\pi$。\n\n右图采用 $f(z)=(z^m-a)/z^p$：左侧是原平面的正向闭圆，右侧是像曲线。先取 $p=0$，移动 $a$ 越过 $R^m$，比较像曲线围住原点的圈数；等号时出现边界零点，公式条件失效。再取 $p>0$，观察原点极点如何扣减绕数；$a=0$ 时必须先约去共同因子，以约后真实零极点计重数。\n\n[[TEACHING_VISUAL:CH06-N]]\n\n不想直接追踪像曲线时，可找一个边界上占优势的简单项。儒歇定理说：$f,\\varphi$ 在简单闭路 $C$ 及其内部解析，且边界处处满足严格不等式 $|\\varphi(z)|<|f(z)|$，则 $f+\\varphi$ 与 $f$ 内部零点总数相同，均计重数。严格不等式保证从 $f$ 连续变到 $f+\\varphi$ 时，边界像不碰原点；若只",
+        "plan_evidence": {
+          "kind": "argument",
+          "params": {
+            "order": 3,
+            "radius": 1,
+            "shift": 0.4,
+            "poleOrder": 0
+          },
+          "formula": "f(z)=(z^m-a)/z^p",
+          "purpose": "比较原闭圆、像曲线与计重绕数",
+          "action": "让 $a$ 越过 $R^m$，并检验 $a=0$ 时约因子",
+          "observation": "边界像穿原点时计数条件失效",
+          "conclusion": "内部零点数减极点数等于连续辐角增量除以 $2\\pi$"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH07-S01",
+      "id": "CH07-C",
+      "kind": "visual",
+      "title": "换展开中心如何越过旧收敛圆",
+      "purpose_markdown": "这张图解释收敛圆的边界为什么未必是函数本身的边界。移动 $1/(1-z)$ 的展开中心，比较新旧收敛圆：新圆能覆盖旧圆外的一部分，重叠处对应同一个函数，但真正的极点 $z=1$ 始终被排除。",
+      "spoken_text": "这张图解释收敛圆的边界为什么未必是函数本身的边界。移动一除以一减复变量这个函数的展开中心，比较新旧收敛圆：新圆能覆盖旧圆外的一部分，重叠处对应同一个函数，但复变量等于一的真正极点始终被排除。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH07-09.json",
+        "plan_pointer": "/units/CH07-S01/visuals/0",
+        "plan_sha256": "8a59fd94b299cc00c843c45073d074ef9330deb8882030a040037f6f32c86e48",
+        "marker": "[[TEACHING_VISUAL:CH07-C]]",
+        "body_excerpt": "$ 分别在 $D_1,D_2$ 解析，交集 $D_1\\cap D_2$ 是非空区域，而且在交域上 $f_1=f_2$，两者互为直接解析开拓。于是按 $F|_{D_j}=f_j$ 定义的函数在 $D_1\\cup D_2$ 有唯一取值并处处解析。局部公式可以不同，重叠处的值却必须相同；没有直接重叠的两块，可以通过一串满足同样条件的区域连接。\n\n把这一拼接用于几何级数。在原圆 $|z|<1$，$f(z)=\\sum_{n=0}^{\\infty}z^n=1/(1-z)$。改在中心 $a\\ne1$ 展开得到\n$$f(z)=\\sum_{n=0}^{\\infty}\\frac{(z-a)^n}{(1-a)^{n+1}},\\qquad |z-a|<|1-a|.$$\n若先取原圆内的 $a=\\mathrm i/2$，新圆半径为 $\\sqrt5/2$，会伸出原圆；重叠处两级数都是 $1/(1-z)$，所以能拼接。这是改换中心扩大已知区域的方法，而不是让已经发散的原级数在圆外突然收敛。\n\n右侧模型把中心限在实轴：取 $a=-1/2$ 时新圆半径 $3/2$，向左越过旧单位圆；取 $0<a<1$ 时新圆反而包含在旧圆内。两种情形共同保留 $z=1$ 在收敛圆边界的位置；移动中心改变的是可用级数，极点没有移动。\n\n[[TEACHING_VISUAL:CH07-C]]\n\n连续改换中心可绕开 $1$，把函数推广到 $\\mathbb C\\setminus\\{1\\}$；直接写 $F(z)=1/(1-z)$ 也能验证这个结果。$z=1$ 是真极点，不能当作解析点纳入开拓域，而单位圆其余边界只是原表达式的收敛界限。[几何级数开拓](#reader-2a93581bb8f6c952ec99)和[圆链示例](#reader",
+        "plan_evidence": {
+          "kind": "continuation",
+          "params": {
+            "center": -0.5,
+            "terms": 8
+          },
+          "formula": "f(z)=1/(1-z)",
+          "purpose": "区分表达式的边界与函数的真实奇点",
+          "action": "移动展开中心，比较新旧收敛圆的重叠及z=1",
+          "observation": "局部圆随中心改变，但极点始终被排除",
+          "conclusion": "在重叠处一致的解析表达式可拼成开拓"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH08-S01",
+      "id": "CH08-D",
+      "kind": "visual",
+      "title": "缩小邻域看一阶近似",
+      "purpose_markdown": "这张图说明保角性为什么是非零导数带来的局部性质。固定非零 $z_0$，逐渐缩小邻域，比较绿色真实平方像与金色线性像：两套网格越来越接近，显示同一点附近各方向都由乘 $2z_0$ 近似控制，不能据此把整个映照看成同一次旋转伸缩。",
+      "spoken_text": "这张图说明保角性为什么是非零导数带来的局部性质。固定一个非零基点，逐渐缩小邻域，比较绿色真实平方像与金色线性像：两套网格越来越接近，显示同一点附近各方向都由乘基点的二倍来近似控制，不能据此把整个映照看成同一次旋转伸缩。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH07-09.json",
+        "plan_pointer": "/units/CH08-S01/visuals/0",
+        "plan_sha256": "b8085113daddf32c1be73b965414799a9be0cc8efddd159fbe1e799da9fc28e9",
+        "marker": "[[TEACHING_VISUAL:CH08-D]]",
+        "body_excerpt": "了哪条曲线。\n\n两条曲线的切向分别增加同一个角，取差后这个增量消去，所以有向交角的大小和方向都不变。这就是非零导数给出的局部保角性。它针对切线交角，不表示有限曲线仍是原来的直线，更不表示整个大图形只做一次刚性运动。\n\n同一个乘数的模给出伸张系数：\n$$\\lim_{z\\to z_0}\\frac{|f(z)-f(z_0)|}{|z-z_0|}=|f'(z_0)|.$$\n每个方向都用同一个比值；大于 $1$ 局部放大，小于 $1$ 局部缩小。半径很小的圆 $|z-z_0|=\\rho$ 近似映成以 $w_0$ 为中心、半径 $|f'(z_0)|\\rho$ 的圆，小三角形近似相似。沿着大图形，导数会随位置变化，所以“近似”和“局部”都是结论的一部分。\n\n右侧取 $f(z)=z^2$。缩小非零点 $z_0$ 周围的邻域时，绿色真实像网格逐渐靠近金色一阶近似网格，差来自二次余项 $(\\Delta z)^2$。在 $z_0=\\mathrm i$，$f'(z_0)=2\\mathrm i$，所以旋转 $\\pi/2$ 并伸张两倍；[旋转与伸张示例](#reader-5d27e85204112b8013ea)和[小圆示例](#reader-1bd89972c89d96298652)保留数值与误差的计算。\n\n[[TEACHING_VISUAL:CH08-D]]\n\n若改取 $z_0=0$，平方函数导数为零，主导变化是 $(\\Delta z)^2$，角度会加倍，前面的非零乘数解释失效。即使避开原点，$z$ 与 $-z$ 仍同像；因此局部保角与整个区域上的一一对应是两个需要分别检查的问题。",
+        "plan_evidence": {
+          "kind": "derivative",
+          "params": {
+            "epsilon": 0.2,
+            "real": 0.7,
+            "imag": 0.4
+          },
+          "formula": "f(z)=z^2;\\quad f'(z_0)=2z_0",
+          "purpose": "理解导数在同一点对各方向统一作用",
+          "action": "固定非零z0，逐次缩小邻域半径",
+          "observation": "真实像网格与一阶线性像越来越接近",
+          "conclusion": "保角来自非零导数，整体图形只局部近似相似"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH08-S03",
+      "id": "CH08-M",
+      "kind": "visual",
+      "title": "单位圆边界与内部怎样一起移动",
+      "purpose_markdown": "这张图帮助你区分保持圆周与保持距离。改变实参数 $a$，再沿单位圆移动标记点，对照边界像点和内部网格：圆上点仍落在单位圆上，内部网格却会拉伸和弯曲，所以确定像域时要一起检查边界及内部点。",
+      "spoken_text": "这张图帮助你区分保持圆周与保持距离。改变实参数，再沿单位圆移动标记点，对照边界像点和内部网格：圆上点仍落在单位圆上，内部网格却会拉伸和弯曲，所以确定像域时要一起检查边界及内部点。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH07-09.json",
+        "plan_pointer": "/units/CH08-S03/visuals/0",
+        "plan_sha256": "8c7ccb1dda301e65f9331dc3bfbbdcf5daa71b80a667367275b5a0a636be6360",
+        "marker": "[[TEACHING_VISUAL:CH08-M]]",
+        "body_excerpt": "$\\theta$ 只旋转像圆。[例1](#reader-9a954f5286d1b897333f)保留构造。\n\n单位圆盘中指定 $|z_0|<1$ 映到零时，圆周对称点是 $1/\\bar z_0$，因此全部这样的圆盘自映照为\n$$w=e^{\\mathrm i\\theta}\\frac{z-z_0}{1-\\bar z_0z},\\qquad w'(z_0)=\\frac{e^{\\mathrm i\\theta}}{1-|z_0|^2}.$$\n故导数方向就是 $\\theta\\pmod{2\\pi}$，可再定一个方向获得唯一解。[例2](#reader-7185e2efa9e559a3876c)也给出半径 $R>0$ 的版本：对 $|z_0|<R$，\n$$w=e^{\\mathrm i\\theta}\\frac{R(z-z_0)}{R^2-\\bar z_0z}$$\n把 $|z|<R$ 映到 $|w|<1$；分子中的 $R$ 来自先将原圆缩成单位圆，不能漏掉。\n\n右侧只取 $z_0=a\\in(-1,1)$、$\\theta=0$。改变 $a$ 时，圆周标记点仍落在单位圆周上，内部网格发生非均匀移动；因此保圆并不意味着各点间距离都不变。这个实参数切片对应上面的通式，不能代替复参数 $z_0$ 的全部情形。\n\n[[TEACHING_VISUAL:CH08-M]]\n\n偏心环域展示为什么要用两条边界共有的对称点。对 $|z-3|=9$ 与 $|z-8|=16$，共有对称点 $0,-24$ 由 $(x_1-3)(x_2-3)=81$、$(x_1-8)(x_2-8)=256$ 求出。把这对点送到 $0,\\infty$ 并定外半径为 $1$，得到两族\n$$w=e^{\\mathrm i\\theta}\\frac{z+",
+        "plan_evidence": {
+          "kind": "mobius",
+          "params": {
+            "real": 0.4,
+            "phase": 1
+          },
+          "formula": "w=(z-a)/(1-az)",
+          "purpose": "区分保圆、定侧与等距",
+          "action": "改变实参数a并沿圆移动标记点",
+          "observation": "圆上点的像仍在单位圆，内部网格随参数变化",
+          "conclusion": "边界像和内部测试点共同确定像域"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH08-S04-SS01",
+      "id": "CH08-PATH",
+      "kind": "animation",
+      "title": "从半圆域到上半平面的两步映照",
+      "purpose_markdown": "这段动画示范怎样逐步确认组合映照的像域。跟随同色边界看半圆弧和直径先变成两条射线，再用内点的像确认第三象限，最后看平方把张角加倍；边界去向与内部位置一起核对，才能确定最终得到上半平面。",
+      "spoken_text": "这段动画示范怎样逐步确认组合映照的像域。跟随同色边界看半圆弧和直径先变成两条射线，再用内点的像确认第三象限，最后看平方把张角加倍；边界去向与内部位置一起核对，才能确定最终得到上半平面。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH07-09.json",
+        "plan_pointer": "/units/CH08-S04-SS01/media/0",
+        "plan_sha256": "4baaeab5828fdf1d22a5cadf3342d382fb310883d6322ff1fe9c7eeb5d9cb91d",
+        "marker": "[[TEACHING_MEDIA:CH08-PATH]]",
+        "body_excerpt": "le2\\pi$ 选定 $w=r^{n/m}e^{\\mathrm i(n/m)\\varphi}$，若 $(n/m)\\omega<2\\pi$，便将此角域一一映为 $0<\\arg w<(n/m)\\omega$。分支仍可由指定一岸的 $w(1)=1$ 极限固定。选择幂次的依据是“目标张角除以原张角”，而后还要核对原域确实没有绕过所用割线。\n\n[例4](#reader-5976c37b4d29d101bce8)的原域为 $|z|<1,\\operatorname{Im}z>0$。先令 $t=(z+1)/(z-1)$，端点 $-1,1$ 分别去 $0,\\infty$，直径变负实轴，半圆弧变负虚轴。内点 $z=\\mathrm i/2$ 映为 $(-3-4\\mathrm i)/5$，所以像域是第三象限。再取平方，辐角从 $\\pi<\\arg t<3\\pi/2$ 加倍，扣去整周后正是 $0<\\arg w<\\pi$。因此\n$$w=\\left(\\frac{z+1}{z-1}\\right)^2$$\n将上半单位圆保形映到上半平面。\n\n相邻演示依次追踪直径、半圆弧和内部点：两条负向坐标射线平方后落到实轴两侧，第三象限内点平方后落到上方。需要同时保留这三种对应，才能从画面确认半平面的位置；只看边界变直还不能定侧。\n\n[[TEACHING_MEDIA:CH08-PATH]]\n\n[例5](#reader-1264d611226dc7a6d423)的公共透镜域是 $|z|<1,|z-1|<1$，交点为 $(1\\pm\\mathrm i\\sqrt3)/2$。令\n$$t=\\frac{2z-1+\\mathrm i\\sqrt3}{2z-1-\\mathrm i\\sqrt3},\\qquad \\frac{2\\pi}3<\\arg t",
+        "plan_evidence": {
+          "purpose": "连续追踪原域、边界、内点与像域",
+          "watch_for": "同色边界的去向、内点所在象限、平方后的张角",
+          "conclusion": "分式线性变换定第三象限，平方将其一一映成上半平面"
+        },
+        "request_id": "MR-bcd5babe0b3a31c17182",
+        "step_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "step_narration": [
+          "先追踪原半圆域的两条边界。直径变成负实轴，半圆弧变成负虚轴。两条射线虽然已确定，像域在哪一侧还需要检查。",
+          "取原域内部的点，二分之一乘虚单位。它的像实部和虚部都为负，所以整个像域位于第三象限。",
+          "现在平方把每个点的辐角加倍。原来四分之一圈的角域，张开成半圈，同时模也取平方。",
+          "两条边界落到实轴两侧，内部落在上方。因此这两步合起来，将上半单位圆一一映到上半平面。"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH08-S04-SS02",
+      "id": "CH08-LOGPATH",
+      "kind": "animation",
+      "title": "月牙域怎样逐步展开为条形域",
+      "purpose_markdown": "这段动画说明月牙域怎样经过三步变成规定高度的条形域。追踪同色边界从圆弧变成射线，再经选定对数变成水平线，最后平移、缩放到虚部为 $0$ 与 $h$ 的位置；同时留意支割线避开原角域，才能保证中间的对数分支连续。",
+      "spoken_text": "这段动画说明月牙域怎样经过三步变成规定高度的条形域。追踪同色边界从圆弧变成射线，再经选定对数变成水平线，最后平移、缩放到下边界虚部为零、上边界虚部为规定高度的位置；同时留意支割线避开原角域，才能保证中间的对数分支连续。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH07-09.json",
+        "plan_pointer": "/units/CH08-S04-SS02/media/0",
+        "plan_sha256": "f78e17c492fdca34bd0fd7ed9c56d16cfd12b372861463344181513cbbdefae5",
+        "marker": "[[TEACHING_MEDIA:CH08-LOGPATH]]",
+        "body_excerpt": "+a}{z-a}<\\pi+\\beta\\right\\},$$\n这里选取的是该角域内连续的角，不是强行限制在 $(-\\pi,\\pi]$ 的主值。由题设边界方向确定 $\\pi+\\alpha<\\arg t<\\pi+\\beta$，并要求此角域位于所用的 $0<\\arg t<2\\pi$ 分支内。令 $u=\\log t$，就先得到高度范围 $\\pi+\\alpha<\\operatorname{Im}u<\\pi+\\beta$；最后令\n$$\\begin{aligned}w&=\\frac h{\\beta-\\alpha}\\bigl[u-\\mathrm i(\\pi+\\alpha)\\bigr]\\\\&=\\frac h{\\beta-\\alpha}\\left[\\log\\frac{z+a}{z-a}-\\mathrm i(\\pi+\\alpha)\\right],\\quad h>0,\\end{aligned}$$\n恰将下边界移到 $0$，上边界移到 $h$。\n\n相邻演示将两条同色圆弧依次对应成射线、水平线：对数前比较它们的辐角差 $\\beta-\\alpha$，对数后这同一个量成为条带高度，最后缩放为 $h$。减去 $\\mathrm i(\\pi+\\alpha)$ 的作用是移动下边界，而不是改变条带宽度；缩放因子才负责后者。\n\n[[TEACHING_MEDIA:CH08-LOGPATH]]\n\n对数选支把圆月牙的两条边界变成两条不同高度的直线；下一节转向圆族本身怎样变成共焦椭圆，判断重点也从条带高度转为半轴与割线。",
+        "plan_evidence": {
+          "purpose": "追踪分式线性、对数、线性三步的边界",
+          "watch_for": "同色边界从圆弧到射线再到水平线；割线始终避开角域",
+          "conclusion": "每一步的区域与分支正确，才得到规定高度的条形域"
+        },
+        "request_id": "MR-6f09376275a8f573a25f",
+        "step_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "step_narration": [
+          "先把两圆的交点送到零和无穷远。圆弧因此拉成射线，但我们还必须检查角域的实际位置。这里两条边界的辐角分别是π加α与π加β。",
+          "角域避开正实轴的割线，因而可以连续取这一支对数。辐角成为虚部，两条射线对应两条水平边界。",
+          "最后先把下边界平移到零，再把宽度缩放为h。蓝色和橙色边界准确落在虚部为零与h的位置。"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH08-S04-SS03",
+      "id": "CH08-ELLIPSE",
+      "kind": "animation",
+      "title": "原圆长大时像椭圆为何压扁",
+      "purpose_markdown": "这段动画解释儒可夫斯基映照中的割线 $[-1,1]$ 从哪里来。比较半径从小于 $1$ 逐渐增大的原圆与对应椭圆：原圆变大，椭圆两条半轴反而收缩，焦点始终是 $\\pm1$；只有半径趋于 $1$ 的极限中，短半轴才趋零、像退成这条线段。",
+      "spoken_text": "这段动画解释儒可夫斯基映照中负一到一的割线从哪里来。比较半径从小于一逐渐增大的原圆与对应椭圆：原圆变大，椭圆两条半轴反而收缩，焦点始终是正负一；只有半径趋于一的极限中，短半轴才趋零、像退成这条线段。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH07-09.json",
+        "plan_pointer": "/units/CH08-S04-SS03/media/0",
+        "plan_sha256": "85fc570a00bdb0c26725607691b35fe37f0345ab75962fc7b264db8f667276c7",
+        "marker": "[[TEACHING_MEDIA:CH08-ELLIPSE]]",
+        "body_excerpt": "不同非零点同像恰好发生在 $z_1z_2=1$。一个不含 $0$ 的区域能作它的单叶域，当且仅当域内没有不同的互为倒数的点对。去心单位圆与单位圆外部各自满足条件。\n\n令 $z=re^{\\mathrm i\\varphi}$、$w=u+\\mathrm iv$，有\n$$u=\\frac{r+r^{-1}}2\\cos\\varphi,\\qquad v=\\frac{r-r^{-1}}2\\sin\\varphi.$$\n对 $r>0,r\\ne1$，固定半径给出椭圆\n$$\\frac{u^2}{(r+r^{-1})^2/4}+\\frac{v^2}{(r-r^{-1})^2/4}=1.$$\n半轴为 $a_r=(r+r^{-1})/2$、$b_r=|r-r^{-1}|/2$，且 $a_r^2-b_r^2=1$，故焦点固定为 $\\pm1$。$r<1$ 时虚部的符号反转，绕行方向也反转；$r\\to0$ 时像椭圆变大且趋圆，$r\\to1$ 时压成线段 $[-1,1]$。\n\n相邻演示追踪 $0<r<1$ 的圆族。取 $r=1/2$，像椭圆仍有 $a_r=5/4,b_r=3/4$ 两条非零半轴；半径继续接近 $1$，短轴才趋于零。因此原圆变大时，像椭圆反而收缩，画面中的近似细线也不能当成已经达到 $r=1$ 的极限。\n\n[[TEACHING_MEDIA:CH08-ELLIPSE]]\n\n椭圆族填满线段外的区域，因此 $0<|z|<1$ 保形映为有限割线域 $\\mathbb C\\setminus[-1,1]$；若允许扩充像平面，原点可按极点补为 $0\\mapsto\\infty$。单位圆外部 $|z|>1$ 也映到同一有限割线域。上半单位圆因 $r-r^{-1}<0$ 映到下半平面，下半则相反。固定 $\\varphi$",
+        "plan_evidence": {
+          "purpose": "追踪同心圆族、固定焦点与两条半轴",
+          "watch_for": "r增加时原圆扩大，像椭圆半轴收缩，短轴趋零",
+          "conclusion": "单位圆的像退化为割线[-1,1]，内外域必须另定分支"
+        },
+        "request_id": "MR-f0719891edd7a809fc37",
+        "step_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6",
+          "S7"
+        ],
+        "step_narration": [
+          "先认清两个平面。左边是原圆，右边是像椭圆。像椭圆的两个焦点固定在一和负一，两条半轴随半径变化。",
+          "半径从零点一增到零点五。原圆变大，但像椭圆反而向内收缩，因为倒数项的影响正在减弱。",
+          "当半径为二分之一时，长半轴是一点二五，短半轴是零点七五。两者仍为正，所以这时还是真正的椭圆。",
+          "半径继续接近一。像的宽度变化已经很小，高度却继续减小，椭圆逐渐变扁。",
+          "半径零点九时，长半轴已很接近一，短半轴还没有消失。不要把近似线段当成已经到达极限。",
+          "半径增到零点九九，短半轴进一步趋零，像曲线越来越靠近固定的焦点线段。",
+          "最终极限中，长半轴趋于一，短半轴趋于零，椭圆退成负一到一的线段。这就是像域中割线的来源。"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH08-S05",
+      "id": "CH08-SCANGLE",
+      "kind": "animation",
+      "title": "角点内角如何决定导数指数",
+      "purpose_markdown": "这段动画解释 SC 公式里导数因子的指数为什么是 $\\beta-1$。先比较原半平面的 $\\pi$ 角与像顶点的 $\\beta\\pi$ 内角，再看局部幂函数与其导数：函数用 $\\beta$ 次幂改变角度，求导后指数才减一，不能把内角系数直接当成导数指数。",
+      "spoken_text": "这段动画解释许瓦兹克利斯托菲公式里，导数因子的指数为什么是贝塔减一。先比较原半平面的派角与像顶点的贝塔乘派内角，再看局部幂函数与其导数：函数用贝塔次幂改变角度，求导后指数才减一，不能把内角系数直接当成导数指数。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH07-09.json",
+        "plan_pointer": "/units/CH08-S05/media/0",
+        "plan_sha256": "7d9c8b0c9af532e844ebac0a15623e532a125f1366eba5137cc7d15e3aa2dec1",
+        "marker": "[[TEACHING_MEDIA:CH08-SCANGLE]]",
+        "body_excerpt": "设简单有界 $n$ 边形顶点按逆时针为 $A_k$，内角是 $\\beta_k\\pi$，有向外角是 $\\alpha_k\\pi$。则 $0<\\beta_k<2$，且\n$$\\alpha_k+\\beta_k=1,\\qquad\\sum_k\\alpha_k=2,\\qquad\\sum_k\\beta_k=n-2.$$\n把映到顶点 $A_k$ 的实轴点 $a_k$ 称为预顶点。在上半平面一侧，$a_k$ 附近原内角为 $\\pi$。要映成 $\\beta_k\\pi$，局部函数应像 $f(z)-A_k\\sim C_k(z-a_k)^{\\beta_k}$，故导数含 $(z-a_k)^{\\beta_k-1}=(z-a_k)^{-\\alpha_k}$。凸角与凹角决定指数的正负；这些退化发生在边界，不妨碍开域内部保形。\n\n相邻演示把原小半圆绕过 $a_k$ 的辐角变化 $-\\pi$ 与像顶点两边的转角对应。函数的幂次是内角系数 $\\beta_k$，求导后才减一；因此不能把“内角系数”和“导数指数”写成同一个数。\n\n[[TEACHING_MEDIA:CH08-SCANGLE]]\n\n若实轴上 $a_1<\\cdots<a_n$ 对应多边形各顶点，许瓦兹—克利斯托菲公式为\n$$f(z)=B+C\\int_{z_0}^z\\prod_{k=1}^n(\\zeta-a_k)^{\\beta_k-1}\\,\\mathrm d\\zeta,\\qquad C\\ne0.$$\n各因子在上半平面固定连续解析分支，$z_0$ 可在内部或可积的边",
+        "plan_evidence": {
+          "purpose": "把SC因子指数同局部角域对应接起来",
+          "watch_for": "原半平面的π角、像楔形βπ角、两条边的转角",
+          "conclusion": "局部函数的幂次为β，导数因子的幂次为β-1"
+        },
+        "request_id": "MR-73a64bc0be3983f907f0",
+        "step_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "step_narration": [
+          "在原平面中，边界点附近是上半圆盘。沿小半圆从左到右绕过该点，连续辐角从π减到零。",
+          "在像平面中，这段绕行连接顶点两侧的直边。边的方向改变对应外角，像域内部保留的角则是β乘π。",
+          "为了把π角映成β乘π角，函数在顶点附近应像β次幂。求导后指数减一，这就解释SC公式中每个因子的来源。"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH09-S01",
+      "id": "CH09-ROC",
+      "kind": "visual",
+      "title": "代数式有值是否就等于变换存在",
+      "purpose_markdown": "这张图说明分式有数值，为什么不等于原来的拉氏积分在那里收敛。固定虚部，移动像变量的实部并与金色边界 $\\sigma=c$ 比较：只有右侧是该指数信号的积分收敛半平面，实部增大时上界下降；跨到另一侧后，不能把分式的延伸值当成原积分。",
+      "spoken_text": "这张图说明分式有数值，为什么不等于原来的拉氏积分在那里收敛。固定虚部，移动像变量的实部，并与金色的实部等于增长率这条边界比较：只有右侧是该指数信号的积分收敛半平面，实部增大时上界下降；跨到另一侧后，不能把分式的延伸值当成原积分。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH07-09.json",
+        "plan_pointer": "/units/CH09-S01/visuals/0",
+        "plan_sha256": "8456cdf4be08a59392464db5cb4551c89af9e0c33e61efd7273c97624c533aaf",
+        "marker": "[[TEACHING_VISUAL:CH09-ROC]]",
+        "body_excerpt": "，就有 $F(p)\\to0$。特别地，在固定角域 $|\\arg p|<\\pi/2-\\varepsilon$、$0<\\varepsilon<\\pi/2$ 内令 $|p|\\to\\infty$，实部也趋于正无穷，因此同样成立。若只让虚部增大，上界并不随之变小，不能单凭这个估计断言任意方向都具有相同结论。\n\n[例1](#reader-9a68fee3ce3897fae06a)直接积分得到，对实或复常数 $a$，\n$$\\mathcal L[e^{at}h(t)](p)=\\frac1{p-a},\\qquad\\operatorname{Re}p>\\operatorname{Re}a.$$\n指数衰减在这里保证无穷远边界项消失。分式可延伸到 $p\\ne a$，但延伸的值并不表示原积分也在那里收敛；本章的衰减模型取指数参数 $-a_0$、$a_0>0$，于是分母为 $p+a_0$，收敛条件是 $\\operatorname{Re}p>-a_0$。\n\n右侧模型使用 $e^{ct}h(t)$。金色竖线为 $\\sigma=c$，绿色网线只画在 $\\sigma>c$ 的收敛一侧；固定虚部改变实部时，像值与上界 $1/(\\sigma-c)$ 同时改变。标记点移到另一侧后，应读作原积分发散，不能照用分式的延伸值。\n\n[[TEACHING_VISUAL:CH09-ROC]]\n\n[例2](#reader-a5684a59312f84347ec2)把幂函数接回Gamma。设 $\\operatorname{Re}\\alpha>-1$，取 $t^\\alpha=e^{\\alpha\\ln t}$，先在正实 $p$ 上换元 $u=pt$，再用解析唯一性延伸到右半平面，得到\n$$\\mathcal L[t^\\alpha](p)=",
+        "plan_evidence": {
+          "kind": "special-roc",
+          "params": {
+            "c": 0.4,
+            "sigma": 1,
+            "omega": 1
+          },
+          "formula": "f(t)=e^{ct}h(t);\\quad F(p)=1/(p-c);\\quad\\operatorname{Re}p>c",
+          "purpose": "区分积分收敛域与解析延伸",
+          "action": "固定虚部，改变实部σ并对照增长率c",
+          "observation": "σ>c才有指数加权的绝对收敛；σ增大时上界下降",
+          "conclusion": "变换必须连同收敛半平面一起使用"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH09-S02-SS02",
+      "id": "CH09-SCALE",
+      "kind": "visual",
+      "title": "压缩时间为何需要倒数系数",
+      "purpose_markdown": "这张图说明压缩时间时，变换公式为什么既要改变像变量，又要乘倒数系数。固定衰减参数，改变时间缩放 $k$，比较绿色原信号、金色加权曲线及读数：过程加快时曲线沿时间轴收缩，对应的是 $F(p/k)/k$；图中读数使用正实像变量切片。",
+      "spoken_text": "这张图说明压缩时间时，变换公式为什么既要改变像变量，又要乘倒数系数。固定衰减参数，改变时间缩放系数，比较绿色原信号、金色加权曲线及读数：过程加快时曲线沿时间轴收缩，像变量要除以缩放系数，整个变换值还要再除以同一系数；图中读数使用正实像变量切片。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH07-09.json",
+        "plan_pointer": "/units/CH09-S02-SS02/visuals/0",
+        "plan_sha256": "eed4018557e9cc68c7a1cb78ae5d5065e92c2e8db605024ee3498291d8d134be",
+        "marker": "[[TEACHING_VISUAL:CH09-SCALE]]",
+        "body_excerpt": " L[f](p)$ 在 $\\operatorname{Re}p>c$ 成立。把曲线改为 $f(\\alpha t)$、$\\alpha>0$，令 $u=\\alpha t$，则 $\\mathrm dt=\\mathrm du/\\alpha$、核变为 $e^{-(p/\\alpha)u}$，所以\n$$\\mathcal L[f(\\alpha t)](p)=\\frac1\\alpha F\\!\\left(\\frac p\\alpha\\right),\\qquad\\operatorname{Re}p>\\alpha c.$$\n$\\alpha>1$ 表示同一过程更快完成，$0<\\alpha<1$ 表示拉长时间；正号还保证非负时间区间没有翻转。倒数系数与像变量缩放分别来自微分元和核，缺一不可。\n\n例如 $f(t)=e^{-at}h(t)$、$a>0$，压缩后为 $e^{-a\\alpha t}h(t)$，定理右边化简为 $1/(p+a\\alpha)$，与直接积分一致。右侧固定 $a$，改变时间缩放 $k$，绿色曲线沿时间轴收缩时，正实像变量切片的加权积分读数随之改变；模型只演示这个正实切片，复数公式仍按前述半平面使用。[时间缩放示例](#reader-c7f7f64492027850752d)保留正弦的同类计算。\n\n[[TEACHING_VISUAL:CH09-SCALE]]\n\n时间缩放重新分配整条曲线的快慢；对时间直接求导则会在积分边界留下启动时的数值，这将成为下一节处理初值问题的依据。",
+        "plan_evidence": {
+          "kind": "special-laplace-scale",
+          "params": {
+            "a": 0.7,
+            "s": 1,
+            "k": 1.5
+          },
+          "formula": "\\mathcal L[f(kt)](p)=\\frac1kF(p/k)=\\frac1{p+ak},\\quad k>0",
+          "purpose": "把像变量缩放与微分元联系起来",
+          "action": "固定a，改变时间缩放k",
+          "observation": "曲线压缩时变换按F(p/k)/k变化",
+          "conclusion": "时间缩放同时改变核与积分尺度"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH09-S02-SS04",
+      "id": "CH09-RC",
+      "kind": "visual",
+      "title": "衰减电流与累计电压属于同一过程",
+      "purpose_markdown": "这张图说明衰减电流与上升的电容电压怎样描述同一个充电过程。移动时间标记，比较蓝色电流、绿色电阻压降和金色电容电压：电流逐渐减小，电容电压逐渐增加，而两部分电压之和始终等于电源电压 $E$，把电流积分成累计电荷的关系也就有了具体对象。",
+      "spoken_text": "这张图说明衰减电流与上升的电容电压怎样描述同一个充电过程。移动时间标记，比较蓝色电流、绿色电阻压降和金色电容电压：电流逐渐减小，电容电压逐渐增加，而两部分电压之和始终等于电源电压，把电流积分成累计电荷的关系也就有了具体对象。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH07-09.json",
+        "plan_pointer": "/units/CH09-S02-SS04/visuals/0",
+        "plan_sha256": "eaacc5d8cac05d62ccca51983c1e7e96df1e7cf847d44fce2f592c35cb0cf77c",
+        "marker": "[[TEACHING_VISUAL:CH09-RC]]",
+        "body_excerpt": "e}p>\\max(c,0)$ 使用。若已有累计初值 $q_0$，则 $q=q_0+\\int_0^t f$，像需额外加 $q_0/p$。例如 $e^{-at}$ 的累计为 $(1-e^{-at})/a$，像为 $1/[p(p+a)]$；原信号衰减，累计却趋于平台，外层变换的收敛域因此也须重新核对。\n\n[例6](#reader-e62b2ac3f2f2cadfc28c)的串联电路取 $R,C>0$、常电源 $E$，电容初始无电荷。电荷由电流累计，故回路方程为\n$$Ri(t)+\\frac1C\\int_0^t i(u)\\,\\mathrm du=E.$$\n变换后 $RI+I/(Cp)=E/p$，于是\n$$I(p)=\\frac E{R(p+1/(RC))},\\qquad i(t)=\\frac ER e^{-t/(RC)}.$$\n同时电容电压 $u_C=E(1-e^{-t/(RC)})$，电阻压降 $u_R=E e^{-t/(RC)}$，它们始终相加为 $E$；初始无电荷使积分项没有额外常数。\n\n右侧同一电路中，蓝色电流和绿色电阻压降下降，金色电容电压上升，读数可直接核对 $u_R+u_C=E$。时间常数是 $RC$，因此改变电阻或电容会一起改变电流衰减与电压累计的快慢；这些不是两条无关曲线。\n\n[[TEACHING_VISUAL:CH09-RC]]\n\n充电模型中的积分作用于时间。接下来对像参数求导时，改变的是指数核的权重，结果会对应时间乘子，而不是把电荷再累计一次。",
+        "plan_evidence": {
+          "kind": "special-rc",
+          "params": {
+            "R": 1,
+            "C": 1,
+            "E": 1.5,
+            "time": 2
+          },
+          "formula": "Ri(t)+u_C(t)=E;\\quad i(t)=\\frac ER e^{-t/(RC)};\\quad u_C(t)=E(1-e^{-t/(RC)})",
+          "purpose": "把时间积分连接到物理累计量",
+          "action": "移动时间，比较电流与两部分电压",
+          "observation": "电流衰减，电容电压上升，电压和保持E",
+          "conclusion": "零初值累计对应像域除以p"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH09-S02-SS07",
+      "id": "CH09-DELAY",
+      "kind": "animation",
+      "title": "推迟启动怎样产生指数因子",
+      "purpose_markdown": "这段动画解释整个信号推迟启动，为什么会让拉氏变换乘上 $e^{-p\\tau}$。先比较蓝色原脉冲与橙色延迟脉冲的形状和启动前零段，再跟随时间换元：下限回到零，指数核留下一个与新时间无关的因子，因此函数自变量与阶跃开关必须一起右移。",
+      "spoken_text": "这段动画解释整个信号推迟启动，为什么会让拉氏变换乘上一个延迟指数因子。先比较蓝色原脉冲与橙色延迟脉冲的形状和启动前零段，再跟随时间换元：下限回到零，指数核留下以负的像变量乘延迟量为指数、与新时间无关的因子，因此函数自变量与阶跃开关必须一起右移。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH07-09.json",
+        "plan_pointer": "/units/CH09-S02-SS07/media/0",
+        "plan_sha256": "afdf2eb47d117b75b9cdd0bfa36b3bace477cf056dcb14501130b1cfc8363fdc",
+        "marker": "[[TEACHING_MEDIA:CH09-DELAY]]",
+        "body_excerpt": "启动，定义\n$$f_\\tau(t)=f(t-\\tau)h(t-\\tau)=\\begin{cases}0,&t<\\tau,\\\\f(t-\\tau),&t\\ge\\tau.\\end{cases}$$\n积分有效下限变为 $\\tau$；令 $u=t-\\tau$，则 $e^{-pt}=e^{-pu}e^{-p\\tau}$，与 $u$ 无关的因子提出后得到\n$$\\mathcal L[f_\\tau](p)=e^{-p\\tau}F(p)$$\n在原收敛半平面内成立。固定延迟量是 $\\tau$，不是积分时间 $t$。$f(t)h(t-\\tau)$ 只截掉前段；只有自变量和开关同时右移，才是整个原过程延迟。\n\n相邻演示用一个从零升起、随后回落的因果脉冲：蓝色是原曲线 $f(t)$，橙色是 $f(t-\\tau)h(t-\\tau)$，延迟前整段为零。比较两曲线从各自启动时刻算起的形状，可以看清整个过程向右平移。下述指数衰减是另一个可直接代公式的特例。对 $e^{-at}h(t)$，延迟曲线在 $t=\\tau$ 仍从原幅值开始，表达式是 $e^{-a(t-\\tau)}h(t-\\tau)$，像为 $e^{-p\\tau}/(p+a)$；若只开启 $e^{-at}$，启动幅值就已经变小，画面与公式都不再是同一个信号。\n\n[[TEACHING_MEDIA:CH09-DELAY]]\n\n[例10](#reader-cf62b5831ba3e0daa8c1)的斜坡在 $t=1$ 后保持为 $1$，可写为 $f(t)=th(t)-(t-1)h(t-1)$，像为 $(1-e^{-p})/p^2$。后一条斜坡启动后恰好抵消继续增长的部分。[例11](#reader-c814b49db336a6f6ca62)在 $0\\le t\\",
+        "plan_evidence": {
+          "purpose": "连接曲线右移、零段与积分换元",
+          "watch_for": "t<τ零段、新时间u=t-τ、与u无关的指数因子",
+          "conclusion": "整体延迟τ使像乘e^{-pτ}，函数自变量与开关必须同时移动"
+        },
+        "request_id": "MR-aa1fa6defefb8c736618",
+        "step_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "step_narration": [
+          "同一条因果曲线整体向右推迟τ。新曲线在τ之前为零，τ之后才按照原来的时间过程变化。",
+          "由于启动前整段为零，变换积分的有效下限从零变成τ。这个改变由信号本身决定。",
+          "令新时间等于原时间减τ。曲线回到原来的位置，积分下限返回零，指数核则分成两个因子。",
+          "延迟因子与新时间无关，可以提出积分。剩下的就是原函数的拉普拉斯变换，所以整体晚开始对应像域乘一个指数。"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH09-S02-SS08",
+      "id": "CH09-SHIFT",
+      "kind": "visual",
+      "title": "指数包络怎样移动像变量",
+      "purpose_markdown": "这张图帮助你区分乘指数包络与推迟整个信号。固定原衰减参数，改变包络系数 $c$，比较曲线的启动点、衰减速度与变换读数：启动仍在零时刻，改变的是衰减率和分母 $p+a-c$；必须重新检查收敛条件。",
+      "spoken_text": "这张图帮助你区分乘指数包络与推迟整个信号。固定原衰减参数，改变包络系数，比较曲线的启动点、衰减速度与变换读数：启动仍在零时刻，改变的是衰减率，分母也变成像变量加原衰减参数再减包络系数；必须重新检查收敛条件。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH07-09.json",
+        "plan_pointer": "/units/CH09-S02-SS08/visuals/0",
+        "plan_sha256": "e8e6abb895cb4dc54109e6367715d3b810bcb97ec0421ab0154e670e87875d42",
+        "marker": "[[TEACHING_VISUAL:CH09-SHIFT]]",
+        "body_excerpt": "让启动时刻保持 $0$，只给信号乘指数因子 $e^{\\lambda t}$。实数 $\\lambda$ 改变振幅随时间的增长或衰减，称为指数包络；复数 $\\lambda$ 还可同时改变振荡。由于 $e^{\\lambda t}e^{-pt}=e^{-(p-\\lambda)t}$，有\n$$\\mathcal L[e^{\\lambda t}f(t)](p)=F(p-\\lambda),\\qquad\\operatorname{Re}p>c+\\operatorname{Re}\\lambda,$$\n其中原公式在 $\\operatorname{Re}p>c$ 使用，$\\lambda$ 可为复常数。反向就是 $\\mathcal L^{-1}[F(p-\\lambda)]=e^{\\lambda t}f(t)$。没有时间换元，也没有改变积分下限，因此这与上一节的整条延迟不同。\n\n以 $e^{-at}h(t)$ 为例，乘实包络 $e^{ct}$ 后为 $e^{-(a-c)t}h(t)$，像为 $1/(p+a-c)$。右侧改变 $c$ 时启动点不动，衰减速度与极点位置改变；模型的实数切片 $p=s$ 只有 $s+a-c>0$ 才允许读作积分值。\n\n[[TEACHING_VISUAL:CH09-SHIFT]]\n\n将基本像中所有 $p$ 一起替换，得到\n$$\\begin{aligned}\\mathcal L[e^{\\lambda t}t^n]&=\\frac{n!}{(p-\\lambda)^{n+1}},\\quad n\\ge0,\\\\\\mathcal L[e^{\\lambda t}\\sin\\omega t]&=\\frac\\omega{(p-\\lam",
+        "plan_evidence": {
+          "kind": "special-laplace-shift",
+          "params": {
+            "a": 0.7,
+            "s": 1,
+            "c": 0.4
+          },
+          "formula": "\\mathcal L[e^{ct}e^{-at}h(t)](p)=\\frac1{p+a-c}=G_a(p-c)",
+          "purpose": "区分乘指数与推迟启动",
+          "action": "固定a，改变指数包络c并检查收敛条件",
+          "observation": "启动时刻不动，衰减率与分母p+a-c改变",
+          "conclusion": "时间乘e^{ct}对应F(p-c)"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH09-S02-SS10",
+      "id": "CH09-CONV",
+      "kind": "visual",
+      "title": "过去每个时刻如何累计为当前输出",
+      "purpose_markdown": "这张图说明卷积怎样把过去各时刻的贡献合成当前输出。先固定 $t$，比较蓝线、金线在 $0\\le\\tau\\le t$ 内的重叠与绿色乘积，再改变 $t$ 看右侧输出：每个时刻的输出来自乘积的积分，变换后的相乘因此对应时间卷积，而不是时间函数逐点相乘。",
+      "spoken_text": "这张图说明卷积怎样把过去各时刻的贡献合成当前输出。先固定当前时间，比较蓝线、金线在零到当前时间内的重叠与绿色乘积，再改变当前时间看右侧输出：每个时刻的输出来自乘积的积分，变换后的相乘因此对应时间卷积，而不是时间函数逐点相乘。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH07-09.json",
+        "plan_pointer": "/units/CH09-S02-SS10/visuals/0",
+        "plan_sha256": "51fc2460175b8a85b441692bfdc3f8e343988bd3c776ede148753ac529b80a64",
+        "marker": "[[TEACHING_VISUAL:CH09-CONV]]",
+        "body_excerpt": "^{(c+\\varepsilon)t}$ 控制。指数加权还能分给两个因子：$e^{-\\alpha t}(f_1*f_2)=(e^{-\\alpha t}f_1)*(e^{-\\alpha t}f_2)$。\n\n在 $\\operatorname{Re}p>\\max(c_1,c_2)$，可交换卷积与拉氏双积分，并将 $e^{-pt}$ 拆成两个非负时间变量上的指数核；两个积分分离后得到\n$$\\mathcal L[f_1*f_2](p)=F_1(p)F_2(p),\\qquad\\mathcal L^{-1}[F_1F_2]=f_1*f_2.$$\n所以像相乘对应时间卷积，而不是时间逐点相乘。\n\n右侧取 $f(\\tau)=e^{-a\\tau}$ 与 $g(t-\\tau)=e^{-b(t-\\tau)}$、$a,b>0$。先固定 $t$，蓝线与金线在 $0\\le\\tau\\le t$ 的乘积是绿色贡献，积分是当前输出；再移动 $t$，积分随之画出整条响应。$a\\ne b$ 时输出为 $(e^{-at}-e^{-bt})/(b-a)$，$a=b$ 时为 $te^{-at}$，像均为 $1/[(p+a)(p+b)]$。[简单卷积示例](#reader-2663a43cb62c799fba50)保留积分计算。\n\n[[TEACHING_VISUAL:CH09-CONV]]\n\n[例14](#reader-e1684a7db8864a9fd442)把 $y(t)=at+\\int_0^t y(u)\\sin(t-u)\\,\\mathrm du$ 中的历史项认成卷积。像相乘把积分方程变为关于 $Y=\\mathcal L[y]$ 的代数方程，求解并反变换后得到\n$$y(t)=a\\left(t+\\frac{t^3}{6}\\",
+        "plan_evidence": {
+          "kind": "special-convolution",
+          "params": {
+            "time": 2,
+            "a": 0.7,
+            "b": 1.3
+          },
+          "formula": "(f*g)(t)=\\int_0^t e^{-a\\tau}e^{-b(t-\\tau)}\\,d\\tau;\\quad \\mathcal L[f*g]=\\frac1{(p+a)(p+b)}",
+          "purpose": "解释卷积变量、因果区间与乘积面积",
+          "action": "先固定t看τ积分，再改变t观察输出",
+          "observation": "只在0至t有重叠，乘积积分给出当前输出",
+          "conclusion": "因果卷积对应像的乘积"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    },
+    {
+      "unit_id": "CH09-S03-SS02",
+      "id": "CH09-INV",
+      "kind": "visual",
+      "title": "竖直积分方向与截断反演",
+      "purpose_markdown": "这张图把反演公式中的路径方向和有限截断分开检查。先看左侧竖直路径的切向，理解 $\\mathrm dp=i\\,\\mathrm d\\omega$，再增大频率截断并比较重建读数与 $e^{-at}$：有限积分给出近似，真正的反演还需要无穷截断极限。",
+      "spoken_text": "这张图把反演公式中的路径方向和有限截断分开检查。先看左侧竖直路径的切向，理解像变量的微分等于虚数单位乘频率微分，再增大频率截断，并比较重建读数与原来的衰减指数函数：有限积分给出近似，真正的反演还需要无穷截断极限。",
+      "source_basis": {
+        "lesson_path": "data/study-revision-20261029/wholebook/lessons-CH07-09.json",
+        "plan_pointer": "/units/CH09-S03-SS02/visuals/0",
+        "plan_sha256": "90c83a5d6be963997db1e51fe05fc87052ccd2fc0020976c0b13c77e0b6cbe8e",
+        "marker": "[[TEACHING_VISUAL:CH09-INV]]",
+        "body_excerpt": "设 $f$ 逐段光滑且为指数增长型，增长指数为 $c$，$F=\\mathcal L[f]$。任取 $\\sigma>c$，由加权因果函数的傅里叶反演得到\n$$f(t)=\\frac1{2\\pi\\mathrm i}\\lim_{R\\to\\infty}\\int_{\\sigma-\\mathrm iR}^{\\sigma+\\mathrm iR}F(p)e^{pt}\\,\\mathrm dp.$$\n路径沿 $\\operatorname{Re}p=\\sigma$ 自下而上，按对称截断的柯西主值理解；连续点还原 $f$，跳跃点还原左右极限平均。换元 $p=\\sigma+\\mathrm i\\omega$ 时 $\\mathrm dp=\\mathrm i\\,\\mathrm d\\omega$，这正是分母 $\\mathrm i$ 的来源，不能遗漏。\n\n右侧取 $F(p)=1/(p+a)$。左图的竖直切向对应 $\\mathrm dp$，右图是有限频率截断的实积分核；增大截断 $\\Omega$ 会改变重建值，它只近似 $e^{-at}$。路径方向和无穷极限是公式本身的一部分，有限读数不能冒充精确反演。\n\n[[TEACHING_VISUAL:CH09-INV]]\n\n留数反演的一组充分条件是：$F$ 在有限平面除有限个孤立奇点 $p_k$ 外解析，所取竖线严格位于全部奇点右侧，$F(p)\\to0$ 于无穷远，而且竖线上 $\\int|F(p)|\\,|\\mathrm dp|<\\infty$。此时反演定义的因果函数以 $F$ 为像，对 $t>0$ 有\n$$f(t)=\\sum_k\\operatorname{R",
+        "plan_evidence": {
+          "kind": "special-bromwich",
+          "params": {
+            "a": 1,
+            "sigma": 0.8,
+            "time": 1,
+            "cutoff": 30
+          },
+          "formula": "p=\\sigma+\\mathrm i\\omega;\\quad dp=\\mathrm i\\,d\\omega;\\quad f(t)=\\frac1{2\\pi\\mathrm i}\\int_{\\sigma-\\mathrm i\\infty}^{\\sigma+\\mathrm i\\infty}F(p)e^{pt}\\,dp",
+          "purpose": "解释dp中的i并识别有限截断误差",
+          "action": "沿竖线看切向，增加频率截断Ω比较重建",
+          "observation": "dp为竖直方向，有限频率积分只近似衰减指数",
+          "conclusion": "反演须保留路径方向与无穷极限"
+        },
+        "runtime_sources": [
+          "blocks/render/assets/study-visuals.js",
+          "blocks/render/assets/study-foundation-scenes.js",
+          "blocks/render/assets/study-special-scenes.js"
+        ]
+      }
+    }
+  ]
+}
