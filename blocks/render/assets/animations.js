@@ -28,11 +28,11 @@
  */
 (function (root, factory) {
   if (typeof module === "object" && module.exports) {
-    module.exports = factory(require('./study-math.js'));
+    module.exports = factory(require('./study-math.js'), require('./audible-audio.js'));
   } else {
-    root.DSHAnimations = factory(root.DSHStudyMath);
+    root.DSHAnimations = factory(root.DSHStudyMath, root.DSHAudibleAudio);
   }
-})(typeof globalThis !== "undefined" ? globalThis : this, function (studyMath) {
+})(typeof globalThis !== "undefined" ? globalThis : this, function (studyMath, audibleAudio) {
   "use strict";
 
   var REQUIRED = ["mp4", "poster", "captions", "transcript"];
@@ -282,6 +282,7 @@
       "data-action":"fullscreen", "aria-label":"全屏查看动画", "disabled":videoUrl ? null : true}, "⛶");
     stagebar.appendChild(stageTitle);stagebar.appendChild(fullscreenButton);stage.appendChild(stagebar);
     var video = null;
+    var audioDriver = null;
     var posterButton = null;
     var captionLayer = null;
     var captionsOn = true;
@@ -314,6 +315,10 @@
            注意：它只影响**这一条字幕请求**，不放宽工作台任何权限。 */
         if (!captions.from_payload) track.setAttribute("crossorigin", "anonymous");
         video.appendChild(track);
+      }
+      if (data.playback && data.playback.video_src && data.playback.audio) {
+        var audioAPI = audibleAudio || view && view.DSHAudibleAudio;
+        if (audioAPI) audioDriver = audioAPI.attachVideo(video, data.playback);
       }
       var viewport = element(doc, "div", {"class":"animation-viewport"});
       viewport.appendChild(video);
@@ -580,7 +585,7 @@
       checkingBoundary = true;
       stepComplete = true;
       cancelFrame();
-      video.pause();
+      pauseVideo();
       seek(bounds.end);
       setPlayLabel("重播这一步");
       playbackHint();
@@ -598,11 +603,22 @@
       });
     }
 
+    function pauseVideo() {
+      if (audioDriver) audioDriver.pause();
+      else if (video) video.pause();
+    }
+
+    function prepareAudio() {
+      if (audioDriver) audioDriver.prepare().catch(function (failure) {
+        if (!disposed && failure.name !== 'AbortError') setStatus("讲解声音未能启动，请再点一次播放");
+      });
+    }
+
     function playVideo() {
       if (video && video.play) {
-        var played = video.play();
-        if (played && played.catch) played.catch(function () {
-          if (!disposed) setStatus("浏览器未开始播放，请再点一次播放");
+        var played = audioDriver ? audioDriver.play() : video.play();
+        if (played && played.catch) played.catch(function (failure) {
+          if (!disposed && (!failure || failure.name !== 'AbortError')) setStatus("浏览器未开始播放，请再点一次播放");
         });
       }
     }
@@ -610,6 +626,7 @@
     function playStep(index, resume, metadataReady, autoplay) {
       if (disposed || !video || !Number.isInteger(index) || !steps[index]) return false;
       autoplay = autoplay !== false;
+      if (autoplay) prepareAudio();
       pendingStep = -1;
       pendingAutoplay = autoplay;
       continuous = false;
@@ -624,13 +641,13 @@
       // Declared step times do not imply that the media can seek yet. Chrome
       // may expose an early currentTime assignment, then reset it during load.
       if(!metadataReady&&video.readyState<1&&number(video.duration,null)===null){
-        video.pause();activeStep=-1;pendingStep=index;
+        pauseVideo();activeStep=-1;pendingStep=index;
         setPlayLabel(autoplay?'暂停':'播放这一步');video.preload='metadata';
         setStatus('正在读取本步的时间范围…');try{video.load();}catch(err){}
         return true;
       }
       if (!bounds) {
-        video.pause();
+        pauseVideo();
         activeStep = -1;
         if (!metadataReady && number(video.duration, null) === null) {
           pendingStep = index;
@@ -642,11 +659,11 @@
         return true;
       }
       if (!resume || previous !== index || completed || video.currentTime < bounds.start || video.currentTime >= bounds.end) {
-        if (!video.paused) video.pause();
+        if (!video.paused) pauseVideo();
         seek(bounds.start);
       }
       if (autoplay) { playVideo(); scheduleFrame(); }
-      else video.pause();
+      else pauseVideo();
       return true;
     }
 
@@ -673,7 +690,7 @@
       if (!video) return;
       if (!video.paused || pendingStep >= 0 && pendingAutoplay) {
         pendingStep = -1;
-        video.pause();
+        pauseVideo();
         // Cancelling a metadata wait may pause an already-paused video, which
         // does not emit a pause event in browsers.
         updatePausedState();
@@ -711,6 +728,21 @@
     on(speed, "change", function () {
       if (video) video.playbackRate = number(speed.value, 1);
     });
+    var externalSpeedOption = null;
+    function syncSpeed() {
+      if (!video) return;
+      var value = String(number(video.playbackRate, 1));
+      if (externalSpeedOption && externalSpeedOption.value !== value) {
+        externalSpeedOption.remove(); externalSpeedOption = null;
+      }
+      if (!Array.prototype.some.call(speed.options, function (option) { return option.value === value; })) {
+        externalSpeedOption = element(doc, "option", {"value": value}, value + "×");
+        speed.appendChild(externalSpeedOption);
+      }
+      speed.value = value;
+    }
+    on(video, "ratechange", syncSpeed);
+    syncSpeed();
     function syncVolume() {
       if (!video) return;
       volume.value = String(video.volume);
@@ -776,7 +808,7 @@
         else if (activeStep >= 0) {
           var bounds = stepBounds(activeStep);
           if (!bounds) {
-            video.pause(); activeStep = -1;
+            pauseVideo(); activeStep = -1;
             setStatus("本步时间范围超出视频，可以选择连续播放查看整段动画");
           } else if (video.currentTime < bounds.start) seek(bounds.start);
           else stopAtBoundary();
@@ -837,8 +869,9 @@
       disposed = true;
       pendingStep = -1;
       cancelFrame();
+      if (audioDriver) { audioDriver.dispose(); audioDriver = null; }
       if (video) {
-        try { video.pause(); } catch (err) { /* 未知媒体实现 */ }
+        try { pauseVideo(); } catch (err) { /* 未知媒体实现 */ }
         var track = video.querySelector ? video.querySelector("track") : null;
         if (blobCaptions) { try { URL.revokeObjectURL(blobCaptions); } catch (err) { /* 已回收 */ } }
         /* 先摘 track 的 src 再摘 video 的：留着 src 会让浏览器继续取资源 */
