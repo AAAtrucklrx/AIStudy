@@ -993,7 +993,10 @@ class ControlServer:
                 asset = "vendor/" + rel
             else:
                 return None
-            for root in (package / "blocks/render", package.parents[1] / "blocks/render", self.workspace.root / "blocks/render"):
+            # BuildWithAdapters installs the renderer under _legacy_tree; an
+            # installed app must work with a workspace containing only inputs.
+            for root in (package / "_legacy_tree/blocks/render", package / "blocks/render",
+                         package.parents[1] / "blocks/render", self.workspace.root / "blocks/render"):
                 candidate = root / asset
                 if candidate.is_file():
                     target = candidate

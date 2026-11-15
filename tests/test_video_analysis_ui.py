@@ -88,6 +88,42 @@ def test_entry_and_assets_are_served(client):
         assert request(path)[0] == 200, path
 
 
+def test_installed_package_assets_work_without_workspace_blocks(client, monkeypatch):
+    request, workspace = client
+    package = workspace / "site-packages" / "aiforstudy"
+    render = package / "_legacy_tree" / "blocks" / "render"
+    assets = {
+        "audible-audio.js": ("assets/audible-audio.js", b"/* installed audio driver */"),
+        "katex.min.js": ("vendor/katex.min.js", b"/* installed katex */"),
+        "katex.min.css": ("vendor/katex.min.css", b".katex { color: black; }"),
+        "fonts/KaTeX_Main-Regular.woff2": ("vendor/fonts/KaTeX_Main-Regular.woff2", b"wOF2-test-font"),
+    }
+    for relative, content in assets.values():
+        target = render / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(content)
+    (render / "vendor" / "private.js").write_text("not public")
+    assert not (workspace / "blocks").exists()
+    monkeypatch.setattr("aiforstudy.ui.server.__file__", str(package / "ui" / "server.py"))
+    for name, (_, content) in assets.items():
+        status, headers, body = request("/video-assets/" + name)
+        assert (status, body) == (200, content), name
+        assert headers["X-Content-Type-Options"] == "nosniff"
+    for name in ("private.js", "fonts/%2e%2e/private.js", "fonts/../../private.js"):
+        assert request("/video-assets/" + name)[0] == 404
+
+
+def test_installed_assets_take_precedence_over_source_fallback(client, monkeypatch):
+    request, workspace = client
+    package = workspace / "site-packages" / "aiforstudy"
+    for prefix, content in (("_legacy_tree/blocks", "installed"), ("blocks", "source fallback")):
+        target = package / prefix / "render/assets/audible-audio.js"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(content)
+    monkeypatch.setattr("aiforstudy.ui.server.__file__", str(package / "ui/server.py"))
+    assert request("/video-assets/audible-audio.js")[2] == b"installed"
+
+
 def test_upload_stream_and_submission(client):
     request, root = client
     status, _, data = request("/api/videos/upload", b"video-content", {"X-Video-Filename": "lesson.mp4"})
