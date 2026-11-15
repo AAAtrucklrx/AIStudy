@@ -119,7 +119,9 @@ def render_purpose_audio(manifest_path, output_root, config):
     destination = output_root / 'visual-purpose.json'
     if destination == manifest_path:
         raise ValueError('Refusing to overwrite source manifest')
-    manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+    original_bytes = manifest_path.read_bytes()
+    input_sha256 = hashlib.sha256(original_bytes).hexdigest()
+    manifest = json.loads(original_bytes)
     _validate(manifest)
     kind = config.get('backend', 'local-qwen')
     if kind == 'local-qwen':
@@ -167,7 +169,9 @@ def render_purpose_audio(manifest_path, output_root, config):
             (temporary / (key + '.json')).write_text(json.dumps(receipt, ensure_ascii=False, indent=2), encoding='utf-8')
             print(json.dumps({'event': 'purpose_audio_verified', 'unit_id': item['unit_id'],
                               'id': item['id'], 'seconds': signal['duration_seconds']}, ensure_ascii=False), flush=True)
-        result['audio_build'] = {'version': 1, 'input_sha256': digest(manifest_path),
+        if digest(manifest_path) != input_sha256:
+            raise ValueError('Source manifest changed during narration; rerun with the updated input')
+        result['audio_build'] = {'version': 1, 'input_sha256': input_sha256,
                                  'item_count': len(result['items']),
                                  'source_identity': deepcopy(backend.source),
                                  'total_duration_seconds': sum(i['audio']['duration_seconds'] for i in result['items']),

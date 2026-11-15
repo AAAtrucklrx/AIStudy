@@ -131,3 +131,16 @@ def test_batch_worker_failure_releases_gpu_and_keeps_input(tmp_path, monkeypatch
     assert not (tmp_path / 'out' / 'visual-purpose.json').exists()
     with lock_path.open('a') as other:
         fcntl.flock(other, fcntl.LOCK_EX | fcntl.LOCK_NB)
+
+
+def test_input_edited_during_generation_cannot_receive_wrong_provenance(tmp_path, monkeypatch):
+    module = importlib.import_module('tools.media_purpose_audio')
+    path = manifest(tmp_path); config, _ = cache_config(tmp_path)
+    def editor(*args):
+        changed = json.loads(path.read_text())
+        changed['items'][0]['spoken_text'] = '新解释。'
+        path.write_text(json.dumps(changed))
+    monkeypatch.setattr(module, '_warm_cache', editor)
+    with pytest.raises(ValueError, match='changed'):
+        renderer()(path, tmp_path / 'out', config)
+    assert not (tmp_path / 'out' / 'visual-purpose.json').exists()
