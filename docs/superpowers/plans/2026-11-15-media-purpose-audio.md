@@ -18,6 +18,8 @@
 - [x] 内容代理：清点Reader实际媒体；逐项读正文/参数，写data/visual-purpose-20261115.json，51项具体用途及spoken_text、plan_sha256。
 - [x] 配音代理：tools/media_purpose_audio.py，输入/缓存/失败契约RED→GREEN，分批真实合成51条，逐MP3解码RMS与时长/哈希验收。
 - [x] 诊断代理：HTTP/file、静音/未静音、直接视频/Reader隔离Edge对照；原始记录保存；协调者检查实际Edge输出日志和同音频对照。
-- [ ] 协调者UI：tests/ui/media_purpose.test.cjs先验证用途可见、公式、互斥/取消/错误/隐藏生命周期；新media-purpose.js/css，study-lesson挂载和模板/build资产接线。
-- [ ] 协调者构建：严格用途/plan/音频对应，新增发布版并检查全部51媒体；读取器现有内容与音视频时间线不改变。
-- [ ] 独立复核新差异，相关回归、实际有声输出验证；新交付包与明确完成报告。
+- [x] 协调者UI：tests/ui/media_purpose.test.cjs先验证用途可见、公式、互斥/取消/错误/隐藏生命周期；新media-purpose.js/css，study-lesson挂载和模板/build资产接线。
+- [x] 协调者构建：严格用途/plan/音频对应，新增发布版并检查全部51媒体；读取器现有内容与音视频时间线不改变。
+- [x] 独立复核新差异，相关回归、实际有声输出验证；新交付包与明确完成报告。
+
+最终验收：51/51用途与配音，1184.56秒；51条均解码非静音并检查来源，13条Qwen-ASR和4条Whisper抽查。最终实际Reader file://、47个有媒体单元、51项用途、零页面/数学错误、窄屏无横向溢出；原生Edge当前用户profile中视频恢复推进并自动暂停，另用途音频播放至0:20/0:20并有浏览器音频输出标识。不能据此代替扬声器真人听审。58项相关Python及337项Node通过，1项旧外部fixture跳过。独立复核发现的两项取消竞态均修复并复验。兼容倍速会改变音高；原MP4保留，单独在有问题profile中打开仍可能受原兼容问题影响。
