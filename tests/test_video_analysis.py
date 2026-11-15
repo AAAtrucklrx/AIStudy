@@ -281,3 +281,47 @@ def test_protocol_repair_includes_candidate_errors_and_can_patch_selected_fields
     assert output['data'] == patch
     assert output['validated_data'] == answer
     assert json.loads((tmp_path / 'exchanges/repair.output.json').read_text())['data'] == first
+
+
+@pytest.mark.parametrize('changed_file', ['result.json', 'lesson.md'])
+def test_published_revision_tampering_blocks_api_and_downloads(tmp_path, monkeypatch, changed_file):
+    from aiforstudy.core.video_analysis import _sha
+    s = service(tmp_path, monkeypatch)
+    src = s.register_upload(io.BytesIO(b'abc'), 3, 'test.mp4'); row = s.submit({'source_id': src['id']})
+    job_id = row['job_id']; output = s.jobs / job_id / 'revisions' / ('b' * 32); output.mkdir(parents=True)
+    (output / 'result.json').write_text('{"title":"Original"}')
+    (output / 'lesson.md').write_text('Original markdown')
+    receipt = {'state': 'completed', 'files': {name: _sha(output / name) for name in ('result.json', 'lesson.md')}}
+    (output / 'revision.json').write_text(json.dumps(receipt))
+    relative = output.relative_to(s.jobs / job_id).as_posix()
+    s._register_artifacts(job_id, [relative + '/result.json', relative + '/lesson.md'])
+    s._update(job_id, state='completed', active_result=relative+'/result.json', active_result_sha256=_sha(output/'result.json'))
+    assert s.get(job_id)['result']['title'] == 'Original'
+    (output / changed_file).write_text('{"title":"Tampered"}' if changed_file.endswith('.json') else 'Tampered markdown')
+    with pytest.raises(ValueError, match='integrity|完整性'):
+        s.get(job_id)
+    assert s.artifact(job_id, relative + '/result.json') is None
+    assert s.artifact(job_id, relative + '/lesson.md') is None
+
+
+def test_successful_exchange_cannot_be_relabelled_after_model_change(tmp_path):
+    from aiforstudy.core.video_analysis_models import VideoModelSession
+    from aiforstudy.providers.gateway import CallResult
+    from aiforstudy.pipeline.services import CancelToken
+    from types import SimpleNamespace
+    session = VideoModelSession.__new__(VideoModelSession)
+    session.directory = tmp_path; (tmp_path/'exchanges').mkdir(); session.token = CancelToken(); session.job_id = 'fixture'
+    session.service = SimpleNamespace(_register_artifacts=lambda *args: None)
+    current_model = ['model-A']; calls = []
+    session.config = SimpleNamespace(role=lambda role: SimpleNamespace(model=current_model[0]))
+    def respond(request):
+        calls.append(request)
+        return CallResult(ok=True, payload={'text': 'model-A-output'}, text='{"text":"model-A-output"}')
+    session.gateway = SimpleNamespace(call=respond)
+    assert session.call('lesson', 'cached', 'system', {})['text'] == 'model-A-output'
+    current_model[0] = 'model-B'
+    with pytest.raises(ValueError, match='producer|生产身份'):
+        session.call('lesson', 'cached', 'system', {})
+    assert len(calls) == 1
+    preserved = json.loads((tmp_path/'exchanges/cached.output.json').read_text())
+    assert preserved['model'] == 'model-A'

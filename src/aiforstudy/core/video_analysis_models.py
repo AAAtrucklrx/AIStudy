@@ -101,11 +101,32 @@ class VideoModelSession:
         roles = ('source_repair', 'lesson', 'text_judge')
         return {role: self.config.role(role).as_dict() for role in roles if role in self.config.roles}
 
+    def _call_producer(self, role):
+        from ..blocks.media.dependencies import component_identity, file_identity
+        from ..pipeline.runtime_dependencies import COMMON
+        spec = self.config.role(role)
+        settings = spec.as_dict() if hasattr(spec, 'as_dict') else {key: getattr(spec, key, None)
+            for key in ('model', 'effort', 'max_tokens', 'length_retry_max_tokens')}
+        transport = getattr(self.gateway, 'transport', None)
+        if hasattr(transport, 'for_role'):
+            transport = transport.for_role(role)
+        underlying = getattr(transport, 'underlying', transport)
+        identity = {'role': role, 'settings': settings,
+            'transport': getattr(transport, 'cache_identity', None),
+            'transport_type': type(underlying).__module__ + '.' + type(underlying).__qualname__,
+            'components': component_identity(COMMON + ('core/video_analysis_models.py', 'core/video_lecture_reconciliation.py', 'core/video_analysis.py'))}
+        if getattr(underlying, 'harness_app', None):
+            app = Path(underlying.harness_app)
+            identity['account_sdk'] = {'archive': file_identity(app / 'Contents/Resources/app.asar'),
+                'executable': file_identity(app / 'Contents/MacOS/DeepSeek Harness')}
+        return identity
+
     def call(self, role, tag, system, data, images=None, validate=None, repair_fields=None):
         """At most two content attempts, with concrete feedback and preserved raw replies."""
         from copy import deepcopy
         import re
         self.token.checkpoint()
+        producer = self._call_producer(role); producer_digest = _digest(producer)
         base_tag = tag; previous = None; previous_tag = None
         for repair in range(2):
             tag = base_tag if repair == 0 else base_tag + '-repair-1'
@@ -139,7 +160,8 @@ class VideoModelSession:
             messages += [{'role': 'assistant', 'content': previous['text']},
                          {'role': 'user', 'content': json.dumps({'protocol_repair': feedback}, ensure_ascii=False)}]
             write_json_atomic(self.directory / 'exchanges' / (tag + '.feedback.json'),
-                {'repair_of': previous_tag, 'candidate_digest': _digest(previous_candidate), **feedback})
+                {'repair_of': previous_tag, 'candidate_digest': _digest(previous_candidate),
+                 'candidate_producer': previous.get('producer', {'model': previous.get('model'), 'legacy_identity': 'full producer identity not recorded'}), **feedback})
         input_path = self.directory / 'exchanges' / (tag + '.input.json')
         input_record = {'role': role, 'messages': messages, 'images': [str(Path(p).relative_to(self.directory)) for p in (images or [])]}
         if input_path.is_file() and _read(input_path) != input_record:
@@ -150,6 +172,8 @@ class VideoModelSession:
             record = _read(output)
             if record.get('input_digest') != _digest(input_record):
                 raise ValueError('Preserved model response identity mismatch')
+            if record['ok'] and record.get('producer_digest') != producer_digest:
+                raise ValueError('Preserved model response producer changed or is unrecorded; create a new revision（生产身份不匹配）')
             if not record['ok']:
                 record = None
         else:
@@ -158,9 +182,11 @@ class VideoModelSession:
             result = self.gateway.call(CallRequest(role=role, messages=messages, images=tuple(images or ()),
                 stage='video-' + role, unit_key=tag, tag=tag, bucket='content', scope_kind='unit',
                 prompt_version='video-analysis-v1.0', rules_version='source-bound-v1'))
-            record = dict(result.as_dict(), data=result.payload, text=result.text, input_digest=_digest(input_record), model=self.config.role(role).model)
+            record = dict(result.as_dict(), data=result.payload, text=result.text, input_digest=_digest(input_record), model=self.config.role(role).model,
+                          producer=producer, producer_digest=producer_digest)
             if previous is not None:
-                record.update(repair_of=previous_tag, repair_fields=list(patch_fields) if patch_fields else None)
+                record.update(repair_of=previous_tag, repair_fields=list(patch_fields) if patch_fields else None,
+                              candidate_producer=previous.get('producer', {'model': previous.get('model'), 'legacy_identity': 'full producer identity not recorded'}))
             if output.is_file():
                 history = output.with_name(output.stem + '.previous.json')
                 if not history.exists():

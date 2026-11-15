@@ -148,3 +148,25 @@ def test_reconciliation_reports_all_formula_errors_and_accepts_notes():
     answer['formulas'] = [{'latex': 'x=1', 'source_ids': ['frame-1'], 'uncertainty': '', 'note': 'A provenance explanation'}]
     answer['uncertainties'] = ['Second formula remains unclear [frame-1]']
     assert validate_reconciliation(answer, lesson, {'frame-1', 'asr-1'}, 40) == answer
+
+
+def test_retry_rejects_dependency_change_after_successful_exchange(tmp_path, monkeypatch):
+    import io
+    import json
+    from aiforstudy.core.video_analysis import VideoAnalysisService, _sha, _digest
+    s = VideoAnalysisService(tmp_path); monkeypatch.setattr(s, '_launch', lambda job_id: None)
+    version = [1]
+    monkeypatch.setattr(s, '_config_snapshot', lambda: {'dependencies': {'version': version[0]}})
+    src = s.register_upload(io.BytesIO(b'abc'), 3, 'test.mp4'); job = s.submit({'source_id': src['id']}); job_id = job['job_id']
+    directory = s.jobs / job_id; (directory/'result.json').write_text('{}')
+    (directory/'export.done.json').write_text(json.dumps({'files': {'result.json': _sha(directory/'result.json')}}))
+    s._register_artifacts(job_id, ['result.json']); s._update(job_id, state='failed')
+    revision_id = 'c' * 32; output = directory/'revisions'/revision_id; (output/'exchanges').mkdir(parents=True)
+    prior = {'dependency_digest': _digest({'version': 1}), 'configuration_digest': _digest({'dependencies': {'version': 1}})}
+    (output/'revision.json').write_text(json.dumps({'state': 'failed', 'parent_result': 'result.json',
+        'parent_result_sha256': _sha(directory/'result.json'), 'producer': prior, 'latest_producer': prior}))
+    (output/'exchanges/accepted.output.json').write_text(json.dumps({'ok': True, 'data': {'text': 'previous producer'}}))
+    version[0] = 2
+    with pytest.raises(ValueError, match='producer|生产身份'):
+        s.reconcile(job_id, retry_revision_id=revision_id)
+    assert json.loads((output/'revision.json').read_text())['producer'] == prior

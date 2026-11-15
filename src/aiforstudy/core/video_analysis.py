@@ -325,6 +325,8 @@ class VideoAnalysisService:
         if include_result:
             relative = row.get('active_result', 'result.json')
             result_path = self.artifact(job_id, relative)
+            if row.get('active_result') and result_path is None:
+                raise ValueError('Published revision integrity check failed（修订完整性校验失败）')
             if result_path and (row['state'] == 'completed' or row.get('operation') == 'reconcile'):
                 public['result'] = _read(result_path)
                 public['result'].setdefault('exports', {'json': relative, 'markdown': 'lesson.md', 'original_json': 'result.json', 'original_markdown': 'lesson.md'})
@@ -363,7 +365,7 @@ class VideoAnalysisService:
         self._recover(job_id)
         row = _read(directory / 'job.json')
         if row.get('operation') == 'reconcile' and row['state'] not in ACTIVE and row['state'] != 'completed':
-            return self.reconcile(job_id)
+            return self.reconcile(job_id, retry_revision_id=row.get('revision', {}).get('id'))
         if row['state'] == 'completed':
             return self.get(job_id)
         if row['state'] in ACTIVE:
@@ -419,6 +421,13 @@ class VideoAnalysisService:
             producer = {'git_commit': commit.stdout.strip() if commit.returncode == 0 else None,
                         'dependency_digest': _digest(snapshot['dependencies']), 'configuration_digest': _digest(snapshot),
                         'operation': 'whole_lecture_reconciliation_of_preserved_evidence'}
+            if previous_record:
+                previous_producer = previous_record.get('latest_producer', previous_record.get('producer', {}))
+                changed = any(previous_producer.get(key) != producer[key] for key in ('dependency_digest', 'configuration_digest'))
+                successful = any(_read(path).get('ok') and not _read(path).get('validation_error')
+                                 for path in (output / 'exchanges').glob('*.output.json'))
+                if changed and successful:
+                    raise ValueError('Revision producer/dependencies changed after a successful exchange; create a new revision（生产身份已变，请新建校订）')
             revision = {'id': revision_id, 'state': 'queued', 'stage': 'reconcile', 'error': None,
                         'parent_result': relative, 'parent_result_sha256': _sha(source),
                         'producer_dependency_digest': producer['dependency_digest']}
@@ -493,9 +502,11 @@ class VideoAnalysisService:
             token.checkpoint()
             revision.update(state='completed', stage='completed', error=None)
             record = _read(output / 'revision.json'); record.update(revision)
-            record['files'] = {name: _sha(output / name) for name in ('result.json', 'lesson.md', 'corrections.json')}
-            write_json_atomic(output / 'revision.json', record)
             public_files = [p.relative_to(directory).as_posix() for p in output.iterdir() if p.is_file() and p.suffix in {'.json', '.md'} and p.name not in {'revision.json', 'input-binding.json'}]
+            registered = _read(directory / 'job.json')['artifacts']
+            public_files = sorted(set(public_files) | {path for path in registered if path.startswith(relative + '/')})
+            record['files'] = {Path(path).relative_to(Path(relative)).as_posix(): _sha(directory / path) for path in public_files}
+            write_json_atomic(output / 'revision.json', record)
             self._register_artifacts(job_id, public_files)
             # Pointer moves only after every revised export and receipt is durable.
             self._update(job_id, active_result=relative + '/result.json', active_result_sha256=_sha(output / 'result.json'),
@@ -534,10 +545,40 @@ class VideoAnalysisService:
             directory = self._jobdir(job_id)
             if not isinstance(relative, str) or '\\' in relative or '..' in Path(relative).parts or Path(relative).is_absolute():
                 return None
-            if relative not in _read(directory / 'job.json')['artifacts']:
+            row = _read(directory / 'job.json')
+            if relative not in row['artifacts']:
                 return None
             target = (directory / relative).resolve()
-            return target if target.is_relative_to(directory.resolve()) and target.is_file() else None
+            if not target.is_relative_to(directory.resolve()) or not target.is_file():
+                return None
+            if Path(relative).parts[0] == 'revisions':
+                if len(Path(relative).parts) < 3:
+                    return None
+                revision_dir = directory.joinpath(*Path(relative).parts[:2])
+                receipt_path = revision_dir / 'revision.json'
+                if receipt_path.is_symlink() or not receipt_path.is_file():
+                    return None
+                receipt = _read(receipt_path); files = receipt.get('files')
+                if receipt.get('state') != 'completed' or not isinstance(files, dict) or not files:
+                    return None
+                requested = Path(relative).relative_to(Path(*Path(relative).parts[:2])).as_posix()
+                if requested not in files:
+                    return None
+                # The published revision is one immutable bundle. A modified
+                # companion export invalidates reads of that revision too.
+                for name, expected in files.items():
+                    if not isinstance(name, str) or not isinstance(expected, str) or Path(name).is_absolute() or '..' in Path(name).parts or '\\' in name:
+                        return None
+                    member = revision_dir / name
+                    if member.is_symlink() or not member.resolve().is_relative_to(revision_dir.resolve()) or not member.is_file():
+                        return None
+                    if _sha(member) != expected.removeprefix('sha256:'):
+                        return None
+            if relative == row.get('active_result'):
+                expected = row.get('active_result_sha256')
+                if not isinstance(expected, str) or _sha(target) != expected.removeprefix('sha256:'):
+                    return None
+            return target
         except (KeyError, OSError, ValueError):
             return None
 
