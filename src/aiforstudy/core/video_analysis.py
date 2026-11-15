@@ -325,8 +325,9 @@ class VideoAnalysisService:
         if include_result:
             relative = row.get('active_result', 'result.json')
             result_path = self.artifact(job_id, relative)
-            if row.get('active_result') and result_path is None:
-                raise ValueError('Published revision integrity check failed（修订完整性校验失败）')
+            published_baseline = relative in row.get('artifacts', []) and (self._jobdir(job_id) / 'export.done.json').is_file()
+            if result_path is None and (row.get('active_result') or published_baseline):
+                raise ValueError('Published result integrity check failed（发布结果完整性校验失败）')
             if result_path and (row['state'] == 'completed' or row.get('operation') == 'reconcile'):
                 public['result'] = _read(result_path)
                 public['result'].setdefault('exports', {'json': relative, 'markdown': 'lesson.md', 'original_json': 'result.json', 'original_markdown': 'lesson.md'})
@@ -551,6 +552,15 @@ class VideoAnalysisService:
             target = (directory / relative).resolve()
             if not target.is_relative_to(directory.resolve()) or not target.is_file():
                 return None
+            baseline_receipt = directory / 'export.done.json'
+            if Path(relative).parts[0] != 'revisions' and baseline_receipt.is_file():
+                files = _read(baseline_receipt).get('files', {})
+                # Only this registered historical export is checked; unrelated
+                # original media and private stage files are outside this gate.
+                if relative in files:
+                    expected = files[relative]
+                    if not isinstance(expected, str) or _sha(target) != expected.removeprefix('sha256:'):
+                        return None
             if Path(relative).parts[0] == 'revisions':
                 if len(Path(relative).parts) < 3:
                     return None

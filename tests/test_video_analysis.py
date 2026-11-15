@@ -325,3 +325,23 @@ def test_successful_exchange_cannot_be_relabelled_after_model_change(tmp_path):
     assert len(calls) == 1
     preserved = json.loads((tmp_path/'exchanges/cached.output.json').read_text())
     assert preserved['model'] == 'model-A'
+
+
+def test_baseline_exports_are_checked_against_existing_export_receipt(tmp_path, monkeypatch):
+    from aiforstudy.core.video_analysis import _sha
+    s = service(tmp_path, monkeypatch)
+    source = s.register_upload(io.BytesIO(b'abc'), 3, 'test.mp4')
+    row = s.submit({'source_id': source['id']}); job_id = row['job_id']; directory = s.jobs / job_id
+    (directory/'result.json').write_text('{"title":"Original"}')
+    (directory/'lesson.md').write_text('Original lecture')
+    (directory/'export.done.json').write_text(json.dumps({'files': {
+        'result.json': _sha(directory/'result.json'), 'lesson.md': _sha(directory/'lesson.md')}}))
+    s._register_artifacts(job_id, ['result.json', 'lesson.md']); s._update(job_id, state='completed')
+    assert s.get(job_id)['result']['title'] == 'Original'
+    assert s.artifact(job_id, 'lesson.md') is not None
+    (directory/'lesson.md').write_text('Altered historical lecture')
+    assert s.artifact(job_id, 'lesson.md') is None
+    (directory/'result.json').write_text('{"title":"Altered historical result"}')
+    assert s.artifact(job_id, 'result.json') is None
+    with pytest.raises(ValueError, match='integrity|完整性'):
+        s.get(job_id)
