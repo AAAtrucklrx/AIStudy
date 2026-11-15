@@ -987,8 +987,8 @@ class ControlServer:
             target = package / "resources" / path.lstrip("/")
         elif path.startswith("/video-assets/"):
             rel = path.removeprefix("/video-assets/")
-            if rel == "audible-audio.js":
-                asset = "assets/audible-audio.js"
+            if rel in {"audible-audio.js", "study-math.js"}:
+                asset = "assets/" + rel
             elif rel in {"katex.min.js", "katex.min.css"} or re.fullmatch(r"fonts/[A-Za-z0-9_.-]+\.(?:woff2?|ttf)", rel):
                 asset = "vendor/" + rel
             else:

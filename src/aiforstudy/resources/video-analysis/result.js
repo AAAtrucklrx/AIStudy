@@ -24,7 +24,7 @@
   }
   function sourceButton(id){const row=evidence.get(String(id));if(!row){const missing=el('span','[来源待定位]','muted');missing.title=String(id);return missing;}const button=timeButton(row.start,row.end,(String(id).startsWith('frame-')?'画面 ':'语音 ')+clock(row.start));button.dataset.evidenceId=String(id);button.title='来源编号：'+id;return button;}
   function refs(ids,collapse=false){const group=el(collapse?'details':'div',undefined,'evidence-links');if(collapse)group.append(el('summary','查看本节 '+(ids||[]).length+' 处来源'));(ids||[]).forEach(id=>group.append(sourceButton(id)));return group;}
-  function math(latex,display=false){const node=el('span',undefined,display?'math-display':'math-inline');try{if(!window.katex)throw new Error('公式渲染器未加载');window.katex.render(latex,node,{displayMode:display,throwOnError:true,trust:false,strict:'warn',maxExpand:1000,maxSize:20});}catch(_){node.textContent=latex;node.classList.add('formula-error');node.title='公式未能渲染，保留原始 LaTeX 供核对';}return node;}
+  function math(latex,display=false){const node=el('span',undefined,display?'math-display':'math-inline');try{if(!window.katex)throw new Error('公式渲染器未加载');window.katex.render(window.DSHStudyMath?window.DSHStudyMath.operatorLimits(latex):latex,node,{displayMode:display,throwOnError:true,trust:false,strict:'warn',maxExpand:1000,maxSize:20});}catch(_){node.textContent=latex;node.classList.add('formula-error');node.title='公式未能渲染，保留原始 LaTeX 供核对';}return node;}
   // A deliberately small DOM-only Markdown renderer. HTML and URLs remain text;
   // only trusted local evidence controls create links, and KaTeX has trust:false.
   function inline(node,text){

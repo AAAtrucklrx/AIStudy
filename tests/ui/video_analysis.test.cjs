@@ -68,6 +68,7 @@ async function reader(state='completed') {
   result.exports={json:'revisions/r1/result.json',markdown:'revisions/r1/lesson.md',original_json:'result.json',original_markdown:'lesson.md',corrections:'revisions/r1/corrections.json'};
   result.corrections=[{before:'识别错数',after:'按画面核对后的值',reason:'依据原帧校订',source_ids:['frame-1']}];result.reconciliation={input_digest:'digest'};
   result.formulas[0].note='这里的虚部是实数。';
+  result.formulas.push({latex:'\\sum_{k=1}^n k',source_ids:['frame-1']});w.DSHStudyMath=require('../../blocks/render/assets/study-math.js');
   w.fetch=async()=>({ok:true,json:async()=>({state,revision:state==='running'?{state:'running',parent_result:'result.json'}:undefined,result})});
   let played=0, attached;
   w.DSHAudibleAudio={attachVideo:(video, playback)=>{attached=playback; video.src=playback.video_src; return {play:()=>{played++; return Promise.resolve();},pause:()=>{},dispose:()=>{}};}};
@@ -103,6 +104,7 @@ async function reader(state='completed') {
   assert.match(w.document.querySelector('#corrections').textContent,/按画面核对后的值/);
   assert.equal(w.document.querySelector('#corrections details').open,false);
   assert.match(w.document.querySelector('#formulas').textContent,/这里的虚部是实数/);
+  assert.ok(formulaCalls.some(c=>c.latex.includes('sum\\limits')),'视频讲义也使用上下限排版');
   if(state==='running')assert.match(w.document.querySelector('#result-status').textContent,/先前已发布版本/);
   w.close();
 }

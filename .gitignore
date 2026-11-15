@@ -15,3 +15,6 @@ dist/
 .models/
 data/books/*/runs/
 outputs/
+
+# Local video uploads, recognition evidence and paid model exchanges
+data/video-analysis/
