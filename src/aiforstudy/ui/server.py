@@ -291,7 +291,7 @@ class ControlServer:
                 return HTTPStatus.ACCEPTED, service.submit(body)
             if method == "GET" and arg and not sub:
                 return HTTPStatus.OK, service.get(arg)
-            if method == "POST" and arg and sub in {"cancel", "resume"}:
+            if method == "POST" and arg and sub in {"cancel", "resume", "reconcile"}:
                 return HTTPStatus.OK, getattr(service, sub)(arg)
 
         if method == "GET" and name == "books" and not arg:

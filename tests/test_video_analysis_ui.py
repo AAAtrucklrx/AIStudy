@@ -47,6 +47,10 @@ class VideoService:
         self.job["state"] = "queued"
         return self.get(job_id)
 
+    def reconcile(self, job_id):
+        self.job.update(state='queued',revision={'state':'queued','stage':'reconcile','parent_result':'result.json'})
+        return self.get(job_id)
+
     def artifact(self, job_id, relative):
         return self.root / "received.mp4" if job_id == "video-1" and relative == "source.mp4" else None
 
@@ -86,6 +90,13 @@ def test_entry_and_assets_are_served(client):
     for path in ("/video", "/video-result.html", "/video.js", "/video-analysis/result.js",
                  "/video-assets/audible-audio.js", "/video-assets/katex.min.js", "/video-assets/katex.min.css"):
         assert request(path)[0] == 200, path
+
+
+def test_reconciliation_uses_the_same_authorized_write_boundary(client):
+    request,_=client
+    assert request('/api/videos/video-1/reconcile',{},authorized=False)[0]==400
+    status,_,body=request('/api/videos/video-1/reconcile',{})
+    assert status==200 and json.loads(body)['revision']['stage']=='reconcile'
 
 
 def test_installed_package_assets_work_without_workspace_blocks(client, monkeypatch):

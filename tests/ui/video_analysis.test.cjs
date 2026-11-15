@@ -12,7 +12,7 @@ async function workbench() {
   home.window.close();
   const dom = new JSDOM(read('control-ui/video.html'), {url: 'http://127.0.0.1:18916/video', runScripts:'outside-only'});
   const w = dom.window, calls = [];
-  let state = 'running';
+  let state = 'running', revision=null;
   w.fetch = async (url, opts = {}) => {
     calls.push({url, ...opts});
     let data;
@@ -21,8 +21,9 @@ async function workbench() {
     else if (url.endsWith('/upload')) data = {id:'upload-1', filename:'本地视频.mp4'};
     else if (url.endsWith('/cancel')) {state = 'cancelled'; data = {};}
     else if (url.endsWith('/resume')) {state = 'failed'; data = {};}
+    else if (url.endsWith('/reconcile')) {state='running';revision={state:'running',stage:'reconcile',parent_result:'result.json'};data={};}
     else if (url === '/api/videos' && opts.method === 'POST') data = {job_id:'job-1',state:'running'};
-    else if (url === '/api/videos') data = {jobs:[{job_id:'job-1',title:'第一讲',state,stage:'asr',progress:0.4,error:state === 'failed' ? '转写失败，请检查本地依赖' : null}]};
+    else if (url === '/api/videos') data = {jobs:[{job_id:'job-1',title:'第一讲',state,revision,stage:revision?'reconcile':'asr',progress:0.4,error:state === 'failed' ? '转写失败，请检查本地依赖' : null}]};
     else throw new Error(url);
     return {ok:true,json:async()=>data};
   };
@@ -47,10 +48,15 @@ async function workbench() {
   assert.equal(upload.body, file, 'File作为body，不base64或整段读取');
   assert.equal(upload.headers['X-Video-Filename'], encodeURIComponent('本地视频.mp4'));
   assert.equal(upload.headers['X-Aifs-Token'], 'local-token');
+  state='completed';w.document.querySelector('#refresh-videos').click();await wait();
+  w.document.querySelector('[data-action="reconcile"]').click();await wait();
+  assert.ok(calls.some(c=>c.url.endsWith('/reconcile')&&c.method==='POST'));
+  assert.match(w.document.querySelector('#video-jobs').textContent,/全片统一校订/);
+  assert.ok(w.document.querySelector('#video-jobs a[href*="video-result"]'),'校订时保留先前结果入口');
   w.close();
 }
 
-async function reader() {
+async function reader(state='completed') {
   const dom = new JSDOM(read('video-analysis/index.html'), {url:'http://127.0.0.1:18916/video-result.html?job=job-1',runScripts:'outside-only'});
   const w = dom.window;
   const result = {job_id:'job-1',title:'视频讲义',duration:80,
@@ -59,7 +65,10 @@ async function reader() {
     transcript:{segments:[{id:'asr-1',start:20,end:40,text:'原始转写 <script>bad()</script>',quality_warnings:['尾段可能截断']}],coverage:{full_duration:true}},
     frames:[{id:'frame-1',path:'frames/001.jpg',start:30,end:31,sampled_time:30,text:'原始 OCR',visual_text:'模型画面理解',explanation:'本帧说明复数的几何意义',ocr_quality_warnings:['文字置信度低'],uncertainties:['板书不清晰']}],
     formulas:[{latex:'z=x+iy',source_ids:['frame-1'],uncertainty:'符号待核实'}],uncertainties:[],coverage:{frame_sampling_seconds:30},provenance:{asr:'local'},review:{state:'completed',decision:'issues_found',issues:[{severity:'error',description:'指数负号与原始转写冲突',source_ids:['asr-1'],suggestion:'回看片段核对指数'}],limitations:['仅做文本交叉检查'],automatic_approval:false}};
-  w.fetch=async()=>({ok:true,json:async()=>({state:'completed',result})});
+  result.exports={json:'revisions/r1/result.json',markdown:'revisions/r1/lesson.md',original_json:'result.json',original_markdown:'lesson.md',corrections:'revisions/r1/corrections.json'};
+  result.corrections=[{before:'识别错数',after:'按画面核对后的值',reason:'依据原帧校订',source_ids:['frame-1']}];result.reconciliation={input_digest:'digest'};
+  result.formulas[0].note='这里的虚部是实数。';
+  w.fetch=async()=>({ok:true,json:async()=>({state,revision:state==='running'?{state:'running',parent_result:'result.json'}:undefined,result})});
   let played=0, attached;
   w.DSHAudibleAudio={attachVideo:(video, playback)=>{attached=playback; video.src=playback.video_src; return {play:()=>{played++; return Promise.resolve();},pause:()=>{},dispose:()=>{}};}};
   const formulaCalls=[];
@@ -90,6 +99,11 @@ async function reader() {
   assert.equal(w.document.querySelector('#uncertainties').textContent.includes('未列出额外疑问'),false);
   assert.match(w.document.querySelector('#transcript').textContent,/尾段可能截断/);
   assert.ok(w.document.querySelector('#downloads a[download]'));
+  assert.ok(w.document.querySelector('#downloads a[href$="revisions/r1/lesson.md"]'));
+  assert.match(w.document.querySelector('#corrections').textContent,/按画面核对后的值/);
+  assert.equal(w.document.querySelector('#corrections details').open,false);
+  assert.match(w.document.querySelector('#formulas').textContent,/这里的虚部是实数/);
+  if(state==='running')assert.match(w.document.querySelector('#result-status').textContent,/先前已发布版本/);
   w.close();
 }
 
@@ -164,4 +178,4 @@ print(control.origin,flush=True);http.serve_forever()
     console.log(JSON.stringify({browser:'isolated headless Edge',fixture:'synthetic, not model output',videoClockAdvanced:true,pcm,screenshots:tmp,errors}));
   }finally{if(browser)await browser.close();server.kill('SIGTERM');}
 }
-(async()=>{await workbench();await reader();await incomplete();if(process.argv.includes('--browser'))await browserAcceptance();console.log('video analysis UI: PASS');})().catch(e=>{console.error(e);process.exit(1);});
+(async()=>{await workbench();await reader();await reader('running');await incomplete();if(process.argv.includes('--browser'))await browserAcceptance();console.log('video analysis UI: PASS');})().catch(e=>{console.error(e);process.exit(1);});

@@ -2,7 +2,7 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const labels = {queued:'排队中',running:'处理中',cancelling:'正在取消',cancelled:'已取消',interrupted:'已中断',failed:'失败',completed:'完成',pending:'待开始'};
-  const stages = {queued:'等待开始',completed:'全部阶段已完成',probe:'读取视频',audio:'提取音频与兼容播放',export:'保存结果',extract:'提取音频与画面',extract_audio:'提取音频',frames:'抽取关键帧',asr:'语音转写',ocr:'画面文字识别',vision:'关键帧理解',synthesis:'整理讲义',lesson:'整理讲义',review:'核验与疑问',publish:'保存结果',playback:'准备兼容播放'};
+  const stages = {queued:'等待开始',completed:'全部阶段已完成',probe:'读取视频',audio:'提取音频与兼容播放',export:'保存结果',extract:'提取音频与画面',extract_audio:'提取音频',frames:'抽取关键帧',asr:'语音转写',ocr:'画面文字识别',vision:'关键帧理解',synthesis:'整理讲义',lesson:'整理讲义',reconcile:'全片统一校订',global_review:'全片独立复核',review:'核验与疑问',publish:'保存结果',playback:'准备兼容播放'};
   let token = '', source = null, caps = {}, busy = false, refreshing = false, last = '';
   function el(tag, text, cls) {const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node;}
   function message(text, error=false) {$('video-message').textContent=text;$('video-message').className=error?'error':'';}
@@ -30,8 +30,11 @@
       if(['failed','cancelled','interrupted'].includes(job.state)){
         const resume=el('button','恢复本次解析');resume.dataset.action='resume';resume.onclick=()=>change(job.job_id,'resume',resume);actions.append(resume);
       }
+      if(job.state==='completed'||job.revision?.parent_result){
+        const link=el('a',job.state==='completed'?'阅读讲义与回看原片 →':'阅读先前已发布讲义 →');link.href='/video-result.html?job='+encodeURIComponent(job.job_id);actions.append(link);
+      }
       if(job.state==='completed'){
-        const link=el('a','阅读讲义与回看原片 →');link.href='/video-result.html?job='+encodeURIComponent(job.job_id);actions.append(link);
+        const revise=el('button','按全片来源再校订');revise.dataset.action='reconcile';revise.onclick=()=>change(job.job_id,'reconcile',revise);actions.append(revise);
       }
       card.append(actions);
       if(job.stages){const details=el('details');details.append(el('summary','阶段记录'));const list=el('ul',undefined,'stage-list');Object.entries(job.stages).forEach(([name,s])=>list.append(el('li',(stages[name]||name)+'：'+(labels[s.state]||s.state||'待开始')+' '+percent(s.progress)+'%'+(s.error?' · '+s.error:''))));details.append(list);card.append(details);}

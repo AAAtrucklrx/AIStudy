@@ -2,7 +2,7 @@
   'use strict';
   const $=id=>document.getElementById(id);
   const job=new URLSearchParams(location.search).get('job')||'';
-  let result, driver, pendingSeek=null;
+  let result, driver, pendingSeek=null, pendingRevision=null;
   const evidence=new Map();
   function el(tag,text,cls){const n=document.createElement(tag);if(text!==undefined)n.textContent=String(text);if(cls)n.className=cls;return n;}
   function describe(value){return typeof value==='string'?value:JSON.stringify(value,null,2);}
@@ -62,12 +62,15 @@
     video.addEventListener('loadedmetadata',()=>{if(pendingSeek!==null){video.currentTime=pendingSeek;pendingSeek=null;}});
     video.addEventListener('error',()=>{$('player-status').textContent='播放遇到问题，可再次点击播放，或下载原片／音频在本机打开。';});
     download('下载原片',source.path);if(compat?.audio?.src)download('下载原片音频',compat.audio.src);
-    download('下载讲义 Markdown','lesson.md');download('下载全部结果 JSON','result.json');
+    const exports=result.exports||{};
+    download('下载讲义 Markdown',exports.markdown||'lesson.md');download('下载全部结果 JSON',exports.json||'result.json');
+    if(exports.corrections)download('下载校订记录',exports.corrections);
+    if(exports.original_json&&exports.original_json!==exports.json)download('查看校订前初稿',exports.original_json);
     window.addEventListener('pagehide',()=>{if(driver)driver.dispose();});
   }
   function render(){
     document.title=(result.title||'视频讲义')+' · AIforStudy';$('result-title').textContent=result.title||'视频讲义';
-    $('result-status').textContent='已完成解析 · 时长 '+clock(result.duration)+'。请结合原始转写、抽样画面与待核实项阅读。';$('reader').hidden=false;
+    $('result-status').textContent=(result.reconciliation?.input_digest?'已完成解析与全片校订':'已完成解析')+' · 时长 '+clock(result.duration)+'。请结合原始转写、抽样画面与待核实项阅读。'+(pendingRevision?' 当前显示先前已发布版本；新校订尚未发布。':'');$('reader').hidden=false;
     [...(result.transcript?.segments||[]),...(result.frames||[]),...(result.sections||[])].forEach(row=>evidence.set(String(row.id),row));
     playback();
     (result.sections||[]).forEach(section=>{
@@ -75,6 +78,7 @@
       const article=el('article',undefined,'lesson-section');article.append(el('h2',section.title),timeButton(section.start,section.end));markdown(article,section.markdown);article.append(refs(section.evidence_ids,true));$('lesson').append(article);
     });
     if(!(result.sections||[]).length)$('lesson').append(el('p','本次没有生成讲义章节，请查看原始记录与任务错误。'));
+    if(result.corrections?.length){$('corrections').hidden=false;$('correction-summary').textContent='查看全片校订的 '+result.corrections.length+' 处变化';result.corrections.forEach(change=>{const card=el('article');card.append(el('h3','初稿与校订后'));const before=el('blockquote');markdown(before,change.before||'');const after=el('div');markdown(after,change.after||'');card.append(before,after,el('p',change.reason||''),refs(change.source_ids));$('correction-list').append(card);});}
     (result.transcript?.segments||[]).forEach(segment=>{const row=el('div',undefined,'transcript-row'),text=el('div');text.append(el('p',segment.text));(segment.quality_warnings||[]).forEach(warning=>text.append(el('p','转写提示：'+describe(warning),'muted')));row.append(timeButton(segment.start,segment.end),text);$('transcript').append(row);});
     if(!result.transcript?.segments?.length)$('transcript').append(el('p','没有可用语音转写。'));
     (result.frames||[]).forEach(frame=>{
@@ -86,7 +90,7 @@
       if(frame.explanation){card.append(el('h3','本帧解释'));const explanation=el('div');markdown(explanation,frame.explanation);card.append(explanation);}
       (frame.uncertainties||[]).forEach(q=>card.append(el('p','待核实：'+describe(q),'muted')));$('frames').append(card);
     });
-    (result.formulas||[]).forEach(formula=>{const card=el('div',undefined,'formula-card');const equation=el('div',undefined,'formula');equation.append(math(String(formula.latex||''),true));card.append(equation,refs(formula.source_ids));if(formula.uncertainty)card.append(el('p','待核实：'+describe(formula.uncertainty)));$('formulas').append(card);});
+    (result.formulas||[]).forEach(formula=>{const card=el('div',undefined,'formula-card');const equation=el('div',undefined,'formula');equation.append(math(String(formula.latex||''),true));card.append(equation,refs(formula.source_ids));if(formula.note){const note=el('div',undefined,'formula-note');markdown(note,formula.note);card.append(note);}if(formula.uncertainty)card.append(el('p','待核实：'+describe(formula.uncertainty)));$('formulas').append(card);});
     (result.uncertainties||[]).forEach(q=>$('questions').append(el('li',describe(q))));
     const review=result.review||{},issues=review.issues||[];
     issues.forEach(issue=>{const item=el('li');const severity={error:'错误风险',uncertain:'待核实',minor:'细节问题'}[issue.severity]||'待核实';item.append(el('strong','独立审核 · '+severity),el('p',issue.description||'审核未给出问题描述'));if(issue.suggestion)item.append(el('p','核对建议：'+issue.suggestion));item.append(refs(issue.source_ids));$('questions').append(item);});
@@ -99,7 +103,7 @@
   (async()=>{try{
     if(!/^[A-Za-z0-9_-]+$/.test(job))throw new Error('缺少有效任务编号，请返回视频解析页。');
     const response=await fetch('/api/videos/'+encodeURIComponent(job));const data=await response.json();if(!response.ok)throw new Error(data.error||'结果读取失败');
-    if(data.state!=='completed'||!data.result)throw new Error('结果尚未完成。'+(data.error?describe(data.error):'当前状态：'+data.state+'，请返回任务页查看进度。'));
-    result=data.result;render();
+    if(!data.result||(data.state!=='completed'&&!data.revision))throw new Error('结果尚未完成。'+(data.error?describe(data.error):'当前状态：'+data.state+'，请返回任务页查看进度。'));
+    pendingRevision=data.state!=='completed'?data.revision:null;result=data.result;render();
   }catch(e){$('result-status').textContent=e.message;$('result-status').className='error';}})();
 })();
