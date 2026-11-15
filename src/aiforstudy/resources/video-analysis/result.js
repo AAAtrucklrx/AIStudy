@@ -65,12 +65,13 @@
     const exports=result.exports||{};
     download('下载讲义 Markdown',exports.markdown||'lesson.md');download('下载全部结果 JSON',exports.json||'result.json');
     if(exports.corrections)download('下载校订记录',exports.corrections);
-    if(exports.original_json&&exports.original_json!==exports.json)download('查看校订前初稿',exports.original_json);
+    if(exports.original_json&&exports.original_json!==exports.json)download('查看自动解析初稿',exports.original_json);
+    if(exports.parent_json&&exports.parent_json!==exports.original_json)download('查看本次编辑前版本',exports.parent_json);
     window.addEventListener('pagehide',()=>{if(driver)driver.dispose();});
   }
   function render(){
     document.title=(result.title||'视频讲义')+' · AIforStudy';$('result-title').textContent=result.title||'视频讲义';
-    $('result-status').textContent=(result.reconciliation?.input_digest?'已完成解析与全片校订':'已完成解析')+' · 时长 '+clock(result.duration)+'。请结合原始转写、抽样画面与待核实项阅读。'+(pendingRevision?' 当前显示先前已发布版本；新校订尚未发布。':'');$('reader').hidden=false;
+    $('result-status').textContent=(result.editorial_revision?'已完成解析、全片校订与来源核对修订':result.reconciliation?.input_digest?'已完成解析与全片校订':'已完成解析')+' · 时长 '+clock(result.duration)+'。请结合原始转写、抽样画面与待核实项阅读。'+(pendingRevision?' 当前显示先前已发布版本；新校订尚未发布。':'');$('reader').hidden=false;
     [...(result.transcript?.segments||[]),...(result.frames||[]),...(result.sections||[])].forEach(row=>evidence.set(String(row.id),row));
     playback();
     (result.sections||[]).forEach(section=>{
@@ -96,7 +97,7 @@
     issues.forEach(issue=>{const item=el('li');const severity={error:'错误风险',uncertain:'待核实',minor:'细节问题'}[issue.severity]||'待核实';item.append(el('strong','独立审核 · '+severity),el('p',issue.description||'审核未给出问题描述'));if(issue.suggestion)item.append(el('p','核对建议：'+issue.suggestion));item.append(refs(issue.source_ids));$('questions').append(item);});
     (review.limitations||[]).forEach(limit=>$('questions').append(el('li','审核局限：'+describe(limit))));
     if(!(result.uncertainties||[]).length&&!issues.length)$('questions').append(el('li','未列出额外疑问；这不表示每句口述或每帧画面均已核实。'));
-    $('questions').append(el('li',review.state==='not_requested'?'本次未执行独立审核；讲义仍为自动解析候选稿。':'独立审核仅做识别文本交叉检查，不等于逐句逐帧核验或人工批准。'));
+    $('questions').append(el('li',review.state==='source_checked_edits'?'本次按记录中的原片与识别证据作了限定范围的编辑修订；没有逐句逐帧核实全文。':review.state==='not_requested'?'本次未执行独立审核；讲义仍为自动解析候选稿。':'独立审核仅做识别文本交叉检查，不等于逐句逐帧核验或人工批准。'));
     const coverage=el('div',undefined,'coverage-card');coverage.append(el('p','语音覆盖与画面采样分开记录；时间引用为识别窗口，不是逐字时间戳。'),el('pre',JSON.stringify({语音窗口:result.transcript?.coverage,画面及总体覆盖:result.coverage},null,2)));$('coverage').append(coverage);
     $('provenance').textContent=JSON.stringify({语音模型:result.transcript?.identity,来源:result.provenance,审核:result.review},null,2);
   }

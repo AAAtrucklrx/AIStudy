@@ -33,8 +33,8 @@
       if(job.state==='completed'||job.revision?.parent_result){
         const link=el('a',job.state==='completed'?'阅读讲义与回看原片 →':'阅读先前已发布讲义 →');link.href='/video-result.html?job='+encodeURIComponent(job.job_id);actions.append(link);
       }
-      if(job.state==='completed'){
-        const revise=el('button','按全片来源再校订');revise.dataset.action='reconcile';revise.onclick=()=>change(job.job_id,'reconcile',revise);actions.append(revise);
+      if(job.state==='completed'||(['failed','cancelled','interrupted'].includes(job.state)&&job.revision?.parent_result)){
+        const revise=el('button',job.state==='completed'?'按全片来源再校订':'新建全片校订');revise.dataset.action='reconcile';revise.onclick=()=>change(job.job_id,'reconcile',revise);actions.append(revise);
       }
       card.append(actions);
       if(job.stages){const details=el('details');details.append(el('summary','阶段记录'));const list=el('ul',undefined,'stage-list');Object.entries(job.stages).forEach(([name,s])=>list.append(el('li',(stages[name]||name)+'：'+(labels[s.state]||s.state||'待开始')+' '+percent(s.progress)+'%'+(s.error?' · '+s.error:''))));details.append(list);card.append(details);}
