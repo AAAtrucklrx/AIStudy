@@ -624,26 +624,34 @@ def test_a04_existing_mineru_output_is_reused_and_nothing_is_uploaded(tmp_path, 
     assert _tree(book.parse / "mineru") == mineru_before, "运行改写了已有 MinerU 产物"
 
 
-def test_a04_there_is_no_ocr_fallback_anywhere_in_the_package(tmp_path, monkeypatch):
-    """**A04**：包里**不存在** OCR 路线；走不通的输入必须明确 blocked，不许沉默降级。
+def test_a04_pdf_preparation_has_no_silent_ocr_fallback(tmp_path, monkeypatch):
+    """**A04**：PDF准备不静默降级；用户显式发起的视频画面OCR是独立功能。
 
     实测代价（`providers/mineru.py` 记着）：漏掉 `--use-api` 时旧程序安静地走了本地
     OCR，公式全丢（`$` 计数 5，而 MinerU 路线是 11276）—— 那不是"跑失败"，
     是"跑成功了但产物是坏的"。所以这里钉两件事：
 
-    1. 结构性扫描：`src/aiforstudy` 里没有任何 `def/class/import/from` 带 OCR 的字样
+    1. 结构性扫描：除显式视频分析的两个模块，包内没有OCR代码入口
        （`core/source.py` 的 `"ocr-typo"` 是**原文修复类别**里的字符串，不是路线）；
        `providers/mineru.py` 的路线常量只有 复用/云端/阻断 三种，没有 `ROUTE_OCR`；
     2. 行为：冷输入 + 没有凭据 → `decide()` 明确 blocked（理由点名两条路都不通、
        **不退回本地 OCR**），`require_route()` 抛 `CapabilityError` 而不是给一条 OCR 路线。
     """
     offenders = []
+    video_modules = {ROOT / 'src/aiforstudy/core/video_analysis.py',
+                     ROOT / 'src/aiforstudy/core/video_recognition_worker.py'}
     for path in sorted((ROOT / "src" / "aiforstudy").rglob("*.py")):
+        if path in video_modules:
+            continue
         for lineno, line in enumerate(path.read_text("utf-8").splitlines(), 1):
             stripped = line.strip().lower()
             if stripped.startswith(("def ", "class ", "import ", "from ")) and "ocr" in stripped:
                 offenders.append(f"{path.relative_to(ROOT)}:{lineno}")
-    assert offenders == [], f"包里出现了 OCR 路线的代码入口：{offenders}"
+    assert offenders == [], f"显式视频分析以外出现了 OCR 路线：{offenders}"
+    import ast
+    pdf_ast=ast.parse((ROOT/'src/aiforstudy/providers/mineru.py').read_text())
+    pdf_imports=[node.module or '' for node in ast.walk(pdf_ast) if isinstance(node,ast.ImportFrom)]
+    assert not any('video_analysis' in name or 'video_recognition_worker' in name for name in pdf_imports)
 
     assert not hasattr(mineru, "ROUTE_OCR")
     assert {mineru.ROUTE_REUSE, mineru.ROUTE_API, mineru.ROUTE_BLOCKED} == \
