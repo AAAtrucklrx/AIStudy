@@ -27,10 +27,10 @@ from ..errors import Cancelled
 from ..pipeline.services import CancelToken
 
 VERSION = 'video-analysis-v1.0'
-STAGES = ('probe', 'audio', 'frames', 'asr', 'ocr', 'vision', 'lesson', 'review', 'export')
+STAGES = ('probe', 'audio', 'frames', 'asr', 'ocr', 'vision', 'lesson', 'reconcile', 'review', 'export')
 ACTIVE = {'queued', 'running', 'cancelling'}
 ID = re.compile(r'^[a-f0-9]{32}$')
-VIDEO_COMPONENTS = ('core/video_analysis.py', 'core/video_analysis_models.py', 'core/video_recognition_worker.py')
+VIDEO_COMPONENTS = ('core/video_analysis.py', 'core/video_analysis_models.py', 'core/video_recognition_worker.py', 'core/video_lecture_reconciliation.py')
 
 
 def _read(path):
@@ -159,7 +159,11 @@ class VideoAnalysisService:
                 return
             try:
                 with self._lock(directory / 'worker.lock', False):
-                    self._update(job_id, state='cancelled' if (directory / 'cancel.request').exists() else 'interrupted', error='上次处理已停止，可恢复已完成阶段。')
+                    state = 'cancelled' if (directory / 'cancel.request').exists() else 'interrupted'
+                    values = {'state': state, 'error': '上次处理已停止，可恢复已完成阶段。'}
+                    if job.get('operation') == 'reconcile' and isinstance(job.get('revision'), dict):
+                        values['revision'] = {**job['revision'], 'state': state, 'error': values['error']}
+                    self._update(job_id, **values)
             except BlockingIOError:
                 pass  # A live worker (including inherited child lock) still owns it.
 
@@ -318,8 +322,12 @@ class VideoAnalysisService:
             row = _read(self._jobdir(job_id) / 'job.json')
         # Queued jobs may legitimately be waiting for their first thread start.
         public = _safe_public(row)
-        if include_result and row['state'] == 'completed':
-            public['result'] = _read(self._jobdir(job_id) / 'result.json')
+        if include_result:
+            relative = row.get('active_result', 'result.json')
+            result_path = self.artifact(job_id, relative)
+            if result_path and (row['state'] == 'completed' or row.get('operation') == 'reconcile'):
+                public['result'] = _read(result_path)
+                public['result'].setdefault('exports', {'json': relative, 'markdown': 'lesson.md', 'original_json': 'result.json', 'original_markdown': 'lesson.md'})
         return public
 
     def _update(self, job_id, **values):
@@ -354,6 +362,8 @@ class VideoAnalysisService:
         directory = self._jobdir(job_id)
         self._recover(job_id)
         row = _read(directory / 'job.json')
+        if row.get('operation') == 'reconcile' and row['state'] not in ACTIVE and row['state'] != 'completed':
+            return self.reconcile(job_id)
         if row['state'] == 'completed':
             return self.get(job_id)
         if row['state'] in ACTIVE:
@@ -365,6 +375,121 @@ class VideoAnalysisService:
         self._update(job_id, state='queued', error=None)
         self._launch(job_id)
         return self.get(job_id)
+
+    def reconcile(self, job_id):
+        """Publish a new derived revision without changing baseline stage receipts."""
+        directory = self._jobdir(job_id); self._recover(job_id)
+        handle = (directory / 'worker.lock').open('a+b')
+        try:
+            fcntl.flock(handle, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            handle.close(); raise ValueError('任务仍在运行，不能同时校订')
+        try:
+            row = _read(directory / 'job.json')
+            if row['state'] in ACTIVE:
+                raise ValueError('任务仍在运行，不能同时校订')
+            relative = row.get('active_result', 'result.json')
+            source = self.artifact(job_id, relative)
+            if source is None:
+                raise ValueError('尚无完整讲义可校订')
+            # Always check original publication plus current parent revision bytes.
+            receipt = _read(directory / 'export.done.json')
+            for path, digest in receipt['files'].items():
+                if _sha(directory / path) != digest:
+                    raise ValueError('原始导出产物已改变，拒绝混合来源')
+            if row.get('active_result_sha256') and _sha(source) != row['active_result_sha256']:
+                raise ValueError('现行修订完整性校验失败')
+            revision_id = uuid.uuid4().hex; output = directory / 'revisions' / revision_id; output.mkdir(parents=True)
+            snapshot = self._config_snapshot()
+            commit = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=self.workspace_root, capture_output=True, text=True, timeout=10)
+            producer = {'git_commit': commit.stdout.strip() if commit.returncode == 0 else None,
+                        'dependency_digest': _digest(snapshot['dependencies']), 'configuration_digest': _digest(snapshot),
+                        'operation': 'whole_lecture_reconciliation_of_preserved_evidence'}
+            revision = {'id': revision_id, 'state': 'queued', 'stage': 'reconcile', 'error': None,
+                        'parent_result': relative, 'parent_result_sha256': _sha(source),
+                        'producer_dependency_digest': producer['dependency_digest']}
+            write_json_atomic(output / 'revision.json', {**revision, 'producer': producer,
+                'baseline_run_identity': row['identity'], 'baseline_dependencies': row['config'].get('dependencies', {})})
+            (directory / 'cancel.request').unlink(missing_ok=True)
+            token = _FileCancel(directory / 'cancel.request'); self._tokens[job_id] = token
+            self._update(job_id, state='queued', stage='reconcile', operation='reconcile', revision=revision, error=None, progress=0)
+            thread = threading.Thread(target=self._revision_run, args=(job_id, token, handle, revision, producer), daemon=True)
+            self._threads[job_id] = thread; thread.start()
+            return self.get(job_id)
+        except BaseException:
+            handle.close(); raise
+
+    def _revision_run(self, job_id, token, handle, revision, producer):
+        from .video_analysis_models import VideoModelSession
+        from .video_lecture_reconciliation import reconcile_lecture, re_review_lecture
+        from copy import deepcopy
+        self._local.lock_fds = [handle.fileno()]; self._local.job_id = job_id
+        directory = self._jobdir(job_id); output = directory / 'revisions' / revision['id']
+        prefix = 'revision-' + revision['id'][:16]
+        def progress(stage, fraction):
+            revision.update(state='running', stage=stage)
+            self._update(job_id, state='running', stage=stage, revision=dict(revision), progress=fraction)
+            self._event(job_id, '全片校订：' + stage, revision_id=revision['id'])
+        try:
+            progress('reconcile', .05); token.checkpoint()
+            base = _read(directory / revision['parent_result'])
+            lesson = {key: deepcopy(base.get(key, [])) for key in ('sections', 'formulas', 'uncertainties')}
+            frames, transcript, duration = base['frames'], base['transcript'], base['duration']
+            # Bind the actual preserved recognitions as well as the parent result.
+            write_json_atomic(output / 'input-binding.json', {'parent_result': revision['parent_result'],
+                'parent_result_sha256': revision['parent_result_sha256'], 'frames_digest': _digest(frames),
+                'transcript_digest': _digest(transcript), 'lesson_digest': _digest(lesson)})
+            session = VideoModelSession(self, job_id, token, directory=output)
+            corrected = reconcile_lecture(session, lesson, frames, transcript, duration, prefix, review=base.get('review'))
+            progress('global_review', .55); token.checkpoint()
+            review = re_review_lecture(session, corrected, frames, transcript, duration, prefix)
+            progress('export', .9); token.checkpoint()
+            result = deepcopy(base)
+            for key in ('sections', 'formulas', 'uncertainties', 'corrections', 'reconciliation'):
+                result[key] = corrected.get(key, [])
+            result['review'] = review; result['quality_state'] = 'candidate'; result['production_accepted'] = False
+            result['provenance'] = {**base.get('provenance', {}),
+                'recognition_producer': deepcopy(base.get('provenance', {}).get('recognition_producer', base.get('provenance', {}))),
+                'reconciliation_producer': producer, 'parent_result_sha256': revision['parent_result_sha256'],
+                'revision_id': revision['id'], 'recognition_reused_without_modification': True}
+            relative = output.relative_to(directory).as_posix()
+            result['exports'] = {'json': relative + '/result.json', 'markdown': relative + '/lesson.md',
+                'corrections': relative + '/corrections.json', 'original_json': 'result.json', 'original_markdown': 'lesson.md'}
+            write_json_atomic(output / 'result.json', result); write_json_atomic(output / 'corrections.json', corrected['corrections'])
+            (output / 'lesson.md').write_text(self._markdown(result['title'], corrected, '../../' + base['source']['path']), encoding='utf-8')
+            token.checkpoint()
+            revision.update(state='completed', stage='completed', error=None)
+            record = _read(output / 'revision.json'); record.update(revision)
+            record['files'] = {name: _sha(output / name) for name in ('result.json', 'lesson.md', 'corrections.json')}
+            write_json_atomic(output / 'revision.json', record)
+            public_files = [p.relative_to(directory).as_posix() for p in output.iterdir() if p.is_file() and p.suffix in {'.json', '.md'} and p.name not in {'revision.json', 'input-binding.json'}]
+            self._register_artifacts(job_id, public_files)
+            # Pointer moves only after every revised export and receipt is durable.
+            self._update(job_id, active_result=relative + '/result.json', active_result_sha256=_sha(output / 'result.json'),
+                exports=result['exports'], state='completed', stage='completed', progress=1, revision=dict(revision), error=None)
+            self._event(job_id, '全片校订和独立复审已完成；原始结果与识别稿保留', revision_id=revision['id'])
+        except Exception as exc:
+            import traceback
+            (output / 'failure.log').write_text(traceback.format_exc())
+            state = 'cancelled' if isinstance(exc, Cancelled) or token.cancelled else 'failed'
+            message = type(exc).__name__ + ': ' + re.sub(r'/[^\s\"\']+', '[local-path]', str(exc))[:600]
+            revision.update(state=state, error=message)
+            record = _read(output / 'revision.json'); record.update(revision); write_json_atomic(output / 'revision.json', record)
+            self._update(job_id, state=state, error=message, revision=dict(revision))
+            self._event(job_id, '校订未发布：' + message, revision_id=revision['id'])
+        finally:
+            handle.close(); self._tokens.pop(job_id, None); self._threads.pop(job_id, None)
+
+    @staticmethod
+    def _markdown(title, lesson, source):
+        lines = ['# ' + title, '', '> 根据完整识别来源统一校订的候选讲义；原始识别与纠错记录保留。', '']
+        for section in lesson['sections']:
+            seconds = int(section['start'])
+            lines += [f"## {section['title']}（{seconds // 60:02}:{seconds % 60:02}）", '', section['markdown'], '',
+                '[回看原片](' + source + '#t=' + str(seconds) + ') · 来源：' + ', '.join(section['evidence_ids']), '']
+        if lesson.get('uncertainties'):
+            lines += ['## 尚待核对', ''] + ['- ' + text for text in lesson['uncertainties']]
+        return '\n'.join(lines)
 
     def _register_artifacts(self, job_id, paths):
         with self._mutex:
@@ -560,7 +685,16 @@ class VideoAnalysisService:
         models = VideoModelSession(self, job_id, token)
         frames = self._stage(job_id, 'vision', token, lambda: models.vision(frames, transcript, duration))
         lesson = self._stage(job_id, 'lesson', token, lambda: models.lesson(frames, transcript, duration))
-        review = self._stage(job_id, 'review', token, lambda: models.review(lesson, frames, transcript, duration))
+        from .video_lecture_reconciliation import reconcile_lecture, re_review_lecture
+        def reconcile_stage():
+            corrected = reconcile_lecture(models, lesson, frames, transcript, duration, 'full-lecture')
+            return corrected, ['full-lecture.reconciliation.json']
+        lesson = self._stage(job_id, 'reconcile', token, reconcile_stage)
+        def review_stage():
+            report = re_review_lecture(models, lesson, frames, transcript, duration, 'full-lecture')
+            write_json_atomic(d / 'review.json', report)
+            return report, ['review.json', 'full-lecture.review.json']
+        review = self._stage(job_id, 'review', token, review_stage)
         def export():
             result = {'schema_version': VERSION, 'job_id': job_id, 'title': row['title'], 'course_id': row['course_id'], 'duration': duration,
                 'source': {'sha256': row['source_sha256'], 'path': source.name,
@@ -572,7 +706,9 @@ class VideoAnalysisService:
                     'strategy': 'uniform timestamps plus scene-change candidates, bounded; not every frame', 'requested_interval_seconds': self.config['frame_interval'],
                     'sampled_times': [f['sampled_time'] for f in frames]}, 'semantic_completeness_verified': False},
                 'provenance': {'pipeline_version': VERSION, 'run_identity': row['identity'], 'dependency_digest': _digest(row['config'].get('dependencies', {})), 'asr': _safe_public(transcript.get('identity', {})), 'ocr': _safe_public(recognized.get('identity', {})), 'models': models.identities(), 'originals_preserved': True},
-                'review': review, 'quality_state': 'candidate', 'production_accepted': False}
+                'review': review, 'corrections': lesson.get('corrections', []), 'reconciliation': lesson.get('reconciliation', {}),
+                'exports': {'json': 'result.json', 'markdown': 'lesson.md', 'original_json': 'result.json', 'original_markdown': 'lesson.md'},
+                'quality_state': 'candidate', 'production_accepted': False}
             write_json_atomic(d / 'result.json', result)
             lines = ['# ' + row['title'], '', '> 自动解析候选稿。画面为有上限采样；原始转写保留，数学尚需核对。', '']
             for section in lesson['sections']:

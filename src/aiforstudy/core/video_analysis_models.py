@@ -68,16 +68,17 @@ class VideoModelTransport:
         write_json_atomic(request, dict(kwargs, role=self.role))
         self.service._process([sys.executable, '-m', 'aiforstudy.core.video_analysis_models',
             '--workspace', str(self.service.workspace_root), '--request', str(request), '--response', str(response),
-            '--cancel', str(self.directory / 'cancel.request')], exchange / (nonce + '.log'), self.token,
+            '--cancel', str(getattr(self.token, 'path', self.directory / 'cancel.request'))], exchange / (nonce + '.log'), self.token,
             timeout=float(kwargs.get('timeout') or 1800) + 5)
         data = _read(response)
         return TransportResponse(data['text'], data['usage'], metadata=data.get('metadata', {}))
 
 
 class VideoModelSession:
-    def __init__(self, service, job_id, token):
+    def __init__(self, service, job_id, token, *, directory=None):
         self.service, self.job_id, self.token = service, job_id, token
-        self.directory = service._jobdir(job_id)
+        self.job_directory = service._jobdir(job_id)
+        self.directory = Path(directory) if directory is not None else self.job_directory
         workspace = Workspace(service.workspace_root)
         self.config = load_config(workspace)
         transport = configured_providers(SimpleNamespace(profile=SimpleNamespace(value='release')), workspace).llm
@@ -138,7 +139,7 @@ class VideoModelSession:
             if not history.exists():
                 output.rename(history)
         write_json_atomic(output, record)
-        self.service._register_artifacts(self.job_id, [str(input_path.relative_to(self.directory)), str(output.relative_to(self.directory)), 'model-calls.jsonl'])
+        self.service._register_artifacts(self.job_id, [str(input_path.relative_to(getattr(self, 'job_directory', self.directory))), str(output.relative_to(getattr(self, 'job_directory', self.directory))), str((self.directory / 'model-calls.jsonl').relative_to(getattr(self, 'job_directory', self.directory)))])
         if not result.ok:
             raise RuntimeError('Model call failed: ' + (result.failure_kind or 'unknown') + '; response preserved')
         if validate:

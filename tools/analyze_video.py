@@ -16,6 +16,7 @@ def main():
     parser.add_argument('--source', type=Path)
     parser.add_argument('--sample', action='store_true')
     parser.add_argument('--resume')
+    parser.add_argument('--reconcile', metavar='JOB_ID')
     parser.add_argument('--title')
     parser.add_argument('--course-id', default='video-course')
     parser.add_argument('--force', action='store_true')
@@ -24,7 +25,9 @@ def main():
     service = VideoAnalysisService(args.workspace)
     if args.capabilities:
         print(json.dumps(service.capabilities(), ensure_ascii=False, indent=2)); return 0
-    if args.resume:
+    if args.reconcile:
+        job = service.reconcile(args.reconcile)
+    elif args.resume:
         job = service.resume(args.resume)
     else:
         if not args.source and not args.sample:
@@ -42,7 +45,7 @@ def main():
                 previous = status
             if row['state'] not in {'queued', 'running', 'cancelling'}:
                 if row['state'] == 'completed':
-                    print(str(service.artifact(job_id, 'result.json')))
+                    print(str(service.artifact(job_id, row.get('active_result', 'result.json'))))
                     return 0
                 return 1
             time.sleep(1)

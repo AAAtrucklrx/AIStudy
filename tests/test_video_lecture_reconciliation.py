@@ -71,3 +71,54 @@ def test_re_review_has_independent_tag_and_never_approves(tmp_path):
     assert called[0][1] == 'revision-a-global-review'
     assert review['automatic_approval'] is False
     assert review['reviewed_lesson_digest']
+
+
+@pytest.mark.parametrize('fails', [False, True])
+def test_revision_publishes_new_pointer_preserving_original_results(tmp_path, monkeypatch, fails):
+    import io
+    import json
+    import time
+    from aiforstudy.core.video_analysis import VideoAnalysisService, _sha
+    import aiforstudy.core.video_analysis_models as models
+    import aiforstudy.core.video_lecture_reconciliation as reconciliation
+    service = VideoAnalysisService(tmp_path)
+    monkeypatch.setattr(service, '_launch', lambda job_id: None)
+    source = service.register_upload(io.BytesIO(b'abc'), 3, 'source.mp4')
+    job = service.submit({'source_id': source['id']}); job_id = job['job_id']; directory = service.jobs / job_id
+    lesson, frames, transcript, revised = case()
+    baseline = {'job_id': job_id, 'title': 'Test', 'duration': 40, 'source': {'path': 'source.mp4'},
+        **lesson, 'frames': frames, 'transcript': transcript, 'provenance': {'run_identity': 'original', 'dependency_digest': 'old-code'},
+        'review': {'decision': 'issues_found', 'issues': []}}
+    (directory / 'result.json').write_text(json.dumps(baseline)); (directory / 'lesson.md').write_text('Original markdown')
+    (directory / 'export.done.json').write_text(json.dumps({'files': {'result.json': _sha(directory/'result.json'), 'lesson.md': _sha(directory/'lesson.md')}}))
+    (directory / 'lesson.json').write_text(json.dumps(lesson)); (directory / 'asr.json').write_text(json.dumps(transcript)); (directory / 'visual.json').write_text(json.dumps(frames))
+    service._register_artifacts(job_id, ['result.json', 'lesson.md']); service._update(job_id, state='completed')
+    original_bytes = (directory / 'result.json').read_bytes()
+    monkeypatch.setattr(models, 'VideoModelSession', lambda *args, **kwargs: SimpleNamespace(directory=kwargs['directory']))
+    def rewrite(*args, **kwargs):
+        if fails:
+            raise ValueError('unresolved source binding')
+        return {**revised, 'reconciliation': {'producer': 'new'}}
+    monkeypatch.setattr(reconciliation, 'reconcile_lecture', rewrite)
+    monkeypatch.setattr(reconciliation, 're_review_lecture', lambda *args, **kwargs: {'state': 'completed', 'decision': 'no_issues_found', 'issues': [], 'automatic_approval': False})
+    service.reconcile(job_id)
+    for _ in range(100):
+        row = service.get(job_id)
+        if row['state'] not in {'queued', 'running', 'cancelling'}:
+            break
+        time.sleep(.02)
+    if fails:
+        assert row['state'] == 'failed'
+        assert row['revision']['state'] == 'failed'
+        assert 'active_result' not in row
+        assert row['result']['sections'] == baseline['sections']
+        assert (directory / 'result.json').read_bytes() == original_bytes
+        return
+    assert row['state'] == 'completed', row.get('error')
+    assert row['active_result'].startswith('revisions/')
+    assert row['result']['sections'][0]['id'] == 'new-1'
+    assert row['result']['exports']['original_json'] == 'result.json'
+    assert row['result']['provenance']['recognition_producer']['run_identity'] == 'original'
+    assert (directory / 'result.json').read_bytes() == original_bytes
+    assert (directory / 'lesson.md').read_text() == 'Original markdown'
+    assert service.artifact(job_id, row['result']['exports']['markdown']).is_file()
