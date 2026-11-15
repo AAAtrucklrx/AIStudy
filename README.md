@@ -8,6 +8,14 @@
 
 上一轮已清理旧驱动并修复运行创建、续跑缓存、取消/连接超时和媒体验收接口。该轮冻结验收Python3282通过/41跳过/0失败，Node20通过，新制媒体HTML专项2项通过，见[上一轮验收报告](../文档/02-记录与报告/接口收尾与旧工具清理-20261009/验收报告.md)。真实业务API调用0。
 
+## 2026-11-15 更新
+
+当前默认模型使用已登录的 DeepSeek Harness 账户 SDK，保留 Flash 写作/图像与 Pro 正文审核；默认新旁白使用本地 Qwen3-TTS Serena，未命中缓存时自动合成。账户、HTTP 与显式本地服务可按角色配置，见 [账户运行说明](docs/account-runtime.md) 与 [配音配置](docs/narration-providers.md)。模型权重和个人凭据不随源码分发。
+
+精修教材逐节核对了76个单元，379条教材结论和39条例题可复用结论保持主线可见，正式证明/完整演算按需展开。阅读器保持浅色、LaTeX字幕/文字稿及具有正文落点的交互图。课程资料库包含A/B分开的历史复习分析；视频证据保留原片、时间与识别候选，见 [视频证据](docs/video-evidence.md)。
+
+真实模型已验证教材节选的作者、Pro审核、图像、有声动画和Reader路径；记录与复放入口见 [真实节选验证](docs/live-generation.md)。这是有边界的功能验证，未替代原书239页的全新来源准备和CLI发布。导入的旧解析仍须通过plan确认准备状态，不能把现成精修书视为任意PDF自动生成同等教学质量的证明。历史测试数字与本次验收分开记录。
+
 ## 运行流程
 
 ```text
@@ -22,7 +30,7 @@ MinerU → 双源目录 → 正文结构与目录原书资料 → 全书概念�
 
 作者负责提出媒体的教学目的、对象条件、插入位置和验收标准；同一需求文件同时包含图片和动画。后置媒体模型通过现有 API 生成完整绘图代码或 Manim 代码，不能另起一套需求或静默删请求；不调用图像生成模型。生成代码只在隔离 worker 运行，确定错误的资源局部缺失；未能核实的可用候选带状态进入预览。正文修改后必须核验需求仍然对应当前内容。
 
-新静态图和动画均使用 `GeneratedScene`，支持 Manim 场景子类、镜头、变换和更新器；静态图的 `steps` 为空。旧 Matplotlib `build_figure(context)` 和动作 DSL 仅保留历史兼容。每个请求最多三个代码候选，原代码、真实帧、具体问题、修法和冻结通过标准一同返回模型。旁白由 `config/narration.json` 配置，当前默认 Edge 中文语音；运行时先准备旁白，再将实际音频时长交给渲染 worker。步骤时间、字幕和关键帧按实际运行记录。
+新静态图和动画均使用 `GeneratedScene`，支持 Manim 场景子类、镜头、变换和更新器；静态图的 `steps` 为空。旧 Matplotlib `build_figure(context)` 和动作 DSL 仅保留历史兼容。每个请求最多三个代码候选，原代码、真实帧、具体问题、修法和冻结通过标准一同返回模型。旁白由 `config/narration.json` 配置，当前默认本地 Qwen3-TTS Serena；运行时先准备旁白，再将实际音频时长交给渲染 worker。步骤时间、字幕和关键帧按实际运行记录。
 
 模型角色以 `config/models.json` 为准。当前 `figures` 为 deepseek-flash、low、200000；媒体 `judge` 为 deepseek-flash、high、393216，正文 `text_judge` 为 deepseek-v4-pro、high、393216。思考强度通过顶层 `reasoning_effort` 发送。审核证据组必须由模型显式引用，再由宿主核验并展开。
 
@@ -47,10 +55,10 @@ MinerU → 双源目录 → 正文结构与目录原书资料 → 全书概念�
 # 本地浏览器工作台
 ../.venv-linux/bin/python -m aiforstudy ui --port 8765 --open
 
-# 正式单元运行；会按需调用 API（本轮未执行）
+# 完整CLI正式单元运行；须先建立完整来源准备，随后按需调用配置的模型服务
 ../.venv-linux/bin/python -m aiforstudy run --book linear-algebra-full \
   --units CH01-S01-SS02 --profile release --prepare ensure --parallel 1 \
-  --delivery scope-html --json
+  --delivery chapter-html --json
 
 # 章节范围可替换为 --chapters CH01 或 --chapters CH01,CH02；整本用 --all
 # 只检查到需求文件时加 --until media_plan，结果属于阶段完成而非最终交付
@@ -65,7 +73,7 @@ MinerU → 双源目录 → 正文结构与目录原书资料 → 全书概念�
 
 提示词位于 `src/aiforstudy/blocks/content/prompts` 与 `src/aiforstudy/blocks/media/prompts`。原书习题/答案区只检查来源、归属、边界与原文完整性，不审核题目或原书答案的数学正确性，不要求媒体或交互。生成质量约定与审核输出格式分开；真正生效的缓存是 Runner 阶段快照与逐资源生成/审核身份，旧 `pipeline/cache.py` 已退役。
 
-`release` 使用真实服务；`replay` 只用已保存缓存，缺项即阻断；`smoke` 使用受控替身。模型配置在 `config/models.json`，密钥通过已有本地配置或环境注入，不写入文档或产物。正式程序没有累计 token、费用或总时长预算。`config/execution.json` 只控制单次超时、并发、取消和有限尝试；内容返修按每个对象最多2轮。历史预算模块只供显式本地测试工具使用。
+`release` 使用真实服务；`replay` 只用已保存缓存，缺项即阻断；`smoke` 使用受控替身。模型配置在 `config/models.json`。默认账户SDK使用已有登录；选择HTTP服务时，凭据通过明确引用读取，不写入文档或产物。正式程序没有累计 token、费用或总时长预算。`config/execution.json` 只控制单次超时、并发、取消和有限尝试；内容返修按每个对象最多2轮。历史预算模块只供显式本地测试工具使用。
 
 `plan` 不创建 run、不补数据。目录过期时先返回需要准备，准备后重新证明单元身份；不能据旧目录编号生成另一段内容。非法范围语法仍立即拒绝。
 
